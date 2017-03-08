@@ -13,7 +13,15 @@ Metronet::Metronet() {
 }
 
 Metronet::~Metronet() {
-    // TODO Auto-generated destructor stub
+    for (Station* station : stations) {
+        delete station;
+    }
+    for (Tram* tram : trams) {
+        delete tram;
+    }
+    for (Spoor* spoor : sporen) {
+        delete spoor;
+    }
 }
 
 bool Metronet::properlyInitialised() {
