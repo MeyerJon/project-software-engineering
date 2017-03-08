@@ -9,6 +9,7 @@
 #define SRC_STATION_H_
 
 #include <iostream>
+#include "DesignByContract.h"
 
 class Spoor;
 
@@ -20,39 +21,38 @@ private:
     Spoor* spoor;
     Station* initCheck;
 public:
-	Station();
-	virtual ~Station();
+    Station();
+    virtual ~Station();
 
-	/** \brief Kijk na of de constructor in de juiste staat geeindigd is.
-	     */
-    bool properlyInitialised();
+    /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
+     */
+    bool properlyInitialised() const;
 
     /** \brief Geef de naam terug van het station.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getNaam.");
      */
-	std::string getNaam() const;
+    std::string getNaam() const;
 
-	/** \brief Geef het vorig station terug.
+    /** \brief Geef het vorig station terug.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");
      */
-	Station* getVorige() const;
+    Station* getVorige() const;
 
-	/** \brief Geef het volgende station.
+    /** \brief Geef het volgende station.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");
      */
-	Station* getVolgende() const;
+    Station* getVolgende() const;
 
-	/** \brief Geef het Spoor terug.
+    /** \brief Geef het Spoor terug.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");
      */
-	Spoor* getSpoor() const;
+    Spoor* getSpoor() const;
 
-	// OOIT
-	// opstappen() && afstappen
+    // TODO: opstappen() && afstappen
 };
 
 #endif /* SRC_STATION_H_ */

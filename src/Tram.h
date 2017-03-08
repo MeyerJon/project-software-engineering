@@ -8,6 +8,9 @@
 #ifndef SRC_TRAM_H_
 #define SRC_TRAM_H_
 
+#include <iostream>
+#include "DesignByContract.h"
+
 class Spoor;
 class Station;
 
@@ -19,13 +22,14 @@ private:
     Spoor* spoor;
     Station* beginStation;
     Station* huidigStation;
+    Tram* initCheck;
 public:
-	Tram();
-	virtual ~Tram();
+    Tram();
+    virtual ~Tram();
 
-	/** \brief Kijk na of de constructor in de juiste staat geeindigd is.
+    /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
      */
-    bool properlyInitialised();
+    bool properlyInitialised() const;
 
     /** \brief Geef de zitplaatsen terug van de tram.
      *
@@ -50,7 +54,6 @@ public:
      * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSpoor.");
      */
     Spoor* getSpoor() const;
-
 
     /** \brief Geef het beginstation terug.
      *
