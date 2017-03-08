@@ -30,25 +30,25 @@ public:
 
     /** \brief Geef de naam terug van het station.
      *
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getNaam.");
+     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getNaam.");\n
      */
     std::string getNaam() const;
 
     /** \brief Geef het vorig station terug.
      *
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");
+     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");\n
      */
     Station* getVorige() const;
 
     /** \brief Geef het volgende station.
      *
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");
+     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");\n
      */
     Station* getVolgende() const;
 
     /** \brief Geef het Spoor terug.
      *
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");
+     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");\n
      */
     Spoor* getSpoor() const;
 

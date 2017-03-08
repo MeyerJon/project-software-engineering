@@ -25,7 +25,7 @@ public:
 
     /** \brief Geef het lijn nummer terug.
      *
-     * REQUIRE(this->properlyInitialised(), "Spoor was niet geinitialiseerd bij de aanroep van getLijnNr.");
+     * REQUIRE(this->properlyInitialised(), "Spoor was niet geinitialiseerd bij de aanroep van getLijnNr.");\n
      */
     int getLijnNr() const;
 };

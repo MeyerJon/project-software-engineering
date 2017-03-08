@@ -1,0 +1,80 @@
+\hypertarget{class_metronet}{}\section{Metronet Class Reference}
+\label{class_metronet}\index{Metronet@{Metronet}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_metronet_a3d2adce29a947f162924279b766de645}\label{class_metronet_a3d2adce29a947f162924279b766de645}} 
+bool \hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised} ()
+\begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
+void \hyperlink{class_metronet_a37106294bf52324b0fb9fcecf11e5495}{add\+Station} (\hyperlink{class_station}{Station} $\ast$)
+\begin{DoxyCompactList}\small\item\em Voegt station toe aan metronet. \end{DoxyCompactList}\item 
+void \hyperlink{class_metronet_ab9bcc898b7b0ec5571ce149364cf64fc}{add\+Tram} (\hyperlink{class_tram}{Tram} $\ast$)
+\begin{DoxyCompactList}\small\item\em Voegt tram toe aan metronet. \end{DoxyCompactList}\item 
+void \hyperlink{class_metronet_ab6faa9e35828352e4003640d13798529}{add\+Spoor} (\hyperlink{class_spoor}{Spoor} $\ast$)
+\begin{DoxyCompactList}\small\item\em Voegt spoor toe aan metronet. \end{DoxyCompactList}\item 
+bool \hyperlink{class_metronet_a0128de167ec0a36e70abd57170b3faed}{check\+Consistent} (\hyperlink{class_exporter}{Exporter} $\ast$exp)
+\begin{DoxyCompactList}\small\item\em Kijkt na of het metronet consistent is. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_metronet_ab6faa9e35828352e4003640d13798529}\label{class_metronet_ab6faa9e35828352e4003640d13798529}} 
+\index{Metronet@{Metronet}!add\+Spoor@{add\+Spoor}}
+\index{add\+Spoor@{add\+Spoor}!Metronet@{Metronet}}
+\subsubsection{\texorpdfstring{add\+Spoor()}{addSpoor()}}
+{\footnotesize\ttfamily void Metronet\+::add\+Spoor (\begin{DoxyParamCaption}\item[{\hyperlink{class_spoor}{Spoor} $\ast$}]{spoor }\end{DoxyParamCaption})}
+
+
+
+Voegt spoor toe aan metronet. 
+
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van add\+Spoor.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(Spoor-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Spoor was niet geinitialiseerd bij de aanroep van add\+Spoor.\char`\"{});~\newline
+E\+N\+S\+U\+RE(sporen\mbox{[}sporen.\+size() -\/ 1\mbox{]} == \hyperlink{class_spoor}{Spoor}), \char`\"{}\+Spoor was niet toegevoegd bij de aanroep van add\+Spoor.\char`\"{});~\newline
+\mbox{\Hypertarget{class_metronet_a37106294bf52324b0fb9fcecf11e5495}\label{class_metronet_a37106294bf52324b0fb9fcecf11e5495}} 
+\index{Metronet@{Metronet}!add\+Station@{add\+Station}}
+\index{add\+Station@{add\+Station}!Metronet@{Metronet}}
+\subsubsection{\texorpdfstring{add\+Station()}{addStation()}}
+{\footnotesize\ttfamily void Metronet\+::add\+Station (\begin{DoxyParamCaption}\item[{\hyperlink{class_station}{Station} $\ast$}]{station }\end{DoxyParamCaption})}
+
+
+
+Voegt station toe aan metronet. 
+
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van add\+Station.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(Station-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Station was niet geinitialiseerd bij de aanroep van add\+Station.\char`\"{});~\newline
+E\+N\+S\+U\+RE(stations\mbox{[}stations.\+size() -\/ 1\mbox{]} == \hyperlink{class_station}{Station}), \char`\"{}\+Station was niet toegevoegd bij de aanroep van add\+Station.\char`\"{});~\newline
+\mbox{\Hypertarget{class_metronet_ab9bcc898b7b0ec5571ce149364cf64fc}\label{class_metronet_ab9bcc898b7b0ec5571ce149364cf64fc}} 
+\index{Metronet@{Metronet}!add\+Tram@{add\+Tram}}
+\index{add\+Tram@{add\+Tram}!Metronet@{Metronet}}
+\subsubsection{\texorpdfstring{add\+Tram()}{addTram()}}
+{\footnotesize\ttfamily void Metronet\+::add\+Tram (\begin{DoxyParamCaption}\item[{\hyperlink{class_tram}{Tram} $\ast$}]{tram }\end{DoxyParamCaption})}
+
+
+
+Voegt tram toe aan metronet. 
+
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van add\+Tram.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(Tram-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van add\+Tram.\char`\"{});~\newline
+E\+N\+S\+U\+RE(trams\mbox{[}trams.\+size() -\/ 1\mbox{]} == \hyperlink{class_tram}{Tram}), \char`\"{}\+Tram was niet toegevoegd bij de aanroep van add\+Tram.\char`\"{});~\newline
+\mbox{\Hypertarget{class_metronet_a0128de167ec0a36e70abd57170b3faed}\label{class_metronet_a0128de167ec0a36e70abd57170b3faed}} 
+\index{Metronet@{Metronet}!check\+Consistent@{check\+Consistent}}
+\index{check\+Consistent@{check\+Consistent}!Metronet@{Metronet}}
+\subsubsection{\texorpdfstring{check\+Consistent()}{checkConsistent()}}
+{\footnotesize\ttfamily bool Metronet\+::check\+Consistent (\begin{DoxyParamCaption}\item[{\hyperlink{class_exporter}{Exporter} $\ast$}]{exp }\end{DoxyParamCaption})}
+
+
+
+Kijkt na of het metronet consistent is. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exp} & De exporter die de output zal behandelen. R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van check\+Consistent.\char`\"{});~\newline
+\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/Metronet.\+h\item 
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/Metronet.\+cpp\end{DoxyCompactItemize}

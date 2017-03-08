@@ -33,37 +33,37 @@ public:
 
     /** \brief Geef de zitplaatsen terug van de tram.
      *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getZitplaatsen.");
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getZitplaatsen.");\n
      */
     int getZitplaatsen() const;
 
     /** \brief Geef de passagiers terug van de tram.
      *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getPassagiers.");
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getPassagiers.");\n
      */
     int getPassagiers() const;
 
     /** \brief Geef de snelheid terug van de tram.
      *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSnelheid.");
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSnelheid.");\n
      */
     int getSnelheid() const;
 
     /** \brief Geef het spoor terug.
      *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSpoor.");
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSpoor.");\n
      */
     Spoor* getSpoor() const;
 
     /** \brief Geef het beginstation terug.
      *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getBeginStation.");
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getBeginStation.");\n
      */
     Station* getBeginStation() const;
 
     /** \brief Geef het huidig station.
      *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");\n
      */
     Station* getHuidigStation() const;
 };
