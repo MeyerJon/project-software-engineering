@@ -8,6 +8,7 @@
 #include "Tram.h"
 
 Tram::Tram() {
+
     initCheck = this;
 }
 

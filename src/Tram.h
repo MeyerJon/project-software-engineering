@@ -2,7 +2,7 @@
  * Tram.h
  *
  *  Created on: 8 Mar 2017
- *      Author: sergio
+ *      Author: Sergio Fenoll
  */
 
 #ifndef SRC_TRAM_H_

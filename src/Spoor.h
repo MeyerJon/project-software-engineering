@@ -2,7 +2,7 @@
  * Spoor.h
  *
  *  Created on: 8 Mar 2017
- *      Author: sergio
+ *      Author: Sergio Fenoll
  */
 
 #ifndef SRC_SPOOR_H_
