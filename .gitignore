@@ -1,5 +1,11 @@
+# Eclipse
 .cproject
 .project
 .settings
 Debug
 Release
+
+# CLion
+.idea
+cmake-build-debug
+CMakeLists.txt
