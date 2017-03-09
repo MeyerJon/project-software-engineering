@@ -12,45 +12,39 @@ Exporter::Exporter() {
     initCheck = this;
 }
 
-Exporter::Exporter(std::ostream& os) {
-    documentStarted = false;
-    Exporter::os = os;
-    initCheck = this;
-}
-
 bool Exporter::properlyInitialised() const {
     return initCheck == this;
 }
 
-void Exporter::write(std::string& output) {
+void Exporter::write(std::string& output, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Exporter was niet geinitialiseerd bij de aanroep van write.");
     os << output;
 }
 
-void Exporter::validate() {
+void Exporter::validate(std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Exporter was niet geinitialiseerd bij de aanroep van validate.");
     if (!documentStarted) documentStarted = true;
 }
 
-void ExporterHTML::write(std::string& output) {
+void ExporterHTML::write(std::string& output, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Exporter was niet geinitialiseerd bij de aanroep van write.");
     os << "<p>\n" << output << "\n</p>\n";
 }
 
-void ExporterHTML::validate() {
+void ExporterHTML::validate(std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Exporter was niet geinitialiseerd bij de aanroep van validate.");
-    if (!documentStarted) this->validateHead();
-    else this->validateTail();
+    if (!documentStarted) this->validateHead(os);
+    else this->validateTail(os);
 
     ENSURE((documentStarted == true),
             "Het document werd niet gevalideerd bij de aanroep van validate.");
 }
 
-void ExporterHTML::validateHead() {
+void ExporterHTML::validateHead(std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "ExporterHTML was niet geinititaliseerd bij de aanroep van validateHead.");
     REQUIRE((documentStarted == false),
@@ -67,7 +61,7 @@ void ExporterHTML::validateHead() {
             "Document werd niet aangemaakt bij de aanroep van validateHead.");
 }
 
-void ExporterHTML::validateTail() {
+void ExporterHTML::validateTail(std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "ExporterHTML was niet geinititaliseerd bij de aanroep van validateTail.");
     REQUIRE((documentStarted == true),

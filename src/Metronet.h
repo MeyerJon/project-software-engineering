@@ -64,11 +64,12 @@ public:
 
     /** \brief Kijkt na of het metronet consistent is.
      *  \param exp De exporter die de output zal behandelen.
+     *  \param os De stream waar de output naar gestuurd zal worden.
      *  \return Boolean die aangeeft of het Metronet consistent is.
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");\n
      */
-    bool checkConsistent(Exporter* exp);
+    bool checkConsistent(Exporter* exp, std::ostream& os);
 };
 
 #endif /* SRC_METRONET_H_ */

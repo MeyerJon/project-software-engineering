@@ -64,7 +64,7 @@ void Metronet::addSpoor(Spoor* spoor) {
             "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
 }
 
-bool Metronet::checkConsistent(Exporter* exp) {
+bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
 
@@ -78,20 +78,24 @@ bool Metronet::checkConsistent(Exporter* exp) {
         if (station->getVolgende() == nullptr) {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " heeft geen volgende station.";
+            exp->write(out, os);
             consistent = false;
         } else if (station->getVorige() == nullptr) {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " heeft geen vorig station.";
+            exp->write(out, os);
             consistent = false;
         } else if (station->getVolgende()->getVorige() != station) {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " is niet gelinkt met het volgende station "
                     + station->getVolgende()->getNaam() + ".";
+            exp->write(out, os);
             consistent = false;
         } else if (station->getVorige()->getVolgende() != station) {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " is niet gelinkt met het vorig station "
                     + station->getVorige()->getNaam() + ".";
+            exp->write(out, os);
             consistent = false;
         }
     }
@@ -104,6 +108,7 @@ bool Metronet::checkConsistent(Exporter* exp) {
             std::string out = "ERROR: Tram "
                     + std::to_string(tram->getSpoor()->getLijnNr())
                     + " heeft een ongeldig beginstation.";
+            exp->write(out, os);
             consistent = false;
         }
         tramSporen.push_back(tram->getSpoor());
@@ -112,6 +117,7 @@ bool Metronet::checkConsistent(Exporter* exp) {
             std::string out = "ERROR: Spoor "
                     + std::to_string(tram->getSpoor()->getLijnNr())
                     + " komt niet door een station.";
+            exp->write(out, os);
             consistent = false;
         }
     }
@@ -122,6 +128,7 @@ bool Metronet::checkConsistent(Exporter* exp) {
                 == tramSporen.end()) {
             std::string out = "ERROR: Spoor "
                     + std::to_string(spoor->getLijnNr()) + " heeft geen tram.";
+            exp->write(out, os);
             consistent = false;
         }
     }
