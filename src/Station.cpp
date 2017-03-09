@@ -18,6 +18,7 @@ Station::Station(std::string n, std::string vor, std::string volg, int sp, int o
     spoor = sp;
     opstappen = o;
     afstappen = a;
+    initCheck = this;
 }
 
 bool Station::properlyInitialised() const {

@@ -9,21 +9,25 @@
 #include <map>
 
 Parser::Parser() {
-    // TODO Auto-generated constructor stub
-
+    initCheck = this;
 }
 
-Parser::~Parser() {
-    // TODO Auto-generated destructor stub
+Parser::Parser(Exporter* exp) {
+    Parser::exp = exp;
+    initCheck = this;
 }
 
-void Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
+bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
     TiXmlDocument doc;
-    doc.LoadFile(filename.c_str());
+    if (!doc.LoadFile(filename.c_str())) {
+        os << "ERROR: Kan bestand " + filename + " niet openen.";
+        return;
+    }
     TiXmlElement* root = doc.FirstChildElement();
     // Iterate over all elements
     for(TiXmlElement* elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()){
-        if(elem->Value() == "STATION") {
+        std::string elemName = elem->Value();
+        if(elemName == "STATION") {
             std::string attrName;
             std::string name;
             std::string vor;
@@ -61,7 +65,7 @@ void Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
                 continue;
             }
         }
-        else if(elem->Value() == "TRAM"){
+        else if(elemName == "TRAM"){
             std::string attrName;
             int zitpl;
             int snelh;
@@ -78,8 +82,8 @@ void Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
                     else continue;
                     if(attrName == "zitplaatsen") zitpl = stoi(t);
                     else if(attrName == "snelheid") snelh = stoi(t);
-                    else if(attrName == "spoor") spoor = std::stoi(t);
-                    else if(attrName == "beginstation") beginS = std::stoi(t);
+                    else if(attrName == "lijnNr") spoor = std::stoi(t);
+                    else if(attrName == "beginStation") beginS = t;
                     else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
                         exp->write(out, os);
@@ -97,4 +101,5 @@ void Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
 
         }
     }
+    return metro.checkConsistent(exp, os);
 }
