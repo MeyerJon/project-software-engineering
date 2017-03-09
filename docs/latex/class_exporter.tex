@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Exporter\+:
-\nopagebreak
+Inheritance diagram for Exporter\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,11 +18,13 @@ Inheritance diagram for Exporter\+:
 \item 
 \hyperlink{class_exporter_a2a977cb5ac8f637fcb570e73f650eca0}{Exporter} ()
 \item 
-virtual bool \hyperlink{class_exporter_afb6185b8276c2fd03da53f49e4da295b}{properly\+Initialised} () const
+\hyperlink{class_exporter_aa0dd651db7d938f6bc104c603937c6f2}{Exporter} (std\+::ostream \&os)
+\item 
+virtual bool \hyperlink{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0}{properly\+Initialised} () const
 \begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_exporter_a96a1f764ef33d11d118f3170a3ca7e1a}{write} (std\+::string \&output)
+virtual void \hyperlink{class_exporter_ac095b6486da16ffc76539f8c6c67be70}{write} (std\+::string \&output)
 \begin{DoxyCompactList}\small\item\em Stuur de output string naar de output stream. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_exporter_a585f97d4204275edcb831df9215a0099}{validate} ()
+virtual void \hyperlink{class_exporter_a190fe737bcda2a55707ae51b731d11a5}{validate} ()
 \begin{DoxyCompactList}\small\item\em Valideer de output formaat. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -31,17 +32,23 @@ virtual void \hyperlink{class_exporter_a585f97d4204275edcb831df9215a0099}{valida
 \mbox{\Hypertarget{class_exporter_a2a977cb5ac8f637fcb570e73f650eca0}\label{class_exporter_a2a977cb5ac8f637fcb570e73f650eca0}} 
 \index{Exporter@{Exporter}!Exporter@{Exporter}}
 \index{Exporter@{Exporter}!Exporter@{Exporter}}
-\subsubsection{\texorpdfstring{Exporter()}{Exporter()}}
+\subsubsection{\texorpdfstring{Exporter()}{Exporter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Exporter\+::\+Exporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_exporter_aa0dd651db7d938f6bc104c603937c6f2}\label{class_exporter_aa0dd651db7d938f6bc104c603937c6f2}} 
+\index{Exporter@{Exporter}!Exporter@{Exporter}}
+\index{Exporter@{Exporter}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{Exporter()}{Exporter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Exporter\+::\+Exporter (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_exporter_afb6185b8276c2fd03da53f49e4da295b}\label{class_exporter_afb6185b8276c2fd03da53f49e4da295b}} 
+\mbox{\Hypertarget{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0}\label{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0}} 
 \index{Exporter@{Exporter}!properly\+Initialised@{properly\+Initialised}}
 \index{properly\+Initialised@{properly\+Initialised}!Exporter@{Exporter}}
 \subsubsection{\texorpdfstring{properly\+Initialised()}{properlyInitialised()}}
-{\footnotesize\ttfamily virtual bool Exporter\+::properly\+Initialised (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Exporter\+::properly\+Initialised (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -50,26 +57,43 @@ Kijk na of de constructor in de juiste staat geeindigd is.
 \begin{DoxyReturn}{Returns}
 Boolean die aangeeft of het object juist geinitialiseerd is. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_exporter_a585f97d4204275edcb831df9215a0099}\label{class_exporter_a585f97d4204275edcb831df9215a0099}} 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_exporter_a190fe737bcda2a55707ae51b731d11a5}\label{class_exporter_a190fe737bcda2a55707ae51b731d11a5}} 
 \index{Exporter@{Exporter}!validate@{validate}}
 \index{validate@{validate}!Exporter@{Exporter}}
 \subsubsection{\texorpdfstring{validate()}{validate()}}
-{\footnotesize\ttfamily virtual void Exporter\+::validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Exporter\+::validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 Valideer de output formaat. 
 
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_afb6185b8276c2fd03da53f49e4da295b}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij het aanroepen van validate,\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij de aanroep van validate,\char`\"{});~\newline
+E\+N\+S\+U\+RE((document\+Started == true), \char`\"{}\+Document werd niet aangemaakt bij de aanroep van validate.\char`\"{});~\newline
 
 
-Reimplemented in \hyperlink{class_exporter_h_t_m_l_ac44697b53a77a01e394a12bfc11c93f1}{Exporter\+H\+T\+ML}.
+Reimplemented in \hyperlink{class_exporter_h_t_m_l_a60518b938e3cddd92ce3218de3651ac4}{Exporter\+H\+T\+ML}.
 
-\mbox{\Hypertarget{class_exporter_a96a1f764ef33d11d118f3170a3ca7e1a}\label{class_exporter_a96a1f764ef33d11d118f3170a3ca7e1a}} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_exporter_a190fe737bcda2a55707ae51b731d11a5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_exporter_ac095b6486da16ffc76539f8c6c67be70}\label{class_exporter_ac095b6486da16ffc76539f8c6c67be70}} 
 \index{Exporter@{Exporter}!write@{write}}
 \index{write@{write}!Exporter@{Exporter}}
 \subsubsection{\texorpdfstring{write()}{write()}}
-{\footnotesize\ttfamily virtual void Exporter\+::write (\begin{DoxyParamCaption}\item[{std\+::string \&}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Exporter\+::write (\begin{DoxyParamCaption}\item[{std\+::string \&}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -80,11 +104,19 @@ Stuur de output string naar de output stream.
 {\em output} & De string die naar de output gestuurd moet worden.\\
 \hline
 \end{DoxyParams}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_afb6185b8276c2fd03da53f49e4da295b}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij het aanroepen van write.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij de aanroep van write.\char`\"{});~\newline
 
 
-Reimplemented in \hyperlink{class_exporter_h_t_m_l_aa14cd2dde581c96a0414ad3e886a38c8}{Exporter\+H\+T\+ML}.
+Reimplemented in \hyperlink{class_exporter_h_t_m_l_aa5b12621501f09a9a082e9337fbf943c}{Exporter\+H\+T\+ML}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{class_exporter_ac095b6486da16ffc76539f8c6c67be70_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
