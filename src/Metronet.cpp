@@ -131,3 +131,18 @@ bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
     // Per woensdag 8 maart: dit is niet mogelijk
     return consistent;
 }
+
+void Metronet::printMetronet(Exporter* exp, std::ostream os) {
+    std::string header = "\t ---METRONET---\n";
+    exp->write(header, os);
+    // Print station, vorig en volgend, en het nummer en de capaciteit van het spoor
+    for(auto s : stations){
+        Station* station = s.second;
+        std::string out = "Station " + station->getNaam() + "\n";
+        out += "<- Station " + station->getVorige() + "\n";
+        out += "-> Station " + station->getVolgende() + "\n";
+        out += "Spoor " + std::to_string(station->getSpoor()) + ", ";
+        out += std::to_string(trams[station->getSpoor()]->getZitplaatsen()) + " zitplaatsen. \n";
+        exp->write(out, os);
+    }
+}

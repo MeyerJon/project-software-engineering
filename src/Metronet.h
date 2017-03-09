@@ -69,6 +69,15 @@ public:
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");\n
      */
     bool checkConsistent(Exporter* exp, std::ostream& os);
+
+    /** \brief Print het hele metronet.
+     *
+     * @param exp De exporter die gebruikt moet worden
+     * @param os De stream waarnaar de output moet gestuurd worden
+     *
+     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");\name
+     */
+    void printMetronet(Exporter* exp, std::ostream os);
 };
 
 #endif /* SRC_METRONET_H_ */
