@@ -18,7 +18,6 @@ Parser::~Parser() {
 }
 
 void Parser::setupStations(Metronet& metro, std::string filename){
-    std::map<std::string, Station> parsedStations;
     TiXmlDocument doc;
     doc.LoadFile(filename);
     TiXmlElement* root = doc.FirstChildElement();
@@ -26,6 +25,12 @@ void Parser::setupStations(Metronet& metro, std::string filename){
     for(TiXmlElement* elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()){
         if(elem->Value() == "STATION") {
             std::string attrName;
+            std::string name;
+            std::string vor;
+            std::string volg;
+            int opstappen;
+            int afstappen;
+            int spoor;
             try {
                 for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
                     attrName = node->Value();
@@ -35,8 +40,18 @@ void Parser::setupStations(Metronet& metro, std::string filename){
                     else continue;
                     if(text != NULL) t = text->Value();
                     else continue;
-                    if(attrName == "naam")
+                    if(attrName == "naam") name = t;
+                    else if(attrName == "volgende") volg = t;
+                    else if(attrName == "vorige") vor = t;
+                    else if(attrName == "spoor") spoor = std::stoi(t);
+                    else if(attrName == "opstappen") opstappen = std::stoi(t);
+                    else if(attrName == "afstappen") afstappen = std::stoi(t);
+                    else{
+                        std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
+                        // TODO: Naar exporter schrijven
+                    }
                 }
+                // TODO: Station* station = new Station(name)
             }
             catch{
 
