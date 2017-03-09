@@ -64,7 +64,6 @@ bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
     std::vector<int> stationSporen; // Dit is handig om de consistentie van trams en sporen te checken
     std::vector<int> tramSporen; // Dit is handig om de consistentie van de trams en sporen te checken
     bool consistent = true;
-    // TODO: Maak output
     // Elk station is verbonden met een voorgaand en volgend station voor elk spoor
     for (auto s : stations) {
         Station* station = s.second;
