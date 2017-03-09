@@ -11,22 +11,19 @@
 #include <iostream>
 #include "DesignByContract.h"
 
-class Spoor;
-
 class Station {
 private:
     std::string naam;
-    Station* vorige;
-    Station* volgende;
-    Spoor* spoor;
+    std::string vorige;
+    std::string volgende;
+    int spoor;
     Station* initCheck;
     int opstappen;
     int afstappen;
 
 public:
     Station();
-    Station(std::string n, Station* vor, Station* volg, Spoor* sp, int op, int af);
-    virtual ~Station();
+    Station(std::string n, std::string vor, std::string volg, int sp, int op, int af);
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
      *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
@@ -45,20 +42,20 @@ public:
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");\n
      */
-    Station* getVorige() const;
+    std::string getVorige() const;
 
     /** \brief Geef het volgende station.
      *  \return Het volgende station.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");\n
      */
-    Station* getVolgende() const;
+    std::string getVolgende() const;
 
     /** \brief Geef het Spoor terug.
      *  \return Het spoor.
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");\n
      */
-    Spoor* getSpoor() const;
+    int getSpoor() const;
 
     // TODO: opstappen() && afstappen
 };

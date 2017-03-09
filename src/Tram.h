@@ -21,14 +21,13 @@ private:
     int zitplaatsen;
     int passagiers;
     int snelheid;
-    Spoor* spoor;
-    Station* beginStation;
-    Station* huidigStation;
+    int spoor;
+    std::string beginStation;
+    std::string huidigStation;
     Tram* initCheck;
 public:
     Tram();
-    Tram(int zit, int snel, Spoor* sp, Station* beginS);
-    virtual ~Tram();
+    Tram(int zit, int snel, int sp, std::string beginS);
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
      *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
@@ -61,28 +60,28 @@ public:
      *
      * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSpoor.");\n
      */
-    Spoor* getSpoor() const;
+    int getSpoor() const;
 
     /** \brief Geef het beginstation terug.
      *  \return Het beginstation.
      *
      * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getBeginStation.");\n
      */
-    Station* getBeginStation() const;
+    std::string getBeginStation() const;
 
     /** \brief Geef het huidig station.
      *  \return Het huidig station.
      *
      * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");\n
      */
-    Station* getHuidigStation() const;
+    std::string getHuidigStation() const;
 
     /** \brief Verplaatst een tram naar het opgegeven station.
      *
      * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van verplaatsTram.");\n
      * ENSURE((huidigStation == station), "huidigStation is niet correct aangepast.");\n
      */
-    void verplaatsTram(Station* station, Exporter* exp);
+    void verplaatsTram(std::string station, Exporter* exp, std::ostream& os);
 };
 
 #endif /* SRC_TRAM_H_ */

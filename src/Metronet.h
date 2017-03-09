@@ -9,22 +9,22 @@
 #define SRC_METRONET_H_
 
 #include <iostream>
+#include <map>
 #include <vector>
 #include <string>
 #include <algorithm>
 
 #include "Station.h"
 #include "Tram.h"
-#include "Spoor.h"
 #include "Exporter.h"
 
 #include "DesignByContract.h"
 
 class Metronet {
 private:
-    std::vector<Station*> stations;
-    std::vector<Tram*> trams;
-    std::vector<Spoor*> sporen;
+    std::map<std::string, Station*> stations;
+    std::map<int, Tram*> trams;
+    std::vector<int> sporen;
     Metronet* initCheck;
 public:
     Metronet();
@@ -40,7 +40,7 @@ public:
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addStation.");\n
      * REQUIRE(Station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");\n
-     * ENSURE(stations[stations.size() - 1] == Station), "Station was niet toegevoegd bij de aanroep van addStation.");\n
+     * ENSURE((stations.find(station->getNaam()) != stations.end()), "Station was niet toegevoegd bij de aanroep van addStation.");\n
      */
     void addStation(Station* station);
 
@@ -57,10 +57,9 @@ public:
      *  \param spoor Het spoor dat toegevoegd zal worden.
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");\n
-     * REQUIRE(Spoor->properlyInitialised(), "Spoor was niet geinitialiseerd bij de aanroep van addSpoor.");\n
      * ENSURE(sporen[sporen.size() - 1] == Spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");\n
      */
-    void addSpoor(Spoor* spoor);
+    void addSpoor(int spoor);
 
     /** \brief Kijkt na of het metronet consistent is.
      *  \param exp De exporter die de output zal behandelen.

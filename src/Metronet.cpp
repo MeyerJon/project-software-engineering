@@ -8,19 +8,15 @@
 #include "Metronet.h"
 
 Metronet::Metronet() {
-    // TODO Auto-generated constructor stub
     initCheck = this;
 }
 
 Metronet::~Metronet() {
-    for (Station* station : stations) {
-        delete station;
+    for (auto s : stations) {
+        delete s.second;
     }
-    for (Tram* tram : trams) {
-        delete tram;
-    }
-    for (Spoor* spoor : sporen) {
-        delete spoor;
+    for (auto t : trams) {
+        delete t.second;
     }
 }
 
@@ -34,9 +30,9 @@ void Metronet::addStation(Station* station) {
     REQUIRE(station->properlyInitialised(),
             "Station was niet geinitialiseerd bij de aanroep van addStation.");
 
-    stations.push_back(station);
+    stations[station->getNaam()] = station;
 
-    ENSURE((stations[stations.size() - 1] == station),
+    ENSURE((stations.find(station->getNaam()) != stations.end()),
             "Station was niet toegevoegd bij de aanroep van addStation.");
 }
 
@@ -52,11 +48,9 @@ void Metronet::addTram(Tram* tram) {
             "Tram was niet toegevoegd bij de aanroep van addTram.");
 }
 
-void Metronet::addSpoor(Spoor* spoor) {
+void Metronet::addSpoor(int spoor) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");
-    REQUIRE(spoor->properlyInitialised(),
-            "Spoor was niet geinitialiseerd bij de aanroep van addSpoor.");
 
     sporen.push_back(spoor);
 
@@ -127,7 +121,7 @@ bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
         if (find(tramSporen.begin(), tramSporen.end(), spoor)
                 == tramSporen.end()) {
             std::string out = "ERROR: Spoor "
-                    + std::to_string(spoor->getLijnNr()) + " heeft geen tram.";
+                    + std::to_string(spoor) + " heeft geen tram.";
             exp->write(out, os);
             consistent = false;
         }
