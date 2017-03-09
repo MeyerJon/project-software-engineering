@@ -1,0 +1,156 @@
+.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/tinyxml.h" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/tinyxml.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include 'tinystr\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTiXmlCursor\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlVisitor\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlBase\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlNode\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlAttribute\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlAttributeSet\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlElement\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlComment\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlText\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlDeclaration\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlUnknown\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlDocument\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlHandle\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlPrinter\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIXML_STRING\fP   \fBTiXmlString\fP"
+.br
+.ti -1c
+.RI "#define \fBTIXML_SAFE\fP"
+.br
+.ti -1c
+.RI "#define \fBTIXML_SNPRINTF\fP   snprintf"
+.br
+.ti -1c
+.RI "#define \fBTIXML_SSCANF\fP   sscanf"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBTIXML_SUCCESS\fP, \fBTIXML_NO_ATTRIBUTE\fP, \fBTIXML_WRONG_TYPE\fP }"
+.br
+.ti -1c
+.RI "enum \fBTiXmlEncoding\fP { \fBTIXML_ENCODING_UNKNOWN\fP, \fBTIXML_ENCODING_UTF8\fP, \fBTIXML_ENCODING_LEGACY\fP }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const int \fBTIXML_MAJOR_VERSION\fP = 2"
+.br
+.ti -1c
+.RI "const int \fBTIXML_MINOR_VERSION\fP = 6"
+.br
+.ti -1c
+.RI "const int \fBTIXML_PATCH_VERSION\fP = 2"
+.br
+.ti -1c
+.RI "const \fBTiXmlEncoding\fP \fBTIXML_DEFAULT_ENCODING\fP = \fBTIXML_ENCODING_UNKNOWN\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIXML_SAFE"
+
+.SS "#define TIXML_SNPRINTF   snprintf"
+
+.SS "#define TIXML_SSCANF   sscanf"
+
+.SS "#define TIXML_STRING   \fBTiXmlString\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITIXML_SUCCESS \fP\fP
+.TP
+\fB\fITIXML_NO_ATTRIBUTE \fP\fP
+.TP
+\fB\fITIXML_WRONG_TYPE \fP\fP
+.SS "enum \fBTiXmlEncoding\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITIXML_ENCODING_UNKNOWN \fP\fP
+.TP
+\fB\fITIXML_ENCODING_UTF8 \fP\fP
+.TP
+\fB\fITIXML_ENCODING_LEGACY \fP\fP
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBTiXmlEncoding\fP TIXML_DEFAULT_ENCODING = \fBTIXML_ENCODING_UNKNOWN\fP"
+
+.SS "const int TIXML_MAJOR_VERSION = 2"
+
+.SS "const int TIXML_MINOR_VERSION = 6"
+
+.SS "const int TIXML_PATCH_VERSION = 2"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Metronet from the source code\&.

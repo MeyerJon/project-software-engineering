@@ -1,0 +1,4 @@
+<map id="TiXmlPrinter::VisitExit" name="TiXmlPrinter::VisitExit">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#a44c8eee26bbe2d1b2762038df9dde2f0" title="The first child of this node. Will be null if there are no children. " alt="" coords="204,5,355,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a77943eb90d12c2892b1337a9f5918b41" title="TiXmlNode::Value" alt="" coords="215,56,343,83"/>
+</map>

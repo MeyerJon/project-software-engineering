@@ -1,8 +1,8 @@
-.TH "Tram" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.TH "Tram" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Tram
+Tram \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -15,40 +15,49 @@ Tram
 .RI "\fBTram\fP ()"
 .br
 .ti -1c
+.RI "\fBTram\fP (int zit, int snel, \fBSpoor\fP *sp, \fBStation\fP *beginS)"
+.br
+.ti -1c
 .RI "virtual \fB~Tram\fP ()"
 .br
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const"
+.RI "bool \fBproperlyInitialised\fP () const "
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
-.RI "int \fBgetZitplaatsen\fP () const"
+.RI "int \fBgetZitplaatsen\fP () const "
 .br
-.RI "Geef de zitplaatsen terug van de tram\&. "
+.RI "\fIGeef de zitplaatsen terug van de tram\&. \fP"
 .ti -1c
-.RI "int \fBgetPassagiers\fP () const"
+.RI "int \fBgetPassagiers\fP () const "
 .br
-.RI "Geef de passagiers terug van de tram\&. "
+.RI "\fIGeef de passagiers terug van de tram\&. \fP"
 .ti -1c
-.RI "int \fBgetSnelheid\fP () const"
+.RI "int \fBgetSnelheid\fP () const "
 .br
-.RI "Geef de snelheid terug van de tram\&. "
+.RI "\fIGeef de snelheid terug van de tram\&. \fP"
 .ti -1c
-.RI "\fBSpoor\fP * \fBgetSpoor\fP () const"
+.RI "\fBSpoor\fP * \fBgetSpoor\fP () const "
 .br
-.RI "Geef het spoor terug\&. "
+.RI "\fIGeef het spoor terug\&. \fP"
 .ti -1c
-.RI "\fBStation\fP * \fBgetBeginStation\fP () const"
+.RI "\fBStation\fP * \fBgetBeginStation\fP () const "
 .br
-.RI "Geef het beginstation terug\&. "
+.RI "\fIGeef het beginstation terug\&. \fP"
 .ti -1c
-.RI "\fBStation\fP * \fBgetHuidigStation\fP () const"
+.RI "\fBStation\fP * \fBgetHuidigStation\fP () const "
 .br
-.RI "Geef het huidig station\&. "
+.RI "\fIGeef het huidig station\&. \fP"
+.ti -1c
+.RI "void \fBverplaatsTram\fP (\fBStation\fP *station, \fBExporter\fP *exp)"
+.br
+.RI "\fIVerplaatst een tram naar het opgegeven station\&. \fP"
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Tram::Tram ()"
+
+.SS "Tram::Tram (int zit, int snel, \fBSpoor\fP * sp, \fBStation\fP * beginS)"
 
 .SS "Tram::~Tram ()\fC [virtual]\fP"
 
@@ -143,7 +152,15 @@ Boolean die aangeeft of het object juist geinitialiseerd is\&.
 .RE
 .PP
 
+.SS "void Tram::verplaatsTram (\fBStation\fP * station, \fBExporter\fP * exp)"
+
+.PP
+Verplaatst een tram naar het opgegeven station\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van verplaatsTram\&.');
+.br
+ENSURE((huidigStation == station), 'huidigStation is niet correct aangepast\&.');
+.br
+
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for SoftEng from the source code\&.
+Generated automatically by Doxygen for Metronet from the source code\&.

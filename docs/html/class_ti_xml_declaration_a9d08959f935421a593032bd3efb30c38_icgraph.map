@@ -1,0 +1,6 @@
+<map id="TiXmlDeclaration::CopyTo" name="TiXmlDeclaration::CopyTo">
+<area shape="rect" id="node2" href="$class_ti_xml_declaration.html#a58ac9042c342f7845c8491da0bb091e8" title="TiXmlDeclaration::TiXmlDeclaration" alt="" coords="229,5,460,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_declaration.html#a3bc617efe11014ff2b1a9c5727c37a9a" title="TiXmlDeclaration::operator=" alt="" coords="252,56,437,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_declaration.html#aff8231266d735943d8a7514a9c9822b9" title="Creates a copy of this Declaration and returns it. " alt="" coords="263,107,427,133"/>
+<area shape="rect" id="node5" href="$class_ti_xml_unknown.html#a675c4b2684af35e4c7649b7fd5ae598d" title="Creates a copy of this Unknown and returns it. " alt="" coords="268,157,421,184"/>
+</map>

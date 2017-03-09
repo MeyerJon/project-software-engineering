@@ -1,8 +1,8 @@
-.TH "Parser" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.TH "Parser" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Parser
+Parser \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -17,6 +17,16 @@ Parser
 .ti -1c
 .RI "virtual \fB~Parser\fP ()"
 .br
+.ti -1c
+.RI "void \fBsetupStations\fP (\fBMetronet\fP &metro, std::string file)"
+.br
+.RI "\fILeest alle stations uit een XML-bestand en voegt ze toe aan het metronet\&. \fP"
+.ti -1c
+.RI "void \fBsetupTrams\fP (\fBMetronet\fP &metro, std::string file)"
+.br
+.ti -1c
+.RI "void \fBsetup\fP (\fBMetronet\fP &metro, std::string file)"
+.br
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -24,7 +34,50 @@ Parser
 
 .SS "Parser::~Parser ()\fC [virtual]\fP"
 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Parser::setup (\fBMetronet\fP & metro, std::string file)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fImetro\fP 
+.br
+\fIfile\fP 
+.RE
+.PP
+
+.SS "void Parser::setupStations (\fBMetronet\fP & metro, std::string file)"
+
+.PP
+Leest alle stations uit een XML-bestand en voegt ze toe aan het metronet\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImetro\fP Het metronet (referentie) dat aangepast moet worden\&. 
+.br
+\fIfile\fP De naam van het XML-bestand\&.
+.RE
+.PP
+REQUIRE(this->properlyInitialised, 'De parser was niet geinitialiseerd bij het aanroepen van setupStations\&.');
+.br
+REQUIRE(metro\&.properlyInitialised, 'Het metronet was niet geinitialiseerd bij het aanroepen van setupStations\&.');
+.br
+ENSURE(stationsCheck, 'Stations niet correct ingelezen\&.');
+.br
+
+.SS "void Parser::setupTrams (\fBMetronet\fP & metro, std::string file)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fImetro\fP 
+.br
+\fIfile\fP 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for SoftEng from the source code\&.
+Generated automatically by Doxygen for Metronet from the source code\&.

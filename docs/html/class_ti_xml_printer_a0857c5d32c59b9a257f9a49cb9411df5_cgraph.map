@@ -1,0 +1,6 @@
+<map id="TiXmlPrinter::Visit" name="TiXmlPrinter::Visit">
+<area shape="rect" id="node2" href="$class_ti_xml_text.html#ad1a6a6b83fa2271022dd97c072a2b586" title="Queries whether this represents text using a CDATA section. " alt="" coords="199,5,335,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a77943eb90d12c2892b1337a9f5918b41" title="TiXmlNode::Value" alt="" coords="203,56,331,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_base.html#a32ed202562b58de64c7d799ca3c9db98" title="TiXmlBase::EncodeString" alt="" coords="181,107,353,133"/>
+<area shape="rect" id="node5" href="$class_ti_xml_node.html#a83ece13d2ea66dac66e0b21332229239" title="TiXmlNode::ValueTStr" alt="" coords="191,157,344,184"/>
+</map>

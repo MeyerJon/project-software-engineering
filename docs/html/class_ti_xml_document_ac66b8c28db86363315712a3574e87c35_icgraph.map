@@ -1,0 +1,7 @@
+<map id="TiXmlDocument::ClearError" name="TiXmlDocument::ClearError">
+<area shape="rect" id="node2" href="$class_ti_xml_document.html#a9f5e84335708fde98400230f9f12659c" title="Create an empty document, that has no name. " alt="" coords="236,56,455,83"/>
+<area shape="rect" id="node5" href="$class_ti_xml_document.html#a789ad2f06f93d52bdb5570b2f3670289" title="TiXmlDocument::Parse" alt="" coords="266,107,425,133"/>
+<area shape="rect" id="node3" href="$class_ti_xml_document.html#ae4508b452d0c3061db085f3db27b8396" title="Create a document with a name. The name of the document is also the filename of the xml..." alt="" coords="503,5,721,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_document.html#ac9e8f09b23454d953b32d1b65cd1409e" title="TiXmlDocument::Clone" alt="" coords="533,56,691,83"/>
+<area shape="rect" id="node6" href="$class_ti_xml_document.html#a41f6fe7200864d1dca663d230caf8db6" title="TiXmlDocument::LoadFile" alt="" coords="525,107,699,133"/>
+</map>

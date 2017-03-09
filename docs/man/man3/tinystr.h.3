@@ -1,0 +1,108 @@
+.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/tinystr.h" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/tinystr.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBTiXmlString\fP"
+.br
+.ti -1c
+.RI "class \fBTiXmlOutStream\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIXML_EXPLICIT\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBTiXmlString\fP &a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBTiXmlString\fP &a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBTiXmlString\fP &a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBTiXmlString\fP &a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator<=\fP (const \fBTiXmlString\fP &a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBTiXmlString\fP &a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBTiXmlString\fP &a, const char *b)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const char *a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBTiXmlString\fP &a, const char *b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const char *a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP \fBoperator+\fP (const \fBTiXmlString\fP &a, const \fBTiXmlString\fP &b)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP \fBoperator+\fP (const \fBTiXmlString\fP &a, const char *b)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP \fBoperator+\fP (const char *a, const \fBTiXmlString\fP &b)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIXML_EXPLICIT"
+
+.SH "Function Documentation"
+.PP 
+.SS "bool operator!= (const \fBTiXmlString\fP & a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SS "bool operator!= (const \fBTiXmlString\fP & a, const char * b)\fC [inline]\fP"
+
+.SS "bool operator!= (const char * a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SS "\fBTiXmlString\fP operator+ (const \fBTiXmlString\fP & a, const \fBTiXmlString\fP & b)"
+
+.SS "\fBTiXmlString\fP operator+ (const \fBTiXmlString\fP & a, const char * b)"
+
+.SS "\fBTiXmlString\fP operator+ (const char * a, const \fBTiXmlString\fP & b)"
+
+.SS "bool operator< (const \fBTiXmlString\fP & a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SS "bool operator<= (const \fBTiXmlString\fP & a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SS "bool operator== (const \fBTiXmlString\fP & a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SS "bool operator== (const \fBTiXmlString\fP & a, const char * b)\fC [inline]\fP"
+
+.SS "bool operator== (const char * a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SS "bool operator> (const \fBTiXmlString\fP & a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SS "bool operator>= (const \fBTiXmlString\fP & a, const \fBTiXmlString\fP & b)\fC [inline]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Metronet from the source code\&.

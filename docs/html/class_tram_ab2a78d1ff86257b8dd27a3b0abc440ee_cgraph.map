@@ -1,0 +1,7 @@
+<map id="Tram::verplaatsTram" name="Tram::verplaatsTram">
+<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="196,5,357,32"/>
+<area shape="rect" id="node3" href="$class_spoor.html#a128ae4941c1f109428d79a1e4960fa58" title="Geef het lijn nummer terug. " alt="" coords="219,56,335,83"/>
+<area shape="rect" id="node5" href="$class_station.html#a6d4234bcd1027dc83c7984e207e8bd74" title="Geef de naam terug van het station. " alt="" coords="215,107,339,133"/>
+<area shape="rect" id="node4" href="$class_spoor.html#abacda6818507efb0937b77d243b76aea" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="409,56,574,83"/>
+<area shape="rect" id="node6" href="$class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="405,107,577,133"/>
+</map>

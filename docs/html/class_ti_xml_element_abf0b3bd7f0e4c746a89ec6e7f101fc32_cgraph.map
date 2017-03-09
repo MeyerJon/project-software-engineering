@@ -1,0 +1,8 @@
+<map id="TiXmlElement::SetAttribute" name="TiXmlElement::SetAttribute">
+<area shape="rect" id="node2" href="$class_ti_xml_attribute_set.html#a5e28f5d32f048fba85d04dc317495bdc" title="TiXmlAttributeSet::\lFindOrCreate" alt="" coords="251,74,385,115"/>
+<area shape="rect" id="node7" href="$class_ti_xml_attribute.html#a2dae44178f668b3cb48101be4f2236a0" title="Set the value. " alt="" coords="235,140,401,167"/>
+<area shape="rect" id="node3" href="$class_ti_xml_attribute.html#ab7fa3d21ff8d7c5764cf9af15b667a99" title="Set the name of this attribute. " alt="" coords="469,5,637,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_base.html#a00e4edb0219d00a1379c856e5a1d2025" title="TiXmlBase::Parse" alt="" coords="489,56,617,83"/>
+<area shape="rect" id="node5" href="$class_ti_xml_printer.html#ab23a90629e374cb1cadca090468bbd19" title="TiXmlPrinter::SetStreamPrinting" alt="" coords="449,107,657,133"/>
+<area shape="rect" id="node6" href="$class_ti_xml_node.html#acc0f88b7462c6cb73809d410a4f5bb86" title="TiXmlNode::Accept" alt="" coords="485,157,621,184"/>
+</map>

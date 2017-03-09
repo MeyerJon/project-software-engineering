@@ -1,0 +1,171 @@
+.TH "TiXmlString" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TiXmlString \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tinystr\&.h>\fP
+.PP
+Inherited by \fBTiXmlOutStream\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef size_t \fBsize_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTiXmlString\fP ()"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP (const \fBTiXmlString\fP &copy)"
+.br
+.ti -1c
+.RI "\fBTIXML_EXPLICIT\fP \fBTiXmlString\fP (const char *copy)"
+.br
+.ti -1c
+.RI "\fBTIXML_EXPLICIT\fP \fBTiXmlString\fP (const char *str, \fBsize_type\fP len)"
+.br
+.ti -1c
+.RI "\fB~TiXmlString\fP ()"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP & \fBoperator=\fP (const char *copy)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP & \fBoperator=\fP (const \fBTiXmlString\fP &copy)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP & \fBoperator+=\fP (const char *suffix)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP & \fBoperator+=\fP (char single)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP & \fBoperator+=\fP (const \fBTiXmlString\fP &suffix)"
+.br
+.ti -1c
+.RI "const char * \fBc_str\fP () const "
+.br
+.ti -1c
+.RI "const char * \fBdata\fP () const "
+.br
+.ti -1c
+.RI "\fBsize_type\fP \fBlength\fP () const "
+.br
+.ti -1c
+.RI "\fBsize_type\fP \fBsize\fP () const "
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const "
+.br
+.ti -1c
+.RI "\fBsize_type\fP \fBcapacity\fP () const "
+.br
+.ti -1c
+.RI "const char & \fBat\fP (\fBsize_type\fP index) const "
+.br
+.ti -1c
+.RI "char & \fBoperator[]\fP (\fBsize_type\fP index) const "
+.br
+.ti -1c
+.RI "\fBsize_type\fP \fBfind\fP (char lookup) const "
+.br
+.ti -1c
+.RI "\fBsize_type\fP \fBfind\fP (char tofind, \fBsize_type\fP offset) const "
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBreserve\fP (\fBsize_type\fP cap)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP & \fBassign\fP (const char *str, \fBsize_type\fP len)"
+.br
+.ti -1c
+.RI "\fBTiXmlString\fP & \fBappend\fP (const char *str, \fBsize_type\fP len)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBTiXmlString\fP &other)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const \fBsize_type\fP \fBnpos\fP = static_cast< \fBTiXmlString::size_type\fP >(\-1)"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef size_t \fBTiXmlString::size_type\fP"
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TiXmlString::TiXmlString ()\fC [inline]\fP"
+
+.SS "TiXmlString::TiXmlString (const \fBTiXmlString\fP & copy)\fC [inline]\fP"
+
+.SS "\fBTIXML_EXPLICIT\fP TiXmlString::TiXmlString (const char * copy)\fC [inline]\fP"
+
+.SS "\fBTIXML_EXPLICIT\fP TiXmlString::TiXmlString (const char * str, \fBsize_type\fP len)\fC [inline]\fP"
+
+.SS "TiXmlString::~TiXmlString ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBTiXmlString\fP & TiXmlString::append (const char * str, \fBsize_type\fP len)"
+
+.SS "\fBTiXmlString\fP & TiXmlString::assign (const char * str, \fBsize_type\fP len)"
+
+.SS "const char& TiXmlString::at (\fBsize_type\fP index) const\fC [inline]\fP"
+
+.SS "const char* TiXmlString::c_str () const\fC [inline]\fP"
+
+.SS "\fBsize_type\fP TiXmlString::capacity () const\fC [inline]\fP"
+
+.SS "void TiXmlString::clear ()\fC [inline]\fP"
+
+.SS "const char* TiXmlString::data () const\fC [inline]\fP"
+
+.SS "bool TiXmlString::empty () const\fC [inline]\fP"
+
+.SS "\fBsize_type\fP TiXmlString::find (char lookup) const\fC [inline]\fP"
+
+.SS "\fBsize_type\fP TiXmlString::find (char tofind, \fBsize_type\fP offset) const\fC [inline]\fP"
+
+.SS "\fBsize_type\fP TiXmlString::length () const\fC [inline]\fP"
+
+.SS "\fBTiXmlString\fP& TiXmlString::operator+= (const char * suffix)\fC [inline]\fP"
+
+.SS "\fBTiXmlString\fP& TiXmlString::operator+= (char single)\fC [inline]\fP"
+
+.SS "\fBTiXmlString\fP& TiXmlString::operator+= (const \fBTiXmlString\fP & suffix)\fC [inline]\fP"
+
+.SS "\fBTiXmlString\fP& TiXmlString::operator= (const char * copy)\fC [inline]\fP"
+
+.SS "\fBTiXmlString\fP& TiXmlString::operator= (const \fBTiXmlString\fP & copy)\fC [inline]\fP"
+
+.SS "char& TiXmlString::operator[] (\fBsize_type\fP index) const\fC [inline]\fP"
+
+.SS "void TiXmlString::reserve (\fBsize_type\fP cap)"
+
+.SS "\fBsize_type\fP TiXmlString::size () const\fC [inline]\fP"
+
+.SS "void TiXmlString::swap (\fBTiXmlString\fP & other)\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "const \fBTiXmlString::size_type\fP TiXmlString::npos = static_cast< \fBTiXmlString::size_type\fP >(\-1)\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Metronet from the source code\&.

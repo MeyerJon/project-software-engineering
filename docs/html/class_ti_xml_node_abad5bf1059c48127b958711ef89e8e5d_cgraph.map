@@ -1,0 +1,6 @@
+<map id="TiXmlNode::LastChild" name="TiXmlNode::LastChild">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#a44c8eee26bbe2d1b2762038df9dde2f0" title="The first child of this node. Will be null if there are no children. " alt="" coords="438,5,589,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a6d671107e00cca1d28cb2d7f3a87a21e" title="TiXmlNode::LastChild" alt="" coords="219,31,369,57"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#aaef7ac3978c4bb1cc8a24ffae7bced75" title="TiXmlNode::IterateChildren" alt="" coords="204,81,384,108"/>
+<area shape="rect" id="node5" href="$class_ti_xml_node.html#af854baeba384f5fe9859f5aee03b548e" title="Navigate to a sibling node. " alt="" coords="432,81,595,108"/>
+</map>

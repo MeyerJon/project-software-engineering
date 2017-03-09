@@ -1,0 +1,8 @@
+<map id="TiXmlNode::LinkEndChild" name="TiXmlNode::LinkEndChild">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#aa66f4ebcd175204a168ed7c2d7b43071" title="TiXmlNode::GetDocument" alt="" coords="445,5,621,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#a57b99d5c97d67a42b9752f5210a1ba5e" title="TiXmlNode::Type" alt="" coords="249,43,373,69"/>
+<area shape="rect" id="node5" href="$class_ti_xml_document.html#a735c23e318597b920c94eae77fa206de" title="TiXmlDocument::SetError" alt="" coords="225,93,397,120"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a8a4cda4b15c29f64cff419309aebed08" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="669,5,840,32"/>
+<area shape="rect" id="node6" href="$class_ti_xml_parsing_data.html#a65cee8ab77a36c605db08c84b4c30a7d" title="TiXmlParsingData::Stamp" alt="" coords="446,68,621,95"/>
+<area shape="rect" id="node7" href="$class_ti_xml_parsing_data.html#a9e63d965fdb53ff4ac711e105269e918" title="TiXmlParsingData::Cursor" alt="" coords="446,119,621,145"/>
+</map>

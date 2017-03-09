@@ -1,0 +1,5 @@
+<map id="Spoor::properlyInitialised" name="Spoor::properlyInitialised">
+<area shape="rect" id="node2" href="$class_metronet.html#a499d8ac62450fec83bc10101de53cd76" title="Voegt spoor toe aan metronet. " alt="" coords="219,5,355,32"/>
+<area shape="rect" id="node3" href="$class_spoor.html#a128ae4941c1f109428d79a1e4960fa58" title="Geef het lijn nummer terug. " alt="" coords="229,56,345,83"/>
+<area shape="rect" id="node4" href="$class_tram.html#ab2a78d1ff86257b8dd27a3b0abc440ee" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="403,56,545,83"/>
+</map>

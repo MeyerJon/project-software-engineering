@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['getbeginstation',['getBeginStation',['../class_tram.html#abe386592de6a7930df75ea184b945403',1,'Tram']]],
-  ['gethuidigstation',['getHuidigStation',['../class_tram.html#ad04f5905ffec6ef4069b27f08c63f4b9',1,'Tram']]],
-  ['getlijnnr',['getLijnNr',['../class_spoor.html#a66ebc0abcb370b1509bd7b3961a8e45a',1,'Spoor']]],
-  ['getnaam',['getNaam',['../class_station.html#aea6c31c39a5e1eb4c30337e7ce489e69',1,'Station']]],
-  ['getpassagiers',['getPassagiers',['../class_tram.html#a678ba2cd0c6ab76e966947944f599d56',1,'Tram']]],
-  ['getsnelheid',['getSnelheid',['../class_tram.html#aa8bcd980469801cb8524f170006f666c',1,'Tram']]],
-  ['getspoor',['getSpoor',['../class_station.html#a5230690094cdfd1e9f443d76f35c8a19',1,'Station::getSpoor()'],['../class_tram.html#aee9cf13e0525ac7c769709edf1ff987d',1,'Tram::getSpoor()']]],
-  ['getvolgende',['getVolgende',['../class_station.html#a330c297adddcbfd5d8871075291e9512',1,'Station']]],
-  ['getvorige',['getVorige',['../class_station.html#a69c0539e899ff540c38eb434a69bfa9e',1,'Station']]],
-  ['getzitplaatsen',['getZitplaatsen',['../class_tram.html#abcb1ce0d10e394fce8a99b460e5104de',1,'Tram']]]
+  ['element',['Element',['../class_ti_xml_handle.html#acb5fe8388a526289ea65e817a51e05e7',1,'TiXmlHandle']]],
+  ['empty',['empty',['../class_ti_xml_string.html#a9a61e1d11cdb71bea4a4ed79caa793f4',1,'TiXmlString']]],
+  ['encodestring',['EncodeString',['../class_ti_xml_base.html#a32ed202562b58de64c7d799ca3c9db98',1,'TiXmlBase']]],
+  ['encoding',['Encoding',['../class_ti_xml_declaration.html#a5d974231f9e9a2f0542f15f3a46cdb76',1,'TiXmlDeclaration']]],
+  ['ensure',['ENSURE',['../_design_by_contract_8h.html#ab8da60ea2bcdd55183cc29d8526e6857',1,'DesignByContract.h']]],
+  ['error',['Error',['../class_ti_xml_document.html#a6dfc01a6e5d58e56acd537dfd3bdeb29',1,'TiXmlDocument']]],
+  ['errorcol',['ErrorCol',['../class_ti_xml_document.html#aa90bc630ee5203c6109ca5fad3323649',1,'TiXmlDocument']]],
+  ['errordesc',['ErrorDesc',['../class_ti_xml_document.html#a9d0f689f6e09ea494ea547be8d79c25e',1,'TiXmlDocument']]],
+  ['errorid',['ErrorId',['../class_ti_xml_document.html#af96fc2f3f9ec6422782bfe916c9e778f',1,'TiXmlDocument']]],
+  ['errorrow',['ErrorRow',['../class_ti_xml_document.html#af30efc75e804aa2e92fb8be3a8cb676e',1,'TiXmlDocument']]],
+  ['errorstring',['errorString',['../class_ti_xml_base.html#a7ac8feec4100e446b3d78e1ac0659700',1,'TiXmlBase']]],
+  ['exporter',['Exporter',['../class_exporter.html',1,'Exporter'],['../class_exporter.html#a2a977cb5ac8f637fcb570e73f650eca0',1,'Exporter::Exporter()'],['../class_exporter.html#aa0dd651db7d938f6bc104c603937c6f2',1,'Exporter::Exporter(std::ostream &amp;os)']]],
+  ['exporter_2ecpp',['Exporter.cpp',['../_exporter_8cpp.html',1,'']]],
+  ['exporter_2eh',['Exporter.h',['../_exporter_8h.html',1,'']]],
+  ['exportercli',['ExporterCLI',['../class_exporter_c_l_i.html',1,'']]],
+  ['exporterhtml',['ExporterHTML',['../class_exporter_h_t_m_l.html',1,'']]],
+  ['exportertxt',['ExporterTXT',['../class_exporter_t_x_t.html',1,'']]]
 ];

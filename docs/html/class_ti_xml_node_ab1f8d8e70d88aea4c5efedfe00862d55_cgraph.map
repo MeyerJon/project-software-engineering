@@ -1,0 +1,5 @@
+<map id="TiXmlNode::FirstChildElement" name="TiXmlNode::FirstChildElement">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#a44c8eee26bbe2d1b2762038df9dde2f0" title="The first child of this node. Will be null if there are no children. " alt="" coords="258,5,409,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#af854baeba384f5fe9859f5aee03b548e" title="Navigate to a sibling node. " alt="" coords="252,56,415,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#a72abed96dc9667ab9e0a2a275301bb1c" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="254,107,413,133"/>
+</map>

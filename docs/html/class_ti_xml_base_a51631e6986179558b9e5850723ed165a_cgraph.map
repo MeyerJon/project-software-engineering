@@ -1,0 +1,7 @@
+<map id="TiXmlBase::StringEqual" name="TiXmlBase::StringEqual">
+<area shape="rect" id="node2" href="$class_ti_xml_base.html#a799f17405a86a5c2029618e85f11a097" title="TiXmlBase::ToLower" alt="" coords="215,56,359,83"/>
+<area shape="rect" id="node3" href="$class_ti_xml_base.html#a07c765e3a7f979d343e646ea797b180b" title="TiXmlBase::ConvertUTF32ToUTF8" alt="" coords="407,5,635,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_base.html#ac6753fe8a2c89669038fcf281cb301bf" title="TiXmlBase::TiXmlBase" alt="" coords="441,56,600,83"/>
+<area shape="rect" id="node5" href="$class_ti_xml_document.html#aa56fd4dbe8917d2033d865909e2d737e" title="TiXmlDocument::operator=" alt="" coords="431,107,610,133"/>
+<area shape="rect" id="node6" href="$class_ti_xml_node.html#a708e7f953df61d4d2d12f73171550a4b" title="Delete all the children of this node. Does not affect &#39;this&#39;. " alt="" coords="683,107,809,133"/>
+</map>

@@ -1,8 +1,8 @@
-.TH "Station" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.TH "Station" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Station
+Station \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -15,32 +15,37 @@ Station
 .RI "\fBStation\fP ()"
 .br
 .ti -1c
+.RI "\fBStation\fP (std::string n, \fBStation\fP *vor, \fBStation\fP *volg, \fBSpoor\fP *sp)"
+.br
+.ti -1c
 .RI "virtual \fB~Station\fP ()"
 .br
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const"
+.RI "bool \fBproperlyInitialised\fP () const "
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
-.RI "std::string \fBgetNaam\fP () const"
+.RI "std::string \fBgetNaam\fP () const "
 .br
-.RI "Geef de naam terug van het station\&. "
+.RI "\fIGeef de naam terug van het station\&. \fP"
 .ti -1c
-.RI "\fBStation\fP * \fBgetVorige\fP () const"
+.RI "\fBStation\fP * \fBgetVorige\fP () const "
 .br
-.RI "Geef het vorig station terug\&. "
+.RI "\fIGeef het vorig station terug\&. \fP"
 .ti -1c
-.RI "\fBStation\fP * \fBgetVolgende\fP () const"
+.RI "\fBStation\fP * \fBgetVolgende\fP () const "
 .br
-.RI "Geef het volgende station\&. "
+.RI "\fIGeef het volgende station\&. \fP"
 .ti -1c
-.RI "\fBSpoor\fP * \fBgetSpoor\fP () const"
+.RI "\fBSpoor\fP * \fBgetSpoor\fP () const "
 .br
-.RI "Geef het \fBSpoor\fP terug\&. "
+.RI "\fIGeef het \fBSpoor\fP terug\&. \fP"
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Station::Station ()"
+
+.SS "Station::Station (std::string n, \fBStation\fP * vor, \fBStation\fP * volg, \fBSpoor\fP * sp)"
 
 .SS "Station::~Station ()\fC [virtual]\fP"
 
@@ -111,4 +116,4 @@ Boolean die aangeeft of het object juist geinitialiseerd is\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for SoftEng from the source code\&.
+Generated automatically by Doxygen for Metronet from the source code\&.

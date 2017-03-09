@@ -1,0 +1,12 @@
+<map id="TiXmlElement::QueryBoolAttribute" name="TiXmlElement::QueryBoolAttribute">
+<area shape="rect" id="node2" href="$class_ti_xml_attribute_set.html#af3675cc2bfd0aea153cda1cfcdd1f77e" title="TiXmlAttributeSet::Find" alt="" coords="537,131,695,157"/>
+<area shape="rect" id="node3" href="$class_ti_xml_base.html#a51631e6986179558b9e5850723ed165a" title="TiXmlBase::StringEqual" alt="" coords="301,56,462,83"/>
+<area shape="rect" id="node9" href="$class_ti_xml_attribute.html#a0f874490eac8ca00ee0070765d0e97e3" title="Return the value of this attribute. " alt="" coords="308,157,455,184"/>
+<area shape="rect" id="node10" href="$class_ti_xml_element.html#aea0bfe471380f281c5945770ddbf52b9" title="TiXmlElement::QueryIntAttribute" alt="" coords="276,208,487,235"/>
+<area shape="rect" id="node11" href="$class_ti_xml_attribute.html#ad6c93088ee21af41a107931223339344" title="TiXmlAttribute::QueryInt\lValue" alt="" coords="535,229,697,270"/>
+<area shape="rect" id="node4" href="$class_ti_xml_base.html#a799f17405a86a5c2029618e85f11a097" title="TiXmlBase::ToLower" alt="" coords="544,56,688,83"/>
+<area shape="rect" id="node5" href="$class_ti_xml_base.html#a07c765e3a7f979d343e646ea797b180b" title="TiXmlBase::ConvertUTF32ToUTF8" alt="" coords="745,5,973,32"/>
+<area shape="rect" id="node6" href="$class_ti_xml_base.html#ac6753fe8a2c89669038fcf281cb301bf" title="TiXmlBase::TiXmlBase" alt="" coords="780,56,939,83"/>
+<area shape="rect" id="node7" href="$class_ti_xml_document.html#aa56fd4dbe8917d2033d865909e2d737e" title="TiXmlDocument::operator=" alt="" coords="770,107,949,133"/>
+<area shape="rect" id="node8" href="$class_ti_xml_node.html#a708e7f953df61d4d2d12f73171550a4b" title="Delete all the children of this node. Does not affect &#39;this&#39;. " alt="" coords="1021,107,1148,133"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="TiXmlBase::Parse" name="TiXmlBase::Parse">
+<area shape="rect" id="node2" href="$class_ti_xml_attribute_set.html#a5e28f5d32f048fba85d04dc317495bdc" title="TiXmlAttributeSet::\lFindOrCreate" alt="" coords="203,63,336,105"/>
+<area shape="rect" id="node9" href="$class_ti_xml_document.html#a789ad2f06f93d52bdb5570b2f3670289" title="TiXmlDocument::Parse" alt="" coords="190,144,349,171"/>
+<area shape="rect" id="node11" href="$class_ti_xml_element.html#ac786bce103042d3837c4cc2ff6967d41" title="TiXmlElement::ReadValue" alt="" coords="181,195,357,221"/>
+<area shape="rect" id="node3" href="$class_ti_xml_element.html#ace6f4be75e373726d4774073d666d1a7" title="TiXmlElement::SetAttribute" alt="" coords="426,5,607,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_element.html#a0d1dd975d75496778177e35abfe0ec0b" title="TiXmlElement::SetDoubleAttribute" alt="" coords="405,56,628,83"/>
+<area shape="rect" id="node5" href="$class_ti_xml_attribute_set.html#a924a73d071f2573f9060f0be57879c57" title="TiXmlAttributeSet::\lRemove" alt="" coords="450,107,583,149"/>
+<area shape="rect" id="node6" href="$class_ti_xml_element.html#a5670933ec2d7d9763b9891acc05d7f7d" title="TiXmlElement::ClearThis" alt="" coords="676,115,844,141"/>
+<area shape="rect" id="node7" href="$class_ti_xml_element.html#ad58d300f4cfc0016ffa6861ebb718a0b" title="TiXmlElement::operator=" alt="" coords="910,89,1077,116"/>
+<area shape="rect" id="node8" href="$class_ti_xml_element.html#aa049a47c5081c0d021968666360da261" title="TiXmlElement::~TiXmlElement" alt="" coords="892,140,1095,167"/>
+<area shape="rect" id="node10" href="$class_ti_xml_document.html#a41f6fe7200864d1dca663d230caf8db6" title="TiXmlDocument::LoadFile" alt="" coords="430,173,603,200"/>
+</map>
