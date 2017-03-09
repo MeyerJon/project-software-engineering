@@ -22,7 +22,7 @@ private:
     Parser* initCheck;
 public:
     Parser();
-    virtual ~Parser();
+    Parser(Exporter* exp);
 
     /** \brief Verwerkt het XML-bestand en zet het metronet op
      *
@@ -33,7 +33,7 @@ public:
      * REQUIRE(this->properlyInitialised, "De parser was niet geinitialiseerd bij het aanroepen van setupStations.");\n
      * REQUIRE(metro.properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");\n
      */
-    void setup(Metronet& metro, std::string filename, std::ostream& os);
+    bool setup(Metronet& metro, std::string filename, std::ostream& os);
 
 };
 

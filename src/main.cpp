@@ -11,8 +11,9 @@
 #include "Exporter.h"
 
 int main() {
-    Exporter exporter;
-    Parser parser;
+    Exporter* exporter = new ExporterCLI;
+    Parser parser(exporter);
     Metronet metronet;
+    parser.setup(metronet, "xmls/DummyStations.xml", std::cout);
     return 0;
 }
