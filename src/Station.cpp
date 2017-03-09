@@ -12,11 +12,13 @@ Station::Station() {
     initCheck = this;
 }
 
-Station::Station(std::string n, Station* vor, Station* volg, Spoor* sp) {
+Station::Station(std::string n, Station* vor, Station* volg, Spoor* sp, int o, int a) {
     naam = n;
     vorige = vor;
     volgende = volg;
     spoor = sp;
+    opstappen = o;
+    afstappen = a;
 }
 
 Station::~Station() {

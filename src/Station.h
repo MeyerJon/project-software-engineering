@@ -20,9 +20,12 @@ private:
     Station* volgende;
     Spoor* spoor;
     Station* initCheck;
+    int opstappen;
+    int afstappen;
+
 public:
     Station();
-    Station(std::string n, Station* vor, Station* volg, Spoor* sp);
+    Station(std::string n, Station* vor, Station* volg, Spoor* sp, int op, int af);
     virtual ~Station();
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
