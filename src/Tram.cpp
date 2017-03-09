@@ -6,14 +6,12 @@
  */
 
 #include "Tram.h"
-#include "Spoor.h"
-#include "Station.h"
 
 Tram::Tram() {
     initCheck = this;
 }
 
-Tram::Tram(int zit, int snel, Spoor* sp, Station* beginS) {
+Tram::Tram(int zit, int snel, int sp, std::string beginS) {
     zitplaatsen = zit;
     passagiers = 0;
     snelheid = snel;
@@ -21,10 +19,6 @@ Tram::Tram(int zit, int snel, Spoor* sp, Station* beginS) {
     beginStation = beginS;
     huidigStation = beginS;
     initCheck = this;
-}
-
-Tram::~Tram() {
-    // TODO Auto-generated destructor stub
 }
 
 bool Tram::properlyInitialised() const {
@@ -49,32 +43,31 @@ int Tram::getSnelheid() const {
     return snelheid;
 }
 
-Spoor* Tram::getSpoor() const {
+int Tram::getSpoor() const {
     REQUIRE(this->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van getSpoor.");
     return spoor;
 }
 
-Station* Tram::getBeginStation() const {
+std::string Tram::getBeginStation() const {
     REQUIRE(this->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van getBeginStation.");
     return beginStation;
 }
 
-Station* Tram::getHuidigStation() const {
+std::string Tram::getHuidigStation() const {
     REQUIRE(this->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");
     return huidigStation;
 }
 
-void Tram::verplaatsTram(Station *station, Exporter* exp) {
+void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van verplaatsTram.");
 
+    std::string output = "Tram " + std::to_string(spoor) + " reed van station " +
+                         huidigStation + " naar station " + station + ".\n";
     huidigStation = station;
-    // TODO: Uitvoer
-    std::string output = "Tram " + std::to_string(spoor->getLijnNr()) + " reed van station " +
-                         station->getNaam() + " naar station " + station->getNaam() + ".\n";
 
     ENSURE((huidigStation == station),
            "huidigStation is niet correct aangepast.");\
