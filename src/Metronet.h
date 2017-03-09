@@ -31,6 +31,7 @@ public:
     virtual ~Metronet();
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
+     *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
      */
     bool properlyInitialised();
 
@@ -63,6 +64,7 @@ public:
 
     /** \brief Kijkt na of het metronet consistent is.
      *  \param exp De exporter die de output zal behandelen.
+     *  \return Boolean die aangeeft of het Metronet consistent is.
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");\n
      */

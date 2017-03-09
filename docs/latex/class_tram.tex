@@ -1,9 +1,16 @@
 \hypertarget{class_tram}{}\section{Tram Class Reference}
 \label{class_tram}\index{Tram@{Tram}}
+
+
+{\ttfamily \#include $<$Tram.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_tram_ac2688f590e4db232b4f535c9bf959efb}\label{class_tram_ac2688f590e4db232b4f535c9bf959efb}} 
+\hyperlink{class_tram_aad83b2e7e79d57528691bf317ab0e1ef}{Tram} ()
+\item 
+virtual \hyperlink{class_tram_acd6056d2289f2dccd371bc226cd2cb17}{$\sim$\+Tram} ()
+\item 
 bool \hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised} () const
 \begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
 int \hyperlink{class_tram_abcb1ce0d10e394fce8a99b460e5104de}{get\+Zitplaatsen} () const
@@ -20,6 +27,21 @@ int \hyperlink{class_tram_aa8bcd980469801cb8524f170006f666c}{get\+Snelheid} () c
 \begin{DoxyCompactList}\small\item\em Geef het huidig station. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tram_aad83b2e7e79d57528691bf317ab0e1ef}\label{class_tram_aad83b2e7e79d57528691bf317ab0e1ef}} 
+\index{Tram@{Tram}!Tram@{Tram}}
+\index{Tram@{Tram}!Tram@{Tram}}
+\subsubsection{\texorpdfstring{Tram()}{Tram()}}
+{\footnotesize\ttfamily Tram\+::\+Tram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tram_acd6056d2289f2dccd371bc226cd2cb17}\label{class_tram_acd6056d2289f2dccd371bc226cd2cb17}} 
+\index{Tram@{Tram}!````~Tram@{$\sim$\+Tram}}
+\index{````~Tram@{$\sim$\+Tram}!Tram@{Tram}}
+\subsubsection{\texorpdfstring{$\sim$\+Tram()}{~Tram()}}
+{\footnotesize\ttfamily Tram\+::$\sim$\+Tram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_tram_abe386592de6a7930df75ea184b945403}\label{class_tram_abe386592de6a7930df75ea184b945403}} 
 \index{Tram@{Tram}!get\+Begin\+Station@{get\+Begin\+Station}}
@@ -31,7 +53,17 @@ int \hyperlink{class_tram_aa8bcd980469801cb8524f170006f666c}{get\+Snelheid} () c
 
 Geef het beginstation terug. 
 
+\begin{DoxyReturn}{Returns}
+Het beginstation.
+\end{DoxyReturn}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Begin\+Station.\char`\"{});~\newline
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tram_abe386592de6a7930df75ea184b945403_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_tram_ad04f5905ffec6ef4069b27f08c63f4b9}\label{class_tram_ad04f5905ffec6ef4069b27f08c63f4b9}} 
 \index{Tram@{Tram}!get\+Huidig\+Station@{get\+Huidig\+Station}}
 \index{get\+Huidig\+Station@{get\+Huidig\+Station}!Tram@{Tram}}
@@ -42,7 +74,17 @@ R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959
 
 Geef het huidig station. 
 
+\begin{DoxyReturn}{Returns}
+Het huidig station.
+\end{DoxyReturn}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Huidig\+Station.\char`\"{});~\newline
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tram_ad04f5905ffec6ef4069b27f08c63f4b9_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_tram_a678ba2cd0c6ab76e966947944f599d56}\label{class_tram_a678ba2cd0c6ab76e966947944f599d56}} 
 \index{Tram@{Tram}!get\+Passagiers@{get\+Passagiers}}
 \index{get\+Passagiers@{get\+Passagiers}!Tram@{Tram}}
@@ -53,7 +95,17 @@ R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959
 
 Geef de passagiers terug van de tram. 
 
+\begin{DoxyReturn}{Returns}
+De passagiers.
+\end{DoxyReturn}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Passagiers.\char`\"{});~\newline
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_tram_a678ba2cd0c6ab76e966947944f599d56_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_tram_aa8bcd980469801cb8524f170006f666c}\label{class_tram_aa8bcd980469801cb8524f170006f666c}} 
 \index{Tram@{Tram}!get\+Snelheid@{get\+Snelheid}}
 \index{get\+Snelheid@{get\+Snelheid}!Tram@{Tram}}
@@ -64,7 +116,17 @@ R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959
 
 Geef de snelheid terug van de tram. 
 
+\begin{DoxyReturn}{Returns}
+De snelheid.
+\end{DoxyReturn}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Snelheid.\char`\"{});~\newline
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_tram_aa8bcd980469801cb8524f170006f666c_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_tram_aee9cf13e0525ac7c769709edf1ff987d}\label{class_tram_aee9cf13e0525ac7c769709edf1ff987d}} 
 \index{Tram@{Tram}!get\+Spoor@{get\+Spoor}}
 \index{get\+Spoor@{get\+Spoor}!Tram@{Tram}}
@@ -75,7 +137,17 @@ R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959
 
 Geef het spoor terug. 
 
+\begin{DoxyReturn}{Returns}
+Het spoor.
+\end{DoxyReturn}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Spoor.\char`\"{});~\newline
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_tram_aee9cf13e0525ac7c769709edf1ff987d_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_tram_abcb1ce0d10e394fce8a99b460e5104de}\label{class_tram_abcb1ce0d10e394fce8a99b460e5104de}} 
 \index{Tram@{Tram}!get\+Zitplaatsen@{get\+Zitplaatsen}}
 \index{get\+Zitplaatsen@{get\+Zitplaatsen}!Tram@{Tram}}
@@ -86,10 +158,40 @@ R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959
 
 Geef de zitplaatsen terug van de tram. 
 
+\begin{DoxyReturn}{Returns}
+De zitplaatsen.
+\end{DoxyReturn}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Zitplaatsen.\char`\"{});~\newline
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_tram_abcb1ce0d10e394fce8a99b460e5104de_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tram_ac2688f590e4db232b4f535c9bf959efb}\label{class_tram_ac2688f590e4db232b4f535c9bf959efb}} 
+\index{Tram@{Tram}!properly\+Initialised@{properly\+Initialised}}
+\index{properly\+Initialised@{properly\+Initialised}!Tram@{Tram}}
+\subsubsection{\texorpdfstring{properly\+Initialised()}{properlyInitialised()}}
+{\footnotesize\ttfamily bool Tram\+::properly\+Initialised (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Kijk na of de constructor in de juiste staat geeindigd is. 
+
+\begin{DoxyReturn}{Returns}
+Boolean die aangeeft of het object juist geinitialiseerd is. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tram_ac2688f590e4db232b4f535c9bf959efb_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/Tram.\+h\item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/Tram.\+cpp\end{DoxyCompactItemize}
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_tram_8h}{Tram.\+h}\item 
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_tram_8cpp}{Tram.\+cpp}\end{DoxyCompactItemize}

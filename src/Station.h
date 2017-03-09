@@ -25,29 +25,33 @@ public:
     virtual ~Station();
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
+     *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
      */
     bool properlyInitialised() const;
 
     /** \brief Geef de naam terug van het station.
+     *  \return De naam van het station.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getNaam.");\n
      */
     std::string getNaam() const;
 
     /** \brief Geef het vorig station terug.
+     *  \return Het vorig station.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");\n
      */
     Station* getVorige() const;
 
     /** \brief Geef het volgende station.
+     *  \return Het volgende station.
      *
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");\n
      */
     Station* getVolgende() const;
 
     /** \brief Geef het Spoor terug.
-     *
+     *  \return Het spoor.
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");\n
      */
     Spoor* getSpoor() const;

@@ -1,0 +1,9 @@
+<map id="Tram::properlyInitialised" name="Tram::properlyInitialised">
+<area shape="rect" id="node2" href="$class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="227,5,359,32"/>
+<area shape="rect" id="node3" href="$class_tram.html#abcb1ce0d10e394fce8a99b460e5104de" title="Geef de zitplaatsen terug van de tram. " alt="" coords="221,56,364,83"/>
+<area shape="rect" id="node4" href="$class_tram.html#a678ba2cd0c6ab76e966947944f599d56" title="Geef de passagiers terug van de tram. " alt="" coords="221,107,364,133"/>
+<area shape="rect" id="node5" href="$class_tram.html#aa8bcd980469801cb8524f170006f666c" title="Geef de snelheid terug van de tram. " alt="" coords="229,157,357,184"/>
+<area shape="rect" id="node6" href="$class_tram.html#aee9cf13e0525ac7c769709edf1ff987d" title="Geef het spoor terug. " alt="" coords="237,208,349,235"/>
+<area shape="rect" id="node7" href="$class_tram.html#abe386592de6a7930df75ea184b945403" title="Geef het beginstation terug. " alt="" coords="217,259,369,285"/>
+<area shape="rect" id="node8" href="$class_tram.html#ad04f5905ffec6ef4069b27f08c63f4b9" title="Geef het huidig station. " alt="" coords="215,309,371,336"/>
+</map>

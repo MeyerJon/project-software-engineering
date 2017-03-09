@@ -1,0 +1,7 @@
+<map id="Station::properlyInitialised" name="Station::properlyInitialised">
+<area shape="rect" id="node2" href="$class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="225,5,368,32"/>
+<area shape="rect" id="node3" href="$class_station.html#aea6c31c39a5e1eb4c30337e7ce489e69" title="Geef de naam terug van het station. " alt="" coords="235,56,359,83"/>
+<area shape="rect" id="node4" href="$class_station.html#a69c0539e899ff540c38eb434a69bfa9e" title="Geef het vorig station terug. " alt="" coords="233,107,360,133"/>
+<area shape="rect" id="node5" href="$class_station.html#a330c297adddcbfd5d8871075291e9512" title="Geef het volgende station. " alt="" coords="225,157,368,184"/>
+<area shape="rect" id="node6" href="$class_station.html#a5230690094cdfd1e9f443d76f35c8a19" title="Geef het Spoor terug. " alt="" coords="235,208,358,235"/>
+</map>
