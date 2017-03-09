@@ -1,0 +1,12 @@
+<map id="TiXmlAttributeSet::Find" name="TiXmlAttributeSet::Find">
+<area shape="rect" id="node2" href="$class_ti_xml_element.html#a6042f518748f475a7ac4b4e0b509eb05" title="TiXmlElement::Attribute" alt="" coords="237,5,398,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_element.html#a5c0f739e0f6f5905a201364532e54a60" title="TiXmlElement::QueryIntAttribute" alt="" coords="212,56,423,83"/>
+<area shape="rect" id="node5" href="$class_ti_xml_element.html#a5789b1488af75b6ae37a749700495ceb" title="TiXmlElement::QueryBoolAttribute" alt="" coords="471,81,693,108"/>
+<area shape="rect" id="node6" href="$class_ti_xml_element.html#ab75c83543d4ace62f4c40d7e8e392fc3" title="QueryUnsignedAttribute examines the attribute &#45; see QueryIntAttribute(). " alt="" coords="216,158,419,199"/>
+<area shape="rect" id="node7" href="$class_ti_xml_element.html#ae04bad29ddb281a7e6c662b3882e9928" title="QueryDoubleAttribute examines the attribute &#45; see QueryIntAttribute(). " alt="" coords="223,223,411,265"/>
+<area shape="rect" id="node8" href="$class_ti_xml_attribute_set.html#a924a73d071f2573f9060f0be57879c57" title="TiXmlAttributeSet::\lRemove" alt="" coords="251,289,384,330"/>
+<area shape="rect" id="node3" href="$class_ti_xml_element.html#a8005d0b808fd02bd1246710cdf95e5f6" title="TiXmlElement::Attribute" alt="" coords="501,5,663,32"/>
+<area shape="rect" id="node9" href="$class_ti_xml_element.html#a5670933ec2d7d9763b9891acc05d7f7d" title="TiXmlElement::ClearThis" alt="" coords="498,296,666,323"/>
+<area shape="rect" id="node10" href="$class_ti_xml_element.html#ad58d300f4cfc0016ffa6861ebb718a0b" title="TiXmlElement::operator=" alt="" coords="759,271,926,297"/>
+<area shape="rect" id="node11" href="$class_ti_xml_element.html#aa049a47c5081c0d021968666360da261" title="TiXmlElement::~TiXmlElement" alt="" coords="741,321,944,348"/>
+</map>

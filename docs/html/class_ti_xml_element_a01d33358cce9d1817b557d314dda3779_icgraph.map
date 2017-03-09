@@ -1,0 +1,4 @@
+<map id="TiXmlElement::Accept" name="TiXmlElement::Accept">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#a4027136ca820ff4a636b607231b6a6df" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="207,5,383,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_text.html#ae7c3a8fd3e4dbf6c0c4363a943d72f5b" title="Cast to a more defined type. Will return null not of the requested type. " alt="" coords="229,56,360,83"/>
+</map>

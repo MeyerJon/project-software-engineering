@@ -1,0 +1,4 @@
+<map id="TiXmlNode::LastChild" name="TiXmlNode::LastChild">
+<area shape="rect" id="node2" href="$class_ti_xml_printer.html#a6dccaf5ee4979f13877690afe28721e8" title="Visit an element. " alt="" coords="204,5,363,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a6432d2b2495f6caf9cb4278df706a031" title="The last child of this node. Will be null if there are no children. " alt="" coords="208,56,359,83"/>
+</map>

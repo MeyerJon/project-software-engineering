@@ -1,0 +1,4 @@
+<map id="TiXmlHandle::Child" name="TiXmlHandle::Child">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#aa66bceae19707c90c1db12d7c98894a4" title="The first child of this node. Will be null if there are no children. " alt="" coords="194,5,345,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#ae99c572ac7901a15993ea7a4efaa10e7" title="Navigate to a sibling node. " alt="" coords="188,56,351,83"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['row',['row',['../struct_ti_xml_cursor.html#a5b54dd949820c2db061e2be41f3effb3',1,'TiXmlCursor']]]
+  ['next',['next',['../class_ti_xml_node.html#a2f329cc993d2d34df76e17dcbb776b45',1,'TiXmlNode']]],
+  ['npos',['npos',['../class_ti_xml_string.html#a8f4422d227088dc7bec96f479b275d0a',1,'TiXmlString']]]
 ];

@@ -1,0 +1,21 @@
+<map id="TiXmlNode::FirstChild" name="TiXmlNode::FirstChild">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#a67c3a02b797f08d9a31b2553661257e1" title="TiXmlNode::IterateChildren" alt="" coords="213,68,393,94"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#abad5bf1059c48127b958711ef89e8e5d" title="The last child of this node matching &#39;value&#39;. Will be null if there are no children. " alt="" coords="481,17,631,44"/>
+<area shape="rect" id="node5" href="$class_ti_xml_node.html#a12c973e1da9e90a178924b8ea5a5f4d1" title="Convenience function to get through elements. " alt="" coords="204,194,403,221"/>
+<area shape="rect" id="node10" href="$class_ti_xml_element.html#a01d33358cce9d1817b557d314dda3779" title="TiXmlElement::Accept" alt="" coords="227,245,380,272"/>
+<area shape="rect" id="node13" href="$class_ti_xml_element.html#af0f814ecbd43d50d4cdbdf4354d3da39" title="TiXmlElement::GetText" alt="" coords="224,296,383,322"/>
+<area shape="rect" id="node14" href="$class_ti_xml_document.html#aa9e166fae51da603641380a964f21eeb" title="Print this Document to a FILE stream. " alt="" coords="228,346,379,373"/>
+<area shape="rect" id="node15" href="$class_ti_xml_document.html#a8ddd6eec722cbd25900bbac664909bac" title="TiXmlDocument::Accept" alt="" coords="221,397,386,424"/>
+<area shape="rect" id="node16" href="$class_ti_xml_handle.html#afb1b4c0eda970b320dfd262304cc1d04" title="Return a handle to the first child node. " alt="" coords="223,448,384,474"/>
+<area shape="rect" id="node17" href="$class_ti_xml_handle.html#a32585942abb28e03eea9c5223f38a659" title="TiXmlHandle::Child" alt="" coords="236,498,371,525"/>
+<area shape="rect" id="node18" href="$class_ti_xml_printer.html#a6dccaf5ee4979f13877690afe28721e8" title="Visit an element. " alt="" coords="224,549,383,576"/>
+<area shape="rect" id="node19" href="$class_ti_xml_printer.html#ae6a1df8271df4bf62d7873c38e34aa69" title="Visit an element. " alt="" coords="228,600,379,626"/>
+<area shape="rect" id="node20" href="$class_ti_xml_node.html#a5e97d69b7c0ebd27fb7286be56559b77" title="TiXmlNode::FirstChild" alt="" coords="228,650,379,677"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#a2358e747118fdbf0e467b1e4f7d03de1" title="TiXmlNode::IterateChildren" alt="" coords="466,68,646,94"/>
+<area shape="rect" id="node6" href="$class_ti_xml_handle.html#af0643f8683f3f2b779b8c9d78c67b2c0" title="Return a handle to the first child element. " alt="" coords="451,118,661,145"/>
+<area shape="rect" id="node7" href="$class_ti_xml_handle.html#a57a639ab0ac99ff9358f675a1b73049a" title="TiXmlHandle::ChildElement" alt="" coords="465,169,647,196"/>
+<area shape="rect" id="node8" href="$class_ti_xml_node.html#a6e1ac6b800e18049bc75e9f8e63a8e5f" title="TiXmlNode::NextSiblingElement" alt="" coords="451,220,661,246"/>
+<area shape="rect" id="node9" href="$class_ti_xml_node.html#aa0fecff1f3866ab33a8a25506e95db1d" title="TiXmlNode::FirstChildElement" alt="" coords="457,270,655,297"/>
+<area shape="rect" id="node11" href="$class_ti_xml_node.html#a4027136ca820ff4a636b607231b6a6df" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="468,321,644,348"/>
+<area shape="rect" id="node12" href="$class_ti_xml_text.html#ae7c3a8fd3e4dbf6c0c4363a943d72f5b" title="Cast to a more defined type. Will return null not of the requested type. " alt="" coords="491,372,621,398"/>
+</map>

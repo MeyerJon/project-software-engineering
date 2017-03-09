@@ -1,0 +1,4 @@
+<map id="TiXmlNode::NextSiblingElement" name="TiXmlNode::NextSiblingElement">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#ae99c572ac7901a15993ea7a4efaa10e7" title="Navigate to a sibling node. " alt="" coords="264,5,427,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a4080428f2cac46e92ef4d284202fad0b" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="266,56,425,83"/>
+</map>

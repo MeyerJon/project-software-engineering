@@ -4,6 +4,6 @@
 <area shape="rect" id="node6" href="$class_ti_xml_document.html#ae4508b452d0c3061db085f3db27b8396" title="Create a document with a name. The name of the document is also the filename of the xml..." alt="" coords="219,107,438,133"/>
 <area shape="rect" id="node7" href="$class_ti_xml_declaration.html#a3b618d1c30c25e4b7a71f31a595ee298" title="Construct. " alt="" coords="213,157,444,184"/>
 <area shape="rect" id="node8" href="$class_ti_xml_text.html#a829a4bd2d8d2461c333eb4f3f5b1b3d2" title="TiXmlText::~TiXmlText" alt="" coords="249,208,408,235"/>
-<area shape="rect" id="node3" href="$class_ti_xml_element.html#a13f6df105ebb1e8dc636e75cc883be32" title="Creates a new Element and returns it &#45; the returned element is a copy. " alt="" coords="492,5,639,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_element.html#a810ea8fa40844c01334e5af2a26794cb" title="Creates a new Element and returns it &#45; the returned element is a copy. " alt="" coords="492,5,639,32"/>
 <area shape="rect" id="node5" href="$class_ti_xml_text.html#ae7c3a8fd3e4dbf6c0c4363a943d72f5b" title="Cast to a more defined type. Will return null not of the requested type. " alt="" coords="709,5,840,32"/>
 </map>

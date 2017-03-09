@@ -1,0 +1,6 @@
+<map id="TiXmlAttribute::QueryIntValue" name="TiXmlAttribute::QueryIntValue">
+<area shape="rect" id="node2" href="$class_ti_xml_element.html#a8005d0b808fd02bd1246710cdf95e5f6" title="TiXmlElement::Attribute" alt="" coords="241,5,402,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_element.html#a5c0f739e0f6f5905a201364532e54a60" title="TiXmlElement::QueryIntAttribute" alt="" coords="216,56,427,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_element.html#a5789b1488af75b6ae37a749700495ceb" title="TiXmlElement::QueryBoolAttribute" alt="" coords="475,81,697,108"/>
+<area shape="rect" id="node5" href="$class_ti_xml_element.html#ab75c83543d4ace62f4c40d7e8e392fc3" title="QueryUnsignedAttribute examines the attribute &#45; see QueryIntAttribute(). " alt="" coords="220,158,423,199"/>
+</map>

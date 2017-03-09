@@ -6,4 +6,5 @@
 <area shape="rect" id="node6" href="$class_tram.html#aee9cf13e0525ac7c769709edf1ff987d" title="Geef het spoor terug. " alt="" coords="237,208,349,235"/>
 <area shape="rect" id="node7" href="$class_tram.html#abe386592de6a7930df75ea184b945403" title="Geef het beginstation terug. " alt="" coords="217,259,369,285"/>
 <area shape="rect" id="node8" href="$class_tram.html#ad04f5905ffec6ef4069b27f08c63f4b9" title="Geef het huidig station. " alt="" coords="215,309,371,336"/>
+<area shape="rect" id="node9" href="$class_tram.html#ab2a78d1ff86257b8dd27a3b0abc440ee" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="221,360,364,387"/>
 </map>

@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-Metronet \- 
+Metronet
 .SH SYNOPSIS
 .br
 .PP
@@ -20,23 +20,23 @@ Metronet \-
 .ti -1c
 .RI "bool \fBproperlyInitialised\fP ()"
 .br
-.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
 .ti -1c
 .RI "void \fBaddStation\fP (\fBStation\fP *station)"
 .br
-.RI "\fIVoegt station toe aan metronet\&. \fP"
+.RI "Voegt station toe aan metronet\&. "
 .ti -1c
 .RI "void \fBaddTram\fP (\fBTram\fP *tram)"
 .br
-.RI "\fIVoegt tram toe aan metronet\&. \fP"
+.RI "Voegt tram toe aan metronet\&. "
 .ti -1c
 .RI "void \fBaddSpoor\fP (\fBSpoor\fP *spoor)"
 .br
-.RI "\fIVoegt spoor toe aan metronet\&. \fP"
+.RI "Voegt spoor toe aan metronet\&. "
 .ti -1c
-.RI "bool \fBcheckConsistent\fP (\fBExporter\fP *exp)"
+.RI "bool \fBcheckConsistent\fP (\fBExporter\fP *exp, std::ostream &os)"
 .br
-.RI "\fIKijkt na of het metronet consistent is\&. \fP"
+.RI "Kijkt na of het metronet consistent is\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -97,7 +97,7 @@ REQUIRE(Tram->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de
 ENSURE(trams[trams\&.size() - 1] == \fBTram\fP), 'Tram was niet toegevoegd bij de aanroep van addTram\&.');
 .br
 
-.SS "bool Metronet::checkConsistent (\fBExporter\fP * exp)"
+.SS "bool Metronet::checkConsistent (\fBExporter\fP * exp, std::ostream & os)"
 
 .PP
 Kijkt na of het metronet consistent is\&. 
@@ -105,6 +105,8 @@ Kijkt na of het metronet consistent is\&.
 \fBParameters:\fP
 .RS 4
 \fIexp\fP De exporter die de output zal behandelen\&. 
+.br
+\fIos\fP De stream waar de output naar gestuurd zal worden\&. 
 .RE
 .PP
 \fBReturns:\fP

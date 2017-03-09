@@ -1,0 +1,5 @@
+<map id="TiXmlDocument::SaveFile" name="TiXmlDocument::SaveFile">
+<area shape="rect" id="node2" href="$tinyxml_8cpp.html#aae316d26cdf72c45de918553b2c61e20" title="TiXmlFOpen" alt="" coords="268,5,363,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_document.html#ab63b96a6af5a467e289c7c75202edad9" title="Save a file using the current document value. Returns true if successful. " alt="" coords="228,56,403,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#ad44dfe927d49a74dd78b72b7514417ad" title="TiXmlNode::Value" alt="" coords="451,56,579,83"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="TiXmlAttribute::Next" name="TiXmlAttribute::Next">
+<area shape="rect" id="node2" href="$class_ti_xml_element.html#aa31a15cddfb8601a31236fe7d2569fb4" title="TiXmlElement::Print" alt="" coords="205,31,343,57"/>
+<area shape="rect" id="node4" href="$class_ti_xml_element.html#ab931f2208ed76ba03465d8a1f86b5935" title="TiXmlElement::CopyTo" alt="" coords="195,132,353,159"/>
+<area shape="rect" id="node10" href="$class_ti_xml_printer.html#a6dccaf5ee4979f13877690afe28721e8" title="Visit an element. " alt="" coords="195,183,353,209"/>
+<area shape="rect" id="node3" href="$class_ti_xml_text.html#aed5b13f9c1b804c616fd533882c29f57" title="TiXmlText::operator=" alt="" coords="426,5,571,32"/>
+<area shape="rect" id="node5" href="$class_ti_xml_element.html#a1ca4465f3c2eac6a60e641cd7f1d9f7e" title="TiXmlElement::TiXmlElement" alt="" coords="401,56,596,83"/>
+<area shape="rect" id="node6" href="$class_ti_xml_element.html#ad58d300f4cfc0016ffa6861ebb718a0b" title="TiXmlElement::operator=" alt="" coords="415,107,582,133"/>
+<area shape="rect" id="node7" href="$class_ti_xml_element.html#a810ea8fa40844c01334e5af2a26794cb" title="Creates a new Element and returns it &#45; the returned element is a copy. " alt="" coords="425,208,572,235"/>
+<area shape="rect" id="node8" href="$class_ti_xml_node.html#a4027136ca820ff4a636b607231b6a6df" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="644,183,820,209"/>
+<area shape="rect" id="node9" href="$class_ti_xml_text.html#ae7c3a8fd3e4dbf6c0c4363a943d72f5b" title="Cast to a more defined type. Will return null not of the requested type. " alt="" coords="667,245,797,272"/>
+</map>

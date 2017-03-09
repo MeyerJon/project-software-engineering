@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-TiXmlText \- 
+TiXmlText
 .SH SYNOPSIS
 .br
 .PP
@@ -26,43 +26,43 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "\fBTiXmlText\fP & \fBoperator=\fP (const \fBTiXmlText\fP &base)"
 .br
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const "
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const"
 .br
 .ti -1c
-.RI "bool \fBCDATA\fP () const "
+.RI "bool \fBCDATA\fP () const"
 .br
-.RI "\fIQueries whether this represents text using a CDATA section\&. \fP"
+.RI "Queries whether this represents text using a CDATA section\&. "
 .ti -1c
 .RI "void \fBSetCDATA\fP (bool _cdata)"
 .br
-.RI "\fITurns on or off a CDATA representation of text\&. \fP"
+.RI "Turns on or off a CDATA representation of text\&. "
 .ti -1c
 .RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data, \fBTiXmlEncoding\fP encoding)"
 .br
 .ti -1c
-.RI "virtual const \fBTiXmlText\fP * \fBToText\fP () const "
+.RI "virtual const \fBTiXmlText\fP * \fBToText\fP () const"
 .br
-.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
+.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
 .ti -1c
 .RI "virtual \fBTiXmlText\fP * \fBToText\fP ()"
 .br
-.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
+.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
 .ti -1c
-.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const "
+.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const "
+.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const"
 .br
-.RI "\fI[internal use] Creates a new Element and returns it\&. \fP"
+.RI "[internal use] Creates a new Element and returns it\&. "
 .ti -1c
-.RI "void \fBCopyTo\fP (\fBTiXmlText\fP *target) const "
+.RI "void \fBCopyTo\fP (\fBTiXmlText\fP *target) const"
 .br
 .ti -1c
-.RI "bool \fBBlank\fP () const "
+.RI "bool \fBBlank\fP () const"
 .br
 .in -1c
 .SS "Friends"

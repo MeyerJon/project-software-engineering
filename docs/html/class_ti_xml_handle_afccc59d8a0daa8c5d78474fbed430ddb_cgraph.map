@@ -1,0 +1,7 @@
+<map id="TiXmlHandle::ChildElement" name="TiXmlHandle::ChildElement">
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#a12c973e1da9e90a178924b8ea5a5f4d1" title="Convenience function to get through elements. " alt="" coords="242,56,441,83"/>
+<area shape="rect" id="node6" href="$class_ti_xml_node.html#ac6105781c913a42aa7f3f17bd1964f7c" title="TiXmlNode::NextSiblingElement" alt="" coords="236,107,447,133"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#aa66bceae19707c90c1db12d7c98894a4" title="The first child of this node. Will be null if there are no children. " alt="" coords="501,5,651,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#ae99c572ac7901a15993ea7a4efaa10e7" title="Navigate to a sibling node. " alt="" coords="495,107,657,133"/>
+<area shape="rect" id="node5" href="$class_ti_xml_node.html#a4080428f2cac46e92ef4d284202fad0b" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="497,56,655,83"/>
+</map>

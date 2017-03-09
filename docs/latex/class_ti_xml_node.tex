@@ -27,12 +27,12 @@ Collaboration diagram for Ti\+Xml\+Node\+:
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{Node\+Type} \{ \\*
+enum \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{Node\+Type} \{ \newline
 \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a76c4c520453398cd033e8b97ec9a0b04}{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT}, 
 \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a9ad167b17c3148d7a018fde9a41ce976}{T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT}, 
 \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a742eb78855db1e81614848072de03721}{T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT}, 
 \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a7376f9420c8ab507842c8a0813bb077e}{T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN}, 
-\\*
+\newline
 \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2aa6177e9506461cdca7062559387a2714}{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT}, 
 \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a1e2351ad8cd0c805538d94222f3d8cd0}{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}, 
 \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a878567737ed539bd3de6a941027e9309}{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT}
@@ -43,9 +43,9 @@ enum \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{Node\+Type}
 \item 
 virtual \hyperlink{class_ti_xml_node_a027a76cccd359c831ee4024b58c49625}{$\sim$\+Ti\+Xml\+Node} ()
 \item 
-const char $\ast$ \hyperlink{class_ti_xml_node_a77943eb90d12c2892b1337a9f5918b41}{Value} () const 
+const char $\ast$ \hyperlink{class_ti_xml_node_ad44dfe927d49a74dd78b72b7514417ad}{Value} () const
 \item 
-const \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} \& \hyperlink{class_ti_xml_node_a83ece13d2ea66dac66e0b21332229239}{Value\+T\+Str} () const 
+const \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} \& \hyperlink{class_ti_xml_node_a74c4ea4a91c0a91900c919f69f657d6a}{Value\+T\+Str} () const
 \item 
 void \hyperlink{class_ti_xml_node_a2a38329ca5d3f28f98ce932b8299ae90}{Set\+Value} (const char $\ast$\+\_\+value)
 \item 
@@ -53,29 +53,29 @@ void \hyperlink{class_ti_xml_node_a708e7f953df61d4d2d12f73171550a4b}{Clear} ()
 \begin{DoxyCompactList}\small\item\em Delete all the children of this node. Does not affect \textquotesingle{}this\textquotesingle{}. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_ab643043132ffd794f8602685d34a982e}{Parent} ()
 \begin{DoxyCompactList}\small\item\em One step up the D\+OM. \end{DoxyCompactList}\item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a78878709e53066f06eb4fcbcdd3a5260}{Parent} () const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_af13df38878a5798142693d01d6133ba0}{Parent} () const
 \item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a44c8eee26bbe2d1b2762038df9dde2f0}{First\+Child} () const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_aa66bceae19707c90c1db12d7c98894a4}{First\+Child} () const
 \begin{DoxyCompactList}\small\item\em The first child of this node. Will be null if there are no children. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a5e97d69b7c0ebd27fb7286be56559b77}{First\+Child} ()
 \item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_ab5f722624113c8203227de4f56576d31}{First\+Child} (const char $\ast$\hyperlink{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}{value}) const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_ae98c367f664890c4b5a5183481ec128a}{First\+Child} (const char $\ast$\hyperlink{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}{value}) const
 \item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_abc8bf32be6419ec453a731868de19554}{First\+Child} (const char $\ast$\+\_\+value)
 \begin{DoxyCompactList}\small\item\em The first child of this node with the matching \textquotesingle{}value\textquotesingle{}. Will be null if none found. \end{DoxyCompactList}\item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a6d671107e00cca1d28cb2d7f3a87a21e}{Last\+Child} () const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_af3a04120b1ed2fead2f4bb72cbea845e}{Last\+Child} () const
 \item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a6432d2b2495f6caf9cb4278df706a031}{Last\+Child} ()
 \begin{DoxyCompactList}\small\item\em The last child of this node. Will be null if there are no children. \end{DoxyCompactList}\item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_acdd3fdc436aa7433023310a041e5e63f}{Last\+Child} (const char $\ast$\hyperlink{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}{value}) const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_afdd7b6ba456fdd570610c1d841f91eb3}{Last\+Child} (const char $\ast$\hyperlink{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}{value}) const
 \item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_abad5bf1059c48127b958711ef89e8e5d}{Last\+Child} (const char $\ast$\+\_\+value)
 \begin{DoxyCompactList}\small\item\em The last child of this node matching \textquotesingle{}value\textquotesingle{}. Will be null if there are no children. \end{DoxyCompactList}\item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_aaef7ac3978c4bb1cc8a24ffae7bced75}{Iterate\+Children} (const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$previous) const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a67c3a02b797f08d9a31b2553661257e1}{Iterate\+Children} (const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$previous) const
 \item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a2358e747118fdbf0e467b1e4f7d03de1}{Iterate\+Children} (const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$previous)
 \item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_af2b86dbe25d3d26fa48180edc5e2a9fc}{Iterate\+Children} (const char $\ast$\hyperlink{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}{value}, const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$previous) const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a74bc68a536c279a42af346cb1454f143}{Iterate\+Children} (const char $\ast$\hyperlink{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}{value}, const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$previous) const
 \begin{DoxyCompactList}\small\item\em This flavor of Iterate\+Children searches for children with a particular \textquotesingle{}value\textquotesingle{}. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a67ba8275e533e6f76340236c42ea0aea}{Iterate\+Children} (const char $\ast$\+\_\+value, const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$previous)
 \item 
@@ -91,57 +91,57 @@ const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xm
 \item 
 bool \hyperlink{class_ti_xml_node_ae19d8510efc90596552f4feeac9a8fbf}{Remove\+Child} (\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$remove\+This)
 \begin{DoxyCompactList}\small\item\em Delete a child of this node. \end{DoxyCompactList}\item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_ac2cd892768726270e511b2ab32de4d10}{Previous\+Sibling} () const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a8aacf06b1a577ff0d7cfa502cc76da32}{Previous\+Sibling} () const
 \begin{DoxyCompactList}\small\item\em Navigate to a sibling node. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_af8c0642ad6ecc03f62953e68896ed1cc}{Previous\+Sibling} ()
 \item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_abbb3b8c1f38fa7b9e52d584a4aeca795}{Previous\+Sibling} (const char $\ast$) const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_ace1b618fe58b2b9305fe89bfbc8dd17b}{Previous\+Sibling} (const char $\ast$) const
 \begin{DoxyCompactList}\small\item\em Navigate to a sibling node. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a6c977049207177ef21b51972315c2053}{Previous\+Sibling} (const char $\ast$\+\_\+prev)
 \item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_af854baeba384f5fe9859f5aee03b548e}{Next\+Sibling} () const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_ae99c572ac7901a15993ea7a4efaa10e7}{Next\+Sibling} () const
 \begin{DoxyCompactList}\small\item\em Navigate to a sibling node. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a4d05f7b1d7b470ac6887edd072d4892a}{Next\+Sibling} ()
 \item 
-const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_acaf9dc17531ac041f602f9ad579573ea}{Next\+Sibling} (const char $\ast$) const 
+const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a0864ea784b53cdca0a37829d3391ca4b}{Next\+Sibling} (const char $\ast$) const
 \begin{DoxyCompactList}\small\item\em Navigate to a sibling node with the given \textquotesingle{}value\textquotesingle{}. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_a4080bc5cc8a5c139e7cf308669e850fc}{Next\+Sibling} (const char $\ast$\+\_\+next)
 \item 
-const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a7667217e269e0da01d1f82aee94d1a3d}{Next\+Sibling\+Element} () const 
+const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_ac6105781c913a42aa7f3f17bd1964f7c}{Next\+Sibling\+Element} () const
 \item 
 \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a1b211cb5034655a04358e0e2f6fc5010}{Next\+Sibling\+Element} ()
 \item 
-const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a3d7897999f99cf4870dd59df6331d7ff}{Next\+Sibling\+Element} (const char $\ast$) const 
+const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a22def4746238abaee042f99b47ef3c94}{Next\+Sibling\+Element} (const char $\ast$) const
 \item 
 \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a6e1ac6b800e18049bc75e9f8e63a8e5f}{Next\+Sibling\+Element} (const char $\ast$\+\_\+next)
 \item 
-const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_ab1f8d8e70d88aea4c5efedfe00862d55}{First\+Child\+Element} () const 
+const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a12c973e1da9e90a178924b8ea5a5f4d1}{First\+Child\+Element} () const
 \begin{DoxyCompactList}\small\item\em Convenience function to get through elements. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_aa0fecff1f3866ab33a8a25506e95db1d}{First\+Child\+Element} ()
 \item 
-const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a0ec361bfef1cf1978d060295f597e0d9}{First\+Child\+Element} (const char $\ast$\+\_\+value) const 
+const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_aab23fca4c2455c1d926c35d85a663842}{First\+Child\+Element} (const char $\ast$\+\_\+value) const
 \begin{DoxyCompactList}\small\item\em Convenience function to get through elements. \end{DoxyCompactList}\item 
 \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a6936ae323675071808ac4840379e57f5}{First\+Child\+Element} (const char $\ast$\+\_\+value)
 \item 
-int \hyperlink{class_ti_xml_node_a57b99d5c97d67a42b9752f5210a1ba5e}{Type} () const 
+int \hyperlink{class_ti_xml_node_a0f4dd916b2afc2ab2f1a84f3e2b8fd5d}{Type} () const
 \item 
-const \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document} $\ast$ \hyperlink{class_ti_xml_node_aa66f4ebcd175204a168ed7c2d7b43071}{Get\+Document} () const 
+const \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document} $\ast$ \hyperlink{class_ti_xml_node_adcb070acefcbaedaa0673d82e530538b}{Get\+Document} () const
 \item 
 \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document} $\ast$ \hyperlink{class_ti_xml_node_a7b2372c0e7adfb32f5b6902fe49a39b2}{Get\+Document} ()
 \item 
-bool \hyperlink{class_ti_xml_node_aeed21ad30630ef6e7faf096127edc9f3}{No\+Children} () const 
+bool \hyperlink{class_ti_xml_node_abe85e0ec04ea59c033f324c8504653e5}{No\+Children} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this node has no children. \end{DoxyCompactList}\item 
-virtual const \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document} $\ast$ \hyperlink{class_ti_xml_node_a8a4cda4b15c29f64cff419309aebed08}{To\+Document} () const 
+virtual const \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document} $\ast$ \hyperlink{class_ti_xml_node_a775a904618cad6e4a8049bda4f5a6aa9}{To\+Document} () const
 \begin{DoxyCompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \end{DoxyCompactList}\item 
-virtual const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a72abed96dc9667ab9e0a2a275301bb1c}{To\+Element} () const 
+virtual const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ \hyperlink{class_ti_xml_node_a4080428f2cac46e92ef4d284202fad0b}{To\+Element} () const
 \begin{DoxyCompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \end{DoxyCompactList}\item 
-virtual const \hyperlink{class_ti_xml_comment}{Ti\+Xml\+Comment} $\ast$ \hyperlink{class_ti_xml_node_aa0a5086f9eaee910bbfdc7f975e26574}{To\+Comment} () const 
+virtual const \hyperlink{class_ti_xml_comment}{Ti\+Xml\+Comment} $\ast$ \hyperlink{class_ti_xml_node_a5ad43b9d545315e9bb4f50d4cb70de9e}{To\+Comment} () const
 \begin{DoxyCompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \end{DoxyCompactList}\item 
-virtual const \hyperlink{class_ti_xml_unknown}{Ti\+Xml\+Unknown} $\ast$ \hyperlink{class_ti_xml_node_afd7205cf31d7a376929f8a36930627a2}{To\+Unknown} () const 
+virtual const \hyperlink{class_ti_xml_unknown}{Ti\+Xml\+Unknown} $\ast$ \hyperlink{class_ti_xml_node_ab4f2e6ce87d36c1b9b7de2529128a460}{To\+Unknown} () const
 \begin{DoxyCompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \end{DoxyCompactList}\item 
-virtual const \hyperlink{class_ti_xml_text}{Ti\+Xml\+Text} $\ast$ \hyperlink{class_ti_xml_node_a95a46a52c525992d6b4ee08beb14cd69}{To\+Text} () const 
+virtual const \hyperlink{class_ti_xml_text}{Ti\+Xml\+Text} $\ast$ \hyperlink{class_ti_xml_node_a2591700660b308571c09166559a39332}{To\+Text} () const
 \begin{DoxyCompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \end{DoxyCompactList}\item 
-virtual const \hyperlink{class_ti_xml_declaration}{Ti\+Xml\+Declaration} $\ast$ \hyperlink{class_ti_xml_node_a9f43e6984fc7d4afd6eb32714c6b7b72}{To\+Declaration} () const 
+virtual const \hyperlink{class_ti_xml_declaration}{Ti\+Xml\+Declaration} $\ast$ \hyperlink{class_ti_xml_node_a0dc0831e89d499ca911a3be61a413d45}{To\+Declaration} () const
 \begin{DoxyCompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \end{DoxyCompactList}\item 
 virtual \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document} $\ast$ \hyperlink{class_ti_xml_node_a6a4c8ac28ee7a745d059db6691e03bae}{To\+Document} ()
 \begin{DoxyCompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \end{DoxyCompactList}\item 
@@ -164,7 +164,7 @@ virtual bool \hyperlink{class_ti_xml_node_acc0f88b7462c6cb73809d410a4f5bb86}{Acc
 \item 
 \hyperlink{class_ti_xml_node_a3f46721695868667113c7487ff123f20}{Ti\+Xml\+Node} (\hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{Node\+Type} \+\_\+type)
 \item 
-void \hyperlink{class_ti_xml_node_ab6056978923ad8350fb5164af32d8038}{Copy\+To} (\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$target) const 
+void \hyperlink{class_ti_xml_node_aaadd5bb9c94f84c4472b649b95de4a0b}{Copy\+To} (\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$target) const
 \item 
 \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ \hyperlink{class_ti_xml_node_ac1e3a8e7578be463b04617786120c2bb}{Identify} (const char $\ast$start, \hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding} encoding)
 \end{DoxyCompactItemize}
@@ -199,46 +199,56 @@ class \hyperlink{class_ti_xml_node_ab6592e32cb9132be517cc12a70564c4b}{Ti\+Xml\+E
 The parent class for everything in the Document Object Model. (Except for attributes). Nodes have siblings, a parent, and children. A node can be in a document, or stand on its own. The type of a \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} can be queried, and it can be cast to its more defined type. 
 
 \subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Node\+Type@{Node\+Type}}
 \index{Node\+Type@{Node\+Type}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Node\+Type}{NodeType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ti\+Xml\+Node\+::\+Node\+Type}}\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}
-The types of X\+ML nodes supported by Tiny\+Xml. (All the unsupported types are picked up by U\+N\+K\+N\+O\+WN.) \begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT}}\item[{\em 
-T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a76c4c520453398cd033e8b97ec9a0b04}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a76c4c520453398cd033e8b97ec9a0b04}
-}]\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT}}\item[{\em 
-T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a9ad167b17c3148d7a018fde9a41ce976}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a9ad167b17c3148d7a018fde9a41ce976}
-}]\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT}}\item[{\em 
-T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a742eb78855db1e81614848072de03721}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a742eb78855db1e81614848072de03721}
-}]\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN}}\item[{\em 
-T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a7376f9420c8ab507842c8a0813bb077e}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a7376f9420c8ab507842c8a0813bb077e}
-}]\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT}}\item[{\em 
-T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2aa6177e9506461cdca7062559387a2714}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2aa6177e9506461cdca7062559387a2714}
-}]\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}}\item[{\em 
-T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a1e2351ad8cd0c805538d94222f3d8cd0}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a1e2351ad8cd0c805538d94222f3d8cd0}
-}]\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT}}\item[{\em 
-T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT\hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a878567737ed539bd3de6a941027e9309}{}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a878567737ed539bd3de6a941027e9309}
-}]\end{description}
-\end{Desc}
+\subsubsection{\texorpdfstring{Node\+Type}{NodeType}}
+{\footnotesize\ttfamily enum \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{Ti\+Xml\+Node\+::\+Node\+Type}}
+
+The types of X\+ML nodes supported by Tiny\+Xml. (All the unsupported types are picked up by U\+N\+K\+N\+O\+WN.) \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT}}}\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a76c4c520453398cd033e8b97ec9a0b04}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a76c4c520453398cd033e8b97ec9a0b04}} 
+T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT}}}\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a9ad167b17c3148d7a018fde9a41ce976}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a9ad167b17c3148d7a018fde9a41ce976}} 
+T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT}}}\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a742eb78855db1e81614848072de03721}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a742eb78855db1e81614848072de03721}} 
+T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN}}}\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a7376f9420c8ab507842c8a0813bb077e}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a7376f9420c8ab507842c8a0813bb077e}} 
+T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT}}}\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2aa6177e9506461cdca7062559387a2714}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2aa6177e9506461cdca7062559387a2714}} 
+T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON}}}\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a1e2351ad8cd0c805538d94222f3d8cd0}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a1e2351ad8cd0c805538d94222f3d8cd0}} 
+T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT@{T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT}}}\mbox{\Hypertarget{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a878567737ed539bd3de6a941027e9309}\label{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2a878567737ed539bd3de6a941027e9309}} 
+T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+Y\+P\+E\+C\+O\+U\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ti_xml_node_a027a76cccd359c831ee4024b58c49625}\label{class_ti_xml_node_a027a76cccd359c831ee4024b58c49625}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!````~Ti\+Xml\+Node@{$\sim$\+Ti\+Xml\+Node}}
 \index{````~Ti\+Xml\+Node@{$\sim$\+Ti\+Xml\+Node}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{$\sim$\+Ti\+Xml\+Node()}{~TiXmlNode()}}]{\setlength{\rightskip}{0pt plus 5cm}Ti\+Xml\+Node\+::$\sim$\+Ti\+Xml\+Node (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a027a76cccd359c831ee4024b58c49625}{}\label{class_ti_xml_node_a027a76cccd359c831ee4024b58c49625}
-\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Ti\+Xml\+Node(\+Node\+Type \+\_\+type)}{TiXmlNode(NodeType _type)}}]{\setlength{\rightskip}{0pt plus 5cm}Ti\+Xml\+Node\+::\+Ti\+Xml\+Node (
-\begin{DoxyParamCaption}
-\item[{{\bf Node\+Type}}]{\+\_\+type}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_a3f46721695868667113c7487ff123f20}{}\label{class_ti_xml_node_a3f46721695868667113c7487ff123f20}
+\subsubsection{\texorpdfstring{$\sim$\+Ti\+Xml\+Node()}{~TiXmlNode()}}
+{\footnotesize\ttfamily Ti\+Xml\+Node\+::$\sim$\+Ti\+Xml\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+\mbox{\Hypertarget{class_ti_xml_node_a3f46721695868667113c7487ff123f20}\label{class_ti_xml_node_a3f46721695868667113c7487ff123f20}} 
+\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
+\index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Node()}{TiXmlNode()}}
+{\footnotesize\ttfamily Ti\+Xml\+Node\+::\+Ti\+Xml\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{Node\+Type}}]{\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -250,16 +260,13 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-
-
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ti_xml_node_acc0f88b7462c6cb73809d410a4f5bb86}\label{class_ti_xml_node_acc0f88b7462c6cb73809d410a4f5bb86}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Accept@{Accept}}
 \index{Accept@{Accept}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Accept(\+Ti\+Xml\+Visitor $\ast$visitor) const =0}{Accept(TiXmlVisitor *visitor) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Ti\+Xml\+Node\+::\+Accept (
-\begin{DoxyParamCaption}
-\item[{{\bf Ti\+Xml\+Visitor} $\ast$}]{visitor}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_ti_xml_node_acc0f88b7462c6cb73809d410a4f5bb86}{}\label{class_ti_xml_node_acc0f88b7462c6cb73809d410a4f5bb86}
+\subsubsection{\texorpdfstring{Accept()}{Accept()}}
+{\footnotesize\ttfamily virtual bool Ti\+Xml\+Node\+::\+Accept (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_visitor}{Ti\+Xml\+Visitor} $\ast$}]{visitor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 Accept a hierchical visit the nodes in the Tiny\+X\+ML D\+OM. Every node in the X\+ML tree will be conditionally visited and the host will be called back via the \hyperlink{class_ti_xml_visitor}{Ti\+Xml\+Visitor} interface.
 
 This is essentially a S\+AX interface for Tiny\+X\+ML. (Note however it doesn\textquotesingle{}t re-\/parse the X\+ML for the callbacks, so the performance of Tiny\+X\+ML is unchanged by using this interface versus any other.)
@@ -280,9 +287,7 @@ const char* xmlcstr = printer.CStr();
 \end{DoxyVerb}
  
 
-Implemented in \hyperlink{class_ti_xml_document_a3daab2f472418ef66315750202f762ae}{Ti\+Xml\+Document}, \hyperlink{class_ti_xml_unknown_a4e54d7482e05a837cf83c925cc683380}{Ti\+Xml\+Unknown}, \hyperlink{class_ti_xml_declaration_ab6a6b178161ba9abc2c35058de689864}{Ti\+Xml\+Declaration}, \hyperlink{class_ti_xml_text_a43b9954ebf679557fac1a4453f337b7c}{Ti\+Xml\+Text}, \hyperlink{class_ti_xml_comment_a4382de0e50da973f11a23ea5852568bd}{Ti\+Xml\+Comment}, and \hyperlink{class_ti_xml_element_a31ab28cc3b892a69254391d6bbe08df3}{Ti\+Xml\+Element}.
-
-
+Implemented in \hyperlink{class_ti_xml_document_a8ddd6eec722cbd25900bbac664909bac}{Ti\+Xml\+Document}, \hyperlink{class_ti_xml_unknown_aafdf1b2d4f561979c7907bad91004999}{Ti\+Xml\+Unknown}, \hyperlink{class_ti_xml_declaration_aa1b6bade6c989407ce9881bdfc73c1e6}{Ti\+Xml\+Declaration}, \hyperlink{class_ti_xml_text_af65964326eac4640bfb97d4622fa0de2}{Ti\+Xml\+Text}, \hyperlink{class_ti_xml_comment_ac894241530d1d266131a5026cb251a95}{Ti\+Xml\+Comment}, and \hyperlink{class_ti_xml_element_a01d33358cce9d1817b557d314dda3779}{Ti\+Xml\+Element}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -292,20 +297,15 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_acc0f88b7462c6cb73809d410a4f5bb86_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a708e7f953df61d4d2d12f73171550a4b}\label{class_ti_xml_node_a708e7f953df61d4d2d12f73171550a4b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Clear@{Clear}}
 \index{Clear@{Clear}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Clear()}{Clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ti\+Xml\+Node\+::\+Clear (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_ti_xml_node_a708e7f953df61d4d2d12f73171550a4b}{}\label{class_ti_xml_node_a708e7f953df61d4d2d12f73171550a4b}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Ti\+Xml\+Node\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 Delete all the children of this node. Does not affect \textquotesingle{}this\textquotesingle{}. 
-
-
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -315,20 +315,15 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a708e7f953df61d4d2d12f73171550a4b_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a4508cc3a2d7a98e96a54cc09c37a78a4}\label{class_ti_xml_node_a4508cc3a2d7a98e96a54cc09c37a78a4}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Clone@{Clone}}
 \index{Clone@{Clone}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Clone() const =0}{Clone() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Clone (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_ti_xml_node_a4508cc3a2d7a98e96a54cc09c37a78a4}{}\label{class_ti_xml_node_a4508cc3a2d7a98e96a54cc09c37a78a4}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
 Create an exact duplicate of this node and return it. The memory must be deleted by the caller. 
 
-Implemented in \hyperlink{class_ti_xml_document_ac9e8f09b23454d953b32d1b65cd1409e}{Ti\+Xml\+Document}, \hyperlink{class_ti_xml_unknown_a675c4b2684af35e4c7649b7fd5ae598d}{Ti\+Xml\+Unknown}, \hyperlink{class_ti_xml_declaration_aff8231266d735943d8a7514a9c9822b9}{Ti\+Xml\+Declaration}, \hyperlink{class_ti_xml_text_adde1869dfb029be50713fbfd8ce4d21f}{Ti\+Xml\+Text}, \hyperlink{class_ti_xml_comment_a4f6590c9c9a2b63a48972655b78eb853}{Ti\+Xml\+Comment}, and \hyperlink{class_ti_xml_element_a13f6df105ebb1e8dc636e75cc883be32}{Ti\+Xml\+Element}.
-
-
+Implemented in \hyperlink{class_ti_xml_document_a46a4dda6c56eb106d46d4046ae1e5353}{Ti\+Xml\+Document}, \hyperlink{class_ti_xml_unknown_a3dea7689de5b1931fd6657992948fde0}{Ti\+Xml\+Unknown}, \hyperlink{class_ti_xml_declaration_a35dc1455f69b79e81cae28e186944610}{Ti\+Xml\+Declaration}, \hyperlink{class_ti_xml_text_a98a20d7a4f1c1478e25e34921be24bfe}{Ti\+Xml\+Text}, \hyperlink{class_ti_xml_comment_a1f9f06e2ed3f77875093436193b16c16}{Ti\+Xml\+Comment}, and \hyperlink{class_ti_xml_element_a810ea8fa40844c01334e5af2a26794cb}{Ti\+Xml\+Element}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -338,70 +333,51 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a4508cc3a2d7a98e96a54cc09c37a78a4_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_aaadd5bb9c94f84c4472b649b95de4a0b}\label{class_ti_xml_node_aaadd5bb9c94f84c4472b649b95de4a0b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Copy\+To@{Copy\+To}}
 \index{Copy\+To@{Copy\+To}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Copy\+To(\+Ti\+Xml\+Node $\ast$target) const }{CopyTo(TiXmlNode *target) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Ti\+Xml\+Node\+::\+Copy\+To (
-\begin{DoxyParamCaption}
-\item[{{\bf Ti\+Xml\+Node} $\ast$}]{target}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_ab6056978923ad8350fb5164af32d8038}{}\label{class_ti_xml_node_ab6056978923ad8350fb5164af32d8038}
-
+\subsubsection{\texorpdfstring{Copy\+To()}{CopyTo()}}
+{\footnotesize\ttfamily void Ti\+Xml\+Node\+::\+Copy\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_ab6056978923ad8350fb5164af32d8038_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_aaadd5bb9c94f84c4472b649b95de4a0b_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_ab6056978923ad8350fb5164af32d8038_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_aaadd5bb9c94f84c4472b649b95de4a0b_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_aa66bceae19707c90c1db12d7c98894a4}\label{class_ti_xml_node_aa66bceae19707c90c1db12d7c98894a4}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child@{First\+Child}}
 \index{First\+Child@{First\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child() const }{FirstChild() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+First\+Child (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a44c8eee26bbe2d1b2762038df9dde2f0}{}\label{class_ti_xml_node_a44c8eee26bbe2d1b2762038df9dde2f0}
+\subsubsection{\texorpdfstring{First\+Child()}{FirstChild()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+First\+Child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 The first child of this node. Will be null if there are no children. 
 
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a44c8eee26bbe2d1b2762038df9dde2f0_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_aa66bceae19707c90c1db12d7c98894a4_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a5e97d69b7c0ebd27fb7286be56559b77}\label{class_ti_xml_node_a5e97d69b7c0ebd27fb7286be56559b77}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child@{First\+Child}}
 \index{First\+Child@{First\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child()}{FirstChild()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+First\+Child (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a5e97d69b7c0ebd27fb7286be56559b77}{}\label{class_ti_xml_node_a5e97d69b7c0ebd27fb7286be56559b77}
-
+\subsubsection{\texorpdfstring{First\+Child()}{FirstChild()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+First\+Child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -411,81 +387,61 @@ Here is the call graph for this function\+:
 \includegraphics[width=342pt]{class_ti_xml_node_a5e97d69b7c0ebd27fb7286be56559b77_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_ae98c367f664890c4b5a5183481ec128a}\label{class_ti_xml_node_ae98c367f664890c4b5a5183481ec128a}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child@{First\+Child}}
 \index{First\+Child@{First\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child(const char $\ast$value) const }{FirstChild(const char *value) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+First\+Child (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{value}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_ab5f722624113c8203227de4f56576d31}{}\label{class_ti_xml_node_ab5f722624113c8203227de4f56576d31}
-The first child of this node with the matching \textquotesingle{}value\textquotesingle{}. Will be null if none found. 
+\subsubsection{\texorpdfstring{First\+Child()}{FirstChild()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+First\+Child (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption}) const}
 
-Here is the call graph for this function\+:
+The first child of this node with the matching \textquotesingle{}value\textquotesingle{}. Will be null if none found. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=325pt]{class_ti_xml_node_ab5f722624113c8203227de4f56576d31_cgraph}
+\includegraphics[width=325pt]{class_ti_xml_node_ae98c367f664890c4b5a5183481ec128a_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_abc8bf32be6419ec453a731868de19554}\label{class_ti_xml_node_abc8bf32be6419ec453a731868de19554}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child@{First\+Child}}
 \index{First\+Child@{First\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child(const char $\ast$\+\_\+value)}{FirstChild(const char *_value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+First\+Child (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_abc8bf32be6419ec453a731868de19554}{}\label{class_ti_xml_node_abc8bf32be6419ec453a731868de19554}
+\subsubsection{\texorpdfstring{First\+Child()}{FirstChild()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+First\+Child (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 The first child of this node with the matching \textquotesingle{}value\textquotesingle{}. Will be null if none found. 
 
+\mbox{\Hypertarget{class_ti_xml_node_a12c973e1da9e90a178924b8ea5a5f4d1}\label{class_ti_xml_node_a12c973e1da9e90a178924b8ea5a5f4d1}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child\+Element@{First\+Child\+Element}}
 \index{First\+Child\+Element@{First\+Child\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child\+Element() const }{FirstChildElement() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_ab1f8d8e70d88aea4c5efedfe00862d55}{}\label{class_ti_xml_node_ab1f8d8e70d88aea4c5efedfe00862d55}
+\subsubsection{\texorpdfstring{First\+Child\+Element()}{FirstChildElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 Convenience function to get through elements. 
 
-
-
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_ab1f8d8e70d88aea4c5efedfe00862d55_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a12c973e1da9e90a178924b8ea5a5f4d1_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_ab1f8d8e70d88aea4c5efedfe00862d55_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a12c973e1da9e90a178924b8ea5a5f4d1_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_aa0fecff1f3866ab33a8a25506e95db1d}\label{class_ti_xml_node_aa0fecff1f3866ab33a8a25506e95db1d}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child\+Element@{First\+Child\+Element}}
 \index{First\+Child\+Element@{First\+Child\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child\+Element()}{FirstChildElement()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_aa0fecff1f3866ab33a8a25506e95db1d}{}\label{class_ti_xml_node_aa0fecff1f3866ab33a8a25506e95db1d}
-
+\subsubsection{\texorpdfstring{First\+Child\+Element()}{FirstChildElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -495,39 +451,29 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_aa0fecff1f3866ab33a8a25506e95db1d_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_aab23fca4c2455c1d926c35d85a663842}\label{class_ti_xml_node_aab23fca4c2455c1d926c35d85a663842}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child\+Element@{First\+Child\+Element}}
 \index{First\+Child\+Element@{First\+Child\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child\+Element(const char $\ast$\+\_\+value) const }{FirstChildElement(const char *_value) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_a0ec361bfef1cf1978d060295f597e0d9}{}\label{class_ti_xml_node_a0ec361bfef1cf1978d060295f597e0d9}
+\subsubsection{\texorpdfstring{First\+Child\+Element()}{FirstChildElement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption}) const}
+
 
 
 Convenience function to get through elements. 
-
-
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a0ec361bfef1cf1978d060295f597e0d9_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_aab23fca4c2455c1d926c35d85a663842_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a6936ae323675071808ac4840379e57f5}\label{class_ti_xml_node_a6936ae323675071808ac4840379e57f5}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!First\+Child\+Element@{First\+Child\+Element}}
 \index{First\+Child\+Element@{First\+Child\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{First\+Child\+Element(const char $\ast$\+\_\+value)}{FirstChildElement(const char *_value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a6936ae323675071808ac4840379e57f5}{}\label{class_ti_xml_node_a6936ae323675071808ac4840379e57f5}
-
+\subsubsection{\texorpdfstring{First\+Child\+Element()}{FirstChildElement()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+First\+Child\+Element (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -537,55 +483,39 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a6936ae323675071808ac4840379e57f5_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_adcb070acefcbaedaa0673d82e530538b}\label{class_ti_xml_node_adcb070acefcbaedaa0673d82e530538b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Get\+Document@{Get\+Document}}
 \index{Get\+Document@{Get\+Document}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Get\+Document() const }{GetDocument() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Document} $\ast$ Ti\+Xml\+Node\+::\+Get\+Document (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_aa66f4ebcd175204a168ed7c2d7b43071}{}\label{class_ti_xml_node_aa66f4ebcd175204a168ed7c2d7b43071}
-Return a pointer to the Document this node lives in. Returns null if not in a document. 
+\subsubsection{\texorpdfstring{Get\+Document()}{GetDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document} $\ast$ Ti\+Xml\+Node\+::\+Get\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Here is the call graph for this function\+:
+Return a pointer to the Document this node lives in. Returns null if not in a document. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_aa66f4ebcd175204a168ed7c2d7b43071_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_adcb070acefcbaedaa0673d82e530538b_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_aa66f4ebcd175204a168ed7c2d7b43071_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_adcb070acefcbaedaa0673d82e530538b_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a7b2372c0e7adfb32f5b6902fe49a39b2}\label{class_ti_xml_node_a7b2372c0e7adfb32f5b6902fe49a39b2}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Get\+Document@{Get\+Document}}
 \index{Get\+Document@{Get\+Document}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Get\+Document()}{GetDocument()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Document}$\ast$ Ti\+Xml\+Node\+::\+Get\+Document (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a7b2372c0e7adfb32f5b6902fe49a39b2}{}\label{class_ti_xml_node_a7b2372c0e7adfb32f5b6902fe49a39b2}
+\subsubsection{\texorpdfstring{Get\+Document()}{GetDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document}$\ast$ Ti\+Xml\+Node\+::\+Get\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_ac1e3a8e7578be463b04617786120c2bb}\label{class_ti_xml_node_ac1e3a8e7578be463b04617786120c2bb}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Identify@{Identify}}
 \index{Identify@{Identify}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Identify(const char $\ast$start, Ti\+Xml\+Encoding encoding)}{Identify(const char *start, TiXmlEncoding encoding)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Identify (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{start, }
-\item[{{\bf Ti\+Xml\+Encoding}}]{encoding}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_ac1e3a8e7578be463b04617786120c2bb}{}\label{class_ti_xml_node_ac1e3a8e7578be463b04617786120c2bb}
-
+\subsubsection{\texorpdfstring{Identify()}{Identify()}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Identify (\begin{DoxyParamCaption}\item[{const char $\ast$}]{start,  }\item[{\hyperlink{tinyxml_8h_a88d51847a13ee0f4b4d320d03d2c4d96}{Ti\+Xml\+Encoding}}]{encoding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -595,10 +525,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_ac1e3a8e7578be463b04617786120c2bb_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -607,19 +533,13 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_ac1e3a8e7578be463b04617786120c2bb_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a274db3292218202805c093f66a964cb5}\label{class_ti_xml_node_a274db3292218202805c093f66a964cb5}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Insert\+After\+Child@{Insert\+After\+Child}}
 \index{Insert\+After\+Child@{Insert\+After\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Insert\+After\+Child(\+Ti\+Xml\+Node $\ast$after\+This, const Ti\+Xml\+Node \&add\+This)}{InsertAfterChild(TiXmlNode *afterThis, const TiXmlNode &addThis)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Insert\+After\+Child (
-\begin{DoxyParamCaption}
-\item[{{\bf Ti\+Xml\+Node} $\ast$}]{after\+This, }
-\item[{const {\bf Ti\+Xml\+Node} \&}]{add\+This}
-\end{DoxyParamCaption}
-)}\hypertarget{class_ti_xml_node_a274db3292218202805c093f66a964cb5}{}\label{class_ti_xml_node_a274db3292218202805c093f66a964cb5}
-Add a new node related to this. Adds a child after the specified child. Returns a pointer to the new object or N\+U\+LL if an error occured. 
+\subsubsection{\texorpdfstring{Insert\+After\+Child()}{InsertAfterChild()}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Insert\+After\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{after\+This,  }\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} \&}]{add\+This }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
+Add a new node related to this. Adds a child after the specified child. Returns a pointer to the new object or N\+U\+LL if an error occured. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -627,10 +547,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a274db3292218202805c093f66a964cb5_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -639,19 +555,13 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a274db3292218202805c093f66a964cb5_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a71e54e393336382bc9875f64aab5cb15}\label{class_ti_xml_node_a71e54e393336382bc9875f64aab5cb15}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Insert\+Before\+Child@{Insert\+Before\+Child}}
 \index{Insert\+Before\+Child@{Insert\+Before\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Insert\+Before\+Child(\+Ti\+Xml\+Node $\ast$before\+This, const Ti\+Xml\+Node \&add\+This)}{InsertBeforeChild(TiXmlNode *beforeThis, const TiXmlNode &addThis)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Insert\+Before\+Child (
-\begin{DoxyParamCaption}
-\item[{{\bf Ti\+Xml\+Node} $\ast$}]{before\+This, }
-\item[{const {\bf Ti\+Xml\+Node} \&}]{add\+This}
-\end{DoxyParamCaption}
-)}\hypertarget{class_ti_xml_node_a71e54e393336382bc9875f64aab5cb15}{}\label{class_ti_xml_node_a71e54e393336382bc9875f64aab5cb15}
-Add a new node related to this. Adds a child before the specified child. Returns a pointer to the new object or N\+U\+LL if an error occured. 
+\subsubsection{\texorpdfstring{Insert\+Before\+Child()}{InsertBeforeChild()}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Insert\+Before\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{before\+This,  }\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} \&}]{add\+This }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
+Add a new node related to this. Adds a child before the specified child. Returns a pointer to the new object or N\+U\+LL if an error occured. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -659,10 +569,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a71e54e393336382bc9875f64aab5cb15_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -671,18 +577,13 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a71e54e393336382bc9875f64aab5cb15_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_af287a913ce46d8dbf7ef24fec69bbaf0}\label{class_ti_xml_node_af287a913ce46d8dbf7ef24fec69bbaf0}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Insert\+End\+Child@{Insert\+End\+Child}}
 \index{Insert\+End\+Child@{Insert\+End\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Insert\+End\+Child(const Ti\+Xml\+Node \&add\+This)}{InsertEndChild(const TiXmlNode &addThis)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Insert\+End\+Child (
-\begin{DoxyParamCaption}
-\item[{const {\bf Ti\+Xml\+Node} \&}]{add\+This}
-\end{DoxyParamCaption}
-)}\hypertarget{class_ti_xml_node_af287a913ce46d8dbf7ef24fec69bbaf0}{}\label{class_ti_xml_node_af287a913ce46d8dbf7ef24fec69bbaf0}
-Add a new node related to this. Adds a child past the Last\+Child. Returns a pointer to the new object or N\+U\+LL if an error occured. 
+\subsubsection{\texorpdfstring{Insert\+End\+Child()}{InsertEndChild()}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Insert\+End\+Child (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} \&}]{add\+This }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
+Add a new node related to this. Adds a child past the Last\+Child. Returns a pointer to the new object or N\+U\+LL if an error occured. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -690,10 +591,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_af287a913ce46d8dbf7ef24fec69bbaf0_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -702,15 +599,12 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_af287a913ce46d8dbf7ef24fec69bbaf0_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a67c3a02b797f08d9a31b2553661257e1}\label{class_ti_xml_node_a67c3a02b797f08d9a31b2553661257e1}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Iterate\+Children@{Iterate\+Children}}
 \index{Iterate\+Children@{Iterate\+Children}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Iterate\+Children(const Ti\+Xml\+Node $\ast$previous) const }{IterateChildren(const TiXmlNode *previous) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (
-\begin{DoxyParamCaption}
-\item[{const {\bf Ti\+Xml\+Node} $\ast$}]{previous}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_aaef7ac3978c4bb1cc8a24ffae7bced75}{}\label{class_ti_xml_node_aaef7ac3978c4bb1cc8a24ffae7bced75}
+\subsubsection{\texorpdfstring{Iterate\+Children()}{IterateChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{previous }\end{DoxyParamCaption}) const}
+
 An alternate way to walk the children of a node. One way to iterate over nodes is\+: \begin{DoxyVerb}    for( child = parent->FirstChild(); child; child = child->NextSibling() )
 \end{DoxyVerb}
 
@@ -720,38 +614,27 @@ Iterate\+Children does the same thing with the syntax\+: \begin{DoxyVerb}    chi
 \end{DoxyVerb}
 
 
-Iterate\+Children takes the previous child as input and finds the next one. If the previous child is null, it returns the first. Iterate\+Children will return null when done. 
-
-Here is the call graph for this function\+:
+Iterate\+Children takes the previous child as input and finds the next one. If the previous child is null, it returns the first. Iterate\+Children will return null when done. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_aaef7ac3978c4bb1cc8a24ffae7bced75_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a67c3a02b797f08d9a31b2553661257e1_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_aaef7ac3978c4bb1cc8a24ffae7bced75_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a67c3a02b797f08d9a31b2553661257e1_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a2358e747118fdbf0e467b1e4f7d03de1}\label{class_ti_xml_node_a2358e747118fdbf0e467b1e4f7d03de1}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Iterate\+Children@{Iterate\+Children}}
 \index{Iterate\+Children@{Iterate\+Children}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Iterate\+Children(const Ti\+Xml\+Node $\ast$previous)}{IterateChildren(const TiXmlNode *previous)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (
-\begin{DoxyParamCaption}
-\item[{const {\bf Ti\+Xml\+Node} $\ast$}]{previous}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a2358e747118fdbf0e467b1e4f7d03de1}{}\label{class_ti_xml_node_a2358e747118fdbf0e467b1e4f7d03de1}
-
+\subsubsection{\texorpdfstring{Iterate\+Children()}{IterateChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{previous }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -761,41 +644,29 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a2358e747118fdbf0e467b1e4f7d03de1_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a74bc68a536c279a42af346cb1454f143}\label{class_ti_xml_node_a74bc68a536c279a42af346cb1454f143}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Iterate\+Children@{Iterate\+Children}}
 \index{Iterate\+Children@{Iterate\+Children}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Iterate\+Children(const char $\ast$value, const Ti\+Xml\+Node $\ast$previous) const }{IterateChildren(const char *value, const TiXmlNode *previous) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{value, }
-\item[{const {\bf Ti\+Xml\+Node} $\ast$}]{previous}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_af2b86dbe25d3d26fa48180edc5e2a9fc}{}\label{class_ti_xml_node_af2b86dbe25d3d26fa48180edc5e2a9fc}
+\subsubsection{\texorpdfstring{Iterate\+Children()}{IterateChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value,  }\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{previous }\end{DoxyParamCaption}) const}
+
 
 
 This flavor of Iterate\+Children searches for children with a particular \textquotesingle{}value\textquotesingle{}. 
-
-
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_af2b86dbe25d3d26fa48180edc5e2a9fc_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a74bc68a536c279a42af346cb1454f143_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a67ba8275e533e6f76340236c42ea0aea}\label{class_ti_xml_node_a67ba8275e533e6f76340236c42ea0aea}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Iterate\+Children@{Iterate\+Children}}
 \index{Iterate\+Children@{Iterate\+Children}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Iterate\+Children(const char $\ast$\+\_\+value, const Ti\+Xml\+Node $\ast$previous)}{IterateChildren(const char *_value, const TiXmlNode *previous)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value, }
-\item[{const {\bf Ti\+Xml\+Node} $\ast$}]{previous}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a67ba8275e533e6f76340236c42ea0aea}{}\label{class_ti_xml_node_a67ba8275e533e6f76340236c42ea0aea}
-
+\subsubsection{\texorpdfstring{Iterate\+Children()}{IterateChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Iterate\+Children (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value,  }\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{previous }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -805,39 +676,29 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a67ba8275e533e6f76340236c42ea0aea_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_af3a04120b1ed2fead2f4bb72cbea845e}\label{class_ti_xml_node_af3a04120b1ed2fead2f4bb72cbea845e}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Last\+Child@{Last\+Child}}
 \index{Last\+Child@{Last\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Last\+Child() const }{LastChild() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Last\+Child (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a6d671107e00cca1d28cb2d7f3a87a21e}{}\label{class_ti_xml_node_a6d671107e00cca1d28cb2d7f3a87a21e}
-
+\subsubsection{\texorpdfstring{Last\+Child()}{LastChild()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Last\+Child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=348pt]{class_ti_xml_node_a6d671107e00cca1d28cb2d7f3a87a21e_icgraph}
+\includegraphics[width=348pt]{class_ti_xml_node_af3a04120b1ed2fead2f4bb72cbea845e_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a6432d2b2495f6caf9cb4278df706a031}\label{class_ti_xml_node_a6432d2b2495f6caf9cb4278df706a031}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Last\+Child@{Last\+Child}}
 \index{Last\+Child@{Last\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Last\+Child()}{LastChild()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Last\+Child (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a6432d2b2495f6caf9cb4278df706a031}{}\label{class_ti_xml_node_a6432d2b2495f6caf9cb4278df706a031}
+\subsubsection{\texorpdfstring{Last\+Child()}{LastChild()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Last\+Child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 The last child of this node. Will be null if there are no children. 
-
-
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -847,39 +708,29 @@ Here is the call graph for this function\+:
 \includegraphics[width=342pt]{class_ti_xml_node_a6432d2b2495f6caf9cb4278df706a031_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_afdd7b6ba456fdd570610c1d841f91eb3}\label{class_ti_xml_node_afdd7b6ba456fdd570610c1d841f91eb3}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Last\+Child@{Last\+Child}}
 \index{Last\+Child@{Last\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Last\+Child(const char $\ast$value) const }{LastChild(const char *value) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Last\+Child (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{value}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_acdd3fdc436aa7433023310a041e5e63f}{}\label{class_ti_xml_node_acdd3fdc436aa7433023310a041e5e63f}
-
+\subsubsection{\texorpdfstring{Last\+Child()}{LastChild()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Last\+Child (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption}) const}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=325pt]{class_ti_xml_node_acdd3fdc436aa7433023310a041e5e63f_cgraph}
+\includegraphics[width=325pt]{class_ti_xml_node_afdd7b6ba456fdd570610c1d841f91eb3_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_abad5bf1059c48127b958711ef89e8e5d}\label{class_ti_xml_node_abad5bf1059c48127b958711ef89e8e5d}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Last\+Child@{Last\+Child}}
 \index{Last\+Child@{Last\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Last\+Child(const char $\ast$\+\_\+value)}{LastChild(const char *_value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Last\+Child (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_abad5bf1059c48127b958711ef89e8e5d}{}\label{class_ti_xml_node_abad5bf1059c48127b958711ef89e8e5d}
+\subsubsection{\texorpdfstring{Last\+Child()}{LastChild()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Last\+Child (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 The last child of this node matching \textquotesingle{}value\textquotesingle{}. Will be null if there are no children. 
-
-
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -889,15 +740,12 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_abad5bf1059c48127b958711ef89e8e5d_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a1a881212554b759865f6cac79a851d38}\label{class_ti_xml_node_a1a881212554b759865f6cac79a851d38}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Link\+End\+Child@{Link\+End\+Child}}
 \index{Link\+End\+Child@{Link\+End\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Link\+End\+Child(\+Ti\+Xml\+Node $\ast$add\+This)}{LinkEndChild(TiXmlNode *addThis)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Link\+End\+Child (
-\begin{DoxyParamCaption}
-\item[{{\bf Ti\+Xml\+Node} $\ast$}]{add\+This}
-\end{DoxyParamCaption}
-)}\hypertarget{class_ti_xml_node_a1a881212554b759865f6cac79a851d38}{}\label{class_ti_xml_node_a1a881212554b759865f6cac79a851d38}
+\subsubsection{\texorpdfstring{Link\+End\+Child()}{LinkEndChild()}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Link\+End\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{add\+This }\end{DoxyParamCaption})}
+
 Add a new node related to this. Adds a child past the Last\+Child.
 
 N\+O\+TE\+: the node to be added is passed by pointer, and will be henceforth owned (and deleted) by tiny\+Xml. This method is efficient and avoids an extra copy, but should be used with care as it uses a different memory model than the other insert functions.
@@ -905,8 +753,6 @@ N\+O\+TE\+: the node to be added is passed by pointer, and will be henceforth ow
 \begin{DoxySeeAlso}{See also}
 \hyperlink{class_ti_xml_node_af287a913ce46d8dbf7ef24fec69bbaf0}{Insert\+End\+Child} 
 \end{DoxySeeAlso}
-
-
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -915,10 +761,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a1a881212554b759865f6cac79a851d38_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -927,39 +769,29 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a1a881212554b759865f6cac79a851d38_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_ae99c572ac7901a15993ea7a4efaa10e7}\label{class_ti_xml_node_ae99c572ac7901a15993ea7a4efaa10e7}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling@{Next\+Sibling}}
 \index{Next\+Sibling@{Next\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling() const }{NextSibling() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_af854baeba384f5fe9859f5aee03b548e}{}\label{class_ti_xml_node_af854baeba384f5fe9859f5aee03b548e}
+\subsubsection{\texorpdfstring{Next\+Sibling()}{NextSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Navigate to a sibling node. 
-
-
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_af854baeba384f5fe9859f5aee03b548e_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_ae99c572ac7901a15993ea7a4efaa10e7_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a4d05f7b1d7b470ac6887edd072d4892a}\label{class_ti_xml_node_a4d05f7b1d7b470ac6887edd072d4892a}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling@{Next\+Sibling}}
 \index{Next\+Sibling@{Next\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling()}{NextSibling()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a4d05f7b1d7b470ac6887edd072d4892a}{}\label{class_ti_xml_node_a4d05f7b1d7b470ac6887edd072d4892a}
-
+\subsubsection{\texorpdfstring{Next\+Sibling()}{NextSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -969,39 +801,29 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a4d05f7b1d7b470ac6887edd072d4892a_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a0864ea784b53cdca0a37829d3391ca4b}\label{class_ti_xml_node_a0864ea784b53cdca0a37829d3391ca4b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling@{Next\+Sibling}}
 \index{Next\+Sibling@{Next\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling(const char $\ast$) const }{NextSibling(const char *) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_acaf9dc17531ac041f602f9ad579573ea}{}\label{class_ti_xml_node_acaf9dc17531ac041f602f9ad579573ea}
+\subsubsection{\texorpdfstring{Next\+Sibling()}{NextSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption}) const}
+
 
 
 Navigate to a sibling node with the given \textquotesingle{}value\textquotesingle{}. 
-
-
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=334pt]{class_ti_xml_node_acaf9dc17531ac041f602f9ad579573ea_cgraph}
+\includegraphics[width=334pt]{class_ti_xml_node_a0864ea784b53cdca0a37829d3391ca4b_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a4080bc5cc8a5c139e7cf308669e850fc}\label{class_ti_xml_node_a4080bc5cc8a5c139e7cf308669e850fc}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling@{Next\+Sibling}}
 \index{Next\+Sibling@{Next\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling(const char $\ast$\+\_\+next)}{NextSibling(const char *_next)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+next}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a4080bc5cc8a5c139e7cf308669e850fc}{}\label{class_ti_xml_node_a4080bc5cc8a5c139e7cf308669e850fc}
-
+\subsubsection{\texorpdfstring{Next\+Sibling()}{NextSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1011,47 +833,33 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a4080bc5cc8a5c139e7cf308669e850fc_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_ac6105781c913a42aa7f3f17bd1964f7c}\label{class_ti_xml_node_ac6105781c913a42aa7f3f17bd1964f7c}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling\+Element@{Next\+Sibling\+Element}}
 \index{Next\+Sibling\+Element@{Next\+Sibling\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling\+Element() const }{NextSiblingElement() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_a7667217e269e0da01d1f82aee94d1a3d}{}\label{class_ti_xml_node_a7667217e269e0da01d1f82aee94d1a3d}
-Convenience function to get through elements. Calls Next\+Sibling and To\+Element. Will skip all non-\/\+Element nodes. Returns 0 if there is not another element. 
+\subsubsection{\texorpdfstring{Next\+Sibling\+Element()}{NextSiblingElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Here is the call graph for this function\+:
+Convenience function to get through elements. Calls Next\+Sibling and To\+Element. Will skip all non-\/\+Element nodes. Returns 0 if there is not another element. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a7667217e269e0da01d1f82aee94d1a3d_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_ac6105781c913a42aa7f3f17bd1964f7c_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a7667217e269e0da01d1f82aee94d1a3d_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_ac6105781c913a42aa7f3f17bd1964f7c_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a1b211cb5034655a04358e0e2f6fc5010}\label{class_ti_xml_node_a1b211cb5034655a04358e0e2f6fc5010}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling\+Element@{Next\+Sibling\+Element}}
 \index{Next\+Sibling\+Element@{Next\+Sibling\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling\+Element()}{NextSiblingElement()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a1b211cb5034655a04358e0e2f6fc5010}{}\label{class_ti_xml_node_a1b211cb5034655a04358e0e2f6fc5010}
-
+\subsubsection{\texorpdfstring{Next\+Sibling\+Element()}{NextSiblingElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1061,35 +869,25 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a1b211cb5034655a04358e0e2f6fc5010_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a22def4746238abaee042f99b47ef3c94}\label{class_ti_xml_node_a22def4746238abaee042f99b47ef3c94}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling\+Element@{Next\+Sibling\+Element}}
 \index{Next\+Sibling\+Element@{Next\+Sibling\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling\+Element(const char $\ast$) const }{NextSiblingElement(const char *) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_a3d7897999f99cf4870dd59df6331d7ff}{}\label{class_ti_xml_node_a3d7897999f99cf4870dd59df6331d7ff}
-Convenience function to get through elements. Calls Next\+Sibling and To\+Element. Will skip all non-\/\+Element nodes. Returns 0 if there is not another element. 
+\subsubsection{\texorpdfstring{Next\+Sibling\+Element()}{NextSiblingElement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element} $\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption}) const}
 
-Here is the call graph for this function\+:
+Convenience function to get through elements. Calls Next\+Sibling and To\+Element. Will skip all non-\/\+Element nodes. Returns 0 if there is not another element. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a3d7897999f99cf4870dd59df6331d7ff_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a22def4746238abaee042f99b47ef3c94_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a6e1ac6b800e18049bc75e9f8e63a8e5f}\label{class_ti_xml_node_a6e1ac6b800e18049bc75e9f8e63a8e5f}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Next\+Sibling\+Element@{Next\+Sibling\+Element}}
 \index{Next\+Sibling\+Element@{Next\+Sibling\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Next\+Sibling\+Element(const char $\ast$\+\_\+next)}{NextSiblingElement(const char *_next)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+next}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a6e1ac6b800e18049bc75e9f8e63a8e5f}{}\label{class_ti_xml_node_a6e1ac6b800e18049bc75e9f8e63a8e5f}
-
+\subsubsection{\texorpdfstring{Next\+Sibling\+Element()}{NextSiblingElement()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+Next\+Sibling\+Element (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1099,68 +897,55 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a6e1ac6b800e18049bc75e9f8e63a8e5f_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_abe85e0ec04ea59c033f324c8504653e5}\label{class_ti_xml_node_abe85e0ec04ea59c033f324c8504653e5}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!No\+Children@{No\+Children}}
 \index{No\+Children@{No\+Children}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{No\+Children() const }{NoChildren() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Ti\+Xml\+Node\+::\+No\+Children (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_aeed21ad30630ef6e7faf096127edc9f3}{}\label{class_ti_xml_node_aeed21ad30630ef6e7faf096127edc9f3}
+\subsubsection{\texorpdfstring{No\+Children()}{NoChildren()}}
+{\footnotesize\ttfamily bool Ti\+Xml\+Node\+::\+No\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Returns true if this node has no children. 
 
+\mbox{\Hypertarget{class_ti_xml_node_ab643043132ffd794f8602685d34a982e}\label{class_ti_xml_node_ab643043132ffd794f8602685d34a982e}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Parent@{Parent}}
 \index{Parent@{Parent}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Parent()}{Parent()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Parent (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_ab643043132ffd794f8602685d34a982e}{}\label{class_ti_xml_node_ab643043132ffd794f8602685d34a982e}
+\subsubsection{\texorpdfstring{Parent()}{Parent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 One step up the D\+OM. 
 
+\mbox{\Hypertarget{class_ti_xml_node_af13df38878a5798142693d01d6133ba0}\label{class_ti_xml_node_af13df38878a5798142693d01d6133ba0}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Parent@{Parent}}
 \index{Parent@{Parent}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Parent() const }{Parent() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Parent (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a78878709e53066f06eb4fcbcdd3a5260}{}\label{class_ti_xml_node_a78878709e53066f06eb4fcbcdd3a5260}
+\subsubsection{\texorpdfstring{Parent()}{Parent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_a8aacf06b1a577ff0d7cfa502cc76da32}\label{class_ti_xml_node_a8aacf06b1a577ff0d7cfa502cc76da32}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Previous\+Sibling@{Previous\+Sibling}}
 \index{Previous\+Sibling@{Previous\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Previous\+Sibling() const }{PreviousSibling() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_ac2cd892768726270e511b2ab32de4d10}{}\label{class_ti_xml_node_ac2cd892768726270e511b2ab32de4d10}
+\subsubsection{\texorpdfstring{Previous\+Sibling()}{PreviousSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 Navigate to a sibling node. 
-
-
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_ac2cd892768726270e511b2ab32de4d10_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a8aacf06b1a577ff0d7cfa502cc76da32_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_af8c0642ad6ecc03f62953e68896ed1cc}\label{class_ti_xml_node_af8c0642ad6ecc03f62953e68896ed1cc}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Previous\+Sibling@{Previous\+Sibling}}
 \index{Previous\+Sibling@{Previous\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Previous\+Sibling()}{PreviousSibling()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_af8c0642ad6ecc03f62953e68896ed1cc}{}\label{class_ti_xml_node_af8c0642ad6ecc03f62953e68896ed1cc}
-
+\subsubsection{\texorpdfstring{Previous\+Sibling()}{PreviousSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1170,39 +955,29 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_af8c0642ad6ecc03f62953e68896ed1cc_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_ace1b618fe58b2b9305fe89bfbc8dd17b}\label{class_ti_xml_node_ace1b618fe58b2b9305fe89bfbc8dd17b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Previous\+Sibling@{Previous\+Sibling}}
 \index{Previous\+Sibling@{Previous\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Previous\+Sibling(const char $\ast$) const }{PreviousSibling(const char *) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-) const}\hypertarget{class_ti_xml_node_abbb3b8c1f38fa7b9e52d584a4aeca795}{}\label{class_ti_xml_node_abbb3b8c1f38fa7b9e52d584a4aeca795}
+\subsubsection{\texorpdfstring{Previous\+Sibling()}{PreviousSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption}) const}
+
 
 
 Navigate to a sibling node. 
-
-
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_abbb3b8c1f38fa7b9e52d584a4aeca795_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_ace1b618fe58b2b9305fe89bfbc8dd17b_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a6c977049207177ef21b51972315c2053}\label{class_ti_xml_node_a6c977049207177ef21b51972315c2053}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Previous\+Sibling@{Previous\+Sibling}}
 \index{Previous\+Sibling@{Previous\+Sibling}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Previous\+Sibling(const char $\ast$\+\_\+prev)}{PreviousSibling(const char *_prev)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+prev}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a6c977049207177ef21b51972315c2053}{}\label{class_ti_xml_node_a6c977049207177ef21b51972315c2053}
-
+\subsubsection{\texorpdfstring{Previous\+Sibling()}{PreviousSibling()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::\+Previous\+Sibling (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+prev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1212,20 +987,15 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a6c977049207177ef21b51972315c2053_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_ae19d8510efc90596552f4feeac9a8fbf}\label{class_ti_xml_node_ae19d8510efc90596552f4feeac9a8fbf}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Remove\+Child@{Remove\+Child}}
 \index{Remove\+Child@{Remove\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Remove\+Child(\+Ti\+Xml\+Node $\ast$remove\+This)}{RemoveChild(TiXmlNode *removeThis)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Ti\+Xml\+Node\+::\+Remove\+Child (
-\begin{DoxyParamCaption}
-\item[{{\bf Ti\+Xml\+Node} $\ast$}]{remove\+This}
-\end{DoxyParamCaption}
-)}\hypertarget{class_ti_xml_node_ae19d8510efc90596552f4feeac9a8fbf}{}\label{class_ti_xml_node_ae19d8510efc90596552f4feeac9a8fbf}
+\subsubsection{\texorpdfstring{Remove\+Child()}{RemoveChild()}}
+{\footnotesize\ttfamily bool Ti\+Xml\+Node\+::\+Remove\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{remove\+This }\end{DoxyParamCaption})}
+
 
 
 Delete a child of this node. 
-
-
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -1235,19 +1005,13 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_ae19d8510efc90596552f4feeac9a8fbf_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a543208c2c801c84a213529541e904b9f}\label{class_ti_xml_node_a543208c2c801c84a213529541e904b9f}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Replace\+Child@{Replace\+Child}}
 \index{Replace\+Child@{Replace\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Replace\+Child(\+Ti\+Xml\+Node $\ast$replace\+This, const Ti\+Xml\+Node \&with\+This)}{ReplaceChild(TiXmlNode *replaceThis, const TiXmlNode &withThis)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Replace\+Child (
-\begin{DoxyParamCaption}
-\item[{{\bf Ti\+Xml\+Node} $\ast$}]{replace\+This, }
-\item[{const {\bf Ti\+Xml\+Node} \&}]{with\+This}
-\end{DoxyParamCaption}
-)}\hypertarget{class_ti_xml_node_a543208c2c801c84a213529541e904b9f}{}\label{class_ti_xml_node_a543208c2c801c84a213529541e904b9f}
-Replace a child of this node. Returns a pointer to the new object or N\+U\+LL if an error occured. 
+\subsubsection{\texorpdfstring{Replace\+Child()}{ReplaceChild()}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$ Ti\+Xml\+Node\+::\+Replace\+Child (\begin{DoxyParamCaption}\item[{\hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} $\ast$}]{replace\+This,  }\item[{const \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node} \&}]{with\+This }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
+Replace a child of this node. Returns a pointer to the new object or N\+U\+LL if an error occured. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -1255,10 +1019,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a543208c2c801c84a213529541e904b9f_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -1267,24 +1027,19 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a543208c2c801c84a213529541e904b9f_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a2a38329ca5d3f28f98ce932b8299ae90}\label{class_ti_xml_node_a2a38329ca5d3f28f98ce932b8299ae90}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Set\+Value@{Set\+Value}}
 \index{Set\+Value@{Set\+Value}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Set\+Value(const char $\ast$\+\_\+value)}{SetValue(const char *_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ti\+Xml\+Node\+::\+Set\+Value (
-\begin{DoxyParamCaption}
-\item[{const char $\ast$}]{\+\_\+value}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a2a38329ca5d3f28f98ce932b8299ae90}{}\label{class_ti_xml_node_a2a38329ca5d3f28f98ce932b8299ae90}
+\subsubsection{\texorpdfstring{Set\+Value()}{SetValue()}}
+{\footnotesize\ttfamily void Ti\+Xml\+Node\+::\+Set\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 Changes the value of the node. Defined as\+: \begin{DoxyVerb}Document:   filename of the xml file
 Element:    name of the element
 Comment:    the comment text
 Unknown:    the tag contents
 Text:       the text string
 \end{DoxyVerb}
- 
-
-Here is the call graph for this function\+:
+ Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -1292,10 +1047,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=328pt]{class_ti_xml_node_a2a38329ca5d3f28f98ce932b8299ae90_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -1304,30 +1055,26 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a2a38329ca5d3f28f98ce932b8299ae90_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a5ad43b9d545315e9bb4f50d4cb70de9e}\label{class_ti_xml_node_a5ad43b9d545315e9bb4f50d4cb70de9e}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Comment@{To\+Comment}}
 \index{To\+Comment@{To\+Comment}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Comment() const }{ToComment() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Ti\+Xml\+Comment}$\ast$ Ti\+Xml\+Node\+::\+To\+Comment (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_aa0a5086f9eaee910bbfdc7f975e26574}{}\label{class_ti_xml_node_aa0a5086f9eaee910bbfdc7f975e26574}
+\subsubsection{\texorpdfstring{To\+Comment()}{ToComment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_ti_xml_comment}{Ti\+Xml\+Comment}$\ast$ Ti\+Xml\+Node\+::\+To\+Comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
 
 
 
-Reimplemented in \hyperlink{class_ti_xml_comment_a00fb4215c20a2399ea05ac9b9e7e68a0}{Ti\+Xml\+Comment}.
+Reimplemented in \hyperlink{class_ti_xml_comment_a1032e176d3eb73017ceabc698cac0f16}{Ti\+Xml\+Comment}.
 
+\mbox{\Hypertarget{class_ti_xml_node_a383e06a0787f7063953934867990f849}\label{class_ti_xml_node_a383e06a0787f7063953934867990f849}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Comment@{To\+Comment}}
 \index{To\+Comment@{To\+Comment}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Comment()}{ToComment()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Ti\+Xml\+Comment}$\ast$ Ti\+Xml\+Node\+::\+To\+Comment (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a383e06a0787f7063953934867990f849}{}\label{class_ti_xml_node_a383e06a0787f7063953934867990f849}
+\subsubsection{\texorpdfstring{To\+Comment()}{ToComment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_ti_xml_comment}{Ti\+Xml\+Comment}$\ast$ Ti\+Xml\+Node\+::\+To\+Comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
@@ -1336,40 +1083,34 @@ Cast to a more defined type. Will return null if not of the requested type.
 
 Reimplemented in \hyperlink{class_ti_xml_comment_acc7c7e07e13c23f17797d642981511df}{Ti\+Xml\+Comment}.
 
+\mbox{\Hypertarget{class_ti_xml_node_a0dc0831e89d499ca911a3be61a413d45}\label{class_ti_xml_node_a0dc0831e89d499ca911a3be61a413d45}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Declaration@{To\+Declaration}}
 \index{To\+Declaration@{To\+Declaration}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Declaration() const }{ToDeclaration() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Ti\+Xml\+Declaration}$\ast$ Ti\+Xml\+Node\+::\+To\+Declaration (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a9f43e6984fc7d4afd6eb32714c6b7b72}{}\label{class_ti_xml_node_a9f43e6984fc7d4afd6eb32714c6b7b72}
+\subsubsection{\texorpdfstring{To\+Declaration()}{ToDeclaration()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_ti_xml_declaration}{Ti\+Xml\+Declaration}$\ast$ Ti\+Xml\+Node\+::\+To\+Declaration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
 
 
 
-Reimplemented in \hyperlink{class_ti_xml_declaration_a1e085d3fefd1dbf5ccdbff729931a967}{Ti\+Xml\+Declaration}.
-
-
+Reimplemented in \hyperlink{class_ti_xml_declaration_aab62703b620d9b9391b482dc1835ecf6}{Ti\+Xml\+Declaration}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a9f43e6984fc7d4afd6eb32714c6b7b72_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a0dc0831e89d499ca911a3be61a413d45_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a4027136ca820ff4a636b607231b6a6df}\label{class_ti_xml_node_a4027136ca820ff4a636b607231b6a6df}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Declaration@{To\+Declaration}}
 \index{To\+Declaration@{To\+Declaration}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Declaration()}{ToDeclaration()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Ti\+Xml\+Declaration}$\ast$ Ti\+Xml\+Node\+::\+To\+Declaration (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a4027136ca820ff4a636b607231b6a6df}{}\label{class_ti_xml_node_a4027136ca820ff4a636b607231b6a6df}
+\subsubsection{\texorpdfstring{To\+Declaration()}{ToDeclaration()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_ti_xml_declaration}{Ti\+Xml\+Declaration}$\ast$ Ti\+Xml\+Node\+::\+To\+Declaration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
@@ -1377,8 +1118,6 @@ Cast to a more defined type. Will return null if not of the requested type.
 
 
 Reimplemented in \hyperlink{class_ti_xml_declaration_a6bd3d1daddcaeb9543c24bfd090969ce}{Ti\+Xml\+Declaration}.
-
-
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1388,42 +1127,34 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_ti_xml_node_a4027136ca820ff4a636b607231b6a6df_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a775a904618cad6e4a8049bda4f5a6aa9}\label{class_ti_xml_node_a775a904618cad6e4a8049bda4f5a6aa9}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Document@{To\+Document}}
 \index{To\+Document@{To\+Document}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Document() const }{ToDocument() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Ti\+Xml\+Document}$\ast$ Ti\+Xml\+Node\+::\+To\+Document (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a8a4cda4b15c29f64cff419309aebed08}{}\label{class_ti_xml_node_a8a4cda4b15c29f64cff419309aebed08}
+\subsubsection{\texorpdfstring{To\+Document()}{ToDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document}$\ast$ Ti\+Xml\+Node\+::\+To\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
 
 
 
-Reimplemented in \hyperlink{class_ti_xml_document_a1dc977bde3e4fe85a8eb9d88a35ef5a4}{Ti\+Xml\+Document}.
-
-
+Reimplemented in \hyperlink{class_ti_xml_document_a468e582640e3c4f740f7168d8b4a6e4a}{Ti\+Xml\+Document}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a8a4cda4b15c29f64cff419309aebed08_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a775a904618cad6e4a8049bda4f5a6aa9_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a6a4c8ac28ee7a745d059db6691e03bae}\label{class_ti_xml_node_a6a4c8ac28ee7a745d059db6691e03bae}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Document@{To\+Document}}
 \index{To\+Document@{To\+Document}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Document()}{ToDocument()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Ti\+Xml\+Document}$\ast$ Ti\+Xml\+Node\+::\+To\+Document (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a6a4c8ac28ee7a745d059db6691e03bae}{}\label{class_ti_xml_node_a6a4c8ac28ee7a745d059db6691e03bae}
+\subsubsection{\texorpdfstring{To\+Document()}{ToDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document}$\ast$ Ti\+Xml\+Node\+::\+To\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
@@ -1432,40 +1163,34 @@ Cast to a more defined type. Will return null if not of the requested type.
 
 Reimplemented in \hyperlink{class_ti_xml_document_a1025d942a1f328fd742d545e37efdd42}{Ti\+Xml\+Document}.
 
+\mbox{\Hypertarget{class_ti_xml_node_a4080428f2cac46e92ef4d284202fad0b}\label{class_ti_xml_node_a4080428f2cac46e92ef4d284202fad0b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Element@{To\+Element}}
 \index{To\+Element@{To\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Element() const }{ToElement() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+To\+Element (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a72abed96dc9667ab9e0a2a275301bb1c}{}\label{class_ti_xml_node_a72abed96dc9667ab9e0a2a275301bb1c}
+\subsubsection{\texorpdfstring{To\+Element()}{ToElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+To\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
 
 
 
-Reimplemented in \hyperlink{class_ti_xml_element_ac5b8d0e25fa23fd9acbb6d146082901c}{Ti\+Xml\+Element}.
-
-
+Reimplemented in \hyperlink{class_ti_xml_element_a940fc8aa953e0ef0de6e110b7d98b8ee}{Ti\+Xml\+Element}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a72abed96dc9667ab9e0a2a275301bb1c_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a4080428f2cac46e92ef4d284202fad0b_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_aa65d000223187d22a4dcebd7479e9ebc}\label{class_ti_xml_node_aa65d000223187d22a4dcebd7479e9ebc}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Element@{To\+Element}}
 \index{To\+Element@{To\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Element()}{ToElement()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+To\+Element (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_aa65d000223187d22a4dcebd7479e9ebc}{}\label{class_ti_xml_node_aa65d000223187d22a4dcebd7479e9ebc}
+\subsubsection{\texorpdfstring{To\+Element()}{ToElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}$\ast$ Ti\+Xml\+Node\+::\+To\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
@@ -1474,40 +1199,34 @@ Cast to a more defined type. Will return null if not of the requested type.
 
 Reimplemented in \hyperlink{class_ti_xml_element_a9def86337ea7a755eb41cac980f60c7a}{Ti\+Xml\+Element}.
 
+\mbox{\Hypertarget{class_ti_xml_node_a2591700660b308571c09166559a39332}\label{class_ti_xml_node_a2591700660b308571c09166559a39332}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Text@{To\+Text}}
 \index{To\+Text@{To\+Text}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Text() const }{ToText() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Ti\+Xml\+Text}$\ast$ Ti\+Xml\+Node\+::\+To\+Text (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a95a46a52c525992d6b4ee08beb14cd69}{}\label{class_ti_xml_node_a95a46a52c525992d6b4ee08beb14cd69}
+\subsubsection{\texorpdfstring{To\+Text()}{ToText()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_ti_xml_text}{Ti\+Xml\+Text}$\ast$ Ti\+Xml\+Node\+::\+To\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
 
 
 
-Reimplemented in \hyperlink{class_ti_xml_text_a895bf34ffad17f7439ab2a52b9651648}{Ti\+Xml\+Text}.
-
-
+Reimplemented in \hyperlink{class_ti_xml_text_af8973cfd4ca00c5d934cb23e8aa0f5d5}{Ti\+Xml\+Text}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a95a46a52c525992d6b4ee08beb14cd69_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a2591700660b308571c09166559a39332_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a3ddfbcac78fbea041fad57e5c6d60a03}\label{class_ti_xml_node_a3ddfbcac78fbea041fad57e5c6d60a03}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Text@{To\+Text}}
 \index{To\+Text@{To\+Text}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Text()}{ToText()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Ti\+Xml\+Text}$\ast$ Ti\+Xml\+Node\+::\+To\+Text (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a3ddfbcac78fbea041fad57e5c6d60a03}{}\label{class_ti_xml_node_a3ddfbcac78fbea041fad57e5c6d60a03}
+\subsubsection{\texorpdfstring{To\+Text()}{ToText()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_ti_xml_text}{Ti\+Xml\+Text}$\ast$ Ti\+Xml\+Node\+::\+To\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
@@ -1516,28 +1235,26 @@ Cast to a more defined type. Will return null if not of the requested type.
 
 Reimplemented in \hyperlink{class_ti_xml_text_ae7c3a8fd3e4dbf6c0c4363a943d72f5b}{Ti\+Xml\+Text}.
 
+\mbox{\Hypertarget{class_ti_xml_node_ab4f2e6ce87d36c1b9b7de2529128a460}\label{class_ti_xml_node_ab4f2e6ce87d36c1b9b7de2529128a460}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Unknown@{To\+Unknown}}
 \index{To\+Unknown@{To\+Unknown}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Unknown() const }{ToUnknown() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Ti\+Xml\+Unknown}$\ast$ Ti\+Xml\+Node\+::\+To\+Unknown (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_afd7205cf31d7a376929f8a36930627a2}{}\label{class_ti_xml_node_afd7205cf31d7a376929f8a36930627a2}
+\subsubsection{\texorpdfstring{To\+Unknown()}{ToUnknown()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const \hyperlink{class_ti_xml_unknown}{Ti\+Xml\+Unknown}$\ast$ Ti\+Xml\+Node\+::\+To\+Unknown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
 
 
 
-Reimplemented in \hyperlink{class_ti_xml_unknown_ab0313e5fe77987d746ac1a97a254419d}{Ti\+Xml\+Unknown}.
+Reimplemented in \hyperlink{class_ti_xml_unknown_a0d08dc16fc9ce16140ccaefbc35f6ea6}{Ti\+Xml\+Unknown}.
 
+\mbox{\Hypertarget{class_ti_xml_node_a06de5af852668c7e4af0d09c205f0b0d}\label{class_ti_xml_node_a06de5af852668c7e4af0d09c205f0b0d}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!To\+Unknown@{To\+Unknown}}
 \index{To\+Unknown@{To\+Unknown}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{To\+Unknown()}{ToUnknown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Ti\+Xml\+Unknown}$\ast$ Ti\+Xml\+Node\+::\+To\+Unknown (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_ti_xml_node_a06de5af852668c7e4af0d09c205f0b0d}{}\label{class_ti_xml_node_a06de5af852668c7e4af0d09c205f0b0d}
+\subsubsection{\texorpdfstring{To\+Unknown()}{ToUnknown()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \hyperlink{class_ti_xml_unknown}{Ti\+Xml\+Unknown}$\ast$ Ti\+Xml\+Node\+::\+To\+Unknown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 Cast to a more defined type. Will return null if not of the requested type. 
@@ -1546,44 +1263,34 @@ Cast to a more defined type. Will return null if not of the requested type.
 
 Reimplemented in \hyperlink{class_ti_xml_unknown_a67c9fd22940e8c47f706a72cdd2e332c}{Ti\+Xml\+Unknown}.
 
+\mbox{\Hypertarget{class_ti_xml_node_a0f4dd916b2afc2ab2f1a84f3e2b8fd5d}\label{class_ti_xml_node_a0f4dd916b2afc2ab2f1a84f3e2b8fd5d}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Type@{Type}}
 \index{Type@{Type}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Type() const }{Type() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Ti\+Xml\+Node\+::\+Type (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a57b99d5c97d67a42b9752f5210a1ba5e}{}\label{class_ti_xml_node_a57b99d5c97d67a42b9752f5210a1ba5e}
-Query the type (as an enumerated value, above) of this node. The possible types are\+: T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT, T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT, T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT, T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN, T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT, and T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON. 
+\subsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily int Ti\+Xml\+Node\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the call graph for this function\+:
+Query the type (as an enumerated value, above) of this node. The possible types are\+: T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+O\+C\+U\+M\+E\+NT, T\+I\+N\+Y\+X\+M\+L\+\_\+\+E\+L\+E\+M\+E\+NT, T\+I\+N\+Y\+X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT, T\+I\+N\+Y\+X\+M\+L\+\_\+\+U\+N\+K\+N\+O\+WN, T\+I\+N\+Y\+X\+M\+L\+\_\+\+T\+E\+XT, and T\+I\+N\+Y\+X\+M\+L\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+ON. Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a57b99d5c97d67a42b9752f5210a1ba5e_cgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a0f4dd916b2afc2ab2f1a84f3e2b8fd5d_cgraph}
 \end{center}
 \end{figure}
-
-
-
-
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a57b99d5c97d67a42b9752f5210a1ba5e_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_a0f4dd916b2afc2ab2f1a84f3e2b8fd5d_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_ad44dfe927d49a74dd78b72b7514417ad}\label{class_ti_xml_node_ad44dfe927d49a74dd78b72b7514417ad}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Value@{Value}}
 \index{Value@{Value}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Value() const }{Value() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Ti\+Xml\+Node\+::\+Value (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a77943eb90d12c2892b1337a9f5918b41}{}\label{class_ti_xml_node_a77943eb90d12c2892b1337a9f5918b41}
+\subsubsection{\texorpdfstring{Value()}{Value()}}
+{\footnotesize\ttfamily const char$\ast$ Ti\+Xml\+Node\+::\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 The meaning of \textquotesingle{}value\textquotesingle{} changes for the specific type of \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}. \begin{DoxyVerb}Document:   filename of the xml file
 Element:    name of the element
 Comment:    the comment text
@@ -1592,74 +1299,92 @@ Text:       the text string
 \end{DoxyVerb}
 
 
-The subclasses will wrap this function. 
-
-Here is the caller graph for this function\+:
+The subclasses will wrap this function. Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_ti_xml_node_a77943eb90d12c2892b1337a9f5918b41_icgraph}
+\includegraphics[width=350pt]{class_ti_xml_node_ad44dfe927d49a74dd78b72b7514417ad_icgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_ti_xml_node_a74c4ea4a91c0a91900c919f69f657d6a}\label{class_ti_xml_node_a74c4ea4a91c0a91900c919f69f657d6a}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Value\+T\+Str@{Value\+T\+Str}}
 \index{Value\+T\+Str@{Value\+T\+Str}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Value\+T\+Str() const }{ValueTStr() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG}\& Ti\+Xml\+Node\+::\+Value\+T\+Str (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ti_xml_node_a83ece13d2ea66dac66e0b21332229239}{}\label{class_ti_xml_node_a83ece13d2ea66dac66e0b21332229239}
-
+\subsubsection{\texorpdfstring{Value\+T\+Str()}{ValueTStr()}}
+{\footnotesize\ttfamily const \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG}\& Ti\+Xml\+Node\+::\+Value\+T\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=327pt]{class_ti_xml_node_a83ece13d2ea66dac66e0b21332229239_icgraph}
+\includegraphics[width=327pt]{class_ti_xml_node_a74c4ea4a91c0a91900c919f69f657d6a_icgraph}
 \end{center}
 \end{figure}
-
-
 
 
 \subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_ti_xml_node_a173617f6dfe902cf484ce5552b950475}\label{class_ti_xml_node_a173617f6dfe902cf484ce5552b950475}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Ti\+Xml\+Document@{Ti\+Xml\+Document}}
 \index{Ti\+Xml\+Document@{Ti\+Xml\+Document}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Ti\+Xml\+Document}{TiXmlDocument}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Ti\+Xml\+Document}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_ti_xml_node_a173617f6dfe902cf484ce5552b950475}{}\label{class_ti_xml_node_a173617f6dfe902cf484ce5552b950475}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Document}{TiXmlDocument}}
+{\footnotesize\ttfamily friend class \hyperlink{class_ti_xml_document}{Ti\+Xml\+Document}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_ab6592e32cb9132be517cc12a70564c4b}\label{class_ti_xml_node_ab6592e32cb9132be517cc12a70564c4b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!Ti\+Xml\+Element@{Ti\+Xml\+Element}}
 \index{Ti\+Xml\+Element@{Ti\+Xml\+Element}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{Ti\+Xml\+Element}{TiXmlElement}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Ti\+Xml\+Element}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_ti_xml_node_ab6592e32cb9132be517cc12a70564c4b}{}\label{class_ti_xml_node_ab6592e32cb9132be517cc12a70564c4b}
+\subsubsection{\texorpdfstring{Ti\+Xml\+Element}{TiXmlElement}}
+{\footnotesize\ttfamily friend class \hyperlink{class_ti_xml_element}{Ti\+Xml\+Element}\hspace{0.3cm}{\ttfamily [friend]}}
+
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ti_xml_node_af749fb7f22010b80e8f904c32653d50e}\label{class_ti_xml_node_af749fb7f22010b80e8f904c32653d50e}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!first\+Child@{first\+Child}}
 \index{first\+Child@{first\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{first\+Child}{firstChild}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::first\+Child\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_af749fb7f22010b80e8f904c32653d50e}{}\label{class_ti_xml_node_af749fb7f22010b80e8f904c32653d50e}
+\subsubsection{\texorpdfstring{first\+Child}{firstChild}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::first\+Child\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_a5b30756d21b304580d22a841ec9d61f8}\label{class_ti_xml_node_a5b30756d21b304580d22a841ec9d61f8}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!last\+Child@{last\+Child}}
 \index{last\+Child@{last\+Child}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{last\+Child}{lastChild}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::last\+Child\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_a5b30756d21b304580d22a841ec9d61f8}{}\label{class_ti_xml_node_a5b30756d21b304580d22a841ec9d61f8}
+\subsubsection{\texorpdfstring{last\+Child}{lastChild}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::last\+Child\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_a2f329cc993d2d34df76e17dcbb776b45}\label{class_ti_xml_node_a2f329cc993d2d34df76e17dcbb776b45}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!next@{next}}
 \index{next@{next}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::next\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_a2f329cc993d2d34df76e17dcbb776b45}{}\label{class_ti_xml_node_a2f329cc993d2d34df76e17dcbb776b45}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::next\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_a662c4de61244e4fa5bd4e2d8c63143a5}\label{class_ti_xml_node_a662c4de61244e4fa5bd4e2d8c63143a5}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!parent@{parent}}
 \index{parent@{parent}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{parent}{parent}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::parent\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_a662c4de61244e4fa5bd4e2d8c63143a5}{}\label{class_ti_xml_node_a662c4de61244e4fa5bd4e2d8c63143a5}
+\subsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_a9c5370ea2cbfd9f0e0f7b30a57fd68f5}\label{class_ti_xml_node_a9c5370ea2cbfd9f0e0f7b30a57fd68f5}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!prev@{prev}}
 \index{prev@{prev}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{prev}{prev}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::prev\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_a9c5370ea2cbfd9f0e0f7b30a57fd68f5}{}\label{class_ti_xml_node_a9c5370ea2cbfd9f0e0f7b30a57fd68f5}
+\subsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node}{Ti\+Xml\+Node}$\ast$ Ti\+Xml\+Node\+::prev\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_a2619c6379181c16ba95ae6922e2ca839}\label{class_ti_xml_node_a2619c6379181c16ba95ae6922e2ca839}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!type@{type}}
 \index{type@{type}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Type} Ti\+Xml\+Node\+::type\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_a2619c6379181c16ba95ae6922e2ca839}{}\label{class_ti_xml_node_a2619c6379181c16ba95ae6922e2ca839}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \hyperlink{class_ti_xml_node_a836eded4920ab9e9ef28496f48cd95a2}{Node\+Type} Ti\+Xml\+Node\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}\label{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}} 
 \index{Ti\+Xml\+Node@{Ti\+Xml\+Node}!value@{value}}
 \index{value@{value}!Ti\+Xml\+Node@{Ti\+Xml\+Node}}
-\subsubsection[{\texorpdfstring{value}{value}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} Ti\+Xml\+Node\+::value\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}{}\label{class_ti_xml_node_aead528b3cedc33c16a6c539872c7cc8b}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \hyperlink{tinyxml_8h_a92bada05fd84d9a0c9a5bbe53de26887}{T\+I\+X\+M\+L\+\_\+\+S\+T\+R\+I\+NG} Ti\+Xml\+Node\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{tinyxml_8h}{tinyxml.\+h}\item 
-/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{tinyxml_8cpp}{tinyxml.\+cpp}\item 
-/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{tinyxmlparser_8cpp}{tinyxmlparser.\+cpp}\end{DoxyCompactItemize}
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{tinyxml_8h}{tinyxml.\+h}\item 
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{tinyxml_8cpp}{tinyxml.\+cpp}\item 
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{tinyxmlparser_8cpp}{tinyxmlparser.\+cpp}\end{DoxyCompactItemize}
