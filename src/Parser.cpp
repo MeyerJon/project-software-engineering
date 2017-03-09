@@ -17,9 +17,9 @@ Parser::~Parser() {
     // TODO Auto-generated destructor stub
 }
 
-void Parser::setupStations(Metronet& metro, std::string filename){
+void Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
     TiXmlDocument doc;
-    doc.LoadFile(filename);
+    doc.LoadFile(filename.c_str());
     TiXmlElement* root = doc.FirstChildElement();
     // Iterate over all elements
     for(TiXmlElement* elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()){
@@ -48,21 +48,53 @@ void Parser::setupStations(Metronet& metro, std::string filename){
                     else if(attrName == "afstappen") afstappen = std::stoi(t);
                     else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
-                        // TODO: Naar exporter schrijven
+                        exp->write(out, os);
                     }
                 }
-                // TODO: Station* station = new Station(name)
+                Station* station = new Station(name, vor, volg, spoor, opstappen, afstappen);
+                metro.addStation(station);
+                metro.addSpoor(spoor);
             }
-            catch{
-
+            catch(std::invalid_argument& ex) {
+                std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Station niet toegevoegd.\n";
+                exp->write(out, os);
+                continue;
             }
         }
+        else if(elem->Value() == "TRAM"){
+            std::string attrName;
+            int zitpl;
+            int snelh;
+            int spoor;
+            std::string beginS;
+            try {
+                for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
+                    attrName = node->Value();
+                    TiXmlText* text;
+                    std::string t;
+                    if(node->FirstChild() != NULL) text = node->FirstChild()->ToText();
+                    else continue;
+                    if(text != NULL) t = text->Value();
+                    else continue;
+                    if(attrName == "zitplaatsen") zitpl = stoi(t);
+                    else if(attrName == "snelheid") snelh = stoi(t);
+                    else if(attrName == "spoor") spoor = std::stoi(t);
+                    else if(attrName == "beginstation") beginS = std::stoi(t);
+                    else{
+                        std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
+                        exp->write(out, os);
+                    }
+                }
+                Tram* tram = new Tram(zitpl, snelh, spoor, beginS);
+                metro.addTram(tram);
+                metro.addSpoor(spoor);
+            }
+            catch(std::invalid_argument& ex) {
+                std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Tram niet toegevoegd.\n";
+                exp->write(out, os);
+                continue;
+            }
+
+        }
     }
-}
-void Parser::setupTrams(Metronet& metro, std::string filename){
-
-}
-
-void Parser::setup(Metronet& metro, std::string filename) {
-
 }
