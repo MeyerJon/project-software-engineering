@@ -35,6 +35,13 @@ public:
      */
     bool properlyInitialised();
 
+    /** \brief Geeft alle stations in het metronet terug.
+     *  \return Map met stations in het metronet.
+     *
+     *  REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");\n
+     */
+     std::map<std::string, Station*> getStations();
+
     /** \brief Voegt station toe aan metronet.
      *  \param station Het station dat toegevoegd zal worden.
      *

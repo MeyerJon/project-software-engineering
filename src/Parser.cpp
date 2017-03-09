@@ -32,8 +32,8 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
             std::string name;
             std::string vor;
             std::string volg;
-            int opstappen;
-            int afstappen;
+            int opstappen = 0;
+            int afstappen = 0;
             int spoor;
             try {
                 for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
@@ -102,5 +102,8 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
         }
     }
     bool consistency = metro.checkConsistent(exp, os);
-    for (auto s : metro.get)
+    for (auto s : metro.getStations()) {
+        Station* station = s.second;
+        metro.opStappenAfStappen(station->getNaam(), exp, os);
+    }
 }

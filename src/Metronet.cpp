@@ -24,6 +24,10 @@ bool Metronet::properlyInitialised() {
     return initCheck == this;
 }
 
+std::map<std::string, Station*> Metronet::getStations() {
+    return stations;
+}
+
 void Metronet::addStation(Station* station) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
