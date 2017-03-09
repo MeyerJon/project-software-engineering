@@ -18,8 +18,6 @@
 
 class Parser {
 private:
-    bool stationsCheck;
-    bool tramsCheck;
     Exporter* exp;
     Parser* initCheck;
 public:
@@ -30,6 +28,7 @@ public:
      *
      * @param metro Het metronet (referentie) dat aangepast moet worden.
      * @param filename De naam van het XML-bestand.
+     * @param os De stream waarnaar de output geschreven wordt (nodig voor de exporter).
      *
      * REQUIRE(this->properlyInitialised, "De parser was niet geinitialiseerd bij het aanroepen van setupStations.");\n
      * REQUIRE(metro.properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");\n
