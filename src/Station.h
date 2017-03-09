@@ -17,9 +17,9 @@ private:
     std::string vorige;
     std::string volgende;
     int spoor;
-    Station* initCheck;
     int opstappen;
     int afstappen;
+    Station* initCheck;
 
 public:
     Station();
@@ -51,13 +51,23 @@ public:
      */
     std::string getVolgende() const;
 
-    /** \brief Geef het Spoor terug.
+    /** \brief Geef het spoor terug.
      *  \return Het spoor.
      * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");\n
      */
     int getSpoor() const;
 
-    // TODO: opstappen() && afstappen
+    /** \brief Geef het aantal opstappende mensen terug.
+     *  \return Een aantal opstappende mensen.
+     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getOpstappen.");\n
+     */
+    int getOpstappen() const;
+
+    /** \brief Geef het afstappende mensen terug.
+     *  \return Een aantal afstappende mensen.
+     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getAfstappen.");\n
+     */
+    int getAfstappen() const;
 };
 
 #endif /* SRC_STATION_H_ */

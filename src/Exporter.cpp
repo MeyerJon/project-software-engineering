@@ -59,6 +59,7 @@ void ExporterHTML::validateHead(std::ostream& os) {
        << "\t<title>" << "Project Software Engineering" << "</title>\n"
        << "</head>\n"
        << "<body>\n";
+    documentStarted = true;
 
     ENSURE((documentStarted == true),
             "Document werd niet aangemaakt bij de aanroep van validateHead.");
