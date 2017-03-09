@@ -42,9 +42,9 @@ void Metronet::addTram(Tram* tram) {
     REQUIRE(tram->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van addTram.");
 
-    trams.push_back(tram);
+    trams[tram->getSpoor()] = tram;
 
-    ENSURE((trams[trams.size() - 1] == tram),
+    ENSURE((trams.find(tram->getSpoor()) != trams.end()),
             "Tram was niet toegevoegd bij de aanroep van addTram.");
 }
 
@@ -61,34 +61,36 @@ void Metronet::addSpoor(int spoor) {
 bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
-
-    std::vector<Spoor*> stationSporen; // Dit is handig om de consistentie van trams en sporen te checken
-    std::vector<Spoor*> tramSporen; // Dit is handig om de consistentie van de trams en sporen te checken
+    std::vector<int> stationSporen; // Dit is handig om de consistentie van trams en sporen te checken
+    std::vector<int> tramSporen; // Dit is handig om de consistentie van de trams en sporen te checken
     bool consistent = true;
     // TODO: Maak output
     // Elk station is verbonden met een voorgaand en volgend station voor elk spoor
-    for (Station* station : stations) {
+    for (auto s : stations) {
+        Station* station = s.second;
+        Station* volgende = stations[station->getVolgende()];
+        Station* vorige = stations[station->getVorige()];
         stationSporen.push_back(station->getSpoor());
-        if (station->getVolgende() == nullptr) {
+        if (station->getVolgende() == "") {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " heeft geen volgende station.";
             exp->write(out, os);
             consistent = false;
-        } else if (station->getVorige() == nullptr) {
+        } else if (station->getVorige() == "") {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " heeft geen vorig station.";
             exp->write(out, os);
             consistent = false;
-        } else if (station->getVolgende()->getVorige() != station) {
+        } else if (stations[vorige->getVolgende()] != station) {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " is niet gelinkt met het volgende station "
-                    + station->getVolgende()->getNaam() + ".";
+                    + volgende->getNaam() + ".";
             exp->write(out, os);
             consistent = false;
-        } else if (station->getVorige()->getVolgende() != station) {
+        } else if (stations[volgende->getVorige()] != station) {
             std::string out = "ERROR: Station " + station->getNaam()
                     + " is niet gelinkt met het vorig station "
-                    + station->getVorige()->getNaam() + ".";
+                    + vorige->getNaam() + ".";
             exp->write(out, os);
             consistent = false;
         }
@@ -96,20 +98,19 @@ bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
 
     // Er bestaan geen trams met een lijnnummer dat niet overeenkomt met een spoor in een station
     // Het beginstation van een tram is een geldig station in het metronet
-    for (Tram* tram : trams) {
-        if (find(stations.begin(), stations.end(), tram->getBeginStation())
-                == stations.end()) {
+    for (auto t : trams) {
+        Tram* tram = t.second;
+        if (stations.find(tram->getBeginStation()) == stations.end()) {
             std::string out = "ERROR: Tram "
-                    + std::to_string(tram->getSpoor()->getLijnNr())
+                    + std::to_string(tram->getSpoor())
                     + " heeft een ongeldig beginstation.";
             exp->write(out, os);
             consistent = false;
         }
-        tramSporen.push_back(tram->getSpoor());
         if (find(stationSporen.begin(), stationSporen.end(), tram->getSpoor())
                 == stationSporen.end()) {
             std::string out = "ERROR: Spoor "
-                    + std::to_string(tram->getSpoor()->getLijnNr())
+                    + std::to_string(tram->getSpoor())
                     + " komt niet door een station.";
             exp->write(out, os);
             consistent = false;
@@ -117,7 +118,7 @@ bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
     }
 
     // Er zijn geen sporen waarvoor geen tram bestaat
-    for (Spoor* spoor : sporen) {
+    for (int spoor : sporen) {
         if (find(tramSporen.begin(), tramSporen.end(), spoor)
                 == tramSporen.end()) {
             std::string out = "ERROR: Spoor "

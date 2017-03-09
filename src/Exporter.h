@@ -31,6 +31,7 @@ public:
      */
     virtual void write(std::string& output, std::ostream& os);
 
+protected:
     /** \brief Valideer de output formaat.
      *  \param os De stream waar de output naar gestuurd zal worden.
      *
@@ -52,6 +53,7 @@ class ExporterHTML : public Exporter {
 public:
     virtual void write(std::string& output, std::ostream& os);
 
+protected:
     virtual void validate(std::ostream& os);
 
     /** \brief Valideer de HTML header.
