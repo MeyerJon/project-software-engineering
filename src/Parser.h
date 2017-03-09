@@ -13,12 +13,14 @@
 #include "Metronet.h"
 #include "tinyxml.h"
 #include "tinystr.h"
+#include "Exporter.h"
 
 
 class Parser {
 private:
     bool stationsCheck;
     bool tramsCheck;
+    Exporter* exp;
     Parser* initCheck;
 public:
     Parser();
