@@ -70,5 +70,5 @@ void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
     huidigStation = station;
 
     ENSURE((huidigStation == station),
-           "huidigStation is niet correct aangepast.");\
+           "huidigStation is niet correct aangepast.");
 }

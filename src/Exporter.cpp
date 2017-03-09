@@ -19,6 +19,7 @@ bool Exporter::properlyInitialised() const {
 void Exporter::write(std::string& output, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Exporter was niet geinitialiseerd bij de aanroep van write.");
+    this->validate(os);
     os << output;
 }
 
@@ -31,7 +32,9 @@ void Exporter::validate(std::ostream& os) {
 void ExporterHTML::write(std::string& output, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Exporter was niet geinitialiseerd bij de aanroep van write.");
+    this->validate(os);
     os << "<p>\n" << output << "\n</p>\n";
+    this->validate(os);
 }
 
 void ExporterHTML::validate(std::ostream& os) {
