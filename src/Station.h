@@ -22,6 +22,7 @@ private:
     Station* initCheck;
 public:
     Station();
+    Station(std::string n, Station* vor, Station* volg, Spoor* sp);
     virtual ~Station();
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.

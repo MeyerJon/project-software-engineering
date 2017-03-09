@@ -16,3 +16,13 @@ Parser::~Parser() {
     // TODO Auto-generated destructor stub
 }
 
+void Parser::setupStations(Metronet& metro, std::string file){
+
+}
+void Parser::setupTrams(Metronet& metro, std::string file){
+
+}
+
+void Parser::setup(Metronet& metro, std::string file) {
+
+}

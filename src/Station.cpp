@@ -9,7 +9,14 @@
 
 Station::Station() {
     // TODO Auto-generated constructor stub
+    initCheck = this;
+}
 
+Station::Station(std::string n, Station* vor, Station* volg, Spoor* sp) {
+    naam = n;
+    vorige = vor;
+    volgende = volg;
+    spoor = sp;
 }
 
 Station::~Station() {

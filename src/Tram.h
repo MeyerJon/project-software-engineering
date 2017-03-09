@@ -10,9 +10,11 @@
 
 #include <iostream>
 #include "DesignByContract.h"
+#include "Exporter.h"
 
 class Spoor;
 class Station;
+
 
 class Tram {
 private:
@@ -25,6 +27,7 @@ private:
     Tram* initCheck;
 public:
     Tram();
+    Tram(int zit, int snel, Spoor* sp, Station* beginS);
     virtual ~Tram();
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
@@ -73,6 +76,13 @@ public:
      * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");\n
      */
     Station* getHuidigStation() const;
+
+    /** \brief Verplaatst een tram naar het opgegeven station.
+     *
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van verplaatsTram.");\n
+     * ENSURE((huidigStation == station), "huidigStation is niet correct aangepast.");\n
+     */
+    void verplaatsTram(Station* station, Exporter* exp);
 };
 
 #endif /* SRC_TRAM_H_ */

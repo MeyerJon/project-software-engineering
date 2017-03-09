@@ -9,7 +9,11 @@
 
 Spoor::Spoor() {
     // TODO Auto-generated constructor stub
+    initCheck = this;
+}
 
+Spoor::Spoor(int nr) {
+    lijnNr = nr;
 }
 
 Spoor::~Spoor() {

@@ -17,6 +17,7 @@ private:
     Spoor* initCheck;
 public:
     Spoor();
+    Spoor(int nr);
     virtual ~Spoor();
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
