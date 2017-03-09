@@ -4,13 +4,27 @@
 
 {\ttfamily \#include $<$Exporter.\+h$>$}
 
+
+
+Inheritance diagram for Exporter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_exporter__inherit__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_exporter_a2a977cb5ac8f637fcb570e73f650eca0}{Exporter} ()
 \item 
-virtual \hyperlink{class_exporter_a44f24686958e01a543fd8b68b392658a}{$\sim$\+Exporter} ()
-\end{DoxyCompactItemize}
+virtual bool \hyperlink{class_exporter_afb6185b8276c2fd03da53f49e4da295b}{properly\+Initialised} () const
+\begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_exporter_a96a1f764ef33d11d118f3170a3ca7e1a}{write} (std\+::string \&output)
+\begin{DoxyCompactList}\small\item\em Stuur de output string naar de output stream. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_exporter_a585f97d4204275edcb831df9215a0099}{validate} ()
+\begin{DoxyCompactList}\small\item\em Valideer de output formaat. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -20,15 +34,60 @@ virtual \hyperlink{class_exporter_a44f24686958e01a543fd8b68b392658a}{$\sim$\+Exp
 \subsubsection{\texorpdfstring{Exporter()}{Exporter()}}
 {\footnotesize\ttfamily Exporter\+::\+Exporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_exporter_a44f24686958e01a543fd8b68b392658a}\label{class_exporter_a44f24686958e01a543fd8b68b392658a}} 
-\index{Exporter@{Exporter}!````~Exporter@{$\sim$\+Exporter}}
-\index{````~Exporter@{$\sim$\+Exporter}!Exporter@{Exporter}}
-\subsubsection{\texorpdfstring{$\sim$\+Exporter()}{~Exporter()}}
-{\footnotesize\ttfamily Exporter\+::$\sim$\+Exporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_exporter_afb6185b8276c2fd03da53f49e4da295b}\label{class_exporter_afb6185b8276c2fd03da53f49e4da295b}} 
+\index{Exporter@{Exporter}!properly\+Initialised@{properly\+Initialised}}
+\index{properly\+Initialised@{properly\+Initialised}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{properly\+Initialised()}{properlyInitialised()}}
+{\footnotesize\ttfamily virtual bool Exporter\+::properly\+Initialised (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Kijk na of de constructor in de juiste staat geeindigd is. 
+
+\begin{DoxyReturn}{Returns}
+Boolean die aangeeft of het object juist geinitialiseerd is. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_exporter_a585f97d4204275edcb831df9215a0099}\label{class_exporter_a585f97d4204275edcb831df9215a0099}} 
+\index{Exporter@{Exporter}!validate@{validate}}
+\index{validate@{validate}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily virtual void Exporter\+::validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Valideer de output formaat. 
+
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_afb6185b8276c2fd03da53f49e4da295b}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij het aanroepen van validate,\char`\"{});~\newline
+
+
+Reimplemented in \hyperlink{class_exporter_h_t_m_l_ac44697b53a77a01e394a12bfc11c93f1}{Exporter\+H\+T\+ML}.
+
+\mbox{\Hypertarget{class_exporter_a96a1f764ef33d11d118f3170a3ca7e1a}\label{class_exporter_a96a1f764ef33d11d118f3170a3ca7e1a}} 
+\index{Exporter@{Exporter}!write@{write}}
+\index{write@{write}!Exporter@{Exporter}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual void Exporter\+::write (\begin{DoxyParamCaption}\item[{std\+::string \&}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stuur de output string naar de output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & De string die naar de output gestuurd moet worden.\\
+\hline
+\end{DoxyParams}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_afb6185b8276c2fd03da53f49e4da295b}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij het aanroepen van write.\char`\"{});~\newline
+
+
+Reimplemented in \hyperlink{class_exporter_h_t_m_l_aa14cd2dde581c96a0414ad3e886a38c8}{Exporter\+H\+T\+ML}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_exporter_8h}{Exporter.\+h}\item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_exporter_8cpp}{Exporter.\+cpp}\end{DoxyCompactItemize}
+/home/sergio/\+Eclipse\+Projects/\+Soft\+Eng/src/\hyperlink{_exporter_8h}{Exporter.\+h}\item 
+/home/sergio/\+Eclipse\+Projects/\+Soft\+Eng/src/\hyperlink{_exporter_8cpp}{Exporter.\+cpp}\end{DoxyCompactItemize}

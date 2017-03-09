@@ -68,13 +68,30 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_exporter_8h_source.html">Exporter.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exporter:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_exporter__inherit__graph.png" border="0" usemap="#_exporter_inherit__map" alt="Inheritance graph"/></div>
+<map name="_exporter_inherit__map" id="_exporter_inherit__map">
+<area shape="rect" id="node2" href="class_exporter_c_l_i.html" title="ExporterCLI" alt="" coords="5,80,97,107"/>
+<area shape="rect" id="node3" href="class_exporter_h_t_m_l.html" title="ExporterHTML" alt="" coords="122,80,229,107"/>
+<area shape="rect" id="node4" href="class_exporter_t_x_t.html" title="ExporterTXT" alt="" coords="253,80,349,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a977cb5ac8f637fcb570e73f650eca0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#a2a977cb5ac8f637fcb570e73f650eca0">Exporter</a> ()</td></tr>
 <tr class="separator:a2a977cb5ac8f637fcb570e73f650eca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f24686958e01a543fd8b68b392658a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#a44f24686958e01a543fd8b68b392658a">~Exporter</a> ()</td></tr>
-<tr class="separator:a44f24686958e01a543fd8b68b392658a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb6185b8276c2fd03da53f49e4da295b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#afb6185b8276c2fd03da53f49e4da295b">properlyInitialised</a> () const</td></tr>
+<tr class="memdesc:afb6185b8276c2fd03da53f49e4da295b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kijk na of de constructor in de juiste staat geeindigd is.  <a href="#afb6185b8276c2fd03da53f49e4da295b">More...</a><br /></td></tr>
+<tr class="separator:afb6185b8276c2fd03da53f49e4da295b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a1f764ef33d11d118f3170a3ca7e1a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#a96a1f764ef33d11d118f3170a3ca7e1a">write</a> (std::string &amp;output)</td></tr>
+<tr class="memdesc:a96a1f764ef33d11d118f3170a3ca7e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stuur de output string naar de output stream.  <a href="#a96a1f764ef33d11d118f3170a3ca7e1a">More...</a><br /></td></tr>
+<tr class="separator:a96a1f764ef33d11d118f3170a3ca7e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585f97d4204275edcb831df9215a0099"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#a585f97d4204275edcb831df9215a0099">validate</a> ()</td></tr>
+<tr class="memdesc:a585f97d4204275edcb831df9215a0099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valideer de output formaat.  <a href="#a585f97d4204275edcb831df9215a0099">More...</a><br /></td></tr>
+<tr class="separator:a585f97d4204275edcb831df9215a0099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2a977cb5ac8f637fcb570e73f650eca0"></a>
@@ -94,8 +111,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a44f24686958e01a543fd8b68b392658a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44f24686958e01a543fd8b68b392658a">&#9670;&nbsp;</a></span>~Exporter()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="afb6185b8276c2fd03da53f49e4da295b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6185b8276c2fd03da53f49e4da295b">&#9670;&nbsp;</a></span>properlyInitialised()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,7 +122,35 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Exporter::~Exporter </td>
+          <td class="memname">virtual bool Exporter::properlyInitialised </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kijk na of de constructor in de juiste staat geeindigd is. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean die aangeeft of het object juist geinitialiseerd is. </dd></dl>
+
+</div>
+</div>
+<a id="a585f97d4204275edcb831df9215a0099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a585f97d4204275edcb831df9215a0099">&#9670;&nbsp;</a></span>validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exporter::validate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -117,11 +163,55 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Valideer de output formaat. </p>
+<p>REQUIRE(this-&gt;<a class="el" href="class_exporter.html#afb6185b8276c2fd03da53f49e4da295b" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Exporter was niet geinitialiseerd bij het aanroepen van validate,");<br />
+</p>
+
+<p>Reimplemented in <a class="el" href="class_exporter_h_t_m_l.html#ac44697b53a77a01e394a12bfc11c93f1">ExporterHTML</a>.</p>
+
+</div>
+</div>
+<a id="a96a1f764ef33d11d118f3170a3ca7e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a1f764ef33d11d118f3170a3ca7e1a">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exporter::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stuur de output string naar de output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output</td><td>De string die naar de output gestuurd moet worden.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>REQUIRE(this-&gt;<a class="el" href="class_exporter.html#afb6185b8276c2fd03da53f49e4da295b" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Exporter was niet geinitialiseerd bij het aanroepen van write.");<br />
+</p>
+
+<p>Reimplemented in <a class="el" href="class_exporter_h_t_m_l.html#aa14cd2dde581c96a0414ad3e886a38c8">ExporterHTML</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/sergio/CLionProjects/SoftEng/src/<a class="el" href="_exporter_8h_source.html">Exporter.h</a></li>
-<li>/home/sergio/CLionProjects/SoftEng/src/<a class="el" href="_exporter_8cpp.html">Exporter.cpp</a></li>
+<li>/home/sergio/EclipseProjects/SoftEng/src/<a class="el" href="_exporter_8h_source.html">Exporter.h</a></li>
+<li>/home/sergio/EclipseProjects/SoftEng/src/<a class="el" href="_exporter_8cpp.html">Exporter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

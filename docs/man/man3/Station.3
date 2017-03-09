@@ -1,0 +1,114 @@
+.TH "Station" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Station
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Station\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStation\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Station\fP ()"
+.br
+.ti -1c
+.RI "bool \fBproperlyInitialised\fP () const"
+.br
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.ti -1c
+.RI "std::string \fBgetNaam\fP () const"
+.br
+.RI "Geef de naam terug van het station\&. "
+.ti -1c
+.RI "\fBStation\fP * \fBgetVorige\fP () const"
+.br
+.RI "Geef het vorig station terug\&. "
+.ti -1c
+.RI "\fBStation\fP * \fBgetVolgende\fP () const"
+.br
+.RI "Geef het volgende station\&. "
+.ti -1c
+.RI "\fBSpoor\fP * \fBgetSpoor\fP () const"
+.br
+.RI "Geef het \fBSpoor\fP terug\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Station::Station ()"
+
+.SS "Station::~Station ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string Station::getNaam () const"
+
+.PP
+Geef de naam terug van het station\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De naam van het station\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getNaam\&.');
+.br
+
+.SS "\fBSpoor\fP * Station::getSpoor () const"
+
+.PP
+Geef het \fBSpoor\fP terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het spoor\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getSpoor\&.');
+.br
+.RE
+.PP
+
+.SS "\fBStation\fP * Station::getVolgende () const"
+
+.PP
+Geef het volgende station\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het volgende station\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getVolgende\&.');
+.br
+
+.SS "\fBStation\fP * Station::getVorige () const"
+
+.PP
+Geef het vorig station terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het vorig station\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getVorige\&.');
+.br
+
+.SS "bool Station::properlyInitialised () const"
+
+.PP
+Kijk na of de constructor in de juiste staat geeindigd is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoftEng from the source code\&.

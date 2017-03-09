@@ -1,0 +1,132 @@
+.TH "Metronet" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Metronet
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Metronet\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMetronet\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Metronet\fP ()"
+.br
+.ti -1c
+.RI "bool \fBproperlyInitialised\fP ()"
+.br
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.ti -1c
+.RI "void \fBaddStation\fP (\fBStation\fP *station)"
+.br
+.RI "Voegt station toe aan metronet\&. "
+.ti -1c
+.RI "void \fBaddTram\fP (\fBTram\fP *tram)"
+.br
+.RI "Voegt tram toe aan metronet\&. "
+.ti -1c
+.RI "void \fBaddSpoor\fP (\fBSpoor\fP *spoor)"
+.br
+.RI "Voegt spoor toe aan metronet\&. "
+.ti -1c
+.RI "bool \fBcheckConsistent\fP (\fBExporter\fP *exp)"
+.br
+.RI "Kijkt na of het metronet consistent is\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Metronet::Metronet ()"
+
+.SS "Metronet::~Metronet ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Metronet::addSpoor (\fBSpoor\fP * spoor)"
+
+.PP
+Voegt spoor toe aan metronet\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIspoor\fP Het spoor dat toegevoegd zal worden\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van addSpoor\&.');
+.br
+REQUIRE(Spoor->\fBproperlyInitialised()\fP, 'Spoor was niet geinitialiseerd bij de aanroep van addSpoor\&.');
+.br
+ENSURE(sporen[sporen\&.size() - 1] == \fBSpoor\fP), 'Spoor was niet toegevoegd bij de aanroep van addSpoor\&.');
+.br
+
+.SS "void Metronet::addStation (\fBStation\fP * station)"
+
+.PP
+Voegt station toe aan metronet\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstation\fP Het station dat toegevoegd zal worden\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van addStation\&.');
+.br
+REQUIRE(Station->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van addStation\&.');
+.br
+ENSURE(stations[stations\&.size() - 1] == \fBStation\fP), 'Station was niet toegevoegd bij de aanroep van addStation\&.');
+.br
+
+.SS "void Metronet::addTram (\fBTram\fP * tram)"
+
+.PP
+Voegt tram toe aan metronet\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItram\fP De tram die toegevoegd zal worden\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van addTram\&.');
+.br
+REQUIRE(Tram->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van addTram\&.');
+.br
+ENSURE(trams[trams\&.size() - 1] == \fBTram\fP), 'Tram was niet toegevoegd bij de aanroep van addTram\&.');
+.br
+
+.SS "bool Metronet::checkConsistent (\fBExporter\fP * exp)"
+
+.PP
+Kijkt na of het metronet consistent is\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexp\fP De exporter die de output zal behandelen\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het \fBMetronet\fP consistent is\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van checkConsistent\&.');
+.br
+
+.SS "bool Metronet::properlyInitialised ()"
+
+.PP
+Kijk na of de constructor in de juiste staat geeindigd is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoftEng from the source code\&.

@@ -1,0 +1,75 @@
+.TH "Exporter" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Exporter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exporter\&.h>\fP
+.PP
+Inherited by \fBExporterCLI\fP, \fBExporterHTML\fP, and \fBExporterTXT\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExporter\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBproperlyInitialised\fP () const"
+.br
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.ti -1c
+.RI "virtual void \fBwrite\fP (std::string &output)"
+.br
+.RI "Stuur de output string naar de output stream\&. "
+.ti -1c
+.RI "virtual void \fBvalidate\fP ()"
+.br
+.RI "Valideer de output formaat\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Exporter::Exporter ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool Exporter::properlyInitialised () const\fC [virtual]\fP"
+
+.PP
+Kijk na of de constructor in de juiste staat geeindigd is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+.SS "virtual void Exporter::validate ()\fC [virtual]\fP"
+
+.PP
+Valideer de output formaat\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij het aanroepen van validate,');
+.br
+
+.PP
+Reimplemented in \fBExporterHTML\fP\&.
+.SS "virtual void Exporter::write (std::string & output)\fC [virtual]\fP"
+
+.PP
+Stuur de output string naar de output stream\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoutput\fP De string die naar de output gestuurd moet worden\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij het aanroepen van write\&.');
+.br
+
+.PP
+Reimplemented in \fBExporterHTML\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoftEng from the source code\&.
