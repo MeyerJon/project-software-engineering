@@ -39,7 +39,7 @@ public:
      *  \param station Het station dat toegevoegd zal worden.
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addStation.");\n
-     * REQUIRE(Station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");\n
+     * REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");\n
      * ENSURE((stations.find(station->getNaam()) != stations.end()), "Station was niet toegevoegd bij de aanroep van addStation.");\n
      */
     void addStation(Station* station);
@@ -48,8 +48,8 @@ public:
      *  \param tram De tram die toegevoegd zal worden.
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addTram.");\n
-     * REQUIRE(Tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");\n
-     * ENSURE(trams[trams.size() - 1] == Tram), "Tram was niet toegevoegd bij de aanroep van addTram.");\n
+     * REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");\n
+     * ENSURE(trams.find(tram->getSpoor()) != trams.end()), "Tram was niet toegevoegd bij de aanroep van addTram.");\n
      */
     void addTram(Tram* tram);
 
@@ -57,7 +57,7 @@ public:
      *  \param spoor Het spoor dat toegevoegd zal worden.
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");\n
-     * ENSURE(sporen[sporen.size() - 1] == Spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");\n
+     * ENSURE(sporen[sporen.size() - 1] == spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");\n
      */
     void addSpoor(int spoor);
 
