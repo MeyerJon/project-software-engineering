@@ -1,0 +1,149 @@
+.TH "Tram" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tram
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Tram\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTram\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Tram\fP ()"
+.br
+.ti -1c
+.RI "bool \fBproperlyInitialised\fP () const"
+.br
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.ti -1c
+.RI "int \fBgetZitplaatsen\fP () const"
+.br
+.RI "Geef de zitplaatsen terug van de tram\&. "
+.ti -1c
+.RI "int \fBgetPassagiers\fP () const"
+.br
+.RI "Geef de passagiers terug van de tram\&. "
+.ti -1c
+.RI "int \fBgetSnelheid\fP () const"
+.br
+.RI "Geef de snelheid terug van de tram\&. "
+.ti -1c
+.RI "\fBSpoor\fP * \fBgetSpoor\fP () const"
+.br
+.RI "Geef het spoor terug\&. "
+.ti -1c
+.RI "\fBStation\fP * \fBgetBeginStation\fP () const"
+.br
+.RI "Geef het beginstation terug\&. "
+.ti -1c
+.RI "\fBStation\fP * \fBgetHuidigStation\fP () const"
+.br
+.RI "Geef het huidig station\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Tram::Tram ()"
+
+.SS "Tram::~Tram ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBStation\fP * Tram::getBeginStation () const"
+
+.PP
+Geef het beginstation terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het beginstation\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getBeginStation\&.');
+.br
+
+.SS "\fBStation\fP * Tram::getHuidigStation () const"
+
+.PP
+Geef het huidig station\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het huidig station\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getHuidigStation\&.');
+.br
+
+.SS "int Tram::getPassagiers () const"
+
+.PP
+Geef de passagiers terug van de tram\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De passagiers\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getPassagiers\&.');
+.br
+
+.SS "int Tram::getSnelheid () const"
+
+.PP
+Geef de snelheid terug van de tram\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De snelheid\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getSnelheid\&.');
+.br
+
+.SS "\fBSpoor\fP * Tram::getSpoor () const"
+
+.PP
+Geef het spoor terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het spoor\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getSpoor\&.');
+.br
+
+.SS "int Tram::getZitplaatsen () const"
+
+.PP
+Geef de zitplaatsen terug van de tram\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De zitplaatsen\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getZitplaatsen\&.');
+.br
+
+.SS "bool Tram::properlyInitialised () const"
+
+.PP
+Kijk na of de constructor in de juiste staat geeindigd is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoftEng from the source code\&.

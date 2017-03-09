@@ -1,0 +1,64 @@
+.TH "Spoor" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Spoor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Spoor\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpoor\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Spoor\fP ()"
+.br
+.ti -1c
+.RI "bool \fBproperlyInitialised\fP () const"
+.br
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.ti -1c
+.RI "int \fBgetLijnNr\fP () const"
+.br
+.RI "Geef het lijn nummer terug\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Spoor::Spoor ()"
+
+.SS "Spoor::~Spoor ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int Spoor::getLijnNr () const"
+
+.PP
+Geef het lijn nummer terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het aantal zitplaatsen\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Spoor was niet geinitialiseerd bij de aanroep van getLijnNr\&.');
+.br
+
+.SS "bool Spoor::properlyInitialised () const"
+
+.PP
+Kijk na of de constructor in de juiste staat geeindigd is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoftEng from the source code\&.

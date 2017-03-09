@@ -68,17 +68,36 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_exporter_8h_source.html">Exporter.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exporter:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_exporter__inherit__graph.png" border="0" usemap="#_exporter_inherit__map" alt="Inheritance graph"/></div>
+<map name="_exporter_inherit__map" id="_exporter_inherit__map">
+<area shape="rect" id="node2" href="class_exporter_c_l_i.html" title="ExporterCLI" alt="" coords="5,80,97,107"/>
+<area shape="rect" id="node3" href="class_exporter_h_t_m_l.html" title="ExporterHTML" alt="" coords="122,80,229,107"/>
+<area shape="rect" id="node4" href="class_exporter_t_x_t.html" title="ExporterTXT" alt="" coords="253,80,349,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a977cb5ac8f637fcb570e73f650eca0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#a2a977cb5ac8f637fcb570e73f650eca0">Exporter</a> ()</td></tr>
 <tr class="separator:a2a977cb5ac8f637fcb570e73f650eca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f24686958e01a543fd8b68b392658a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#a44f24686958e01a543fd8b68b392658a">~Exporter</a> ()</td></tr>
-<tr class="separator:a44f24686958e01a543fd8b68b392658a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0dd651db7d938f6bc104c603937c6f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#aa0dd651db7d938f6bc104c603937c6f2">Exporter</a> (std::ostream &amp;os)</td></tr>
+<tr class="separator:aa0dd651db7d938f6bc104c603937c6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd9df9210aeefd7bb7fd434fc317cf0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0">properlyInitialised</a> () const</td></tr>
+<tr class="memdesc:aafd9df9210aeefd7bb7fd434fc317cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kijk na of de constructor in de juiste staat geeindigd is.  <a href="#aafd9df9210aeefd7bb7fd434fc317cf0">More...</a><br /></td></tr>
+<tr class="separator:aafd9df9210aeefd7bb7fd434fc317cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac095b6486da16ffc76539f8c6c67be70"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#ac095b6486da16ffc76539f8c6c67be70">write</a> (std::string &amp;output)</td></tr>
+<tr class="memdesc:ac095b6486da16ffc76539f8c6c67be70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stuur de output string naar de output stream.  <a href="#ac095b6486da16ffc76539f8c6c67be70">More...</a><br /></td></tr>
+<tr class="separator:ac095b6486da16ffc76539f8c6c67be70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190fe737bcda2a55707ae51b731d11a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exporter.html#a190fe737bcda2a55707ae51b731d11a5">validate</a> ()</td></tr>
+<tr class="memdesc:a190fe737bcda2a55707ae51b731d11a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valideer de output formaat.  <a href="#a190fe737bcda2a55707ae51b731d11a5">More...</a><br /></td></tr>
+<tr class="separator:a190fe737bcda2a55707ae51b731d11a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2a977cb5ac8f637fcb570e73f650eca0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a977cb5ac8f637fcb570e73f650eca0">&#9670;&nbsp;</a></span>Exporter()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a977cb5ac8f637fcb570e73f650eca0">&#9670;&nbsp;</a></span>Exporter() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -94,8 +113,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a44f24686958e01a543fd8b68b392658a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44f24686958e01a543fd8b68b392658a">&#9670;&nbsp;</a></span>~Exporter()</h2>
+<a id="aa0dd651db7d938f6bc104c603937c6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0dd651db7d938f6bc104c603937c6f2">&#9670;&nbsp;</a></span>Exporter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Exporter::Exporter </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aafd9df9210aeefd7bb7fd434fc317cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd9df9210aeefd7bb7fd434fc317cf0">&#9670;&nbsp;</a></span>properlyInitialised()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,7 +142,48 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Exporter::~Exporter </td>
+          <td class="memname">bool Exporter::properlyInitialised </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kijk na of de constructor in de juiste staat geeindigd is. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean die aangeeft of het object juist geinitialiseerd is. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0_icgraph.png" border="0" usemap="#class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0_icgraph" alt=""/></div>
+<map name="class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0_icgraph" id="class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0_icgraph">
+<area shape="rect" id="node2" href="class_exporter.html#ac095b6486da16ffc76539f8c6c67be70" title="Stuur de output string naar de output stream. " alt="" coords="275,5,382,32"/>
+<area shape="rect" id="node3" href="class_exporter.html#a190fe737bcda2a55707ae51b731d11a5" title="Valideer de output formaat. " alt="" coords="267,56,391,83"/>
+<area shape="rect" id="node4" href="class_exporter_h_t_m_l.html#aa5b12621501f09a9a082e9337fbf943c" title="Stuur de output string naar de output stream. " alt="" coords="257,107,400,133"/>
+<area shape="rect" id="node5" href="class_exporter_h_t_m_l.html#a60518b938e3cddd92ce3218de3651ac4" title="Valideer de output formaat. " alt="" coords="249,157,409,184"/>
+<area shape="rect" id="node6" href="class_exporter_h_t_m_l.html#a2d9bb5e5f68a9e6111d8a929eb4a042e" title="Valideer de HTML header. " alt="" coords="233,208,424,235"/>
+<area shape="rect" id="node7" href="class_exporter_h_t_m_l.html#ab9d3ebcfa054f02f08ab34e1a6298963" title="Valideer de HTML tail. " alt="" coords="238,259,419,285"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a190fe737bcda2a55707ae51b731d11a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190fe737bcda2a55707ae51b731d11a5">&#9670;&nbsp;</a></span>validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exporter::validate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -117,11 +196,72 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Valideer de output formaat. </p>
+<p>REQUIRE(this-&gt;<a class="el" href="class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Exporter was niet geinitialiseerd bij de aanroep van validate,");<br />
+ENSURE((documentStarted == true), "Document werd niet aangemaakt bij de aanroep van validate.");<br />
+</p>
+
+<p>Reimplemented in <a class="el" href="class_exporter_h_t_m_l.html#a60518b938e3cddd92ce3218de3651ac4">ExporterHTML</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_exporter_a190fe737bcda2a55707ae51b731d11a5_cgraph.png" border="0" usemap="#class_exporter_a190fe737bcda2a55707ae51b731d11a5_cgraph" alt=""/></div>
+<map name="class_exporter_a190fe737bcda2a55707ae51b731d11a5_cgraph" id="class_exporter_a190fe737bcda2a55707ae51b731d11a5_cgraph">
+<area shape="rect" id="node2" href="class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="177,5,357,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac095b6486da16ffc76539f8c6c67be70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac095b6486da16ffc76539f8c6c67be70">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exporter::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stuur de output string naar de output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output</td><td>De string die naar de output gestuurd moet worden.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>REQUIRE(this-&gt;<a class="el" href="class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Exporter was niet geinitialiseerd bij de aanroep van write.");<br />
+</p>
+
+<p>Reimplemented in <a class="el" href="class_exporter_h_t_m_l.html#aa5b12621501f09a9a082e9337fbf943c">ExporterHTML</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_exporter_ac095b6486da16ffc76539f8c6c67be70_cgraph.png" border="0" usemap="#class_exporter_ac095b6486da16ffc76539f8c6c67be70_cgraph" alt=""/></div>
+<map name="class_exporter_ac095b6486da16ffc76539f8c6c67be70_cgraph" id="class_exporter_ac095b6486da16ffc76539f8c6c67be70_cgraph">
+<area shape="rect" id="node2" href="class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="160,5,340,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/sergio/CLionProjects/SoftEng/src/<a class="el" href="_exporter_8h_source.html">Exporter.h</a></li>
-<li>/home/sergio/CLionProjects/SoftEng/src/<a class="el" href="_exporter_8cpp.html">Exporter.cpp</a></li>
+<li>/home/sergio/EclipseProjects/SoftEng/src/<a class="el" href="_exporter_8h_source.html">Exporter.h</a></li>
+<li>/home/sergio/EclipseProjects/SoftEng/src/<a class="el" href="_exporter_8cpp.html">Exporter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

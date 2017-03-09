@@ -1,0 +1,30 @@
+.TH "/home/sergio/EclipseProjects/SoftEng/src/DesignByContract.h" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/sergio/EclipseProjects/SoftEng/src/DesignByContract.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <assert\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBREQUIRE\fP(assertion,  what)   if (!(assertion)) __assert (what, __FILE__, __LINE__)"
+.br
+.ti -1c
+.RI "#define \fBENSURE\fP(assertion,  what)   if (!(assertion)) __assert (what, __FILE__, __LINE__)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ENSURE(assertion, what)   if (!(assertion)) __assert (what, __FILE__, __LINE__)"
+
+.SS "#define REQUIRE(assertion, what)   if (!(assertion)) __assert (what, __FILE__, __LINE__)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoftEng from the source code\&.

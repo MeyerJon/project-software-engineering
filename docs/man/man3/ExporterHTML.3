@@ -1,0 +1,81 @@
+.TH "ExporterHTML" 3 "Thu Mar 9 2017" "SoftEng" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExporterHTML
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exporter\&.h>\fP
+.PP
+Inherits \fBExporter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBwrite\fP (std::string &output)"
+.br
+.RI "Stuur de output string naar de output stream\&. "
+.ti -1c
+.RI "virtual void \fBvalidate\fP ()"
+.br
+.RI "Valideer de output formaat\&. "
+.ti -1c
+.RI "void \fBvalidateHead\fP ()"
+.br
+.RI "Valideer de HTML header\&. "
+.ti -1c
+.RI "void \fBvalidateTail\fP ()"
+.br
+.RI "Valideer de HTML tail\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void ExporterHTML::validate ()\fC [virtual]\fP"
+
+.PP
+Valideer de output formaat\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van validate,');
+.br
+ENSURE((documentStarted == true), 'Document werd niet aangemaakt bij de aanroep van validate\&.');
+.br
+
+.PP
+Reimplemented from \fBExporter\fP\&.
+.SS "void ExporterHTML::validateHead ()"
+
+.PP
+Valideer de HTML header\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'ExporterHTML was niet geinitialiseerd bij het aanroepen van validateHead\&.');
+.br
+REQUIRE(documentStarted == false), 'Document was al aangemaakt voor de aanroep van validateHead\&.');
+.br
+ENSURE((documentStarted == true), 'Document werd niet aangemaakt bij de aanroep van validateHead\&.');
+.br
+
+.SS "void ExporterHTML::validateTail ()"
+
+.PP
+Valideer de HTML tail\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'ExporterHTML was niet geinitialiseerd bij het aanroepen van validateTail\&.');
+.br
+REQUIRE((documentStarted == true), 'Document was nog niet aangemaakt bij de aanroep van validateTail\&.'); ENSURE((documentStarted == true), 'Document werd niet aangemaakt bij de aanroep van validateTail\&.');\&.
+.br
+
+.SS "void ExporterHTML::write (std::string & output)\fC [virtual]\fP"
+
+.PP
+Stuur de output string naar de output stream\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoutput\fP De string die naar de output gestuurd moet worden\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van write\&.');
+.br
+
+.PP
+Reimplemented from \fBExporter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SoftEng from the source code\&.

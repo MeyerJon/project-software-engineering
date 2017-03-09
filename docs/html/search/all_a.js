@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['_7eexporter',['~Exporter',['../class_exporter.html#a44f24686958e01a543fd8b68b392658a',1,'Exporter']]],
-  ['_7emetronet',['~Metronet',['../class_metronet.html#afa96be4bf66f8d7dcf3f40a7487d2ea7',1,'Metronet']]],
-  ['_7eparser',['~Parser',['../class_parser.html#a3e658b5917a93a3ef648050d060e3a93',1,'Parser']]],
-  ['_7espoor',['~Spoor',['../class_spoor.html#a58dcc52a48e4ad3ca7d9028a0065ca98',1,'Spoor']]],
-  ['_7estation',['~Station',['../class_station.html#a00434e79e8ee7f4ebd6d3b631dde5ac0',1,'Station']]],
-  ['_7etram',['~Tram',['../class_tram.html#acd6056d2289f2dccd371bc226cd2cb17',1,'Tram']]]
+  ['validate',['validate',['../class_exporter.html#a190fe737bcda2a55707ae51b731d11a5',1,'Exporter::validate()'],['../class_exporter_h_t_m_l.html#a60518b938e3cddd92ce3218de3651ac4',1,'ExporterHTML::validate()']]],
+  ['validatehead',['validateHead',['../class_exporter_h_t_m_l.html#a2d9bb5e5f68a9e6111d8a929eb4a042e',1,'ExporterHTML']]],
+  ['validatetail',['validateTail',['../class_exporter_h_t_m_l.html#ab9d3ebcfa054f02f08ab34e1a6298963',1,'ExporterHTML']]]
 ];
