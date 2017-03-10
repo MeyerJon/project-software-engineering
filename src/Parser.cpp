@@ -106,4 +106,5 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
         Station* station = s.second;
         metro.opStappenAfStappen(station->getNaam(), exp, os);
     }
+    exp->finish(os);
 }
