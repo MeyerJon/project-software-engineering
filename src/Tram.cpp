@@ -72,3 +72,23 @@ void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
     ENSURE((huidigStation == station),
            "huidigStation is niet correct aangepast.");
 }
+
+bool Tram::afStappen(int afstappen){
+    if (afstappen <= passagiers) {
+        passagiers -= afstappen;
+        return true;
+    } else {
+        passagiers = 0;
+        return false;
+    }
+}
+
+bool Tram::opStappen(int opstappen) {
+    if (opstappen <= zitplaatsen - passagiers) {
+        passagiers += opstappen;
+        return true;
+    } else {
+        passagiers = zitplaatsen;
+        return false;
+    }
+}

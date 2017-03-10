@@ -6,14 +6,28 @@
  */
 
 #include <iostream>
+#include <fstream>
 #include "Metronet.h"
 #include "Parser.h"
 #include "Exporter.h"
 
 int main() {
-    Exporter* exporter = new ExporterCLI;
-    Parser parser(exporter);
+    Exporter* expHTML = new ExporterHTML;
+    Exporter* expTXT = new ExporterTXT;
+    Exporter* expCLI = new ExporterCLI;
+    Parser parsHTML(expHTML);
+    Parser parsTXT(expTXT);
+    Parser parsCLI(expCLI);
+    std::ofstream html;
+    std::ofstream txt;
+    html.open("fuckMe.html");
+    txt.open("kek.txt");
     Metronet metronet;
-    parser.setup(metronet, "xmls/DummyStations.xml", std::cout);
+    parsHTML.setup(metronet, "xmls/DummyStations.xml", html);
+    parsTXT.setup(metronet, "xmls/DummyStations.xml", txt);
+    parsCLI.setup(metronet, "xmls/DummyStations.xml", std::cout);
+    metronet.printMetronet(expHTML, html);
+    metronet.printMetronet(expTXT, txt);
+    metronet.printMetronet(expCLI, std::cout);
     return 0;
 }

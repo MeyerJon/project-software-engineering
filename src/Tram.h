@@ -82,6 +82,24 @@ public:
      * ENSURE((huidigStation == station), "huidigStation is niet correct aangepast.");\n
      */
     void verplaatsTram(std::string station, Exporter* exp, std::ostream& os);
+
+    // TODO: Proper docs plox
+
+    /** \brief
+     *  \param opstappen
+     *  \return
+     *
+     * REQUIRE() STUFF
+     */
+    bool afStappen(int afstappen);
+
+    /** \brief
+     *  \param opstappen
+     *  \return
+     *
+     * REQUIRE() STUFF
+     */
+    bool opStappen(int opstappen);
 };
 
 #endif /* SRC_TRAM_H_ */

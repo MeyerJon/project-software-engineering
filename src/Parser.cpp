@@ -21,7 +21,7 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
     TiXmlDocument doc;
     if (!doc.LoadFile(filename.c_str())) {
         os << "ERROR: Kan bestand " + filename + " niet openen.";
-        return;
+        return false;
     }
     TiXmlElement* root = doc.FirstChildElement();
     // Iterate over all elements
@@ -32,8 +32,8 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
             std::string name;
             std::string vor;
             std::string volg;
-            int opstappen;
-            int afstappen;
+            int opstappen = 0;
+            int afstappen = 0;
             int spoor;
             try {
                 for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
@@ -101,5 +101,10 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
 
         }
     }
-    return metro.checkConsistent(exp, os);
+    bool consistency = metro.checkConsistent(exp, os);
+    for (auto s : metro.getStations()) {
+        Station* station = s.second;
+        metro.opStappenAfStappen(station->getNaam(), exp, os);
+    }
+    exp->finish(os);
 }

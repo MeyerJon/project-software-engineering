@@ -51,3 +51,15 @@ int Station::getSpoor() const {
             "Station was niet geinitialiseerd bij de aanroep van getSpoor.");
     return spoor;
 }
+
+int Station::getOpstappen() const {
+    REQUIRE(this->properlyInitialised(),
+            "Station was niet geinitialiseerd bij de aanroep van getOpstappen.");
+    return opstappen;
+}
+
+int Station::getAfstappen() const {
+    REQUIRE(this->properlyInitialised(),
+            "Station was niet geinitialiseerd bij de aanroep van getAfstappen.");
+    return afstappen;
+}

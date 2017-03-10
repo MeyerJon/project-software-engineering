@@ -35,6 +35,13 @@ public:
      */
     bool properlyInitialised();
 
+    /** \brief Geeft alle stations in het metronet terug.
+     *  \return Map met stations in het metronet.
+     *
+     *  REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");\n
+     */
+     std::map<std::string, Station*> getStations();
+
     /** \brief Voegt station toe aan metronet.
      *  \param station Het station dat toegevoegd zal worden.
      *
@@ -75,9 +82,18 @@ public:
      * @param exp De exporter die gebruikt moet worden
      * @param os De stream waarnaar de output moet gestuurd worden
      *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");\name
+     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");\n
      */
-    void printMetronet(Exporter* exp, std::ostream os);
+    void printMetronet(Exporter* exp, std::ostream& os);
+
+    /** \brief Behandelt het opstappen en afstappen van passagiers.
+     *  \param station Het station waar mensen opstappen en afstappen.
+     *
+     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van opStappenAfstappen.");\n
+     * REQUIRE((stations.find(station) != stations.end()), "Station bestaat niet in het metronet.");\n
+     * REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opStappenAfstappen.");\n
+     */
+     bool opStappenAfStappen(std::string station, Exporter* exp, std::ostream& os);
 };
 
 #endif /* SRC_METRONET_H_ */
