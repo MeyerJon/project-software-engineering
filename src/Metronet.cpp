@@ -215,7 +215,7 @@ bool Metronet::opstappenAfstappen(std::string station, Exporter* exp, std::ostre
 
 void Metronet::reset() {
     REQUIRE(this->properlyInitialised(),
-            "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
+            "Metronet was niet geinitialiseerd bij aanroep van reset.");
 
     for (auto s : stations)
         delete s.second;

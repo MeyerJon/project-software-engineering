@@ -105,7 +105,7 @@ public:
     /** \brief Reset heel het systeem.
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");\n
-     * */
+     */
      void reset();
 };
 
