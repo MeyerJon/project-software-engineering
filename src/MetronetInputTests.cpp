@@ -27,7 +27,7 @@ protected:
     }
 
     Metronet metronet;
-}
+};
 
 
 TEST_F(MetronetInputTest, InputHappyDay) {
@@ -37,14 +37,14 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     bool importResult;
 
     myfile.open("testInput/zzzInput.xml");
-    myfile << ""
+    myfile << "";
 }
 
 TEST_F(MetronetInputTest, InputLegalSystems) {
-    ASSERT_TRUE(DirectoryExists("restInput"));
+    ASSERT_TRUE(DirectoryExists("testInput"));
 }
 
 TEST_F(MetronetInputTest, InputIllegalSystems) {
-    ASSERT_TRUE(DirectoryExists("restInput"));
+    ASSERT_TRUE(DirectoryExists("testInput"));
 
 }
