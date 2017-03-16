@@ -20,10 +20,12 @@ int main() {
     std::ofstream txt;
     html.open("fuckMe.html");
     txt.open("kek.txt");
-    Metronet metronet;
-    parsHTML.setup(metronet, "xmls/DummyStations.xml", html);
-    parsTXT.setup(metronet, "xmls/DummyStations.xml", txt);
-    parsCLI.setup(metronet, "xmls/DummyStations.xml", std::cout);
+    Metronet metronetHTML;
+    Metronet metronetTXT;
+    Metronet metronetCLI;
+    parsHTML.setup(metronetHTML, "xmls/DummyStations.xml", html);
+    parsTXT.setup(metronetTXT, "xmls/DummyStations.xml", txt);
+    parsCLI.setup(metronetCLI, "xmls/DummyStations.xml", std::cout);
     delete expHTML;
     delete expTXT;
     delete expCLI;
