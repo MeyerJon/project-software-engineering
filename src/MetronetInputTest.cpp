@@ -98,3 +98,47 @@ TEST_F(MetronetInputTest, InputIllegalSystems3) {
     p.setup(metronet, "testInput/IllegalSystemInput3.xml", dummy);
     ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
 }
+
+TEST_F(MetronetInputTest, InputIncorrectSystems1) {
+    ASSERT_TRUE(DirectoryExists("testInput"));
+    ASSERT_TRUE(FileExists("testInput/IncorrectSystemsInput1.xml"));
+    ASSERT_TRUE(metronet.properlyInitialised());
+
+    std::ostream dummy(0);
+    Parser p(exp);
+
+    ASSERT_FALSE(p.setup(metronet, "testInput/IncorrectSystemsInput1.xml", dummy));
+}
+
+TEST_F(MetronetInputTest, InputIncorrectSystems2) {
+    ASSERT_TRUE(DirectoryExists("testInput"));
+    ASSERT_TRUE(FileExists("testInput/IncorrectSystemsInput2.xml"));
+    ASSERT_TRUE(metronet.properlyInitialised());
+
+    std::ostream dummy(0);
+    Parser p(exp);
+
+    ASSERT_FALSE(p.setup(metronet, "testInput/IncorrectSystemsInput2.xml", dummy));
+}
+
+TEST_F(MetronetInputTest, InputSyntaxErrorSystems1) {
+    ASSERT_TRUE(DirectoryExists("testInput"));
+    ASSERT_TRUE(FileExists("testInput/SyntaxErrorSystemsInput1.xml"));
+    ASSERT_TRUE(metronet.properlyInitialised());
+
+    std::ostream dummy(0);
+    Parser p(exp);
+
+    ASSERT_FALSE(p.setup(metronet, "testInput/SyntaxErrorSystemsInput1.xml", dummy));
+}
+
+TEST_F(MetronetInputTest, InputSyntaxErrorSystems2) {
+    ASSERT_TRUE(DirectoryExists("testInput"));
+    ASSERT_TRUE(FileExists("testInput/SyntaxErrorSystemsInput2.xml"));
+    ASSERT_TRUE(metronet.properlyInitialised());
+
+    std::ostream dummy(0);
+    Parser p(exp);
+
+    ASSERT_FALSE(p.setup(metronet, "testInput/SyntaxErrorSystemsInput2.xml", dummy));
+}

@@ -24,6 +24,12 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
         return false;
     }
     TiXmlElement* root = doc.FirstChildElement();
+    std::string rootName = root->Value();
+    if (!(rootName == "ROOT" || rootName == "METRONET")) {
+        os << "ERROR: Geen root gevonden. Gelieve een root object genaamd "
+           << "<ROOT> of <METRONET> aan te maken.\n";
+        return false;
+    }
     // Iterate over all elements
     for(TiXmlElement* elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()){
         std::string elemName = elem->Value();
