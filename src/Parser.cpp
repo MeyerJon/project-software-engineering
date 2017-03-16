@@ -29,12 +29,12 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
         std::string elemName = elem->Value();
         if(elemName == "STATION") {
             std::string attrName;
-            std::string name;
-            std::string vor;
-            std::string volg;
+            std::string name = "";
+            std::string vor = "";
+            std::string volg = "";
             int opstappen = 0;
             int afstappen = 0;
-            int spoor;
+            int spoor = -1;
             try {
                 for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
                     attrName = node->Value();
@@ -55,6 +55,11 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
                         exp->write(out, os);
                     }
                 }
+                if(name == "" or vor == "" or volg == "" or spoor == -1){
+                    std::string out = "ERROR: Station mist een attribuut.\n";
+                    exp->write(out, os);
+                    continue;
+                }
                 Station* station = new Station(name, vor, volg, spoor, opstappen, afstappen);
                 metro.addStation(station);
                 metro.addSpoor(spoor);
@@ -67,10 +72,10 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
         }
         else if(elemName == "TRAM"){
             std::string attrName;
-            int zitpl;
-            int snelh;
-            int spoor;
-            std::string beginS;
+            int zitpl = -1;
+            int snelh = -1;
+            int spoor = -1;
+            std::string beginS = "";
             try {
                 for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
                     attrName = node->Value();
@@ -88,6 +93,11 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
                         exp->write(out, os);
                     }
+                }
+                if(zitpl == -1 or snelh == -1 or spoor == -1 or beginS == ""){
+                    std::string out = "ERROR: Tram mist een attribuut.\n";
+                    exp->write(out, os);
+                    continue;
                 }
                 Tram* tram = new Tram(zitpl, snelh, spoor, beginS);
                 metro.addTram(tram);

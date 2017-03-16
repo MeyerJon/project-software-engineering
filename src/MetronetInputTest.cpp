@@ -5,30 +5,7 @@
  *      Author: Dawid
  */
 
-
-#include <iostream>
-#include <fstream>
-#include <gtest/gtest.h>
-#include <sys/stat.h>
-
-#include "MetronetUtils.h"
-#include "Metronet.h"
-
-class MetronetInputTest: public ::testing::Test {
-protected:
-    friend class Metronet;
-
-    virtual void SetUp() {
-
-    }
-
-    virtual void TearDown() {
-
-    }
-
-    Metronet metronet;
-};
-
+#include "MetronetInputTest.h"
 
 TEST_F(MetronetInputTest, InputHappyDay) {
     ASSERT_TRUE(DirectoryExists("testInput"));
