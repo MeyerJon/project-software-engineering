@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <ROOT>
-    <STATION>
+    <TION>
         <naam>A</naam>
         <volgende>B</volgende>
         <vorige>C</vorige>
         <spoor>12</spoor>
-    </STATION>
+    </TION>
     <STATION>
         <naam>B</naam>
         <volgende>C</volgende>
@@ -36,7 +36,7 @@
         <vorige>X</vorige>
         <spoor>14</spoor>
     </STATION>
-<STATION>
+    <STATION>
         <naam>Z</naam>
         <volgende>X</volgende>
         <vorige>Y</vorige>

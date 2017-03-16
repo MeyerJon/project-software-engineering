@@ -75,8 +75,22 @@ bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
     // Elk station is verbonden met een voorgaand en volgend station voor elk spoor
     for (auto s : stations) {
         Station* station = s.second;
-        Station* volgende = stations[station->getVolgende()];
-        Station* vorige = stations[station->getVorige()];
+        Station* volgende;
+        Station* vorige;
+        if (stations.find(station->getVolgende()) != stations.end()) volgende = stations[station->getVolgende()];
+        else {
+            std::string out = "ERROR: Station " + station->getNaam()
+                              + " heeft geen volgende station.\n";
+            exp->write(out, os);
+            return false;
+        }
+        if (stations.find(station->getVorige()) != stations.end()) vorige = stations[station->getVorige()];
+        else {
+            std::string out = "ERROR: Station " + station->getNaam()
+                              + " heeft geen vorig station.\n";
+            exp->write(out, os);
+            return false;
+        }
         stationSporen.push_back(station->getSpoor());
         if (station->getVolgende() == "") {
             std::string out = "ERROR: Station " + station->getNaam()

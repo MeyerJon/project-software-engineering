@@ -20,7 +20,7 @@ Parser::Parser(Exporter* exp) {
 bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
     TiXmlDocument doc;
     if (!doc.LoadFile(filename.c_str())) {
-        os << "ERROR: Kan bestand " + filename + " niet openen.";
+        os << "ERROR: Kan bestand " + filename + " niet openen.\n";
         return false;
     }
     TiXmlElement* root = doc.FirstChildElement();
@@ -109,14 +109,18 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
                 continue;
             }
 
+        } else {
+            continue;
         }
     }
     bool consistency = metro.checkConsistent(exp, os);
-    metro.printMetronet(exp, os);
-    for (auto& s : metro.getStations()) {
-        Station* station = s.second;
-        metro.opstappenAfstappen(station->getNaam(), exp, os);
+    if (consistency) {
+        metro.printMetronet(exp, os);
+        for (auto& s : metro.getStations()) {
+            Station* station = s.second;
+            metro.opstappenAfstappen(station->getNaam(), exp, os);
+        }
+        exp->finish(os);
     }
-    exp->finish(os);
     return consistency;
 }
