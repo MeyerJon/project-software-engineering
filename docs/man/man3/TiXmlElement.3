@@ -1,8 +1,8 @@
-.TH "TiXmlElement" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "TiXmlElement" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-TiXmlElement
+TiXmlElement \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -16,7 +16,7 @@ Inherits \fBTiXmlNode\fP\&.
 .ti -1c
 .RI "\fBTiXmlElement\fP (const char *in_value)"
 .br
-.RI "Construct an element\&. "
+.RI "\fIConstruct an element\&. \fP"
 .ti -1c
 .RI "\fBTiXmlElement\fP (const \fBTiXmlElement\fP &)"
 .br
@@ -27,32 +27,32 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "virtual \fB~TiXmlElement\fP ()"
 .br
 .ti -1c
-.RI "const char * \fBAttribute\fP (const char *name) const"
+.RI "const char * \fBAttribute\fP (const char *name) const "
 .br
 .ti -1c
-.RI "const char * \fBAttribute\fP (const char *name, int *i) const"
+.RI "const char * \fBAttribute\fP (const char *name, int *i) const "
 .br
 .ti -1c
-.RI "const char * \fBAttribute\fP (const char *name, double *d) const"
+.RI "const char * \fBAttribute\fP (const char *name, double *d) const "
 .br
 .ti -1c
-.RI "int \fBQueryIntAttribute\fP (const char *name, int *_value) const"
+.RI "int \fBQueryIntAttribute\fP (const char *name, int *_value) const "
 .br
 .ti -1c
-.RI "int \fBQueryUnsignedAttribute\fP (const char *name, unsigned *_value) const"
+.RI "int \fBQueryUnsignedAttribute\fP (const char *name, unsigned *_value) const "
 .br
-.RI "QueryUnsignedAttribute examines the attribute - see \fBQueryIntAttribute()\fP\&. "
+.RI "\fIQueryUnsignedAttribute examines the attribute - see \fBQueryIntAttribute()\fP\&. \fP"
 .ti -1c
-.RI "int \fBQueryBoolAttribute\fP (const char *name, bool *_value) const"
+.RI "int \fBQueryBoolAttribute\fP (const char *name, bool *_value) const "
 .br
 .ti -1c
-.RI "int \fBQueryDoubleAttribute\fP (const char *name, double *_value) const"
+.RI "int \fBQueryDoubleAttribute\fP (const char *name, double *_value) const "
 .br
-.RI "QueryDoubleAttribute examines the attribute - see \fBQueryIntAttribute()\fP\&. "
+.RI "\fIQueryDoubleAttribute examines the attribute - see \fBQueryIntAttribute()\fP\&. \fP"
 .ti -1c
-.RI "int \fBQueryFloatAttribute\fP (const char *name, float *_value) const"
+.RI "int \fBQueryFloatAttribute\fP (const char *name, float *_value) const "
 .br
-.RI "QueryFloatAttribute examines the attribute - see \fBQueryIntAttribute()\fP\&. "
+.RI "\fIQueryFloatAttribute examines the attribute - see \fBQueryIntAttribute()\fP\&. \fP"
 .ti -1c
 .RI "void \fBSetAttribute\fP (const char *name, const char *_value)"
 .br
@@ -66,49 +66,49 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "void \fBRemoveAttribute\fP (const char *name)"
 .br
 .ti -1c
-.RI "const \fBTiXmlAttribute\fP * \fBFirstAttribute\fP () const"
+.RI "const \fBTiXmlAttribute\fP * \fBFirstAttribute\fP () const "
 .br
-.RI "Access the first attribute in this element\&. "
+.RI "\fIAccess the first attribute in this element\&. \fP"
 .ti -1c
 .RI "\fBTiXmlAttribute\fP * \fBFirstAttribute\fP ()"
 .br
 .ti -1c
-.RI "const \fBTiXmlAttribute\fP * \fBLastAttribute\fP () const"
+.RI "const \fBTiXmlAttribute\fP * \fBLastAttribute\fP () const "
 .br
-.RI "Access the last attribute in this element\&. "
+.RI "\fIAccess the last attribute in this element\&. \fP"
 .ti -1c
 .RI "\fBTiXmlAttribute\fP * \fBLastAttribute\fP ()"
 .br
 .ti -1c
-.RI "const char * \fBGetText\fP () const"
+.RI "const char * \fBGetText\fP () const "
 .br
 .ti -1c
-.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const"
+.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const "
 .br
-.RI "Creates a new Element and returns it - the returned element is a copy\&. "
+.RI "\fICreates a new Element and returns it - the returned element is a copy\&. \fP"
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const"
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const "
 .br
 .ti -1c
 .RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data, \fBTiXmlEncoding\fP encoding)"
 .br
 .ti -1c
-.RI "virtual const \fBTiXmlElement\fP * \fBToElement\fP () const"
+.RI "virtual const \fBTiXmlElement\fP * \fBToElement\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlElement\fP * \fBToElement\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *visitor) const"
+.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *visitor) const "
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBCopyTo\fP (\fBTiXmlElement\fP *target) const"
+.RI "void \fBCopyTo\fP (\fBTiXmlElement\fP *target) const "
 .br
 .ti -1c
 .RI "void \fBClearThis\fP ()"

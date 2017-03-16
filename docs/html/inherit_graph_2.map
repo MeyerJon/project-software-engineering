@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_parser.html" title="Parser" alt="" coords="5,5,65,32"/>
+<area shape="rect" id="node2" href="$class_metronet_domain_test.html" title="MetronetDomainTest" alt="" coords="101,5,245,32"/>
+<area shape="rect" id="node3" href="$class_metronet_input_test.html" title="MetronetInputTest" alt="" coords="109,56,237,83"/>
+<area shape="rect" id="node4" href="$class_metronet_output_test.html" title="MetronetOutputTest" alt="" coords="104,107,243,133"/>
 </map>

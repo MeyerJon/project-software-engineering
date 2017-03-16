@@ -16,11 +16,11 @@
 <area shape="rect" id="node27" href="$class_ti_xml_unknown.html#aa51c2694e4177b5f0b5429ee5a81b58d" title="TiXmlUnknown::Parse" alt="" coords="235,971,389,998"/>
 <area shape="rect" id="node28" href="$class_ti_xml_comment.html#a43bddc18ac057734b41d84653b71d3e0" title="TiXmlComment::Parse" alt="" coords="235,1022,389,1049"/>
 <area shape="rect" id="node4" href="$class_ti_xml_node.html#a67ba8275e533e6f76340236c42ea0aea" title="TiXmlNode::IterateChildren" alt="" coords="691,110,871,137"/>
-<area shape="rect" id="node5" href="$class_ti_xml_element.html#ab931f2208ed76ba03465d8a1f86b5935" title="TiXmlElement::CopyTo" alt="" coords="919,237,1077,263"/>
-<area shape="rect" id="node11" href="$class_ti_xml_document.html#a8f5a1022168a5767e32becec7b6f44ee" title="Save a file using the given FILE*. Returns true if successful. " alt="" coords="457,262,632,289"/>
+<area shape="rect" id="node5" href="$class_ti_xml_element.html#a9e0c1983b840de4134f1f6bf7af00b0f" title="TiXmlElement::CopyTo" alt="" coords="919,237,1077,263"/>
+<area shape="rect" id="node11" href="$class_ti_xml_document.html#acf1672b4538c6d1d441f9f108aea2bf4" title="Save a file using the given FILE*. Returns true if successful. " alt="" coords="457,262,632,289"/>
 <area shape="rect" id="node6" href="$class_ti_xml_element.html#a1ca4465f3c2eac6a60e641cd7f1d9f7e" title="TiXmlElement::TiXmlElement" alt="" coords="1125,313,1320,339"/>
 <area shape="rect" id="node7" href="$class_ti_xml_element.html#ad58d300f4cfc0016ffa6861ebb718a0b" title="TiXmlElement::operator=" alt="" coords="1139,262,1306,289"/>
-<area shape="rect" id="node8" href="$class_ti_xml_element.html#a810ea8fa40844c01334e5af2a26794cb" title="Creates a new Element and returns it &#45; the returned element is a copy. " alt="" coords="1149,161,1296,187"/>
+<area shape="rect" id="node8" href="$class_ti_xml_element.html#a13f6df105ebb1e8dc636e75cc883be32" title="Creates a new Element and returns it &#45; the returned element is a copy. " alt="" coords="1149,161,1296,187"/>
 <area shape="rect" id="node9" href="$class_ti_xml_node.html#a4027136ca820ff4a636b607231b6a6df" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="1368,211,1544,238"/>
 <area shape="rect" id="node10" href="$class_ti_xml_text.html#ae7c3a8fd3e4dbf6c0c4363a943d72f5b" title="Cast to a more defined type. Will return null not of the requested type. " alt="" coords="1391,135,1521,162"/>
 <area shape="rect" id="node13" href="$class_ti_xml_document.html#a41f6fe7200864d1dca663d230caf8db6" title="TiXmlDocument::LoadFile" alt="" coords="1592,414,1765,441"/>

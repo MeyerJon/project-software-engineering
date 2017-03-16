@@ -1,8 +1,8 @@
-.TH "Exporter" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "Exporter" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Exporter
+Exporter \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -17,17 +17,17 @@ Inherited by \fBExporterCLI\fP, \fBExporterHTML\fP, and \fBExporterTXT\fP\&.
 .RI "\fBExporter\fP ()"
 .br
 .ti -1c
-.RI "virtual bool \fBproperlyInitialised\fP () const"
+.RI "virtual bool \fBproperlyInitialised\fP () const "
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
 .RI "virtual void \fBwrite\fP (std::string &output, std::ostream &os)"
 .br
-.RI "Stuur de output string naar de output stream\&. "
+.RI "\fIStuur de output string naar de output stream\&. \fP"
 .ti -1c
-.RI "virtual void \fBvalidate\fP (std::ostream &os)"
+.RI "virtual void \fBfinish\fP (std::ostream &os)"
 .br
-.RI "Valideer de output formaat\&. "
+.RI "\fIStuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. \fP"
 .in -1c
 .SS "Protected Attributes"
 
@@ -45,6 +45,23 @@ Inherited by \fBExporterCLI\fP, \fBExporterHTML\fP, and \fBExporterTXT\fP\&.
 
 .SH "Member Function Documentation"
 .PP 
+.SS "void Exporter::finish (std::ostream & os)\fC [virtual]\fP"
+
+.PP
+Stuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIos\fP De stream waar de output naar gestuurd zal worden\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van finish\&.');
+.br
+REQUIRE(documentStarted, 'Document was niet aangemaakt voor de aanroep van finish\&.');
+.br
+
+.PP
+Reimplemented in \fBExporterHTML\fP\&.
 .SS "bool Exporter::properlyInitialised () const\fC [virtual]\fP"
 
 .PP
@@ -56,23 +73,6 @@ Boolean die aangeeft of het object juist geinitialiseerd is\&.
 .RE
 .PP
 
-.SS "void Exporter::validate (std::ostream & os)\fC [virtual]\fP"
-
-.PP
-Valideer de output formaat\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIos\fP De stream waar de output naar gestuurd zal worden\&.
-.RE
-.PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van validate,');
-.br
-ENSURE((documentStarted == true), 'Document werd niet aangemaakt bij de aanroep van validate\&.');
-.br
-
-.PP
-Reimplemented in \fBExporterHTML\fP\&.
 .SS "void Exporter::write (std::string & output, std::ostream & os)\fC [virtual]\fP"
 
 .PP
@@ -86,6 +86,8 @@ Stuur de output string naar de output stream\&.
 .RE
 .PP
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van write\&.');
+.br
+ENSURE(documentStarted, 'Document was niet aangemaakt bij de aanroep van write\&.');
 .br
 
 .PP

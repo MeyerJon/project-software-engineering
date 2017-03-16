@@ -24,5 +24,8 @@ int main() {
     parsHTML.setup(metronet, "xmls/DummyStations.xml", html);
     parsTXT.setup(metronet, "xmls/DummyStations.xml", txt);
     parsCLI.setup(metronet, "xmls/DummyStations.xml", std::cout);
+    delete expHTML;
+    delete expTXT;
+    delete expCLI;
     return 0;
 }

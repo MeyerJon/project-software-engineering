@@ -1,8 +1,8 @@
-.TH "ExporterHTML" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "ExporterHTML" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-ExporterHTML
+ExporterHTML \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -16,72 +16,32 @@ Inherits \fBExporter\fP\&.
 .ti -1c
 .RI "virtual void \fBwrite\fP (std::string &output, std::ostream &os)"
 .br
-.RI "Stuur de output string naar de output stream\&. "
+.RI "\fIStuur de output string naar de output stream\&. \fP"
 .ti -1c
-.RI "virtual void \fBvalidate\fP (std::ostream &os)"
+.RI "virtual void \fBfinish\fP (std::ostream &os)"
 .br
-.RI "Valideer de output formaat\&. "
-.ti -1c
-.RI "void \fBvalidateHead\fP (std::ostream &os)"
-.br
-.RI "Valideer de HTML header\&. "
-.ti -1c
-.RI "void \fBvalidateTail\fP (std::ostream &os)"
-.br
-.RI "Valideer de HTML tail\&. "
+.RI "\fIStuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. \fP"
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Member Function Documentation"
 .PP 
-.SS "void ExporterHTML::validate (std::ostream & os)\fC [virtual]\fP"
+.SS "void ExporterHTML::finish (std::ostream & os)\fC [virtual]\fP"
 
 .PP
-Valideer de output formaat\&. 
+Stuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. 
 .PP
 \fBParameters:\fP
 .RS 4
 \fIos\fP De stream waar de output naar gestuurd zal worden\&.
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van validate,');
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van finish\&.');
 .br
-ENSURE((documentStarted == true), 'Document werd niet aangemaakt bij de aanroep van validate\&.');
+REQUIRE(documentStarted, 'Document was niet aangemaakt voor de aanroep van finish\&.');
 .br
 
 .PP
 Reimplemented from \fBExporter\fP\&.
-.SS "void ExporterHTML::validateHead (std::ostream & os)"
-
-.PP
-Valideer de HTML header\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIos\fP De stream waar de output naar gestuurd zal worden\&.
-.RE
-.PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'ExporterHTML was niet geinitialiseerd bij het aanroepen van validateHead\&.');
-.br
-REQUIRE(documentStarted == false), 'Document was al aangemaakt voor de aanroep van validateHead\&.');
-.br
-ENSURE((documentStarted == true), 'Document werd niet aangemaakt bij de aanroep van validateHead\&.');
-.br
-
-.SS "void ExporterHTML::validateTail (std::ostream & os)"
-
-.PP
-Valideer de HTML tail\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIos\fP De stream waar de output naar gestuurd zal worden\&.
-.RE
-.PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'ExporterHTML was niet geinitialiseerd bij het aanroepen van validateTail\&.');
-.br
-REQUIRE((documentStarted == true), 'Document was nog niet aangemaakt bij de aanroep van validateTail\&.'); ENSURE((documentStarted == true), 'Document werd niet aangemaakt bij de aanroep van validateTail\&.');\&.
-.br
-
 .SS "void ExporterHTML::write (std::string & output, std::ostream & os)\fC [virtual]\fP"
 
 .PP
@@ -95,6 +55,8 @@ Stuur de output string naar de output stream\&.
 .RE
 .PP
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van write\&.');
+.br
+ENSURE(documentStarted, 'Document was niet aangemaakt bij de aanroep van write\&.');
 .br
 
 .PP

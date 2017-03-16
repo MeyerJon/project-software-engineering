@@ -1,8 +1,11 @@
 <map id="Exporter::properlyInitialised" name="Exporter::properlyInitialised">
-<area shape="rect" id="node2" href="$class_exporter.html#ac095b6486da16ffc76539f8c6c67be70" title="Stuur de output string naar de output stream. " alt="" coords="275,5,382,32"/>
-<area shape="rect" id="node3" href="$class_exporter.html#a190fe737bcda2a55707ae51b731d11a5" title="Valideer de output formaat. " alt="" coords="267,56,391,83"/>
-<area shape="rect" id="node4" href="$class_exporter_h_t_m_l.html#aa5b12621501f09a9a082e9337fbf943c" title="Stuur de output string naar de output stream. " alt="" coords="257,107,400,133"/>
-<area shape="rect" id="node5" href="$class_exporter_h_t_m_l.html#a60518b938e3cddd92ce3218de3651ac4" title="Valideer de output formaat. " alt="" coords="249,157,409,184"/>
-<area shape="rect" id="node6" href="$class_exporter_h_t_m_l.html#a2d9bb5e5f68a9e6111d8a929eb4a042e" title="Valideer de HTML header. " alt="" coords="233,208,424,235"/>
-<area shape="rect" id="node7" href="$class_exporter_h_t_m_l.html#ab9d3ebcfa054f02f08ab34e1a6298963" title="Valideer de HTML tail. " alt="" coords="238,259,419,285"/>
+<area shape="rect" id="node2" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="253,107,360,133"/>
+<area shape="rect" id="node8" href="$class_exporter.html#ae477714f462d70cfc5b3970f91fcc4ed" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="473,208,583,235"/>
+<area shape="rect" id="node9" href="$class_exporter_h_t_m_l.html#ace2649c240282289d4cb3bfbd19e427c" title="Stuur de output string naar de output stream. " alt="" coords="235,233,378,260"/>
+<area shape="rect" id="node10" href="$class_exporter_h_t_m_l.html#aefa1c658f3c3c55bd7725bdad09629b3" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="233,284,380,311"/>
+<area shape="rect" id="node3" href="$class_metronet.html#abd223e3d0f745e3460a247dc667fce69" title="Kijkt na of het metronet consistent is. " alt="" coords="439,5,617,32"/>
+<area shape="rect" id="node4" href="$class_parser.html#a568d2353b3e6f89b0cf112f309229ffe" title="Verwerkt het XML&#45;bestand en zet het metronet op. " alt="" coords="676,107,776,133"/>
+<area shape="rect" id="node6" href="$class_metronet.html#a1389ddf8ec44fbb4a796964f9bafc292" title="Print het hele metronet. " alt="" coords="449,107,607,133"/>
+<area shape="rect" id="node7" href="$class_metronet.html#a8d8fab798697599c77e22a5497d52b6d" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="428,157,628,184"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="824,107,875,133"/>
 </map>

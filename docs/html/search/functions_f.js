@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['savefile',['SaveFile',['../class_ti_xml_document.html#ab63b96a6af5a467e289c7c75202edad9',1,'TiXmlDocument::SaveFile() const'],['../class_ti_xml_document.html#ae641f33784381017c44e107cc2c86b5c',1,'TiXmlDocument::SaveFile(const char *filename) const'],['../class_ti_xml_document.html#a8f5a1022168a5767e32becec7b6f44ee',1,'TiXmlDocument::SaveFile(FILE *) const']]],
+  ['savefile',['SaveFile',['../class_ti_xml_document.html#a21c0aeb0d0a720169ad4ac89523ebe93',1,'TiXmlDocument::SaveFile() const '],['../class_ti_xml_document.html#ae869f5ebf7fc54c4a1d737fb4689fd44',1,'TiXmlDocument::SaveFile(const char *filename) const '],['../class_ti_xml_document.html#acf1672b4538c6d1d441f9f108aea2bf4',1,'TiXmlDocument::SaveFile(FILE *) const ']]],
   ['setattribute',['SetAttribute',['../class_ti_xml_element.html#abf0b3bd7f0e4c746a89ec6e7f101fc32',1,'TiXmlElement::SetAttribute(const char *name, const char *_value)'],['../class_ti_xml_element.html#ace6f4be75e373726d4774073d666d1a7',1,'TiXmlElement::SetAttribute(const char *name, int value)']]],
   ['setcdata',['SetCDATA',['../class_ti_xml_text.html#acb17ff7c5d09b2c839393445a3de5ea9',1,'TiXmlText']]],
   ['setcondensewhitespace',['SetCondenseWhiteSpace',['../class_ti_xml_base.html#a0f799ec645bfb8d8a969e83478f379c1',1,'TiXmlBase']]],
@@ -14,17 +14,14 @@ var searchData=
   ['setname',['SetName',['../class_ti_xml_attribute.html#ab7fa3d21ff8d7c5764cf9af15b667a99',1,'TiXmlAttribute']]],
   ['setstreamprinting',['SetStreamPrinting',['../class_ti_xml_printer.html#ab23a90629e374cb1cadca090468bbd19',1,'TiXmlPrinter']]],
   ['settabsize',['SetTabSize',['../class_ti_xml_document.html#a51dac56316f89b35bdb7d0d433ba988e',1,'TiXmlDocument']]],
-  ['setup',['setup',['../class_parser.html#a5fc136436324d779fc2cd55825b381cb',1,'Parser']]],
-  ['setupstations',['setupStations',['../class_parser.html#a9aa0d57be0166c22c74d2b9a7e5272cb',1,'Parser']]],
-  ['setuptrams',['setupTrams',['../class_parser.html#a45cd97dbe3549de6667cb7255f8d51fe',1,'Parser']]],
+  ['setup',['setup',['../class_parser.html#a568d2353b3e6f89b0cf112f309229ffe',1,'Parser::setup()'],['../class_metronet_domain_test.html#ac8e8d15b45d53810c4427084fad6388f',1,'MetronetDomainTest::SetUp()'],['../class_metronet_input_test.html#a863299908a545656568a7d534387e05d',1,'MetronetInputTest::SetUp()'],['../class_metronet_output_test.html#a591685e65362fe63b325e2d33189a3b0',1,'MetronetOutputTest::SetUp()']]],
   ['setuserdata',['SetUserData',['../class_ti_xml_base.html#ac6b3e0f790930d4970ec30764e937b5d',1,'TiXmlBase']]],
   ['setvalue',['SetValue',['../class_ti_xml_node.html#a2a38329ca5d3f28f98ce932b8299ae90',1,'TiXmlNode::SetValue()'],['../class_ti_xml_attribute.html#a2dae44178f668b3cb48101be4f2236a0',1,'TiXmlAttribute::SetValue()']]],
-  ['size',['Size',['../class_ti_xml_printer.html#ad01375ae9199bd2f48252eaddce3039d',1,'TiXmlPrinter::Size()'],['../class_ti_xml_string.html#a483d85103d2a3ba8c0831e205c832f33',1,'TiXmlString::size()']]],
+  ['size',['size',['../class_ti_xml_string.html#a96103e5c0f67e987fa48527e1f47a1f6',1,'TiXmlString::size()'],['../class_ti_xml_printer.html#ad01375ae9199bd2f48252eaddce3039d',1,'TiXmlPrinter::Size()']]],
   ['skipwhitespace',['SkipWhiteSpace',['../class_ti_xml_base.html#ac0c3d66d8a9e6996a1fa016275e16875',1,'TiXmlBase']]],
-  ['spoor',['Spoor',['../class_spoor.html#a64778a4094d2d9cd3a08cbbef5a11787',1,'Spoor::Spoor()'],['../class_spoor.html#a6f151487bb74b4ca549a6db47932f8bd',1,'Spoor::Spoor(int nr)']]],
   ['stamp',['Stamp',['../class_ti_xml_parsing_data.html#a65cee8ab77a36c605db08c84b4c30a7d',1,'TiXmlParsingData']]],
-  ['standalone',['Standalone',['../class_ti_xml_declaration.html#a1f2f8a741593d15a61e491e5024cacef',1,'TiXmlDeclaration']]],
-  ['station',['Station',['../class_station.html#a73d335726aad1d844d81cda6d9fd74e6',1,'Station::Station()'],['../class_station.html#a1685ff9a628b922fbc6a75f0f23c7b7e',1,'Station::Station(std::string n, Station *vor, Station *volg, Spoor *sp)']]],
+  ['standalone',['Standalone',['../class_ti_xml_declaration.html#a9ff06afc033d7ef730ec7c6825b97ad9',1,'TiXmlDeclaration']]],
+  ['station',['Station',['../class_station.html#a73d335726aad1d844d81cda6d9fd74e6',1,'Station::Station()'],['../class_station.html#a41fd39388109ad33ea86eb9831ab2f45',1,'Station::Station(std::string n, std::string vor, std::string volg, int sp, int op, int af)']]],
   ['stringequal',['StringEqual',['../class_ti_xml_base.html#a51631e6986179558b9e5850723ed165a',1,'TiXmlBase']]],
   ['swap',['swap',['../class_ti_xml_string.html#aa392cbc180752a79f007f4f9280c7762',1,'TiXmlString']]]
 ];

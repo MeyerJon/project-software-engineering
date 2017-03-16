@@ -1,0 +1,7 @@
+<map id="Station::getSpoor" name="Station::getSpoor">
+<area shape="rect" id="node2" href="$class_metronet.html#abd223e3d0f745e3460a247dc667fce69" title="Kijkt na of het metronet consistent is. " alt="" coords="187,5,365,32"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a1389ddf8ec44fbb4a796964f9bafc292" title="Print het hele metronet. " alt="" coords="197,56,355,83"/>
+<area shape="rect" id="node6" href="$class_metronet.html#a8d8fab798697599c77e22a5497d52b6d" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="176,107,376,133"/>
+<area shape="rect" id="node3" href="$class_parser.html#a568d2353b3e6f89b0cf112f309229ffe" title="Verwerkt het XML&#45;bestand en zet het metronet op. " alt="" coords="424,56,524,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="572,56,623,83"/>
+</map>

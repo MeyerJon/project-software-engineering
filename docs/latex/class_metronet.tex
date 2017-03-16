@@ -13,38 +13,47 @@ virtual \hyperlink{class_metronet_afa96be4bf66f8d7dcf3f40a7487d2ea7}{$\sim$\+Met
 \item 
 bool \hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised} ()
 \begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \hyperlink{class_station}{Station} $\ast$ $>$ \hyperlink{class_metronet_a756f8163c67c4e559699b9c508fb1346}{get\+Stations} ()
+\begin{DoxyCompactList}\small\item\em Geeft alle stations in het metronet terug. \end{DoxyCompactList}\item 
 void \hyperlink{class_metronet_ac7f4069e577cd4dddb1e166923df3ecb}{add\+Station} (\hyperlink{class_station}{Station} $\ast$station)
 \begin{DoxyCompactList}\small\item\em Voegt station toe aan metronet. \end{DoxyCompactList}\item 
 void \hyperlink{class_metronet_a3a01132772f4a367d83af40a3c02e224}{add\+Tram} (\hyperlink{class_tram}{Tram} $\ast$tram)
 \begin{DoxyCompactList}\small\item\em Voegt tram toe aan metronet. \end{DoxyCompactList}\item 
-void \hyperlink{class_metronet_a499d8ac62450fec83bc10101de53cd76}{add\+Spoor} (\hyperlink{class_spoor}{Spoor} $\ast$spoor)
+void \hyperlink{class_metronet_a0422381a8d7f32a915e0ad966af43627}{add\+Spoor} (int spoor)
 \begin{DoxyCompactList}\small\item\em Voegt spoor toe aan metronet. \end{DoxyCompactList}\item 
 bool \hyperlink{class_metronet_abd223e3d0f745e3460a247dc667fce69}{check\+Consistent} (\hyperlink{class_exporter}{Exporter} $\ast$exp, std\+::ostream \&os)
-\begin{DoxyCompactList}\small\item\em Kijkt na of het metronet consistent is. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Kijkt na of het metronet consistent is. \end{DoxyCompactList}\item 
+void \hyperlink{class_metronet_a1389ddf8ec44fbb4a796964f9bafc292}{print\+Metronet} (\hyperlink{class_exporter}{Exporter} $\ast$exp, std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Print het hele metronet. \end{DoxyCompactList}\item 
+bool \hyperlink{class_metronet_a8d8fab798697599c77e22a5497d52b6d}{opstappen\+Afstappen} (std\+::string station, \hyperlink{class_exporter}{Exporter} $\ast$exp, std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Behandelt het opstappen en afstappen van passagiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_metronet_abdd205c39857ed1aabd104a6886cad45}\label{class_metronet_abdd205c39857ed1aabd104a6886cad45}} 
 \index{Metronet@{Metronet}!Metronet@{Metronet}}
 \index{Metronet@{Metronet}!Metronet@{Metronet}}
-\subsubsection{\texorpdfstring{Metronet()}{Metronet()}}
-{\footnotesize\ttfamily Metronet\+::\+Metronet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_metronet_afa96be4bf66f8d7dcf3f40a7487d2ea7}\label{class_metronet_afa96be4bf66f8d7dcf3f40a7487d2ea7}} 
+\subsubsection[{\texorpdfstring{Metronet()}{Metronet()}}]{\setlength{\rightskip}{0pt plus 5cm}Metronet\+::\+Metronet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_abdd205c39857ed1aabd104a6886cad45}{}\label{class_metronet_abdd205c39857ed1aabd104a6886cad45}
 \index{Metronet@{Metronet}!````~Metronet@{$\sim$\+Metronet}}
 \index{````~Metronet@{$\sim$\+Metronet}!Metronet@{Metronet}}
-\subsubsection{\texorpdfstring{$\sim$\+Metronet()}{~Metronet()}}
-{\footnotesize\ttfamily Metronet\+::$\sim$\+Metronet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
+\subsubsection[{\texorpdfstring{$\sim$\+Metronet()}{~Metronet()}}]{\setlength{\rightskip}{0pt plus 5cm}Metronet\+::$\sim$\+Metronet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_metronet_afa96be4bf66f8d7dcf3f40a7487d2ea7}{}\label{class_metronet_afa96be4bf66f8d7dcf3f40a7487d2ea7}
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_metronet_a499d8ac62450fec83bc10101de53cd76}\label{class_metronet_a499d8ac62450fec83bc10101de53cd76}} 
 \index{Metronet@{Metronet}!add\+Spoor@{add\+Spoor}}
 \index{add\+Spoor@{add\+Spoor}!Metronet@{Metronet}}
-\subsubsection{\texorpdfstring{add\+Spoor()}{addSpoor()}}
-{\footnotesize\ttfamily void Metronet\+::add\+Spoor (\begin{DoxyParamCaption}\item[{\hyperlink{class_spoor}{Spoor} $\ast$}]{spoor }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{add\+Spoor(int spoor)}{addSpoor(int spoor)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metronet\+::add\+Spoor (
+\begin{DoxyParamCaption}
+\item[{int}]{spoor}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_a0422381a8d7f32a915e0ad966af43627}{}\label{class_metronet_a0422381a8d7f32a915e0ad966af43627}
 
 
 Voegt spoor toe aan metronet. 
@@ -55,22 +64,38 @@ Voegt spoor toe aan metronet.
 \hline
 \end{DoxyParams}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van add\+Spoor.\char`\"{});~\newline
-R\+E\+Q\+U\+I\+RE(Spoor-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Spoor was niet geinitialiseerd bij de aanroep van add\+Spoor.\char`\"{});~\newline
-E\+N\+S\+U\+RE(sporen\mbox{[}sporen.\+size() -\/ 1\mbox{]} == \hyperlink{class_spoor}{Spoor}), \char`\"{}\+Spoor was niet toegevoegd bij de aanroep van add\+Spoor.\char`\"{});~\newline
+E\+N\+S\+U\+RE(sporen\mbox{[}sporen.\+size() -\/ 1\mbox{]} == spoor), \char`\"{}\+Spoor was niet toegevoegd bij de aanroep van add\+Spoor.\char`\"{});~\newline
+
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_metronet_a499d8ac62450fec83bc10101de53cd76_cgraph}
+\includegraphics[width=350pt]{class_metronet_a0422381a8d7f32a915e0ad966af43627_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_metronet_ac7f4069e577cd4dddb1e166923df3ecb}\label{class_metronet_ac7f4069e577cd4dddb1e166923df3ecb}} 
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_a0422381a8d7f32a915e0ad966af43627_icgraph}
+\end{center}
+\end{figure}
+
+
 \index{Metronet@{Metronet}!add\+Station@{add\+Station}}
 \index{add\+Station@{add\+Station}!Metronet@{Metronet}}
-\subsubsection{\texorpdfstring{add\+Station()}{addStation()}}
-{\footnotesize\ttfamily void Metronet\+::add\+Station (\begin{DoxyParamCaption}\item[{\hyperlink{class_station}{Station} $\ast$}]{station }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{add\+Station(\+Station $\ast$station)}{addStation(Station *station)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metronet\+::add\+Station (
+\begin{DoxyParamCaption}
+\item[{{\bf Station} $\ast$}]{station}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_ac7f4069e577cd4dddb1e166923df3ecb}{}\label{class_metronet_ac7f4069e577cd4dddb1e166923df3ecb}
 
 
 Voegt station toe aan metronet. 
@@ -81,8 +106,10 @@ Voegt station toe aan metronet.
 \hline
 \end{DoxyParams}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van add\+Station.\char`\"{});~\newline
-R\+E\+Q\+U\+I\+RE(Station-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Station was niet geinitialiseerd bij de aanroep van add\+Station.\char`\"{});~\newline
-E\+N\+S\+U\+RE(stations\mbox{[}stations.\+size() -\/ 1\mbox{]} == \hyperlink{class_station}{Station}), \char`\"{}\+Station was niet toegevoegd bij de aanroep van add\+Station.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(station-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Station was niet geinitialiseerd bij de aanroep van add\+Station.\char`\"{});~\newline
+E\+N\+S\+U\+RE((stations.\+find(station-\/$>$get\+Naam()) != stations.\+end()), \char`\"{}\+Station was niet toegevoegd bij de aanroep van add\+Station.\char`\"{});~\newline
+
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -91,12 +118,27 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_metronet_ac7f4069e577cd4dddb1e166923df3ecb_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_metronet_a3a01132772f4a367d83af40a3c02e224}\label{class_metronet_a3a01132772f4a367d83af40a3c02e224}} 
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_ac7f4069e577cd4dddb1e166923df3ecb_icgraph}
+\end{center}
+\end{figure}
+
+
 \index{Metronet@{Metronet}!add\+Tram@{add\+Tram}}
 \index{add\+Tram@{add\+Tram}!Metronet@{Metronet}}
-\subsubsection{\texorpdfstring{add\+Tram()}{addTram()}}
-{\footnotesize\ttfamily void Metronet\+::add\+Tram (\begin{DoxyParamCaption}\item[{\hyperlink{class_tram}{Tram} $\ast$}]{tram }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{add\+Tram(\+Tram $\ast$tram)}{addTram(Tram *tram)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metronet\+::add\+Tram (
+\begin{DoxyParamCaption}
+\item[{{\bf Tram} $\ast$}]{tram}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_a3a01132772f4a367d83af40a3c02e224}{}\label{class_metronet_a3a01132772f4a367d83af40a3c02e224}
 
 
 Voegt tram toe aan metronet. 
@@ -107,8 +149,10 @@ Voegt tram toe aan metronet.
 \hline
 \end{DoxyParams}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van add\+Tram.\char`\"{});~\newline
-R\+E\+Q\+U\+I\+RE(Tram-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van add\+Tram.\char`\"{});~\newline
-E\+N\+S\+U\+RE(trams\mbox{[}trams.\+size() -\/ 1\mbox{]} == \hyperlink{class_tram}{Tram}), \char`\"{}\+Tram was niet toegevoegd bij de aanroep van add\+Tram.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(tram-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van add\+Tram.\char`\"{});~\newline
+E\+N\+S\+U\+RE(trams.\+find(tram-\/$>$get\+Spoor()) != trams.\+end()), \char`\"{}\+Tram was niet toegevoegd bij de aanroep van add\+Tram.\char`\"{});~\newline
+
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -117,12 +161,28 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_metronet_a3a01132772f4a367d83af40a3c02e224_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_metronet_abd223e3d0f745e3460a247dc667fce69}\label{class_metronet_abd223e3d0f745e3460a247dc667fce69}} 
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_a3a01132772f4a367d83af40a3c02e224_icgraph}
+\end{center}
+\end{figure}
+
+
 \index{Metronet@{Metronet}!check\+Consistent@{check\+Consistent}}
 \index{check\+Consistent@{check\+Consistent}!Metronet@{Metronet}}
-\subsubsection{\texorpdfstring{check\+Consistent()}{checkConsistent()}}
-{\footnotesize\ttfamily bool Metronet\+::check\+Consistent (\begin{DoxyParamCaption}\item[{\hyperlink{class_exporter}{Exporter} $\ast$}]{exp,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{check\+Consistent(\+Exporter $\ast$exp, std\+::ostream \&os)}{checkConsistent(Exporter *exp, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Metronet\+::check\+Consistent (
+\begin{DoxyParamCaption}
+\item[{{\bf Exporter} $\ast$}]{exp, }
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_abd223e3d0f745e3460a247dc667fce69}{}\label{class_metronet_abd223e3d0f745e3460a247dc667fce69}
 
 
 Kijkt na of het metronet consistent is. 
@@ -138,6 +198,8 @@ Kijkt na of het metronet consistent is.
 Boolean die aangeeft of het \hyperlink{class_metronet}{Metronet} consistent is.
 \end{DoxyReturn}
 R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van check\+Consistent.\char`\"{});~\newline
+
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -146,12 +208,143 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_metronet_abd223e3d0f745e3460a247dc667fce69_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_metronet_a3d2adce29a947f162924279b766de645}\label{class_metronet_a3d2adce29a947f162924279b766de645}} 
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_abd223e3d0f745e3460a247dc667fce69_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Metronet@{Metronet}!get\+Stations@{get\+Stations}}
+\index{get\+Stations@{get\+Stations}!Metronet@{Metronet}}
+\subsubsection[{\texorpdfstring{get\+Stations()}{getStations()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, {\bf Station} $\ast$ $>$ Metronet\+::get\+Stations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_a756f8163c67c4e559699b9c508fb1346}{}\label{class_metronet_a756f8163c67c4e559699b9c508fb1346}
+
+
+Geeft alle stations in het metronet terug. 
+
+\begin{DoxyReturn}{Returns}
+Map met stations in het metronet.
+\end{DoxyReturn}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij de aanroep van get\+Stations.\char`\"{});~\newline
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_a756f8163c67c4e559699b9c508fb1346_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Metronet@{Metronet}!opstappen\+Afstappen@{opstappen\+Afstappen}}
+\index{opstappen\+Afstappen@{opstappen\+Afstappen}!Metronet@{Metronet}}
+\subsubsection[{\texorpdfstring{opstappen\+Afstappen(std\+::string station, Exporter $\ast$exp, std\+::ostream \&os)}{opstappenAfstappen(std::string station, Exporter *exp, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Metronet\+::opstappen\+Afstappen (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{station, }
+\item[{{\bf Exporter} $\ast$}]{exp, }
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_a8d8fab798697599c77e22a5497d52b6d}{}\label{class_metronet_a8d8fab798697599c77e22a5497d52b6d}
+
+
+Behandelt het opstappen en afstappen van passagiers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & Het station waar mensen opstappen en afstappen.\\
+\hline
+\end{DoxyParams}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij aanroep van opstappen\+Afstappen.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE((stations.\+find(station) != stations.\+end()), \char`\"{}\+Station bestaat niet in het metronet.\char`\"{});~\newline
+R\+E\+Q\+U\+I\+RE(stations\mbox{[}station\mbox{]}-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Station was niet geinitialiseerd bij aanroep van opstappen\+Afstappen.\char`\"{});~\newline
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_a8d8fab798697599c77e22a5497d52b6d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_a8d8fab798697599c77e22a5497d52b6d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Metronet@{Metronet}!print\+Metronet@{print\+Metronet}}
+\index{print\+Metronet@{print\+Metronet}!Metronet@{Metronet}}
+\subsubsection[{\texorpdfstring{print\+Metronet(\+Exporter $\ast$exp, std\+::ostream \&os)}{printMetronet(Exporter *exp, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metronet\+::print\+Metronet (
+\begin{DoxyParamCaption}
+\item[{{\bf Exporter} $\ast$}]{exp, }
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_a1389ddf8ec44fbb4a796964f9bafc292}{}\label{class_metronet_a1389ddf8ec44fbb4a796964f9bafc292}
+
+
+Print het hele metronet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exp} & De exporter die gebruikt moet worden \\
+\hline
+{\em os} & De stream waarnaar de output moet gestuurd worden\\
+\hline
+\end{DoxyParams}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_metronet_a3d2adce29a947f162924279b766de645}{properly\+Initialised()}, \char`\"{}\+Metronet was niet geinitialiseerd bij aanroep van print\+Metronet.\char`\"{});~\newline
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_a1389ddf8ec44fbb4a796964f9bafc292_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_metronet_a1389ddf8ec44fbb4a796964f9bafc292_icgraph}
+\end{center}
+\end{figure}
+
+
 \index{Metronet@{Metronet}!properly\+Initialised@{properly\+Initialised}}
 \index{properly\+Initialised@{properly\+Initialised}!Metronet@{Metronet}}
-\subsubsection{\texorpdfstring{properly\+Initialised()}{properlyInitialised()}}
-{\footnotesize\ttfamily bool Metronet\+::properly\+Initialised (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{properly\+Initialised()}{properlyInitialised()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Metronet\+::properly\+Initialised (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_metronet_a3d2adce29a947f162924279b766de645}{}\label{class_metronet_a3d2adce29a947f162924279b766de645}
 
 
 Kijk na of de constructor in de juiste staat geeindigd is. 
@@ -159,6 +352,8 @@ Kijk na of de constructor in de juiste staat geeindigd is.
 \begin{DoxyReturn}{Returns}
 Boolean die aangeeft of het object juist geinitialiseerd is. 
 \end{DoxyReturn}
+
+
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -169,7 +364,9 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_metronet_8h}{Metronet.\+h}\item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_metronet_8cpp}{Metronet.\+cpp}\end{DoxyCompactItemize}
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_metronet_8h}{Metronet.\+h}\item 
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_metronet_8cpp}{Metronet.\+cpp}\end{DoxyCompactItemize}

@@ -1,8 +1,8 @@
-.TH "Station" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "Station" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Station
+Station \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -15,42 +15,57 @@ Station
 .RI "\fBStation\fP ()"
 .br
 .ti -1c
-.RI "\fBStation\fP (std::string n, \fBStation\fP *vor, \fBStation\fP *volg, \fBSpoor\fP *sp)"
+.RI "\fBStation\fP (std::string n, std::string vor, std::string volg, int sp, int op, int af)"
 .br
 .ti -1c
-.RI "virtual \fB~Station\fP ()"
+.RI "bool \fBproperlyInitialised\fP () const "
 .br
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const"
+.RI "std::string \fBgetNaam\fP () const "
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIGeef de naam terug van het station\&. \fP"
 .ti -1c
-.RI "std::string \fBgetNaam\fP () const"
+.RI "std::string \fBgetVorige\fP () const "
 .br
-.RI "Geef de naam terug van het station\&. "
+.RI "\fIGeef het vorig station terug\&. \fP"
 .ti -1c
-.RI "\fBStation\fP * \fBgetVorige\fP () const"
+.RI "std::string \fBgetVolgende\fP () const "
 .br
-.RI "Geef het vorig station terug\&. "
+.RI "\fIGeef het volgende station\&. \fP"
 .ti -1c
-.RI "\fBStation\fP * \fBgetVolgende\fP () const"
+.RI "int \fBgetSpoor\fP () const "
 .br
-.RI "Geef het volgende station\&. "
+.RI "\fIGeef het spoor terug\&. \fP"
 .ti -1c
-.RI "\fBSpoor\fP * \fBgetSpoor\fP () const"
+.RI "int \fBgetOpstappen\fP () const "
 .br
-.RI "Geef het \fBSpoor\fP terug\&. "
+.RI "\fIGeef het aantal opstappende mensen terug\&. \fP"
+.ti -1c
+.RI "int \fBgetAfstappen\fP () const "
+.br
+.RI "\fIGeef het afstappende mensen terug\&. \fP"
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Station::Station ()"
 
-.SS "Station::Station (std::string n, \fBStation\fP * vor, \fBStation\fP * volg, \fBSpoor\fP * sp)"
-
-.SS "Station::~Station ()\fC [virtual]\fP"
+.SS "Station::Station (std::string n, std::string vor, std::string volg, int sp, int op, int af)"
 
 .SH "Member Function Documentation"
 .PP 
+.SS "int Station::getAfstappen () const"
+
+.PP
+Geef het afstappende mensen terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Een aantal afstappende mensen\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getAfstappen\&.');
+.br
+.RE
+.PP
+
 .SS "std::string Station::getNaam () const"
 
 .PP
@@ -64,10 +79,22 @@ De naam van het station\&.
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getNaam\&.');
 .br
 
-.SS "\fBSpoor\fP * Station::getSpoor () const"
+.SS "int Station::getOpstappen () const"
 
 .PP
-Geef het \fBSpoor\fP terug\&. 
+Geef het aantal opstappende mensen terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Een aantal opstappende mensen\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getOpstappen\&.');
+.br
+.RE
+.PP
+
+.SS "int Station::getSpoor () const"
+
+.PP
+Geef het spoor terug\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -76,7 +103,7 @@ Het spoor\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinit
 .RE
 .PP
 
-.SS "\fBStation\fP * Station::getVolgende () const"
+.SS "std::string Station::getVolgende () const"
 
 .PP
 Geef het volgende station\&. 
@@ -89,7 +116,7 @@ Het volgende station\&.
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getVolgende\&.');
 .br
 
-.SS "\fBStation\fP * Station::getVorige () const"
+.SS "std::string Station::getVorige () const"
 
 .PP
 Geef het vorig station terug\&. 

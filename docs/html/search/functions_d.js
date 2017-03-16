@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['queryboolattribute',['QueryBoolAttribute',['../class_ti_xml_element.html#a5789b1488af75b6ae37a749700495ceb',1,'TiXmlElement']]],
-  ['querydoubleattribute',['QueryDoubleAttribute',['../class_ti_xml_element.html#ae04bad29ddb281a7e6c662b3882e9928',1,'TiXmlElement']]],
-  ['querydoublevalue',['QueryDoubleValue',['../class_ti_xml_attribute.html#a6fa41b710c1b79de37a97004aa600c06',1,'TiXmlAttribute']]],
-  ['queryfloatattribute',['QueryFloatAttribute',['../class_ti_xml_element.html#a5591929834178699b4561ab6ab460068',1,'TiXmlElement']]],
-  ['queryintattribute',['QueryIntAttribute',['../class_ti_xml_element.html#a5c0f739e0f6f5905a201364532e54a60',1,'TiXmlElement']]],
-  ['queryintvalue',['QueryIntValue',['../class_ti_xml_attribute.html#a6caa8090d2fbb7966700a16e45ed33de',1,'TiXmlAttribute']]],
-  ['queryunsignedattribute',['QueryUnsignedAttribute',['../class_ti_xml_element.html#ab75c83543d4ace62f4c40d7e8e392fc3',1,'TiXmlElement']]]
+  ['queryboolattribute',['QueryBoolAttribute',['../class_ti_xml_element.html#af4a1d3f88c28eb0f3115dc39ebd83fff',1,'TiXmlElement']]],
+  ['querydoubleattribute',['QueryDoubleAttribute',['../class_ti_xml_element.html#a898d7730ecc341f0bffc7a9dadbf1ce7',1,'TiXmlElement']]],
+  ['querydoublevalue',['QueryDoubleValue',['../class_ti_xml_attribute.html#ac87b2a8489906a5d7aa2875f20be3513',1,'TiXmlAttribute']]],
+  ['queryfloatattribute',['QueryFloatAttribute',['../class_ti_xml_element.html#aa04d3af11601ef5a5f88295203a843be',1,'TiXmlElement']]],
+  ['queryintattribute',['QueryIntAttribute',['../class_ti_xml_element.html#aea0bfe471380f281c5945770ddbf52b9',1,'TiXmlElement']]],
+  ['queryintvalue',['QueryIntValue',['../class_ti_xml_attribute.html#ad6c93088ee21af41a107931223339344',1,'TiXmlAttribute']]],
+  ['queryunsignedattribute',['QueryUnsignedAttribute',['../class_ti_xml_element.html#ae48df644f890ab86fa19839ac401f00d',1,'TiXmlElement']]]
 ];

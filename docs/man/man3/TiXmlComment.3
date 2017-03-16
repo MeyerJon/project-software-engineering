@@ -1,8 +1,8 @@
-.TH "TiXmlComment" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "TiXmlComment" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-TiXmlComment
+TiXmlComment \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -16,11 +16,11 @@ Inherits \fBTiXmlNode\fP\&.
 .ti -1c
 .RI "\fBTiXmlComment\fP ()"
 .br
-.RI "Constructs an empty comment\&. "
+.RI "\fIConstructs an empty comment\&. \fP"
 .ti -1c
 .RI "\fBTiXmlComment\fP (const char *_value)"
 .br
-.RI "Construct a comment from text\&. "
+.RI "\fIConstruct a comment from text\&. \fP"
 .ti -1c
 .RI "\fBTiXmlComment\fP (const \fBTiXmlComment\fP &)"
 .br
@@ -31,32 +31,32 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "virtual \fB~TiXmlComment\fP ()"
 .br
 .ti -1c
-.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const"
+.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const "
 .br
-.RI "Returns a copy of this Comment\&. "
+.RI "\fIReturns a copy of this Comment\&. \fP"
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const"
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const "
 .br
 .ti -1c
 .RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data, \fBTiXmlEncoding\fP encoding)"
 .br
 .ti -1c
-.RI "virtual const \fBTiXmlComment\fP * \fBToComment\fP () const"
+.RI "virtual const \fBTiXmlComment\fP * \fBToComment\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlComment\fP * \fBToComment\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *visitor) const"
+.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *visitor) const "
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBCopyTo\fP (\fBTiXmlComment\fP *target) const"
+.RI "void \fBCopyTo\fP (\fBTiXmlComment\fP *target) const "
 .br
 .in -1c
 .SS "Additional Inherited Members"

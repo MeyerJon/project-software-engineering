@@ -1,0 +1,34 @@
+<map id="Parser::setup" name="Parser::setup">
+<area shape="rect" id="node2" href="$class_ti_xml_document.html#a4c852a889c02cf251117fd1d9fe1845f" title="TiXmlDocument::LoadFile" alt="" coords="172,60,345,87"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a77943eb90d12c2892b1337a9f5918b41" title="TiXmlNode::Value" alt="" coords="439,35,567,61"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#ab1f8d8e70d88aea4c5efedfe00862d55" title="Convenience function to get through elements. " alt="" coords="159,161,358,188"/>
+<area shape="rect" id="node5" href="$class_ti_xml_node.html#a44c8eee26bbe2d1b2762038df9dde2f0" title="The first child of this node. Will be null if there are no children. " alt="" coords="428,111,579,137"/>
+<area shape="rect" id="node6" href="$class_ti_xml_node.html#af854baeba384f5fe9859f5aee03b548e" title="Navigate to a sibling node. " alt="" coords="422,212,585,239"/>
+<area shape="rect" id="node8" href="$class_ti_xml_node.html#a7667217e269e0da01d1f82aee94d1a3d" title="TiXmlNode::NextSiblingElement" alt="" coords="153,212,364,239"/>
+<area shape="rect" id="node9" href="$class_ti_xml_node.html#a95a46a52c525992d6b4ee08beb14cd69" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="191,313,327,340"/>
+<area shape="rect" id="node10" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="450,465,557,492"/>
+<area shape="rect" id="node12" href="$class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="187,465,330,492"/>
+<area shape="rect" id="node15" href="$class_station.html#a6d4234bcd1027dc83c7984e207e8bd74" title="Geef de naam terug van het station. " alt="" coords="441,415,565,441"/>
+<area shape="rect" id="node16" href="$class_metronet.html#a0422381a8d7f32a915e0ad966af43627" title="Voegt spoor toe aan metronet. " alt="" coords="191,681,327,708"/>
+<area shape="rect" id="node17" href="$class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="193,795,325,821"/>
+<area shape="rect" id="node20" href="$class_metronet.html#abd223e3d0f745e3460a247dc667fce69" title="Kijkt na of het metronet consistent is. " alt="" coords="169,617,348,644"/>
+<area shape="rect" id="node25" href="$class_metronet.html#a1389ddf8ec44fbb4a796964f9bafc292" title="Print het hele metronet. " alt="" coords="180,567,337,593"/>
+<area shape="rect" id="node26" href="$class_metronet.html#a756f8163c67c4e559699b9c508fb1346" title="Geeft alle stations in het metronet terug. " alt="" coords="185,845,332,872"/>
+<area shape="rect" id="node27" href="$class_metronet.html#a8d8fab798697599c77e22a5497d52b6d" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="159,744,359,771"/>
+<area shape="rect" id="node33" href="$class_exporter.html#ae477714f462d70cfc5b3970f91fcc4ed" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="203,364,314,391"/>
+<area shape="rect" id="node7" href="$class_ti_xml_node.html#a72abed96dc9667ab9e0a2a275301bb1c" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="424,161,583,188"/>
+<area shape="rect" id="node11" href="$class_exporter.html#af01d2a6c2f54329b1867a19537e11a34" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="643,389,823,416"/>
+<area shape="rect" id="node13" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="412,719,595,745"/>
+<area shape="rect" id="node14" href="$class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="647,567,819,593"/>
+<area shape="rect" id="node18" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="652,947,813,973"/>
+<area shape="rect" id="node19" href="$class_tram.html#a52655f991ffb58a8ab3557fd881a6f58" title="Geef het spoor terug. " alt="" coords="447,871,559,897"/>
+<area shape="rect" id="node21" href="$class_station.html#a6db00c0be0f1c6aea3848038a2a9a350" title="Geef het volgende station. " alt="" coords="432,516,575,543"/>
+<area shape="rect" id="node22" href="$class_station.html#af7516368cf83e9cbadf10309bc8c4aa2" title="Geef het vorig station terug. " alt="" coords="440,567,567,593"/>
+<area shape="rect" id="node23" href="$class_station.html#a0fc1a72d194b9f67151eea0e957aad3c" title="Geef het spoor terug. " alt="" coords="442,617,565,644"/>
+<area shape="rect" id="node24" href="$class_tram.html#aba7b84414cd60d013ac1db3f3403497d" title="Geef het beginstation terug. " alt="" coords="427,668,579,695"/>
+<area shape="rect" id="node28" href="$class_station.html#a531809394b3affd749ccbd5e992a61b9" title="Geef het aantal opstappende mensen terug. " alt="" coords="427,820,579,847"/>
+<area shape="rect" id="node29" href="$class_station.html#aed0008123f97257f9b4365918dd90512" title="Geef het afstappende mensen terug. " alt="" coords="429,769,577,796"/>
+<area shape="rect" id="node30" href="$class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="425,972,581,999"/>
+<area shape="rect" id="node31" href="$class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="445,1023,562,1049"/>
+<area shape="rect" id="node32" href="$class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="443,921,563,948"/>
+</map>

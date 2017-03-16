@@ -1,8 +1,8 @@
-.TH "TiXmlNode" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "TiXmlNode" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-TiXmlNode
+TiXmlNode \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -26,10 +26,10 @@ Inherited by \fBTiXmlComment\fP, \fBTiXmlDeclaration\fP, \fBTiXmlDocument\fP, \f
 .RI "virtual \fB~TiXmlNode\fP ()"
 .br
 .ti -1c
-.RI "const char * \fBValue\fP () const"
+.RI "const char * \fBValue\fP () const "
 .br
 .ti -1c
-.RI "const \fBTIXML_STRING\fP & \fBValueTStr\fP () const"
+.RI "const \fBTIXML_STRING\fP & \fBValueTStr\fP () const "
 .br
 .ti -1c
 .RI "void \fBSetValue\fP (const char *_value)"
@@ -37,52 +37,52 @@ Inherited by \fBTiXmlComment\fP, \fBTiXmlDeclaration\fP, \fBTiXmlDocument\fP, \f
 .ti -1c
 .RI "void \fBClear\fP ()"
 .br
-.RI "Delete all the children of this node\&. Does not affect 'this'\&. "
+.RI "\fIDelete all the children of this node\&. Does not affect 'this'\&. \fP"
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBParent\fP ()"
 .br
-.RI "One step up the DOM\&. "
+.RI "\fIOne step up the DOM\&. \fP"
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBParent\fP () const"
+.RI "const \fBTiXmlNode\fP * \fBParent\fP () const "
 .br
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBFirstChild\fP () const"
+.RI "const \fBTiXmlNode\fP * \fBFirstChild\fP () const "
 .br
-.RI "The first child of this node\&. Will be null if there are no children\&. "
+.RI "\fIThe first child of this node\&. Will be null if there are no children\&. \fP"
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBFirstChild\fP ()"
 .br
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBFirstChild\fP (const char *\fBvalue\fP) const"
+.RI "const \fBTiXmlNode\fP * \fBFirstChild\fP (const char *\fBvalue\fP) const "
 .br
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBFirstChild\fP (const char *_value)"
 .br
-.RI "The first child of this node with the matching 'value'\&. Will be null if none found\&. "
+.RI "\fIThe first child of this node with the matching 'value'\&. Will be null if none found\&. \fP"
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBLastChild\fP () const"
+.RI "const \fBTiXmlNode\fP * \fBLastChild\fP () const "
 .br
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBLastChild\fP ()"
 .br
-.RI "The last child of this node\&. Will be null if there are no children\&. "
+.RI "\fIThe last child of this node\&. Will be null if there are no children\&. \fP"
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBLastChild\fP (const char *\fBvalue\fP) const"
+.RI "const \fBTiXmlNode\fP * \fBLastChild\fP (const char *\fBvalue\fP) const "
 .br
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBLastChild\fP (const char *_value)"
 .br
-.RI "The last child of this node matching 'value'\&. Will be null if there are no children\&. "
+.RI "\fIThe last child of this node matching 'value'\&. Will be null if there are no children\&. \fP"
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBIterateChildren\fP (const \fBTiXmlNode\fP *previous) const"
+.RI "const \fBTiXmlNode\fP * \fBIterateChildren\fP (const \fBTiXmlNode\fP *previous) const "
 .br
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBIterateChildren\fP (const \fBTiXmlNode\fP *previous)"
 .br
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBIterateChildren\fP (const char *\fBvalue\fP, const \fBTiXmlNode\fP *previous) const"
+.RI "const \fBTiXmlNode\fP * \fBIterateChildren\fP (const char *\fBvalue\fP, const \fBTiXmlNode\fP *previous) const "
 .br
-.RI "This flavor of IterateChildren searches for children with a particular 'value'\&. "
+.RI "\fIThis flavor of IterateChildren searches for children with a particular 'value'\&. \fP"
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBIterateChildren\fP (const char *_value, const \fBTiXmlNode\fP *previous)"
 .br
@@ -104,122 +104,122 @@ Inherited by \fBTiXmlComment\fP, \fBTiXmlDeclaration\fP, \fBTiXmlDocument\fP, \f
 .ti -1c
 .RI "bool \fBRemoveChild\fP (\fBTiXmlNode\fP *removeThis)"
 .br
-.RI "Delete a child of this node\&. "
+.RI "\fIDelete a child of this node\&. \fP"
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBPreviousSibling\fP () const"
+.RI "const \fBTiXmlNode\fP * \fBPreviousSibling\fP () const "
 .br
-.RI "Navigate to a sibling node\&. "
+.RI "\fINavigate to a sibling node\&. \fP"
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBPreviousSibling\fP ()"
 .br
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBPreviousSibling\fP (const char *) const"
+.RI "const \fBTiXmlNode\fP * \fBPreviousSibling\fP (const char *) const "
 .br
-.RI "Navigate to a sibling node\&. "
+.RI "\fINavigate to a sibling node\&. \fP"
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBPreviousSibling\fP (const char *_prev)"
 .br
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBNextSibling\fP () const"
+.RI "const \fBTiXmlNode\fP * \fBNextSibling\fP () const "
 .br
-.RI "Navigate to a sibling node\&. "
+.RI "\fINavigate to a sibling node\&. \fP"
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBNextSibling\fP ()"
 .br
 .ti -1c
-.RI "const \fBTiXmlNode\fP * \fBNextSibling\fP (const char *) const"
+.RI "const \fBTiXmlNode\fP * \fBNextSibling\fP (const char *) const "
 .br
-.RI "Navigate to a sibling node with the given 'value'\&. "
+.RI "\fINavigate to a sibling node with the given 'value'\&. \fP"
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBNextSibling\fP (const char *_next)"
 .br
 .ti -1c
-.RI "const \fBTiXmlElement\fP * \fBNextSiblingElement\fP () const"
+.RI "const \fBTiXmlElement\fP * \fBNextSiblingElement\fP () const "
 .br
 .ti -1c
 .RI "\fBTiXmlElement\fP * \fBNextSiblingElement\fP ()"
 .br
 .ti -1c
-.RI "const \fBTiXmlElement\fP * \fBNextSiblingElement\fP (const char *) const"
+.RI "const \fBTiXmlElement\fP * \fBNextSiblingElement\fP (const char *) const "
 .br
 .ti -1c
 .RI "\fBTiXmlElement\fP * \fBNextSiblingElement\fP (const char *_next)"
 .br
 .ti -1c
-.RI "const \fBTiXmlElement\fP * \fBFirstChildElement\fP () const"
+.RI "const \fBTiXmlElement\fP * \fBFirstChildElement\fP () const "
 .br
-.RI "Convenience function to get through elements\&. "
+.RI "\fIConvenience function to get through elements\&. \fP"
 .ti -1c
 .RI "\fBTiXmlElement\fP * \fBFirstChildElement\fP ()"
 .br
 .ti -1c
-.RI "const \fBTiXmlElement\fP * \fBFirstChildElement\fP (const char *_value) const"
+.RI "const \fBTiXmlElement\fP * \fBFirstChildElement\fP (const char *_value) const "
 .br
-.RI "Convenience function to get through elements\&. "
+.RI "\fIConvenience function to get through elements\&. \fP"
 .ti -1c
 .RI "\fBTiXmlElement\fP * \fBFirstChildElement\fP (const char *_value)"
 .br
 .ti -1c
-.RI "int \fBType\fP () const"
+.RI "int \fBType\fP () const "
 .br
 .ti -1c
-.RI "const \fBTiXmlDocument\fP * \fBGetDocument\fP () const"
+.RI "const \fBTiXmlDocument\fP * \fBGetDocument\fP () const "
 .br
 .ti -1c
 .RI "\fBTiXmlDocument\fP * \fBGetDocument\fP ()"
 .br
 .ti -1c
-.RI "bool \fBNoChildren\fP () const"
+.RI "bool \fBNoChildren\fP () const "
 .br
-.RI "Returns true if this node has no children\&. "
+.RI "\fIReturns true if this node has no children\&. \fP"
 .ti -1c
-.RI "virtual const \fBTiXmlDocument\fP * \fBToDocument\fP () const"
+.RI "virtual const \fBTiXmlDocument\fP * \fBToDocument\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual const \fBTiXmlElement\fP * \fBToElement\fP () const"
+.RI "virtual const \fBTiXmlElement\fP * \fBToElement\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual const \fBTiXmlComment\fP * \fBToComment\fP () const"
+.RI "virtual const \fBTiXmlComment\fP * \fBToComment\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual const \fBTiXmlUnknown\fP * \fBToUnknown\fP () const"
+.RI "virtual const \fBTiXmlUnknown\fP * \fBToUnknown\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual const \fBTiXmlText\fP * \fBToText\fP () const"
+.RI "virtual const \fBTiXmlText\fP * \fBToText\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual const \fBTiXmlDeclaration\fP * \fBToDeclaration\fP () const"
+.RI "virtual const \fBTiXmlDeclaration\fP * \fBToDeclaration\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlDocument\fP * \fBToDocument\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlElement\fP * \fBToElement\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlComment\fP * \fBToComment\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlUnknown\fP * \fBToUnknown\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlText\fP * \fBToText\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlDeclaration\fP * \fBToDeclaration\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null if not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null if not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const =0"
 .br
@@ -234,7 +234,7 @@ Inherited by \fBTiXmlComment\fP, \fBTiXmlDeclaration\fP, \fBTiXmlDocument\fP, \f
 .RI "\fBTiXmlNode\fP (\fBNodeType\fP _type)"
 .br
 .ti -1c
-.RI "void \fBCopyTo\fP (\fBTiXmlNode\fP *target) const"
+.RI "void \fBCopyTo\fP (\fBTiXmlNode\fP *target) const "
 .br
 .ti -1c
 .RI "\fBTiXmlNode\fP * \fBIdentify\fP (const char *start, \fBTiXmlEncoding\fP encoding)"

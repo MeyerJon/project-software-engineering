@@ -9,81 +9,81 @@
 \item 
 \hyperlink{class_parser_a12234f6cd36b61af4b50c94a179422c1}{Parser} ()
 \item 
-virtual \hyperlink{class_parser_a3e658b5917a93a3ef648050d060e3a93}{$\sim$\+Parser} ()
+\hyperlink{class_parser_a33d9b1246a34fd02cce180d960943d34}{Parser} (\hyperlink{class_exporter}{Exporter} $\ast$exp)
 \item 
-void \hyperlink{class_parser_a9aa0d57be0166c22c74d2b9a7e5272cb}{setup\+Stations} (\hyperlink{class_metronet}{Metronet} \&metro, std\+::string file)
-\begin{DoxyCompactList}\small\item\em Leest alle stations uit een X\+M\+L-\/bestand en voegt ze toe aan het metronet. \end{DoxyCompactList}\item 
-void \hyperlink{class_parser_a45cd97dbe3549de6667cb7255f8d51fe}{setup\+Trams} (\hyperlink{class_metronet}{Metronet} \&metro, std\+::string file)
-\item 
-void \hyperlink{class_parser_a5fc136436324d779fc2cd55825b381cb}{setup} (\hyperlink{class_metronet}{Metronet} \&metro, std\+::string file)
-\end{DoxyCompactItemize}
+bool \hyperlink{class_parser_a568d2353b3e6f89b0cf112f309229ffe}{setup} (\hyperlink{class_metronet}{Metronet} \&metro, std\+::string filename, std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Verwerkt het X\+M\+L-\/bestand en zet het metronet op. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_parser_a12234f6cd36b61af4b50c94a179422c1}\label{class_parser_a12234f6cd36b61af4b50c94a179422c1}} 
 \index{Parser@{Parser}!Parser@{Parser}}
 \index{Parser@{Parser}!Parser@{Parser}}
-\subsubsection{\texorpdfstring{Parser()}{Parser()}}
-{\footnotesize\ttfamily Parser\+::\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_parser_a3e658b5917a93a3ef648050d060e3a93}\label{class_parser_a3e658b5917a93a3ef648050d060e3a93}} 
-\index{Parser@{Parser}!````~Parser@{$\sim$\+Parser}}
-\index{````~Parser@{$\sim$\+Parser}!Parser@{Parser}}
-\subsubsection{\texorpdfstring{$\sim$\+Parser()}{~Parser()}}
-{\footnotesize\ttfamily Parser\+::$\sim$\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
+\subsubsection[{\texorpdfstring{Parser()}{Parser()}}]{\setlength{\rightskip}{0pt plus 5cm}Parser\+::\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_parser_a12234f6cd36b61af4b50c94a179422c1}{}\label{class_parser_a12234f6cd36b61af4b50c94a179422c1}
+\index{Parser@{Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{Parser(\+Exporter $\ast$exp)}{Parser(Exporter *exp)}}]{\setlength{\rightskip}{0pt plus 5cm}Parser\+::\+Parser (
+\begin{DoxyParamCaption}
+\item[{{\bf Exporter} $\ast$}]{exp}
+\end{DoxyParamCaption}
+)}\hypertarget{class_parser_a33d9b1246a34fd02cce180d960943d34}{}\label{class_parser_a33d9b1246a34fd02cce180d960943d34}
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_parser_a5fc136436324d779fc2cd55825b381cb}\label{class_parser_a5fc136436324d779fc2cd55825b381cb}} 
 \index{Parser@{Parser}!setup@{setup}}
 \index{setup@{setup}!Parser@{Parser}}
-\subsubsection{\texorpdfstring{setup()}{setup()}}
-{\footnotesize\ttfamily void Parser\+::setup (\begin{DoxyParamCaption}\item[{\hyperlink{class_metronet}{Metronet} \&}]{metro,  }\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{setup(\+Metronet \&metro, std\+::string filename, std\+::ostream \&os)}{setup(Metronet &metro, std::string filename, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Parser\+::setup (
+\begin{DoxyParamCaption}
+\item[{{\bf Metronet} \&}]{metro, }
+\item[{std\+::string}]{filename, }
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{class_parser_a568d2353b3e6f89b0cf112f309229ffe}{}\label{class_parser_a568d2353b3e6f89b0cf112f309229ffe}
 
 
-\begin{DoxyParams}{Parameters}
-{\em metro} & \\
-\hline
-{\em file} & \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_parser_a9aa0d57be0166c22c74d2b9a7e5272cb}\label{class_parser_a9aa0d57be0166c22c74d2b9a7e5272cb}} 
-\index{Parser@{Parser}!setup\+Stations@{setup\+Stations}}
-\index{setup\+Stations@{setup\+Stations}!Parser@{Parser}}
-\subsubsection{\texorpdfstring{setup\+Stations()}{setupStations()}}
-{\footnotesize\ttfamily void Parser\+::setup\+Stations (\begin{DoxyParamCaption}\item[{\hyperlink{class_metronet}{Metronet} \&}]{metro,  }\item[{std\+::string}]{file }\end{DoxyParamCaption})}
-
-
-
-Leest alle stations uit een X\+M\+L-\/bestand en voegt ze toe aan het metronet. 
+Verwerkt het X\+M\+L-\/bestand en zet het metronet op. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em metro} & Het metronet (referentie) dat aangepast moet worden. \\
 \hline
-{\em file} & De naam van het X\+M\+L-\/bestand.\\
+{\em filename} & De naam van het X\+M\+L-\/bestand. \\
+\hline
+{\em os} & De stream waarnaar de output geschreven wordt (nodig voor de exporter).\\
 \hline
 \end{DoxyParams}
 R\+E\+Q\+U\+I\+RE(this-\/$>$properly\+Initialised, \char`\"{}\+De parser was niet geinitialiseerd bij het aanroepen van setup\+Stations.\char`\"{});~\newline
 R\+E\+Q\+U\+I\+RE(metro.\+properly\+Initialised, \char`\"{}\+Het metronet was niet geinitialiseerd bij het aanroepen van setup\+Stations.\char`\"{});~\newline
-E\+N\+S\+U\+RE(stations\+Check, \char`\"{}\+Stations niet correct ingelezen.\char`\"{});~\newline
-\mbox{\Hypertarget{class_parser_a45cd97dbe3549de6667cb7255f8d51fe}\label{class_parser_a45cd97dbe3549de6667cb7255f8d51fe}} 
-\index{Parser@{Parser}!setup\+Trams@{setup\+Trams}}
-\index{setup\+Trams@{setup\+Trams}!Parser@{Parser}}
-\subsubsection{\texorpdfstring{setup\+Trams()}{setupTrams()}}
-{\footnotesize\ttfamily void Parser\+::setup\+Trams (\begin{DoxyParamCaption}\item[{\hyperlink{class_metronet}{Metronet} \&}]{metro,  }\item[{std\+::string}]{file }\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}{Parameters}
-{\em metro} & \\
-\hline
-{\em file} & \\
-\hline
-\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_parser_a568d2353b3e6f89b0cf112f309229ffe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_parser_a568d2353b3e6f89b0cf112f309229ffe_icgraph}
+\end{center}
+\end{figure}
+
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_parser_8h}{Parser.\+h}\item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_parser_8cpp}{Parser.\+cpp}\end{DoxyCompactItemize}
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_parser_8h}{Parser.\+h}\item 
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_parser_8cpp}{Parser.\+cpp}\end{DoxyCompactItemize}

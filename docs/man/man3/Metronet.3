@@ -1,8 +1,8 @@
-.TH "Metronet" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "Metronet" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Metronet
+Metronet \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -20,23 +20,35 @@ Metronet
 .ti -1c
 .RI "bool \fBproperlyInitialised\fP ()"
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.ti -1c
+.RI "std::map< std::string, \fBStation\fP * > \fBgetStations\fP ()"
+.br
+.RI "\fIGeeft alle stations in het metronet terug\&. \fP"
 .ti -1c
 .RI "void \fBaddStation\fP (\fBStation\fP *station)"
 .br
-.RI "Voegt station toe aan metronet\&. "
+.RI "\fIVoegt station toe aan metronet\&. \fP"
 .ti -1c
 .RI "void \fBaddTram\fP (\fBTram\fP *tram)"
 .br
-.RI "Voegt tram toe aan metronet\&. "
+.RI "\fIVoegt tram toe aan metronet\&. \fP"
 .ti -1c
-.RI "void \fBaddSpoor\fP (\fBSpoor\fP *spoor)"
+.RI "void \fBaddSpoor\fP (int spoor)"
 .br
-.RI "Voegt spoor toe aan metronet\&. "
+.RI "\fIVoegt spoor toe aan metronet\&. \fP"
 .ti -1c
 .RI "bool \fBcheckConsistent\fP (\fBExporter\fP *exp, std::ostream &os)"
 .br
-.RI "Kijkt na of het metronet consistent is\&. "
+.RI "\fIKijkt na of het metronet consistent is\&. \fP"
+.ti -1c
+.RI "void \fBprintMetronet\fP (\fBExporter\fP *exp, std::ostream &os)"
+.br
+.RI "\fIPrint het hele metronet\&. \fP"
+.ti -1c
+.RI "bool \fBopstappenAfstappen\fP (std::string station, \fBExporter\fP *exp, std::ostream &os)"
+.br
+.RI "\fIBehandelt het opstappen en afstappen van passagiers\&. \fP"
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -46,7 +58,7 @@ Metronet
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void Metronet::addSpoor (\fBSpoor\fP * spoor)"
+.SS "void Metronet::addSpoor (int spoor)"
 
 .PP
 Voegt spoor toe aan metronet\&. 
@@ -58,9 +70,7 @@ Voegt spoor toe aan metronet\&.
 .PP
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van addSpoor\&.');
 .br
-REQUIRE(Spoor->\fBproperlyInitialised()\fP, 'Spoor was niet geinitialiseerd bij de aanroep van addSpoor\&.');
-.br
-ENSURE(sporen[sporen\&.size() - 1] == \fBSpoor\fP), 'Spoor was niet toegevoegd bij de aanroep van addSpoor\&.');
+ENSURE(sporen[sporen\&.size() - 1] == spoor), 'Spoor was niet toegevoegd bij de aanroep van addSpoor\&.');
 .br
 
 .SS "void Metronet::addStation (\fBStation\fP * station)"
@@ -75,9 +85,9 @@ Voegt station toe aan metronet\&.
 .PP
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van addStation\&.');
 .br
-REQUIRE(Station->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van addStation\&.');
+REQUIRE(station->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van addStation\&.');
 .br
-ENSURE(stations[stations\&.size() - 1] == \fBStation\fP), 'Station was niet toegevoegd bij de aanroep van addStation\&.');
+ENSURE((stations\&.find(station->getNaam()) != stations\&.end()), 'Station was niet toegevoegd bij de aanroep van addStation\&.');
 .br
 
 .SS "void Metronet::addTram (\fBTram\fP * tram)"
@@ -92,9 +102,9 @@ Voegt tram toe aan metronet\&.
 .PP
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van addTram\&.');
 .br
-REQUIRE(Tram->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van addTram\&.');
+REQUIRE(tram->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van addTram\&.');
 .br
-ENSURE(trams[trams\&.size() - 1] == \fBTram\fP), 'Tram was niet toegevoegd bij de aanroep van addTram\&.');
+ENSURE(trams\&.find(tram->getSpoor()) != trams\&.end()), 'Tram was niet toegevoegd bij de aanroep van addTram\&.');
 .br
 
 .SS "bool Metronet::checkConsistent (\fBExporter\fP * exp, std::ostream & os)"
@@ -115,6 +125,51 @@ Boolean die aangeeft of het \fBMetronet\fP consistent is\&.
 .RE
 .PP
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van checkConsistent\&.');
+.br
+
+.SS "std::map< std::string, \fBStation\fP * > Metronet::getStations ()"
+
+.PP
+Geeft alle stations in het metronet terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Map met stations in het metronet\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van getStations\&.');
+.br
+
+.SS "bool Metronet::opstappenAfstappen (std::string station, \fBExporter\fP * exp, std::ostream & os)"
+
+.PP
+Behandelt het opstappen en afstappen van passagiers\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstation\fP Het station waar mensen opstappen en afstappen\&.
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen\&.');
+.br
+REQUIRE((stations\&.find(station) != stations\&.end()), 'Station bestaat niet in het metronet\&.');
+.br
+REQUIRE(stations[station]->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij aanroep van opstappenAfstappen\&.');
+.br
+
+.SS "void Metronet::printMetronet (\fBExporter\fP * exp, std::ostream & os)"
+
+.PP
+Print het hele metronet\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexp\fP De exporter die gebruikt moet worden 
+.br
+\fIos\fP De stream waarnaar de output moet gestuurd worden
+.RE
+.PP
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij aanroep van printMetronet\&.');
 .br
 
 .SS "bool Metronet::properlyInitialised ()"

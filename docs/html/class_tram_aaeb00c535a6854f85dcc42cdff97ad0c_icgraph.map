@@ -1,0 +1,5 @@
+<map id="Tram::opstappen" name="Tram::opstappen">
+<area shape="rect" id="node2" href="$class_metronet.html#a8d8fab798697599c77e22a5497d52b6d" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="173,5,373,32"/>
+<area shape="rect" id="node3" href="$class_parser.html#a568d2353b3e6f89b0cf112f309229ffe" title="Verwerkt het XML&#45;bestand en zet het metronet op. " alt="" coords="421,5,521,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="569,5,620,32"/>
+</map>

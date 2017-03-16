@@ -1,8 +1,8 @@
-.TH "Parser" 3 "Thu Mar 9 2017" "Metronet" \" -*- nroff -*-
+.TH "Parser" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Parser
+Parser \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -15,67 +15,39 @@ Parser
 .RI "\fBParser\fP ()"
 .br
 .ti -1c
-.RI "virtual \fB~Parser\fP ()"
+.RI "\fBParser\fP (\fBExporter\fP *exp)"
 .br
 .ti -1c
-.RI "void \fBsetupStations\fP (\fBMetronet\fP &metro, std::string file)"
+.RI "bool \fBsetup\fP (\fBMetronet\fP &metro, std::string filename, std::ostream &os)"
 .br
-.RI "Leest alle stations uit een XML-bestand en voegt ze toe aan het metronet\&. "
-.ti -1c
-.RI "void \fBsetupTrams\fP (\fBMetronet\fP &metro, std::string file)"
-.br
-.ti -1c
-.RI "void \fBsetup\fP (\fBMetronet\fP &metro, std::string file)"
-.br
+.RI "\fIVerwerkt het XML-bestand en zet het metronet op\&. \fP"
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Parser::Parser ()"
 
-.SS "Parser::~Parser ()\fC [virtual]\fP"
+.SS "Parser::Parser (\fBExporter\fP * exp)"
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void Parser::setup (\fBMetronet\fP & metro, std::string file)"
+.SS "bool Parser::setup (\fBMetronet\fP & metro, std::string filename, std::ostream & os)"
 
 .PP
-\fBParameters:\fP
-.RS 4
-\fImetro\fP 
-.br
-\fIfile\fP 
-.RE
-.PP
-
-.SS "void Parser::setupStations (\fBMetronet\fP & metro, std::string file)"
-
-.PP
-Leest alle stations uit een XML-bestand en voegt ze toe aan het metronet\&. 
+Verwerkt het XML-bestand en zet het metronet op\&. 
 .PP
 \fBParameters:\fP
 .RS 4
 \fImetro\fP Het metronet (referentie) dat aangepast moet worden\&. 
 .br
-\fIfile\fP De naam van het XML-bestand\&.
+\fIfilename\fP De naam van het XML-bestand\&. 
+.br
+\fIos\fP De stream waarnaar de output geschreven wordt (nodig voor de exporter)\&.
 .RE
 .PP
 REQUIRE(this->properlyInitialised, 'De parser was niet geinitialiseerd bij het aanroepen van setupStations\&.');
 .br
 REQUIRE(metro\&.properlyInitialised, 'Het metronet was niet geinitialiseerd bij het aanroepen van setupStations\&.');
 .br
-ENSURE(stationsCheck, 'Stations niet correct ingelezen\&.');
-.br
-
-.SS "void Parser::setupTrams (\fBMetronet\fP & metro, std::string file)"
-
-.PP
-\fBParameters:\fP
-.RS 4
-\fImetro\fP 
-.br
-\fIfile\fP 
-.RE
-.PP
 
 
 .SH "Author"
