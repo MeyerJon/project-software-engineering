@@ -12,20 +12,23 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
+#include "Parser.h"
 
 class MetronetInputTest: public ::testing::Test {
 protected:
     friend class Metronet;
 
     virtual void SetUp() {
-
+        exp = new ExporterCLI;
     }
 
     virtual void TearDown() {
-
+        delete exp;
     }
 
     Metronet metronet;
+    Exporter* exp;
+    SuccesEnum endResult;
 };
 
 #endif //PSE_METRONETINPUTTESTS_H

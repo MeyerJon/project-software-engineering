@@ -42,6 +42,13 @@ public:
      */
      std::map<std::string, Station*> getStations();
 
+    /** \brief Geeft alle trams in het metronet terug.
+     *  \return Map met trams in het metronet.
+     *
+     *  REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");\n
+     */
+    std::map<int, Tram*>& getTrams();
+
     /** \brief Voegt station toe aan metronet.
      *  \param station Het station dat toegevoegd zal worden.
      *

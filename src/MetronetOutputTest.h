@@ -12,6 +12,7 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
+#include "Parser.h"
 
 class MetronetOutputTest: public ::testing::Test {
 protected:
@@ -22,7 +23,6 @@ protected:
     }
 
     virtual void TearDown() {
-
     }
 
     Metronet metronet;

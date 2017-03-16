@@ -28,6 +28,10 @@ std::map<std::string, Station*> Metronet::getStations() {
     return stations;
 }
 
+std::map<int, Tram*>& Metronet::getTrams() {
+    return trams;
+}
+
 void Metronet::addStation(Station* station) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
