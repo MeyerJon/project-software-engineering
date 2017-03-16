@@ -26,8 +26,5 @@ int main() {
     parsHTML.setup(metronet, "xmls/DummyStations.xml", html);
     parsTXT.setup(metronet, "xmls/DummyStations.xml", txt);
     parsCLI.setup(metronet, "xmls/DummyStations.xml", std::cout);
-    metronet.printMetronet(expHTML, html);
-    metronet.printMetronet(expTXT, txt);
-    metronet.printMetronet(expCLI, std::cout);
     return 0;
 }
