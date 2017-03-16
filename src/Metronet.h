@@ -94,6 +94,12 @@ public:
      * REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");\n
      */
      bool opstappenAfstappen(std::string station, Exporter* exp, std::ostream& os);
+
+    /** \brief Reset heel het systeem.
+     *
+     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");\n
+     * */
+     void reset();
 };
 
 #endif /* SRC_METRONET_H_ */
