@@ -9,5 +9,12 @@ Release
 .idea
 cmake-build-debug
 cmake-build-release
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
 CMakeLists.txt
+/Makefile
+SoftEng
+SoftEng.cbp
+SoftEngTest
 src/gtest/lib
