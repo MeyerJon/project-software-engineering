@@ -83,23 +83,21 @@ public:
      */
     void verplaatsTram(std::string station, Exporter* exp, std::ostream& os);
 
-    // TODO: Proper docs plox
-
-    /** \brief
-     *  \param opstappen
-     *  \return
+    /** \brief Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal - afstappende passagiers)
+     *  \param afstappen Aantal passagiers dat afstapt.
+     *  \return boolean Of er meer passagiers afstapten dan mogelijk.
      *
-     * REQUIRE() STUFF
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");\n
      */
-    bool afStappen(int afstappen);
+    bool afstappen(int afstappen);
 
-    /** \brief
-     *  \param opstappen
-     *  \return
+    /** \brief Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers)
+     *  \param opstappen Aantal passagiers dat opstapt.
+     *  \return boolean Of er meer passigiers opstapten dan mogelijk.
      *
-     * REQUIRE() STUFF
+     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van opstappen.");\n
      */
-    bool opStappen(int opstappen);
+    bool opstappen(int opstappen);
 };
 
 #endif /* SRC_TRAM_H_ */

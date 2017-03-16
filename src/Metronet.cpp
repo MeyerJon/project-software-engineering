@@ -152,13 +152,13 @@ void Metronet::printMetronet(Exporter* exp, std::ostream& os) {
     exp->finish(os);
 }
 
-bool Metronet::opStappenAfStappen(std::string station, Exporter* exp, std::ostream& os) {
+bool Metronet::opstappenAfStappen(std::string station, Exporter* exp, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
-            "Metronet was niet geinitialiseerd bij aanroep van opStappenAfstappen.");
+            "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
     REQUIRE((stations.find(station) != stations.end()),
             "Station bestaat niet in het metronet.");
     REQUIRE(stations[station]->properlyInitialised(),
-            "Station was niet geinitialiseerd bij aanroep van opStappenAfstappen.");
+            "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
 
     Station* st = stations[station];
     int spoor = st->getSpoor();
@@ -175,7 +175,7 @@ bool Metronet::opStappenAfStappen(std::string station, Exporter* exp, std::ostre
         return false;
     }
 
-    if (tram->afStappen(afstappen)) {
+    if (tram->afstappen(afstappen)) {
         std::string out = "In station " + station + " stapten " + std::to_string(afstappen) +
                           " mensen af tram " + std::to_string(spoor) + ".\n";
         exp->write(out, os);
@@ -184,7 +184,7 @@ bool Metronet::opStappenAfStappen(std::string station, Exporter* exp, std::ostre
         exp->write(out, os);
         consistent = false;
     }
-    if (tram->opStappen(opstappen)) {
+    if (tram->opstappen(opstappen)) {
         std::string out = "In station " + station + " stapten " + std::to_string(opstappen) +
                           " mensen op tram " + std::to_string(spoor) + ".\n";
         exp->write(out, os);
