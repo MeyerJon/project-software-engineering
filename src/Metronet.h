@@ -93,7 +93,7 @@ public:
      * REQUIRE((stations.find(station) != stations.end()), "Station bestaat niet in het metronet.");\n
      * REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");\n
      */
-     bool opstappenAfStappen(std::string station, Exporter* exp, std::ostream& os);
+     bool opstappenAfstappen(std::string station, Exporter* exp, std::ostream& os);
 };
 
 #endif /* SRC_METRONET_H_ */

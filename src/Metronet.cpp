@@ -12,10 +12,10 @@ Metronet::Metronet() {
 }
 
 Metronet::~Metronet() {
-    for (auto s : stations) {
+    for (auto& s : stations) {
         delete s.second;
     }
-    for (auto t : trams) {
+    for (auto& t : trams) {
         delete t.second;
     }
 }
@@ -152,7 +152,7 @@ void Metronet::printMetronet(Exporter* exp, std::ostream& os) {
     exp->finish(os);
 }
 
-bool Metronet::opstappenAfStappen(std::string station, Exporter* exp, std::ostream& os) {
+bool Metronet::opstappenAfstappen(std::string station, Exporter* exp, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
     REQUIRE((stations.find(station) != stations.end()),
