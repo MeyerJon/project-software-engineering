@@ -37,7 +37,9 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     bool importResult;
 
     myfile.open("testInput/zzzInput.xml");
-    myfile << "";
+    myfile << "EY BOYZZZ, dit is een eerste inputbestand.";
+
+    myfile.close();
 }
 
 TEST_F(MetronetInputTest, InputLegalSystems) {
