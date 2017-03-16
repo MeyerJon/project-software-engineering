@@ -1,0 +1,34 @@
+InputTest:: 
+	Check of file bestaat,
+	Clean systeem,
+	Parse bestand,
+	if (check consistency == true) SuccesEnum endResult = Succes
+	else SuccesEnum endResult = PartialImport
+
+endResult zegt of import gelukt is, import hangt af van correctheid inputbestand en systeem.
+
+Herhaal zo meerdere tests:
+	Juiste invoer
+	Foute invoer
+	Fouten tegen XML
+		
+
+
+DomainTest::
+	Kijk properly initialized elke klasse.
+	Toevoegen van objecten en check consistency, check attributen correct.
+		Juiste objecten en foute. Dus stations met/zonder volgende/vorige. Sporen (Stations) die niet lopen.
+	Verplaatsen van Tram, opstappen, capaciteit personen op tram.
+
+	Contract violations (EXPECT_DEATH), zie TicTacToeDomainTests.cpp ContractViolations
+
+
+
+OutputTest::
+	Test the compare files.	
+	Initialize systeem, creeer output file, vergelijk met verwachte output.
+	Doe dit voor juiste systemen.
+	Verkeerde systemen.
+	Verschillende systemen.
+
+	Test de verschillende output formaten
