@@ -149,7 +149,6 @@ void Metronet::printMetronet(Exporter* exp, std::ostream& os) {
         out += std::to_string(trams[station->getSpoor()]->getZitplaatsen()) + " zitplaatsen. \n";
         exp->write(out, os);
     }
-    exp->finish(os);
 }
 
 bool Metronet::opstappenAfstappen(std::string station, Exporter* exp, std::ostream& os) {
