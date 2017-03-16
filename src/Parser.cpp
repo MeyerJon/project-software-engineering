@@ -102,7 +102,8 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
         }
     }
     bool consistency = metro.checkConsistent(exp, os);
-    for (auto s : metro.getStations()) {
+    metro.printMetronet(exp, os);
+    for (auto& s : metro.getStations()) {
         Station* station = s.second;
         metro.opStappenAfStappen(station->getNaam(), exp, os);
     }

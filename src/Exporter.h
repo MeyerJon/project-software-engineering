@@ -9,6 +9,8 @@
 #define SRC_EXPORTER_H_
 
 #include <iostream>
+#include <string>
+#include <algorithm>
 #include "DesignByContract.h"
 
 class Exporter {
@@ -28,17 +30,17 @@ public:
      *  \param os De stream waar de output naar gestuurd zal worden.
      *
      * REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van write.");\n
+     * ENSURE(documentStarted, "Document was niet aangemaakt bij de aanroep van write.");\n
      */
     virtual void write(std::string& output, std::ostream& os);
 
-protected:
-    /** \brief Valideer de output formaat.
+    /** \brief Stuurt de nodige informatie naar de output stream om het document correct af te sluiten.
      *  \param os De stream waar de output naar gestuurd zal worden.
      *
-     * REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van validate,");\n
-     * ENSURE((documentStarted == true), "Document werd niet aangemaakt bij de aanroep van validate.");\n
+     *  REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van finish.");\n
+     *  REQUIRE(documentStarted, "Document was niet aangemaakt voor de aanroep van finish.");\n
      */
-    virtual void validate(std::ostream& os);
+     virtual void finish(std::ostream& os);
 };
 
 class ExporterCLI : public Exporter {
@@ -50,29 +52,21 @@ class ExporterTXT : public Exporter {
 };
 
 class ExporterHTML : public Exporter {
+private:
+    bool documentStarted;
 public:
     virtual void write(std::string& output, std::ostream& os);
 
-protected:
-    virtual void validate(std::ostream& os);
+    virtual void finish(std::ostream& os);
 
+private:
     /** \brief Valideer de HTML header.
      *  \param os De stream waar de output naar gestuurd zal worden.
      *
-     * REQUIRE(this->properlyInitialised(), "ExporterHTML was niet geinitialiseerd bij het aanroepen van validateHead.");\n
-     * REQUIRE(documentStarted == false), "Document was al aangemaakt voor de aanroep van validateHead.");\n
-     * ENSURE((documentStarted == true), "Document werd niet aangemaakt bij de aanroep van validateHead.");\n
+     * REQUIRE(this->properlyInitialised(), "ExporterHTML was niet geinitialiseerd bij de aanroep van createHTMLHead.");\n
+     * REQUIRE(!documentStarted, "Document was aangemaakt voor de aanroep van createHTMLHead.");\n
      */
-    void validateHead(std::ostream& os);
-
-    /** \brief Valideer de HTML tail.
-     *  \param os De stream waar de output naar gestuurd zal worden.
-     *
-     * REQUIRE(this->properlyInitialised(), "ExporterHTML was niet geinitialiseerd bij het aanroepen van validateTail.");\n
-     * REQUIRE((documentStarted == true), "Document was nog niet aangemaakt bij de aanroep van validateTail.");
-     * ENSURE((documentStarted == true), "Document werd niet aangemaakt bij de aanroep van validateTail.");.\n
-     */
-    void validateTail(std::ostream& os);
+    void createHTMLHead(std::ostream& os);
 };
 
 #endif /* SRC_EXPORTER_H_ */
