@@ -13,7 +13,8 @@ int main() {
     Exporter* expCLI = new ExporterCLI;
     Parser parsCLI(expCLI);
     Metronet metronetCLI;
-    parsCLI.setup(metronetCLI, "testInput/IncorrectSystemInput2.xml", std::cout);
+    parsCLI.setup(metronetCLI, "testInput/HappyDayInput.xml", std::cout);
+    metronetCLI.rondrijden(expCLI, std::cout);
     delete expCLI;
     return 0;
 }

@@ -213,6 +213,16 @@ bool Metronet::opstappenAfstappen(std::string station, Exporter* exp, std::ostre
     return consistent;
 }
 
+void Metronet::rondrijden(Exporter* exp, std::ostream& os) {
+    for(auto& p : trams){
+        Tram* t = p.second;
+        do{
+            opstappenAfstappen(t->getHuidigStation(), exp, os);
+            t->verplaatsTram(stations[t->getHuidigStation()]->getVolgende(), exp, os);
+        }while(t->getHuidigStation() != t->getBeginStation());
+    }
+}
+
 void Metronet::reset() {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij aanroep van reset.");

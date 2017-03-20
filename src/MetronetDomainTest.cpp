@@ -3,3 +3,7 @@
 //
 
 #include "MetronetDomainTest.h"
+
+TEST_F(MetronetDomainTest, VoorbeeldTest){
+    ASSERT_TRUE(metronet.properlyInitialised());
+}

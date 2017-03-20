@@ -106,6 +106,15 @@ public:
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");\n
      */
+
+    /** \brief Emuleert het rondrijden van
+     *
+     *
+     * @return
+     */
+
+     void rondrijden(Exporter* exp, std::ostream& os);
+
      void reset();
 };
 
