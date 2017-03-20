@@ -55,14 +55,14 @@ TEST_F(MetronetInputTest, InputLegalSystems) {
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
-    for (int i = 1; i <= 3; i++) {
+    for (int i = 1; i <= 2; i++) {
         filename = "testInput/LegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
         Parser p(exp);
-        p.setup(metronet, filename, dummy);
+        ASSERT_TRUE(p.setup(metronet, filename, dummy));
         ASSERT_TRUE(metronet.checkConsistent(exp, dummy));
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
@@ -94,7 +94,7 @@ TEST_F(MetronetInputTest, InputIllegalSystems) {
 
         std::ostream dummy(0);
         Parser p(exp);
-        p.setup(metronet, filename, dummy);
+        ASSERT_FALSE(p.setup(metronet, filename, dummy));
         ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
         metronet.reset();
     }
@@ -147,7 +147,7 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
 
         std::ostream dummy(0);
         Parser p(exp);
-        p.setup(metronet, filename, dummy);
+        ASSERT_FALSE(p.setup(metronet, filename, dummy));
         ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
         metronet.reset();
     }
@@ -180,7 +180,7 @@ TEST_F(MetronetInputTest, InputSyntaxErrorSystems) {
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
-    for (int i = 1; i <= 2; i++) {
+    for (int i = 1; i <= 3; i++) {
         filename = "testInput/SyntaxErrorSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
