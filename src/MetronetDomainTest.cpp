@@ -31,7 +31,7 @@ TEST_F(MetronetDomainTest, CheckConsistent){
 
     // Check if the inconsistent nets are evaluated correctly
     for(int i = 1; i <= TESTS_INCONSISTENT; i++){
-        filename = "testInput/InonsistentNet" + std::to_string(i) + ".xml";
+        filename = "testInput/InconsistentNet" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
