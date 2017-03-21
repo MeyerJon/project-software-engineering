@@ -84,22 +84,6 @@ TEST_F(MetronetInputTest, InputLegalSystems3) {
 }
 */
 
-TEST_F(MetronetInputTest, InputIllegalSystems) {
-    ASSERT_TRUE(DirectoryExists("testInput"));
-
-    std::string filename;
-    for (int i = 1; i <= 4; i++) {
-        filename = "testInput/IllegalSystemInput" + std::to_string(i) + ".xml";
-        ASSERT_TRUE(FileExists(filename));
-        ASSERT_TRUE(metronet.properlyInitialised());
-
-        std::ostream dummy(0);
-        Parser p(exp);
-        ASSERT_EQ(p.setup(metronet, filename, dummy), PartialImport);
-        ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
-        metronet.reset();
-    }
-}
 /*
 TEST_F(MetronetInputTest, InputIllegalSystems1) {
     ASSERT_TRUE(DirectoryExists("testInput"));
