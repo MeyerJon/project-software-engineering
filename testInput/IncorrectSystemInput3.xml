@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <ROOT>
     <STATION>
-        <naam>A</naam>
+    	<naam>A</naam>
         <volgende>B</volgende>
         <vorige>C</vorige>
-        <spoor>twaalf</spoor>
-        <opstappen>-1</opstappen>
+        <spoor>12</spoor>
+	<opstappen>twaalef</opstappen>
     </STATION>
     <STATION>
         <naam>B</naam>
@@ -21,8 +21,8 @@
     </STATION>
     <TRAM>
         <lijnNr>12</lijnNr>
-        <zitplaatsen>32</zitplaatsen>
+        <zitplaatsen>10</zitplaatsen>
         <snelheid>60</snelheid>
-        <beginStation>A</beginStation>
+        <beginStation>B</beginStation>
     </TRAM>
 </ROOT>

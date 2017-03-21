@@ -151,6 +151,8 @@ bool Metronet::checkConsistent(Exporter* exp, std::ostream& os) {
     }
     // Elk spoor maximaal een keer door elk station komt
     // Per woensdag 8 maart: dit is niet mogelijk
+    // Elk spoor maximaal een keer voorkomen over alle circulair verbonden stations
+    // Per dinsdag 21 maart: dit is niet mogelijk
     return consistent;
 }
 

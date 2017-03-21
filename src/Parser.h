@@ -15,6 +15,11 @@
 #include "tinystr.h"
 #include "Exporter.h"
 
+enum SuccesEnum {
+    Success,
+    PartialImport,
+    BadImport
+};
 
 class Parser {
 private:
@@ -33,7 +38,7 @@ public:
      * REQUIRE(this->properlyInitialised, "De parser was niet geinitialiseerd bij het aanroepen van setupStations.");\n
      * REQUIRE(metro.properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");\n
      */
-    bool setup(Metronet& metro, std::string filename, std::ostream& os);
+    SuccesEnum setup(Metronet& metro, std::string filename, std::ostream& os);
 
 };
 

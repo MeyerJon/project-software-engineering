@@ -8,11 +8,6 @@
 
 #include <iostream>
 
-enum SuccesEnum {
-    Succes,
-    PartialImport,
-    BadImport
-};
 
 bool DirectoryExists(const std::string dirname);
 
