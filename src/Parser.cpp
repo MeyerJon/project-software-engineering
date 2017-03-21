@@ -17,7 +17,7 @@ Parser::Parser(Exporter* exp) {
     initCheck = this;
 }
 
-SuccesEnum Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
+SuccessEnum Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
     TiXmlDocument doc;
     if (!doc.LoadFile(filename.c_str())) {
         os << "ERROR: Kan bestand " + filename + " niet openen.\n";
@@ -36,7 +36,7 @@ SuccesEnum Parser::setup(Metronet& metro, std::string filename, std::ostream& os
         return BadImport;
     }
 
-    SuccesEnum endResult = Success;
+    SuccessEnum endResult = Success;
     // Iterate over all elements
     for(TiXmlElement* elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()){
         std::string elemName = elem->Value();

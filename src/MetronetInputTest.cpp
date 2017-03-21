@@ -14,10 +14,10 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 
     std::ostream dummy(0);
     Parser p(exp);
-    SuccesEnum importResult = p.setup(metronet, "testInput/HappyDayInput.xml", dummy);
+    SuccessEnum importResult = p.setup(metronet, "testInput/HappyDayInput.xml", dummy);
     ASSERT_EQ(importResult, Success);
 
-    SuccesEnum endResult;
+    SuccessEnum endResult;
     if (metronet.checkConsistent(exp, dummy)) endResult = Success;
     else endResult = PartialImport;
 

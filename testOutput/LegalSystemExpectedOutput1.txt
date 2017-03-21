@@ -1,0 +1,19 @@
+	 ---METRONET---
+Station A
+<- Station C
+-> Station B
+Spoor 12, 32 zitplaatsen. 
+Station B
+<- Station A
+-> Station C
+Spoor 12, 32 zitplaatsen. 
+Station C
+<- Station B
+-> Station A
+Spoor 12, 32 zitplaatsen. 
+In station A stapten 0 mensen af tram 12.
+In station A stapten 0 mensen op tram 12.
+In station B stapten 0 mensen af tram 12.
+In station B stapten 0 mensen op tram 12.
+In station C stapten 0 mensen af tram 12.
+In station C stapten 0 mensen op tram 12.

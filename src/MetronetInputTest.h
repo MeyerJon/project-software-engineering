@@ -14,6 +14,7 @@
 #include "Metronet.h"
 #include "Parser.h"
 
+
 class MetronetInputTest: public ::testing::Test {
 protected:
     friend class Metronet;
@@ -28,7 +29,7 @@ protected:
 
     Metronet metronet;
     Exporter* exp;
-    SuccesEnum endResult;
+    SuccessEnum endResult;
 };
 
 #endif //PSE_METRONETINPUTTESTS_H

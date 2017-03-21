@@ -1,0 +1,4 @@
+ERROR: Spoor 13 komt niet door een station.
+ERROR: Spoor 12 heeft geen tram.
+ERROR: Spoor 12 heeft geen tram.
+ERROR: Spoor 12 heeft geen tram.

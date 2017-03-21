@@ -16,24 +16,45 @@ int main(int argc, const char* argv[]) {
         std::string output;
         if (argc == 4) output = argv[3];
         Exporter* exp;
-        Parser parser(exp);
         Metronet metronet;
         if (expType == "cli") {
             exp = new ExporterCLI;
-            parser.setup(metronet, input, std::cout);
+            Parser parser(exp);
+            SuccessEnum importResult = parser.setup(metronet, input, std::cout);
+            if (importResult != BadImport) {
+                if (metronet.checkConsistent(exp, std::cout)) {
+                    metronet.printMetronet(exp, std::cout);
+                    metronet.rondrijden(exp, std::cout);
+                }
+            }
         }
         else if (expType == "html") {
             exp = new ExporterHTML;
             std::ofstream of;
-            of.open(output + ".html");
-            parser.setup(metronet, input, of);
+            of.open(output + ".html", std::ofstream::trunc);
+            Parser parser(exp);
+            SuccessEnum importResult = parser.setup(metronet, input, of);
+            if (importResult != BadImport) {
+                if (metronet.checkConsistent(exp, of)) {
+                    metronet.printMetronet(exp, of);
+                    metronet.rondrijden(exp, of);
+                }
+            }
         }
         else if (expType == "txt") {
-            exp  = new ExporterTXT;
+            exp = new ExporterTXT;
             std::ofstream of;
-            of.open(output + ".txt");
-            parser.setup(metronet, input, of);
+            of.open(output + ".txt", std::ofstream::trunc);
+            Parser parser(exp);
+            SuccessEnum importResult = parser.setup(metronet, input, of);
+            if (importResult != BadImport) {
+                if (metronet.checkConsistent(exp, of)) {
+                    metronet.printMetronet(exp, of);
+                    metronet.rondrijden(exp, of);
+                }
+            }
         }
+        delete exp;
     } else {
         Exporter* expCLI = new ExporterCLI;
         Parser parsCLI(expCLI);
