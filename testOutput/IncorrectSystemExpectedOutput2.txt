@@ -1,0 +1,2 @@
+ERROR: Attribuut 'spoor' heeft een foute waarde. Station niet toegevoegd.
+ERROR: Station B heeft geen vorig station.

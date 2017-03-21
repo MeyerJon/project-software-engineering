@@ -2,8 +2,8 @@
 	Check of file bestaat,
 	Clean systeem,
 	Parse bestand,
-	if (check consistency == true) SuccesEnum endResult = Succes
-	else SuccesEnum endResult = PartialImport
+	if (check consistency == true) SuccessEnum endResult = Succes
+	else SuccessEnum endResult = PartialImport
 
 endResult zegt of import gelukt is, import hangt af van correctheid inputbestand en systeem.
 

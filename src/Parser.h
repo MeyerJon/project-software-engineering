@@ -15,7 +15,7 @@
 #include "tinystr.h"
 #include "Exporter.h"
 
-enum SuccesEnum {
+enum SuccessEnum {
     Success,
     PartialImport,
     BadImport
@@ -38,7 +38,7 @@ public:
      * REQUIRE(this->properlyInitialised, "De parser was niet geinitialiseerd bij het aanroepen van setupStations.");\n
      * REQUIRE(metro.properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");\n
      */
-    SuccesEnum setup(Metronet& metro, std::string filename, std::ostream& os);
+    SuccessEnum setup(Metronet& metro, std::string filename, std::ostream& os);
 
 };
 

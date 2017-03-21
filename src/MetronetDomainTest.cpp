@@ -28,7 +28,7 @@ TEST_F(MetronetDomainTest, ProperlyInitialised){
 TEST_F(MetronetDomainTest, CheckConsistent){
     Parser p(exp);
     std::string filename;
-    SuccesEnum importResult;
+    SuccessEnum importResult;
     // Check if the consistent nets are evaluated correctly
     for(int i = 1; i <= TESTS_CONSISTENT; i++){
         filename = "testInput/ConsistentNet" + std::to_string(i) + ".xml";
