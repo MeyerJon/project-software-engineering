@@ -24,7 +24,12 @@ SuccesEnum Parser::setup(Metronet& metro, std::string filename, std::ostream& os
         return BadImport;
     }
     TiXmlElement* root = doc.FirstChildElement();
-    std::string rootName = root->Value();
+    std::string rootName;
+    if (root != NULL) rootName = root->Value();
+    else {
+        os << "ERROR: Er is geen root.\n";
+        return BadImport;
+    }
     if (!(rootName == "ROOT" || rootName == "METRONET")) {
         os << "ERROR: Geen root gevonden. Gelieve een root object genaamd "
            << "<ROOT> of <METRONET> aan te maken.\n";
