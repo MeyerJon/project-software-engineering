@@ -57,14 +57,20 @@ TEST_F(MetronetInputTest, InputLegalSystems) {
 
     std::string filename;
     for (int i = 1; i <= TESTS_LEGAL; i++) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8c27e13e47047703bdfeead8983cff05333012ee
         filename = "testInput/LegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
         ASSERT_EQ(metronet.setup(filename, dummy), Success);
+<<<<<<< HEAD
         ASSERT_TRUE(metronet.checkConsistent(dummy));
+=======
+>>>>>>> 8c27e13e47047703bdfeead8983cff05333012ee
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
@@ -80,8 +86,13 @@ TEST_F(MetronetInputTest, InputIllegalSystems) {
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
+<<<<<<< HEAD
         ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
         ASSERT_FALSE(metronet.checkConsistent(dummy));
+=======
+
+        ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
+>>>>>>> 8c27e13e47047703bdfeead8983cff05333012ee
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
@@ -99,7 +110,10 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
         std::ostream dummy(0);
         ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
         ASSERT_FALSE(metronet.checkConsistent(dummy));
+<<<<<<< HEAD
         ASSERT_FALSE(FileIsEmpty(filename));
+=======
+>>>>>>> 8c27e13e47047703bdfeead8983cff05333012ee
         metronet.reset();
     }
 }
