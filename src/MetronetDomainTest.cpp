@@ -10,9 +10,8 @@ const unsigned int TESTS_CONSISTENT = 2;
 const unsigned int TESTS_INCONSISTENT = 3;
 
 TEST_F(MetronetDomainTest, ProperlyInitialised){
-    Parser p(exp);
     std::ostream dummy(0);
-    p.setup(metronet, "testInput/HappyDayInput.xml", dummy);
+    metronet.setup("testInput/HappyDayInput.xml", dummy);
 
     ASSERT_TRUE(metronet.properlyInitialised());
     for(auto p : metronet.getTrams()){
@@ -26,7 +25,6 @@ TEST_F(MetronetDomainTest, ProperlyInitialised){
 }
 
 TEST_F(MetronetDomainTest, CheckConsistent){
-    Parser p(exp);
     std::string filename;
     SuccessEnum importResult;
     // Check if the consistent nets are evaluated correctly
@@ -36,10 +34,9 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        Parser p(exp);
-        importResult = p.setup(metronet, filename, dummy);
+        importResult = metronet.setup(filename, dummy);
         ASSERT_EQ(importResult, Success);
-        ASSERT_TRUE(metronet.checkConsistent(exp, dummy));
+        ASSERT_TRUE(metronet.checkConsistent(dummy));
         metronet.reset();
     }
 
@@ -50,10 +47,9 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        Parser p(exp);
-        importResult = p.setup(metronet, filename, dummy);
+        importResult = metronet.setup(filename, dummy);
         ASSERT_EQ(importResult, Success);
-        ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
+        ASSERT_FALSE(metronet.checkConsistent(dummy));
         metronet.reset();
     }
 }

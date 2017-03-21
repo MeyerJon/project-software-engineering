@@ -13,12 +13,11 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     ASSERT_TRUE(metronet.properlyInitialised());
 
     std::ostream dummy(0);
-    Parser p(exp);
-    SuccessEnum importResult = p.setup(metronet, "testInput/HappyDayInput.xml", dummy);
+    SuccessEnum importResult = metronet.setup("testInput/HappyDayInput.xml", dummy);
     ASSERT_EQ(importResult, Success);
 
     SuccessEnum endResult;
-    if (metronet.checkConsistent(exp, dummy)) endResult = Success;
+    if (metronet.checkConsistent(dummy)) endResult = Success;
     else endResult = PartialImport;
 
     Station* A = metronet.getStations()["A"];
@@ -63,8 +62,7 @@ TEST_F(MetronetInputTest, InputLegalSystems) {
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        Parser p(exp);
-        ASSERT_EQ(p.setup(metronet, filename, dummy), Success);
+        ASSERT_EQ(metronet.setup(filename, dummy), Success);
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
@@ -80,9 +78,8 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        Parser p(exp);
-        ASSERT_EQ(p.setup(metronet, filename, dummy), PartialImport);
-        ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
+        ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
+        ASSERT_FALSE(metronet.checkConsistent(dummy));
         metronet.reset();
     }
 }
@@ -97,8 +94,7 @@ TEST_F(MetronetInputTest, InputSyntaxErrorSystems) {
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        Parser p(exp);
-        ASSERT_EQ(p.setup(metronet, filename, dummy), BadImport);
+        ASSERT_EQ(metronet.setup(filename, dummy), BadImport);
         metronet.reset();
     }
 }

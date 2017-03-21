@@ -12,8 +12,6 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
-#include "Parser.h"
-
 
 class MetronetInputTest: public ::testing::Test {
 protected:
@@ -21,6 +19,7 @@ protected:
 
     virtual void SetUp() {
         exp = new ExporterCLI;
+        metronet = Metronet(exp);
     }
 
     virtual void TearDown() {
@@ -29,7 +28,6 @@ protected:
 
     Metronet metronet;
     Exporter* exp;
-    SuccessEnum endResult;
 };
 
 #endif //PSE_METRONETINPUTTESTS_H

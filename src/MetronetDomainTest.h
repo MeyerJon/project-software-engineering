@@ -13,7 +13,6 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
-#include "Parser.h"
 
 class MetronetDomainTest: public ::testing::Test {
 protected:
@@ -21,6 +20,7 @@ protected:
 
     virtual void SetUp() {
         exp = new ExporterCLI;
+        metronet = Metronet(exp);
     }
 
     virtual void TearDown() {

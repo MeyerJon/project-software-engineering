@@ -12,7 +12,6 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
-#include "Parser.h"
 
 const unsigned int TESTS_LEGAL = 3;
 const unsigned int TESTS_ILLEGAL = 4;
@@ -26,6 +25,7 @@ protected:
 
     virtual void SetUp() {
         exp = new ExporterTXT;
+        metronet = Metronet(exp);
     }
 
     virtual void TearDown() {

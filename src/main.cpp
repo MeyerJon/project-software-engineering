@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "Parser.h"
+#include "Metronet.h"
 
 int main(int argc, const char* argv[]) {
     if (argc != 1) {
@@ -16,55 +16,53 @@ int main(int argc, const char* argv[]) {
         std::string output;
         if (argc == 4) output = argv[3];
         Exporter* exp;
-        Metronet metronet;
         if (expType == "cli") {
             exp = new ExporterCLI;
-            Parser parser(exp);
-            SuccessEnum importResult = parser.setup(metronet, input, std::cout);
+            Metronet metronet(exp);
+            SuccessEnum importResult = metronet.setup(input, std::cout);
             if (importResult != BadImport) {
-                if (metronet.checkConsistent(exp, std::cout)) {
-                    metronet.printMetronet(exp, std::cout);
-                    metronet.rondrijden(exp, std::cout);
+                if (metronet.checkConsistent(std::cout)) {
+                    metronet.printMetronet(std::cout);
+                    metronet.rondrijden(std::cout);
                 }
             }
         }
         else if (expType == "html") {
             exp = new ExporterHTML;
+            Metronet metronet(exp);
             std::ofstream of;
             of.open(output + ".html", std::ofstream::trunc);
-            Parser parser(exp);
-            SuccessEnum importResult = parser.setup(metronet, input, of);
+            SuccessEnum importResult = metronet.setup(input, of);
             if (importResult != BadImport) {
-                if (metronet.checkConsistent(exp, of)) {
-                    metronet.printMetronet(exp, of);
-                    metronet.rondrijden(exp, of);
+                if (metronet.checkConsistent(of)) {
+                    metronet.printMetronet(of);
+                    metronet.rondrijden(of);
                 }
             }
         }
         else if (expType == "txt") {
             exp = new ExporterTXT;
+            Metronet metronet(exp);
             std::ofstream of;
             of.open(output + ".txt", std::ofstream::trunc);
-            Parser parser(exp);
-            SuccessEnum importResult = parser.setup(metronet, input, of);
+            SuccessEnum importResult = metronet.setup(input, of);
             if (importResult != BadImport) {
-                if (metronet.checkConsistent(exp, of)) {
-                    metronet.printMetronet(exp, of);
-                    metronet.rondrijden(exp, of);
+                if (metronet.checkConsistent(of)) {
+                    metronet.printMetronet(of);
+                    metronet.rondrijden(of);
                 }
             }
         }
         delete exp;
     } else {
-        Exporter* expCLI = new ExporterCLI;
-        Parser parsCLI(expCLI);
-        Metronet metronetCLI;
-        parsCLI.setup(metronetCLI, "testInput/HappyDayInput.xml", std::cout);
-        if (metronetCLI.checkConsistent(expCLI, std::cout)) {
-            metronetCLI.printMetronet(expCLI, std::cout);
-            metronetCLI.rondrijden(expCLI, std::cout);
+        Exporter* exp = new ExporterCLI;
+        Metronet metronet(exp);
+        metronet.setup("testInput/HappyDayInput.xml", std::cout);
+        if (metronet.checkConsistent(std::cout)) {
+            metronet.printMetronet(std::cout);
+            metronet.rondrijden(std::cout);
         }
-        delete expCLI;
+        delete exp;
     }
     return 0;
 }

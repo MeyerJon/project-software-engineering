@@ -16,11 +16,10 @@ TEST_F(MetronetOutputTest, OutputLegalSystemsTxt) {
         std::string expectedOutput = "testOutput/LegalSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        Parser p(exp);
-        p.setup(metronet, filename, output);
-        if (metronet.checkConsistent(exp, output)){
-            metronet.printMetronet(exp, output);
-            metronet.rondrijden(exp, output);
+        metronet.setup(filename, output);
+        if (metronet.checkConsistent(output)){
+            metronet.printMetronet(output);
+            metronet.rondrijden(output);
         }
         output.close();
         ASSERT_TRUE(FileCompare(outputName, expectedOutput));
@@ -40,11 +39,10 @@ TEST_F(MetronetOutputTest, OutputIllegalSystemsTxt) {
         std::string expectedOutput = "testOutput/IllegalSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        Parser p(exp);
-        p.setup(metronet, filename, output);
-        if (metronet.checkConsistent(exp, output)) {
-            metronet.printMetronet(exp, output);
-            metronet.rondrijden(exp, output);
+        metronet.setup(filename, output);
+        if (metronet.checkConsistent(output)) {
+            metronet.printMetronet(output);
+            metronet.rondrijden(output);
         }
         output.close();
         ASSERT_TRUE(FileCompare(outputName, expectedOutput));
@@ -64,11 +62,10 @@ TEST_F(MetronetOutputTest, OutputInconsistentNetsTxt) {
         std::string expectedOutput = "testOutput/InconsistentNetExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        Parser p(exp);
-        p.setup(metronet, filename, output);
-        if (metronet.checkConsistent(exp, output)) {
-            metronet.printMetronet(exp, output);
-            metronet.rondrijden(exp, output);
+        metronet.setup(filename, output);
+        if (metronet.checkConsistent(output)) {
+            metronet.printMetronet(output);
+            metronet.rondrijden(output);
         }
         output.close();
         ASSERT_TRUE(FileCompare(outputName, expectedOutput));
@@ -88,11 +85,10 @@ TEST_F(MetronetOutputTest, OutputIncorrectSystemsTxt) {
         std::string expectedOutput = "testOutput/IncorrectSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        Parser p(exp);
-        p.setup(metronet, filename, output);
-        if (metronet.checkConsistent(exp, output)) {
-            metronet.printMetronet(exp, output);
-            metronet.rondrijden(exp, output);
+        metronet.setup(filename, output);
+        if (metronet.checkConsistent(output)) {
+            metronet.printMetronet(output);
+            metronet.rondrijden(output);
         }
         output.close();
         ASSERT_TRUE(FileCompare(outputName, expectedOutput));
@@ -112,11 +108,10 @@ TEST_F(MetronetOutputTest, OutputSyntaxErrorSystemsTxt) {
         std::string expectedOutput = "testOutput/SyntaxErrorSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        Parser p(exp);
-        if (p.setup(metronet, filename, output) != BadImport) {
-            if (metronet.checkConsistent(exp, output)) {
-                metronet.printMetronet(exp, output);
-                metronet.rondrijden(exp, output);
+        if (metronet.setup(filename, output) != BadImport) {
+            if (metronet.checkConsistent(output)) {
+                metronet.printMetronet(output);
+                metronet.rondrijden(output);
             }
         }
         output.close();

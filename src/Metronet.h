@@ -14,26 +14,47 @@
 #include <string>
 #include <algorithm>
 
+#include "tinyxml.h"
+#include "tinystr.h"
 #include "Station.h"
 #include "Tram.h"
 #include "Exporter.h"
 
 #include "DesignByContract.h"
 
+enum SuccessEnum {
+    Success,
+    PartialImport,
+    BadImport
+};
+
 class Metronet {
 private:
+    Exporter* exp;
     std::map<std::string, Station*> stations;
     std::map<int, Tram*> trams;
     std::vector<int> sporen;
     Metronet* initCheck;
 public:
     Metronet();
+    Metronet(Exporter* exp);
     virtual ~Metronet();
+
+    Metronet& operator=(const Metronet& rhs);
 
     /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
      *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
      */
     bool properlyInitialised();
+
+    /** \brief Verwerkt het XML-bestand.
+     *
+     * \param filename De naam van het XML-bestand.
+     * \param os De stream waarnaar de output geschreven wordt (nodig voor de exporter).
+     *
+     *  \pre REQUIRE(this->properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");\n
+     */
+    SuccessEnum setup(std::string filename, std::ostream& os);
 
     /** \brief Geeft alle stations in het metronet terug.
      *  \return Map met stations in het metronet.
@@ -82,7 +103,7 @@ public:
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");\n
      */
-    bool checkConsistent(Exporter* exp, std::ostream& os);
+    bool checkConsistent(std::ostream& os);
 
     /** \brief Print het hele metronet.
      *
@@ -91,7 +112,7 @@ public:
      *
      * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");\n
      */
-    void printMetronet(Exporter* exp, std::ostream& os);
+    void printMetronet(std::ostream& os);
 
     /** \brief Behandelt het opstappen en afstappen van passagiers.
      *  \param station Het station waar mensen opstappen en afstappen.
@@ -100,7 +121,7 @@ public:
      * REQUIRE((stations.find(station) != stations.end()), "Station bestaat niet in het metronet.");\n
      * REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");\n
      */
-     bool opstappenAfstappen(std::string station, Exporter* exp, std::ostream& os);
+    bool opstappenAfstappen(std::string station, std::ostream& os);
 
 
     /** \brief Emuleert het rondrijden van trams
@@ -108,7 +129,7 @@ public:
      *
      */
 
-    void rondrijden(Exporter* exp, std::ostream& os);
+    void rondrijden(std::ostream& os);
 
     /** \brief Reset heel het systeem.
     *
