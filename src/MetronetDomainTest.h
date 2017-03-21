@@ -13,25 +13,22 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
-#include "Parser.h"
 
 class MetronetDomainTest: public ::testing::Test {
 protected:
     friend class Metronet;
 
     virtual void SetUp() {
-        Exporter* exp = new ExporterCLI;
-        Parser p(exp);
-        std::ostream dummy(0);
-        p.setup(metronet, "xmls/DummyStations.xml", dummy);
-        delete exp;
+        exp = new ExporterCLI;
+        metronet = Metronet(exp);
     }
 
     virtual void TearDown() {
-
+        delete exp;
     }
 
     Metronet metronet;
+    Exporter* exp;
 };
 
 

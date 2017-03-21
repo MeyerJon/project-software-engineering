@@ -75,6 +75,7 @@ void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
 
 bool Tram::afstappen(int afstappen){
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
+    REQUIRE(afstappen >= 0, "Afstappen kan geen negatieve waarde hebben bij aanroep van afstappen.");
     if (afstappen <= passagiers) {
         passagiers -= afstappen;
         return true;
@@ -86,6 +87,7 @@ bool Tram::afstappen(int afstappen){
 
 bool Tram::opstappen(int opstappen) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
+    REQUIRE(opstappen >= 0, "Opstappen kan geen negatieve waarde hebben bij aanroep van opstappen.");
     if (opstappen <= zitplaatsen - passagiers) {
         passagiers += opstappen;
         return true;

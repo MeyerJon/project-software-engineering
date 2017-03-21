@@ -12,7 +12,6 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
-#include "Parser.h"
 
 const int illegalSystems;
 const int ;
@@ -25,6 +24,7 @@ protected:
 
     virtual void SetUp() {
         exp = new ExporterCLI;
+        metronet = Metronet(exp);
     }
 
     virtual void TearDown() {
@@ -33,7 +33,6 @@ protected:
 
     Metronet metronet;
     Exporter* exp;
-    SuccesEnum endResult;
 };
 
 #endif //PSE_METRONETINPUTTESTS_H
