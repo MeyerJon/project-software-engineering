@@ -19,13 +19,15 @@ protected:
     friend class Metronet;
 
     virtual void SetUp() {
-
+        exp = new ExporterCLI;
     }
 
     virtual void TearDown() {
+        delete exp;
     }
 
     Metronet metronet;
+    Exporter* exp;
 };
 
 #endif //PSE_METRONETOUTPUTTESTS_H
