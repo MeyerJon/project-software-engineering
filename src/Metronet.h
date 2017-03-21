@@ -102,19 +102,19 @@ public:
      */
      bool opstappenAfstappen(std::string station, Exporter* exp, std::ostream& os);
 
+
+    /** \brief Emuleert het rondrijden van trams
+     *
+     *
+     */
+
+    void rondrijden(Exporter* exp, std::ostream& os);
+
     /** \brief Reset heel het systeem.
-     *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");\n
-     */
-
-    /** \brief Emuleert het rondrijden van
-     *
-     *
-     * @return
-     */
-
-     void rondrijden(Exporter* exp, std::ostream& os);
-
+    *
+    *
+    * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");\n
+    */
      void reset();
 };
 

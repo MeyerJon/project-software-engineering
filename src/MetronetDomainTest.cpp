@@ -4,8 +4,8 @@
 
 #include "MetronetDomainTest.h"
 
-unsigned int TESTS_CONSISTENT = 2;
-unsigned int TESTS_INCONSISTENT = 3;
+const unsigned int TESTS_CONSISTENT = 2;
+const unsigned int TESTS_INCONSISTENT = 3;
 
 TEST_F(MetronetDomainTest, VoorbeeldTest){
     ASSERT_TRUE(metronet.properlyInitialised());
@@ -42,4 +42,27 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
         metronet.reset();
     }
+}
+
+TEST_F(MetronetDomainTest, VerplaatsTram){
+    Tram tram(10, 60, 2, "goodBegin");
+
+    ASSERT_EQ(tram.getHuidigStation(), tram.getBeginStation());
+
+    std::ostream dummy(0);
+    tram.verplaatsTram("TestStation1", exp, dummy);
+    ASSERT_EQ(tram.getHuidigStation(), "TestStation1");
+    tram.verplaatsTram("TestStation2", exp, dummy);
+    ASSERT_EQ(tram.getHuidigStation(), "TestStation2");
+    tram.verplaatsTram("goodBegin", exp, dummy);
+    ASSERT_EQ(tram.getHuidigStation(), "goodBegin");
+    ASSERT_EQ(tram.getHuidigStation(), tram.getBeginStation());
+}
+
+TEST_F(MetronetDomainTest, OpstappenAfstappenNormaal){
+    
+}
+
+TEST_F(MetronetDomainTest, OpstappenAfstappenOverflow){
+
 }
