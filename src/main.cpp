@@ -14,7 +14,10 @@ int main() {
     Parser parsCLI(expCLI);
     Metronet metronetCLI;
     parsCLI.setup(metronetCLI, "testInput/HappyDayInput.xml", std::cout);
-    metronetCLI.rondrijden(expCLI, std::cout);
+    if (metronetCLI.checkConsistent(expCLI, std::cout)) {
+        metronetCLI.printMetronet(expCLI, std::cout);
+        metronetCLI.rondrijden(expCLI, std::cout);
+    }
     delete expCLI;
     return 0;
 }

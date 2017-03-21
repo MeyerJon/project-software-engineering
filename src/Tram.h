@@ -36,66 +36,57 @@ public:
 
     /** \brief Geef de zitplaatsen terug van de tram.
      *  \return De zitplaatsen.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getZitplaatsen.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getZitplaatsen.");
      */
     int getZitplaatsen() const;
 
     /** \brief Geef de passagiers terug van de tram.
      *  \return De passagiers.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getPassagiers.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getPassagiers.");
      */
     int getPassagiers() const;
 
     /** \brief Geef de snelheid terug van de tram.
      *  \return De snelheid.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSnelheid.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSnelheid.");
      */
     int getSnelheid() const;
 
     /** \brief Geef het spoor terug.
      *  \return Het spoor.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSpoor.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getSpoor.");
      */
     int getSpoor() const;
 
     /** \brief Geef het beginstation terug.
      *  \return Het beginstation.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getBeginStation.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getBeginStation.");
      */
     std::string getBeginStation() const;
 
     /** \brief Geef het huidig station.
      *  \return Het huidig station.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");
      */
     std::string getHuidigStation() const;
 
     /** \brief Verplaatst een tram naar het opgegeven station.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van verplaatsTram.");\n
-     * ENSURE((huidigStation == station), "huidigStation is niet correct aangepast.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van verplaatsTram.");
+     *  \post ENSURE((huidigStation == station), "huidigStation is niet correct aangepast.");
      */
     void verplaatsTram(std::string station, Exporter* exp, std::ostream& os);
 
     /** \brief Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal - afstappende passagiers)
      *  \param afstappen Aantal passagiers dat afstapt.
      *  \return boolean Of er meer passagiers afstapten dan mogelijk.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
      */
     bool afstappen(int afstappen);
 
     /** \brief Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers)
      *  \param opstappen Aantal passagiers dat opstapt.
      *  \return boolean Of er meer passigiers opstapten dan mogelijk.
-     *
-     * REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van opstappen.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van opstappen.");
      */
     bool opstappen(int opstappen);
 };

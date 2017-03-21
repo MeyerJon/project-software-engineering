@@ -4,7 +4,8 @@
         <naam>A</naam>
         <volgende>B</volgende>
         <vorige>C</vorige>
-        <spoor>12</spoor>
+        <spoor>twaalf</spoor>
+        <opstappen>-1</opstappen>
     </STATION>
     <STATION>
         <naam>B</naam>
