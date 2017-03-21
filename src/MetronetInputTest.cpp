@@ -14,9 +14,10 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 
     std::ostream dummy(0);
     Parser p(exp);
-    EXPECT_TRUE(p.setup(metronet, "testInput/HappyDayInput.xml", dummy) == Succes);
+    SuccesEnum importResult = p.setup(metronet, "testInput/HappyDayInput.xml", dummy);
+    EXPECT_TRUE(importResult == Success);
 
-    if (metronet.checkConsistent(exp, dummy)) endResult = Succes;
+    if (metronet.checkConsistent(exp, dummy)) endResult = Success;
     else endResult = PartialImport;
 
     Station* A = metronet.getStations()["A"];
@@ -48,7 +49,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (t12->getZitplaatsen() != 32) endResult = BadImport;
     if (t12->getSnelheid() != 60) endResult = BadImport;
     if (t12->getBeginStation() != "A") endResult = BadImport;
-    ASSERT_EQ(endResult, Succes);
+    ASSERT_EQ(endResult, Success);
 }
 
 TEST_F(MetronetInputTest, InputLegalSystems) {

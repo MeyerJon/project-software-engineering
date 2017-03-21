@@ -24,7 +24,7 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         std::ostream dummy(0);
         Parser p(exp);
         importResult = p.setup(metronet, filename, dummy);
-        ASSERT_EQ(importResult, SuccessImport);
+        ASSERT_EQ(importResult, Success);
         ASSERT_TRUE(metronet.checkConsistent(exp, dummy));
         metronet.reset();
     }
@@ -37,7 +37,8 @@ TEST_F(MetronetDomainTest, CheckConsistent){
 
         std::ostream dummy(0);
         Parser p(exp);
-        ASSERT_EQ(p.setup(metronet, filename, dummy), SuccessImport);
+        importResult = p.setup(metronet, filename, dummy);
+        ASSERT_EQ(importResult, Success);
         ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
         metronet.reset();
     }
