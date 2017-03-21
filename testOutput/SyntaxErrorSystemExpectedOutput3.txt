@@ -1,1 +1,1 @@
-ERROR: Kan bestand testInput/SyntaxErrorSystemInput3.xml niet openen.
+ERROR: Er is geen root.
