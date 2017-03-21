@@ -13,10 +13,10 @@
 #include "MetronetUtils.h"
 #include "Metronet.h"
 
-const int illegalSystems;
-const int ;
-const int ;
-const int ;
+const unsigned int TESTS_LEGAL = 3;
+const unsigned int TESTS_ILLEGAL = 4;
+const unsigned int TESTS_INCORRECT = 3;
+const unsigned int TESTS_SYNTAX = 3;
 
 class MetronetInputTest: public ::testing::Test {
 protected:
