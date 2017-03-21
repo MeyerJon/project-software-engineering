@@ -119,4 +119,5 @@ TEST_F(MetronetDomainTest, OpstappenAfstappenNegative){
     Tram tram(20, 50, 1, "A");
 
     EXPECT_DEATH(tram.opstappen(-1), "");
+    EXPECT_DEATH(tram.afstappen(-1), "");
 }
