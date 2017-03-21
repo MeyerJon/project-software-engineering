@@ -4,7 +4,7 @@
 
 #include "MetronetOutputTest.h"
 
-TEST_F(MetronetOutputTest, OutputLegalSystems) {
+TEST_F(MetronetOutputTest, OutputLegalSystemsTxt) {
     ASSERT_TRUE(DirectoryExists("testInput"));
     std::string filename;
     for (int i = 1; i <= 4; i++) {
@@ -14,7 +14,7 @@ TEST_F(MetronetOutputTest, OutputLegalSystems) {
 
         std::ofstream output;
         std::string outputName = "testOutput/LegalSystemOutput" + std::to_string(i) + ".xml";
-        std::string expectedOutput = "testOutput/LegalSystemExpectedOutput" + std::to_string(i) + ".xml";
+        std::string expectedOutput = "testOutput/LegalSystemExpectedOutput" + std::to_string(i) + ".txt";
         output.open(outputName);
         Parser p(exp);
         SuccesEnum importResult = p.setup(metronet, filename, output);
@@ -23,5 +23,4 @@ TEST_F(MetronetOutputTest, OutputLegalSystems) {
         ASSERT_TRUE(FileCompare(outputName, expectedOutput));
         metronet.reset();
     }
-
 }
