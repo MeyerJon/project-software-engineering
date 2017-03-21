@@ -64,12 +64,10 @@ SuccesEnum Parser::setup(Metronet& metro, std::string filename, std::ostream& os
                         if (std::stoi(t) >= 0) spoor = std::stoi(t);
                     }
                     else if(attrName == "opstappen") {
-                        if (std::stoi(t) >= 0) opstappen = std::stoi(t);
-                        else throw std::invalid_argument("");
+                        opstappen = std::stoi(t);
                     }
                     else if(attrName == "afstappen") {
-                        if (std::stoi(t) >= 0) afstappen = std::stoi(t);
-                        else throw std::invalid_argument("");
+                        afstappen = std::stoi(t);
                     }
                     else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";

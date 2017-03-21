@@ -4,11 +4,25 @@
 
 #include "MetronetDomainTest.h"
 
+#include <limits>
+
 const unsigned int TESTS_CONSISTENT = 2;
 const unsigned int TESTS_INCONSISTENT = 3;
 
-TEST_F(MetronetDomainTest, VoorbeeldTest){
+TEST_F(MetronetDomainTest, ProperlyInitialised){
+    Parser p(exp);
+    std::ostream dummy(0);
+    p.setup(metronet, "testInput/HappyDayInput.xml", dummy);
+
     ASSERT_TRUE(metronet.properlyInitialised());
+    for(auto p : metronet.getTrams()){
+        Tram* t = p.second;
+        ASSERT_TRUE(t->properlyInitialised());
+    }
+    for(auto p : metronet.getStations()){
+        Station* s = p.second;
+        ASSERT_TRUE(s->properlyInitialised());
+    }
 }
 
 TEST_F(MetronetDomainTest, CheckConsistent){
@@ -60,9 +74,53 @@ TEST_F(MetronetDomainTest, VerplaatsTram){
 }
 
 TEST_F(MetronetDomainTest, OpstappenAfstappenNormaal){
-    
+    Tram smallTram(10, 50, 1, "A");
+    Tram bigTram(100, 30, 2, "B");
+
+    smallTram.opstappen(3);
+    ASSERT_EQ(smallTram.getPassagiers(), 3);
+    smallTram.opstappen(6);
+    ASSERT_EQ(smallTram.getPassagiers(), 9);
+    smallTram.afstappen(9);
+    ASSERT_EQ(smallTram.getPassagiers(), 0);
+    smallTram.opstappen(0);
+    ASSERT_EQ(smallTram.getPassagiers(), 0);
+    smallTram.afstappen(0);
+    ASSERT_EQ(smallTram.getPassagiers(), 0);
+
+    bigTram.opstappen(0);
+    ASSERT_EQ(bigTram.getPassagiers(), 0);
+    bigTram.opstappen(99);
+    ASSERT_EQ(bigTram.getPassagiers(), 99);
+    bigTram.afstappen(21);
+    ASSERT_EQ(bigTram.getPassagiers(), 78);
+    bigTram.opstappen(2);
+    ASSERT_EQ(bigTram.getPassagiers(), 80);
+    bigTram.afstappen(60);
+    ASSERT_EQ(bigTram.getPassagiers(), 20);
+    bigTram.afstappen(20);
+    ASSERT_EQ(bigTram.getPassagiers(), 0);
+
 }
 
 TEST_F(MetronetDomainTest, OpstappenAfstappenOverflow){
+    Tram tram(20, 50, 1, "A");
+    int max = std::numeric_limits<int>::max();
 
+    tram.opstappen(30);
+    ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
+    tram.afstappen(30);
+    ASSERT_EQ(tram.getPassagiers(), 0);
+
+    tram.opstappen(max);
+    ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
+    tram.afstappen(max);
+    ASSERT_EQ(tram.getPassagiers(), 0);
+
+}
+
+TEST_F(MetronetDomainTest, OpstappenAfstappenNegative){
+    Tram tram(20, 50, 1, "A");
+
+    EXPECT_DEATH(tram.opstappen(-1), "");
 }

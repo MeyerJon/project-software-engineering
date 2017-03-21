@@ -80,6 +80,7 @@ public:
      *  \param afstappen Aantal passagiers dat afstapt.
      *  \return boolean Of er meer passagiers afstapten dan mogelijk.
      *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
+     *  \pre REQUIRE(afstappen >= 0, "Afstappen kan geen negatieve waarde hebben bij aanroep van afstappen.");
      */
     bool afstappen(int afstappen);
 
@@ -87,6 +88,7 @@ public:
      *  \param opstappen Aantal passagiers dat opstapt.
      *  \return boolean Of er meer passigiers opstapten dan mogelijk.
      *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van opstappen.");
+     *  \pre REQUIRE(opstappen >= 0, "Opstappen kan geen negatieve waarde hebben bij aanroep van opstappen.");
      */
     bool opstappen(int opstappen);
 };
