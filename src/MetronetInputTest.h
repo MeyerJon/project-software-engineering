@@ -14,6 +14,11 @@
 #include "Metronet.h"
 #include "Parser.h"
 
+const int illegalSystems;
+const int ;
+const int ;
+const int ;
+
 class MetronetInputTest: public ::testing::Test {
 protected:
     friend class Metronet;

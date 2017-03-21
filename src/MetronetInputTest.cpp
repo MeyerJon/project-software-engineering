@@ -14,9 +14,9 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 
     std::ostream dummy(0);
     Parser p(exp);
-    EXPECT_TRUE(p.setup(metronet, "testInput/HappyDayInput.xml", dummy) == Succes);
+    EXPECT_TRUE(p.setup(metronet, "testInput/HappyDayInput.xml", dummy) == Success);
 
-    if (metronet.checkConsistent(exp, dummy)) endResult = Succes;
+    if (metronet.checkConsistent(exp, dummy)) endResult = Success;
     else endResult = PartialImport;
 
     Station* A = metronet.getStations()["A"];
@@ -48,21 +48,25 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (t12->getZitplaatsen() != 32) endResult = BadImport;
     if (t12->getSnelheid() != 60) endResult = BadImport;
     if (t12->getBeginStation() != "A") endResult = BadImport;
-    ASSERT_EQ(endResult, Succes);
+    ASSERT_EQ(endResult, Success);
 }
 
 TEST_F(MetronetInputTest, InputLegalSystems) {
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
+    SuccesEnum importResult;
     for (int i = 1; i <= 3; i++) {
+
         filename = "testInput/LegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
         Parser p(exp);
-        ASSERT_TRUE(p.setup(metronet, filename, dummy));
+        importResult = p.setup(metronet, filename, dummy);
+
+        ASSERT_EQ(importResult, Success);
         ASSERT_TRUE(metronet.checkConsistent(exp, dummy));
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
@@ -87,6 +91,7 @@ TEST_F(MetronetInputTest, InputIllegalSystems) {
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
+    SuccesEnum importResult;
     for (int i = 1; i <= 4; i++) {
         filename = "testInput/IllegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -94,8 +99,11 @@ TEST_F(MetronetInputTest, InputIllegalSystems) {
 
         std::ostream dummy(0);
         Parser p(exp);
-        ASSERT_FALSE(p.setup(metronet, filename, dummy));
+        importResult = p.setup(metronet, filename, dummy);
+
+        ASSERT_EQ(importResult, PartialImport);
         ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
+        ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
 }
@@ -140,6 +148,7 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
+    SuccesEnum importResult;
     for (int i = 1; i <= 3; i++) {
         filename = "testInput/IncorrectSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -147,8 +156,11 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
 
         std::ostream dummy(0);
         Parser p(exp);
-        ASSERT_FALSE(p.setup(metronet, filename, dummy));
+        importResult = p.setup(metronet, filename, dummy);
+
+        ASSERT_EQ(importResult, PartialImport);
         ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
+        ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
 }
@@ -180,6 +192,7 @@ TEST_F(MetronetInputTest, InputSyntaxErrorSystems) {
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
+    SuccesEnum importResult;
     for (int i = 1; i <= 3; i++) {
         filename = "testInput/SyntaxErrorSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -187,7 +200,10 @@ TEST_F(MetronetInputTest, InputSyntaxErrorSystems) {
 
         std::ostream dummy(0);
         Parser p(exp);
-        ASSERT_FALSE(p.setup(metronet, filename, dummy));
+        importResult = p.setup(metronet, filename, dummy);
+
+        ASSERT_EQ(importResult, BadImport);
+
         metronet.reset();
     }
 }
