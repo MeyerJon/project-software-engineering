@@ -17,19 +17,21 @@ Parser::Parser(Exporter* exp) {
     initCheck = this;
 }
 
-bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
+SuccesEnum Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
     TiXmlDocument doc;
     if (!doc.LoadFile(filename.c_str())) {
         os << "ERROR: Kan bestand " + filename + " niet openen.\n";
-        return false;
+        return BadImport;
     }
     TiXmlElement* root = doc.FirstChildElement();
     std::string rootName = root->Value();
     if (!(rootName == "ROOT" || rootName == "METRONET")) {
         os << "ERROR: Geen root gevonden. Gelieve een root object genaamd "
            << "<ROOT> of <METRONET> aan te maken.\n";
-        return false;
+        return BadImport;
     }
+
+    SuccesEnum endResult = Success;
     // Iterate over all elements
     for(TiXmlElement* elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()){
         std::string elemName = elem->Value();
@@ -59,11 +61,13 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
                     else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
                         exp->write(out, os);
+                        endResult = PartialImport;
                     }
                 }
                 if(name == "" or vor == "" or volg == "" or spoor == -1){
                     std::string out = "ERROR: Station mist een attribuut.\n";
                     exp->write(out, os);
+                    endResult = PartialImport;
                     continue;
                 }
                 Station* station = new Station(name, vor, volg, spoor, opstappen, afstappen);
@@ -73,6 +77,7 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
             catch(std::invalid_argument& ex) {
                 std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Station niet toegevoegd.\n";
                 exp->write(out, os);
+                endResult = PartialImport;
                 continue;
             }
         }
@@ -97,12 +102,14 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
                     else if(attrName == "beginStation") beginS = t;
                     else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
+                        endResult = PartialImport;
                         exp->write(out, os);
                     }
                 }
                 if(zitpl == -1 or snelh == -1 or spoor == -1 or beginS == ""){
                     std::string out = "ERROR: Tram mist een attribuut.\n";
                     exp->write(out, os);
+                    endResult = PartialImport;
                     continue;
                 }
                 Tram* tram = new Tram(zitpl, snelh, spoor, beginS);
@@ -112,6 +119,7 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
             catch(std::invalid_argument& ex) {
                 std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Tram niet toegevoegd.\n";
                 exp->write(out, os);
+                endResult = PartialImport;
                 continue;
             }
 
@@ -119,6 +127,6 @@ bool Parser::setup(Metronet& metro, std::string filename, std::ostream& os){
             continue;
         }
     }
-    bool consistency = metro.checkConsistent(exp, os);
-    return consistency;
+
+    return endResult;
 }

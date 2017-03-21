@@ -28,25 +28,25 @@
         <naam>W</naam>
         <volgende>X</volgende>
         <vorige>Z</vorige>
-        <spoor>13</spoor>
+        <spoor>12</spoor>
     </STATION>
     <STATION>
         <naam>X</naam>
         <volgende>Y</volgende>
         <vorige>W</vorige>
-        <spoor>13</spoor>
+        <spoor>12</spoor>
     </STATION>
     <STATION>
         <naam>Y</naam>
         <volgende>Z</volgende>
         <vorige>X</vorige>
-        <spoor>13</spoor>
+        <spoor>12</spoor>
     </STATION>
     <STATION>
         <naam>Z</naam>
         <volgende>W</volgende>
         <vorige>Y</vorige>
-        <spoor>13</spoor>
+        <spoor>12</spoor>
     </STATION>
     <TRAM>
         <lijnNr>12</lijnNr>
@@ -55,7 +55,7 @@
         <beginStation>A</beginStation>
     </TRAM>
     <TRAM>
-        <lijnNr>13</lijnNr>
+        <lijnNr>12</lijnNr>
         <zitplaatsen>32</zitplaatsen>
         <snelheid>60</snelheid>
         <beginStation>W</beginStation>
