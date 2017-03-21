@@ -1,5 +1,6 @@
 //
 // Created by dawid on 16.03.17.
+// Original source: TicTacToe voorbeeldproject by Serge Demeyer
 //
 
 #ifndef PROJECTFMM_METRONETUTILS_H
