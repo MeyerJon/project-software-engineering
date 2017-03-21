@@ -132,7 +132,7 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
 
         std::ostream dummy(0);
         Parser p(exp);
-        ASSERT_EQ(p.setup(metronet, filename, dummy), BadImport);
+        ASSERT_EQ(p.setup(metronet, filename, dummy), PartialImport);
         ASSERT_FALSE(metronet.checkConsistent(exp, dummy));
         metronet.reset();
     }
