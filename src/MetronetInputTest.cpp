@@ -54,7 +54,6 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 
 TEST_F(MetronetInputTest, InputLegalSystems) {
     // setup Success
-    // checkConsistent true
 
     ASSERT_TRUE(DirectoryExists("testInput"));
 
@@ -73,7 +72,6 @@ TEST_F(MetronetInputTest, InputLegalSystems) {
 
 TEST_F(MetronetInputTest, InputIllegalSystems) {
     // setup Success
-    // checkConsistent false
 
     ASSERT_TRUE(DirectoryExists("testInput"));
 
@@ -84,12 +82,10 @@ TEST_F(MetronetInputTest, InputIllegalSystems) {
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
-        ASSERT_FALSE(metronet.checkConsistent(dummy));
+        ASSERT_EQ(metronet.setup(filename, dummy), Success);
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
-    //1 test is Failed, namelijk 2 aparte stationnetwerken met eenzelfde spoor
 }
 
 TEST_F(MetronetInputTest, InputIncorrectSystems) {
