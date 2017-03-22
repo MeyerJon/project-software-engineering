@@ -209,6 +209,7 @@ bool Metronet::checkConsistent(std::ostream& os) {
             "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
     std::vector<int> stationSporen; // Dit is handig om de consistentie van trams en sporen te checken
     std::vector<int> tramSporen; // Dit is handig om de consistentie van de trams en sporen te checken
+    std::map<int, std::vector<Station*>> lijnen; // Dit is handig om aparte lijnen met hetzelfde lijnNr te vinden
     bool consistent = true;
     // Elk station is verbonden met een voorgaand en volgend station voor elk spoor
     for (auto s : stations) {
@@ -252,6 +253,23 @@ bool Metronet::checkConsistent(std::ostream& os) {
                     + vorige->getNaam() + ".\n";
             exp->write(out, os);
             consistent = false;
+        }
+        if (consistent) {
+            if (lijnen.count(station->getSpoor()) == 0) {
+                Station *original = station;
+                Station *current = original;
+                do {
+                    lijnen[station->getSpoor()].push_back(current);
+                    current = stations.at(current->getVolgende());
+                } while (current != original);
+            } else {
+                std::vector<Station *> &lijn = lijnen[station->getSpoor()];
+                if (find(lijn.begin(), lijn.end(), station) == lijn.end()) {
+                    std::string out = "Station " + station->getNaam() + " behoort tot een gesloten circulaire lijn.\n";
+                    exp->write(out, os);
+                    consistent = false;
+                }
+            }
         }
     }
 

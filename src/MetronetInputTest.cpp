@@ -16,9 +16,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     SuccessEnum importResult = metronet.setup("testInput/HappyDayInput.xml", dummy);
     ASSERT_EQ(importResult, Success);
 
-    SuccessEnum endResult;
-    if (metronet.checkConsistent(dummy)) endResult = Success;
-    else endResult = PartialImport;
+    SuccessEnum endResult = Success;
 
     Station* A = metronet.getStations()["A"];
     if (A->getNaam() != "A") endResult = BadImport;
