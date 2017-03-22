@@ -55,7 +55,7 @@ TEST_F(MetronetDomainTest, CheckConsistent){
 }
 
 TEST_F(MetronetDomainTest, GetStation) {
-    std::string filename = "testInput/ConsistentNet" + std::to_string(i) + ".xml";
+    std::string filename = "testInput/HappyDayInput.xml";
     ASSERT_TRUE(FileExists(filename));
     ASSERT_TRUE(metronet.properlyInitialised());
     std::ostream dummy(0);
