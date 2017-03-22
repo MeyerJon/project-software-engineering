@@ -19,7 +19,7 @@ protected:
     friend class Metronet;
 
     virtual void SetUp() {
-        exp = new ExporterCLI;
+        exp = new ExporterCLI();
         metronet = Metronet(exp);
     }
 

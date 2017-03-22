@@ -133,7 +133,7 @@ public:
 
     /**
      * \brief Reset heel het systeem.
-     *  \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");
      */
      void reset();
 };

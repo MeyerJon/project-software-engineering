@@ -18,12 +18,9 @@ protected:
     friend class Metronet;
 
     virtual void SetUp() {
-        exp = new ExporterTXT;
-        metronet = Metronet(exp);
     }
 
     virtual void TearDown() {
-        delete exp;
     }
 
     Metronet metronet;

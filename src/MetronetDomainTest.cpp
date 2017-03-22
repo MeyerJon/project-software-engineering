@@ -6,9 +6,6 @@
 
 #include <limits>
 
-const unsigned int TESTS_CONSISTENT = 2;
-const unsigned int TESTS_INCONSISTENT = 3;
-
 TEST_F(MetronetDomainTest, ProperlyInitialised){
     std::ostream dummy(0);
     metronet.setup("testInput/HappyDayInput.xml", dummy);
@@ -22,6 +19,7 @@ TEST_F(MetronetDomainTest, ProperlyInitialised){
         Station* s = p.second;
         ASSERT_TRUE(s->properlyInitialised());
     }
+    metronet.reset();
 }
 
 TEST_F(MetronetDomainTest, CheckConsistent){
@@ -96,7 +94,6 @@ TEST_F(MetronetDomainTest, OpstappenAfstappenNormaal){
     ASSERT_EQ(bigTram.getPassagiers(), 20);
     bigTram.afstappen(20);
     ASSERT_EQ(bigTram.getPassagiers(), 0);
-
 }
 
 TEST_F(MetronetDomainTest, OpstappenAfstappenOverflow){
@@ -112,7 +109,6 @@ TEST_F(MetronetDomainTest, OpstappenAfstappenOverflow){
     ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
     tram.afstappen(max);
     ASSERT_EQ(tram.getPassagiers(), 0);
-
 }
 
 TEST_F(MetronetDomainTest, OpstappenAfstappenNegative){
@@ -129,6 +125,7 @@ TEST_F(MetronetDomainTest, addTram){
     Tram* tram = new Tram(10, 60, 1, "A");
     metronet.addTram(tram);
     ASSERT_EQ(metronet.getTrams().at(1), tram);
+    metronet.reset();
 }
 
 TEST_F(MetronetDomainTest, addStation){
@@ -138,6 +135,7 @@ TEST_F(MetronetDomainTest, addStation){
     Station* station = new Station("A", "B", "C", 1, 0, 0);
     metronet.addStation(station);
     ASSERT_EQ(metronet.getStations().at("A"), station);
+    metronet.reset();
 }
 
 TEST_F(MetronetDomainTest, rondrijden){
@@ -152,4 +150,5 @@ TEST_F(MetronetDomainTest, rondrijden){
         ASSERT_EQ(tram->getHuidigStation(), tram->getBeginStation());
         ASSERT_EQ(tram->getPassagiers(), 5); // Scenario zo geschreven
     }
+    metronet.reset();
 }
