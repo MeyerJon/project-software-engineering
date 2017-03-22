@@ -2,8 +2,10 @@
 <area shape="rect" id="node2" href="$class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="265,5,407,32"/>
 <area shape="rect" id="node5" href="$class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="270,56,402,83"/>
 <area shape="rect" id="node6" href="$class_metronet.html#a0422381a8d7f32a915e0ad966af43627" title="Voegt spoor toe aan metronet. " alt="" coords="268,107,404,133"/>
-<area shape="rect" id="node7" href="$class_metronet.html#abd223e3d0f745e3460a247dc667fce69" title="Kijkt na of het metronet consistent is. " alt="" coords="247,157,425,184"/>
-<area shape="rect" id="node8" href="$class_metronet.html#a8d8fab798697599c77e22a5497d52b6d" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="236,208,436,235"/>
-<area shape="rect" id="node3" href="$class_parser.html#a568d2353b3e6f89b0cf112f309229ffe" title="Verwerkt het XML&#45;bestand en zet het metronet op. " alt="" coords="484,107,584,133"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="632,107,683,133"/>
+<area shape="rect" id="node7" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="484,157,663,184"/>
+<area shape="rect" id="node8" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="236,208,436,235"/>
+<area shape="rect" id="node10" href="$class_metronet.html#aae72fb7ad05324adb1ccc6a1519c5c0b" title="Reset heel het systeem. " alt="" coords="281,259,391,285"/>
+<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="517,81,630,108"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="711,157,761,184"/>
+<area shape="rect" id="node9" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="505,208,642,235"/>
 </map>

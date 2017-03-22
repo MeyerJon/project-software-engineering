@@ -1,6 +1,6 @@
 <map id="TiXmlVisitor::VisitEnter" name="TiXmlVisitor::VisitEnter">
-<area shape="rect" id="node2" href="$class_ti_xml_element.html#a31ab28cc3b892a69254391d6bbe08df3" title="TiXmlElement::Accept" alt="" coords="218,31,371,57"/>
-<area shape="rect" id="node5" href="$class_ti_xml_document.html#a3daab2f472418ef66315750202f762ae" title="TiXmlDocument::Accept" alt="" coords="212,81,377,108"/>
+<area shape="rect" id="node2" href="$class_ti_xml_element.html#a01d33358cce9d1817b557d314dda3779" title="TiXmlElement::Accept" alt="" coords="218,31,371,57"/>
+<area shape="rect" id="node5" href="$class_ti_xml_document.html#a8ddd6eec722cbd25900bbac664909bac" title="TiXmlDocument::Accept" alt="" coords="212,81,377,108"/>
 <area shape="rect" id="node3" href="$class_ti_xml_node.html#a4027136ca820ff4a636b607231b6a6df" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="425,5,601,32"/>
 <area shape="rect" id="node4" href="$class_ti_xml_text.html#ae7c3a8fd3e4dbf6c0c4363a943d72f5b" title="Cast to a more defined type. Will return null not of the requested type. " alt="" coords="448,56,579,83"/>
 </map>

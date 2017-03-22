@@ -1,6 +1,8 @@
 <map id="TiXmlNode::FirstChildElement" name="TiXmlNode::FirstChildElement">
-<area shape="rect" id="node2" href="$class_ti_xml_handle.html#af0643f8683f3f2b779b8c9d78c67b2c0" title="Return a handle to the first child element. " alt="" coords="253,5,462,32"/>
-<area shape="rect" id="node3" href="$class_ti_xml_handle.html#a57a639ab0ac99ff9358f675a1b73049a" title="TiXmlHandle::ChildElement" alt="" coords="266,56,449,83"/>
-<area shape="rect" id="node4" href="$class_ti_xml_node.html#a6e1ac6b800e18049bc75e9f8e63a8e5f" title="TiXmlNode::NextSiblingElement" alt="" coords="252,107,463,133"/>
-<area shape="rect" id="node5" href="$class_ti_xml_node.html#aa0fecff1f3866ab33a8a25506e95db1d" title="TiXmlNode::FirstChildElement" alt="" coords="258,157,457,184"/>
+<area shape="rect" id="node2" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="301,5,414,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_handle.html#af0643f8683f3f2b779b8c9d78c67b2c0" title="Return a handle to the first child element. " alt="" coords="253,56,462,83"/>
+<area shape="rect" id="node5" href="$class_ti_xml_handle.html#a57a639ab0ac99ff9358f675a1b73049a" title="TiXmlHandle::ChildElement" alt="" coords="266,107,449,133"/>
+<area shape="rect" id="node6" href="$class_ti_xml_node.html#a6e1ac6b800e18049bc75e9f8e63a8e5f" title="TiXmlNode::NextSiblingElement" alt="" coords="252,157,463,184"/>
+<area shape="rect" id="node7" href="$class_ti_xml_node.html#aa0fecff1f3866ab33a8a25506e95db1d" title="TiXmlNode::FirstChildElement" alt="" coords="258,208,457,235"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="511,5,561,32"/>
 </map>

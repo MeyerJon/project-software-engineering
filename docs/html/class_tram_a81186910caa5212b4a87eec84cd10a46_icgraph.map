@@ -1,5 +1,6 @@
 <map id="Tram::afstappen" name="Tram::afstappen">
-<area shape="rect" id="node2" href="$class_metronet.html#a8d8fab798697599c77e22a5497d52b6d" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="171,5,371,32"/>
-<area shape="rect" id="node3" href="$class_parser.html#a568d2353b3e6f89b0cf112f309229ffe" title="Verwerkt het XML&#45;bestand en zet het metronet op. " alt="" coords="419,5,519,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="567,5,617,32"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="171,5,371,32"/>
+<area shape="rect" id="node5" href="$_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="235,56,306,83"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="419,5,556,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="604,5,655,32"/>
 </map>

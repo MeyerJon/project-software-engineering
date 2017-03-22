@@ -1,9 +1,9 @@
 <map id="TiXmlString::operator+=" name="TiXmlString::operator+=">
 <area shape="rect" id="node2" href="$class_ti_xml_string.html#ad44b21700d2ec24a511367b222b643fb" title="TiXmlString::append" alt="" coords="215,56,355,83"/>
-<area shape="rect" id="node3" href="$class_ti_xml_string.html#a3202f27d139a3fac79205f1f3c707727" title="TiXmlString::length" alt="" coords="592,5,725,32"/>
-<area shape="rect" id="node6" href="$class_ti_xml_string.html#a00abc60f135c7ca1951c7334cc2c7993" title="TiXmlString::data" alt="" coords="597,208,720,235"/>
-<area shape="rect" id="node4" href="$class_ti_xml_string.html#a76e4d6aba7845f4cf9c02332a5fbf916" title="TiXmlString::capacity" alt="" coords="773,107,920,133"/>
+<area shape="rect" id="node3" href="$class_ti_xml_string.html#a5db17f8314ffe2a89df0f0eb6c2a4bf5" title="TiXmlString::length" alt="" coords="592,5,725,32"/>
+<area shape="rect" id="node6" href="$class_ti_xml_string.html#a0e010e1737cfc3ee885b42875171b88e" title="TiXmlString::data" alt="" coords="597,208,720,235"/>
+<area shape="rect" id="node4" href="$class_ti_xml_string.html#a0ca248f026e698f79b8aa4c9ab8e1571" title="TiXmlString::capacity" alt="" coords="773,107,920,133"/>
 <area shape="rect" id="node5" href="$class_ti_xml_string.html#a88ecf9f0f00cb5c67b6b637958d7049c" title="TiXmlString::reserve" alt="" coords="403,107,544,133"/>
 <area shape="rect" id="node7" href="$class_ti_xml_string.html#aa392cbc180752a79f007f4f9280c7762" title="TiXmlString::swap" alt="" coords="594,157,723,184"/>
-<area shape="rect" id="node8" href="$class_ti_xml_string.html#a96103e5c0f67e987fa48527e1f47a1f6" title="TiXmlString::size" alt="" coords="785,157,908,184"/>
+<area shape="rect" id="node8" href="$class_ti_xml_string.html#a483d85103d2a3ba8c0831e205c832f33" title="TiXmlString::size" alt="" coords="785,157,908,184"/>
 </map>

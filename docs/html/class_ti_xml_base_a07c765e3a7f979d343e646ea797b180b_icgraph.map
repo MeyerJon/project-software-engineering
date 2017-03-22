@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$class_ti_xml_base.html#a799f17405a86a5c2029618e85f11a097" title="TiXmlBase::ToLower" alt="" coords="281,190,425,216"/>
 <area shape="rect" id="node19" href="$class_ti_xml_base.html#ac5c08bf3deffcda0bf8ce2958372b584" title="TiXmlBase::GetEntity" alt="" coords="479,24,629,51"/>
 <area shape="rect" id="node3" href="$class_ti_xml_base.html#a51631e6986179558b9e5850723ed165a" title="TiXmlBase::StringEqual" alt="" coords="473,227,635,254"/>
-<area shape="rect" id="node4" href="$class_ti_xml_element.html#af4a1d3f88c28eb0f3115dc39ebd83fff" title="TiXmlElement::QueryBoolAttribute" alt="" coords="683,176,905,203"/>
+<area shape="rect" id="node4" href="$class_ti_xml_element.html#a5789b1488af75b6ae37a749700495ceb" title="TiXmlElement::QueryBoolAttribute" alt="" coords="683,176,905,203"/>
 <area shape="rect" id="node5" href="$class_ti_xml_base.html#a5b0fde72d6f662ae1fd6303195d2159b" title="TiXmlBase::GetChar" alt="" coords="723,24,865,51"/>
 <area shape="rect" id="node6" href="$class_ti_xml_base.html#aa646c74921aa33156968b802bbf5566e" title="TiXmlBase::ReadText" alt="" coords="953,151,1104,178"/>
 <area shape="rect" id="node9" href="$class_ti_xml_element.html#af95c9165159fd9dfdcc5b894a3fcf85b" title="TiXmlElement::Parse" alt="" coords="1385,366,1531,392"/>

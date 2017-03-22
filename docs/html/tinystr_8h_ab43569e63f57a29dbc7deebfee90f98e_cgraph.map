@@ -1,4 +1,4 @@
 <map id="operator==" name="operator==">
-<area shape="rect" id="node2" href="$class_ti_xml_string.html#a3202f27d139a3fac79205f1f3c707727" title="TiXmlString::length" alt="" coords="139,5,272,32"/>
-<area shape="rect" id="node3" href="$class_ti_xml_string.html#a5581ca641d915551d3cda90f8e7bf49b" title="TiXmlString::c_str" alt="" coords="142,56,269,83"/>
+<area shape="rect" id="node2" href="$class_ti_xml_string.html#a5db17f8314ffe2a89df0f0eb6c2a4bf5" title="TiXmlString::length" alt="" coords="139,5,272,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_string.html#ae2bd36349215612ebcc3cb221c30bd3d" title="TiXmlString::c_str" alt="" coords="142,56,269,83"/>
 </map>

@@ -1,8 +1,8 @@
-.TH "Station" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "Station" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Station \- 
+Station
 .SH SYNOPSIS
 .br
 .PP
@@ -18,33 +18,33 @@ Station \-
 .RI "\fBStation\fP (std::string n, std::string vor, std::string volg, int sp, int op, int af)"
 .br
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const "
+.RI "bool \fBproperlyInitialised\fP () const"
 .br
-.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
 .ti -1c
-.RI "std::string \fBgetNaam\fP () const "
+.RI "std::string \fBgetNaam\fP () const"
 .br
-.RI "\fIGeef de naam terug van het station\&. \fP"
+.RI "Geef de naam terug van het station\&. "
 .ti -1c
-.RI "std::string \fBgetVorige\fP () const "
+.RI "std::string \fBgetVorige\fP () const"
 .br
-.RI "\fIGeef het vorig station terug\&. \fP"
+.RI "Geef het vorig station terug\&. "
 .ti -1c
-.RI "std::string \fBgetVolgende\fP () const "
+.RI "std::string \fBgetVolgende\fP () const"
 .br
-.RI "\fIGeef het volgende station\&. \fP"
+.RI "Geef het volgende station\&. "
 .ti -1c
-.RI "int \fBgetSpoor\fP () const "
+.RI "int \fBgetSpoor\fP () const"
 .br
-.RI "\fIGeef het spoor terug\&. \fP"
+.RI "Geef het spoor terug\&. "
 .ti -1c
-.RI "int \fBgetOpstappen\fP () const "
+.RI "int \fBgetOpstappen\fP () const"
 .br
-.RI "\fIGeef het aantal opstappende mensen terug\&. \fP"
+.RI "Geef het aantal opstappende mensen terug\&. "
 .ti -1c
-.RI "int \fBgetAfstappen\fP () const "
+.RI "int \fBgetAfstappen\fP () const"
 .br
-.RI "\fIGeef het afstappende mensen terug\&. \fP"
+.RI "Geef het afstappende mensen terug\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -61,8 +61,12 @@ Geef het afstappende mensen terug\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Een aantal afstappende mensen\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getAfstappen\&.');
-.br
+Een aantal afstappende mensen\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getAfstappen\&.'); 
 .RE
 .PP
 
@@ -73,11 +77,14 @@ Geef de naam terug van het station\&.
 .PP
 \fBReturns:\fP
 .RS 4
-De naam van het station\&.
+De naam van het station\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getNaam\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getNaam\&.'); 
+.RE
+.PP
 
 .SS "int Station::getOpstappen () const"
 
@@ -86,8 +93,12 @@ Geef het aantal opstappende mensen terug\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Een aantal opstappende mensen\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getOpstappen\&.');
-.br
+Een aantal opstappende mensen\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getOpstappen\&.'); 
 .RE
 .PP
 
@@ -98,8 +109,12 @@ Geef het spoor terug\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Het spoor\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getSpoor\&.');
-.br
+Het spoor\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getSpoor\&.'); 
 .RE
 .PP
 
@@ -110,11 +125,14 @@ Geef het volgende station\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Het volgende station\&.
+Het volgende station\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getVolgende\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getVolgende\&.'); 
+.RE
+.PP
 
 .SS "std::string Station::getVorige () const"
 
@@ -123,11 +141,14 @@ Geef het vorig station terug\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Het vorig station\&.
+Het vorig station\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getVorige\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van getVorige\&.'); 
+.RE
+.PP
 
 .SS "bool Station::properlyInitialised () const"
 

@@ -1,3 +1,4 @@
 <map id="MetronetInputTest" name="MetronetInputTest">
-<area shape="rect" id="node3" href="$class_metronet.html" title="Metronet" alt="" coords="78,5,151,32"/>
+<area shape="rect" id="node3" href="$class_exporter.html" title="Exporter" alt="" coords="78,5,149,32"/>
+<area shape="rect" id="node4" href="$class_metronet.html" title="Metronet" alt="" coords="257,5,330,32"/>
 </map>

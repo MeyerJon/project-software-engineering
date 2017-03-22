@@ -1,8 +1,8 @@
-.TH "TiXmlPrinter" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "TiXmlPrinter" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-TiXmlPrinter \- 
+TiXmlPrinter
 .SH SYNOPSIS
 .br
 .PP
@@ -19,60 +19,60 @@ Inherits \fBTiXmlVisitor\fP\&.
 .ti -1c
 .RI "virtual bool \fBVisitEnter\fP (const \fBTiXmlDocument\fP &doc)"
 .br
-.RI "\fIVisit a document\&. \fP"
+.RI "Visit a document\&. "
 .ti -1c
 .RI "virtual bool \fBVisitExit\fP (const \fBTiXmlDocument\fP &doc)"
 .br
-.RI "\fIVisit a document\&. \fP"
+.RI "Visit a document\&. "
 .ti -1c
 .RI "virtual bool \fBVisitEnter\fP (const \fBTiXmlElement\fP &element, const \fBTiXmlAttribute\fP *firstAttribute)"
 .br
-.RI "\fIVisit an element\&. \fP"
+.RI "Visit an element\&. "
 .ti -1c
 .RI "virtual bool \fBVisitExit\fP (const \fBTiXmlElement\fP &element)"
 .br
-.RI "\fIVisit an element\&. \fP"
+.RI "Visit an element\&. "
 .ti -1c
 .RI "virtual bool \fBVisit\fP (const \fBTiXmlDeclaration\fP &declaration)"
 .br
-.RI "\fIVisit a declaration\&. \fP"
+.RI "Visit a declaration\&. "
 .ti -1c
 .RI "virtual bool \fBVisit\fP (const \fBTiXmlText\fP &text)"
 .br
-.RI "\fIVisit a text node\&. \fP"
+.RI "Visit a text node\&. "
 .ti -1c
 .RI "virtual bool \fBVisit\fP (const \fBTiXmlComment\fP &comment)"
 .br
-.RI "\fIVisit a comment node\&. \fP"
+.RI "Visit a comment node\&. "
 .ti -1c
 .RI "virtual bool \fBVisit\fP (const \fBTiXmlUnknown\fP &unknown)"
 .br
-.RI "\fIVisit an unknown node\&. \fP"
+.RI "Visit an unknown node\&. "
 .ti -1c
 .RI "void \fBSetIndent\fP (const char *_indent)"
 .br
 .ti -1c
 .RI "const char * \fBIndent\fP ()"
 .br
-.RI "\fIQuery the indention string\&. \fP"
+.RI "Query the indention string\&. "
 .ti -1c
 .RI "void \fBSetLineBreak\fP (const char *_lineBreak)"
 .br
 .ti -1c
 .RI "const char * \fBLineBreak\fP ()"
 .br
-.RI "\fIQuery the current line breaking string\&. \fP"
+.RI "Query the current line breaking string\&. "
 .ti -1c
 .RI "void \fBSetStreamPrinting\fP ()"
 .br
 .ti -1c
 .RI "const char * \fBCStr\fP ()"
 .br
-.RI "\fIReturn the result\&. \fP"
+.RI "Return the result\&. "
 .ti -1c
 .RI "size_t \fBSize\fP ()"
 .br
-.RI "\fIReturn the length of the result string\&. \fP"
+.RI "Return the length of the result string\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

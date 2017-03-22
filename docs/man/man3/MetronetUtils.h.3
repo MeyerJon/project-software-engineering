@@ -1,8 +1,8 @@
-.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/MetronetUtils.h" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "/home/sergio/CLionProjects/SoftEng/src/MetronetUtils.h" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/MetronetUtils.h \- 
+/home/sergio/CLionProjects/SoftEng/src/MetronetUtils.h
 .SH SYNOPSIS
 .br
 .PP
@@ -25,6 +25,22 @@
 .RI "bool \fBFileCompare\fP (const std::string leftFileName, const std::string rightFileName)"
 .br
 .in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const unsigned int \fBTESTS_LEGAL\fP = 4"
+.br
+.ti -1c
+.RI "const unsigned int \fBTESTS_ILLEGAL\fP = 9"
+.br
+.ti -1c
+.RI "const unsigned int \fBTESTS_INCORRECT\fP = 4"
+.br
+.ti -1c
+.RI "const unsigned int \fBTESTS_SYNTAX\fP = 3"
+.br
+.in -1c
 .SH "Function Documentation"
 .PP 
 .SS "bool DirectoryExists (const std::string dirname)"
@@ -34,6 +50,16 @@
 .SS "bool FileExists (const std::string dirname)"
 
 .SS "bool FileIsEmpty (const std::string filename)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const unsigned int TESTS_ILLEGAL = 9"
+
+.SS "const unsigned int TESTS_INCORRECT = 4"
+
+.SS "const unsigned int TESTS_LEGAL = 4"
+
+.SS "const unsigned int TESTS_SYNTAX = 3"
 
 .SH "Author"
 .PP 

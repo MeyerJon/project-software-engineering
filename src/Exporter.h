@@ -20,25 +20,26 @@ protected:
 public:
     Exporter();
 
-    /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
-     *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
+    /**
+     * \brief Kijk na of de constructor in de juiste staat geeindigd is.
+     * \return Boolean die aangeeft of het object juist geinitialiseerd is.
      */
     virtual bool properlyInitialised() const;
 
-    /** \brief Stuur de output string naar de output stream.
-     *  \param output De string die naar de output gestuurd moet worden.
-     *  \param os De stream waar de output naar gestuurd zal worden.
-     *
-     * REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van write.");\n
-     * ENSURE(documentStarted, "Document was niet aangemaakt bij de aanroep van write.");\n
+    /**
+     * \brief Stuur de output string naar de output stream.
+     * \param output De string die naar de output gestuurd moet worden.
+     * \param os De stream waar de output naar gestuurd zal worden.
+     * \pre REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van write.");
+     * \post ENSURE(documentStarted, "Document was niet aangemaakt bij de aanroep van write.");
      */
     virtual void write(std::string& output, std::ostream& os);
 
-    /** \brief Stuurt de nodige informatie naar de output stream om het document correct af te sluiten.
-     *  \param os De stream waar de output naar gestuurd zal worden.
-     *
-     *  REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van finish.");\n
-     *  REQUIRE(documentStarted, "Document was niet aangemaakt voor de aanroep van finish.");\n
+    /**
+     * \brief Stuurt de nodige informatie naar de output stream om het document correct af te sluiten.
+     * \param os De stream waar de output naar gestuurd zal worden.
+     * \pre REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van finish.");
+     * \pre REQUIRE(documentStarted, "Document was niet aangemaakt voor de aanroep van finish.");
      */
      virtual void finish(std::ostream& os);
 };
@@ -60,11 +61,11 @@ public:
     virtual void finish(std::ostream& os);
 
 private:
-    /** \brief Valideer de HTML header.
-     *  \param os De stream waar de output naar gestuurd zal worden.
-     *
-     * REQUIRE(this->properlyInitialised(), "ExporterHTML was niet geinitialiseerd bij de aanroep van createHTMLHead.");\n
-     * REQUIRE(!documentStarted, "Document was aangemaakt voor de aanroep van createHTMLHead.");\n
+    /**
+     * \brief Valideer de HTML header.
+     * \param os De stream waar de output naar gestuurd zal worden.
+     * \pre REQUIRE(this->properlyInitialised(), "ExporterHTML was niet geinitialiseerd bij de aanroep van createHTMLHead.");
+     * \pre REQUIRE(!documentStarted, "Document was aangemaakt voor de aanroep van createHTMLHead.");
      */
     void createHTMLHead(std::ostream& os);
 };

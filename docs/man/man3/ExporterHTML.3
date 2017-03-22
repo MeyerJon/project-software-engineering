@@ -1,8 +1,8 @@
-.TH "ExporterHTML" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "ExporterHTML" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-ExporterHTML \- 
+ExporterHTML
 .SH SYNOPSIS
 .br
 .PP
@@ -16,11 +16,11 @@ Inherits \fBExporter\fP\&.
 .ti -1c
 .RI "virtual void \fBwrite\fP (std::string &output, std::ostream &os)"
 .br
-.RI "\fIStuur de output string naar de output stream\&. \fP"
+.RI "Stuur de output string naar de output stream\&. "
 .ti -1c
 .RI "virtual void \fBfinish\fP (std::ostream &os)"
 .br
-.RI "\fIStuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. \fP"
+.RI "Stuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. "
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Member Function Documentation"
@@ -32,13 +32,16 @@ Stuurt de nodige informatie naar de output stream om het document correct af te 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIos\fP De stream waar de output naar gestuurd zal worden\&.
+\fIos\fP De stream waar de output naar gestuurd zal worden\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van finish\&.');
-.br
-REQUIRE(documentStarted, 'Document was niet aangemaakt voor de aanroep van finish\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van finish\&.'); 
+.PP
+REQUIRE(documentStarted, 'Document was niet aangemaakt voor de aanroep van finish\&.'); 
+.RE
+.PP
 
 .PP
 Reimplemented from \fBExporter\fP\&.
@@ -51,13 +54,19 @@ Stuur de output string naar de output stream\&.
 .RS 4
 \fIoutput\fP De string die naar de output gestuurd moet worden\&. 
 .br
-\fIos\fP De stream waar de output naar gestuurd zal worden\&.
+\fIos\fP De stream waar de output naar gestuurd zal worden\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van write\&.');
-.br
-ENSURE(documentStarted, 'Document was niet aangemaakt bij de aanroep van write\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van write\&.'); 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(documentStarted, 'Document was niet aangemaakt bij de aanroep van write\&.'); 
+.RE
+.PP
 
 .PP
 Reimplemented from \fBExporter\fP\&.
