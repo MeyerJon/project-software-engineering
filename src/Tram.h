@@ -78,6 +78,24 @@ public:
     std::string getHuidigStation() const;
 
     /**
+     * \brief Past het huidige station aan
+     * \param station Nieuw huidig station
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");
+     * \post ENSURE((huidigStation == station), "huidigStation is niet aangepast door setHuidigStation.");
+     */
+    void setHuidigStation(std::string station);
+
+    /**
+     * \brief Past het aantal passagiers aan
+     * \param pas Positief nieuw aantal passagiers
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setPassagiers.");
+     * \pre REQUIRE(passagiers >= 0, "Aantal passagiers moet positief zijn.");
+     * \post ENSURE((passagiers == pas), "Aantal passagiers niet aangepast bij aanroep van setPassagiers.");
+     */
+    void setPassagiers(int pas);
+
+
+    /**
      * \brief Verplaatst een tram naar het opgegeven station.
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van verplaatsTram.");
      * \post ENSURE((huidigStation == station), "huidigStation is niet correct aangepast.");

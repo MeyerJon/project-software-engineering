@@ -139,3 +139,17 @@ TEST_F(MetronetDomainTest, addStation){
     metronet.addStation(station);
     ASSERT_EQ(metronet.getStations().at("A"), station);
 }
+
+TEST_F(MetronetDomainTest, rondrijden){
+    std::ostream dummy(0);
+    metronet.setup("testInput/RondrijdenInput.xml", dummy);
+
+    metronet.rondrijden(dummy);
+
+    std::map<int, Tram*>& trams = metronet.getTrams();
+    for(auto p : trams){
+        Tram* tram = p.second;
+        ASSERT_EQ(tram->getHuidigStation(), tram->getBeginStation());
+        ASSERT_EQ(tram->getPassagiers(), 5); // Scenario zo geschreven
+    }
+}
