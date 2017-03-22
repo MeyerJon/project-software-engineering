@@ -50,29 +50,6 @@ TEST_F(MetronetOutputTest, OutputIllegalSystemsTxt) {
     }
 }
 
-TEST_F(MetronetOutputTest, OutputInconsistentNetsTxt) {
-    ASSERT_TRUE(DirectoryExists("testInput"));
-    std::string filename;
-    for (int i = 1; i <= TESTS_INCONSISTENT; i++) {
-        filename = "testInput/InconsistentNet" + std::to_string(i) + ".xml";
-        ASSERT_TRUE(FileExists(filename));
-        ASSERT_TRUE(metronet.properlyInitialised());
-
-        std::string outputName = "testOutput/InconsistentNetOutput" + std::to_string(i) + ".txt";
-        std::string expectedOutput = "testOutput/InconsistentNetExpectedOutput" + std::to_string(i) + ".txt";
-        std::ofstream output;
-        output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
-        if (metronet.checkConsistent(output)) {
-            metronet.printMetronet(output);
-            metronet.rondrijden(output);
-        }
-        output.close();
-        ASSERT_TRUE(FileCompare(outputName, expectedOutput));
-        metronet.reset();
-    }
-}
-
 TEST_F(MetronetOutputTest, OutputIncorrectSystemsTxt) {
     ASSERT_TRUE(DirectoryExists("testInput"));
     std::string filename;

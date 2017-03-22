@@ -6,7 +6,9 @@
  */
 
 #include <gtest/gtest.h>
-
+#include "MetronetInputTest.h"
+#include "MetronetDomainTest.h"
+#include "MetronetOutputTest.h"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);

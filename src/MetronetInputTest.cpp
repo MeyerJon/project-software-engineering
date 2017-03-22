@@ -53,6 +53,9 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 }
 
 TEST_F(MetronetInputTest, InputLegalSystems) {
+    // setup Success
+    // checkConsistent true
+
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
@@ -70,6 +73,9 @@ TEST_F(MetronetInputTest, InputLegalSystems) {
 }
 
 TEST_F(MetronetInputTest, InputIllegalSystems) {
+    // setup Success
+    // checkConsistent false
+
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
@@ -88,6 +94,7 @@ TEST_F(MetronetInputTest, InputIllegalSystems) {
 }
 
 TEST_F(MetronetInputTest, InputIncorrectSystems) {
+    // setup PartialImport (ontbrekende, foute waarden)
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;
@@ -98,13 +105,13 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
 
         std::ostream dummy(0);
         ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
-        ASSERT_FALSE(metronet.checkConsistent(dummy));
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
 }
 
 TEST_F(MetronetInputTest, InputSyntaxErrorSystems) {
+    // setup BadImport (fouten tegen XML)
     ASSERT_TRUE(DirectoryExists("testInput"));
 
     std::string filename;

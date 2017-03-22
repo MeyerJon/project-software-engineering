@@ -13,12 +13,6 @@
 #include "MetronetUtils.h"
 #include "Metronet.h"
 
-const unsigned int TESTS_LEGAL = 3;
-const unsigned int TESTS_ILLEGAL = 4;
-const unsigned int TESTS_INCONSISTENT = 5;
-const unsigned int TESTS_INCORRECT = 4;
-const unsigned int TESTS_SYNTAX = 3;
-
 class MetronetOutputTest: public ::testing::Test {
 protected:
     friend class Metronet;

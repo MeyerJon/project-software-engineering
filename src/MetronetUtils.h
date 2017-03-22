@@ -9,6 +9,10 @@
 
 #include <iostream>
 
+const unsigned int TESTS_LEGAL = 4;
+const unsigned int TESTS_ILLEGAL = 9;
+const unsigned int TESTS_INCORRECT = 4;
+const unsigned int TESTS_SYNTAX = 3;
 
 bool DirectoryExists(const std::string dirname);
 
