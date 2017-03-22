@@ -10,12 +10,12 @@
 #include "Metronet.h"
 
 int main(int argc, const char* argv[]) {
+    Exporter* exp;
     if (argc != 1) {
         std::string expType = argv[1];
         std::string input = argv[2];
         std::string output;
         if (argc == 4) output = argv[3];
-        Exporter* exp;
         if (expType == "cli") {
             exp = new ExporterCLI;
             Metronet metronet(exp);
@@ -53,16 +53,15 @@ int main(int argc, const char* argv[]) {
                 }
             }
         }
-        delete exp;
     } else {
-        Exporter* exp = new ExporterCLI;
+        exp = new ExporterCLI;
         Metronet metronet(exp);
-        metronet.setup("testInput/HappyDayInput.xml", std::cout);
+        metronet.setup("testInput/LegalSystemInput1.xml", std::cout);
         if (metronet.checkConsistent(std::cout)) {
             metronet.printMetronet(std::cout);
             metronet.rondrijden(std::cout);
         }
-        delete exp;
     }
+    delete exp;
     return 0;
 }

@@ -371,7 +371,6 @@ void Metronet::reset() {
         delete s.second;
     for (auto t : trams)
         delete t.second;
-
     stations.clear();
     trams.clear();
     sporen.clear();

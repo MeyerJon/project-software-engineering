@@ -41,7 +41,7 @@ void ExporterHTML::write(std::string& output, std::ostream& os) {
         output.replace(output.find("\n"), std::string("\n").length(), "<br>");
     }
     if (!documentStarted) this->createHTMLHead(os);
-    os << "<p>\n" << output << "\n</p>\n";
+    os << "\t\t<p>\n" << output << "\n</p>\n";
 
     ENSURE(documentStarted,
            "Document was niet aangemaakt bij de aanroep van write.");
@@ -55,13 +55,13 @@ void ExporterHTML::createHTMLHead(std::ostream& os) {
 
     os << "<!DOCTYPE html>\n"
        << "<html>\n"
-       << "<head>\n"
-       << "\t<title>" << "Project Software Engineering" << "</title>\n"
-       << "<style>\n"
-       << "p {text-align: center;}\n"
-       << "</style>\n"
-       << "</head>\n"
-       << "<body>\n";
+       << "\t<head>\n"
+       << "\t\t<title>" << "Project Software Engineering" << "</title>\n"
+       << "\t\t<style>\n"
+       << "\t\t\tp {text-align: center;}\n"
+       << "\t\t</style>\n"
+       << "\t</head>\n"
+       << "\t<body>\n";
     documentStarted = true;
 
     ENSURE(documentStarted,
@@ -74,6 +74,6 @@ void ExporterHTML::finish(std::ostream& os) {
     REQUIRE(documentStarted,
             "Document was niet aangemaakt voor de aanroep van finish.");
 
-    os  << "</body>\n"
+    os  << "\t</body>\n"
         << "</html>";
 }

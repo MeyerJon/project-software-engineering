@@ -63,6 +63,7 @@ TEST_F(MetronetInputTest, InputLegalSystems) {
 
         std::ostream dummy(0);
         ASSERT_EQ(metronet.setup(filename, dummy), Success);
+        ASSERT_TRUE(metronet.checkConsistent(dummy));
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
@@ -78,8 +79,8 @@ TEST_F(MetronetInputTest, InputIllegalSystems) {
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-
         ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
+        ASSERT_FALSE(metronet.checkConsistent(dummy));
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
@@ -97,6 +98,8 @@ TEST_F(MetronetInputTest, InputIncorrectSystems) {
 
         std::ostream dummy(0);
         ASSERT_EQ(metronet.setup(filename, dummy), PartialImport);
+        ASSERT_FALSE(metronet.checkConsistent(dummy));
+        ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
 }
