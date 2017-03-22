@@ -52,14 +52,14 @@ public:
      * \param filename De naam van het XML-bestand.
      * \param os De stream waarnaar de output geschreven wordt (nodig voor de exporter).
      *
-     *  \pre REQUIRE(this->properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");\n
+     *  \pre REQUIRE(this->properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");
      */
     SuccessEnum setup(std::string filename, std::ostream& os);
 
     /** \brief Geeft alle stations in het metronet terug.
      *  \return Map met stations in het metronet.
      *
-     *  REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");\n
+     *  \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");
      */
      std::map<std::string, Station*> getStations();
 
