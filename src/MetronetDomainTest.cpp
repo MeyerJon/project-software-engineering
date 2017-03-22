@@ -54,16 +54,6 @@ TEST_F(MetronetDomainTest, CheckConsistent){
     }
 }
 
-TEST_F(MetronetDomainTest, GetStation) {
-    std::string filename = "testInput/HappyDayInput.xml";
-    ASSERT_TRUE(FileExists(filename));
-    ASSERT_TRUE(metronet.properlyInitialised());
-    std::ostream dummy(0);
-    ASSERT_EQ(metronet.setup(filename, dummy), Success);
-    ASSERT_TRUE(metronet.properlyInitialised());
-
-}
-
 TEST_F(MetronetDomainTest, VerplaatsTram){
     Tram tram(10, 60, 2, "goodBegin");
 
