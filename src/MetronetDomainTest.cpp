@@ -28,8 +28,8 @@ TEST_F(MetronetDomainTest, CheckConsistent){
     std::string filename;
     SuccessEnum importResult;
     // Check if the consistent nets are evaluated correctly
-    for(int i = 1; i <= TESTS_CONSISTENT; i++){
-        filename = "testInput/ConsistentNet" + std::to_string(i) + ".xml";
+    for(int i = 1; i <= TESTS_LEGAL; i++){
+        filename = "testInput/LegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
@@ -41,8 +41,8 @@ TEST_F(MetronetDomainTest, CheckConsistent){
     }
 
     // Check if the inconsistent nets are evaluated correctly
-    for(int i = 1; i <= TESTS_INCONSISTENT; i++){
-        filename = "testInput/InconsistentNet" + std::to_string(i) + ".xml";
+    for(int i = 1; i <= TESTS_ILLEGAL; i++){
+        filename = "testInput/IllegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
@@ -52,6 +52,16 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         ASSERT_FALSE(metronet.checkConsistent(dummy));
         metronet.reset();
     }
+}
+
+TEST_F(MetronetDomainTest, GetStation) {
+    std::string filename = "testInput/ConsistentNet" + std::to_string(i) + ".xml";
+    ASSERT_TRUE(FileExists(filename));
+    ASSERT_TRUE(metronet.properlyInitialised());
+    std::ostream dummy(0);
+    ASSERT_EQ(metronet.setup(filename, dummy), Success);
+    ASSERT_TRUE(metronet.properlyInitialised());
+
 }
 
 TEST_F(MetronetDomainTest, VerplaatsTram){
