@@ -1,8 +1,8 @@
-.TH "Tram" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "Tram" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Tram \- 
+Tram
 .SH SYNOPSIS
 .br
 .PP
@@ -18,45 +18,45 @@ Tram \-
 .RI "\fBTram\fP (int zit, int snel, int sp, std::string beginS)"
 .br
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const "
+.RI "bool \fBproperlyInitialised\fP () const"
 .br
-.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
 .ti -1c
-.RI "int \fBgetZitplaatsen\fP () const "
+.RI "int \fBgetZitplaatsen\fP () const"
 .br
-.RI "\fIGeef de zitplaatsen terug van de tram\&. \fP"
+.RI "Geef de zitplaatsen terug van de tram\&. "
 .ti -1c
-.RI "int \fBgetPassagiers\fP () const "
+.RI "int \fBgetPassagiers\fP () const"
 .br
-.RI "\fIGeef de passagiers terug van de tram\&. \fP"
+.RI "Geef de passagiers terug van de tram\&. "
 .ti -1c
-.RI "int \fBgetSnelheid\fP () const "
+.RI "int \fBgetSnelheid\fP () const"
 .br
-.RI "\fIGeef de snelheid terug van de tram\&. \fP"
+.RI "Geef de snelheid terug van de tram\&. "
 .ti -1c
-.RI "int \fBgetSpoor\fP () const "
+.RI "int \fBgetSpoor\fP () const"
 .br
-.RI "\fIGeef het spoor terug\&. \fP"
+.RI "Geef het spoor terug\&. "
 .ti -1c
-.RI "std::string \fBgetBeginStation\fP () const "
+.RI "std::string \fBgetBeginStation\fP () const"
 .br
-.RI "\fIGeef het beginstation terug\&. \fP"
+.RI "Geef het beginstation terug\&. "
 .ti -1c
-.RI "std::string \fBgetHuidigStation\fP () const "
+.RI "std::string \fBgetHuidigStation\fP () const"
 .br
-.RI "\fIGeef het huidig station\&. \fP"
+.RI "Geef het huidig station\&. "
 .ti -1c
 .RI "void \fBverplaatsTram\fP (std::string station, \fBExporter\fP *exp, std::ostream &os)"
 .br
-.RI "\fIVerplaatst een tram naar het opgegeven station\&. \fP"
+.RI "Verplaatst een tram naar het opgegeven station\&. "
 .ti -1c
 .RI "bool \fBafstappen\fP (int afstappen)"
 .br
-.RI "\fIEmuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) \fP"
+.RI "Emuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) "
 .ti -1c
 .RI "bool \fBopstappen\fP (int opstappen)"
 .br
-.RI "\fIEmuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) \fP"
+.RI "Emuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -78,11 +78,16 @@ Emuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afst
 .PP
 \fBReturns:\fP
 .RS 4
-boolean Of er meer passagiers afstapten dan mogelijk\&.
+boolean Of er meer passagiers afstapten dan mogelijk\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van afstappen\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van afstappen\&.'); 
+.PP
+REQUIRE(afstappen >= 0, 'Afstappen kan geen negatieve waarde hebben bij aanroep van afstappen\&.'); 
+.RE
+.PP
 
 .SS "std::string Tram::getBeginStation () const"
 
@@ -91,11 +96,14 @@ Geef het beginstation terug\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Het beginstation\&.
+Het beginstation\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getBeginStation\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getBeginStation\&.'); 
+.RE
+.PP
 
 .SS "std::string Tram::getHuidigStation () const"
 
@@ -104,11 +112,14 @@ Geef het huidig station\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Het huidig station\&.
+Het huidig station\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getHuidigStation\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getHuidigStation\&.'); 
+.RE
+.PP
 
 .SS "int Tram::getPassagiers () const"
 
@@ -117,11 +128,14 @@ Geef de passagiers terug van de tram\&.
 .PP
 \fBReturns:\fP
 .RS 4
-De passagiers\&.
+De passagiers\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getPassagiers\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getPassagiers\&.'); 
+.RE
+.PP
 
 .SS "int Tram::getSnelheid () const"
 
@@ -130,11 +144,14 @@ Geef de snelheid terug van de tram\&.
 .PP
 \fBReturns:\fP
 .RS 4
-De snelheid\&.
+De snelheid\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getSnelheid\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getSnelheid\&.'); 
+.RE
+.PP
 
 .SS "int Tram::getSpoor () const"
 
@@ -143,11 +160,14 @@ Geef het spoor terug\&.
 .PP
 \fBReturns:\fP
 .RS 4
-Het spoor\&.
+Het spoor\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getSpoor\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getSpoor\&.'); 
+.RE
+.PP
 
 .SS "int Tram::getZitplaatsen () const"
 
@@ -156,11 +176,14 @@ Geef de zitplaatsen terug van de tram\&.
 .PP
 \fBReturns:\fP
 .RS 4
-De zitplaatsen\&.
+De zitplaatsen\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getZitplaatsen\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getZitplaatsen\&.'); 
+.RE
+.PP
 
 .SS "bool Tram::opstappen (int opstappen)"
 
@@ -174,11 +197,16 @@ Emuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opst
 .PP
 \fBReturns:\fP
 .RS 4
-boolean Of er meer passigiers opstapten dan mogelijk\&.
+boolean Of er meer passigiers opstapten dan mogelijk\&. 
 .RE
 .PP
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van opstappen\&.');
-.br
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van opstappen\&.'); 
+.PP
+REQUIRE(opstappen >= 0, 'Opstappen kan geen negatieve waarde hebben bij aanroep van opstappen\&.'); 
+.RE
+.PP
 
 .SS "bool Tram::properlyInitialised () const"
 
@@ -194,10 +222,18 @@ Boolean die aangeeft of het object juist geinitialiseerd is\&.
 .SS "void Tram::verplaatsTram (std::string station, \fBExporter\fP * exp, std::ostream & os)"
 
 .PP
-Verplaatst een tram naar het opgegeven station\&. REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van verplaatsTram\&.');
-.br
-ENSURE((huidigStation == station), 'huidigStation is niet correct aangepast\&.');
-.br
+Verplaatst een tram naar het opgegeven station\&. 
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van verplaatsTram\&.'); 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE((huidigStation == station), 'huidigStation is niet correct aangepast\&.'); 
+.RE
+.PP
 
 
 .SH "Author"

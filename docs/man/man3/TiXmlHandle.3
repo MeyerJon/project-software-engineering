@@ -1,8 +1,8 @@
-.TH "TiXmlHandle" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "TiXmlHandle" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-TiXmlHandle \- 
+TiXmlHandle
 .SH SYNOPSIS
 .br
 .PP
@@ -14,65 +14,65 @@ TiXmlHandle \-
 .ti -1c
 .RI "\fBTiXmlHandle\fP (\fBTiXmlNode\fP *_node)"
 .br
-.RI "\fICreate a handle from any node (at any depth of the tree\&.) This can be a null pointer\&. \fP"
+.RI "Create a handle from any node (at any depth of the tree\&.) This can be a null pointer\&. "
 .ti -1c
 .RI "\fBTiXmlHandle\fP (const \fBTiXmlHandle\fP &ref)"
 .br
-.RI "\fICopy constructor\&. \fP"
+.RI "Copy constructor\&. "
 .ti -1c
 .RI "\fBTiXmlHandle\fP \fBoperator=\fP (const \fBTiXmlHandle\fP &ref)"
 .br
 .ti -1c
-.RI "\fBTiXmlHandle\fP \fBFirstChild\fP () const "
+.RI "\fBTiXmlHandle\fP \fBFirstChild\fP () const"
 .br
-.RI "\fIReturn a handle to the first child node\&. \fP"
+.RI "Return a handle to the first child node\&. "
 .ti -1c
-.RI "\fBTiXmlHandle\fP \fBFirstChild\fP (const char *value) const "
+.RI "\fBTiXmlHandle\fP \fBFirstChild\fP (const char *value) const"
 .br
-.RI "\fIReturn a handle to the first child node with the given name\&. \fP"
+.RI "Return a handle to the first child node with the given name\&. "
 .ti -1c
-.RI "\fBTiXmlHandle\fP \fBFirstChildElement\fP () const "
+.RI "\fBTiXmlHandle\fP \fBFirstChildElement\fP () const"
 .br
-.RI "\fIReturn a handle to the first child element\&. \fP"
+.RI "Return a handle to the first child element\&. "
 .ti -1c
-.RI "\fBTiXmlHandle\fP \fBFirstChildElement\fP (const char *value) const "
+.RI "\fBTiXmlHandle\fP \fBFirstChildElement\fP (const char *value) const"
 .br
-.RI "\fIReturn a handle to the first child element with the given name\&. \fP"
+.RI "Return a handle to the first child element with the given name\&. "
 .ti -1c
-.RI "\fBTiXmlHandle\fP \fBChild\fP (const char *value, int index) const "
-.br
-.ti -1c
-.RI "\fBTiXmlHandle\fP \fBChild\fP (int index) const "
+.RI "\fBTiXmlHandle\fP \fBChild\fP (const char *value, int index) const"
 .br
 .ti -1c
-.RI "\fBTiXmlHandle\fP \fBChildElement\fP (const char *value, int index) const "
+.RI "\fBTiXmlHandle\fP \fBChild\fP (int index) const"
 .br
 .ti -1c
-.RI "\fBTiXmlHandle\fP \fBChildElement\fP (int index) const "
+.RI "\fBTiXmlHandle\fP \fBChildElement\fP (const char *value, int index) const"
 .br
 .ti -1c
-.RI "\fBTiXmlNode\fP * \fBToNode\fP () const "
+.RI "\fBTiXmlHandle\fP \fBChildElement\fP (int index) const"
 .br
 .ti -1c
-.RI "\fBTiXmlElement\fP * \fBToElement\fP () const "
+.RI "\fBTiXmlNode\fP * \fBToNode\fP () const"
 .br
 .ti -1c
-.RI "\fBTiXmlText\fP * \fBToText\fP () const "
+.RI "\fBTiXmlElement\fP * \fBToElement\fP () const"
 .br
 .ti -1c
-.RI "\fBTiXmlUnknown\fP * \fBToUnknown\fP () const "
+.RI "\fBTiXmlText\fP * \fBToText\fP () const"
 .br
 .ti -1c
-.RI "\fBTiXmlNode\fP * \fBNode\fP () const "
+.RI "\fBTiXmlUnknown\fP * \fBToUnknown\fP () const"
 .br
 .ti -1c
-.RI "\fBTiXmlElement\fP * \fBElement\fP () const "
+.RI "\fBTiXmlNode\fP * \fBNode\fP () const"
 .br
 .ti -1c
-.RI "\fBTiXmlText\fP * \fBText\fP () const "
+.RI "\fBTiXmlElement\fP * \fBElement\fP () const"
 .br
 .ti -1c
-.RI "\fBTiXmlUnknown\fP * \fBUnknown\fP () const "
+.RI "\fBTiXmlText\fP * \fBText\fP () const"
+.br
+.ti -1c
+.RI "\fBTiXmlUnknown\fP * \fBUnknown\fP () const"
 .br
 .in -1c
 .SH "Detailed Description"

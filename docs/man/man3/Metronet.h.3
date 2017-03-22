@@ -1,8 +1,8 @@
-.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Metronet.h" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "/home/sergio/CLionProjects/SoftEng/src/Metronet.h" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Metronet.h \- 
+/home/sergio/CLionProjects/SoftEng/src/Metronet.h
 .SH SYNOPSIS
 .br
 .PP
@@ -15,6 +15,10 @@
 \fC#include <string>\fP
 .br
 \fC#include <algorithm>\fP
+.br
+\fC#include 'tinyxml\&.h'\fP
+.br
+\fC#include 'tinystr\&.h'\fP
 .br
 \fC#include 'Station\&.h'\fP
 .br
@@ -32,6 +36,26 @@
 .RI "class \fBMetronet\fP"
 .br
 .in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSuccessEnum\fP { \fBSuccess\fP, \fBPartialImport\fP, \fBBadImport\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSuccessEnum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISuccess \fP\fP
+.TP
+\fB\fIPartialImport \fP\fP
+.TP
+\fB\fIBadImport \fP\fP
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Metronet from the source code\&.

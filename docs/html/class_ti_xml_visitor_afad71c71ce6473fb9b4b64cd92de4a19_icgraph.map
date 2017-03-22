@@ -1,6 +1,6 @@
 <map id="TiXmlVisitor::Visit" name="TiXmlVisitor::Visit">
-<area shape="rect" id="node2" href="$class_ti_xml_comment.html#a4382de0e50da973f11a23ea5852568bd" title="TiXmlComment::Accept" alt="" coords="184,5,347,32"/>
-<area shape="rect" id="node3" href="$class_ti_xml_text.html#a43b9954ebf679557fac1a4453f337b7c" title="TiXmlText::Accept" alt="" coords="200,56,331,83"/>
-<area shape="rect" id="node4" href="$class_ti_xml_declaration.html#ab6a6b178161ba9abc2c35058de689864" title="TiXmlDeclaration::Accept" alt="" coords="180,107,351,133"/>
-<area shape="rect" id="node5" href="$class_ti_xml_unknown.html#a4e54d7482e05a837cf83c925cc683380" title="TiXmlUnknown::Accept" alt="" coords="185,157,345,184"/>
+<area shape="rect" id="node2" href="$class_ti_xml_comment.html#ac894241530d1d266131a5026cb251a95" title="TiXmlComment::Accept" alt="" coords="184,5,347,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_text.html#af65964326eac4640bfb97d4622fa0de2" title="TiXmlText::Accept" alt="" coords="200,56,331,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_declaration.html#aa1b6bade6c989407ce9881bdfc73c1e6" title="TiXmlDeclaration::Accept" alt="" coords="180,107,351,133"/>
+<area shape="rect" id="node5" href="$class_ti_xml_unknown.html#aafdf1b2d4f561979c7907bad91004999" title="TiXmlUnknown::Accept" alt="" coords="185,157,345,184"/>
 </map>

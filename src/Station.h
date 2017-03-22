@@ -25,47 +25,51 @@ public:
     Station();
     Station(std::string n, std::string vor, std::string volg, int sp, int op, int af);
 
-    /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
-     *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
+    /**
+     * \brief Kijk na of de constructor in de juiste staat geeindigd is.
+     * \return Boolean die aangeeft of het object juist geinitialiseerd is.
      */
     bool properlyInitialised() const;
 
-    /** \brief Geef de naam terug van het station.
-     *  \return De naam van het station.
-     *
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getNaam.");\n
+    /**
+     * \brief Geef de naam terug van het station.
+     * \return De naam van het station.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getNaam.");
      */
     std::string getNaam() const;
 
-    /** \brief Geef het vorig station terug.
-     *  \return Het vorig station.
-     *
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");\n
+    /**
+     * \brief Geef het vorig station terug.
+     * \return Het vorig station.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");
      */
     std::string getVorige() const;
 
-    /** \brief Geef het volgende station.
-     *  \return Het volgende station.
-     *
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");\n
+    /**
+     * \brief Geef het volgende station.
+     * \return Het volgende station.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");
      */
     std::string getVolgende() const;
 
-    /** \brief Geef het spoor terug.
-     *  \return Het spoor.
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");\n
+    /**
+     * \brief Geef het spoor terug.
+     * \return Het spoor.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");
      */
     int getSpoor() const;
 
-    /** \brief Geef het aantal opstappende mensen terug.
-     *  \return Een aantal opstappende mensen.
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getOpstappen.");\n
+    /**
+     * \brief Geef het aantal opstappende mensen terug.
+     * \return Een aantal opstappende mensen.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getOpstappen.");
      */
     int getOpstappen() const;
 
-    /** \brief Geef het afstappende mensen terug.
-     *  \return Een aantal afstappende mensen.
-     * REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getAfstappen.");\n
+    /**
+     * \brief Geef het afstappende mensen terug.
+     * \return Een aantal afstappende mensen.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getAfstappen.");
      */
     int getAfstappen() const;
 };

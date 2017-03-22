@@ -42,100 +42,99 @@ public:
 
     Metronet& operator=(const Metronet& rhs);
 
-    /** \brief Kijk na of de constructor in de juiste staat geeindigd is.
-     *  \return Boolean die aangeeft of het object juist geinitialiseerd is.
+    /**
+     * \brief Kijk na of de constructor in de juiste staat geeindigd is.
+     * \return Boolean die aangeeft of het object juist geinitialiseerd is.
      */
     bool properlyInitialised();
 
-    /** \brief Verwerkt het XML-bestand.
-     *
+    /**
+     * \brief Verwerkt het XML-bestand.
      * \param filename De naam van het XML-bestand.
      * \param os De stream waarnaar de output geschreven wordt (nodig voor de exporter).
-     *
-     *  \pre REQUIRE(this->properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");
+     * \pre REQUIRE(this->properlyInitialised, "Het metronet was niet geinitialiseerd bij het aanroepen van setupStations.");
      */
     SuccessEnum setup(std::string filename, std::ostream& os);
 
-    /** \brief Geeft alle stations in het metronet terug.
-     *  \return Map met stations in het metronet.
-     *
-     *  \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");
+    /**
+     * \brief Geeft alle stations in het metronet terug.
+     * \return Map met stations in het metronet.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");
      */
      std::map<std::string, Station*> getStations();
 
-    /** \brief Geeft alle trams in het metronet terug.
-     *  \return Map met trams in het metronet.
-     *
-     *  REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");\n
+    /**
+     * \brief Geeft alle trams in het metronet terug.
+     * \return Map met trams in het metronet.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");
      */
     std::map<int, Tram*>& getTrams();
 
-    /** \brief Voegt station toe aan metronet.
-     *  \param station Het station dat toegevoegd zal worden.
-     *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addStation.");\n
-     * REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");\n
-     * ENSURE((stations.find(station->getNaam()) != stations.end()), "Station was niet toegevoegd bij de aanroep van addStation.");\n
+    /**
+     * \brief Voegt station toe aan metronet.
+     * \param station Het station dat toegevoegd zal worden.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
+     * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");
+     * \post ENSURE((stations.find(station->getNaam()) != stations.end()), "Station was niet toegevoegd bij de aanroep van addStation.");
      */
     void addStation(Station* station);
 
-    /** \brief Voegt tram toe aan metronet.
-     *  \param tram De tram die toegevoegd zal worden.
-     *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addTram.");\n
-     * REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");\n
-     * ENSURE(trams.find(tram->getSpoor()) != trams.end()), "Tram was niet toegevoegd bij de aanroep van addTram.");\n
+    /**
+     * \brief Voegt tram toe aan metronet.
+     * \param tram De tram die toegevoegd zal worden.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
+     * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");
+     * \post ENSURE(trams.find(tram->getSpoor()) != trams.end()), "Tram was niet toegevoegd bij de aanroep van addTram.");
      */
     void addTram(Tram* tram);
 
-    /** \brief Voegt spoor toe aan metronet.
-     *  \param spoor Het spoor dat toegevoegd zal worden.
-     *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");\n
-     * ENSURE(sporen[sporen.size() - 1] == spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");\n
+    /**
+     * \brief Voegt spoor toe aan metronet.
+     * \param spoor Het spoor dat toegevoegd zal worden.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");
+     * \post ENSURE(sporen[sporen.size() - 1] == spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
      */
     void addSpoor(int spoor);
 
-    /** \brief Kijkt na of het metronet consistent is.
-     *  \param exp De exporter die de output zal behandelen.
-     *  \param os De stream waar de output naar gestuurd zal worden.
-     *  \return Boolean die aangeeft of het Metronet consistent is.
-     *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");\n
+    /**
+     * \brief Kijkt na of het metronet consistent is.
+     * \param exp De exporter die de output zal behandelen.
+     * \param os De stream waar de output naar gestuurd zal worden.
+     * \return Boolean die aangeeft of het Metronet consistent is.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
      */
     bool checkConsistent(std::ostream& os);
 
-    /** \brief Print het hele metronet.
-     *
+    /**
+     * \brief Print het hele metronet.
      * \param exp De exporter die gebruikt moet worden
-     * \param os De stream waarnaar de output moet gestuurd worden
-     *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");\n
+     * \param os De stream waar de output naar gestuurd moet worden
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");
      */
     void printMetronet(std::ostream& os);
 
-    /** \brief Behandelt het opstappen en afstappen van passagiers.
-     *  \param station Het station waar mensen opstappen en afstappen.
-     *
-     * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");\n
-     * REQUIRE((stations.find(station) != stations.end()), "Station bestaat niet in het metronet.");\n
-     * REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");\n
+    /**
+     * \brief Behandelt het opstappen en afstappen van passagiers.
+     * \param station Het station waar mensen opstappen en afstappen.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
+     * \pre REQUIRE((stations.find(station) != stations.end()), "Station bestaat niet in het metronet.");
+     * \pre REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
      */
     bool opstappenAfstappen(std::string station, std::ostream& os);
 
 
-    /** \brief Emuleert het rondrijden van trams
-     *
-     *
+    /**
+     * \brief Emuleert het rondrijden van trams
+     * \param os De stream waar de output naar gestuurd moet worden
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
      */
 
     void rondrijden(std::ostream& os);
 
-    /** \brief Reset heel het systeem.
-    *
-    *
-    * REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");\n
-    */
+    /**
+     * \brief Reset heel het systeem.
+     *  \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");
+     */
      void reset();
 };
 

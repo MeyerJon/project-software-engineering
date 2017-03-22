@@ -1,6 +1,6 @@
 <map id="TiXmlBase::ToLower" name="TiXmlBase::ToLower">
 <area shape="rect" id="node2" href="$class_ti_xml_base.html#a51631e6986179558b9e5850723ed165a" title="TiXmlBase::StringEqual" alt="" coords="197,233,359,260"/>
-<area shape="rect" id="node3" href="$class_ti_xml_element.html#af4a1d3f88c28eb0f3115dc39ebd83fff" title="TiXmlElement::QueryBoolAttribute" alt="" coords="407,5,629,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_element.html#a5789b1488af75b6ae37a749700495ceb" title="TiXmlElement::QueryBoolAttribute" alt="" coords="407,5,629,32"/>
 <area shape="rect" id="node4" href="$class_ti_xml_base.html#a5b0fde72d6f662ae1fd6303195d2159b" title="TiXmlBase::GetChar" alt="" coords="447,107,589,133"/>
 <area shape="rect" id="node5" href="$class_ti_xml_base.html#aa646c74921aa33156968b802bbf5566e" title="TiXmlBase::ReadText" alt="" coords="677,81,828,108"/>
 <area shape="rect" id="node8" href="$class_ti_xml_element.html#af95c9165159fd9dfdcc5b894a3fcf85b" title="TiXmlElement::Parse" alt="" coords="1109,157,1255,184"/>

@@ -1,7 +1,7 @@
 <map id="TiXmlDeclaration::operator=" name="TiXmlDeclaration::operator=">
 <area shape="rect" id="node2" href="$class_ti_xml_node.html#a708e7f953df61d4d2d12f73171550a4b" title="Delete all the children of this node. Does not affect &#39;this&#39;. " alt="" coords="263,5,390,32"/>
-<area shape="rect" id="node3" href="$class_ti_xml_declaration.html#a9d08959f935421a593032bd3efb30c38" title="TiXmlDeclaration::CopyTo" alt="" coords="239,56,415,83"/>
-<area shape="rect" id="node4" href="$class_ti_xml_node.html#ab6056978923ad8350fb5164af32d8038" title="TiXmlNode::CopyTo" alt="" coords="463,56,604,83"/>
+<area shape="rect" id="node3" href="$class_ti_xml_declaration.html#a189de17b3e04d4e5b1c385336f214af1" title="TiXmlDeclaration::CopyTo" alt="" coords="239,56,415,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#aaadd5bb9c94f84c4472b649b95de4a0b" title="TiXmlNode::CopyTo" alt="" coords="463,56,604,83"/>
 <area shape="rect" id="node5" href="$class_ti_xml_node.html#a2a38329ca5d3f28f98ce932b8299ae90" title="TiXmlNode::SetValue" alt="" coords="652,56,800,83"/>
 <area shape="rect" id="node6" href="$struct_ti_xml_cursor.html#a1e6fa622b59dafb71b6efe595105dcdd" title="TiXmlCursor::Clear" alt="" coords="848,56,983,83"/>
 </map>

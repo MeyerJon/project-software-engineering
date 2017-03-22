@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Exporter\+H\+T\+ML\+:
-\nopagebreak
+Inheritance diagram for Exporter\+H\+T\+ML\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Exporter\+H\+T\+ML\+:
 \end{figure}
 
 
-Collaboration diagram for Exporter\+H\+T\+ML\+:
-\nopagebreak
+Collaboration diagram for Exporter\+H\+T\+ML\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,48 +33,43 @@ virtual void \hyperlink{class_exporter_h_t_m_l_aefa1c658f3c3c55bd7725bdad09629b3
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_exporter_h_t_m_l_aefa1c658f3c3c55bd7725bdad09629b3}\label{class_exporter_h_t_m_l_aefa1c658f3c3c55bd7725bdad09629b3}} 
 \index{Exporter\+H\+T\+ML@{Exporter\+H\+T\+ML}!finish@{finish}}
 \index{finish@{finish}!Exporter\+H\+T\+ML@{Exporter\+H\+T\+ML}}
-\subsubsection[{\texorpdfstring{finish(std\+::ostream \&os)}{finish(std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exporter\+H\+T\+M\+L\+::finish (
-\begin{DoxyParamCaption}
-\item[{std\+::ostream \&}]{os}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_exporter_h_t_m_l_aefa1c658f3c3c55bd7725bdad09629b3}{}\label{class_exporter_h_t_m_l_aefa1c658f3c3c55bd7725bdad09629b3}
+\subsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily void Exporter\+H\+T\+M\+L\+::finish (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em os} & De stream waar de output naar gestuurd zal worden.\\
+{\em os} & De stream waar de output naar gestuurd zal worden. \\
 \hline
 \end{DoxyParams}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_af01d2a6c2f54329b1867a19537e11a34}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij de aanroep van finish.\char`\"{});~\newline
-R\+E\+Q\+U\+I\+RE(document\+Started, \char`\"{}\+Document was niet aangemaakt voor de aanroep van finish.\char`\"{});~\newline
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij de aanroep van finish.\char`\"{}); 
+
+R\+E\+Q\+U\+I\+RE(document\+Started, \char`\"{}\+Document was niet aangemaakt voor de aanroep van finish.\char`\"{}); 
+\end{DoxyPrecond}
 
 
 Reimplemented from \hyperlink{class_exporter_ae477714f462d70cfc5b3970f91fcc4ed}{Exporter}.
 
-
-
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_exporter_h_t_m_l_aefa1c658f3c3c55bd7725bdad09629b3_cgraph}
 \end{center}
 \end{figure}
-
-
+\mbox{\Hypertarget{class_exporter_h_t_m_l_ace2649c240282289d4cb3bfbd19e427c}\label{class_exporter_h_t_m_l_ace2649c240282289d4cb3bfbd19e427c}} 
 \index{Exporter\+H\+T\+ML@{Exporter\+H\+T\+ML}!write@{write}}
 \index{write@{write}!Exporter\+H\+T\+ML@{Exporter\+H\+T\+ML}}
-\subsubsection[{\texorpdfstring{write(std\+::string \&output, std\+::ostream \&os)}{write(std::string &output, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exporter\+H\+T\+M\+L\+::write (
-\begin{DoxyParamCaption}
-\item[{std\+::string \&}]{output, }
-\item[{std\+::ostream \&}]{os}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_exporter_h_t_m_l_ace2649c240282289d4cb3bfbd19e427c}{}\label{class_exporter_h_t_m_l_ace2649c240282289d4cb3bfbd19e427c}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Exporter\+H\+T\+M\+L\+::write (\begin{DoxyParamCaption}\item[{std\+::string \&}]{output,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 Stuur de output string naar de output stream. 
@@ -85,19 +78,20 @@ Stuur de output string naar de output stream.
 \begin{DoxyParams}{Parameters}
 {\em output} & De string die naar de output gestuurd moet worden. \\
 \hline
-{\em os} & De stream waar de output naar gestuurd zal worden.\\
+{\em os} & De stream waar de output naar gestuurd zal worden. \\
 \hline
 \end{DoxyParams}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_af01d2a6c2f54329b1867a19537e11a34}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij de aanroep van write.\char`\"{});~\newline
-E\+N\+S\+U\+RE(document\+Started, \char`\"{}\+Document was niet aangemaakt bij de aanroep van write.\char`\"{});~\newline
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_exporter_aafd9df9210aeefd7bb7fd434fc317cf0}{properly\+Initialised()}, \char`\"{}\+Exporter was niet geinitialiseerd bij de aanroep van write.\char`\"{}); 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(document\+Started, \char`\"{}\+Document was niet aangemaakt bij de aanroep van write.\char`\"{}); 
+\end{DoxyPostcond}
 
 
 Reimplemented from \hyperlink{class_exporter_ab3736803133eb727cf87a7306f91eb11}{Exporter}.
 
-
-
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -106,9 +100,7 @@ Here is the call graph for this function\+:
 \end{figure}
 
 
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_exporter_8h}{Exporter.\+h}\item 
-/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_exporter_8cpp}{Exporter.\+cpp}\end{DoxyCompactItemize}
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_exporter_8h}{Exporter.\+h}\item 
+/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_exporter_8cpp}{Exporter.\+cpp}\end{DoxyCompactItemize}

@@ -1,8 +1,8 @@
-.TH "TiXmlDocument" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "TiXmlDocument" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-TiXmlDocument \- 
+TiXmlDocument
 .SH SYNOPSIS
 .br
 .PP
@@ -16,11 +16,11 @@ Inherits \fBTiXmlNode\fP\&.
 .ti -1c
 .RI "\fBTiXmlDocument\fP ()"
 .br
-.RI "\fICreate an empty document, that has no name\&. \fP"
+.RI "Create an empty document, that has no name\&. "
 .ti -1c
 .RI "\fBTiXmlDocument\fP (const char *documentName)"
 .br
-.RI "\fICreate a document with a name\&. The name of the document is also the filename of the xml\&. \fP"
+.RI "Create a document with a name\&. The name of the document is also the filename of the xml\&. "
 .ti -1c
 .RI "\fBTiXmlDocument\fP (const \fBTiXmlDocument\fP &copy)"
 .br
@@ -34,86 +34,86 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "bool \fBLoadFile\fP (\fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
 .ti -1c
-.RI "bool \fBSaveFile\fP () const "
+.RI "bool \fBSaveFile\fP () const"
 .br
-.RI "\fISave a file using the current document value\&. Returns true if successful\&. \fP"
+.RI "Save a file using the current document value\&. Returns true if successful\&. "
 .ti -1c
 .RI "bool \fBLoadFile\fP (const char *filename, \fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
-.RI "\fILoad a file using the given filename\&. Returns true if successful\&. \fP"
+.RI "Load a file using the given filename\&. Returns true if successful\&. "
 .ti -1c
-.RI "bool \fBSaveFile\fP (const char *filename) const "
+.RI "bool \fBSaveFile\fP (const char *filename) const"
 .br
-.RI "\fISave a file using the given filename\&. Returns true if successful\&. \fP"
+.RI "Save a file using the given filename\&. Returns true if successful\&. "
 .ti -1c
 .RI "bool \fBLoadFile\fP (FILE *, \fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
 .ti -1c
-.RI "bool \fBSaveFile\fP (FILE *) const "
+.RI "bool \fBSaveFile\fP (FILE *) const"
 .br
-.RI "\fISave a file using the given FILE*\&. Returns true if successful\&. \fP"
+.RI "Save a file using the given FILE*\&. Returns true if successful\&. "
 .ti -1c
 .RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data=0, \fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
 .ti -1c
-.RI "const \fBTiXmlElement\fP * \fBRootElement\fP () const "
+.RI "const \fBTiXmlElement\fP * \fBRootElement\fP () const"
 .br
 .ti -1c
 .RI "\fBTiXmlElement\fP * \fBRootElement\fP ()"
 .br
 .ti -1c
-.RI "bool \fBError\fP () const "
+.RI "bool \fBError\fP () const"
 .br
 .ti -1c
-.RI "const char * \fBErrorDesc\fP () const "
+.RI "const char * \fBErrorDesc\fP () const"
 .br
-.RI "\fIContains a textual (english) description of the error if one occurs\&. \fP"
+.RI "Contains a textual (english) description of the error if one occurs\&. "
 .ti -1c
-.RI "int \fBErrorId\fP () const "
-.br
-.ti -1c
-.RI "int \fBErrorRow\fP () const "
+.RI "int \fBErrorId\fP () const"
 .br
 .ti -1c
-.RI "int \fBErrorCol\fP () const "
+.RI "int \fBErrorRow\fP () const"
 .br
-.RI "\fIThe column where the error occured\&. See \fBErrorRow()\fP \fP"
+.ti -1c
+.RI "int \fBErrorCol\fP () const"
+.br
+.RI "The column where the error occured\&. See \fBErrorRow()\fP "
 .ti -1c
 .RI "void \fBSetTabSize\fP (int _tabsize)"
 .br
 .ti -1c
-.RI "int \fBTabSize\fP () const "
+.RI "int \fBTabSize\fP () const"
 .br
 .ti -1c
 .RI "void \fBClearError\fP ()"
 .br
 .ti -1c
-.RI "void \fBPrint\fP () const "
+.RI "void \fBPrint\fP () const"
 .br
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth=0) const "
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth=0) const"
 .br
-.RI "\fIPrint this Document to a FILE stream\&. \fP"
+.RI "Print this Document to a FILE stream\&. "
 .ti -1c
 .RI "void \fBSetError\fP (int err, const char *errorLocation, \fBTiXmlParsingData\fP *prevData, \fBTiXmlEncoding\fP encoding)"
 .br
 .ti -1c
-.RI "virtual const \fBTiXmlDocument\fP * \fBToDocument\fP () const "
+.RI "virtual const \fBTiXmlDocument\fP * \fBToDocument\fP () const"
 .br
-.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
+.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
 .ti -1c
 .RI "virtual \fBTiXmlDocument\fP * \fBToDocument\fP ()"
 .br
-.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
+.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
 .ti -1c
-.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const "
+.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const"
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const "
+.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const"
 .br
 .in -1c
 .SS "Additional Inherited Members"

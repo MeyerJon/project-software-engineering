@@ -1,20 +1,20 @@
 <map id="TiXmlText::ToText" name="TiXmlText::ToText">
-<area shape="rect" id="node2" href="$class_ti_xml_element.html#a31ab28cc3b892a69254391d6bbe08df3" title="TiXmlElement::Accept" alt="" coords="399,132,553,159"/>
-<area shape="rect" id="node8" href="$class_ti_xml_element.html#a13f6df105ebb1e8dc636e75cc883be32" title="Creates a new Element and returns it &#45; the returned element is a copy. " alt="" coords="184,427,331,453"/>
-<area shape="rect" id="node12" href="$class_ti_xml_element.html#a9e0c1983b840de4134f1f6bf7af00b0f" title="TiXmlElement::CopyTo" alt="" coords="397,376,555,403"/>
+<area shape="rect" id="node2" href="$class_ti_xml_element.html#a01d33358cce9d1817b557d314dda3779" title="TiXmlElement::Accept" alt="" coords="399,132,553,159"/>
+<area shape="rect" id="node8" href="$class_ti_xml_element.html#a810ea8fa40844c01334e5af2a26794cb" title="Creates a new Element and returns it &#45; the returned element is a copy. " alt="" coords="184,427,331,453"/>
+<area shape="rect" id="node12" href="$class_ti_xml_element.html#ab931f2208ed76ba03465d8a1f86b5935" title="TiXmlElement::CopyTo" alt="" coords="397,376,555,403"/>
 <area shape="rect" id="node3" href="$class_ti_xml_visitor.html#a07baecb52dd7d8716ae2a48ad0956ee0" title="Visit a document. " alt="" coords="633,5,791,32"/>
-<area shape="rect" id="node4" href="$class_ti_xml_attribute_set.html#ae0636e88cedd4b09d61c451860f68598" title="TiXmlAttributeSet::\lFirst" alt="" coords="645,209,779,250"/>
-<area shape="rect" id="node5" href="$class_ti_xml_node.html#a44c8eee26bbe2d1b2762038df9dde2f0" title="The first child of this node. Will be null if there are no children. " alt="" coords="637,56,787,83"/>
-<area shape="rect" id="node6" href="$class_ti_xml_node.html#af854baeba384f5fe9859f5aee03b548e" title="Navigate to a sibling node. " alt="" coords="631,157,793,184"/>
+<area shape="rect" id="node4" href="$class_ti_xml_attribute_set.html#a85dfd2b5bae45c94334dced146f5c11a" title="TiXmlAttributeSet::\lFirst" alt="" coords="645,209,779,250"/>
+<area shape="rect" id="node5" href="$class_ti_xml_node.html#aa66bceae19707c90c1db12d7c98894a4" title="The first child of this node. Will be null if there are no children. " alt="" coords="637,56,787,83"/>
+<area shape="rect" id="node6" href="$class_ti_xml_node.html#ae99c572ac7901a15993ea7a4efaa10e7" title="Navigate to a sibling node. " alt="" coords="631,157,793,184"/>
 <area shape="rect" id="node7" href="$class_ti_xml_visitor.html#aa0ade4f27087447e93974e975c3246ad" title="Visit a document. " alt="" coords="637,107,787,133"/>
 <area shape="rect" id="node9" href="$class_ti_xml_element.html#a01bc3ab372d35da08efcbbe65ad90c60" title="Construct an element. " alt="" coords="379,427,573,453"/>
-<area shape="rect" id="node11" href="$class_ti_xml_node.html#a77943eb90d12c2892b1337a9f5918b41" title="TiXmlNode::Value" alt="" coords="412,477,540,504"/>
+<area shape="rect" id="node11" href="$class_ti_xml_node.html#ad44dfe927d49a74dd78b72b7514417ad" title="TiXmlNode::Value" alt="" coords="412,477,540,504"/>
 <area shape="rect" id="node10" href="$class_ti_xml_node.html#a3f46721695868667113c7487ff123f20" title="TiXmlNode::TiXmlNode" alt="" coords="632,629,792,656"/>
-<area shape="rect" id="node13" href="$class_ti_xml_node.html#ab6056978923ad8350fb5164af32d8038" title="TiXmlNode::CopyTo" alt="" coords="641,477,783,504"/>
-<area shape="rect" id="node16" href="$class_ti_xml_attribute.html#a776478980776a024f7c2846eec640f65" title="Get the next sibling attribute in the DOM. Returns null at end. " alt="" coords="641,528,783,555"/>
+<area shape="rect" id="node13" href="$class_ti_xml_node.html#aaadd5bb9c94f84c4472b649b95de4a0b" title="TiXmlNode::CopyTo" alt="" coords="641,477,783,504"/>
+<area shape="rect" id="node16" href="$class_ti_xml_attribute.html#af2e78f1ba9ed56a26ddc80614ed1c393" title="Get the next sibling attribute in the DOM. Returns null at end. " alt="" coords="641,528,783,555"/>
 <area shape="rect" id="node17" href="$class_ti_xml_element.html#abf0b3bd7f0e4c746a89ec6e7f101fc32" title="TiXmlElement::SetAttribute" alt="" coords="621,579,803,605"/>
-<area shape="rect" id="node24" href="$class_ti_xml_attribute.html#a298a57287d305904ba6bd96ae6f78d3d" title="Return the name of this attribute. " alt="" coords="638,275,786,301"/>
-<area shape="rect" id="node25" href="$class_ti_xml_attribute.html#a0f874490eac8ca00ee0070765d0e97e3" title="Return the value of this attribute. " alt="" coords="639,325,785,352"/>
+<area shape="rect" id="node24" href="$class_ti_xml_attribute.html#a008ef948268ee752b58c60d63d84bb01" title="Return the name of this attribute. " alt="" coords="638,275,786,301"/>
+<area shape="rect" id="node25" href="$class_ti_xml_attribute.html#ac9f0b56fcacbedb6eb49e5f282bef014" title="Return the value of this attribute. " alt="" coords="639,325,785,352"/>
 <area shape="rect" id="node26" href="$class_ti_xml_node.html#a1a881212554b759865f6cac79a851d38" title="TiXmlNode::LinkEndChild" alt="" coords="626,376,798,403"/>
 <area shape="rect" id="node33" href="$class_ti_xml_node.html#a4508cc3a2d7a98e96a54cc09c37a78a4" title="TiXmlNode::Clone" alt="" coords="647,427,777,453"/>
 <area shape="rect" id="node14" href="$class_ti_xml_node.html#a2a38329ca5d3f28f98ce932b8299ae90" title="TiXmlNode::SetValue" alt="" coords="863,477,1011,504"/>
@@ -25,10 +25,10 @@
 <area shape="rect" id="node20" href="$class_ti_xml_base.html#a00e4edb0219d00a1379c856e5a1d2025" title="TiXmlBase::Parse" alt="" coords="1111,579,1239,605"/>
 <area shape="rect" id="node21" href="$class_ti_xml_printer.html#ab23a90629e374cb1cadca090468bbd19" title="TiXmlPrinter::SetStreamPrinting" alt="" coords="1071,629,1279,656"/>
 <area shape="rect" id="node22" href="$class_ti_xml_node.html#acc0f88b7462c6cb73809d410a4f5bb86" title="TiXmlNode::Accept" alt="" coords="1107,680,1243,707"/>
-<area shape="rect" id="node27" href="$class_ti_xml_node.html#aa66f4ebcd175204a168ed7c2d7b43071" title="TiXmlNode::GetDocument" alt="" coords="1087,325,1263,352"/>
-<area shape="rect" id="node29" href="$class_ti_xml_node.html#a57b99d5c97d67a42b9752f5210a1ba5e" title="TiXmlNode::Type" alt="" coords="875,376,999,403"/>
+<area shape="rect" id="node27" href="$class_ti_xml_node.html#adcb070acefcbaedaa0673d82e530538b" title="TiXmlNode::GetDocument" alt="" coords="1087,325,1263,352"/>
+<area shape="rect" id="node29" href="$class_ti_xml_node.html#a0f4dd916b2afc2ab2f1a84f3e2b8fd5d" title="TiXmlNode::Type" alt="" coords="875,376,999,403"/>
 <area shape="rect" id="node30" href="$class_ti_xml_document.html#a735c23e318597b920c94eae77fa206de" title="TiXmlDocument::SetError" alt="" coords="851,427,1023,453"/>
-<area shape="rect" id="node28" href="$class_ti_xml_node.html#a8a4cda4b15c29f64cff419309aebed08" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="1327,325,1497,352"/>
+<area shape="rect" id="node28" href="$class_ti_xml_node.html#a775a904618cad6e4a8049bda4f5a6aa9" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="1327,325,1497,352"/>
 <area shape="rect" id="node31" href="$class_ti_xml_parsing_data.html#a65cee8ab77a36c605db08c84b4c30a7d" title="TiXmlParsingData::Stamp" alt="" coords="1087,376,1262,403"/>
-<area shape="rect" id="node32" href="$class_ti_xml_parsing_data.html#a9e63d965fdb53ff4ac711e105269e918" title="TiXmlParsingData::Cursor" alt="" coords="1087,427,1262,453"/>
+<area shape="rect" id="node32" href="$class_ti_xml_parsing_data.html#a02ba4903fd3b70b43524ad60a4eece7c" title="TiXmlParsingData::Cursor" alt="" coords="1087,427,1262,453"/>
 </map>
