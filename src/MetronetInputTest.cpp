@@ -66,7 +66,6 @@ TEST_F(MetronetInputTest, InputLegalSystems) {
 
         std::ostream dummy(0);
         ASSERT_EQ(metronet.setup(filename, dummy), Success);
-        ASSERT_TRUE(metronet.checkConsistent(dummy));
         ASSERT_FALSE(FileIsEmpty(filename));
         metronet.reset();
     }
