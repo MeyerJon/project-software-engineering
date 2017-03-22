@@ -121,3 +121,21 @@ TEST_F(MetronetDomainTest, OpstappenAfstappenNegative){
     EXPECT_DEATH(tram.opstappen(-1), "");
     EXPECT_DEATH(tram.afstappen(-1), "");
 }
+
+TEST_F(MetronetDomainTest, addTram){
+    std::ostream dummy(0);
+    metronet.setup("testInput/HappyDayInput.xml", dummy);
+
+    Tram* tram = new Tram(10, 60, 1, "A");
+    metronet.addTram(tram);
+    ASSERT_EQ(metronet.getTrams().at(1), tram);
+}
+
+TEST_F(MetronetDomainTest, addStation){
+    std::ostream dummy(0);
+    metronet.setup("testInput/HappyDayInput.xml", dummy);
+
+    Station* station = new Station("A", "B", "C", 1, 0, 0);
+    metronet.addStation(station);
+    ASSERT_EQ(metronet.getStations().at("A"), station);
+}
