@@ -1,9 +1,4 @@
 <map id="TiXmlBase::GetChar" name="TiXmlBase::GetChar">
-<area shape="rect" id="node2" href="$class_ti_xml_base.html#ac5c08bf3deffcda0bf8ce2958372b584" title="TiXmlBase::GetEntity" alt="" coords="405,5,555,32"/>
-<area shape="rect" id="node4" href="$class_ti_xml_base.html#a51631e6986179558b9e5850723ed165a" title="TiXmlBase::StringEqual" alt="" coords="196,56,357,83"/>
-<area shape="rect" id="node3" href="$class_ti_xml_base.html#a07c765e3a7f979d343e646ea797b180b" title="TiXmlBase::ConvertUTF32ToUTF8" alt="" coords="603,5,831,32"/>
-<area shape="rect" id="node5" href="$class_ti_xml_base.html#a799f17405a86a5c2029618e85f11a097" title="TiXmlBase::ToLower" alt="" coords="408,56,552,83"/>
-<area shape="rect" id="node6" href="$class_ti_xml_base.html#ac6753fe8a2c89669038fcf281cb301bf" title="TiXmlBase::TiXmlBase" alt="" coords="637,56,796,83"/>
-<area shape="rect" id="node7" href="$class_ti_xml_document.html#aa56fd4dbe8917d2033d865909e2d737e" title="TiXmlDocument::operator=" alt="" coords="627,107,806,133"/>
-<area shape="rect" id="node8" href="$class_ti_xml_node.html#a708e7f953df61d4d2d12f73171550a4b" title="Delete all the children of this node. Does not affect &#39;this&#39;. " alt="" coords="879,107,1005,133"/>
+<area shape="rect" id="node2" href="$class_ti_xml_base.html#a44f75cc7a45a97a09e509dc4c8c127e0" title="TiXmlBase::GetEntity" alt="" coords="202,5,351,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_base.html#ad668006b550c011d05072dd4fc16577d" title="TiXmlBase::StringEqual" alt="" coords="196,56,357,83"/>
 </map>

@@ -1,16 +1,16 @@
 <map id="Metronet::rondrijden" name="Metronet::rondrijden">
 <area shape="rect" id="node2" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="191,208,391,235"/>
-<area shape="rect" id="node8" href="$class_tram.html#ae1d03c1fb6e0f5f97c57d35fe10fa8dd" title="Geef het huidig station. " alt="" coords="452,360,608,387"/>
+<area shape="rect" id="node8" href="$class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="452,360,608,387"/>
 <area shape="rect" id="node14" href="$class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="219,411,362,437"/>
-<area shape="rect" id="node15" href="$class_tram.html#ae4a7cf6313452140ed54d219d1f6afba" title="Geef het beginstation terug. " alt="" coords="215,461,367,488"/>
+<area shape="rect" id="node15" href="$class_tram.html#aba7b84414cd60d013ac1db3f3403497d" title="Geef het beginstation terug. " alt="" coords="215,461,367,488"/>
 <area shape="rect" id="node3" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="439,157,621,184"/>
-<area shape="rect" id="node4" href="$class_station.html#a081ca6373631199a30ebab56f50022d8" title="Geef het spoor terug. " alt="" coords="469,107,591,133"/>
-<area shape="rect" id="node6" href="$class_station.html#a5897f83319093d502f01f18b24678aba" title="Geef het aantal opstappende mensen terug. " alt="" coords="454,208,606,235"/>
-<area shape="rect" id="node7" href="$class_station.html#a36af036851a8e31b7a2be381928dadb5" title="Geef het afstappende mensen terug. " alt="" coords="456,56,604,83"/>
+<area shape="rect" id="node4" href="$class_station.html#a0fc1a72d194b9f67151eea0e957aad3c" title="Geef het spoor terug. " alt="" coords="469,107,591,133"/>
+<area shape="rect" id="node6" href="$class_station.html#a531809394b3affd749ccbd5e992a61b9" title="Geef het aantal opstappende mensen terug. " alt="" coords="454,208,606,235"/>
+<area shape="rect" id="node7" href="$class_station.html#aed0008123f97257f9b4365918dd90512" title="Geef het afstappende mensen terug. " alt="" coords="456,56,604,83"/>
 <area shape="rect" id="node10" href="$class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="471,259,589,285"/>
 <area shape="rect" id="node11" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="477,5,583,32"/>
 <area shape="rect" id="node13" href="$class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="470,309,590,336"/>
-<area shape="rect" id="node5" href="$class_station.html#a9ce626dd0599e3ea8107404a59c21e16" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="673,107,845,133"/>
-<area shape="rect" id="node9" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="679,360,840,387"/>
-<area shape="rect" id="node12" href="$class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="669,5,849,32"/>
+<area shape="rect" id="node5" href="$class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="673,107,845,133"/>
+<area shape="rect" id="node9" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="679,360,840,387"/>
+<area shape="rect" id="node12" href="$class_exporter.html#af01d2a6c2f54329b1867a19537e11a34" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="669,5,849,32"/>
 </map>

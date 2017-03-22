@@ -1,5 +1,5 @@
 <map id="TiXmlNode::IterateChildren" name="TiXmlNode::IterateChildren">
-<area shape="rect" id="node2" href="$class_ti_xml_node.html#a67c3a02b797f08d9a31b2553661257e1" title="TiXmlNode::IterateChildren" alt="" coords="233,31,413,57"/>
-<area shape="rect" id="node3" href="$class_ti_xml_node.html#aa66bceae19707c90c1db12d7c98894a4" title="The first child of this node. Will be null if there are no children. " alt="" coords="467,5,618,32"/>
-<area shape="rect" id="node4" href="$class_ti_xml_node.html#ae99c572ac7901a15993ea7a4efaa10e7" title="Navigate to a sibling node. " alt="" coords="461,56,624,83"/>
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#aaef7ac3978c4bb1cc8a24ffae7bced75" title="TiXmlNode::IterateChildren" alt="" coords="233,31,413,57"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a44c8eee26bbe2d1b2762038df9dde2f0" title="The first child of this node. Will be null if there are no children. " alt="" coords="467,5,618,32"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#af854baeba384f5fe9859f5aee03b548e" title="Navigate to a sibling node. " alt="" coords="461,56,624,83"/>
 </map>

@@ -1,24 +1,12 @@
 <map id="TiXmlNode::ToElement" name="TiXmlNode::ToElement">
-<area shape="rect" id="node2" href="$class_ti_xml_node.html#ab1f8d8e70d88aea4c5efedfe00862d55" title="Convenience function to get through elements. " alt="" coords="218,208,417,235"/>
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#ab1f8d8e70d88aea4c5efedfe00862d55" title="Convenience function to get through elements. " alt="" coords="218,183,417,209"/>
 <area shape="rect" id="node9" href="$class_ti_xml_node.html#a7667217e269e0da01d1f82aee94d1a3d" title="TiXmlNode::NextSiblingElement" alt="" coords="212,107,423,133"/>
-<area shape="rect" id="node12" href="$class_ti_xml_base.html#aa646c74921aa33156968b802bbf5566e" title="TiXmlBase::ReadText" alt="" coords="242,411,393,437"/>
-<area shape="rect" id="node3" href="$class_parser.html#a568d2353b3e6f89b0cf112f309229ffe" title="Verwerkt het XML&#45;bestand en zet het metronet op. " alt="" coords="526,157,626,184"/>
+<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="519,157,633,184"/>
 <area shape="rect" id="node5" href="$class_ti_xml_handle.html#a24d1112e995e937e4dddb202d4113d4a" title="Return a handle to the first child element. " alt="" coords="471,208,681,235"/>
 <area shape="rect" id="node6" href="$class_ti_xml_handle.html#a8786475b9d1f1518492e3a46704c7ef0" title="TiXmlHandle::ChildElement" alt="" coords="485,107,667,133"/>
 <area shape="rect" id="node7" href="$class_ti_xml_node.html#a6e1ac6b800e18049bc75e9f8e63a8e5f" title="TiXmlNode::NextSiblingElement" alt="" coords="471,259,681,285"/>
 <area shape="rect" id="node8" href="$class_ti_xml_node.html#aa0fecff1f3866ab33a8a25506e95db1d" title="TiXmlNode::FirstChildElement" alt="" coords="477,309,675,336"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="786,157,837,184"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="729,157,780,184"/>
 <area shape="rect" id="node10" href="$class_ti_xml_node.html#a4080bc5cc8a5c139e7cf308669e850fc" title="TiXmlNode::NextSibling" alt="" coords="495,56,657,83"/>
 <area shape="rect" id="node11" href="$class_ti_xml_node.html#a1b211cb5034655a04358e0e2f6fc5010" title="TiXmlNode::NextSiblingElement" alt="" coords="471,5,681,32"/>
-<area shape="rect" id="node13" href="$class_ti_xml_base.html#a3de391ea9f4c4a8aa10d04480b048795" title="TiXmlBase::IsWhiteSpace" alt="" coords="488,411,664,437"/>
-<area shape="rect" id="node14" href="$class_ti_xml_attribute.html#ad62774421b814894b995af3b5d231dda" title="TiXmlAttribute::Parse" alt="" coords="503,461,649,488"/>
-<area shape="rect" id="node23" href="$class_ti_xml_text.html#a8d2dcfa41fc73d3e62dacc2fcf633819" title="TiXmlText::Parse" alt="" coords="957,512,1081,539"/>
-<area shape="rect" id="node15" href="$class_ti_xml_element.html#af95c9165159fd9dfdcc5b894a3fcf85b" title="TiXmlElement::Parse" alt="" coords="738,461,885,488"/>
-<area shape="rect" id="node22" href="$class_ti_xml_declaration.html#a9839ea97ed687a2b7342fd7b0f04361b" title="TiXmlDeclaration::Parse" alt="" coords="729,411,893,437"/>
-<area shape="rect" id="node16" href="$class_ti_xml_text.html#acb17ff7c5d09b2c839393445a3de5ea9" title="Turns on or off a CDATA representation of text. " alt="" coords="941,461,1097,488"/>
-<area shape="rect" id="node17" href="$class_ti_xml_node.html#ac1e3a8e7578be463b04617786120c2bb" title="TiXmlNode::Identify" alt="" coords="1145,461,1284,488"/>
-<area shape="rect" id="node18" href="$class_ti_xml_node.html#a4027136ca820ff4a636b607231b6a6df" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="1332,461,1508,488"/>
-<area shape="rect" id="node19" href="$class_ti_xml_document.html#a789ad2f06f93d52bdb5570b2f3670289" title="TiXmlDocument::Parse" alt="" coords="1341,411,1499,437"/>
-<area shape="rect" id="node21" href="$class_ti_xml_element.html#ac786bce103042d3837c4cc2ff6967d41" title="TiXmlElement::ReadValue" alt="" coords="1332,512,1508,539"/>
-<area shape="rect" id="node20" href="$class_ti_xml_document.html#a41f6fe7200864d1dca663d230caf8db6" title="TiXmlDocument::LoadFile" alt="" coords="1556,411,1729,437"/>
 </map>

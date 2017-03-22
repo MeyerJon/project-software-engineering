@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-Metronet
+Metronet \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -26,51 +26,51 @@ Metronet
 .ti -1c
 .RI "bool \fBproperlyInitialised\fP ()"
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
 .RI "\fBSuccessEnum\fP \fBsetup\fP (std::string filename, std::ostream &os)"
 .br
-.RI "Verwerkt het XML-bestand\&. "
+.RI "\fIVerwerkt het XML-bestand\&. \fP"
 .ti -1c
 .RI "std::map< std::string, \fBStation\fP * > \fBgetStations\fP ()"
 .br
-.RI "Geeft alle stations in het metronet terug\&. "
+.RI "\fIGeeft alle stations in het metronet terug\&. \fP"
 .ti -1c
 .RI "std::map< int, \fBTram\fP * > & \fBgetTrams\fP ()"
 .br
-.RI "Geeft alle trams in het metronet terug\&. "
+.RI "\fIGeeft alle trams in het metronet terug\&. \fP"
 .ti -1c
 .RI "void \fBaddStation\fP (\fBStation\fP *station)"
 .br
-.RI "Voegt station toe aan metronet\&. "
+.RI "\fIVoegt station toe aan metronet\&. \fP"
 .ti -1c
 .RI "void \fBaddTram\fP (\fBTram\fP *tram)"
 .br
-.RI "Voegt tram toe aan metronet\&. "
+.RI "\fIVoegt tram toe aan metronet\&. \fP"
 .ti -1c
 .RI "void \fBaddSpoor\fP (int spoor)"
 .br
-.RI "Voegt spoor toe aan metronet\&. "
+.RI "\fIVoegt spoor toe aan metronet\&. \fP"
 .ti -1c
 .RI "bool \fBcheckConsistent\fP (std::ostream &os)"
 .br
-.RI "Kijkt na of het metronet consistent is\&. "
+.RI "\fIKijkt na of het metronet consistent is\&. \fP"
 .ti -1c
 .RI "void \fBprintMetronet\fP (std::ostream &os)"
 .br
-.RI "Print het hele metronet\&. "
+.RI "\fIPrint het hele metronet\&. \fP"
 .ti -1c
 .RI "bool \fBopstappenAfstappen\fP (std::string station, std::ostream &os)"
 .br
-.RI "Behandelt het opstappen en afstappen van passagiers\&. "
+.RI "\fIBehandelt het opstappen en afstappen van passagiers\&. \fP"
 .ti -1c
 .RI "void \fBrondrijden\fP (std::ostream &os)"
 .br
-.RI "Emuleert het rondrijden van trams\&. "
+.RI "\fIEmuleert het rondrijden van trams\&. \fP"
 .ti -1c
 .RI "void \fBreset\fP ()"
 .br
-.RI "Reset heel het systeem\&. "
+.RI "\fIReset heel het systeem\&. \fP"
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 

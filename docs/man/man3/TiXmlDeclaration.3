@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-TiXmlDeclaration
+TiXmlDeclaration \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -16,11 +16,11 @@ Inherits \fBTiXmlNode\fP\&.
 .ti -1c
 .RI "\fBTiXmlDeclaration\fP ()"
 .br
-.RI "Construct an empty declaration\&. "
+.RI "\fIConstruct an empty declaration\&. \fP"
 .ti -1c
 .RI "\fBTiXmlDeclaration\fP (const char *_version, const char *_encoding, const char *_standalone)"
 .br
-.RI "Construct\&. "
+.RI "\fIConstruct\&. \fP"
 .ti -1c
 .RI "\fBTiXmlDeclaration\fP (const \fBTiXmlDeclaration\fP &copy)"
 .br
@@ -31,47 +31,47 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "virtual \fB~TiXmlDeclaration\fP ()"
 .br
 .ti -1c
-.RI "const char * \fBVersion\fP () const"
+.RI "const char * \fBVersion\fP () const "
 .br
-.RI "Version\&. Will return an empty string if none was found\&. "
+.RI "\fIVersion\&. Will return an empty string if none was found\&. \fP"
 .ti -1c
-.RI "const char * \fBEncoding\fP () const"
+.RI "const char * \fBEncoding\fP () const "
 .br
-.RI "Encoding\&. Will return an empty string if none was found\&. "
+.RI "\fIEncoding\&. Will return an empty string if none was found\&. \fP"
 .ti -1c
-.RI "const char * \fBStandalone\fP () const"
+.RI "const char * \fBStandalone\fP () const "
 .br
-.RI "Is this a standalone document? "
+.RI "\fIIs this a standalone document? \fP"
 .ti -1c
-.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const"
+.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const "
 .br
-.RI "Creates a copy of this Declaration and returns it\&. "
+.RI "\fICreates a copy of this Declaration and returns it\&. \fP"
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth, \fBTIXML_STRING\fP *str) const"
-.br
-.ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const"
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth, \fBTIXML_STRING\fP *str) const "
 .br
 .ti -1c
-.RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data, \fBTiXmlEncoding\fP encoding)"
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const "
 .br
 .ti -1c
-.RI "virtual const \fBTiXmlDeclaration\fP * \fBToDeclaration\fP () const"
+.RI "virtual const char * \fBParse\fP (const char *p, TiXmlParsingData *data, \fBTiXmlEncoding\fP encoding)"
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.ti -1c
+.RI "virtual const \fBTiXmlDeclaration\fP * \fBToDeclaration\fP () const "
+.br
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlDeclaration\fP * \fBToDeclaration\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *visitor) const"
+.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *visitor) const "
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBCopyTo\fP (\fBTiXmlDeclaration\fP *target) const"
+.RI "void \fBCopyTo\fP (\fBTiXmlDeclaration\fP *target) const "
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -122,14 +122,14 @@ Implements \fBTiXmlNode\fP\&.
 Encoding\&. Will return an empty string if none was found\&. 
 .SS "\fBTiXmlDeclaration\fP & TiXmlDeclaration::operator= (const \fBTiXmlDeclaration\fP & copy)"
 
-.SS "const char * TiXmlDeclaration::Parse (const char * p, \fBTiXmlParsingData\fP * data, \fBTiXmlEncoding\fP encoding)\fC [virtual]\fP"
+.SS "virtual const char* TiXmlDeclaration::Parse (const char * p, TiXmlParsingData * data, \fBTiXmlEncoding\fP encoding)\fC [virtual]\fP"
 
 .PP
 Implements \fBTiXmlBase\fP\&.
 .SS "void TiXmlDeclaration::Print (FILE * cfile, int depth, \fBTIXML_STRING\fP * str) const\fC [virtual]\fP"
 
 .SS "virtual void TiXmlDeclaration::Print (FILE * cfile, int depth) const\fC [inline]\fP, \fC [virtual]\fP"
-All TinyXml classes can print themselves to a filestream or the string class (\fBTiXmlString\fP in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
 .PP
 This is a formatted print, and will insert tabs and newlines\&.
 .PP

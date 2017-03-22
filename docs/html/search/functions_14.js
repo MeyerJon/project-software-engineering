@@ -8,7 +8,6 @@ var searchData=
   ['_7etixmldocument',['~TiXmlDocument',['../class_ti_xml_document.html#a1b8a035c2c2aab38e4387246a0b712c5',1,'TiXmlDocument']]],
   ['_7etixmlelement',['~TiXmlElement',['../class_ti_xml_element.html#aa049a47c5081c0d021968666360da261',1,'TiXmlElement']]],
   ['_7etixmlnode',['~TiXmlNode',['../class_ti_xml_node.html#a027a76cccd359c831ee4024b58c49625',1,'TiXmlNode']]],
-  ['_7etixmlstring',['~TiXmlString',['../class_ti_xml_string.html#a7ac03f581ca3422c4808162ab14f3450',1,'TiXmlString']]],
   ['_7etixmltext',['~TiXmlText',['../class_ti_xml_text.html#a829a4bd2d8d2461c333eb4f3f5b1b3d2',1,'TiXmlText']]],
   ['_7etixmlunknown',['~TiXmlUnknown',['../class_ti_xml_unknown.html#ac21966c3b551553d760b4a339c9acda0',1,'TiXmlUnknown']]],
   ['_7etixmlvisitor',['~TiXmlVisitor',['../class_ti_xml_visitor.html#a276c739ec4701f27c3f86b8ead095e5a',1,'TiXmlVisitor']]]

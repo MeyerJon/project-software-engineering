@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-TiXmlBase
+TiXmlBase \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -30,26 +30,26 @@ Inherited by \fBTiXmlAttribute\fP, and \fBTiXmlNode\fP\&.
 .RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const =0"
 .br
 .ti -1c
-.RI "int \fBRow\fP () const"
+.RI "int \fBRow\fP () const "
 .br
 .ti -1c
-.RI "int \fBColumn\fP () const"
+.RI "int \fBColumn\fP () const "
 .br
-.RI "See \fBRow()\fP "
+.RI "\fISee \fBRow()\fP \fP"
 .ti -1c
 .RI "void \fBSetUserData\fP (void *user)"
 .br
-.RI "Set a pointer to arbitrary user data\&. "
+.RI "\fISet a pointer to arbitrary user data\&. \fP"
 .ti -1c
 .RI "void * \fBGetUserData\fP ()"
 .br
-.RI "Get a pointer to arbitrary user data\&. "
+.RI "\fIGet a pointer to arbitrary user data\&. \fP"
 .ti -1c
-.RI "const void * \fBGetUserData\fP () const"
+.RI "const void * \fBGetUserData\fP () const "
 .br
-.RI "Get a pointer to arbitrary user data\&. "
+.RI "\fIGet a pointer to arbitrary user data\&. \fP"
 .ti -1c
-.RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data, \fBTiXmlEncoding\fP encoding)=0"
+.RI "virtual const char * \fBParse\fP (const char *p, TiXmlParsingData *data, \fBTiXmlEncoding\fP encoding)=0"
 .br
 .in -1c
 .SS "Static Public Member Functions"
@@ -61,7 +61,7 @@ Inherited by \fBTiXmlAttribute\fP, and \fBTiXmlNode\fP\&.
 .ti -1c
 .RI "static bool \fBIsWhiteSpaceCondensed\fP ()"
 .br
-.RI "Return the current white space setting\&. "
+.RI "\fIReturn the current white space setting\&. \fP"
 .ti -1c
 .RI "static void \fBEncodeString\fP (const \fBTIXML_STRING\fP &str, \fBTIXML_STRING\fP *out)"
 .br
@@ -122,7 +122,7 @@ Inherited by \fBTiXmlAttribute\fP, and \fBTiXmlNode\fP\&.
 .ti -1c
 .RI "void * \fBuserData\fP"
 .br
-.RI "Field containing a generic user pointer\&. "
+.RI "\fIField containing a generic user pointer\&. \fP"
 .in -1c
 .SS "Static Protected Attributes"
 
@@ -220,13 +220,13 @@ A Decleration contains: Attributes (not on tree)
 
 .PP
 See \fBRow()\fP 
-.SS "void TiXmlBase::ConvertUTF32ToUTF8 (unsigned long input, char * output, int * length)\fC [static]\fP, \fC [protected]\fP"
+.SS "static void TiXmlBase::ConvertUTF32ToUTF8 (unsigned long input, char * output, int * length)\fC [static]\fP, \fC [protected]\fP"
 
 .SS "void TiXmlBase::EncodeString (const \fBTIXML_STRING\fP & str, \fBTIXML_STRING\fP * out)\fC [static]\fP"
 Expands entities in a string\&. Note this should not contian the tag's '<', '>', etc, or they will be transformed into entities! 
 .SS "static const char* TiXmlBase::GetChar (const char * p, char * _value, int * length, \fBTiXmlEncoding\fP encoding)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
 
-.SS "const char * TiXmlBase::GetEntity (const char * in, char * value, int * length, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
+.SS "static const char* TiXmlBase::GetEntity (const char * in, char * value, int * length, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
 
 .SS "void* TiXmlBase::GetUserData ()\fC [inline]\fP"
 
@@ -236,9 +236,9 @@ Get a pointer to arbitrary user data\&.
 
 .PP
 Get a pointer to arbitrary user data\&. 
-.SS "int TiXmlBase::IsAlpha (unsigned char anyByte, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
+.SS "static int TiXmlBase::IsAlpha (unsigned char anyByte, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
 
-.SS "int TiXmlBase::IsAlphaNum (unsigned char anyByte, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
+.SS "static int TiXmlBase::IsAlphaNum (unsigned char anyByte, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
 
 .SS "static bool TiXmlBase::IsWhiteSpace (char c)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
 
@@ -248,21 +248,21 @@ Get a pointer to arbitrary user data\&.
 
 .PP
 Return the current white space setting\&. 
-.SS "virtual const char* TiXmlBase::Parse (const char * p, \fBTiXmlParsingData\fP * data, \fBTiXmlEncoding\fP encoding)\fC [pure virtual]\fP"
+.SS "virtual const char* TiXmlBase::Parse (const char * p, TiXmlParsingData * data, \fBTiXmlEncoding\fP encoding)\fC [pure virtual]\fP"
 
 .PP
 Implemented in \fBTiXmlDocument\fP, \fBTiXmlUnknown\fP, \fBTiXmlDeclaration\fP, \fBTiXmlText\fP, \fBTiXmlComment\fP, \fBTiXmlElement\fP, and \fBTiXmlAttribute\fP\&.
 .SS "virtual void TiXmlBase::Print (FILE * cfile, int depth) const\fC [pure virtual]\fP"
-All TinyXml classes can print themselves to a filestream or the string class (\fBTiXmlString\fP in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
 .PP
 This is a formatted print, and will insert tabs and newlines\&.
 .PP
 (For an unformatted stream, use the << operator\&.) 
 .PP
 Implemented in \fBTiXmlDocument\fP, \fBTiXmlUnknown\fP, \fBTiXmlDeclaration\fP, \fBTiXmlText\fP, \fBTiXmlComment\fP, \fBTiXmlElement\fP, and \fBTiXmlAttribute\fP\&.
-.SS "const char * TiXmlBase::ReadName (const char * p, \fBTIXML_STRING\fP * name, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
+.SS "static const char* TiXmlBase::ReadName (const char * p, \fBTIXML_STRING\fP * name, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
 
-.SS "const char * TiXmlBase::ReadText (const char * in, \fBTIXML_STRING\fP * text, bool ignoreWhiteSpace, const char * endTag, bool ignoreCase, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
+.SS "static const char* TiXmlBase::ReadText (const char * in, \fBTIXML_STRING\fP * text, bool ignoreWhiteSpace, const char * endTag, bool ignoreCase, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
 
 .SS "int TiXmlBase::Row () const\fC [inline]\fP"
 Return the position, in the original source file, of this node or attribute\&. The row and column are 1-based\&. (That is the first row and first column is 1,1)\&. If the returns values are 0 or less, then the parser does not have a row and column value\&.
@@ -285,9 +285,9 @@ The world does not agree on whether white space should be kept or not\&. In orde
 
 .PP
 Set a pointer to arbitrary user data\&. 
-.SS "const char * TiXmlBase::SkipWhiteSpace (const char * p, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
+.SS "static const char* TiXmlBase::SkipWhiteSpace (const char *, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
 
-.SS "bool TiXmlBase::StringEqual (const char * p, const char * endTag, bool ignoreCase, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
+.SS "static bool TiXmlBase::StringEqual (const char * p, const char * endTag, bool ignoreCase, \fBTiXmlEncoding\fP encoding)\fC [static]\fP, \fC [protected]\fP"
 
 .SS "static int TiXmlBase::ToLower (int v, \fBTiXmlEncoding\fP encoding)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
 
@@ -301,61 +301,15 @@ Set a pointer to arbitrary user data\&.
 
 .SH "Member Data Documentation"
 .PP 
-.SS "const char * TiXmlBase::errorString\fC [static]\fP, \fC [protected]\fP"
-\fBInitial value:\fP
-.PP
-.nf
-=
-{
-    "No error",
-    "Error",
-    "Failed to open file",
-    "Error parsing Element\&.",
-    "Failed to read Element name",
-    "Error reading Element value\&.",
-    "Error reading Attributes\&.",
-    "Error: empty tag\&.",
-    "Error reading end tag\&.",
-    "Error parsing Unknown\&.",
-    "Error parsing Comment\&.",
-    "Error parsing Declaration\&.",
-    "Error document empty\&.",
-    "Error null (0) or unexpected EOF found in input stream\&.",
-    "Error parsing CDATA\&.",
-    "Error when TiXmlDocument added to document, because TiXmlDocument can only be at the root\&.",
-}
-.fi
+.SS "const char* TiXmlBase::errorString[\fBTIXML_ERROR_STRING_COUNT\fP]\fC [static]\fP, \fC [protected]\fP"
+
 .SS "\fBTiXmlCursor\fP TiXmlBase::location\fC [protected]\fP"
 
 .SS "void* TiXmlBase::userData\fC [protected]\fP"
 
 .PP
 Field containing a generic user pointer\&. 
-.SS "const int TiXmlBase::utf8ByteTable\fC [static]\fP"
-\fBInitial value:\fP
-.PP
-.nf
-= 
-{
-    
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  
-        1,  1,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  
-        2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  
-        3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  
-        4,  4,  4,  4,  4,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1   
-}
-.fi
+.SS "const int TiXmlBase::utf8ByteTable[256]\fC [static]\fP"
 
 
 .SH "Author"

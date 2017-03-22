@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-TiXmlDocument
+TiXmlDocument \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -16,11 +16,11 @@ Inherits \fBTiXmlNode\fP\&.
 .ti -1c
 .RI "\fBTiXmlDocument\fP ()"
 .br
-.RI "Create an empty document, that has no name\&. "
+.RI "\fICreate an empty document, that has no name\&. \fP"
 .ti -1c
 .RI "\fBTiXmlDocument\fP (const char *documentName)"
 .br
-.RI "Create a document with a name\&. The name of the document is also the filename of the xml\&. "
+.RI "\fICreate a document with a name\&. The name of the document is also the filename of the xml\&. \fP"
 .ti -1c
 .RI "\fBTiXmlDocument\fP (const \fBTiXmlDocument\fP &copy)"
 .br
@@ -34,86 +34,86 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "bool \fBLoadFile\fP (\fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
 .ti -1c
-.RI "bool \fBSaveFile\fP () const"
+.RI "bool \fBSaveFile\fP () const "
 .br
-.RI "Save a file using the current document value\&. Returns true if successful\&. "
+.RI "\fISave a file using the current document value\&. Returns true if successful\&. \fP"
 .ti -1c
 .RI "bool \fBLoadFile\fP (const char *filename, \fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
-.RI "Load a file using the given filename\&. Returns true if successful\&. "
+.RI "\fILoad a file using the given filename\&. Returns true if successful\&. \fP"
 .ti -1c
-.RI "bool \fBSaveFile\fP (const char *filename) const"
+.RI "bool \fBSaveFile\fP (const char *filename) const "
 .br
-.RI "Save a file using the given filename\&. Returns true if successful\&. "
+.RI "\fISave a file using the given filename\&. Returns true if successful\&. \fP"
 .ti -1c
 .RI "bool \fBLoadFile\fP (FILE *, \fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
 .ti -1c
-.RI "bool \fBSaveFile\fP (FILE *) const"
+.RI "bool \fBSaveFile\fP (FILE *) const "
 .br
-.RI "Save a file using the given FILE*\&. Returns true if successful\&. "
+.RI "\fISave a file using the given FILE*\&. Returns true if successful\&. \fP"
 .ti -1c
-.RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data=0, \fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
+.RI "virtual const char * \fBParse\fP (const char *p, TiXmlParsingData *data=0, \fBTiXmlEncoding\fP encoding=\fBTIXML_DEFAULT_ENCODING\fP)"
 .br
 .ti -1c
-.RI "const \fBTiXmlElement\fP * \fBRootElement\fP () const"
+.RI "const \fBTiXmlElement\fP * \fBRootElement\fP () const "
 .br
 .ti -1c
 .RI "\fBTiXmlElement\fP * \fBRootElement\fP ()"
 .br
 .ti -1c
-.RI "bool \fBError\fP () const"
+.RI "bool \fBError\fP () const "
 .br
 .ti -1c
-.RI "const char * \fBErrorDesc\fP () const"
+.RI "const char * \fBErrorDesc\fP () const "
 .br
-.RI "Contains a textual (english) description of the error if one occurs\&. "
+.RI "\fIContains a textual (english) description of the error if one occurs\&. \fP"
 .ti -1c
-.RI "int \fBErrorId\fP () const"
-.br
-.ti -1c
-.RI "int \fBErrorRow\fP () const"
+.RI "int \fBErrorId\fP () const "
 .br
 .ti -1c
-.RI "int \fBErrorCol\fP () const"
+.RI "int \fBErrorRow\fP () const "
 .br
-.RI "The column where the error occured\&. See \fBErrorRow()\fP "
+.ti -1c
+.RI "int \fBErrorCol\fP () const "
+.br
+.RI "\fIThe column where the error occured\&. See \fBErrorRow()\fP \fP"
 .ti -1c
 .RI "void \fBSetTabSize\fP (int _tabsize)"
 .br
 .ti -1c
-.RI "int \fBTabSize\fP () const"
+.RI "int \fBTabSize\fP () const "
 .br
 .ti -1c
 .RI "void \fBClearError\fP ()"
 .br
 .ti -1c
-.RI "void \fBPrint\fP () const"
+.RI "void \fBPrint\fP () const "
 .br
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth=0) const"
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth=0) const "
 .br
-.RI "Print this Document to a FILE stream\&. "
+.RI "\fIPrint this Document to a FILE stream\&. \fP"
 .ti -1c
-.RI "void \fBSetError\fP (int err, const char *errorLocation, \fBTiXmlParsingData\fP *prevData, \fBTiXmlEncoding\fP encoding)"
+.RI "void \fBSetError\fP (int err, const char *errorLocation, TiXmlParsingData *prevData, \fBTiXmlEncoding\fP encoding)"
 .br
 .ti -1c
-.RI "virtual const \fBTiXmlDocument\fP * \fBToDocument\fP () const"
+.RI "virtual const \fBTiXmlDocument\fP * \fBToDocument\fP () const "
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlDocument\fP * \fBToDocument\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const"
+.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const "
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const"
+.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const "
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -185,7 +185,7 @@ Load a file using the given filename\&. Returns true if successful\&.
 Load a file using the given FILE*\&. Returns true if successful\&. Note that this method doesn't stream - the entire object pointed at by the FILE* will be interpreted as an XML file\&. TinyXML doesn't stream in XML from the current file location\&. Streaming may be added in the future\&. 
 .SS "\fBTiXmlDocument\fP & TiXmlDocument::operator= (const \fBTiXmlDocument\fP & copy)"
 
-.SS "const char * TiXmlDocument::Parse (const char * p, \fBTiXmlParsingData\fP * data = \fC0\fP, \fBTiXmlEncoding\fP encoding = \fC\fBTIXML_DEFAULT_ENCODING\fP\fP)\fC [virtual]\fP"
+.SS "virtual const char* TiXmlDocument::Parse (const char * p, TiXmlParsingData * data = \fC0\fP, \fBTiXmlEncoding\fP encoding = \fC\fBTIXML_DEFAULT_ENCODING\fP\fP)\fC [virtual]\fP"
 Parse the given null terminated block of xml data\&. Passing in an encoding to this method (either TIXML_ENCODING_LEGACY or TIXML_ENCODING_UTF8 will force TinyXml to use that encoding, regardless of what TinyXml might otherwise try to detect\&. 
 .PP
 Implements \fBTiXmlBase\fP\&.
@@ -213,7 +213,7 @@ Save a file using the given filename\&. Returns true if successful\&.
 
 .PP
 Save a file using the given FILE*\&. Returns true if successful\&. 
-.SS "void TiXmlDocument::SetError (int err, const char * errorLocation, \fBTiXmlParsingData\fP * prevData, \fBTiXmlEncoding\fP encoding)"
+.SS "void TiXmlDocument::SetError (int err, const char * errorLocation, TiXmlParsingData * prevData, \fBTiXmlEncoding\fP encoding)"
 
 .SS "void TiXmlDocument::SetTabSize (int _tabsize)\fC [inline]\fP"
 \fBSetTabSize()\fP allows the error reporting functions (\fBErrorRow()\fP and \fBErrorCol()\fP) to report the correct values for row and column\&. It does not change the output or input in any way\&.

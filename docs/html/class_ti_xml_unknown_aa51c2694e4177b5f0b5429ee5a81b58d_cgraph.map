@@ -1,9 +1,9 @@
 <map id="TiXmlUnknown::Parse" name="TiXmlUnknown::Parse">
-<area shape="rect" id="node2" href="$class_ti_xml_node.html#adcb070acefcbaedaa0673d82e530538b" title="TiXmlNode::GetDocument" alt="" coords="214,5,390,32"/>
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#aa66f4ebcd175204a168ed7c2d7b43071" title="TiXmlNode::GetDocument" alt="" coords="214,5,390,32"/>
 <area shape="rect" id="node4" href="$class_ti_xml_base.html#ac0c3d66d8a9e6996a1fa016275e16875" title="TiXmlBase::SkipWhiteSpace" alt="" coords="207,56,397,83"/>
 <area shape="rect" id="node6" href="$class_ti_xml_parsing_data.html#a65cee8ab77a36c605db08c84b4c30a7d" title="TiXmlParsingData::Stamp" alt="" coords="446,132,621,159"/>
-<area shape="rect" id="node7" href="$class_ti_xml_parsing_data.html#a02ba4903fd3b70b43524ad60a4eece7c" title="TiXmlParsingData::Cursor" alt="" coords="446,195,621,221"/>
+<area shape="rect" id="node7" href="$class_ti_xml_parsing_data.html#a9e63d965fdb53ff4ac711e105269e918" title="TiXmlParsingData::Cursor" alt="" coords="446,195,621,221"/>
 <area shape="rect" id="node8" href="$class_ti_xml_document.html#a735c23e318597b920c94eae77fa206de" title="TiXmlDocument::SetError" alt="" coords="216,157,388,184"/>
-<area shape="rect" id="node3" href="$class_ti_xml_node.html#a775a904618cad6e4a8049bda4f5a6aa9" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="448,5,619,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#a8a4cda4b15c29f64cff419309aebed08" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="448,5,619,32"/>
 <area shape="rect" id="node5" href="$class_ti_xml_base.html#af56296d561c0bab4bc8e198cdcf5c48e" title="TiXmlBase::IsWhiteSpace" alt="" coords="445,56,621,83"/>
 </map>

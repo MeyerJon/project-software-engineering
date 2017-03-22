@@ -1,8 +1,8 @@
 <map id="TiXmlNode::ToText" name="TiXmlNode::ToText">
-<area shape="rect" id="node2" href="$class_parser.html#a568d2353b3e6f89b0cf112f309229ffe" title="Verwerkt het XML&#45;bestand en zet het metronet op. " alt="" coords="219,5,319,32"/>
+<area shape="rect" id="node2" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="212,5,325,32"/>
 <area shape="rect" id="node4" href="$class_ti_xml_element.html#ad9d0c008866982ab8d9aafae7e14d692" title="TiXmlElement::Print" alt="" coords="199,56,338,83"/>
 <area shape="rect" id="node6" href="$class_ti_xml_element.html#aa6dedd8a146acf3b1bc0903deb2d411a" title="TiXmlElement::GetText" alt="" coords="189,107,348,133"/>
 <area shape="rect" id="node7" href="$class_ti_xml_printer.html#a6dccaf5ee4979f13877690afe28721e8" title="Visit an element. " alt="" coords="189,157,348,184"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="443,5,494,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="443,5,494,32"/>
 <area shape="rect" id="node5" href="$class_ti_xml_text.html#aed5b13f9c1b804c616fd533882c29f57" title="TiXmlText::operator=" alt="" coords="396,56,541,83"/>
 </map>

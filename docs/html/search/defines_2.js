@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tixml_5fexplicit',['TIXML_EXPLICIT',['../tinystr_8h.html#ae341476cd6b94ee32e3e93110a759581',1,'tinystr.h']]],
   ['tixml_5fsafe',['TIXML_SAFE',['../tinyxml_8h.html#a5cdc3f402b6b8788f13a408d2be12e8d',1,'tinyxml.h']]],
   ['tixml_5fsnprintf',['TIXML_SNPRINTF',['../tinyxml_8h.html#afc6433f9b56e4f18833089b1df629e0a',1,'tinyxml.h']]],
   ['tixml_5fsscanf',['TIXML_SSCANF',['../tinyxml_8h.html#a96f54d7c855ad92e705510904a040393',1,'tinyxml.h']]],

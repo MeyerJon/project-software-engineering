@@ -1,7 +1,7 @@
 <map id="TiXmlComment::operator=" name="TiXmlComment::operator=">
 <area shape="rect" id="node2" href="$class_ti_xml_node.html#a708e7f953df61d4d2d12f73171550a4b" title="Delete all the children of this node. Does not affect &#39;this&#39;. " alt="" coords="249,5,376,32"/>
-<area shape="rect" id="node3" href="$class_ti_xml_comment.html#aaeb8a0b2d503f603879a2d04ceb54295" title="TiXmlComment::CopyTo" alt="" coords="229,56,396,83"/>
-<area shape="rect" id="node4" href="$class_ti_xml_node.html#aaadd5bb9c94f84c4472b649b95de4a0b" title="TiXmlNode::CopyTo" alt="" coords="444,56,585,83"/>
+<area shape="rect" id="node3" href="$class_ti_xml_comment.html#a3175b2f27628f4fb7a043897930cd934" title="TiXmlComment::CopyTo" alt="" coords="229,56,396,83"/>
+<area shape="rect" id="node4" href="$class_ti_xml_node.html#ab6056978923ad8350fb5164af32d8038" title="TiXmlNode::CopyTo" alt="" coords="444,56,585,83"/>
 <area shape="rect" id="node5" href="$class_ti_xml_node.html#a2a38329ca5d3f28f98ce932b8299ae90" title="TiXmlNode::SetValue" alt="" coords="633,56,781,83"/>
 <area shape="rect" id="node6" href="$struct_ti_xml_cursor.html#a1e6fa622b59dafb71b6efe595105dcdd" title="TiXmlCursor::Clear" alt="" coords="829,56,964,83"/>
 </map>

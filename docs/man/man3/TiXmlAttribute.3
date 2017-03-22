@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-TiXmlAttribute
+TiXmlAttribute \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -16,84 +16,84 @@ Inherits \fBTiXmlBase\fP\&.
 .ti -1c
 .RI "\fBTiXmlAttribute\fP ()"
 .br
-.RI "Construct an empty attribute\&. "
+.RI "\fIConstruct an empty attribute\&. \fP"
 .ti -1c
 .RI "\fBTiXmlAttribute\fP (const char *_name, const char *_value)"
 .br
-.RI "Construct an attribute with a name and value\&. "
+.RI "\fIConstruct an attribute with a name and value\&. \fP"
 .ti -1c
-.RI "const char * \fBName\fP () const"
+.RI "const char * \fBName\fP () const "
 .br
-.RI "Return the name of this attribute\&. "
+.RI "\fIReturn the name of this attribute\&. \fP"
 .ti -1c
-.RI "const char * \fBValue\fP () const"
+.RI "const char * \fBValue\fP () const "
 .br
-.RI "Return the value of this attribute\&. "
+.RI "\fIReturn the value of this attribute\&. \fP"
 .ti -1c
-.RI "int \fBIntValue\fP () const"
+.RI "int \fBIntValue\fP () const "
 .br
-.RI "Return the value of this attribute, converted to an integer\&. "
+.RI "\fIReturn the value of this attribute, converted to an integer\&. \fP"
 .ti -1c
-.RI "double \fBDoubleValue\fP () const"
+.RI "double \fBDoubleValue\fP () const "
 .br
-.RI "Return the value of this attribute, converted to a double\&. "
+.RI "\fIReturn the value of this attribute, converted to a double\&. \fP"
 .ti -1c
-.RI "const \fBTIXML_STRING\fP & \fBNameTStr\fP () const"
-.br
-.ti -1c
-.RI "int \fBQueryIntValue\fP (int *_value) const"
+.RI "const \fBTIXML_STRING\fP & \fBNameTStr\fP () const "
 .br
 .ti -1c
-.RI "int \fBQueryDoubleValue\fP (double *_value) const"
+.RI "int \fBQueryIntValue\fP (int *_value) const "
 .br
-.RI "QueryDoubleValue examines the value string\&. See \fBQueryIntValue()\fP\&. "
+.ti -1c
+.RI "int \fBQueryDoubleValue\fP (double *_value) const "
+.br
+.RI "\fIQueryDoubleValue examines the value string\&. See \fBQueryIntValue()\fP\&. \fP"
 .ti -1c
 .RI "void \fBSetName\fP (const char *_name)"
 .br
-.RI "Set the name of this attribute\&. "
+.RI "\fISet the name of this attribute\&. \fP"
 .ti -1c
 .RI "void \fBSetValue\fP (const char *_value)"
 .br
-.RI "Set the value\&. "
+.RI "\fISet the value\&. \fP"
 .ti -1c
 .RI "void \fBSetIntValue\fP (int _value)"
 .br
-.RI "Set the value from an integer\&. "
+.RI "\fISet the value from an integer\&. \fP"
 .ti -1c
 .RI "void \fBSetDoubleValue\fP (double _value)"
 .br
-.RI "Set the value from a double\&. "
+.RI "\fISet the value from a double\&. \fP"
 .ti -1c
-.RI "const \fBTiXmlAttribute\fP * \fBNext\fP () const"
+.RI "const \fBTiXmlAttribute\fP * \fBNext\fP () const "
 .br
-.RI "Get the next sibling attribute in the DOM\&. Returns null at end\&. "
+.RI "\fIGet the next sibling attribute in the DOM\&. Returns null at end\&. \fP"
 .ti -1c
 .RI "\fBTiXmlAttribute\fP * \fBNext\fP ()"
 .br
 .ti -1c
-.RI "const \fBTiXmlAttribute\fP * \fBPrevious\fP () const"
+.RI "const \fBTiXmlAttribute\fP * \fBPrevious\fP () const "
 .br
-.RI "Get the previous sibling attribute in the DOM\&. Returns null at beginning\&. "
+.RI "\fIGet the previous sibling attribute in the DOM\&. Returns null at beginning\&. \fP"
 .ti -1c
 .RI "\fBTiXmlAttribute\fP * \fBPrevious\fP ()"
 .br
 .ti -1c
-.RI "bool \fBoperator==\fP (const \fBTiXmlAttribute\fP &rhs) const"
+.RI "bool \fBoperator==\fP (const \fBTiXmlAttribute\fP &rhs) const "
 .br
 .ti -1c
-.RI "bool \fBoperator<\fP (const \fBTiXmlAttribute\fP &rhs) const"
+.RI "bool \fBoperator<\fP (const \fBTiXmlAttribute\fP &rhs) const "
 .br
 .ti -1c
-.RI "bool \fBoperator>\fP (const \fBTiXmlAttribute\fP &rhs) const"
+.RI "bool \fBoperator>\fP (const \fBTiXmlAttribute\fP &rhs) const "
 .br
 .ti -1c
-.RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data, \fBTiXmlEncoding\fP encoding)"
+.RI "virtual const char * \fBParse\fP (const char *p, TiXmlParsingData *data, \fBTiXmlEncoding\fP encoding)"
 .br
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const"
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const "
 .br
 .ti -1c
-.RI "void \fBPrint\fP (FILE *cfile, int depth, \fBTIXML_STRING\fP *str) const"
+.RI "void \fBPrint\fP (FILE *cfile, int depth, \fBTIXML_STRING\fP *str) const "
 .br
 .ti -1c
 .RI "void \fBSetDocument\fP (\fBTiXmlDocument\fP *doc)"
@@ -155,7 +155,7 @@ Get the next sibling attribute in the DOM\&. Returns null at end\&.
 
 .SS "bool TiXmlAttribute::operator> (const \fBTiXmlAttribute\fP & rhs) const\fC [inline]\fP"
 
-.SS "const char * TiXmlAttribute::Parse (const char * p, \fBTiXmlParsingData\fP * data, \fBTiXmlEncoding\fP encoding)\fC [virtual]\fP"
+.SS "virtual const char* TiXmlAttribute::Parse (const char * p, TiXmlParsingData * data, \fBTiXmlEncoding\fP encoding)\fC [virtual]\fP"
 
 .PP
 Implements \fBTiXmlBase\fP\&.
@@ -166,7 +166,7 @@ Get the previous sibling attribute in the DOM\&. Returns null at beginning\&.
 .SS "\fBTiXmlAttribute\fP* TiXmlAttribute::Previous ()\fC [inline]\fP"
 
 .SS "virtual void TiXmlAttribute::Print (FILE * cfile, int depth) const\fC [inline]\fP, \fC [virtual]\fP"
-All TinyXml classes can print themselves to a filestream or the string class (\fBTiXmlString\fP in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
 .PP
 This is a formatted print, and will insert tabs and newlines\&.
 .PP

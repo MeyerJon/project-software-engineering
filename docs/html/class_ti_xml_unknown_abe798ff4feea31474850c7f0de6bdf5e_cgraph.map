@@ -1,6 +1,6 @@
 <map id="TiXmlUnknown::TiXmlUnknown" name="TiXmlUnknown::TiXmlUnknown">
-<area shape="rect" id="node2" href="$class_ti_xml_unknown.html#afeb334446bcbe13ce15131e1629712be" title="TiXmlUnknown::CopyTo" alt="" coords="261,5,427,32"/>
-<area shape="rect" id="node3" href="$class_ti_xml_node.html#aaadd5bb9c94f84c4472b649b95de4a0b" title="TiXmlNode::CopyTo" alt="" coords="475,5,616,32"/>
+<area shape="rect" id="node2" href="$class_ti_xml_unknown.html#a08ca7b225a2bcb604d3c72e199d33408" title="TiXmlUnknown::CopyTo" alt="" coords="261,5,427,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#ab6056978923ad8350fb5164af32d8038" title="TiXmlNode::CopyTo" alt="" coords="475,5,616,32"/>
 <area shape="rect" id="node4" href="$class_ti_xml_node.html#a2a38329ca5d3f28f98ce932b8299ae90" title="TiXmlNode::SetValue" alt="" coords="664,5,812,32"/>
 <area shape="rect" id="node5" href="$struct_ti_xml_cursor.html#a1e6fa622b59dafb71b6efe595105dcdd" title="TiXmlCursor::Clear" alt="" coords="860,5,995,32"/>
 </map>

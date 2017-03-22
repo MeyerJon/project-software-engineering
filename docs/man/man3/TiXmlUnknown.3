@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-TiXmlUnknown
+TiXmlUnknown \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -26,32 +26,32 @@ Inherits \fBTiXmlNode\fP\&.
 .RI "\fBTiXmlUnknown\fP & \fBoperator=\fP (const \fBTiXmlUnknown\fP &copy)"
 .br
 .ti -1c
-.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const"
+.RI "virtual \fBTiXmlNode\fP * \fBClone\fP () const "
 .br
-.RI "Creates a copy of this Unknown and returns it\&. "
+.RI "\fICreates a copy of this Unknown and returns it\&. \fP"
 .ti -1c
-.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const"
-.br
-.ti -1c
-.RI "virtual const char * \fBParse\fP (const char *p, \fBTiXmlParsingData\fP *data, \fBTiXmlEncoding\fP encoding)"
+.RI "virtual void \fBPrint\fP (FILE *cfile, int depth) const "
 .br
 .ti -1c
-.RI "virtual const \fBTiXmlUnknown\fP * \fBToUnknown\fP () const"
+.RI "virtual const char * \fBParse\fP (const char *p, TiXmlParsingData *data, \fBTiXmlEncoding\fP encoding)"
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.ti -1c
+.RI "virtual const \fBTiXmlUnknown\fP * \fBToUnknown\fP () const "
+.br
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
 .RI "virtual \fBTiXmlUnknown\fP * \fBToUnknown\fP ()"
 .br
-.RI "Cast to a more defined type\&. Will return null not of the requested type\&. "
+.RI "\fICast to a more defined type\&. Will return null not of the requested type\&. \fP"
 .ti -1c
-.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const"
+.RI "virtual bool \fBAccept\fP (\fBTiXmlVisitor\fP *content) const "
 .br
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBCopyTo\fP (\fBTiXmlUnknown\fP *target) const"
+.RI "void \fBCopyTo\fP (\fBTiXmlUnknown\fP *target) const "
 .br
 .in -1c
 .SS "Additional Inherited Members"
@@ -84,12 +84,12 @@ Implements \fBTiXmlNode\fP\&.
 
 .SS "\fBTiXmlUnknown\fP& TiXmlUnknown::operator= (const \fBTiXmlUnknown\fP & copy)\fC [inline]\fP"
 
-.SS "const char * TiXmlUnknown::Parse (const char * p, \fBTiXmlParsingData\fP * data, \fBTiXmlEncoding\fP encoding)\fC [virtual]\fP"
+.SS "virtual const char* TiXmlUnknown::Parse (const char * p, TiXmlParsingData * data, \fBTiXmlEncoding\fP encoding)\fC [virtual]\fP"
 
 .PP
 Implements \fBTiXmlBase\fP\&.
 .SS "void TiXmlUnknown::Print (FILE * cfile, int depth) const\fC [virtual]\fP"
-All TinyXml classes can print themselves to a filestream or the string class (\fBTiXmlString\fP in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode\&.) Either or both cfile and str can be null\&.
 .PP
 This is a formatted print, and will insert tabs and newlines\&.
 .PP

@@ -1,8 +1,6 @@
 <map id="TiXmlNode::ReplaceChild" name="TiXmlNode::ReplaceChild">
-<area shape="rect" id="node2" href="$class_ti_xml_node.html#a775a904618cad6e4a8049bda4f5a6aa9" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="453,5,623,32"/>
-<area shape="rect" id="node3" href="$class_ti_xml_node.html#adcb070acefcbaedaa0673d82e530538b" title="TiXmlNode::GetDocument" alt="" coords="227,31,403,57"/>
+<area shape="rect" id="node2" href="$class_ti_xml_node.html#a8a4cda4b15c29f64cff419309aebed08" title="Cast to a more defined type. Will return null if not of the requested type. " alt="" coords="451,5,621,32"/>
+<area shape="rect" id="node3" href="$class_ti_xml_node.html#aa66f4ebcd175204a168ed7c2d7b43071" title="TiXmlNode::GetDocument" alt="" coords="227,31,403,57"/>
 <area shape="rect" id="node4" href="$class_ti_xml_document.html#a735c23e318597b920c94eae77fa206de" title="TiXmlDocument::SetError" alt="" coords="229,81,401,108"/>
-<area shape="rect" id="node7" href="$class_ti_xml_node.html#a4508cc3a2d7a98e96a54cc09c37a78a4" title="TiXmlNode::Clone" alt="" coords="250,132,379,159"/>
-<area shape="rect" id="node5" href="$class_ti_xml_parsing_data.html#a65cee8ab77a36c605db08c84b4c30a7d" title="TiXmlParsingData::Stamp" alt="" coords="451,56,625,83"/>
-<area shape="rect" id="node6" href="$class_ti_xml_parsing_data.html#a02ba4903fd3b70b43524ad60a4eece7c" title="TiXmlParsingData::Cursor" alt="" coords="451,107,625,133"/>
+<area shape="rect" id="node5" href="$class_ti_xml_node.html#a4508cc3a2d7a98e96a54cc09c37a78a4" title="TiXmlNode::Clone" alt="" coords="250,132,379,159"/>
 </map>
