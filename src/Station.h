@@ -27,6 +27,7 @@ private:
 public:
     /**
      * \brief De lege constructor van de klasse Station
+     * \post ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
     Station();
 
@@ -38,6 +39,7 @@ public:
      * \param sp Het spoornummer van het station
      * \param op Het aantal opstappende passagiers
      * \param af Het aantal afstappende passgiers
+     * \post ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
     Station(std::string n, std::string vor, std::string volg, int sp, int op, int af);
 

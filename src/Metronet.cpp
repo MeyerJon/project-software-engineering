@@ -9,11 +9,13 @@
 
 Metronet::Metronet() {
     initCheck = this;
+    ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
 Metronet::Metronet(Exporter* exp) {
     Metronet::exp = exp;
     initCheck = this;
+    ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
 Metronet::~Metronet() {
@@ -172,6 +174,34 @@ std::map<int, Tram*>& Metronet::getTrams() {
     return trams;
 }
 
+bool Metronet::bevatTram(Tram *tram) {
+    REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van bevatTram.");
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatTram.");
+    bool out = true;
+    if(trams.count(tram->getSpoor()) == 0){
+        out = false;
+    }
+    return out;
+}
+
+bool Metronet::bevatStation(Station *station) {
+    REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van bevatStation.");
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatStation.");
+    bool out = true;
+    if(stations.count(station->getNaam()) == 0){
+        out = false;
+    }
+    return out;
+}
+
+bool Metronet::bevatSpoor(int spoor) {
+    bool out = true;
+    if(find(sporen.begin(), sporen.end(), spoor) == sporen.end()){
+        out = false;
+    }
+    return out;
+}
+
 void Metronet::addStation(Station* station) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
@@ -180,7 +210,7 @@ void Metronet::addStation(Station* station) {
 
     stations[station->getNaam()] = station;
 
-    ENSURE((stations.find(station->getNaam()) != stations.end()),
+    ENSURE(this->bevatStation(station),
             "Station was niet toegevoegd bij de aanroep van addStation.");
 }
 
@@ -192,7 +222,7 @@ void Metronet::addTram(Tram* tram) {
 
     trams[tram->getSpoor()] = tram;
 
-    ENSURE((trams.find(tram->getSpoor()) != trams.end()),
+    ENSURE(this->bevatTram(tram),
             "Tram was niet toegevoegd bij de aanroep van addTram.");
 }
 
@@ -202,7 +232,7 @@ void Metronet::addSpoor(int spoor) {
 
     sporen.push_back(spoor);
 
-    ENSURE((sporen[sporen.size() - 1] == spoor),
+    ENSURE(this->bevatSpoor(spoor),
             "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
 }
 
@@ -381,6 +411,7 @@ void Metronet::rondrijden(std::ostream& os) {
             opstappenAfstappen(t->getHuidigStation(), os);
             t->verplaatsTram(stations[t->getHuidigStation()]->getVolgende(), exp, os);
         }while(t->getHuidigStation() != t->getBeginStation());
+        ENSURE(t->getHuidigStation() == t->getBeginStation(), "Tram niet geëindigd in beginstation na rondrijden.");
     }
 }
 

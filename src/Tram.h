@@ -30,6 +30,7 @@ private:
 public:
     /**
      * \brief De lege constructor van de klasse Tram
+     * \post ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
      */
     Tram();
 
@@ -39,6 +40,7 @@ public:
      * \param snel De snelheid
      * \param sp Het spoornummer
      * \param beginS Het begin station
+     * \post ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
      */
     Tram(int zit, int snel, int sp, std::string beginS);
 
@@ -94,7 +96,7 @@ public:
      * \brief Past het huidige station aan
      * \param station Nieuw huidig station
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");
-     * \post ENSURE((huidigStation == station), "huidigStation is niet aangepast door setHuidigStation.");
+     * \post ENSURE((getHuidigStation() == station), "huidigStation is niet aangepast door setHuidigStation.");
      */
     void setHuidigStation(std::string station);
 
@@ -103,7 +105,7 @@ public:
      * \param pas Positief nieuw aantal passagiers
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setPassagiers.");
      * \pre REQUIRE(passagiers >= 0, "Aantal passagiers moet positief zijn.");
-     * \post ENSURE((passagiers == pas), "Aantal passagiers niet aangepast bij aanroep van setPassagiers.");
+     * \post ENSURE((getPassagiers() == pas), "Aantal passagiers niet aangepast bij aanroep van setPassagiers.");
      */
     void setPassagiers(int pas);
 
@@ -111,7 +113,7 @@ public:
     /**
      * \brief Verplaatst een tram naar het opgegeven station.
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van verplaatsTram.");
-     * \post ENSURE((huidigStation == station), "huidigStation is niet correct aangepast.");
+     * \post ENSURE((getHuidigStation() == station), "huidigStation is niet correct aangepast.");
      */
     void verplaatsTram(std::string station, Exporter* exp, std::ostream& os);
 

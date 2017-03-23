@@ -44,12 +44,14 @@ private:
 public:
     /**
      * \brief De lege constructor van de klasse Metronet
+     * \post ENSURE(this->properlyInitialised(), "Metronet is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
     Metronet();
 
     /**
      * \brief De default constructor van de klasse Metronet
      * \param exp De exporter die gebruikt zal worden door Metronet om output te genereren
+     * \post ENSURE(this->properlyInitialised(), "Metronet is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
     Metronet(Exporter* exp);
 
@@ -94,11 +96,40 @@ public:
     std::map<int, Tram*>& getTrams();
 
     /**
+     * \brief Kijkt na of het metronet de opgegeven tram bevat.
+     * \param tram De tram die moet gezocht worden.
+     * \return Boolean die aangeeft of het metronet de tram bevat.
+     * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van bevatTram.");
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatTram.");
+     */
+
+    bool bevatTram(Tram* tram);
+
+    /**
+     * \brief Kijkt na of het metronet de opgegeven tram bevat.
+     * \param tram De tram die moet gezocht worden.
+     * \return Boolean die aangeeft of het metronet de tram bevat.
+     * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van bevatStation.");
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatStation.");
+     */
+
+    bool bevatStation(Station* station);
+
+    /**
+     * \brief Kijkt na of het metronet de opgegeven tram bevat.
+     * \param tram De tram die moet gezocht worden.
+     * \return Boolean die aangeeft of het metronet de tram bevat.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatSpoor.");
+     */
+
+    bool bevatSpoor(int spoor);
+
+    /**
      * \brief Voegt station toe aan metronet.
      * \param station Het station dat toegevoegd zal worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");
-     * \post ENSURE((stations.find(station->getNaam()) != stations.end()), "Station was niet toegevoegd bij de aanroep van addStation.");
+     * \post ENSURE(bevatStation(station), "Station was niet toegevoegd bij de aanroep van addStation.");
      */
     void addStation(Station* station);
 
@@ -107,7 +138,7 @@ public:
      * \param tram De tram die toegevoegd zal worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");
-     * \post ENSURE(trams.find(tram->getSpoor()) != trams.end()), "Tram was niet toegevoegd bij de aanroep van addTram.");
+     * \post ENSURE(bevatTram(tram), "Tram was niet toegevoegd bij de aanroep van addTram.");
      */
     void addTram(Tram* tram);
 
@@ -115,7 +146,7 @@ public:
      * \brief Voegt spoor toe aan metronet.
      * \param spoor Het spoor dat toegevoegd zal worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");
-     * \post ENSURE(sporen[sporen.size() - 1] == spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
+     * \post ENSURE(bevatSpoor(spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
      */
     void addSpoor(int spoor);
 
@@ -150,6 +181,7 @@ public:
      * \brief Emuleert het rondrijden van trams
      * \param os De stream waar de output naar gestuurd moet worden
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
+     * \post (voor elke tram) ENSURE(t->getHuidigStation() == t->getBeginStation(), "Tram niet geëindigd in beginstation na rondrijden.");
      */
 
     void rondrijden(std::ostream& os);

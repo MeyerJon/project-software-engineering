@@ -9,6 +9,7 @@
 
 Tram::Tram() {
     initCheck = this;
+    ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
 }
 
 Tram::Tram(int zit, int snel, int sp, std::string beginS) {
@@ -19,6 +20,7 @@ Tram::Tram(int zit, int snel, int sp, std::string beginS) {
     beginStation = beginS;
     huidigStation = beginS;
     initCheck = this;
+    ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
 }
 
 bool Tram::properlyInitialised() const {
@@ -64,14 +66,14 @@ std::string Tram::getHuidigStation() const {
 void Tram::setHuidigStation(std::string station) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");
     huidigStation = station;
-    ENSURE((huidigStation == station), "huidigStation is niet aangepast door setHuidigStation.");
+    ENSURE((getHuidigStation() == station), "huidigStation is niet aangepast door setHuidigStation.");
 }
 
 void Tram::setPassagiers(int pas){
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setPassagiers.");
     REQUIRE(pas >= 0, "Aantal passagiers moet positief zijn.");
     passagiers = pas;
-    ENSURE((passagiers == pas), "Aantal passagiers niet aangepast bij aanroep van setPassagiers.");
+    ENSURE((getPassagiers() == pas), "Aantal passagiers niet aangepast bij aanroep van setPassagiers.");
 }
 
 void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
@@ -82,7 +84,7 @@ void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
                          huidigStation + " naar station " + station + ".\n";
     this->setHuidigStation(station);
 
-    ENSURE((huidigStation == station),
+    ENSURE((getHuidigStation() == station),
            "huidigStation is niet correct aangepast.");
 }
 

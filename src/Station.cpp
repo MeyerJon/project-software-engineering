@@ -9,6 +9,7 @@
 
 Station::Station() {
     initCheck = this;
+    ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
 Station::Station(std::string n, std::string vor, std::string volg, int sp, int o, int a) {
@@ -19,6 +20,7 @@ Station::Station(std::string n, std::string vor, std::string volg, int sp, int o
     opstappen = o;
     afstappen = a;
     initCheck = this;
+    ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
 bool Station::properlyInitialised() const {
