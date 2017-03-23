@@ -65,7 +65,6 @@ TEST_F(MetronetDomainTest, ExporterHTMLTest) {
     ASSERT_TRUE(testExp.properlyInitialised());
     ASSERT_FALSE(testExp.isDocumentStarted());
     testExp.write(dummyString, dummy);
-    std::cout << testExp.isDocumentStarted() << "\n";
     ASSERT_TRUE(testExp.isDocumentStarted());
     testExp.finish(dummy);
     ASSERT_TRUE(testExp.isDocumentStarted());
