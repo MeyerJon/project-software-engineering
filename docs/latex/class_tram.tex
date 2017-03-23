@@ -25,6 +25,10 @@ std\+::string \hyperlink{class_tram_aba7b84414cd60d013ac1db3f3403497d}{get\+Begi
 \begin{DoxyCompactList}\small\item\em Geef het beginstation terug. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{class_tram_ae7bc337a42b2d839b4da5f648b781e79}{get\+Huidig\+Station} () const 
 \begin{DoxyCompactList}\small\item\em Geef het huidig station. \end{DoxyCompactList}\item 
+void \hyperlink{class_tram_ad8627700455e2d24563e08a72d887197}{set\+Huidig\+Station} (std\+::string station)
+\begin{DoxyCompactList}\small\item\em Past het huidige station aan. \end{DoxyCompactList}\item 
+void \hyperlink{class_tram_a3454b4b012930b02eff8fd22b7d9428a}{set\+Passagiers} (int pas)
+\begin{DoxyCompactList}\small\item\em Past het aantal passagiers aan. \end{DoxyCompactList}\item 
 void \hyperlink{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8}{verplaats\+Tram} (std\+::string station, \hyperlink{class_exporter}{Exporter} $\ast$exp, std\+::ostream \&os)
 \begin{DoxyCompactList}\small\item\em Verplaatst een tram naar het opgegeven station. \end{DoxyCompactList}\item 
 bool \hyperlink{class_tram_a81186910caa5212b4a87eec84cd10a46}{afstappen} (int afstappen)
@@ -80,11 +84,12 @@ R\+E\+Q\+U\+I\+RE(afstappen $>$= 0, \char`\"{}\+Afstappen kan geen negatieve waa
 \end{DoxyPrecond}
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=325pt]{class_tram_a81186910caa5212b4a87eec84cd10a46_cgraph}
+\includegraphics[width=350pt]{class_tram_a81186910caa5212b4a87eec84cd10a46_cgraph}
 \end{center}
 \end{figure}
 
@@ -360,11 +365,12 @@ R\+E\+Q\+U\+I\+RE(opstappen $>$= 0, \char`\"{}\+Opstappen kan geen negatieve waa
 \end{DoxyPrecond}
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=327pt]{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_cgraph}
+\includegraphics[width=350pt]{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_cgraph}
 \end{center}
 \end{figure}
 
@@ -396,11 +402,106 @@ Boolean die aangeeft of het object juist geinitialiseerd is.
 \end{DoxyReturn}
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_a98992eff0453f54fbe64e1f1064169c7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Tram@{Tram}!set\+Huidig\+Station@{set\+Huidig\+Station}}
+\index{set\+Huidig\+Station@{set\+Huidig\+Station}!Tram@{Tram}}
+\subsubsection[{\texorpdfstring{set\+Huidig\+Station(std\+::string station)}{setHuidigStation(std::string station)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tram\+::set\+Huidig\+Station (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{station}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_ad8627700455e2d24563e08a72d887197}{}\label{class_tram_ad8627700455e2d24563e08a72d887197}
+
+
+Past het huidige station aan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & Nieuw huidig station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Huidig\+Station.\char`\"{}); 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE((huidig\+Station == station), \char`\"{}huidig\+Station is niet aangepast door set\+Huidig\+Station.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tram_ad8627700455e2d24563e08a72d887197_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tram_ad8627700455e2d24563e08a72d887197_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Tram@{Tram}!set\+Passagiers@{set\+Passagiers}}
+\index{set\+Passagiers@{set\+Passagiers}!Tram@{Tram}}
+\subsubsection[{\texorpdfstring{set\+Passagiers(int pas)}{setPassagiers(int pas)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tram\+::set\+Passagiers (
+\begin{DoxyParamCaption}
+\item[{int}]{pas}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_a3454b4b012930b02eff8fd22b7d9428a}{}\label{class_tram_a3454b4b012930b02eff8fd22b7d9428a}
+
+
+Past het aantal passagiers aan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pas} & Positief nieuw aantal passagiers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van set\+Passagiers.\char`\"{}); 
+
+R\+E\+Q\+U\+I\+RE(passagiers $>$= 0, \char`\"{}\+Aantal passagiers moet positief zijn.\char`\"{}); 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE((passagiers == pas), \char`\"{}\+Aantal passagiers niet aangepast bij aanroep van set\+Passagiers.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_tram_a3454b4b012930b02eff8fd22b7d9428a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tram_a3454b4b012930b02eff8fd22b7d9428a_icgraph}
 \end{center}
 \end{figure}
 
@@ -426,11 +527,12 @@ E\+N\+S\+U\+RE((huidig\+Station == station), \char`\"{}huidig\+Station is niet c
 \end{DoxyPostcond}
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=344pt]{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8_cgraph}
+\includegraphics[width=350pt]{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8_cgraph}
 \end{center}
 \end{figure}
 

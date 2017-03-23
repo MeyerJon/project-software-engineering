@@ -46,6 +46,14 @@ Tram \-
 .br
 .RI "\fIGeef het huidig station\&. \fP"
 .ti -1c
+.RI "void \fBsetHuidigStation\fP (std::string station)"
+.br
+.RI "\fIPast het huidige station aan\&. \fP"
+.ti -1c
+.RI "void \fBsetPassagiers\fP (int pas)"
+.br
+.RI "\fIPast het aantal passagiers aan\&. \fP"
+.ti -1c
 .RI "void \fBverplaatsTram\fP (std::string station, \fBExporter\fP *exp, std::ostream &os)"
 .br
 .RI "\fIVerplaatst een tram naar het opgegeven station\&. \fP"
@@ -216,6 +224,50 @@ Kijk na of de constructor in de juiste staat geeindigd is\&.
 \fBReturns:\fP
 .RS 4
 Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+.SS "void Tram::setHuidigStation (std::string station)"
+
+.PP
+Past het huidige station aan\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstation\fP Nieuw huidig station 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getHuidigStation\&.'); 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE((huidigStation == station), 'huidigStation is niet aangepast door setHuidigStation\&.'); 
+.RE
+.PP
+
+.SS "void Tram::setPassagiers (int pas)"
+
+.PP
+Past het aantal passagiers aan\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpas\fP Positief nieuw aantal passagiers 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van setPassagiers\&.'); 
+.PP
+REQUIRE(passagiers >= 0, 'Aantal passagiers moet positief zijn\&.'); 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE((passagiers == pas), 'Aantal passagiers niet aangepast bij aanroep van setPassagiers\&.'); 
 .RE
 .PP
 

@@ -1,6 +1,7 @@
 <map id="TEST_F" name="TEST_F">
-<area shape="rect" id="node2" href="$class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="135,5,255,32"/>
-<area shape="rect" id="node4" href="$class_tram.html#a8e9e449f0032f0f439c196e0980a891e" title="Geef de passagiers terug van de tram. " alt="" coords="124,56,267,83"/>
-<area shape="rect" id="node5" href="$class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="137,107,254,133"/>
-<area shape="rect" id="node3" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="315,56,476,83"/>
+<area shape="rect" id="node2" href="$class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="124,25,244,52"/>
+<area shape="rect" id="node5" href="$class_tram.html#a8e9e449f0032f0f439c196e0980a891e" title="Geef de passagiers terug van de tram. " alt="" coords="292,126,435,153"/>
+<area shape="rect" id="node6" href="$class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="125,76,243,102"/>
+<area shape="rect" id="node3" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="483,50,644,77"/>
+<area shape="rect" id="node4" href="$class_tram.html#a3454b4b012930b02eff8fd22b7d9428a" title="Past het aantal passagiers aan. " alt="" coords="292,25,435,52"/>
 </map>

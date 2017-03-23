@@ -121,6 +121,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7bc337a42b2d839b4da5f648b781e79"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ae7bc337a42b2d839b4da5f648b781e79">getHuidigStation</a> () const </td></tr>
 <tr class="memdesc:ae7bc337a42b2d839b4da5f648b781e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het huidig station.  <a href="#ae7bc337a42b2d839b4da5f648b781e79">More...</a><br /></td></tr>
 <tr class="separator:ae7bc337a42b2d839b4da5f648b781e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8627700455e2d24563e08a72d887197"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ad8627700455e2d24563e08a72d887197">setHuidigStation</a> (std::string station)</td></tr>
+<tr class="memdesc:ad8627700455e2d24563e08a72d887197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Past het huidige station aan.  <a href="#ad8627700455e2d24563e08a72d887197">More...</a><br /></td></tr>
+<tr class="separator:ad8627700455e2d24563e08a72d887197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3454b4b012930b02eff8fd22b7d9428a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a3454b4b012930b02eff8fd22b7d9428a">setPassagiers</a> (int pas)</td></tr>
+<tr class="memdesc:a3454b4b012930b02eff8fd22b7d9428a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Past het aantal passagiers aan.  <a href="#a3454b4b012930b02eff8fd22b7d9428a">More...</a><br /></td></tr>
+<tr class="separator:a3454b4b012930b02eff8fd22b7d9428a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d55296c7ede4aa92c9b3a4b2a9495a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8">verplaatsTram</a> (std::string station, <a class="el" href="class_exporter.html">Exporter</a> *exp, std::ostream &amp;os)</td></tr>
 <tr class="memdesc:a8d55296c7ede4aa92c9b3a4b2a9495a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verplaatst een tram naar het opgegeven station.  <a href="#a8d55296c7ede4aa92c9b3a4b2a9495a8">More...</a><br /></td></tr>
 <tr class="separator:a8d55296c7ede4aa92c9b3a4b2a9495a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,7 +223,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_tram_a81186910caa5212b4a87eec84cd10a46_cgraph.png" border="0" usemap="#class_tram_a81186910caa5212b4a87eec84cd10a46_cgraph" alt=""/></div>
 <map name="class_tram_a81186910caa5212b4a87eec84cd10a46_cgraph" id="class_tram_a81186910caa5212b4a87eec84cd10a46_cgraph">
-<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="171,5,332,32"/>
+<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="361,5,523,32"/>
+<area shape="rect" id="node3" href="class_tram.html#a3454b4b012930b02eff8fd22b7d9428a" title="Past het aantal passagiers aan. " alt="" coords="171,31,313,57"/>
 </map>
 </div>
 </p>
@@ -512,7 +519,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_cgraph.png" border="0" usemap="#class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_cgraph" alt=""/></div>
 <map name="class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_cgraph" id="class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_cgraph">
-<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="173,5,335,32"/>
+<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="364,5,525,32"/>
+<area shape="rect" id="node3" href="class_tram.html#a3454b4b012930b02eff8fd22b7d9428a" title="Past het aantal passagiers aan. " alt="" coords="173,31,316,57"/>
 </map>
 </div>
 </p>
@@ -553,26 +561,130 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_tram_a98992eff0453f54fbe64e1f1064169c7_icgraph.png" border="0" usemap="#class_tram_a98992eff0453f54fbe64e1f1064169c7_icgraph" alt=""/></div>
 <map name="class_tram_a98992eff0453f54fbe64e1f1064169c7_icgraph" id="class_tram_a98992eff0453f54fbe64e1f1064169c7_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="453,8,585,34"/>
-<area shape="rect" id="node5" href="_metronet_domain_test_8cpp.html#a5be562b32ea24ef957bf5d18da8221b1" title="TEST_F" alt="" coords="257,464,328,490"/>
-<area shape="rect" id="node6" href="class_tram.html#aa366e37291186d6cfd402aa7b6cfec2d" title="Geef de zitplaatsen terug van de tram. " alt="" coords="221,514,364,541"/>
-<area shape="rect" id="node8" href="class_tram.html#a8e9e449f0032f0f439c196e0980a891e" title="Geef de passagiers terug van de tram. " alt="" coords="221,413,364,440"/>
-<area shape="rect" id="node10" href="class_tram.html#a40a12ae66cdc8965fc73d548dd038e4c" title="Geef de snelheid terug van de tram. " alt="" coords="229,58,357,85"/>
-<area shape="rect" id="node12" href="class_tram.html#a52655f991ffb58a8ab3557fd881a6f58" title="Geef het spoor terug. " alt="" coords="237,109,349,136"/>
-<area shape="rect" id="node14" href="class_tram.html#aba7b84414cd60d013ac1db3f3403497d" title="Geef het beginstation terug. " alt="" coords="217,160,369,186"/>
-<area shape="rect" id="node17" href="class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="215,261,371,288"/>
-<area shape="rect" id="node19" href="class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="221,210,364,237"/>
-<area shape="rect" id="node20" href="class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="234,362,351,389"/>
-<area shape="rect" id="node21" href="class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="233,312,353,338"/>
-<area shape="rect" id="node3" href="class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="679,33,792,60"/>
-<area shape="rect" id="node4" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="852,109,903,136"/>
-<area shape="rect" id="node7" href="_metronet_domain_test_8cpp.html#ae5bbc2c62aa86df1916086d983ebdd2e" title="TEST_F" alt="" coords="483,514,554,541"/>
-<area shape="rect" id="node9" href="_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="483,413,554,440"/>
-<area shape="rect" id="node11" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="483,58,554,85"/>
-<area shape="rect" id="node13" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="429,109,608,136"/>
-<area shape="rect" id="node15" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="667,261,804,288"/>
-<area shape="rect" id="node16" href="_metronet_domain_test_8cpp.html#a739a7fda4e9dacf43843e7f31e188df7" title="TEST_F" alt="" coords="483,210,554,237"/>
-<area shape="rect" id="node18" href="class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="419,362,619,389"/>
+<area shape="rect" id="node2" href="class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="431,7,563,34"/>
+<area shape="rect" id="node5" href="_metronet_domain_test_8cpp.html#a5be562b32ea24ef957bf5d18da8221b1" title="TEST_F" alt="" coords="257,565,328,591"/>
+<area shape="rect" id="node6" href="class_tram.html#aa366e37291186d6cfd402aa7b6cfec2d" title="Geef de zitplaatsen terug van de tram. " alt="" coords="221,615,364,642"/>
+<area shape="rect" id="node8" href="class_tram.html#a8e9e449f0032f0f439c196e0980a891e" title="Geef de passagiers terug van de tram. " alt="" coords="221,514,364,541"/>
+<area shape="rect" id="node10" href="class_tram.html#a40a12ae66cdc8965fc73d548dd038e4c" title="Geef de snelheid terug van de tram. " alt="" coords="229,109,357,135"/>
+<area shape="rect" id="node12" href="class_tram.html#a52655f991ffb58a8ab3557fd881a6f58" title="Geef het spoor terug. " alt="" coords="237,58,349,85"/>
+<area shape="rect" id="node14" href="class_tram.html#aba7b84414cd60d013ac1db3f3403497d" title="Geef het beginstation terug. " alt="" coords="421,159,573,186"/>
+<area shape="rect" id="node17" href="class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="419,235,575,262"/>
+<area shape="rect" id="node19" href="class_tram.html#ad8627700455e2d24563e08a72d887197" title="Past het huidige station aan. " alt="" coords="215,261,371,287"/>
+<area shape="rect" id="node20" href="class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="425,299,568,326"/>
+<area shape="rect" id="node21" href="class_tram.html#a3454b4b012930b02eff8fd22b7d9428a" title="Past het aantal passagiers aan. " alt="" coords="221,413,364,439"/>
+<area shape="rect" id="node22" href="class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="438,362,555,389"/>
+<area shape="rect" id="node23" href="class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="437,413,557,439"/>
+<area shape="rect" id="node3" href="class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="883,26,996,53"/>
+<area shape="rect" id="node4" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1056,83,1107,110"/>
+<area shape="rect" id="node7" href="_metronet_domain_test_8cpp.html#ae5bbc2c62aa86df1916086d983ebdd2e" title="TEST_F" alt="" coords="461,615,532,642"/>
+<area shape="rect" id="node9" href="_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="687,413,758,439"/>
+<area shape="rect" id="node11" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="461,109,532,135"/>
+<area shape="rect" id="node13" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="633,83,812,110"/>
+<area shape="rect" id="node15" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="871,210,1008,237"/>
+<area shape="rect" id="node16" href="_metronet_domain_test_8cpp.html#a739a7fda4e9dacf43843e7f31e188df7" title="TEST_F" alt="" coords="687,261,758,287"/>
+<area shape="rect" id="node18" href="class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="623,362,823,389"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8627700455e2d24563e08a72d887197"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tram::setHuidigStation </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>station</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Past het huidige station aan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">station</td><td>Nieuw huidig station </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation."); </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>ENSURE((huidigStation == station), "huidigStation is niet aangepast door setHuidigStation."); </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tram_ad8627700455e2d24563e08a72d887197_cgraph.png" border="0" usemap="#class_tram_ad8627700455e2d24563e08a72d887197_cgraph" alt=""/></div>
+<map name="class_tram_ad8627700455e2d24563e08a72d887197_cgraph" id="class_tram_ad8627700455e2d24563e08a72d887197_cgraph">
+<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="209,5,371,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tram_ad8627700455e2d24563e08a72d887197_icgraph.png" border="0" usemap="#class_tram_ad8627700455e2d24563e08a72d887197_icgraph" alt=""/></div>
+<map name="class_tram_ad8627700455e2d24563e08a72d887197_icgraph" id="class_tram_ad8627700455e2d24563e08a72d887197_icgraph">
+<area shape="rect" id="node2" href="class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="209,31,352,57"/>
+<area shape="rect" id="node3" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="400,5,537,32"/>
+<area shape="rect" id="node5" href="_metronet_domain_test_8cpp.html#a739a7fda4e9dacf43843e7f31e188df7" title="TEST_F" alt="" coords="433,56,504,83"/>
+<area shape="rect" id="node4" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="585,5,636,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3454b4b012930b02eff8fd22b7d9428a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tram::setPassagiers </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Past het aantal passagiers aan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pas</td><td>Positief nieuw aantal passagiers </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Tram was niet geinitialiseerd bij de aanroep van setPassagiers."); </dd>
+<dd>
+REQUIRE(passagiers &gt;= 0, "Aantal passagiers moet positief zijn."); </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>ENSURE((passagiers == pas), "Aantal passagiers niet aangepast bij aanroep van setPassagiers."); </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tram_a3454b4b012930b02eff8fd22b7d9428a_cgraph.png" border="0" usemap="#class_tram_a3454b4b012930b02eff8fd22b7d9428a_cgraph" alt=""/></div>
+<map name="class_tram_a3454b4b012930b02eff8fd22b7d9428a_cgraph" id="class_tram_a3454b4b012930b02eff8fd22b7d9428a_cgraph">
+<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="196,5,357,32"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tram_a3454b4b012930b02eff8fd22b7d9428a_icgraph.png" border="0" usemap="#class_tram_a3454b4b012930b02eff8fd22b7d9428a_icgraph" alt=""/></div>
+<map name="class_tram_a3454b4b012930b02eff8fd22b7d9428a_icgraph" id="class_tram_a3454b4b012930b02eff8fd22b7d9428a_icgraph">
+<area shape="rect" id="node2" href="class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="197,5,315,32"/>
+<area shape="rect" id="node7" href="class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="196,56,316,83"/>
+<area shape="rect" id="node3" href="class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="364,5,564,32"/>
+<area shape="rect" id="node6" href="_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="429,56,499,83"/>
+<area shape="rect" id="node4" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="612,5,749,32"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="797,5,848,32"/>
 </map>
 </div>
 </p>
@@ -618,7 +730,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8_cgraph.png" border="0" usemap="#class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8_cgraph" alt=""/></div>
 <map name="class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8_cgraph" id="class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8_cgraph">
-<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="196,5,357,32"/>
+<area shape="rect" id="node2" href="class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="400,5,561,32"/>
+<area shape="rect" id="node3" href="class_tram.html#ad8627700455e2d24563e08a72d887197" title="Past het huidige station aan. " alt="" coords="196,31,352,57"/>
 </map>
 </div>
 </p>
