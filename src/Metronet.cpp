@@ -40,19 +40,21 @@ bool Metronet::properlyInitialised() {
 SuccessEnum Metronet::setup(std::string filename, std::ostream& os){
     TiXmlDocument doc;
     if (!doc.LoadFile(filename.c_str())) {
-        os << "ERROR: Kan bestand " + filename + " niet openen.\n";
+        std::string out = "ERROR: Kan bestand " + filename + " niet openen.\n";
+        exp->write(out, os);
         return BadImport;
     }
     TiXmlElement* root = doc.FirstChildElement();
     std::string rootName;
     if (root != NULL) rootName = root->Value();
     else {
-        os << "ERROR: Er is geen root.\n";
+        std::string out = "ERROR: Er is geen root.\n";
+        exp->write(out, os);
         return BadImport;
     }
     if (!(rootName == "ROOT" || rootName == "METRONET")) {
-        os << "ERROR: Geen root gevonden. Gelieve een root object genaamd "
-           << "<ROOT> of <METRONET> aan te maken.\n";
+        std::string out = "ERROR: Geen root gevonden. Gelieve een root object genaamd <ROOT> of <METRONET> aan te maken.\n";
+        exp->write(out, os);
         return BadImport;
     }
 
