@@ -201,12 +201,7 @@ TEST_F(MetronetOutputTest, OutputSyntaxErrorSystemsHtml) {
         std::string expectedOutput = "testOutput/SyntaxErrorSystemExpectedOutput" + std::to_string(i) + ".html";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        if (metronet.setup(filename, output) != BadImport) {
-            if (metronet.checkConsistent(output)) {
-                metronet.printMetronet(output);
-                metronet.rondrijden(output);
-            }
-        }
+        metronet.setup(filename, output);
         output.close();
         ASSERT_TRUE(FileCompare(outputName, expectedOutput));
         metronet.reset();
