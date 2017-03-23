@@ -20,6 +20,8 @@ protected:
 public:
     Exporter();
 
+    bool isDocumentStarted() const;
+
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.
      * \return Boolean die aangeeft of het object juist geinitialiseerd is.
@@ -53,8 +55,6 @@ class ExporterTXT : public Exporter {
 };
 
 class ExporterHTML : public Exporter {
-private:
-    bool documentStarted;
 public:
     virtual void write(std::string& output, std::ostream& os);
 

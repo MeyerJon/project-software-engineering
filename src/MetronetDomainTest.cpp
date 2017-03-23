@@ -22,6 +22,55 @@ TEST_F(MetronetDomainTest, ProperlyInitialised){
     metronet.reset();
 }
 
+TEST_F(MetronetDomainTest, ExporterTest) {
+    std::ostream dummy(0);
+    std::string dummyString = "dummy";
+    Exporter testExp;
+    ASSERT_TRUE(testExp.properlyInitialised());
+    ASSERT_FALSE(testExp.isDocumentStarted());
+    testExp.write(dummyString, dummy);
+    ASSERT_TRUE(testExp.isDocumentStarted());
+    testExp.finish(dummy);
+    ASSERT_TRUE(testExp.isDocumentStarted());
+}
+
+TEST_F(MetronetDomainTest, ExporterCLITest) {
+    std::ostream dummy(0);
+    std::string dummyString = "dummy";
+    ExporterCLI testExp;
+    ASSERT_TRUE(testExp.properlyInitialised());
+    ASSERT_FALSE(testExp.isDocumentStarted());
+    testExp.write(dummyString, dummy);
+    ASSERT_TRUE(testExp.isDocumentStarted());
+    testExp.finish(dummy);
+    ASSERT_TRUE(testExp.isDocumentStarted());
+}
+
+TEST_F(MetronetDomainTest, ExporterTXTTest) {
+    std::ostream dummy(0);
+    std::string dummyString = "dummy";
+    ExporterTXT testExp;
+    ASSERT_TRUE(testExp.properlyInitialised());
+    ASSERT_FALSE(testExp.isDocumentStarted());
+    testExp.write(dummyString, dummy);
+    ASSERT_TRUE(testExp.isDocumentStarted());
+    testExp.finish(dummy);
+    ASSERT_TRUE(testExp.isDocumentStarted());
+}
+
+TEST_F(MetronetDomainTest, ExporterHTMLTest) {
+    std::ostream dummy(0);
+    std::string dummyString = "dummy";
+    ExporterHTML testExp;
+    ASSERT_TRUE(testExp.properlyInitialised());
+    ASSERT_FALSE(testExp.isDocumentStarted());
+    testExp.write(dummyString, dummy);
+    std::cout << testExp.isDocumentStarted() << "\n";
+    ASSERT_TRUE(testExp.isDocumentStarted());
+    testExp.finish(dummy);
+    ASSERT_TRUE(testExp.isDocumentStarted());
+}
+
 TEST_F(MetronetDomainTest, CheckConsistent){
     std::string filename;
     SuccessEnum importResult;

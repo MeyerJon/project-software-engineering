@@ -33,6 +33,10 @@ void Exporter::finish(std::ostream &os) {
             "Document was niet aangemaakt voor de aanroep van finish.");
 }
 
+bool Exporter::isDocumentStarted() const {
+    return documentStarted;
+}
+
 void ExporterHTML::write(std::string& output, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Exporter was niet geinitialiseerd bij de aanroep van write.");
@@ -41,6 +45,7 @@ void ExporterHTML::write(std::string& output, std::ostream& os) {
         output.replace(output.find("\n"), std::string("\n").length(), "<br>");
     }
     if (!documentStarted) this->createHTMLHead(os);
+    documentStarted = true;
     os << "\t\t<p>\n" << output << "\n</p>\n";
 
     ENSURE(documentStarted,
