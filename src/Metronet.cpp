@@ -374,6 +374,7 @@ bool Metronet::opstappenAfstappen(std::string station, std::ostream& os) {
 }
 
 void Metronet::rondrijden(std::ostream& os) {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
     for(auto& p : trams){
         Tram* t = p.second;
         do{
