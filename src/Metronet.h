@@ -22,12 +22,18 @@
 
 #include "DesignByContract.h"
 
+/**
+ * \brief Enum gebruikt om te bepalen of bestand correct, partieel of fout is ingelezen
+ */
 enum SuccessEnum {
     Success,
     PartialImport,
     BadImport
 };
 
+/**
+ * \brief Metronet klasse die XML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhoudt
+ */
 class Metronet {
 private:
     Exporter* exp;
@@ -36,10 +42,27 @@ private:
     std::vector<int> sporen;
     Metronet* initCheck;
 public:
+    /**
+     * \brief De lege constructor van de klasse Metronet
+     */
     Metronet();
+
+    /**
+     * \brief De default constructor van de klasse Metronet
+     * \param exp De exporter die gebruikt zal worden door Metronet om output te genereren
+     */
     Metronet(Exporter* exp);
+
+    /**
+     * \brief De destructor van de klasse Metronet
+     */
     virtual ~Metronet();
 
+    /**
+     * \brief De overload van de = operator van de klasse Metronet
+     * \param rhs Het metronet waaran this gelijk gezet zal worden
+     * \return Het huidig metronet dat gelijk wordt gezet aan rhs
+     */
     Metronet& operator=(const Metronet& rhs);
 
     /**

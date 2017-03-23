@@ -12,14 +12,24 @@
 #include <string>
 #include <algorithm>
 #include "DesignByContract.h"
-
+/**
+ * \brief Exporter base klasse die de output van gegevens behandelt
+ */
 class Exporter {
 protected:
     bool documentStarted;
     Exporter* initCheck;
 public:
+    /**
+     * \brief Lege constructor van Exporter
+     */
     Exporter();
 
+    /**
+     * \brief Getter van member documentStarted
+     * \return De waarde van documentStarted
+     * \pre REQUIRE(this->properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van isDocumentStarted.");
+     */
     bool isDocumentStarted() const;
 
     /**
@@ -46,14 +56,23 @@ public:
      virtual void finish(std::ostream& os);
 };
 
+/**
+ * \brief ExporterCLI child klasse die de output van gegevens naar de command line behandelt
+ */
 class ExporterCLI : public Exporter {
 
 };
 
+/**
+ * \brief ExporterTXT child klasse die de output van gegevens naar een txt-bestand behandelt
+ */
 class ExporterTXT : public Exporter {
 
 };
 
+/**
+ * \brief ExporterHTML child klasse die de output van gegevens naar een html-bestand behandelt
+ */
 class ExporterHTML : public Exporter {
 public:
     virtual void write(std::string& output, std::ostream& os);

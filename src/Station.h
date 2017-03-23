@@ -11,6 +11,9 @@
 #include <iostream>
 #include "DesignByContract.h"
 
+/**
+ * \brief Station klasse die een STATION element uit een XML-bestand representeert
+ */
 class Station {
 private:
     std::string naam;
@@ -22,7 +25,20 @@ private:
     Station* initCheck;
 
 public:
+    /**
+     * \brief De lege constructor van de klasse Station
+     */
     Station();
+
+    /**
+     * \brief De default constructor van de klasse Station
+     * \param n De naam van het station
+     * \param vor Het vorig station
+     * \param volg Het volgend station
+     * \param sp Het spoornummer van het station
+     * \param op Het aantal opstappende passagiers
+     * \param af Het aantal afstappende passgiers
+     */
     Station(std::string n, std::string vor, std::string volg, int sp, int op, int af);
 
     /**

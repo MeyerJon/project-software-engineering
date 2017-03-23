@@ -1,16 +1,16 @@
-\hypertarget{_metronet_8h}{}\section{/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\+Metronet.h File Reference}
-\label{_metronet_8h}\index{/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\+Metronet.\+h@{/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\+Metronet.\+h}}
-{\ttfamily \#include $<$iostream$>$}\\*
-{\ttfamily \#include $<$map$>$}\\*
-{\ttfamily \#include $<$vector$>$}\\*
-{\ttfamily \#include $<$string$>$}\\*
-{\ttfamily \#include $<$algorithm$>$}\\*
-{\ttfamily \#include \char`\"{}tinyxml.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}tinystr.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Station.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Tram.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Exporter.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Design\+By\+Contract.\+h\char`\"{}}\\*
+\hypertarget{_metronet_8h}{}\section{/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\+Metronet.h File Reference}
+\label{_metronet_8h}\index{/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\+Metronet.\+h@{/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\+Metronet.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}tinyxml.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tinystr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Station.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tram.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Exporter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Design\+By\+Contract.\+h\char`\"{}}\newline
 Include dependency graph for Metronet.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -29,29 +29,39 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{class_metronet}{Metronet}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_metronet}{Metronet} klasse die X\+ML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhoudt. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \hyperlink{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4d}{Success\+Enum} \{ \hyperlink{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dafdfbdf3247bd36a1f17270d5cec74c9c}{Success}, 
 \hyperlink{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4da21205c22fde3e4f49e0e131a4377491a}{Partial\+Import}, 
 \hyperlink{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dacffc30b5d2b821378586d74ae64e6944}{Bad\+Import}
- \}
+ \}\begin{DoxyCompactList}\small\item\em Enum gebruikt om te bepalen of bestand correct, partieel of fout is ingelezen. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 
 
 \subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4d}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4d}} 
 \index{Metronet.\+h@{Metronet.\+h}!Success\+Enum@{Success\+Enum}}
 \index{Success\+Enum@{Success\+Enum}!Metronet.\+h@{Metronet.\+h}}
-\subsubsection[{\texorpdfstring{Success\+Enum}{SuccessEnum}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Success\+Enum}}\hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4d}{}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4d}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{Success@{Success}!Metronet.\+h@{Metronet.\+h}}\index{Metronet.\+h@{Metronet.\+h}!Success@{Success}}\item[{\em 
-Success\hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dafdfbdf3247bd36a1f17270d5cec74c9c}{}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dafdfbdf3247bd36a1f17270d5cec74c9c}
-}]\index{Partial\+Import@{Partial\+Import}!Metronet.\+h@{Metronet.\+h}}\index{Metronet.\+h@{Metronet.\+h}!Partial\+Import@{Partial\+Import}}\item[{\em 
-Partial\+Import\hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4da21205c22fde3e4f49e0e131a4377491a}{}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4da21205c22fde3e4f49e0e131a4377491a}
-}]\index{Bad\+Import@{Bad\+Import}!Metronet.\+h@{Metronet.\+h}}\index{Metronet.\+h@{Metronet.\+h}!Bad\+Import@{Bad\+Import}}\item[{\em 
-Bad\+Import\hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dacffc30b5d2b821378586d74ae64e6944}{}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dacffc30b5d2b821378586d74ae64e6944}
-}]\end{description}
-\end{Desc}
+\subsubsection{\texorpdfstring{Success\+Enum}{SuccessEnum}}
+{\footnotesize\ttfamily enum \hyperlink{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4d}{Success\+Enum}}
+
+
+
+Enum gebruikt om te bepalen of bestand correct, partieel of fout is ingelezen. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!Metronet.\+h@{Metronet.\+h}}\index{Metronet.\+h@{Metronet.\+h}!Success@{Success}}}\mbox{\Hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dafdfbdf3247bd36a1f17270d5cec74c9c}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dafdfbdf3247bd36a1f17270d5cec74c9c}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Partial\+Import@{Partial\+Import}!Metronet.\+h@{Metronet.\+h}}\index{Metronet.\+h@{Metronet.\+h}!Partial\+Import@{Partial\+Import}}}\mbox{\Hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4da21205c22fde3e4f49e0e131a4377491a}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4da21205c22fde3e4f49e0e131a4377491a}} 
+Partial\+Import&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bad\+Import@{Bad\+Import}!Metronet.\+h@{Metronet.\+h}}\index{Metronet.\+h@{Metronet.\+h}!Bad\+Import@{Bad\+Import}}}\mbox{\Hypertarget{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dacffc30b5d2b821378586d74ae64e6944}\label{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4dacffc30b5d2b821378586d74ae64e6944}} 
+Bad\+Import&\\
+\hline
+
+\end{DoxyEnumFields}

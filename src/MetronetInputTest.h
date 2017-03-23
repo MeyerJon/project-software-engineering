@@ -13,6 +13,9 @@
 #include "MetronetUtils.h"
 #include "Metronet.h"
 
+/**
+ * \brief MetronetInputTest klasse die input tests behandelt
+ */
 class MetronetInputTest: public ::testing::Test {
 protected:
     friend class Metronet;

@@ -1,8 +1,9 @@
-.TH "Tram" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "Tram" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Tram \- 
+Tram \- \fBTram\fP klasse die een TRAM element uit een XML-bestand representeert\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -14,63 +15,85 @@ Tram \-
 .ti -1c
 .RI "\fBTram\fP ()"
 .br
+.RI "De lege constructor van de klasse \fBTram\fP\&. "
 .ti -1c
 .RI "\fBTram\fP (int zit, int snel, int sp, std::string beginS)"
 .br
+.RI "De default constructor van de klasse \fBTram\fP\&. "
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const "
+.RI "bool \fBproperlyInitialised\fP () const"
 .br
-.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
 .ti -1c
-.RI "int \fBgetZitplaatsen\fP () const "
+.RI "int \fBgetZitplaatsen\fP () const"
 .br
-.RI "\fIGeef de zitplaatsen terug van de tram\&. \fP"
+.RI "Geef de zitplaatsen terug van de tram\&. "
 .ti -1c
-.RI "int \fBgetPassagiers\fP () const "
+.RI "int \fBgetPassagiers\fP () const"
 .br
-.RI "\fIGeef de passagiers terug van de tram\&. \fP"
+.RI "Geef de passagiers terug van de tram\&. "
 .ti -1c
-.RI "int \fBgetSnelheid\fP () const "
+.RI "int \fBgetSnelheid\fP () const"
 .br
-.RI "\fIGeef de snelheid terug van de tram\&. \fP"
+.RI "Geef de snelheid terug van de tram\&. "
 .ti -1c
-.RI "int \fBgetSpoor\fP () const "
+.RI "int \fBgetSpoor\fP () const"
 .br
-.RI "\fIGeef het spoor terug\&. \fP"
+.RI "Geef het spoor terug\&. "
 .ti -1c
-.RI "std::string \fBgetBeginStation\fP () const "
+.RI "std::string \fBgetBeginStation\fP () const"
 .br
-.RI "\fIGeef het beginstation terug\&. \fP"
+.RI "Geef het beginstation terug\&. "
 .ti -1c
-.RI "std::string \fBgetHuidigStation\fP () const "
+.RI "std::string \fBgetHuidigStation\fP () const"
 .br
-.RI "\fIGeef het huidig station\&. \fP"
+.RI "Geef het huidig station\&. "
 .ti -1c
 .RI "void \fBsetHuidigStation\fP (std::string station)"
 .br
-.RI "\fIPast het huidige station aan\&. \fP"
+.RI "Past het huidige station aan\&. "
 .ti -1c
 .RI "void \fBsetPassagiers\fP (int pas)"
 .br
-.RI "\fIPast het aantal passagiers aan\&. \fP"
+.RI "Past het aantal passagiers aan\&. "
 .ti -1c
 .RI "void \fBverplaatsTram\fP (std::string station, \fBExporter\fP *exp, std::ostream &os)"
 .br
-.RI "\fIVerplaatst een tram naar het opgegeven station\&. \fP"
+.RI "Verplaatst een tram naar het opgegeven station\&. "
 .ti -1c
 .RI "bool \fBafstappen\fP (int afstappen)"
 .br
-.RI "\fIEmuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) \fP"
+.RI "Emuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) "
 .ti -1c
 .RI "bool \fBopstappen\fP (int opstappen)"
 .br
-.RI "\fIEmuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) \fP"
+.RI "Emuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) "
 .in -1c
+.SH "Detailed Description"
+.PP 
+\fBTram\fP klasse die een TRAM element uit een XML-bestand representeert\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Tram::Tram ()"
 
+.PP
+De lege constructor van de klasse \fBTram\fP\&. 
 .SS "Tram::Tram (int zit, int snel, int sp, std::string beginS)"
+
+.PP
+De default constructor van de klasse \fBTram\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIzit\fP Het totaal aantal zitplaatsen 
+.br
+\fIsnel\fP De snelheid 
+.br
+\fIsp\fP Het spoornummer 
+.br
+\fIbeginS\fP Het begin station 
+.RE
+.PP
 
 .SH "Member Function Documentation"
 .PP 

@@ -1,6 +1,6 @@
 <map id="TEST_F" name="TEST_F">
-<area shape="rect" id="node2" href="$class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="124,5,280,32"/>
-<area shape="rect" id="node4" href="$class_tram.html#aba7b84414cd60d013ac1db3f3403497d" title="Geef het beginstation terug. " alt="" coords="126,56,278,83"/>
-<area shape="rect" id="node5" href="$class_tram.html#a8e9e449f0032f0f439c196e0980a891e" title="Geef de passagiers terug van de tram. " alt="" coords="131,107,273,133"/>
-<area shape="rect" id="node3" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="328,56,489,83"/>
+<area shape="rect" id="node2" href="$class_tram.html#ae1d03c1fb6e0f5f97c57d35fe10fa8dd" title="Geef het huidig station. " alt="" coords="124,5,280,32"/>
+<area shape="rect" id="node4" href="$class_tram.html#ae4a7cf6313452140ed54d219d1f6afba" title="Geef het beginstation terug. " alt="" coords="126,56,278,83"/>
+<area shape="rect" id="node5" href="$class_tram.html#a678ba2cd0c6ab76e966947944f599d56" title="Geef de passagiers terug van de tram. " alt="" coords="131,107,273,133"/>
+<area shape="rect" id="node3" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="328,56,489,83"/>
 </map>

@@ -1,8 +1,9 @@
-.TH "Metronet" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "Metronet" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Metronet \- 
+Metronet \- \fBMetronet\fP klasse die XML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhoudt\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -14,72 +15,92 @@ Metronet \-
 .ti -1c
 .RI "\fBMetronet\fP ()"
 .br
+.RI "De lege constructor van de klasse \fBMetronet\fP\&. "
 .ti -1c
 .RI "\fBMetronet\fP (\fBExporter\fP *exp)"
 .br
+.RI "De default constructor van de klasse \fBMetronet\fP\&. "
 .ti -1c
 .RI "virtual \fB~Metronet\fP ()"
 .br
+.RI "De destructor van de klasse \fBMetronet\fP\&. "
 .ti -1c
 .RI "\fBMetronet\fP & \fBoperator=\fP (const \fBMetronet\fP &rhs)"
 .br
+.RI "De overload van de = operator van de klasse \fBMetronet\fP\&. "
 .ti -1c
 .RI "bool \fBproperlyInitialised\fP ()"
 .br
-.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
 .ti -1c
 .RI "\fBSuccessEnum\fP \fBsetup\fP (std::string filename, std::ostream &os)"
 .br
-.RI "\fIVerwerkt het XML-bestand\&. \fP"
+.RI "Verwerkt het XML-bestand\&. "
 .ti -1c
 .RI "std::map< std::string, \fBStation\fP * > \fBgetStations\fP ()"
 .br
-.RI "\fIGeeft alle stations in het metronet terug\&. \fP"
+.RI "Geeft alle stations in het metronet terug\&. "
 .ti -1c
 .RI "std::map< int, \fBTram\fP * > & \fBgetTrams\fP ()"
 .br
-.RI "\fIGeeft alle trams in het metronet terug\&. \fP"
+.RI "Geeft alle trams in het metronet terug\&. "
 .ti -1c
 .RI "void \fBaddStation\fP (\fBStation\fP *station)"
 .br
-.RI "\fIVoegt station toe aan metronet\&. \fP"
+.RI "Voegt station toe aan metronet\&. "
 .ti -1c
 .RI "void \fBaddTram\fP (\fBTram\fP *tram)"
 .br
-.RI "\fIVoegt tram toe aan metronet\&. \fP"
+.RI "Voegt tram toe aan metronet\&. "
 .ti -1c
 .RI "void \fBaddSpoor\fP (int spoor)"
 .br
-.RI "\fIVoegt spoor toe aan metronet\&. \fP"
+.RI "Voegt spoor toe aan metronet\&. "
 .ti -1c
 .RI "bool \fBcheckConsistent\fP (std::ostream &os)"
 .br
-.RI "\fIKijkt na of het metronet consistent is\&. \fP"
+.RI "Kijkt na of het metronet consistent is\&. "
 .ti -1c
 .RI "void \fBprintMetronet\fP (std::ostream &os)"
 .br
-.RI "\fIPrint het hele metronet\&. \fP"
+.RI "Print het hele metronet\&. "
 .ti -1c
 .RI "bool \fBopstappenAfstappen\fP (std::string station, std::ostream &os)"
 .br
-.RI "\fIBehandelt het opstappen en afstappen van passagiers\&. \fP"
+.RI "Behandelt het opstappen en afstappen van passagiers\&. "
 .ti -1c
 .RI "void \fBrondrijden\fP (std::ostream &os)"
 .br
-.RI "\fIEmuleert het rondrijden van trams\&. \fP"
+.RI "Emuleert het rondrijden van trams\&. "
 .ti -1c
 .RI "void \fBreset\fP ()"
 .br
-.RI "\fIReset heel het systeem\&. \fP"
+.RI "Reset heel het systeem\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+\fBMetronet\fP klasse die XML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhoudt\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Metronet::Metronet ()"
 
+.PP
+De lege constructor van de klasse \fBMetronet\fP\&. 
 .SS "Metronet::Metronet (\fBExporter\fP * exp)"
+
+.PP
+De default constructor van de klasse \fBMetronet\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexp\fP De exporter die gebruikt zal worden door \fBMetronet\fP om output te genereren 
+.RE
+.PP
 
 .SS "Metronet::~Metronet ()\fC [virtual]\fP"
 
+.PP
+De destructor van de klasse \fBMetronet\fP\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "void Metronet::addSpoor (int spoor)"
@@ -205,6 +226,20 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bi
 .PP
 
 .SS "\fBMetronet\fP & Metronet::operator= (const \fBMetronet\fP & rhs)"
+
+.PP
+De overload van de = operator van de klasse \fBMetronet\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrhs\fP Het metronet waaran this gelijk gezet zal worden 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Het huidig metronet dat gelijk wordt gezet aan rhs 
+.RE
+.PP
 
 .SS "bool Metronet::opstappenAfstappen (std::string station, std::ostream & os)"
 

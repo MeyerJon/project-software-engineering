@@ -13,6 +13,9 @@
 #include "MetronetUtils.h"
 #include "Metronet.h"
 
+/**
+ * \brief MetronetOutputTest klasse die output tests behandelt
+ */
 class MetronetOutputTest: public ::testing::Test {
 protected:
     friend class Metronet;

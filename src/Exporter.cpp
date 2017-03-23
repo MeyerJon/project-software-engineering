@@ -34,6 +34,8 @@ void Exporter::finish(std::ostream &os) {
 }
 
 bool Exporter::isDocumentStarted() const {
+    REQUIRE(this->properlyInitialised(),
+            "Exporter was niet geinitialiseerd bij de aanroep van isDocumentStarted.");
     return documentStarted;
 }
 

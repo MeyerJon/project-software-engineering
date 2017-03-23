@@ -1,8 +1,9 @@
-.TH "Station" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "Station" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Station \- 
+Station \- \fBStation\fP klasse die een STATION element uit een XML-bestand representeert\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -14,43 +15,69 @@ Station \-
 .ti -1c
 .RI "\fBStation\fP ()"
 .br
+.RI "De lege constructor van de klasse \fBStation\fP\&. "
 .ti -1c
 .RI "\fBStation\fP (std::string n, std::string vor, std::string volg, int sp, int op, int af)"
 .br
+.RI "De default constructor van de klasse \fBStation\fP\&. "
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const "
+.RI "bool \fBproperlyInitialised\fP () const"
 .br
-.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
 .ti -1c
-.RI "std::string \fBgetNaam\fP () const "
+.RI "std::string \fBgetNaam\fP () const"
 .br
-.RI "\fIGeef de naam terug van het station\&. \fP"
+.RI "Geef de naam terug van het station\&. "
 .ti -1c
-.RI "std::string \fBgetVorige\fP () const "
+.RI "std::string \fBgetVorige\fP () const"
 .br
-.RI "\fIGeef het vorig station terug\&. \fP"
+.RI "Geef het vorig station terug\&. "
 .ti -1c
-.RI "std::string \fBgetVolgende\fP () const "
+.RI "std::string \fBgetVolgende\fP () const"
 .br
-.RI "\fIGeef het volgende station\&. \fP"
+.RI "Geef het volgende station\&. "
 .ti -1c
-.RI "int \fBgetSpoor\fP () const "
+.RI "int \fBgetSpoor\fP () const"
 .br
-.RI "\fIGeef het spoor terug\&. \fP"
+.RI "Geef het spoor terug\&. "
 .ti -1c
-.RI "int \fBgetOpstappen\fP () const "
+.RI "int \fBgetOpstappen\fP () const"
 .br
-.RI "\fIGeef het aantal opstappende mensen terug\&. \fP"
+.RI "Geef het aantal opstappende mensen terug\&. "
 .ti -1c
-.RI "int \fBgetAfstappen\fP () const "
+.RI "int \fBgetAfstappen\fP () const"
 .br
-.RI "\fIGeef het afstappende mensen terug\&. \fP"
+.RI "Geef het afstappende mensen terug\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+\fBStation\fP klasse die een STATION element uit een XML-bestand representeert\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Station::Station ()"
 
+.PP
+De lege constructor van de klasse \fBStation\fP\&. 
 .SS "Station::Station (std::string n, std::string vor, std::string volg, int sp, int op, int af)"
+
+.PP
+De default constructor van de klasse \fBStation\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP De naam van het station 
+.br
+\fIvor\fP Het vorig station 
+.br
+\fIvolg\fP Het volgend station 
+.br
+\fIsp\fP Het spoornummer van het station 
+.br
+\fIop\fP Het aantal opstappende passagiers 
+.br
+\fIaf\fP Het aantal afstappende passgiers 
+.RE
+.PP
 
 .SH "Member Function Documentation"
 .PP 

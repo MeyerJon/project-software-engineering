@@ -15,7 +15,9 @@
 class Spoor;
 class Station;
 
-
+/**
+ * \brief Tram klasse die een TRAM element uit een XML-bestand representeert
+ */
 class Tram {
 private:
     int zitplaatsen;
@@ -26,7 +28,18 @@ private:
     std::string huidigStation;
     Tram* initCheck;
 public:
+    /**
+     * \brief De lege constructor van de klasse Tram
+     */
     Tram();
+
+    /**
+     * \brief De default constructor van de klasse Tram
+     * \param zit Het totaal aantal zitplaatsen
+     * \param snel De snelheid
+     * \param sp Het spoornummer
+     * \param beginS Het begin station
+     */
     Tram(int zit, int snel, int sp, std::string beginS);
 
     /**

@@ -1,8 +1,9 @@
-.TH "ExporterHTML" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "ExporterHTML" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-ExporterHTML \- 
+ExporterHTML \- \fBExporterHTML\fP child klasse die de output van gegevens naar een html-bestand behandelt\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -16,13 +17,16 @@ Inherits \fBExporter\fP\&.
 .ti -1c
 .RI "virtual void \fBwrite\fP (std::string &output, std::ostream &os)"
 .br
-.RI "\fIStuur de output string naar de output stream\&. \fP"
+.RI "Stuur de output string naar de output stream\&. "
 .ti -1c
 .RI "virtual void \fBfinish\fP (std::ostream &os)"
 .br
-.RI "\fIStuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. \fP"
+.RI "Stuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. "
 .in -1c
 .SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBExporterHTML\fP child klasse die de output van gegevens naar een html-bestand behandelt\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "void ExporterHTML::finish (std::ostream & os)\fC [virtual]\fP"

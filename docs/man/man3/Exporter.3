@@ -1,8 +1,9 @@
-.TH "Exporter" 3 "Wed Mar 22 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "Exporter" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Exporter \- 
+Exporter \- \fBExporter\fP base klasse die de output van gegevens behandelt\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -16,18 +17,23 @@ Inherited by \fBExporterCLI\fP, \fBExporterHTML\fP, and \fBExporterTXT\fP\&.
 .ti -1c
 .RI "\fBExporter\fP ()"
 .br
+.RI "Lege constructor van \fBExporter\fP\&. "
 .ti -1c
-.RI "virtual bool \fBproperlyInitialised\fP () const "
+.RI "bool \fBisDocumentStarted\fP () const"
 .br
-.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.RI "Getter van member documentStarted\&. "
+.ti -1c
+.RI "virtual bool \fBproperlyInitialised\fP () const"
+.br
+.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
 .ti -1c
 .RI "virtual void \fBwrite\fP (std::string &output, std::ostream &os)"
 .br
-.RI "\fIStuur de output string naar de output stream\&. \fP"
+.RI "Stuur de output string naar de output stream\&. "
 .ti -1c
 .RI "virtual void \fBfinish\fP (std::ostream &os)"
 .br
-.RI "\fIStuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. \fP"
+.RI "Stuurt de nodige informatie naar de output stream om het document correct af te sluiten\&. "
 .in -1c
 .SS "Protected Attributes"
 
@@ -39,10 +45,15 @@ Inherited by \fBExporterCLI\fP, \fBExporterHTML\fP, and \fBExporterTXT\fP\&.
 .RI "\fBExporter\fP * \fBinitCheck\fP"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+\fBExporter\fP base klasse die de output van gegevens behandelt\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Exporter::Exporter ()"
 
+.PP
+Lege constructor van \fBExporter\fP\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "void Exporter::finish (std::ostream & os)\fC [virtual]\fP"
@@ -65,6 +76,22 @@ REQUIRE(documentStarted, 'Document was niet aangemaakt voor de aanroep van finis
 
 .PP
 Reimplemented in \fBExporterHTML\fP\&.
+.SS "bool Exporter::isDocumentStarted () const"
+
+.PP
+Getter van member documentStarted\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De waarde van documentStarted 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Exporter was niet geinitialiseerd bij de aanroep van isDocumentStarted\&.'); 
+.RE
+.PP
+
 .SS "bool Exporter::properlyInitialised () const\fC [virtual]\fP"
 
 .PP

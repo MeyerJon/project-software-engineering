@@ -14,6 +14,9 @@
 #include "MetronetUtils.h"
 #include "Metronet.h"
 
+/**
+ * \brief MetronetDomainTest klasse die domein tests behandelt
+ */
 class MetronetDomainTest: public ::testing::Test {
 protected:
     friend class Metronet;
