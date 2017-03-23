@@ -147,16 +147,19 @@ TEST_F(MetronetDomainTest, OpstappenAfstappenNormaal){
 TEST_F(MetronetDomainTest, OpstappenAfstappenOverflow){
     Tram tram(20, 50, 1, "A");
     int max = std::numeric_limits<int>::max();
-
+    // Meer op- en afstppen dan max
     tram.opstappen(30);
     ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
     tram.afstappen(30);
     ASSERT_EQ(tram.getPassagiers(), 0);
-
+    // Max int op- en afstappen
     tram.opstappen(max);
     ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
     tram.afstappen(max);
     ASSERT_EQ(tram.getPassagiers(), 0);
+    // Max int + 1 op- en afstappen
+    EXPECT_DEATH(tram.opstappen(max + 1), "");
+    EXPECT_DEATH(tram.afstappen(max + 1), "");
 }
 
 TEST_F(MetronetDomainTest, OpstappenAfstappenNegative){
