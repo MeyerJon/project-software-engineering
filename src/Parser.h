@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include "Metronet.h"
-#include "Exporter.h"
 
 /**
  * \brief Parser klasse die het inlezen van XML-bestanden behandelt
@@ -34,6 +33,7 @@ public:
      * \brief De overload van de = operator van de klasse Parser
      * \param rhs De parser waaran this gelijk gezet zal worden
      * \return De huidige parser dat gelijk wordt gezet aan rhs
+     * \post ENSURE(this->properlyInitialised(), "Parser is niet in de juiste staat geëindigd na aanroep van de copy assignment.");
      */
     Parser& operator=(const Parser& rhs);
 
