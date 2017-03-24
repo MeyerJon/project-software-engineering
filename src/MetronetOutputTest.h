@@ -12,6 +12,7 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
+#include "Parser.h"
 
 /**
  * \brief MetronetOutputTest klasse die output tests behandelt
@@ -25,7 +26,7 @@ protected:
 
     virtual void TearDown() {
     }
-
+    Parser parser;
     Metronet metronet;
     Exporter* exp;
 };

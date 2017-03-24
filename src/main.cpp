@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "Metronet.h"
+#include "Parser.h"
 
 int main(int argc, const char* argv[]) {
     Exporter* exp;
@@ -18,8 +18,9 @@ int main(int argc, const char* argv[]) {
         if (argc == 4) output = argv[3];
         if (expType == "cli") {
             exp = new ExporterCLI;
+            Parser parser(exp);
             Metronet metronet(exp);
-            SuccessEnum importResult = metronet.setup(input, std::cout);
+            SuccessEnum importResult = parser.setup(metronet, input, std::cout);
             if (importResult != BadImport) {
                 if (metronet.checkConsistent(std::cout)) {
                     metronet.printMetronet(std::cout);
@@ -29,10 +30,11 @@ int main(int argc, const char* argv[]) {
         }
         else if (expType == "html") {
             exp = new ExporterHTML;
+            Parser parser(exp);
             Metronet metronet(exp);
             std::ofstream of;
             of.open(output + ".html", std::ofstream::trunc);
-            SuccessEnum importResult = metronet.setup(input, of);
+            SuccessEnum importResult = parser.setup(metronet, input, of);
             if (importResult != BadImport) {
                 if (metronet.checkConsistent(of)) {
                     metronet.printMetronet(of);
@@ -42,10 +44,11 @@ int main(int argc, const char* argv[]) {
         }
         else if (expType == "txt") {
             exp = new ExporterTXT;
+            Parser parser(exp);
             Metronet metronet(exp);
             std::ofstream of;
             of.open(output + ".txt", std::ofstream::trunc);
-            SuccessEnum importResult = metronet.setup(input, of);
+            SuccessEnum importResult = parser.setup(metronet, input, of);
             if (importResult != BadImport) {
                 if (metronet.checkConsistent(of)) {
                     metronet.printMetronet(of);
@@ -55,8 +58,9 @@ int main(int argc, const char* argv[]) {
         }
     } else {
         exp = new ExporterCLI;
+        Parser parser(exp);
         Metronet metronet(exp);
-        metronet.setup("testInput/LegalSystemInput1.xml", std::cout);
+        parser.setup(metronet, "testInput/LegalSystemInput1.xml", std::cout);
         if (metronet.checkConsistent(std::cout)) {
             metronet.printMetronet(std::cout);
             metronet.rondrijden(std::cout);
