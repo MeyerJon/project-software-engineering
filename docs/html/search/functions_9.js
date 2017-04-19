@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['printmetronet',['printMetronet',['../class_metronet.html#a3d8b85c241fff3a9353c06320226e84e',1,'Metronet']]],
-  ['properlyinitialised',['properlyInitialised',['../class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0',1,'Exporter::properlyInitialised()'],['../class_metronet.html#a3d2adce29a947f162924279b766de645',1,'Metronet::properlyInitialised()'],['../class_station.html#a9ce626dd0599e3ea8107404a59c21e16',1,'Station::properlyInitialised()'],['../class_tram.html#ac2688f590e4db232b4f535c9bf959efb',1,'Tram::properlyInitialised()']]]
+  ['operator_3d',['operator=',['../class_metronet.html#a116ec9674637a45ff59cbb2cebb8dd21',1,'Metronet']]],
+  ['opstappen',['opstappen',['../class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c',1,'Tram']]],
+  ['opstappenafstappen',['opstappenAfstappen',['../class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a',1,'Metronet']]]
 ];

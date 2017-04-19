@@ -1,4 +1,4 @@
 <map id="MetronetOutputTest" name="MetronetOutputTest">
-<area shape="rect" id="node3" href="$class_exporter.html" title="Exporter base klasse die de output van gegevens behandelt. " alt="" coords="78,5,149,32"/>
-<area shape="rect" id="node4" href="$class_metronet.html" title="Metronet klasse die XML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhou..." alt="" coords="257,5,330,32"/>
+<area shape="rect" id="node3" href="$class_exporter.html" title="Exporter base klasse die de output van gegevens behandelt. " alt="" coords="80,5,157,33"/>
+<area shape="rect" id="node4" href="$class_metronet.html" title="Metronet klasse die XML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhou..." alt="" coords="270,5,349,33"/>
 </map>

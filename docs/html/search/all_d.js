@@ -8,6 +8,5 @@ var searchData=
   ['tests_5fsyntax',['TESTS_SYNTAX',['../_metronet_utils_8h.html#a158b0892e81103bf5b06b28527b6b178',1,'MetronetUtils.h']]],
   ['tram',['Tram',['../class_tram.html',1,'Tram'],['../class_tram.html#aad83b2e7e79d57528691bf317ab0e1ef',1,'Tram::Tram()'],['../class_tram.html#afef6559a85225dc0b8a9445d6d16cbbb',1,'Tram::Tram(int zit, int snel, int sp, std::string beginS)']]],
   ['tram_2ecpp',['Tram.cpp',['../_tram_8cpp.html',1,'']]],
-  ['tram_2eh',['Tram.h',['../_tram_8h.html',1,'']]],
-  ['tram_5ftest_2ecpp',['Tram_test.cpp',['../_tram__test_8cpp.html',1,'']]]
+  ['tram_2eh',['Tram.h',['../_tram_8h.html',1,'']]]
 ];

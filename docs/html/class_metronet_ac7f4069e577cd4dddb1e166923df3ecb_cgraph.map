@@ -1,5 +1,6 @@
 <map id="Metronet::addStation" name="Metronet::addStation">
-<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="196,5,379,32"/>
-<area shape="rect" id="node3" href="$class_station.html#a9ce626dd0599e3ea8107404a59c21e16" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="427,81,599,108"/>
-<area shape="rect" id="node4" href="$class_station.html#aea6c31c39a5e1eb4c30337e7ce489e69" title="Geef de naam terug van het station. " alt="" coords="225,107,349,133"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="424,5,623,33"/>
+<area shape="rect" id="node3" href="$class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="671,109,857,137"/>
+<area shape="rect" id="node4" href="$class_station.html#a6d4234bcd1027dc83c7984e207e8bd74" title="Geef de naam terug van het station. " alt="" coords="456,109,591,137"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="209,57,376,85"/>
 </map>

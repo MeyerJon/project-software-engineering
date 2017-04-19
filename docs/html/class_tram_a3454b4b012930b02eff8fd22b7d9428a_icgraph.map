@@ -1,8 +1,8 @@
 <map id="Tram::setPassagiers" name="Tram::setPassagiers">
-<area shape="rect" id="node2" href="$class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="197,5,315,32"/>
-<area shape="rect" id="node7" href="$class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="196,56,316,83"/>
-<area shape="rect" id="node3" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="364,5,564,32"/>
-<area shape="rect" id="node6" href="$_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="429,56,499,83"/>
-<area shape="rect" id="node4" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="612,5,749,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="797,5,848,32"/>
+<area shape="rect" id="node2" href="$class_tram.html#a81186910caa5212b4a87eec84cd10a46" title="Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal &#45; afstappende passagiers) ..." alt="" coords="210,5,337,33"/>
+<area shape="rect" id="node7" href="$class_tram.html#aaeb00c535a6854f85dcc42cdff97ad0c" title="Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) ..." alt="" coords="208,57,339,85"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="387,5,605,33"/>
+<area shape="rect" id="node6" href="$_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="457,57,535,85"/>
+<area shape="rect" id="node4" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="653,5,804,33"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="852,5,905,33"/>
 </map>

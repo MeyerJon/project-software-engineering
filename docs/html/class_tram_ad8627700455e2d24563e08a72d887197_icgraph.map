@@ -1,6 +1,6 @@
 <map id="Tram::setHuidigStation" name="Tram::setHuidigStation">
-<area shape="rect" id="node2" href="$class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="209,31,352,57"/>
-<area shape="rect" id="node3" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="400,5,537,32"/>
-<area shape="rect" id="node5" href="$_metronet_domain_test_8cpp.html#a739a7fda4e9dacf43843e7f31e188df7" title="TEST_F" alt="" coords="433,56,504,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="585,5,636,32"/>
+<area shape="rect" id="node2" href="$class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="223,32,379,60"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="427,5,577,33"/>
+<area shape="rect" id="node5" href="$_metronet_domain_test_8cpp.html#a739a7fda4e9dacf43843e7f31e188df7" title="TEST_F" alt="" coords="463,57,541,85"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="625,5,679,33"/>
 </map>

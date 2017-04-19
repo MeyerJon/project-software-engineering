@@ -1,12 +1,15 @@
 <map id="Exporter::properlyInitialised" name="Exporter::properlyInitialised">
-<area shape="rect" id="node2" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="253,81,360,108"/>
-<area shape="rect" id="node9" href="$class_exporter.html#ae477714f462d70cfc5b3970f91fcc4ed" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="251,132,362,159"/>
-<area shape="rect" id="node10" href="$class_exporter_h_t_m_l.html#ace2649c240282289d4cb3bfbd19e427c" title="Stuur de output string naar de output stream. " alt="" coords="235,183,378,209"/>
-<area shape="rect" id="node11" href="$class_exporter_h_t_m_l.html#aefa1c658f3c3c55bd7725bdad09629b3" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="233,233,380,260"/>
-<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="709,5,822,32"/>
-<area shape="rect" id="node5" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="676,56,855,83"/>
-<area shape="rect" id="node6" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="449,107,607,133"/>
-<area shape="rect" id="node7" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="428,157,628,184"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="903,81,953,108"/>
-<area shape="rect" id="node8" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="697,157,834,184"/>
+<area shape="rect" id="node2" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="295,109,411,137"/>
+<area shape="rect" id="node9" href="$_metronet_domain_test_8cpp.html#a816397b193861c394edc910ce876a68d" title="TEST_F" alt="" coords="576,213,653,241"/>
+<area shape="rect" id="node10" href="$class_exporter.html#ae477714f462d70cfc5b3970f91fcc4ed" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="294,213,413,241"/>
+<area shape="rect" id="node11" href="$class_exporter.html#afba4e69e23ad018c26b21c0f4b85ef12" title="Getter van member documentStarted. " alt="" coords="249,265,457,293"/>
+<area shape="rect" id="node12" href="$class_exporter_h_t_m_l.html#ace2649c240282289d4cb3bfbd19e427c" title="Stuur de output string naar de output stream. " alt="" coords="275,317,431,345"/>
+<area shape="rect" id="node14" href="$class_exporter_h_t_m_l.html#aefa1c658f3c3c55bd7725bdad09629b3" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="274,369,433,397"/>
+<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="807,5,929,33"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="772,57,964,85"/>
+<area shape="rect" id="node6" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="782,109,954,137"/>
+<area shape="rect" id="node7" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="505,161,724,189"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1012,84,1065,112"/>
+<area shape="rect" id="node8" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="793,161,943,189"/>
+<area shape="rect" id="node13" href="$_metronet_domain_test_8cpp.html#a4f7e581715bfe6d5bb3c884dde40121b" title="TEST_F" alt="" coords="576,343,653,371"/>
 </map>

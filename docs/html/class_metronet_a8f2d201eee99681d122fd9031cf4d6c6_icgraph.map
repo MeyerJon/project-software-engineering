@@ -1,0 +1,5 @@
+<map id="Metronet::bevatStation" name="Metronet::bevatStation">
+<area shape="rect" id="node2" href="$class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="220,5,376,33"/>
+<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="424,5,547,33"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="595,5,648,33"/>
+</map>

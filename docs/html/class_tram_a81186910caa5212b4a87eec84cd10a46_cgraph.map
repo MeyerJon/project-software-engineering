@@ -1,4 +1,5 @@
 <map id="Tram::afstappen" name="Tram::afstappen">
-<area shape="rect" id="node2" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="361,5,523,32"/>
-<area shape="rect" id="node3" href="$class_tram.html#a3454b4b012930b02eff8fd22b7d9428a" title="Past het aantal passagiers aan. " alt="" coords="171,31,313,57"/>
+<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="585,29,760,57"/>
+<area shape="rect" id="node3" href="$class_tram.html#a3454b4b012930b02eff8fd22b7d9428a" title="Past het aantal passagiers aan. " alt="" coords="180,31,335,59"/>
+<area shape="rect" id="node4" href="$class_tram.html#a8e9e449f0032f0f439c196e0980a891e" title="Geef de passagiers terug van de tram. " alt="" coords="383,81,537,109"/>
 </map>

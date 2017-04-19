@@ -15,39 +15,39 @@ Station \- \fBStation\fP klasse die een STATION element uit een XML-bestand repr
 .ti -1c
 .RI "\fBStation\fP ()"
 .br
-.RI "De lege constructor van de klasse \fBStation\fP\&. "
+.RI "\fIDe lege constructor van de klasse \fBStation\fP\&. \fP"
 .ti -1c
 .RI "\fBStation\fP (std::string n, std::string vor, std::string volg, int sp, int op, int af)"
 .br
-.RI "De default constructor van de klasse \fBStation\fP\&. "
+.RI "\fIDe default constructor van de klasse \fBStation\fP\&. \fP"
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const"
+.RI "bool \fBproperlyInitialised\fP () const "
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
-.RI "std::string \fBgetNaam\fP () const"
+.RI "std::string \fBgetNaam\fP () const "
 .br
-.RI "Geef de naam terug van het station\&. "
+.RI "\fIGeef de naam terug van het station\&. \fP"
 .ti -1c
-.RI "std::string \fBgetVorige\fP () const"
+.RI "std::string \fBgetVorige\fP () const "
 .br
-.RI "Geef het vorig station terug\&. "
+.RI "\fIGeef het vorig station terug\&. \fP"
 .ti -1c
-.RI "std::string \fBgetVolgende\fP () const"
+.RI "std::string \fBgetVolgende\fP () const "
 .br
-.RI "Geef het volgende station\&. "
+.RI "\fIGeef het volgende station\&. \fP"
 .ti -1c
-.RI "int \fBgetSpoor\fP () const"
+.RI "int \fBgetSpoor\fP () const "
 .br
-.RI "Geef het spoor terug\&. "
+.RI "\fIGeef het spoor terug\&. \fP"
 .ti -1c
-.RI "int \fBgetOpstappen\fP () const"
+.RI "int \fBgetOpstappen\fP () const "
 .br
-.RI "Geef het aantal opstappende mensen terug\&. "
+.RI "\fIGeef het aantal opstappende mensen terug\&. \fP"
 .ti -1c
-.RI "int \fBgetAfstappen\fP () const"
+.RI "int \fBgetAfstappen\fP () const "
 .br
-.RI "Geef het afstappende mensen terug\&. "
+.RI "\fIGeef het afstappende mensen terug\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -58,6 +58,13 @@ Station \- \fBStation\fP klasse die een STATION element uit een XML-bestand repr
 
 .PP
 De lege constructor van de klasse \fBStation\fP\&. 
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Station is niet in de juiste staat geëindigd na aanroep van de constructor\&.'); 
+.RE
+.PP
+
 .SS "Station::Station (std::string n, std::string vor, std::string volg, int sp, int op, int af)"
 
 .PP
@@ -76,6 +83,11 @@ De default constructor van de klasse \fBStation\fP\&.
 \fIop\fP Het aantal opstappende passagiers 
 .br
 \fIaf\fP Het aantal afstappende passgiers 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Station is niet in de juiste staat geëindigd na aanroep van de constructor\&.'); 
 .RE
 .PP
 

@@ -1,6 +1,6 @@
 <map id="TEST_F" name="TEST_F">
-<area shape="rect" id="node2" href="$class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="363,57,543,84"/>
-<area shape="rect" id="node3" href="$class_exporter.html#a3ef5b88b982577090f4960fabae518c1" title="Getter van member documentStarted. " alt="" coords="124,32,315,59"/>
-<area shape="rect" id="node4" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="166,83,273,109"/>
-<area shape="rect" id="node5" href="$class_exporter.html#ae477714f462d70cfc5b3970f91fcc4ed" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="164,133,275,160"/>
+<area shape="rect" id="node2" href="$class_exporter.html#af01d2a6c2f54329b1867a19537e11a34" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="387,61,583,89"/>
+<area shape="rect" id="node3" href="$class_exporter.html#afba4e69e23ad018c26b21c0f4b85ef12" title="Getter van member documentStarted. " alt="" coords="131,34,339,62"/>
+<area shape="rect" id="node4" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="177,86,293,114"/>
+<area shape="rect" id="node5" href="$class_exporter.html#ae477714f462d70cfc5b3970f91fcc4ed" title="Stuurt de nodige informatie naar de output stream om het document correct af te sluiten. " alt="" coords="175,138,294,166"/>
 </map>

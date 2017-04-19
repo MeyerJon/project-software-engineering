@@ -1,0 +1,5 @@
+<map id="Metronet::bevatSpoor" name="Metronet::bevatSpoor">
+<area shape="rect" id="node2" href="$class_metronet.html#a0422381a8d7f32a915e0ad966af43627" title="Voegt spoor toe aan metronet. " alt="" coords="215,5,365,33"/>
+<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="413,5,536,33"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="584,5,637,33"/>
+</map>

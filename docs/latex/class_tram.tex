@@ -16,19 +16,19 @@
 \begin{DoxyCompactList}\small\item\em De lege constructor van de klasse \hyperlink{class_tram}{Tram}. \end{DoxyCompactList}\item 
 \hyperlink{class_tram_afef6559a85225dc0b8a9445d6d16cbbb}{Tram} (int zit, int snel, int sp, std\+::string beginS)
 \begin{DoxyCompactList}\small\item\em De default constructor van de klasse \hyperlink{class_tram}{Tram}. \end{DoxyCompactList}\item 
-bool \hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised} () const
+bool \hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised} () const 
 \begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
-int \hyperlink{class_tram_abcb1ce0d10e394fce8a99b460e5104de}{get\+Zitplaatsen} () const
+int \hyperlink{class_tram_aa366e37291186d6cfd402aa7b6cfec2d}{get\+Zitplaatsen} () const 
 \begin{DoxyCompactList}\small\item\em Geef de zitplaatsen terug van de tram. \end{DoxyCompactList}\item 
-int \hyperlink{class_tram_a678ba2cd0c6ab76e966947944f599d56}{get\+Passagiers} () const
+int \hyperlink{class_tram_a8e9e449f0032f0f439c196e0980a891e}{get\+Passagiers} () const 
 \begin{DoxyCompactList}\small\item\em Geef de passagiers terug van de tram. \end{DoxyCompactList}\item 
-int \hyperlink{class_tram_aa8bcd980469801cb8524f170006f666c}{get\+Snelheid} () const
+int \hyperlink{class_tram_a40a12ae66cdc8965fc73d548dd038e4c}{get\+Snelheid} () const 
 \begin{DoxyCompactList}\small\item\em Geef de snelheid terug van de tram. \end{DoxyCompactList}\item 
-int \hyperlink{class_tram_a46c37aab218c334dac8b5340647f53ab}{get\+Spoor} () const
+int \hyperlink{class_tram_a52655f991ffb58a8ab3557fd881a6f58}{get\+Spoor} () const 
 \begin{DoxyCompactList}\small\item\em Geef het spoor terug. \end{DoxyCompactList}\item 
-std\+::string \hyperlink{class_tram_ae4a7cf6313452140ed54d219d1f6afba}{get\+Begin\+Station} () const
+std\+::string \hyperlink{class_tram_aba7b84414cd60d013ac1db3f3403497d}{get\+Begin\+Station} () const 
 \begin{DoxyCompactList}\small\item\em Geef het beginstation terug. \end{DoxyCompactList}\item 
-std\+::string \hyperlink{class_tram_ae1d03c1fb6e0f5f97c57d35fe10fa8dd}{get\+Huidig\+Station} () const
+std\+::string \hyperlink{class_tram_ae7bc337a42b2d839b4da5f648b781e79}{get\+Huidig\+Station} () const 
 \begin{DoxyCompactList}\small\item\em Geef het huidig station. \end{DoxyCompactList}\item 
 void \hyperlink{class_tram_ad8627700455e2d24563e08a72d887197}{set\+Huidig\+Station} (std\+::string station)
 \begin{DoxyCompactList}\small\item\em Past het huidige station aan. \end{DoxyCompactList}\item 
@@ -46,22 +46,42 @@ bool \hyperlink{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c}{opstappen} (int op
 \hyperlink{class_tram}{Tram} klasse die een T\+R\+AM element uit een X\+M\+L-\/bestand representeert. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_tram_aad83b2e7e79d57528691bf317ab0e1ef}\label{class_tram_aad83b2e7e79d57528691bf317ab0e1ef}} 
 \index{Tram@{Tram}!Tram@{Tram}}
 \index{Tram@{Tram}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{Tram()}{Tram()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Tram\+::\+Tram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{Tram()}{Tram()}}]{\setlength{\rightskip}{0pt plus 5cm}Tram\+::\+Tram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_aad83b2e7e79d57528691bf317ab0e1ef}{}\label{class_tram_aad83b2e7e79d57528691bf317ab0e1ef}
 
 
 De lege constructor van de klasse \hyperlink{class_tram}{Tram}. 
 
-\mbox{\Hypertarget{class_tram_afef6559a85225dc0b8a9445d6d16cbbb}\label{class_tram_afef6559a85225dc0b8a9445d6d16cbbb}} 
-\index{Tram@{Tram}!Tram@{Tram}}
-\index{Tram@{Tram}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{Tram()}{Tram()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Tram\+::\+Tram (\begin{DoxyParamCaption}\item[{int}]{zit,  }\item[{int}]{snel,  }\item[{int}]{sp,  }\item[{std\+::string}]{beginS }\end{DoxyParamCaption})}
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.\char`\"{}); 
+\end{DoxyPostcond}
 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_tram_aad83b2e7e79d57528691bf317ab0e1ef_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Tram@{Tram}!Tram@{Tram}}
+\index{Tram@{Tram}!Tram@{Tram}}
+\subsubsection[{\texorpdfstring{Tram(int zit, int snel, int sp, std\+::string begin\+S)}{Tram(int zit, int snel, int sp, std::string beginS)}}]{\setlength{\rightskip}{0pt plus 5cm}Tram\+::\+Tram (
+\begin{DoxyParamCaption}
+\item[{int}]{zit, }
+\item[{int}]{snel, }
+\item[{int}]{sp, }
+\item[{std\+::string}]{beginS}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_afef6559a85225dc0b8a9445d6d16cbbb}{}\label{class_tram_afef6559a85225dc0b8a9445d6d16cbbb}
 
 
 De default constructor van de klasse \hyperlink{class_tram}{Tram}. 
@@ -77,15 +97,31 @@ De default constructor van de klasse \hyperlink{class_tram}{Tram}.
 {\em beginS} & Het begin station \\
 \hline
 \end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_tram_afef6559a85225dc0b8a9445d6d16cbbb_cgraph}
+\end{center}
+\end{figure}
+
+
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_tram_a81186910caa5212b4a87eec84cd10a46}\label{class_tram_a81186910caa5212b4a87eec84cd10a46}} 
 \index{Tram@{Tram}!afstappen@{afstappen}}
 \index{afstappen@{afstappen}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{afstappen()}{afstappen()}}
-{\footnotesize\ttfamily bool Tram\+::afstappen (\begin{DoxyParamCaption}\item[{int}]{afstappen }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{afstappen(int afstappen)}{afstappen(int afstappen)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Tram\+::afstappen (
+\begin{DoxyParamCaption}
+\item[{int}]{afstappen}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_a81186910caa5212b4a87eec84cd10a46}{}\label{class_tram_a81186910caa5212b4a87eec84cd10a46}
 
 
 Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal -\/ afstappende passagiers) 
@@ -99,30 +135,41 @@ Emuleert afstappen van passagiers. (Nieuw huidig aantal = huidig aantal -\/ afst
 boolean Of er meer passagiers afstapten dan mogelijk. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van afstappen.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van afstappen.\char`\"{}); 
 
 R\+E\+Q\+U\+I\+RE(afstappen $>$= 0, \char`\"{}\+Afstappen kan geen negatieve waarde hebben bij aanroep van afstappen.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_a81186910caa5212b4a87eec84cd10a46_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_a81186910caa5212b4a87eec84cd10a46_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_ae4a7cf6313452140ed54d219d1f6afba}\label{class_tram_ae4a7cf6313452140ed54d219d1f6afba}} 
+
+
 \index{Tram@{Tram}!get\+Begin\+Station@{get\+Begin\+Station}}
 \index{get\+Begin\+Station@{get\+Begin\+Station}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{get\+Begin\+Station()}{getBeginStation()}}
-{\footnotesize\ttfamily std\+::string Tram\+::get\+Begin\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
+\subsubsection[{\texorpdfstring{get\+Begin\+Station() const }{getBeginStation() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Tram\+::get\+Begin\+Station (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tram_aba7b84414cd60d013ac1db3f3403497d}{}\label{class_tram_aba7b84414cd60d013ac1db3f3403497d}
 
 
 Geef het beginstation terug. 
@@ -131,28 +178,39 @@ Geef het beginstation terug.
 Het beginstation. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Begin\+Station.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Begin\+Station.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tram_ae4a7cf6313452140ed54d219d1f6afba_cgraph}
+\includegraphics[width=350pt]{class_tram_aba7b84414cd60d013ac1db3f3403497d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tram_ae4a7cf6313452140ed54d219d1f6afba_icgraph}
+\includegraphics[width=350pt]{class_tram_aba7b84414cd60d013ac1db3f3403497d_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_ae1d03c1fb6e0f5f97c57d35fe10fa8dd}\label{class_tram_ae1d03c1fb6e0f5f97c57d35fe10fa8dd}} 
+
+
 \index{Tram@{Tram}!get\+Huidig\+Station@{get\+Huidig\+Station}}
 \index{get\+Huidig\+Station@{get\+Huidig\+Station}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{get\+Huidig\+Station()}{getHuidigStation()}}
-{\footnotesize\ttfamily std\+::string Tram\+::get\+Huidig\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
+\subsubsection[{\texorpdfstring{get\+Huidig\+Station() const }{getHuidigStation() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Tram\+::get\+Huidig\+Station (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tram_ae7bc337a42b2d839b4da5f648b781e79}{}\label{class_tram_ae7bc337a42b2d839b4da5f648b781e79}
 
 
 Geef het huidig station. 
@@ -161,28 +219,39 @@ Geef het huidig station.
 Het huidig station. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Huidig\+Station.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Huidig\+Station.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tram_ae1d03c1fb6e0f5f97c57d35fe10fa8dd_cgraph}
+\includegraphics[width=350pt]{class_tram_ae7bc337a42b2d839b4da5f648b781e79_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tram_ae1d03c1fb6e0f5f97c57d35fe10fa8dd_icgraph}
+\includegraphics[width=350pt]{class_tram_ae7bc337a42b2d839b4da5f648b781e79_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_a678ba2cd0c6ab76e966947944f599d56}\label{class_tram_a678ba2cd0c6ab76e966947944f599d56}} 
+
+
 \index{Tram@{Tram}!get\+Passagiers@{get\+Passagiers}}
 \index{get\+Passagiers@{get\+Passagiers}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{get\+Passagiers()}{getPassagiers()}}
-{\footnotesize\ttfamily int Tram\+::get\+Passagiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
+\subsubsection[{\texorpdfstring{get\+Passagiers() const }{getPassagiers() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Tram\+::get\+Passagiers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tram_a8e9e449f0032f0f439c196e0980a891e}{}\label{class_tram_a8e9e449f0032f0f439c196e0980a891e}
 
 
 Geef de passagiers terug van de tram. 
@@ -191,28 +260,39 @@ Geef de passagiers terug van de tram.
 De passagiers. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Passagiers.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Passagiers.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=344pt]{class_tram_a678ba2cd0c6ab76e966947944f599d56_cgraph}
+\includegraphics[width=350pt]{class_tram_a8e9e449f0032f0f439c196e0980a891e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=276pt]{class_tram_a678ba2cd0c6ab76e966947944f599d56_icgraph}
+\includegraphics[width=350pt]{class_tram_a8e9e449f0032f0f439c196e0980a891e_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_aa8bcd980469801cb8524f170006f666c}\label{class_tram_aa8bcd980469801cb8524f170006f666c}} 
+
+
 \index{Tram@{Tram}!get\+Snelheid@{get\+Snelheid}}
 \index{get\+Snelheid@{get\+Snelheid}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{get\+Snelheid()}{getSnelheid()}}
-{\footnotesize\ttfamily int Tram\+::get\+Snelheid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
+\subsubsection[{\texorpdfstring{get\+Snelheid() const }{getSnelheid() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Tram\+::get\+Snelheid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tram_a40a12ae66cdc8965fc73d548dd038e4c}{}\label{class_tram_a40a12ae66cdc8965fc73d548dd038e4c}
 
 
 Geef de snelheid terug van de tram. 
@@ -221,28 +301,39 @@ Geef de snelheid terug van de tram.
 De snelheid. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Snelheid.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Snelheid.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{class_tram_aa8bcd980469801cb8524f170006f666c_cgraph}
+\includegraphics[width=350pt]{class_tram_a40a12ae66cdc8965fc73d548dd038e4c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=265pt]{class_tram_aa8bcd980469801cb8524f170006f666c_icgraph}
+\includegraphics[width=279pt]{class_tram_a40a12ae66cdc8965fc73d548dd038e4c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_a46c37aab218c334dac8b5340647f53ab}\label{class_tram_a46c37aab218c334dac8b5340647f53ab}} 
+
+
 \index{Tram@{Tram}!get\+Spoor@{get\+Spoor}}
 \index{get\+Spoor@{get\+Spoor}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{get\+Spoor()}{getSpoor()}}
-{\footnotesize\ttfamily int Tram\+::get\+Spoor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
+\subsubsection[{\texorpdfstring{get\+Spoor() const }{getSpoor() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Tram\+::get\+Spoor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tram_a52655f991ffb58a8ab3557fd881a6f58}{}\label{class_tram_a52655f991ffb58a8ab3557fd881a6f58}
 
 
 Geef het spoor terug. 
@@ -251,28 +342,39 @@ Geef het spoor terug.
 Het spoor. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Spoor.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Spoor.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{class_tram_a46c37aab218c334dac8b5340647f53ab_cgraph}
+\includegraphics[width=339pt]{class_tram_a52655f991ffb58a8ab3557fd881a6f58_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tram_a46c37aab218c334dac8b5340647f53ab_icgraph}
+\includegraphics[width=350pt]{class_tram_a52655f991ffb58a8ab3557fd881a6f58_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_abcb1ce0d10e394fce8a99b460e5104de}\label{class_tram_abcb1ce0d10e394fce8a99b460e5104de}} 
+
+
 \index{Tram@{Tram}!get\+Zitplaatsen@{get\+Zitplaatsen}}
 \index{get\+Zitplaatsen@{get\+Zitplaatsen}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{get\+Zitplaatsen()}{getZitplaatsen()}}
-{\footnotesize\ttfamily int Tram\+::get\+Zitplaatsen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
+\subsubsection[{\texorpdfstring{get\+Zitplaatsen() const }{getZitplaatsen() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Tram\+::get\+Zitplaatsen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tram_aa366e37291186d6cfd402aa7b6cfec2d}{}\label{class_tram_aa366e37291186d6cfd402aa7b6cfec2d}
 
 
 Geef de zitplaatsen terug van de tram. 
@@ -281,28 +383,39 @@ Geef de zitplaatsen terug van de tram.
 De zitplaatsen. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Zitplaatsen.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Zitplaatsen.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=344pt]{class_tram_abcb1ce0d10e394fce8a99b460e5104de_cgraph}
+\includegraphics[width=350pt]{class_tram_aa366e37291186d6cfd402aa7b6cfec2d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=276pt]{class_tram_abcb1ce0d10e394fce8a99b460e5104de_icgraph}
+\includegraphics[width=290pt]{class_tram_aa366e37291186d6cfd402aa7b6cfec2d_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c}\label{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c}} 
+
+
 \index{Tram@{Tram}!opstappen@{opstappen}}
 \index{opstappen@{opstappen}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{opstappen()}{opstappen()}}
-{\footnotesize\ttfamily bool Tram\+::opstappen (\begin{DoxyParamCaption}\item[{int}]{opstappen }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{opstappen(int opstappen)}{opstappen(int opstappen)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Tram\+::opstappen (
+\begin{DoxyParamCaption}
+\item[{int}]{opstappen}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c}{}\label{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c}
 
 
 Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) 
@@ -316,30 +429,41 @@ Emuleert opstappen van passagiers. (Nieuw huidig aantal = huidig aantal + opstap
 boolean Of er meer passigiers opstapten dan mogelijk. 
 \end{DoxyReturn}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van opstappen.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van opstappen.\char`\"{}); 
 
 R\+E\+Q\+U\+I\+RE(opstappen $>$= 0, \char`\"{}\+Opstappen kan geen negatieve waarde hebben bij aanroep van opstappen.\char`\"{}); 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_aaeb00c535a6854f85dcc42cdff97ad0c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_ac2688f590e4db232b4f535c9bf959efb}\label{class_tram_ac2688f590e4db232b4f535c9bf959efb}} 
+
+
 \index{Tram@{Tram}!properly\+Initialised@{properly\+Initialised}}
 \index{properly\+Initialised@{properly\+Initialised}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{properly\+Initialised()}{properlyInitialised()}}
-{\footnotesize\ttfamily bool Tram\+::properly\+Initialised (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
+\subsubsection[{\texorpdfstring{properly\+Initialised() const }{properlyInitialised() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Tram\+::properly\+Initialised (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tram_a98992eff0453f54fbe64e1f1064169c7}{}\label{class_tram_a98992eff0453f54fbe64e1f1064169c7}
 
 
 Kijk na of de constructor in de juiste staat geeindigd is. 
@@ -347,19 +471,25 @@ Kijk na of de constructor in de juiste staat geeindigd is.
 \begin{DoxyReturn}{Returns}
 Boolean die aangeeft of het object juist geinitialiseerd is. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_tram_ac2688f590e4db232b4f535c9bf959efb_icgraph}
+\includegraphics[width=350pt]{class_tram_a98992eff0453f54fbe64e1f1064169c7_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_ad8627700455e2d24563e08a72d887197}\label{class_tram_ad8627700455e2d24563e08a72d887197}} 
+
+
 \index{Tram@{Tram}!set\+Huidig\+Station@{set\+Huidig\+Station}}
 \index{set\+Huidig\+Station@{set\+Huidig\+Station}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{set\+Huidig\+Station()}{setHuidigStation()}}
-{\footnotesize\ttfamily void Tram\+::set\+Huidig\+Station (\begin{DoxyParamCaption}\item[{std\+::string}]{station }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{set\+Huidig\+Station(std\+::string station)}{setHuidigStation(std::string station)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tram\+::set\+Huidig\+Station (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{station}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_ad8627700455e2d24563e08a72d887197}{}\label{class_tram_ad8627700455e2d24563e08a72d887197}
 
 
 Past het huidige station aan. 
@@ -370,31 +500,42 @@ Past het huidige station aan.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Huidig\+Station.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van get\+Huidig\+Station.\char`\"{}); 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-E\+N\+S\+U\+RE((huidig\+Station == station), \char`\"{}huidig\+Station is niet aangepast door set\+Huidig\+Station.\char`\"{}); 
+E\+N\+S\+U\+RE((\hyperlink{class_tram_ae7bc337a42b2d839b4da5f648b781e79}{get\+Huidig\+Station()} == station), \char`\"{}huidig\+Station is niet aangepast door set\+Huidig\+Station.\char`\"{}); 
 \end{DoxyPostcond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_ad8627700455e2d24563e08a72d887197_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_ad8627700455e2d24563e08a72d887197_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_a3454b4b012930b02eff8fd22b7d9428a}\label{class_tram_a3454b4b012930b02eff8fd22b7d9428a}} 
+
+
 \index{Tram@{Tram}!set\+Passagiers@{set\+Passagiers}}
 \index{set\+Passagiers@{set\+Passagiers}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{set\+Passagiers()}{setPassagiers()}}
-{\footnotesize\ttfamily void Tram\+::set\+Passagiers (\begin{DoxyParamCaption}\item[{int}]{pas }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{set\+Passagiers(int pas)}{setPassagiers(int pas)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tram\+::set\+Passagiers (
+\begin{DoxyParamCaption}
+\item[{int}]{pas}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_a3454b4b012930b02eff8fd22b7d9428a}{}\label{class_tram_a3454b4b012930b02eff8fd22b7d9428a}
 
 
 Past het aantal passagiers aan. 
@@ -405,51 +546,72 @@ Past het aantal passagiers aan.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van set\+Passagiers.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van set\+Passagiers.\char`\"{}); 
 
 R\+E\+Q\+U\+I\+RE(passagiers $>$= 0, \char`\"{}\+Aantal passagiers moet positief zijn.\char`\"{}); 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-E\+N\+S\+U\+RE((passagiers == pas), \char`\"{}\+Aantal passagiers niet aangepast bij aanroep van set\+Passagiers.\char`\"{}); 
+E\+N\+S\+U\+RE((\hyperlink{class_tram_a8e9e449f0032f0f439c196e0980a891e}{get\+Passagiers()} == pas), \char`\"{}\+Aantal passagiers niet aangepast bij aanroep van set\+Passagiers.\char`\"{}); 
 \end{DoxyPostcond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=344pt]{class_tram_a3454b4b012930b02eff8fd22b7d9428a_cgraph}
+\includegraphics[width=350pt]{class_tram_a3454b4b012930b02eff8fd22b7d9428a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_a3454b4b012930b02eff8fd22b7d9428a_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8}\label{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8}} 
+
+
 \index{Tram@{Tram}!verplaats\+Tram@{verplaats\+Tram}}
 \index{verplaats\+Tram@{verplaats\+Tram}!Tram@{Tram}}
-\subsubsection{\texorpdfstring{verplaats\+Tram()}{verplaatsTram()}}
-{\footnotesize\ttfamily void Tram\+::verplaats\+Tram (\begin{DoxyParamCaption}\item[{std\+::string}]{station,  }\item[{\hyperlink{class_exporter}{Exporter} $\ast$}]{exp,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{verplaats\+Tram(std\+::string station, Exporter $\ast$exp, std\+::ostream \&os)}{verplaatsTram(std::string station, Exporter *exp, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tram\+::verplaats\+Tram (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{station, }
+\item[{{\bf Exporter} $\ast$}]{exp, }
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8}{}\label{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8}
 
 
 Verplaatst een tram naar het opgegeven station. 
 
 \begin{DoxyPrecond}{Precondition}
-R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_ac2688f590e4db232b4f535c9bf959efb}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van verplaats\+Tram.\char`\"{}); 
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_tram_a98992eff0453f54fbe64e1f1064169c7}{properly\+Initialised()}, \char`\"{}\+Tram was niet geinitialiseerd bij de aanroep van verplaats\+Tram.\char`\"{}); 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-E\+N\+S\+U\+RE((huidig\+Station == station), \char`\"{}huidig\+Station is niet correct aangepast.\char`\"{}); 
+E\+N\+S\+U\+RE((\hyperlink{class_tram_ae7bc337a42b2d839b4da5f648b781e79}{get\+Huidig\+Station()} == station), \char`\"{}huidig\+Station is niet correct aangepast.\char`\"{}); 
 \end{DoxyPostcond}
-Here is the call graph for this function\+:\nopagebreak
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_tram_a8d55296c7ede4aa92c9b3a4b2a9495a8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -458,7 +620,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_tram_8h}{Tram.\+h}\item 
-/home/sergio/\+C\+Lion\+Projects/\+Soft\+Eng/src/\hyperlink{_tram_8cpp}{Tram.\+cpp}\end{DoxyCompactItemize}
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_tram_8h}{Tram.\+h}\item 
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_tram_8cpp}{Tram.\+cpp}\end{DoxyCompactItemize}

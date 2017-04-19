@@ -15,59 +15,59 @@ Tram \- \fBTram\fP klasse die een TRAM element uit een XML-bestand representeert
 .ti -1c
 .RI "\fBTram\fP ()"
 .br
-.RI "De lege constructor van de klasse \fBTram\fP\&. "
+.RI "\fIDe lege constructor van de klasse \fBTram\fP\&. \fP"
 .ti -1c
 .RI "\fBTram\fP (int zit, int snel, int sp, std::string beginS)"
 .br
-.RI "De default constructor van de klasse \fBTram\fP\&. "
+.RI "\fIDe default constructor van de klasse \fBTram\fP\&. \fP"
 .ti -1c
-.RI "bool \fBproperlyInitialised\fP () const"
+.RI "bool \fBproperlyInitialised\fP () const "
 .br
-.RI "Kijk na of de constructor in de juiste staat geeindigd is\&. "
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
-.RI "int \fBgetZitplaatsen\fP () const"
+.RI "int \fBgetZitplaatsen\fP () const "
 .br
-.RI "Geef de zitplaatsen terug van de tram\&. "
+.RI "\fIGeef de zitplaatsen terug van de tram\&. \fP"
 .ti -1c
-.RI "int \fBgetPassagiers\fP () const"
+.RI "int \fBgetPassagiers\fP () const "
 .br
-.RI "Geef de passagiers terug van de tram\&. "
+.RI "\fIGeef de passagiers terug van de tram\&. \fP"
 .ti -1c
-.RI "int \fBgetSnelheid\fP () const"
+.RI "int \fBgetSnelheid\fP () const "
 .br
-.RI "Geef de snelheid terug van de tram\&. "
+.RI "\fIGeef de snelheid terug van de tram\&. \fP"
 .ti -1c
-.RI "int \fBgetSpoor\fP () const"
+.RI "int \fBgetSpoor\fP () const "
 .br
-.RI "Geef het spoor terug\&. "
+.RI "\fIGeef het spoor terug\&. \fP"
 .ti -1c
-.RI "std::string \fBgetBeginStation\fP () const"
+.RI "std::string \fBgetBeginStation\fP () const "
 .br
-.RI "Geef het beginstation terug\&. "
+.RI "\fIGeef het beginstation terug\&. \fP"
 .ti -1c
-.RI "std::string \fBgetHuidigStation\fP () const"
+.RI "std::string \fBgetHuidigStation\fP () const "
 .br
-.RI "Geef het huidig station\&. "
+.RI "\fIGeef het huidig station\&. \fP"
 .ti -1c
 .RI "void \fBsetHuidigStation\fP (std::string station)"
 .br
-.RI "Past het huidige station aan\&. "
+.RI "\fIPast het huidige station aan\&. \fP"
 .ti -1c
 .RI "void \fBsetPassagiers\fP (int pas)"
 .br
-.RI "Past het aantal passagiers aan\&. "
+.RI "\fIPast het aantal passagiers aan\&. \fP"
 .ti -1c
 .RI "void \fBverplaatsTram\fP (std::string station, \fBExporter\fP *exp, std::ostream &os)"
 .br
-.RI "Verplaatst een tram naar het opgegeven station\&. "
+.RI "\fIVerplaatst een tram naar het opgegeven station\&. \fP"
 .ti -1c
 .RI "bool \fBafstappen\fP (int afstappen)"
 .br
-.RI "Emuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) "
+.RI "\fIEmuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) \fP"
 .ti -1c
 .RI "bool \fBopstappen\fP (int opstappen)"
 .br
-.RI "Emuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) "
+.RI "\fIEmuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -78,6 +78,13 @@ Tram \- \fBTram\fP klasse die een TRAM element uit een XML-bestand representeert
 
 .PP
 De lege constructor van de klasse \fBTram\fP\&. 
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Tram is niet in de juiste staat geëindigd na aanroep van de constuctor\&.'); 
+.RE
+.PP
+
 .SS "Tram::Tram (int zit, int snel, int sp, std::string beginS)"
 
 .PP
@@ -92,6 +99,11 @@ De default constructor van de klasse \fBTram\fP\&.
 \fIsp\fP Het spoornummer 
 .br
 \fIbeginS\fP Het begin station 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Tram is niet in de juiste staat geëindigd na aanroep van de constuctor\&.'); 
 .RE
 .PP
 
@@ -267,7 +279,7 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de
 .PP
 \fBPostcondition:\fP
 .RS 4
-ENSURE((huidigStation == station), 'huidigStation is niet aangepast door setHuidigStation\&.'); 
+ENSURE((\fBgetHuidigStation()\fP == station), 'huidigStation is niet aangepast door setHuidigStation\&.'); 
 .RE
 .PP
 
@@ -290,7 +302,7 @@ REQUIRE(passagiers >= 0, 'Aantal passagiers moet positief zijn\&.');
 .PP
 \fBPostcondition:\fP
 .RS 4
-ENSURE((passagiers == pas), 'Aantal passagiers niet aangepast bij aanroep van setPassagiers\&.'); 
+ENSURE((\fBgetPassagiers()\fP == pas), 'Aantal passagiers niet aangepast bij aanroep van setPassagiers\&.'); 
 .RE
 .PP
 
@@ -306,7 +318,7 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de
 .PP
 \fBPostcondition:\fP
 .RS 4
-ENSURE((huidigStation == station), 'huidigStation is niet correct aangepast\&.'); 
+ENSURE((\fBgetHuidigStation()\fP == station), 'huidigStation is niet correct aangepast\&.'); 
 .RE
 .PP
 

@@ -1,4 +1,5 @@
 <map id="Tram::verplaatsTram" name="Tram::verplaatsTram">
-<area shape="rect" id="node2" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="400,5,561,32"/>
-<area shape="rect" id="node3" href="$class_tram.html#ad8627700455e2d24563e08a72d887197" title="Past het huidige station aan. " alt="" coords="196,31,352,57"/>
+<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="645,25,820,53"/>
+<area shape="rect" id="node3" href="$class_tram.html#ad8627700455e2d24563e08a72d887197" title="Past het huidige station aan. " alt="" coords="209,27,379,55"/>
+<area shape="rect" id="node4" href="$class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="427,77,597,105"/>
 </map>
