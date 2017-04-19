@@ -9,19 +9,24 @@
 #define SRC_STATION_H_
 
 #include <iostream>
+#include <map>
+#include <vector>
 #include "DesignByContract.h"
 
 /**
  * \brief Station klasse die een STATION element uit een XML-bestand representeert
  */
+
+struct stationVerbinding{
+    std::string vorige;
+    std::string volgende;
+};
+
+
 class Station {
 private:
     std::string naam;
-    std::string vorige;
-    std::string volgende;
-    int spoor;
-    int opstappen;
-    int afstappen;
+    std::map<int, stationVerbinding> verbindingen;
     Station* initCheck;
 
 public:
@@ -34,20 +39,23 @@ public:
     /**
      * \brief De default constructor van de klasse Station
      * \param n De naam van het station
-     * \param vor Het vorig station
-     * \param volg Het volgend station
-     * \param sp Het spoornummer van het station
-     * \param op Het aantal opstappende passagiers
-     * \param af Het aantal afstappende passgiers
      * \post ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
-    Station(std::string n, std::string vor, std::string volg, int sp, int op, int af);
+    Station(std::string n, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations);
 
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.
      * \return Boolean die aangeeft of het object juist geinitialiseerd is.
      */
     bool properlyInitialised() const;
+
+    /**
+     * \brief Checkt of het station een spoor bevat.
+     * \param spoor Het spoor dat beschouwd moet worden.
+     * \return Een bool die weergeeft of het station het spoor bevat.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van bevatSpoor.");
+     */
+    bool bevatSpoor(int spoor) const;
 
     /**
      * \brief Geef de naam terug van het station.
@@ -57,39 +65,28 @@ public:
     std::string getNaam() const;
 
     /**
-     * \brief Geef het vorig station terug.
+     * \brief Geef het vorig station op een spoor.
      * \return Het vorig station.
      * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVorige.");
+     * \pre REQUIRE(bevatSpoor(spoor), "Station bevat spoor niet bij aanroep van getVorige.");
      */
-    std::string getVorige() const;
+    std::string getVorige(int spoor) const;
 
     /**
-     * \brief Geef het volgende station.
+     * \brief Geef het volgende station op een spoor.
      * \return Het volgende station.
      * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");
+     * \pre REQUIRE(bevatSpoor(spoor), "Station bevat spoor niet bij aanroep getVolgende.");
      */
-    std::string getVolgende() const;
+    std::string getVolgende(int spoor) const;
 
     /**
-     * \brief Geef het spoor terug.
-     * \return Het spoor.
-     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSpoor.");
+     * \brief Geef de sporen.
+     * \return De sporen.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSporen.");
      */
-    int getSpoor() const;
-
-    /**
-     * \brief Geef het aantal opstappende mensen terug.
-     * \return Een aantal opstappende mensen.
-     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getOpstappen.");
-     */
-    int getOpstappen() const;
-
-    /**
-     * \brief Geef het afstappende mensen terug.
-     * \return Een aantal afstappende mensen.
-     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getAfstappen.");
-     */
-    int getAfstappen() const;
+    std::vector<int> getSporen() const;
 };
+
 
 #endif /* SRC_STATION_H_ */

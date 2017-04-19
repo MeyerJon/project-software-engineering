@@ -12,9 +12,9 @@ Tram::Tram() {
     ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
 }
 
-Tram::Tram(int zit, int snel, int sp, std::string beginS) {
+Tram::Tram(int zit, int snel, int sp, int nr, std::string beginS) {
     zitplaatsen = zit;
-    passagiers = 0;
+    voertuignummer = nr;
     snelheid = snel;
     spoor = sp;
     beginStation = beginS;
@@ -33,7 +33,13 @@ int Tram::getZitplaatsen() const {
     return zitplaatsen;
 }
 
-int Tram::getPassagiers() const {
+int Tram::getBezettePlaatsen() const {
+    REQUIRE(this->properlyInitialised(),
+            "Tram was niet geinitialiseerd bij de aanroep van getBezetteZitplaatsen.");
+    return bezettePlaatsen;
+}
+
+std::vector<Passagier*> Tram::getPassagiers() const {
     REQUIRE(this->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van getPassagiers.");
     return passagiers;
@@ -63,17 +69,45 @@ std::string Tram::getHuidigStation() const {
     return huidigStation;
 }
 
+TramType Tram::getType() const {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
+    return type;
+}
+
+int Tram::getVoertuignummer() const {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getVoertuignummer.");
+    return voertuignummer;
+}
+
+bool Tram::bevatPassagier(Passagier *pas) const {
+    return (find(passagiers.begin(), passagiers.end(), pas) != passagiers.end());
+}
+
 void Tram::setHuidigStation(std::string station) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getHuidigStation.");
     huidigStation = station;
     ENSURE((getHuidigStation() == station), "huidigStation is niet aangepast door setHuidigStation.");
 }
 
-void Tram::setPassagiers(int pas){
-    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setPassagiers.");
-    REQUIRE(pas >= 0, "Aantal passagiers moet positief zijn.");
-    passagiers = pas;
-    ENSURE((getPassagiers() == pas), "Aantal passagiers niet aangepast bij aanroep van setPassagiers.");
+void Tram::addPassagier(Passagier* pas){
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addPassagiers.");
+    REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
+    passagiers.push_back(pas);
+    ENSURE(bevatPassagier(pas), "Passagiers niet aangepast bij aanroep van addPassagiers.");
+}
+
+void Tram::removePassagier(Passagier *pas) {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van removePassagiers.");
+    REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van removePassagier.");
+    REQUIRE(bevatPassagier(pas), "Passagier zat niet in tram bij de aanroep van removePassagier");
+    passagiers.erase(std::remove(passagiers.begin(), passagiers.end(), pas));
+    ENSURE(!bevatPassagier(pas), "Passagiers niet aangepast bij aanroep van addPassagiers.");
+}
+
+void Tram::setVoertuignummer(int n) {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setVoertuignummer.");
+    voertuignummer = n;
+    ENSURE((getVoertuignummer() == n), "Voertuignummer niet aangepast bij aanroep van setVoertuignummer.");
 }
 
 void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
@@ -88,26 +122,24 @@ void Tram::verplaatsTram(std::string station, Exporter* exp, std::ostream& os) {
            "huidigStation is niet correct aangepast.");
 }
 
-bool Tram::afstappen(int afstappen){
+bool Tram::afstappen(Passagier* pas){
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
-    REQUIRE(afstappen >= 0, "Afstappen kan geen negatieve waarde hebben bij aanroep van afstappen.");
-    if (afstappen <= passagiers) {
-        setPassagiers((passagiers-afstappen));
-        return true;
-    } else {
-        setPassagiers(0);
-        return false;
-    }
+    REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
+    removePassagier(pas);
+    pas->updateStatus();
+    //TODO: Output
 }
 
-bool Tram::opstappen(int opstappen) {
+bool Tram::opstappen(Passagier* pas) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
-    REQUIRE(opstappen >= 0, "Opstappen kan geen negatieve waarde hebben bij aanroep van opstappen.");
-    if (opstappen <= zitplaatsen - passagiers) {
-        setPassagiers((passagiers+opstappen));
-        return true;
-    } else {
-        setPassagiers(zitplaatsen);
-        return false;
+    REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
+    if(getBezettePlaatsen() + pas->getHoeveelheid() > getZitplaatsen()){
+        // TODO: Foutmelding etc
+    }
+    else{
+        // Passagier stapt op
+        addPassagier(pas);
+        pas->updateStatus();
+        // TODO: Output
     }
 }

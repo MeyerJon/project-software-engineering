@@ -51,7 +51,7 @@ bool Metronet::bevatTram(Tram *tram) {
     REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van bevatTram.");
     REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatTram.");
     bool out = true;
-    if(trams.count(tram->getSpoor()) == 0){
+    if(trams.count(tram->getVoertuignummer()) == 0){
         out = false;
     }
     return out;
@@ -93,7 +93,7 @@ void Metronet::addTram(Tram* tram) {
     REQUIRE(tram->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van addTram.");
 
-    trams[tram->getSpoor()] = tram;
+    trams[tram->getVoertuignummer()] = tram;
 
     ENSURE(this->bevatTram(tram),
             "Tram was niet toegevoegd bij de aanroep van addTram.");

@@ -18,6 +18,7 @@
 #include "tinystr.h"
 #include "Station.h"
 #include "Tram.h"
+#include "Passagier.h"
 #include "Exporter.h"
 
 #include "DesignByContract.h"
@@ -40,6 +41,7 @@ private:
     std::map<std::string, Station*> stations;
     std::map<int, Tram*> trams;
     std::vector<int> sporen;
+    std::map<std::string, Passagier*> passagiers;
     Metronet* initCheck;
 public:
     /**
