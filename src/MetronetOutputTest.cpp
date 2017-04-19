@@ -9,6 +9,7 @@ TEST_F(MetronetOutputTest, OutputLegalSystemsTxt) {
     std::string filename;
     for (int i = 1; i <= TESTS_LEGAL; i++) {
         exp = new ExporterTXT();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/LegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -18,7 +19,7 @@ TEST_F(MetronetOutputTest, OutputLegalSystemsTxt) {
         std::string expectedOutput = "testOutput/LegalSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
+        parser.setup(metronet, filename, output);
         if (metronet.checkConsistent(output)){
             metronet.printMetronet(output);
             metronet.rondrijden(output);
@@ -35,6 +36,7 @@ TEST_F(MetronetOutputTest, OutputIllegalSystemsTxt) {
     std::string filename;
     for (int i = 1; i <= TESTS_ILLEGAL; i++) {
         exp = new ExporterTXT();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/IllegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -44,7 +46,7 @@ TEST_F(MetronetOutputTest, OutputIllegalSystemsTxt) {
         std::string expectedOutput = "testOutput/IllegalSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
+        parser.setup(metronet, filename, output);
         if (metronet.checkConsistent(output)) {
             metronet.printMetronet(output);
             metronet.rondrijden(output);
@@ -61,6 +63,7 @@ TEST_F(MetronetOutputTest, OutputIncorrectSystemsTxt) {
     std::string filename;
     for (int i = 1; i <= TESTS_INCORRECT; i++) {
         exp = new ExporterTXT();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/IncorrectSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -70,7 +73,7 @@ TEST_F(MetronetOutputTest, OutputIncorrectSystemsTxt) {
         std::string expectedOutput = "testOutput/IncorrectSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
+        parser.setup(metronet, filename, output);
         if (metronet.checkConsistent(output)) {
             metronet.printMetronet(output);
             metronet.rondrijden(output);
@@ -87,6 +90,7 @@ TEST_F(MetronetOutputTest, OutputSyntaxErrorSystemsTxt) {
     std::string filename;
     for (int i = 1; i <= TESTS_SYNTAX; i++) {
         exp = new ExporterTXT();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/SyntaxErrorSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -96,7 +100,7 @@ TEST_F(MetronetOutputTest, OutputSyntaxErrorSystemsTxt) {
         std::string expectedOutput = "testOutput/SyntaxErrorSystemExpectedOutput" + std::to_string(i) + ".txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        if (metronet.setup(filename, output) != BadImport) {
+        if (parser.setup(metronet, filename, output) != BadImport) {
             if (metronet.checkConsistent(output)) {
                 metronet.printMetronet(output);
                 metronet.rondrijden(output);
@@ -114,6 +118,7 @@ TEST_F(MetronetOutputTest, OutputLegalSystemsHtml) {
     std::string filename;
     for (int i = 1; i <= TESTS_LEGAL; i++) {
         exp = new ExporterHTML();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/LegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -123,7 +128,7 @@ TEST_F(MetronetOutputTest, OutputLegalSystemsHtml) {
         std::string expectedOutput = "testOutput/LegalSystemExpectedOutput" + std::to_string(i) + ".html";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
+        parser.setup(metronet, filename, output);
         if (metronet.checkConsistent(output)){
             metronet.printMetronet(output);
             metronet.rondrijden(output);
@@ -140,6 +145,7 @@ TEST_F(MetronetOutputTest, OutputIllegalSystemsHtml) {
     std::string filename;
     for (int i = 1; i <= TESTS_ILLEGAL; i++) {
         exp = new ExporterHTML();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/IllegalSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -149,7 +155,7 @@ TEST_F(MetronetOutputTest, OutputIllegalSystemsHtml) {
         std::string expectedOutput = "testOutput/IllegalSystemExpectedOutput" + std::to_string(i) + ".html";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
+        parser.setup(metronet, filename, output);
         if (metronet.checkConsistent(output)) {
             metronet.printMetronet(output);
             metronet.rondrijden(output);
@@ -166,6 +172,7 @@ TEST_F(MetronetOutputTest, OutputIncorrectSystemsHtml) {
     std::string filename;
     for (int i = 1; i <= TESTS_INCORRECT; i++) {
         exp = new ExporterHTML();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/IncorrectSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -175,7 +182,7 @@ TEST_F(MetronetOutputTest, OutputIncorrectSystemsHtml) {
         std::string expectedOutput = "testOutput/IncorrectSystemExpectedOutput" + std::to_string(i) + ".html";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
+        parser.setup(metronet, filename, output);
         if (metronet.checkConsistent(output)) {
             metronet.printMetronet(output);
             metronet.rondrijden(output);
@@ -192,6 +199,7 @@ TEST_F(MetronetOutputTest, OutputSyntaxErrorSystemsHtml) {
     std::string filename;
     for (int i = 1; i <= TESTS_SYNTAX; i++) {
         exp = new ExporterHTML();
+        parser = Parser(exp);
         metronet = Metronet(exp);
         filename = "testInput/SyntaxErrorSystemInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
@@ -201,7 +209,7 @@ TEST_F(MetronetOutputTest, OutputSyntaxErrorSystemsHtml) {
         std::string expectedOutput = "testOutput/SyntaxErrorSystemExpectedOutput" + std::to_string(i) + ".html";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
-        metronet.setup(filename, output);
+        parser.setup(metronet, filename, output);
         output.close();
         ASSERT_TRUE(FileCompare(outputName, expectedOutput));
         metronet.reset();

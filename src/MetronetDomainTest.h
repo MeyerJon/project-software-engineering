@@ -13,6 +13,7 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
+#include "Parser.h"
 
 /**
  * \brief MetronetDomainTest klasse die domein tests behandelt
@@ -23,13 +24,14 @@ protected:
 
     virtual void SetUp() {
         exp = new ExporterCLI();
+        parser = Parser(exp);
         metronet = Metronet(exp);
     }
 
     virtual void TearDown() {
         delete exp;
     }
-
+    Parser parser;
     Metronet metronet;
     Exporter* exp;
 };

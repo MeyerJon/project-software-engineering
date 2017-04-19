@@ -12,6 +12,7 @@
 
 #include "MetronetUtils.h"
 #include "Metronet.h"
+#include "Parser.h"
 
 /**
  * \brief MetronetInputTest klasse die input tests behandelt
@@ -22,13 +23,14 @@ protected:
 
     virtual void SetUp() {
         exp = new ExporterCLI();
+        parser = Parser(exp);
         metronet = Metronet(exp);
     }
 
     virtual void TearDown() {
         delete exp;
     }
-
+    Parser parser;
     Metronet metronet;
     Exporter* exp;
 };

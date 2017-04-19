@@ -8,7 +8,7 @@
 
 TEST_F(MetronetDomainTest, ProperlyInitialised){
     std::ostream dummy(0);
-    metronet.setup("testInput/HappyDayInput.xml", dummy);
+    parser.setup(metronet, "testInput/HappyDayInput.xml", dummy);
 
     ASSERT_TRUE(metronet.properlyInitialised());
     for(auto p : metronet.getTrams()){
@@ -80,7 +80,7 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        importResult = metronet.setup(filename, dummy);
+        importResult = parser.setup(metronet, filename, dummy);
         ASSERT_EQ(importResult, Success);
         ASSERT_TRUE(metronet.checkConsistent(dummy));
         metronet.reset();
@@ -93,7 +93,7 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         ASSERT_TRUE(metronet.properlyInitialised());
 
         std::ostream dummy(0);
-        importResult = metronet.setup(filename, dummy);
+        importResult = parser.setup(metronet, filename, dummy);
         ASSERT_EQ(importResult, Success);
         ASSERT_FALSE(metronet.checkConsistent(dummy));
         metronet.reset();
@@ -189,7 +189,7 @@ TEST_F(MetronetDomainTest, addStation){
 
 TEST_F(MetronetDomainTest, rondrijden){
     std::ostream dummy(0);
-    metronet.setup("testInput/RondrijdenInput.xml", dummy);
+    parser.setup(metronet, "testInput/RondrijdenInput.xml", dummy);
 
     metronet.rondrijden(dummy);
 
