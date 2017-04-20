@@ -162,7 +162,46 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                 endResult = PartialImport;
                 continue;
             }
-
+        } else if (elemName == "PASSAGIER") {
+            std::string attrName;
+            std::string naam;
+            std::string beginS = "";
+            std::string eindS = "";
+            int hoeveelheid = -1;
+            try {
+                for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
+                    attrName = node->Value();
+                    TiXmlText* text;
+                    std::string t;
+                    if(node->FirstChild() != NULL) text = node->FirstChild()->ToText();
+                    else continue;
+                    if(text != NULL) t = text->Value();
+                    else continue;
+                    if(attrName == "naam") naam = t;
+                    else if(attrName == "beginstation") beginS = t;
+                    else if(attrName == "eindstation") eindS = t;
+                    else if(attrName == "hoeveelheid") hoeveelheid = stoi(t);
+                    else{
+                        std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
+                        endResult = PartialImport;
+                        exp->write(out, os);
+                    }
+                }
+                if(naam == "" or beginS == "" or eindS == "" or hoeveelheid == -1){
+                    std::string out = "ERROR: Tram mist een attribuut.\n";
+                    exp->write(out, os);
+                    endResult = PartialImport;
+                    continue;
+                }
+                Passagier* passagier = new Passagier(naam, beginS, eindS, hoeveelheid);
+                // metronet.addPassagier();
+            }
+            catch(std::invalid_argument& ex) {
+                std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Tram niet toegevoegd.\n";
+                exp->write(out, os);
+                endResult = PartialImport;
+                continue;
+            }
         } else {
             continue;
         }
