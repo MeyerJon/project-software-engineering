@@ -53,7 +53,7 @@ public:
      * \param beginS Het begin station
      * \post ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
      */
-    Tram(int zit, int snel, int sp, int nr, std::string beginS);
+    Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS);
 
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.

@@ -12,11 +12,14 @@ Tram::Tram() {
     ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
 }
 
-Tram::Tram(int zit, int snel, int sp, int nr, std::string beginS) {
+Tram::Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS) {
     zitplaatsen = zit;
     voertuignummer = nr;
     snelheid = snel;
     spoor = sp;
+    if (typeNaam == "Albatros") type = Albatros;
+    else if (typeNaam == "PCC") type = PCC;
+    // TODO: Error message
     beginStation = beginS;
     huidigStation = beginS;
     initCheck = this;
