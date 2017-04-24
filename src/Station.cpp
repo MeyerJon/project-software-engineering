@@ -6,15 +6,18 @@
  */
 
 #include "Station.h"
+#include "Tram.h"
 
 Station::Station() {
     initCheck = this;
     ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
-Station::Station(std::string n, std::map<int, std::string> vorigeStations,
+Station::Station(std::string n, std::string typeNaam, std::map<int, std::string> vorigeStations,
                  std::map<int, std::string> volgendeStations) {
     naam = n;
+    if (typeNaam == "Metrostation") type = Metrostation;
+    else if (typeNaam == "Halte") type = Halte;
     for(auto& p : vorigeStations){
         int spoor = p.first;
         std::string vorige = p.second;
@@ -43,6 +46,16 @@ std::string Station::getNaam() const {
     return naam;
 }
 
+std::string Station::getType() const {
+    REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType");
+    switch (type) {
+        case Metrostation :
+            return "Metrostation";
+        case Halte :
+            return "Halte";
+    }
+}
+
 std::string Station::getVolgende(int spoor) const {
     REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");
     REQUIRE(bevatSpoor(spoor), "Station bevat spoor niet bij aanroep van getVolgende.");
@@ -62,4 +75,14 @@ std::vector<int> Station::getSporen() const {
         sporen.push_back(p.first);
     }
     return sporen;
+}
+
+bool Station::isHalte() const {
+    REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte");
+    return type == Halte;
+}
+
+bool Station::isMetrostation() const {
+    REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
+    return type == Metrostation;
 }

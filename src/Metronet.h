@@ -96,7 +96,6 @@ public:
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van bevatTram.");
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatTram.");
      */
-
     bool bevatTram(Tram* tram);
 
     /**
@@ -105,18 +104,26 @@ public:
      * \return Boolean die aangeeft of het metronet de tram bevat.
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van bevatStation.");
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatStation.");
+     * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van bevatStation.");
      */
-
     bool bevatStation(Station* station);
 
     /**
      * \brief Kijkt na of het metronet de opgegeven tram bevat.
-     * \param tram De tram die moet gezocht worden.
+     * \param tram Het spoor dat moet gezocht worden.
      * \return Boolean die aangeeft of het metronet de tram bevat.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatSpoor.");
      */
-
     bool bevatSpoor(int spoor);
+
+    /**
+     * \brief Kijkt na of het metronet de opgegeven passagier bevat.
+     * \param pas De passagier die gezocht moet worden.
+     * \return Boolean die aangeeft of het metronet de passagier bevat.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+     * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+     */
+     bool bevatPassagier(Passagier* pas);
 
     /**
      * \brief Voegt station toe aan metronet.
@@ -145,6 +152,15 @@ public:
     void addSpoor(int spoor);
 
     /**
+     * \brief Voegt een passagier toe aan het metronet
+     * \param pas De passagier die toegevoegd zal worden
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
+     * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
+     * \post ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij aanroep van addPassagier.");
+     */
+    void addPassagier(Passagier* pas);
+
+    /**
      * \brief Kijkt na of het metronet consistent is.
      * \param exp De exporter die de output zal behandelen.
      * \param os De stream waar de output naar gestuurd zal worden.
@@ -170,14 +186,12 @@ public:
      */
     bool opstappenAfstappen(std::string station, std::ostream& os);
 
-
     /**
      * \brief Emuleert het rondrijden van trams
      * \param os De stream waar de output naar gestuurd moet worden
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
      * \post (voor elke tram) ENSURE(t->getHuidigStation() == t->getBeginStation(), "Tram niet geëindigd in beginstation na rondrijden.");
      */
-
     void rondrijden(std::ostream& os);
 
     /**

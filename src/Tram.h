@@ -112,10 +112,10 @@ public:
 
     /**
      * \brief Geef het type van de tram.
-     * \return Het type van de tram.
+     * \return Het type van de tram als string.
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
      */
-    TramType getType() const;
+    std::string getType() const;
 
     /**
      * \brief Geef het voertuignummer van de tram.
@@ -159,6 +159,20 @@ public:
      * \post ENSURE(!bevatPassagier(pas), "Passagiers niet aangepast bij aanroep van addPassagiers.");
     */
     void removePassagier(Passagier* pas);
+
+    /**
+     * \brief Geeft aan of de tram een Albatros is
+     * \return Boolean die aangeeft of de tram een Albatros is
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+     */
+    bool isAlbatros() const;
+
+    /**
+     * \brief Geeft aan of de tram een PCC is
+     * \return Boolean die aangeeft of de tram een PCC is
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+     */
+    bool isPCC() const;
 
     /**
      * \brief Past het voertuignummer aan.

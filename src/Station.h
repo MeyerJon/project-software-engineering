@@ -13,19 +13,23 @@
 #include <vector>
 #include "DesignByContract.h"
 
-/**
- * \brief Station klasse die een STATION element uit een XML-bestand representeert
- */
+enum StationType {
+    Metrostation,
+    Halte
+};
 
 struct stationVerbinding{
     std::string vorige;
     std::string volgende;
 };
 
-
+/**
+ * \brief Station klasse die een STATION element uit een XML-bestand representeert
+ */
 class Station {
 private:
     std::string naam;
+    StationType type;
     std::map<int, stationVerbinding> verbindingen;
     Station* initCheck;
 
@@ -39,9 +43,12 @@ public:
     /**
      * \brief De default constructor van de klasse Station
      * \param n De naam van het station
+     * \param typeNaam Het station type in string vorm, wordt omgezet naar StationType
+     * \param vorigeStations Map met als key het spoor en als value de vorige station
+     * \param volgendeStations Map met als key het spoor en als value de volgende station
      * \post ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
-    Station(std::string n, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations);
+    Station(std::string n, std::string typeNaam, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations);
 
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.
@@ -63,6 +70,12 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getNaam.");
      */
     std::string getNaam() const;
+    /**
+     * \brief Geeft het station type terug
+     * \return String "Albatros" of "PCC"
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType.");
+     */
+    std::string getType() const;
 
     /**
      * \brief Geef het vorig station op een spoor.
@@ -86,6 +99,20 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSporen.");
      */
     std::vector<int> getSporen() const;
+
+    /**
+     * \brief Geeft aan of het station een halte is
+     * \return Een bool die aangeeft of het station een halte is
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte.");
+     */
+    bool isHalte() const;
+
+    /**
+     * \brief Geeft aan of het station een metrostation is
+     * \return Een bool die aangeeft of het station een halte is
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
+     */
+    bool isMetrostation() const;
 };
 
 
