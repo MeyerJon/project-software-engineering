@@ -90,6 +90,13 @@ public:
     std::map<int, Tram*>& getTrams();
 
     /**
+     * \brief Geeft alle passagiers in het metronet terug.
+     * \return Map met alle passagiers in het metronet.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getPassagiers.");
+     */
+    std::map<std::string, Passagier*>& getPassagiers();
+
+    /**
      * \brief Kijkt na of het metronet de opgegeven tram bevat.
      * \param tram De tram die moet gezocht worden.
      * \return Boolean die aangeeft of het metronet de tram bevat.

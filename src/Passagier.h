@@ -76,6 +76,7 @@ public:
     */
     int getHoeveelheid() const;
 
+
     PassagierStatus getStatus() const;
 
     /**
