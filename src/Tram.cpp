@@ -13,6 +13,7 @@ Tram::Tram() {
 }
 
 Tram::Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS) {
+    omzet = 0;
     zitplaatsen = zit;
     voertuignummer = nr;
     snelheid = snel;
@@ -152,20 +153,21 @@ bool Tram::afstappen(Passagier* pas){
     removePassagier(pas);
     pas->updateVertrokken();
     setBezettePlaatsen(getBezettePlaatsen() - pas->getHoeveelheid());
-    //TODO: Output
+    return true;
 }
 
 bool Tram::opstappen(Passagier* pas) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
     if(getBezettePlaatsen() + pas->getHoeveelheid() > getZitplaatsen()){
-        // TODO: Foutmelding etc
+        return false;
     }
     else{
         // Passagier stapt op
         addPassagier(pas);
         pas->updateVertrokken();
         setBezettePlaatsen(getBezettePlaatsen() + pas->getHoeveelheid());
-        // TODO: Output
+        omzet += ticketPrijs * pas->getHoeveelheid();
+        return true;
     }
 }

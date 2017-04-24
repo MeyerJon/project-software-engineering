@@ -121,7 +121,6 @@ void Metronet::addSpoor(int spoor) {
             "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
 }
 
-
 void Metronet::addPassagier(Passagier *pas) {
     REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
