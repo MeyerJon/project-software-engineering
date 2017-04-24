@@ -90,6 +90,13 @@ public:
     std::map<int, Tram*>& getTrams();
 
     /**
+     * \brief Geeft alle passagiers in het metronet terug.
+     * \return Map met alle passagiers in het metronet.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getPassagiers.");
+     */
+    std::map<std::string, Passagier*>& getPassagiers();
+
+    /**
      * \brief Kijkt na of het metronet de opgegeven tram bevat.
      * \param tram De tram die moet gezocht worden.
      * \return Boolean die aangeeft of het metronet de tram bevat.
@@ -162,7 +169,6 @@ public:
 
     /**
      * \brief Kijkt na of het metronet consistent is.
-     * \param exp De exporter die de output zal behandelen.
      * \param os De stream waar de output naar gestuurd zal worden.
      * \return Boolean die aangeeft of het Metronet consistent is.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
@@ -171,7 +177,6 @@ public:
 
     /**
      * \brief Print het hele metronet.
-     * \param exp De exporter die gebruikt moet worden
      * \param os De stream waar de output naar gestuurd moet worden
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");
      */
@@ -180,6 +185,7 @@ public:
     /**
      * \brief Behandelt het opstappen en afstappen van passagiers.
      * \param tram De tram waar mensen opstappen en afstappen.
+     * \param os De stream waar de output naar gestuurd zal worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
      * \pre REQUIRE(trams.find(tram->getVoertuignummer()) != trams.end(), "Tram bestaat niet in het metronet.");
