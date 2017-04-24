@@ -40,10 +40,12 @@ bool Metronet::properlyInitialised() {
 }
 
 std::map<std::string, Station*> Metronet::getStations() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");
     return stations;
 }
 
 std::map<int, Tram*>& Metronet::getTrams() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");
     return trams;
 }
 
@@ -73,6 +75,7 @@ bool Metronet::bevatStation(Station *station) {
 }
 
 bool Metronet::bevatSpoor(int spoor) {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatSpoor.");
     bool out = true;
     if(find(sporen.begin(), sporen.end(), spoor) == sporen.end()){
         out = false;
@@ -227,16 +230,41 @@ bool Metronet::checkConsistent(std::ostream &os) {
 }
 
 void Metronet::printMetronet(std::ostream& os) {
-    std::string header = "\t ---METRONET---\n";
-    exp->write(header, os);
     // Print station, vorig en volgend, en het nummer en de capaciteit van het spoor
+    std::string stations_head = "--== STATIONS ==--\n";
+    exp->write(stations_head, os);
     for(auto s : stations){
         Station* station = s.second;
-        std::string out = "Station " + station->getNaam() + "\n";
-        out += "<- Station " + station->getVorige() + "\n";
-        out += "-> Station " + station->getVolgende() + "\n";
-        out += "Spoor " + std::to_string(station->getSpoor()) + ", ";
-        out += std::to_string(trams[station->getSpoor()]->getZitplaatsen()) + " zitplaatsen. \n";
+        std::string out = "-> Station " + station->getNaam() + "\n";
+        out += "wachtende passagiers:\n";
+        for (auto& p : passagiers) {
+            Passagier* passagier = p.second;
+            if (passagier->getBeginStation() == station->getNaam()) {
+                out += "* " + passagier->getNaam() + ", " + std::to_string(passagier->getHoeveelheid()) +
+                       " mensen, reist naar station " + passagier->getEindStation() + "\n";
+            }
+        }
+        out += "\n";
+        exp->write(out, os);
+    }
+    std::string trams_head = "--== TRAMS ==--";
+    exp->write(trams_head, os);
+    for (auto& t : trams) {
+        Tram* tram = t.second;
+        std::string out = "Tram " + std::to_string(tram->getSpoor()) +
+                          " nr " + std::to_string(tram->getVoertuignummer()) + "\n";
+        out += "zitplaatsen: " + std::to_string(tram->getZitplaatsen()) + "\n";
+        out += "snelheid: " + std::to_string(tram->getSnelheid()) + "\n";
+        out += "huidig station: " + tram->getHuidigStation() + "\n";
+        out += "reizende passagiers:\n";
+        for (auto& p : passagiers) {
+            Passagier* passagier = p.second;
+            if (passagier->huidigeTram() == tram->getVoertuignummer()) {
+                out += "* " + passagier->getNaam() + ", " + std::to_string(passagier->getHoeveelheid()) +
+                       " mensen, reist naar station " + passagier->getEindStation() + "\n";
+            }
+        }
+        out += "\n";
         exp->write(out, os);
     }
 }

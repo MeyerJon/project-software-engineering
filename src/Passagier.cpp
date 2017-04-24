@@ -10,7 +10,8 @@ Passagier::Passagier(std::string n, std::string begin, std::string eind, int h) 
     beginStation = begin;
     eindStation = eind;
     hoeveelheid = h;
-    status = Wachten;
+    vertrokken = false;
+    tram = -1;
     initCheck = this;
     ENSURE(this->properlyInitialised(), "Default constructor van Passagier is niet in de juiste staat geeindigd.");
 }
@@ -20,40 +21,36 @@ bool Passagier::properlyInitialised() const {
 }
 
 std::string Passagier::getNaam() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij aanroep van getNaam.");
+    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getNaam.");
     return naam;
 }
 
 std::string Passagier::getBeginStation() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij aanroep van getBeginStation.");
+    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getBeginStation.");
     return beginStation;
 }
 
 std::string Passagier::getEindStation() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij aanroep van getEindStation.");
+    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getEindStation.");
     return eindStation;
 }
 
 int Passagier::getHoeveelheid() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij aanroep van getHoeveelheid.");
+    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getHoeveelheid.");
     return hoeveelheid;
 }
 
-PassagierStatus Passagier::getStatus() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij aanroep van getHoeveelheid.");
-    return status;
+int Passagier::huidigeTram() const {
+    REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van huidigeTram.");
+    return tram;
 }
 
-void Passagier::updateStatus() {
-    REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij aanroep van setStatus.");
-    switch(status){
-        case Wachten:
-            status = Onderweg;
-            break;
-        case Onderweg:
-            status = Aangekomen;
-            break;
-        case Aangekomen:
-            break;
-    }
+bool Passagier::isVertrokken() const {
+    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van isVertrokken.");
+    return vertrokken;
+}
+
+void Passagier::updateVertrokken(){
+    REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van updateVertrokken.");
+    vertrokken = true;
 }

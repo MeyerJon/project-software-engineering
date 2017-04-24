@@ -72,9 +72,14 @@ std::string Tram::getHuidigStation() const {
     return huidigStation;
 }
 
-TramType Tram::getType() const {
+std::string Tram::getType() const {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
-    return type;
+    switch (type) {
+        case Albatros :
+            return "Albatrso";
+        case PCC :
+            return "PCC";
+    }
 }
 
 int Tram::getVoertuignummer() const {
@@ -107,6 +112,16 @@ void Tram::removePassagier(Passagier *pas) {
     ENSURE(!bevatPassagier(pas), "Passagiers niet aangepast bij aanroep van addPassagiers.");
 }
 
+bool Tram::isAlbatros() const {
+    REQUIRE(this-properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+    return type == Albatros;
+}
+
+bool Tram::isPCC() const {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+    return type == PCC;
+}
+
 void Tram::setVoertuignummer(int n) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setVoertuignummer.");
     voertuignummer = n;
@@ -129,7 +144,7 @@ bool Tram::afstappen(Passagier* pas){
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
     removePassagier(pas);
-    pas->updateStatus();
+    pas->updateVertrokken();
     //TODO: Output
 }
 
@@ -142,7 +157,7 @@ bool Tram::opstappen(Passagier* pas) {
     else{
         // Passagier stapt op
         addPassagier(pas);
-        pas->updateStatus();
+        pas->updateVertrokken();
         // TODO: Output
     }
 }
