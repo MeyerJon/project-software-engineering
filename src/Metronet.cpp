@@ -40,10 +40,12 @@ bool Metronet::properlyInitialised() {
 }
 
 std::map<std::string, Station*> Metronet::getStations() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");
     return stations;
 }
 
 std::map<int, Tram*>& Metronet::getTrams() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");
     return trams;
 }
 
@@ -68,6 +70,7 @@ bool Metronet::bevatStation(Station *station) {
 }
 
 bool Metronet::bevatSpoor(int spoor) {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatSpoor.");
     bool out = true;
     if(find(sporen.begin(), sporen.end(), spoor) == sporen.end()){
         out = false;

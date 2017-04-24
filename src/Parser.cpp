@@ -42,7 +42,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
     std::string rootName;
     if (root != NULL) rootName = root->Value();
     else {
-        std::string out = "ERROR: Er is geen root.\n";
+        std::string out = "ERROR: Geen root gevonden. Gelieve een root object genaamd <ROOT> of <METRONET> aan te maken.\n";
         exp->write(out, os);
         return BadImport;
     }
@@ -73,8 +73,14 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     if(text != NULL) t = text->Value();
                     else continue;
                     if (attrName == "naam") name = t;
-                    else if (attrName == "type") type = t;
-                    else{
+                    else if (attrName == "type") {
+                        if (t == "Metrostation" or t == "Halte") type = t;
+                        else {
+                            std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Station niet toegevoegd.\n";
+                            exp->write(out, os);
+                            endResult = PartialImport;
+                        }
+                    } else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
                         exp->write(out, os);
                         endResult = PartialImport;
@@ -106,7 +112,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     endResult = PartialImport;
                     continue;
                 }
-                Station* station = new Station(name, vorigeStations, volgendeStations);
+                Station* station = new Station(name,type, vorigeStations, volgendeStations);
                 metronet.addStation(station);
                 metronet.addSpoor(spoor);
             }
@@ -135,7 +141,14 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     if(text != NULL) t = text->Value();
                     else continue;
                     if(attrName == "zitplaatsen") zitpl = stoi(t);
-                    else if(attrName == "type") type = t;
+                    else if(attrName == "type") {
+                        if (t == "Albatros" or t == "PCC") type = t;
+                        else {
+                            std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Tram niet toegevoegd.\n";
+                            exp->write(out, os);
+                            endResult = PartialImport;
+                        }
+                    }
                     else if(attrName == "voertuigNr") voertuigNr = stoi(t);
                     else if(attrName == "snelheid") snelh = stoi(t);
                     else if(attrName == "lijnNr") spoor = std::stoi(t);
@@ -194,7 +207,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     continue;
                 }
                 Passagier* passagier = new Passagier(naam, beginS, eindS, hoeveelheid);
-                // metronet.addPassagier();
+                metronet.addPassagier(passagier);
             }
             catch(std::invalid_argument& ex) {
                 std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Tram niet toegevoegd.\n";

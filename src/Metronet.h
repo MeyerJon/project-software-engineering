@@ -186,14 +186,12 @@ public:
      */
     bool opstappenAfstappen(std::string station, std::ostream& os);
 
-
     /**
      * \brief Emuleert het rondrijden van trams
      * \param os De stream waar de output naar gestuurd moet worden
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
      * \post (voor elke tram) ENSURE(t->getHuidigStation() == t->getBeginStation(), "Tram niet geëindigd in beginstation na rondrijden.");
      */
-
     void rondrijden(std::ostream& os);
 
     /**

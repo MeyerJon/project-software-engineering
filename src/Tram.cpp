@@ -72,9 +72,14 @@ std::string Tram::getHuidigStation() const {
     return huidigStation;
 }
 
-TramType Tram::getType() const {
+std::string Tram::getType() const {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
-    return type;
+    switch (type) {
+        case Albatros :
+            return "Albatrso";
+        case PCC :
+            return "PCC";
+    }
 }
 
 int Tram::getVoertuignummer() const {
@@ -105,6 +110,16 @@ void Tram::removePassagier(Passagier *pas) {
     REQUIRE(bevatPassagier(pas), "Passagier zat niet in tram bij de aanroep van removePassagier");
     passagiers.erase(std::remove(passagiers.begin(), passagiers.end(), pas));
     ENSURE(!bevatPassagier(pas), "Passagiers niet aangepast bij aanroep van addPassagiers.");
+}
+
+bool Tram::isAlbatros() const {
+    REQUIRE(this-properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+    return type == Albatros;
+}
+
+bool Tram::isPCC() const {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+    return type == PCC;
 }
 
 void Tram::setVoertuignummer(int n) {
