@@ -15,6 +15,8 @@
 #include "Exporter.h"
 #include "Passagier.h"
 
+double ticketPrijs = 2.0;
+
 class Spoor;
 class Station;
 
@@ -28,6 +30,7 @@ enum TramType {
  */
 class Tram {
 private:
+    double omzet;
     int zitplaatsen;
     int bezettePlaatsen;
     int snelheid;
