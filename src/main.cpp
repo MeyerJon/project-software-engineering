@@ -60,10 +60,12 @@ int main(int argc, const char* argv[]) {
         exp = new ExporterCLI;
         Parser parser(exp);
         Metronet metronet(exp);
-        parser.setup(metronet, "testInput/LegalSystemInput1.xml", std::cout);
-        if (metronet.checkConsistent(std::cout)) {
-            metronet.printMetronet(std::cout);
-            metronet.rondrijden(std::cout);
+        SuccessEnum importResult = parser.setup(metronet, "testInput/HappyDayInput.xml", std::cout);
+        if (importResult != BadImport) {
+            if (metronet.checkConsistent(std::cout)) {
+                metronet.printMetronet(std::cout);
+                metronet.rondrijden(std::cout);
+            }
         }
     }
     delete exp;
