@@ -67,7 +67,7 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getHoeveelheid.");
     */
     int getHoeveelheid() const;
-    
+
     /**
      * \brief Geeft aan op welke tram de passagier reist
      * \return De huidige tram waarop de passagier zich begeeft
