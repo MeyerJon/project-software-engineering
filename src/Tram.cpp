@@ -97,6 +97,12 @@ void Tram::setHuidigStation(std::string station) {
     ENSURE((getHuidigStation() == station), "huidigStation is niet aangepast door setHuidigStation.");
 }
 
+void Tram::setBezettePlaatsen(int aantalBezettePlaatsen) {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanrooep van setBezettePlaatsen.");
+    bezettePlaatsen = aantalBezettePlaatsen;
+    ENSURE((this->getBezettePlaatsen() == aantalBezettePlaatsen), "bezettePlaatsen is niet aangepast door setBezettePlaatsen.");
+}
+
 void Tram::addPassagier(Passagier* pas){
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addPassagiers.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
@@ -145,6 +151,7 @@ bool Tram::afstappen(Passagier* pas){
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
     removePassagier(pas);
     pas->updateVertrokken();
+    setBezettePlaatsen(getBezettePlaatsen() - pas->getHoeveelheid());
     //TODO: Output
 }
 
@@ -158,6 +165,7 @@ bool Tram::opstappen(Passagier* pas) {
         // Passagier stapt op
         addPassagier(pas);
         pas->updateVertrokken();
+        setBezettePlaatsen(getBezettePlaatsen() + pas->getHoeveelheid());
         // TODO: Output
     }
 }

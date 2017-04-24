@@ -145,6 +145,14 @@ public:
     void setHuidigStation(std::string station);
 
     /**
+     * \brief Past het aantal bezette plaatsen aan
+     * \param aantalBezettePlaatsen Het nieuwe aantal bezette plaatsen
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanrooep van setBezettePlaatsen.");
+     * \post ENSURE((this->getBezettePlaatsen == aantalBezettePlaatsen), "bezettePlaatsen is niet aangepast door setBezettePlaatsen.");
+     */
+    void setBezettePlaatsen(int aantalBezettePlaatsen);
+
+    /**
      * \brief Voegt een passagier toe en update de status van de passagier
      * \param pas Nieuwe groep passagiers
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addPassagier.");
