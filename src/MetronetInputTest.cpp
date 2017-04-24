@@ -20,33 +20,65 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 
     Station* A = metronet.getStations()["A"];
     if (A->getNaam() != "A") endResult = BadImport;
-    if (A->getVolgende() != "B") endResult = BadImport;
-    if (A->getVorige() != "C") endResult = BadImport;
-    if (A->getSpoor() != 12) endResult = BadImport;
-    if (A->getAfstappen() != 0) endResult = BadImport;
-    if (A->getOpstappen() != 0) endResult = BadImport;
+    if (A->getType() != "metroStation") endResult = BadImport;
+    if (A->getSporen()[0] != 1) endResult = BadImport;
+    if (A->getVolgende(1) != "B") endResult = BadImport;
+    if (A->getVorige(1) != "C") endResult = BadImport;
+    if (A->getSporen()[1] != 2) endResult = BadImport;
+    if (A->getVolgende(2) != "C") endResult = BadImport;
+    if (A->getVorige(2) != "B") endResult = BadImport;
 
     Station* B = metronet.getStations()["B"];
-    if (B->getNaam() != "B") endResult = BadImport;
-    if (B->getVolgende() != "C") endResult = BadImport;
-    if (B->getVorige() != "A") endResult = BadImport;
-    if (B->getSpoor() != 12) endResult = BadImport;
-    if (B->getAfstappen() != 0) endResult = BadImport;
-    if (B->getOpstappen() != 0) endResult = BadImport;
+    if (A->getNaam() != "B") endResult = BadImport;
+    if (A->getType() != "halte") endResult = BadImport;
+    if (A->getSporen()[0] != 1) endResult = BadImport;
+    if (A->getVolgende(1) != "C") endResult = BadImport;
+    if (A->getVorige(1) != "A") endResult = BadImport;
+    if (A->getSporen()[1] != 2) endResult = BadImport;
+    if (A->getVolgende(2) != "A") endResult = BadImport;
+    if (A->getVorige(2) != "C") endResult = BadImport;
 
     Station* C = metronet.getStations()["C"];
-    if (C->getNaam() != "C") endResult = BadImport;
-    if (C->getVolgende() != "A") endResult = BadImport;
-    if (C->getVorige() != "B") endResult = BadImport;
-    if (C->getSpoor() != 12) endResult = BadImport;
-    if (C->getAfstappen() != 0) endResult = BadImport;
-    if (C->getOpstappen() != 0) endResult = BadImport;
+    if (A->getNaam() != "C") endResult = BadImport;
+    if (A->getType() != "metroStation") endResult = BadImport;
+    if (A->getSporen()[0] != 1) endResult = BadImport;
+    if (A->getVolgende(1) != "A") endResult = BadImport;
+    if (A->getVorige(1) != "B") endResult = BadImport;
+    if (A->getSporen()[1] != 2) endResult = BadImport;
+    if (A->getVolgende(2) != "B") endResult = BadImport;
+    if (A->getVorige(2) != "A") endResult = BadImport;
 
-    Tram* t12 = metronet.getTrams()[12];
-    if (t12->getSpoor() != 12) endResult = BadImport;
-    if (t12->getZitplaatsen() != 32) endResult = BadImport;
-    if (t12->getSnelheid() != 60) endResult = BadImport;
-    if (t12->getBeginStation() != "A") endResult = BadImport;
+    Tram* t1 = metronet.getTrams()[1];
+    if (t1->getSpoor() != 1) endResult = BadImport;
+    if (t1->getVoertuignummer() != 1) endResult = BadImport;
+    if (t1->getType() != "PCC") endResult = BadImport;
+    if (t1->getZitplaatsen() != 16) endResult = BadImport;
+    if (t1->getSnelheid() != 40) endResult = BadImport;
+    if (t1->getBeginStation() != "A") endResult = BadImport;
+
+    Tram* t2 = metronet.getTrams()[2];
+    if (t2->getSpoor() != 1) endResult = BadImport;
+    if (t2->getVoertuignummer() != 2) endResult = BadImport;
+    if (t2->getType() != "Albatros") endResult = BadImport;
+    if (t2->getZitplaatsen() != 72) endResult = BadImport;
+    if (t2->getSnelheid() != 70) endResult = BadImport;
+    if (t2->getBeginStation() != "C") endResult = BadImport;
+
+    Tram* t3 = metronet.getTrams()[3];
+    if (t3->getSpoor() != 2) endResult = BadImport;
+    if (t3->getVoertuignummer() != 3) endResult = BadImport;
+    if (t3->getType() != "Albatros") endResult = BadImport;
+    if (t3->getZitplaatsen() != 72) endResult = BadImport;
+    if (t3->getSnelheid() != 70) endResult = BadImport;
+    if (t3->getBeginStation() != "A") endResult = BadImport;
+
+    Passagier* p1 = metronet.getPassagier()["Groep1"];
+    if (p1->getNaam() != "Groep1") endResult = BadImport;
+    if (p1->getBeginStation() != "A") endResult = BadImport;
+    if (p1->getEindStation() != "C") endResult = BadImport;
+    if (p1->getHoeveelheid() != 2) endResult = BadImport;
+    //if (p1->isVertokken/isWachtend != false/true) endResult = BadImport;
+
     ASSERT_EQ(endResult, Success);
 }
 

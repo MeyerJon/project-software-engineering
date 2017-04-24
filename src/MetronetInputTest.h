@@ -13,6 +13,9 @@
 #include "MetronetUtils.h"
 #include "Metronet.h"
 #include "Parser.h"
+#include "Station.h"
+#include "Tram.h"
+#include "Passagier.h"
 
 /**
  * \brief MetronetInputTest klasse die input tests behandelt
