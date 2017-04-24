@@ -144,7 +144,7 @@ bool Tram::afstappen(Passagier* pas){
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
     removePassagier(pas);
-    pas->updateStatus();
+    pas->updateVertrokken();
     //TODO: Output
 }
 
@@ -157,7 +157,7 @@ bool Tram::opstappen(Passagier* pas) {
     else{
         // Passagier stapt op
         addPassagier(pas);
-        pas->updateStatus();
+        pas->updateVertrokken();
         // TODO: Output
     }
 }

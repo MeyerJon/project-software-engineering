@@ -162,7 +162,6 @@ public:
 
     /**
      * \brief Kijkt na of het metronet consistent is.
-     * \param exp De exporter die de output zal behandelen.
      * \param os De stream waar de output naar gestuurd zal worden.
      * \return Boolean die aangeeft of het Metronet consistent is.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
@@ -171,7 +170,6 @@ public:
 
     /**
      * \brief Print het hele metronet.
-     * \param exp De exporter die gebruikt moet worden
      * \param os De stream waar de output naar gestuurd moet worden
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van printMetronet.");
      */
@@ -180,6 +178,7 @@ public:
     /**
      * \brief Behandelt het opstappen en afstappen van passagiers.
      * \param station Het station waar mensen opstappen en afstappen.
+     * \param os De stream waar de output naar gestuurd zal worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
      * \pre REQUIRE((stations.find(station) != stations.end()), "Station bestaat niet in het metronet.");
      * \pre REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
