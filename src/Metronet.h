@@ -179,12 +179,12 @@ public:
 
     /**
      * \brief Behandelt het opstappen en afstappen van passagiers.
-     * \param station Het station waar mensen opstappen en afstappen.
+     * \param tram De tram waar mensen opstappen en afstappen.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
-     * \pre REQUIRE((stations.find(station) != stations.end()), "Station bestaat niet in het metronet.");
-     * \pre REQUIRE(stations[station]->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
+     * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
+     * \pre REQUIRE(trams.find(tram->getVoertuignummer()) != trams.end(), "Tram bestaat niet in het metronet.");
      */
-    bool opstappenAfstappen(std::string station, std::ostream& os);
+    bool opstappenAfstappen(Tram* tram, std::ostream& os);
 
     /**
      * \brief Emuleert het rondrijden van trams

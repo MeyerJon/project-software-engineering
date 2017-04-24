@@ -40,12 +40,10 @@ bool Metronet::properlyInitialised() {
 }
 
 std::map<std::string, Station*> Metronet::getStations() {
-    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStations.");
     return stations;
 }
 
 std::map<int, Tram*>& Metronet::getTrams() {
-    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");
     return trams;
 }
 
@@ -70,19 +68,11 @@ bool Metronet::bevatStation(Station *station) {
 }
 
 bool Metronet::bevatSpoor(int spoor) {
-    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatSpoor.");
     bool out = true;
     if(find(sporen.begin(), sporen.end(), spoor) == sporen.end()){
         out = false;
     }
     return out;
-}
-
-bool Metronet::bevatPassagier(Passagier *pas) {
-    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier.");
-    REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
-    return(passagiers.count(pas->getNaam()) != 0);
-
 }
 
 void Metronet::addStation(Station* station) {
@@ -117,13 +107,6 @@ void Metronet::addSpoor(int spoor) {
 
     ENSURE(this->bevatSpoor(spoor),
             "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
-}
-
-void Metronet::addPassagier(Passagier *pas) {
-    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
-    REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
-    passagiers.at(pas->getNaam()) = pas;
-    ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij aanroep van addPassagier.");
 }
 
 bool Metronet::checkConsistent(std::ostream& os) {
@@ -249,27 +232,36 @@ void Metronet::printMetronet(std::ostream& os) {
     }
 }
 
-bool Metronet::opstappenAfstappen(std::string station, std::ostream& os) {
+bool Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
-    REQUIRE((stations.find(station) != stations.end()),
-            "Station bestaat niet in het metronet.");
-    REQUIRE(stations[station]->properlyInitialised(),
-            "Station was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
+    REQUIRE(tram->properlyInitialised(),
+            "Tram was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
+    REQUIRE(trams.find(tram->getVoertuignummer()) != trams.end(),
+            "Tram bestaat niet in het metronet.");
 
-    Station* st = stations[station];
-    int spoor = st->getSpoor();
-    Tram* tram = trams[spoor];
+    Station* st = stations[tram->getHuidigStation()];
+    int spoor = tram->getSpoor();
+    std::string station = tram->getHuidigStation();
+
+    bool consistent = true;
 
     int opstappen = st->getOpstappen();
     int afstappen = st->getAfstappen();
 
     bool consistent = true;
 
-    if (tram->getHuidigStation() != station) {
+
+    if (!st->bevatSpoor(spoor)) {
         std::string out = "Tram " + std::to_string(spoor) +" bevindt zich niet in station " + station +
                           " en er kan niemand op- of afstappen.\n";
         return false;
+    }
+
+    for (auto passagier: tram->getPassagiers()) {
+        if (station == passagier->getEindStation()) {
+
+        }
     }
 
     if (tram->afstappen(afstappen)) {
@@ -298,7 +290,7 @@ void Metronet::rondrijden(std::ostream& os) {
     for(auto& p : trams){
         Tram* t = p.second;
         do{
-            opstappenAfstappen(t->getHuidigStation(), os);
+            opstappenAfstappen(t, os);
             t->verplaatsTram(stations[t->getHuidigStation()]->getVolgende(), exp, os);
         }while(t->getHuidigStation() != t->getBeginStation());
         ENSURE(t->getHuidigStation() == t->getBeginStation(), "Tram niet geëindigd in beginstation na rondrijden.");
