@@ -125,7 +125,7 @@ void Metronet::addSpoor(int spoor) {
 void Metronet::addPassagier(Passagier *pas) {
     REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
-    passagiers.at(pas->getNaam()) = pas;
+    passagiers[pas->getNaam()] = pas;
     ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij aanroep van addPassagier.");
 }
 
@@ -245,7 +245,7 @@ void Metronet::printMetronet(std::ostream& os) {
         out += "\n";
         exp->write(out, os);
     }
-    std::string trams_head = "--== TRAMS ==--";
+    std::string trams_head = "--== TRAMS ==--\n";
     exp->write(trams_head, os);
     for (auto& t : trams) {
         Tram* tram = t.second;
