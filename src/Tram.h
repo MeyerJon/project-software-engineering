@@ -15,7 +15,7 @@
 #include "Exporter.h"
 #include "Passagier.h"
 
-double ticketPrijs = 2.0;
+//double ticketPrijs = 2.0;
 
 class Spoor;
 class Station;

@@ -167,7 +167,7 @@ bool Tram::opstappen(Passagier* pas) {
         addPassagier(pas);
         pas->updateVertrokken();
         setBezettePlaatsen(getBezettePlaatsen() + pas->getHoeveelheid());
-        omzet += ticketPrijs * pas->getHoeveelheid();
+        //omzet += ticketPrijs * pas->getHoeveelheid();
         return true;
     }
 }
