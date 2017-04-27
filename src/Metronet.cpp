@@ -289,16 +289,12 @@ bool Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
     for (auto passagier: tram->getPassagiers()) {
         if (station == passagier->getEindStation()) {
             if (tram->afstappen(passagier)) {
-                std::string out = "In station " + station + " stapten " + std::to_string(passagier->getHoeveelheid()) +
-                                  " mensen af tram " + std::to_string(spoor) + ".\n";
+                std::string out = "In station " + station + " stapte groep " + passagier->getNaam() +
+                                  " af tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
+                                  std::to_string(passagier->getHoeveelheid()) + " personen.)\n";
 
                 exp->write(out, os);
-            } else {
-                std::string out = "ERROR: Er stapten te veel mensen af tram " + std::to_string(spoor) + ".\n";
-                exp->write(out, os);
-                consistent = false;
             }
-
         }
     }
 
@@ -306,11 +302,13 @@ bool Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
         if ((station == passagier.second->getBeginStation())
             && (!passagier.second->isVertrokken())) {
             if (tram->opstappen(passagier.second)) {
-                std::string out = "In station " + station + " stapten " + std::to_string(passagier.second->getHoeveelheid()) +
-                                  " mensen op tram " + std::to_string(spoor) + ".\n";
+                std::string out = "In station " + station + " stapte groep " + passagier.second->getNaam() +
+                                  " op tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
+                                  std::to_string(passagier.second->getHoeveelheid()) + " personen.)\n";
                 exp->write(out, os);
             } else {
-                std::string out = "ERROR: Er stapten te veel mensen op tram " + std::to_string(spoor) + ".\n";
+                std::string out = "Waarschuwing: Er was niet voldoende plaats op tram " + std::to_string(tram->getVoertuignummer())
+                + ", Groep " + passagier.second->getNaam() + " is niet opgestapt.\n";
                 exp->write(out, os);
                 consistent = false;
             }
@@ -322,7 +320,9 @@ bool Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
 
 void Metronet::rondrijden(std::ostream& os) {
     REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
-
+    for(auto p : trams){
+        opstappenAfstappen(p.second, os);
+    }
 }
 
 void Metronet::reset() {

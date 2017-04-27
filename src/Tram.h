@@ -15,11 +15,6 @@
 #include "Exporter.h"
 #include "Passagier.h"
 
-
-//double ticketPrijs = 2.0;
-
-
-
 class Spoor;
 class Station;
 
@@ -27,6 +22,7 @@ enum TramType {
     Albatros,
     PCC
 };
+
 
 /**
  * \brief Tram klasse die een TRAM element uit een XML-bestand representeert
@@ -131,6 +127,13 @@ public:
     int getVoertuignummer() const;
 
     /**
+     * \brief Geeft de huidige omzet van de tram.
+     * \return De huidige omzet van de tram
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getOmzet.");
+     */
+    double getOmzet() const;
+
+    /**
      * \brief Checkt of de gegeven Passagier op de tram zit.
      * \param pas De passagier die al dan niet op de tram zit.
      * \return Bool die aangeeft of de Passagier op de tram zit.
@@ -154,6 +157,13 @@ public:
      * \post ENSURE((this->getBezettePlaatsen == aantalBezettePlaatsen), "bezettePlaatsen is niet aangepast door setBezettePlaatsen.");
      */
     void setBezettePlaatsen(int aantalBezettePlaatsen);
+
+    /**
+     * \brief Past de huide omzet van de tram aan
+     * \param o De nieuwe huidige omzet
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setOmzet.");
+     */
+    void setOmzet(double o);
 
     /**
      * \brief Voegt een passagier toe en update de status van de passagier

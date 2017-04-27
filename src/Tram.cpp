@@ -7,6 +7,10 @@
 
 #include "Tram.h"
 
+// Global consts
+double ticketPrijs = 2.0;
+
+
 Tram::Tram() {
     initCheck = this;
     ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
@@ -88,6 +92,11 @@ int Tram::getVoertuignummer() const {
     return voertuignummer;
 }
 
+double Tram::getOmzet() const {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getOmzet.");
+    return omzet;
+}
+
 bool Tram::bevatPassagier(Passagier *pas) const {
     return (find(passagiers.begin(), passagiers.end(), pas) != passagiers.end());
 }
@@ -102,6 +111,11 @@ void Tram::setBezettePlaatsen(int aantalBezettePlaatsen) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanrooep van setBezettePlaatsen.");
     bezettePlaatsen = aantalBezettePlaatsen;
     ENSURE((this->getBezettePlaatsen() == aantalBezettePlaatsen), "bezettePlaatsen is niet aangepast door setBezettePlaatsen.");
+}
+
+void Tram::setOmzet(double o) {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setOmzet.");
+    omzet = o;
 }
 
 void Tram::addPassagier(Passagier* pas){
@@ -167,7 +181,7 @@ bool Tram::opstappen(Passagier* pas) {
         addPassagier(pas);
         pas->updateVertrokken();
         setBezettePlaatsen(getBezettePlaatsen() + pas->getHoeveelheid());
-        //omzet += ticketPrijs * pas->getHoeveelheid();
+        setOmzet(getOmzet() + (pas->getHoeveelheid() * ticketPrijs));
         return true;
     }
 }
