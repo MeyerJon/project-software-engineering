@@ -15,7 +15,6 @@ Metronet::Metronet() {
 Metronet::Metronet(Exporter* exp) {
     Metronet::exp = exp;
     initCheck = this;
-    garbageTram = new Tram();
     ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
@@ -26,7 +25,6 @@ Metronet::~Metronet() {
     for (auto t : trams) {
         delete t.second;
     }
-    delete garbageTram;
 }
 
 Metronet& Metronet::operator=(const Metronet& rhs) {
@@ -87,11 +85,6 @@ bool Metronet::bevatPassagier(Passagier *pas) {
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
     return(passagiers.count(pas->getNaam()) != 0);
 
-}
-
-Tram* Metronet::getGarbageTram() {
-    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier.");
-    return garbageTram;
 }
 
 void Metronet::addStation(Station* station) {
@@ -296,7 +289,7 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
     for (Passagier* passagier: tram->getPassagiers()) {
         if (station == passagier->getEindStation()) {
             if (tram->afstappen(passagier)) {
-                std::string out = "In station " + station + " stapte groep " + passagier->getNaam() +
+                std::string out = "In station " + station + " stapte " + passagier->getNaam() +
                                   " af tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
                                   std::to_string(passagier->getHoeveelheid()) + " personen.)\n";
 
@@ -310,7 +303,7 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
         if ((station == passagier.second->getBeginStation())
             && (!(passagier.second->isVertrokken()))) {
             if (tram->opstappen(passagier.second)) {
-                std::string out = "In station " + station + " stapte groep " + passagier.second->getNaam() +
+                std::string out = "In station " + station + " stapte " + passagier.second->getNaam() +
                                   " op tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
                                   std::to_string(passagier.second->getHoeveelheid()) + " personen.)\n";
                 exp->write(out, os);

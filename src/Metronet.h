@@ -40,7 +40,6 @@ private:
     Exporter* exp;
     std::map<std::string, Station*> stations;
     std::map<int, Tram*> trams;
-    Tram* garbageTram;
     std::vector<int> sporen;
     std::map<std::string, Passagier*> passagiers;
     Metronet* initCheck;
@@ -132,13 +131,6 @@ public:
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
      */
     bool bevatPassagier(Passagier* pas);
-
-    /**
-     * \brief Geeft een pointer terug naar garbageTram, dit is een pointer die gebruikt wordt als nullptr voor trams.
-     * \return De pointer naar garbageTram
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier.");
-     */
-    Tram* getGarbageTram();
 
     /**
      * \brief Voegt station toe aan metronet.
