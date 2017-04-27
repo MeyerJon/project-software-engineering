@@ -88,7 +88,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                 }
                 for (TiXmlElement* spoorElem = elem->FirstChildElement();
                      spoorElem != NULL; spoorElem = spoorElem->NextSiblingElement()) {
-                    for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
+                    for(TiXmlNode* node = spoorElem->FirstChild(); node != NULL; node = node->NextSibling()){
                         attrName = node->Value();
                         TiXmlText* text;
                         std::string t;
@@ -191,8 +191,8 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     if(text != NULL) t = text->Value();
                     else continue;
                     if(attrName == "naam") naam = t;
-                    else if(attrName == "beginstation") beginS = t;
-                    else if(attrName == "eindstation") eindS = t;
+                    else if(attrName == "beginStation") beginS = t;
+                    else if(attrName == "eindStation") eindS = t;
                     else if(attrName == "hoeveelheid") hoeveelheid = stoi(t);
                     else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
@@ -220,9 +220,5 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
         }
     }
 
-    // Zet metronet.passagierCounter gelijk aan het aantal groepen van passagiers
-    // Gebruikt voor rondrijden
-    if (endResult == Success)
-        metronet.setPassagierCounter();
     return endResult;
 }

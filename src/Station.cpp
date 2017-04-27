@@ -24,7 +24,8 @@ Station::Station(std::string n, std::string typeNaam, std::map<int, std::string>
         std::string volgende = volgendeStations[spoor];
         stationVerbinding verb = {vorige, volgende};
         verbindingen[spoor] = verb;
-
+        // Init trams
+        trams[spoor] = false;
     }
     initCheck = this;
     ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
@@ -85,4 +86,17 @@ bool Station::isHalte() const {
 bool Station::isMetrostation() const {
     REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
     return type == Metrostation;
+}
+
+bool Station::spoorBezet(int spoor) const {
+    REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van spoorBezet.");
+    REQUIRE(bevatSpoor(spoor), "Station bevat het gegeven spoor niet bij aanroep van spoorBezet.");
+    return trams.at(spoor);
+}
+
+void Station::bezetSpoor(int spoor, bool isTramHier) {
+    REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van bezetSpoor.");
+    REQUIRE(bevatSpoor(spoor), "Station bevat het gegeven spoor niet bij aanroep van bezetSpoor.");
+    trams.at(spoor) = isTramHier;
+    ENSURE(spoorBezet(spoor) == isTramHier, "Spoor was niet correct bezet na aanroep van bezetSpoor");
 }

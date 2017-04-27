@@ -40,9 +40,9 @@ private:
     Exporter* exp;
     std::map<std::string, Station*> stations;
     std::map<int, Tram*> trams;
+    Tram* garbageTram;
     std::vector<int> sporen;
     std::map<std::string, Passagier*> passagiers;
-    int passagierCounter;
     Metronet* initCheck;
 public:
     /**
@@ -131,7 +131,14 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier.");
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
      */
-     bool bevatPassagier(Passagier* pas);
+    bool bevatPassagier(Passagier* pas);
+
+    /**
+     * \brief Geeft een pointer terug naar garbageTram, dit is een pointer die gebruikt wordt als nullptr voor trams.
+     * \return De pointer naar garbageTram
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+     */
+    Tram* getGarbageTram();
 
     /**
      * \brief Voegt station toe aan metronet.
@@ -191,7 +198,7 @@ public:
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
      * \pre REQUIRE(trams.find(tram->getVoertuignummer()) != trams.end(), "Tram bestaat niet in het metronet.");
      */
-    bool opstappenAfstappen(Tram* tram, std::ostream& os);
+    int opstappenAfstappen(Tram* tram, std::ostream& os);
 
     /**
      * \brief Emuleert het rondrijden van trams
@@ -200,33 +207,6 @@ public:
      * \post (voor elke tram) ENSURE(t->getHuidigStation() == t->getBeginStation(), "Tram niet geëindigd in beginstation na rondrijden.");
      */
     void rondrijden(std::ostream& os);
-
-    /**
-     * \brief Kijkt of er rondgereden mag worden
-     * \return  Boolean die aangeeft of er nog rondgereden moet worden
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
-     */
-    bool checkRondrijden();
-
-    /**
-     * \brief Past het aantal passagiers aan
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
-     */
-    void setPassagierCounter();
-
-    /**
-     * \brief Geef het aantal passagiers
-     * \return Integer die aangeeft hoeveel groepen nog niet zijn aangekomen op hun eindbestemming.
-     * \pre  REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van getPassagierCounter.");
-     */
-    int getPassagierCounter();
-
-    /**
-     * \brief Past het aantal passagiers aan
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
-     * \post ENSURE((this->getPassagierCounter() >= 0), "Aantal passagiers is kleiner dan 0.");
-     */
-    void decrementPassagierCounter();
 
     /**
      * \brief Kijkt of de gegeven tram verder mag rijden

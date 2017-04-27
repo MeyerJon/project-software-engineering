@@ -2,41 +2,41 @@
 <ROOT>
     <STATION>
         <naam>A</naam>
-	<type>Metrostation</type>
+	    <type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>B</volgende>
             <vorige>C</vorige>
-	</SPOOR>
-	<SPOOR>
+	    </SPOOR>
+	    <SPOOR>
             <spoor>2</spoor>
             <volgende>C</volgende>
             <vorige>B</vorige>
-	</SPOOR>
+	    </SPOOR>
     </STATION>
     <STATION>
         <naam>B</naam>
-	<type>Halte</type>
+	    <type>Halte</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>C</volgende>
             <vorige>A</vorige>
-	</SPOOR>
-	<SPOOR>
+        </SPOOR>
+        <SPOOR>
             <spoor>2</spoor>
             <volgende>A</volgende>
             <vorige>C</vorige>
-	</SPOOR>
+        </SPOOR>
     </STATION>
     <STATION>
         <naam>C</naam>
-	<type>Metrostation</type>
+	    <type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>A</volgende>
             <vorige>B</vorige>
-	</SPOOR>
-	<SPOOR>
+	    </SPOOR>
+    	<SPOOR>
             <spoor>2</spoor>
             <volgende>B</volgende>
             <vorige>A</vorige>
@@ -68,7 +68,7 @@
     </TRAM>
     <PASSAGIER>
 	<naam>Groep1</naam>
-	<beginStation>A</beginstation>
+	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
 	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
