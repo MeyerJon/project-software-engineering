@@ -294,6 +294,7 @@ bool Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
                                   " mensen af tram " + std::to_string(spoor) + ".\n";
 
                 exp->write(out, os);
+                decrementPassagierCounter();
             } else {
                 std::string out = "ERROR: Er stapten te veel mensen af tram " + std::to_string(spoor) + ".\n";
                 exp->write(out, os);
@@ -324,6 +325,51 @@ bool Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
 void Metronet::rondrijden(std::ostream& os) {
     REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
 
+    while (checkRondrijden()) {
+        for (auto tram: trams) {
+            opstappenAfstappen(tram.second, os);
+            if (tramMagVertrekken(tram.second)) {
+                std::string volgendStation = stations[tram.second->getHuidigStation()]->getVolgende(tram.second->getSpoor());
+                tram.second->setHuidigStation(volgendStation);
+                stations[tram.second->getHuidigStation()]; //->bezetSpoor(tram.second->getSpoor, NULL);
+                stations[volgendStation]; //->bezetSpoor(tram.second->getSpoor, tram.second);
+            }
+        }
+    }
+
+}
+
+bool Metronet::checkRondrijden() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
+    return passagierCounter == 0;
+}
+
+void Metronet::setPassagierCounter() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
+    passagierCounter = passagiers.size();
+}
+
+int Metronet::getPassagierCounter() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van getPassagierCounter.");
+    return passagierCounter;
+}
+
+void Metronet::decrementPassagierCounter() {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
+    passagierCounter--;
+    ENSURE((this->getPassagierCounter() >= 0), "Aantal passagiers is kleiner dan 0.");
+}
+
+bool Metronet::tramMagVertrekken(Tram* tram) {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van tramMagVertrekken.");
+    REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij het aanroepen van tramMagVertrekken.");
+
+    std::string volgendStation = stations[tram->getHuidigStation()]->getVolgende(tram->getSpoor());
+
+    // Als er tram is op volgend station, zelfde spoor return false
+    //return !stations[volgendStation]; //->spoorBezet(tram->getSpoor());
+
+    return false;
 }
 
 void Metronet::reset() {

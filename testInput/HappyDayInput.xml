@@ -60,7 +60,7 @@
     </TRAM>
     <TRAM>
         <lijnNr>2</lijnNr>
-	<voertuigNr>1</voertuigNr>
+	<voertuigNr>3</voertuigNr>
 	<type>Albatros</type>
         <zitplaatsen>72</zitplaatsen>
         <snelheid>70</snelheid>

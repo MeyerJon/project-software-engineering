@@ -42,6 +42,7 @@ private:
     std::map<int, Tram*> trams;
     std::vector<int> sporen;
     std::map<std::string, Passagier*> passagiers;
+    int passagierCounter;
     Metronet* initCheck;
 public:
     /**
@@ -201,7 +202,43 @@ public:
     void rondrijden(std::ostream& os);
 
     /**
+     * \brief Kijkt of er rondgereden mag worden
+     * \return  Boolean die aangeeft of er nog rondgereden moet worden
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
+     */
+    bool checkRondrijden();
+
+    /**
+     * \brief Past het aantal passagiers aan
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
+     */
+    void setPassagierCounter();
+
+    /**
+     * \brief Geef het aantal passagiers
+     * \return Integer die aangeeft hoeveel groepen nog niet zijn aangekomen op hun eindbestemming.
+     * \pre  REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van getPassagierCounter.");
+     */
+    int getPassagierCounter();
+
+    /**
+     * \brief Past het aantal passagiers aan
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van checkRonderijden.");
+     * \post ENSURE((this->getPassagierCounter() >= 0), "Aantal passagiers is kleiner dan 0.");
+     */
+    void decrementPassagierCounter();
+
+    /**
+     * \brief Kijkt of de gegeven tram verder mag rijden
+     * \return Boolean die aangeeft of een tram mag vertrekken
+     * /pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van tramMagVertrekken.");
+     * /pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij het aanroepen van tramMagVertrekken.");
+     */
+    bool tramMagVertrekken(Tram* tram);
+
+    /**
      * \brief Reset heel het systeem.
+     * \param tram De tram waarvoor gekeken wordt of vertrokken mag worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");
      */
      void reset();
