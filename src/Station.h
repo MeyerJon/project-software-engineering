@@ -13,6 +13,8 @@
 #include <vector>
 #include "DesignByContract.h"
 
+class Tram;
+
 enum StationType {
     Metrostation,
     Halte
@@ -31,6 +33,7 @@ private:
     std::string naam;
     StationType type;
     std::map<int, stationVerbinding> verbindingen;
+    std::map<int, Tram*> trams;
     Station* initCheck;
 
 public:
@@ -113,6 +116,25 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
      */
     bool isMetrostation() const;
+
+    /**
+     * \brief Geeft aan of er zich op het gegeven spoor een tram bevindt.
+     * \param spoor Het gegeven spoor.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van spoorBezet.");
+     * \pre REQUIRE(bevatSpoor(spoor), "Station bevat het gegeven spoor niet bij aanroep van spoorBezet.");
+     */
+    bool spoorBezet(int spoor) const;
+
+    /**
+     * \brief Bezet het spoor met de gegeven tram.
+     * \param spoor Het spoor waarop de tram gezet moet worden
+     * \param tram De tram die in het station moet aankomen.
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van bezetSpoor.");
+     * \pre REQUIRE(bevatSpoor(spoor), "Station bevat het gegeven spoor niet bij aanroep van bezetSpoor.");
+     * \pre REQUIRE(tram->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van bezetSpoor.");
+     * \post ENSURE(spoorBezet(spoor), "Spoor was niet correct bezet na aanroep van bezetSpoor");
+     */
+    void bezetSpoor(int spoor, Tram* tram);
 };
 
 
