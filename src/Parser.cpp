@@ -219,8 +219,10 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
             continue;
         }
     }
+
     // Zet metronet.passagierCounter gelijk aan het aantal groepen van passagiers
     // Gebruikt voor rondrijden
-    metronet.setPassagierCounter();
+    if (endResult == Success)
+        metronet.setPassagierCounter();
     return endResult;
 }
