@@ -60,7 +60,7 @@ int main(int argc, const char* argv[]) {
         exp = new ExporterCLI;
         Parser parser(exp);
         Metronet metronet(exp);
-        SuccessEnum importResult = parser.setup(metronet, "testInput/HappyDayInput.xml", std::cout);
+        SuccessEnum importResult = parser.setup(metronet, "testInput/fatMetronet.xml", std::cout);
         if (importResult != BadImport) {
             if (metronet.checkConsistent(std::cout)) {
                 metronet.printMetronet(std::cout);
