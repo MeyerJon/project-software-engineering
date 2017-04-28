@@ -25,7 +25,6 @@ Tram::Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string 
     spoor = sp;
     if (typeNaam == "Albatros") type = Albatros;
     else if (typeNaam == "PCC") type = PCC;
-    // TODO: Error message
     beginStation = beginS;
     huidigStation = beginS;
     initCheck = this;
