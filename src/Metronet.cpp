@@ -8,12 +8,13 @@
 #include "Metronet.h"
 
 Metronet::Metronet() {
-    stats = new StatisticsMetronet;
+    stats = new StatisticsMetronet();
     initCheck = this;
     ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
 Metronet::Metronet(Exporter* exp) {
+    stats = new StatisticsMetronet();
     Metronet::exp = exp;
     initCheck = this;
     ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
@@ -118,6 +119,7 @@ void Metronet::addTram(
             "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
     Tram* tram = new Tram(zitplaatsen, snelheid, spoor, voertuigNr, type, beginStation);
     trams[tram->getVoertuignummer()] = tram;
+    stations[beginStation]->bezetSpoor(spoor, true);
 
     ENSURE(tram->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van addTram.");
@@ -303,6 +305,7 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
 
     if (tram->isAlbatros() && st->isHalte()) return 0;
 
+    // Eerst afstappende passagiers
     for (Passagier* passagier: tram->getPassagiers()) {
         if (station == passagier->getEindStation()) {
             if (tram->afstappen(passagier)) {
@@ -310,26 +313,32 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
                                   " af tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
                                   std::to_string(passagier->getHoeveelheid()) + " personen)\n";
 
-                afgestapteGroepen++;
                 exp->write(out, os);
+                afgestapteGroepen++;
+                passagier->setHuidigeTram(-2);
             }
         }
     }
 
+    // Daarna opstappende passagiers
     for (auto& passagier: getPassagiers()) {
         if (tram->isAlbatros() && stations[passagier.second->getEindStation()]->isHalte()) continue;
         if ((station == passagier.second->getBeginStation())
             && (!(passagier.second->isVertrokken()))) {
             // Kijk of voldoende plaats is
-            if (tram->opstappen(passagier.second)) {
-                std::string out = "In station " + station + " stapte " + passagier.second->getNaam() +
-                                  " op tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
-                                  std::to_string(passagier.second->getHoeveelheid()) + " personen)\n";
-                exp->write(out, os);
-            } else {
-                std::string out = "Waarschuwing: Er was niet voldoende plaats op tram " + std::to_string(tram->getVoertuignummer())
-                + ", Groep " + passagier.second->getNaam() + " is niet opgestapt.\n";
-                exp->write(out, os);
+            if (stations[passagier.second->getEindStation()]->bevatSpoor(spoor)) {
+                if (tram->opstappen(passagier.second)) {
+                    std::string out = "In station " + station + " stapte " + passagier.second->getNaam() +
+                                      " op tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
+                                      std::to_string(passagier.second->getHoeveelheid()) + " personen)\n";
+                    exp->write(out, os);
+                    passagier.second->setHuidigeTram(tram->getVoertuignummer());
+                } else {
+                    std::string out = "Waarschuwing: Er was niet voldoende plaats op tram " +
+                                      std::to_string(tram->getVoertuignummer())
+                                      + ", Groep " + passagier.second->getNaam() + " is niet opgestapt.\n";
+                    exp->write(out, os);
+                }
             }
         }
     }
@@ -347,9 +356,9 @@ void Metronet::rondrijden(std::ostream& os) {
             aantalGroepen -= opstappenAfstappen(tram.second, os);
             if (tramMagVertrekken(tram.second)) {
                 std::string volgendStation = stations[tram.second->getHuidigStation()]->getVolgende(tram.second->getSpoor());
-                tram.second->setHuidigStation(volgendStation);
                 stations[tram.second->getHuidigStation()]->bezetSpoor(tram.second->getSpoor(), false);
                 stations[volgendStation]->bezetSpoor(tram.second->getSpoor(), true);
+                tram.second->setHuidigStation(volgendStation);
             }
         }
     }
