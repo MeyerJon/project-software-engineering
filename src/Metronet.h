@@ -20,7 +20,7 @@
 #include "Tram.h"
 #include "Passagier.h"
 #include "Exporter.h"
-
+#include "Statistics.h"
 #include "DesignByContract.h"
 
 /**
@@ -38,6 +38,7 @@ enum SuccessEnum {
 class Metronet {
 private:
     Exporter* exp;
+    StatisticsMetronet* stats;
     std::map<std::string, Station*> stations;
     std::map<int, Tram*> trams;
     std::vector<int> sporen;
@@ -139,7 +140,11 @@ public:
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");
      * \post ENSURE(bevatStation(station), "Station was niet toegevoegd bij de aanroep van addStation.");
      */
-    void addStation(Station* station);
+    void addStation(
+            std::string naam,
+            std::string type,
+            std::map<int, std::string> vorigeStations,
+            std::map<int, std::string> volgendeStations);
 
     /**
      * \brief Voegt tram toe aan metronet.
@@ -148,7 +153,7 @@ public:
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");
      * \post ENSURE(bevatTram(tram), "Tram was niet toegevoegd bij de aanroep van addTram.");
      */
-    void addTram(Tram* tram);
+    void addTram(int zitplaatsen, int snelheid, int spoor, int voertuigNr, std::string type, std::string beginStation);
 
     /**
      * \brief Voegt spoor toe aan metronet.
@@ -165,7 +170,7 @@ public:
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
      * \post ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij aanroep van addPassagier.");
      */
-    void addPassagier(Passagier* pas);
+    void addPassagier(std::string naam, std::string beginStation, std::string eindStation, int hoeveelheid);
 
     /**
      * \brief Kijkt na of het metronet consistent is.

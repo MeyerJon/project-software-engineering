@@ -8,6 +8,7 @@
 #include "Metronet.h"
 
 Metronet::Metronet() {
+    stats = new StatisticsMetronet;
     initCheck = this;
     ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
@@ -25,6 +26,10 @@ Metronet::~Metronet() {
     for (auto t : trams) {
         delete t.second;
     }
+    for (auto p : passagiers) {
+        delete p.second;
+    }
+    delete stats;
 }
 
 Metronet& Metronet::operator=(const Metronet& rhs) {
@@ -87,26 +92,35 @@ bool Metronet::bevatPassagier(Passagier *pas) {
 
 }
 
-void Metronet::addStation(Station* station) {
+void Metronet::addStation(
+        std::string naam,
+        std::string type,
+        std::map<int, std::string> vorigeStations,
+        std::map<int, std::string> volgendeStations) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
-    REQUIRE(station->properlyInitialised(),
-            "Station was niet geinitialiseerd bij de aanroep van addStation.");
-
+    Station* station = new Station(naam, type, vorigeStations, volgendeStations);
     stations[station->getNaam()] = station;
-
+    ENSURE(station->properlyInitialised(),
+            "Station was niet geinitialiseerd bij de aanroep van addStation.");
     ENSURE(this->bevatStation(station),
             "Station was niet toegevoegd bij de aanroep van addStation.");
 }
 
-void Metronet::addTram(Tram* tram) {
+void Metronet::addTram(
+        int zitplaatsen,
+        int snelheid,
+        int spoor,
+        int voertuigNr,
+        std::string type,
+        std::string beginStation) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
-    REQUIRE(tram->properlyInitialised(),
-            "Tram was niet geinitialiseerd bij de aanroep van addTram.");
-
+    Tram* tram = new Tram(zitplaatsen, snelheid, spoor, voertuigNr, type, beginStation);
     trams[tram->getVoertuignummer()] = tram;
 
+    ENSURE(tram->properlyInitialised(),
+            "Tram was niet geinitialiseerd bij de aanroep van addTram.");
     ENSURE(this->bevatTram(tram),
             "Tram was niet toegevoegd bij de aanroep van addTram.");
 }
@@ -121,10 +135,11 @@ void Metronet::addSpoor(int spoor) {
             "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
 }
 
-void Metronet::addPassagier(Passagier *pas) {
+void Metronet::addPassagier(std::string naam, std::string beginStation, std::string eindStation, int hoeveelheid) {
     REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
-    REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
+    Passagier* pas = new Passagier(naam, beginStation, eindStation, hoeveelheid);
     passagiers[pas->getNaam()] = pas;
+    ENSURE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
     ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij aanroep van addPassagier.");
 }
 
@@ -286,6 +301,8 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
         return 0;
     }
 
+    if (tram->isAlbatros() && st->isHalte()) return 0;
+
     for (Passagier* passagier: tram->getPassagiers()) {
         if (station == passagier->getEindStation()) {
             if (tram->afstappen(passagier)) {
@@ -300,8 +317,10 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
     }
 
     for (auto& passagier: getPassagiers()) {
+        if (tram->isAlbatros() && stations[passagier.second->getEindStation()]->isHalte()) continue;
         if ((station == passagier.second->getBeginStation())
             && (!(passagier.second->isVertrokken()))) {
+            // Kijk of voldoende plaats is
             if (tram->opstappen(passagier.second)) {
                 std::string out = "In station " + station + " stapte " + passagier.second->getNaam() +
                                   " op tram " + std::to_string(tram->getVoertuignummer()) + ". (" +

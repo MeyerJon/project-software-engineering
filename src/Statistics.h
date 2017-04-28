@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <string>
+#include "DesignByContract.h"
 
 
 class StatisticsTram {
@@ -24,11 +25,7 @@ public:
      */
      StatisticsTram();
 
-    /**
-     * \brief Geeft de totale omzet van de tram op dit moment.
-     * \pre REQUIRE(this->properlyInitialised(), "StatisticsTram was niet geinitialiseerd bij aanroep van getOmzet.");
-     */
-    double getOmzet() const;
+    bool properlyInitialised() const;
 
     /**
      * \brief Geeft de totale bezettingsgraad van de tram op dit moment.
@@ -56,23 +53,88 @@ public:
 
     int getAantalFails() const;
 
+    /**
+     * \brief Geeft de totale omzet van de tram op dit moment.
+     * \pre REQUIRE(this->properlyInitialised(), "StatisticsTram was niet geinitialiseerd bij aanroep van getOmzet.");
+     */
+    double getOmzet() const;
+
+    void setOmzet(double omzet);
+
+    void setBezettingsgraad(double bezettingsgraad);
+
+    void setAantalGroepen(int aantalGroepen);
+
+    void setAantalPersonen(int aantalPersonen);
+
+    void setAantalFails(int aantalFails);
+
 };
 
 
 class StatisticsStation {
+private:
     int aantalGroepen;
     int aantalPersonen;
+    StatisticsStation* initCheck;
+public:
+    StatisticsStation();
+
+    bool properlyInitialised() const;
+
+    int getAantalGroepen() const;
+
+    int getAantalPersonen() const;
+
+    void setAantalGroepen(int aantalGroepen);
+
+    void setAantalPersonen(int aantalPersonen);
 };
 
 
 class StatisticsMetronet {
+private:
     double totaleOmzet;
     double totaleBezettingsgraad;
+    int aantalBezettePlaatsen;
+    int aantalZitplaatsen;
     int popLijn;
     int nrAlba;
     int nrPCC;
+    StatisticsMetronet* initCheck;
+public:
+    StatisticsMetronet();
+
+    bool properlyInitialised() const;
+
+    double getTotaleOmzet() const;
+
+    double getTotaleBezettingsgraad() const;
+
+    int getAantalBezettePlaatsen() const;
+
+    int getAantalZitplaatsen() const;
+
+    int getPopLijn() const;
+
+    int getNrAlba() const;
+
+    int getNrPCC() const;
+
+    void setTotaleOmzet(double totaleOmzet);
+
+    void setTotaleBezettingsgraad(double totaleBezettingsgraad);
+
+    void setAantalBezettePlaatsen(int aantalBezettePlaatsen);
+
+    void setAantalZitplaatsen(int aantalZitplaatsen);
+
+    void setPopLijn(int popLijn);
+
+    void setNrAlba(int nrAlba);
+
+    void setNrPCC(int nrPCC);
+
 };
-
-
 
 #endif //PSE_STATISTICS_H
