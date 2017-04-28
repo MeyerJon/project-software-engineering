@@ -201,7 +201,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     }
                 }
                 if(naam == "" or beginS == "" or eindS == "" or hoeveelheid == -1){
-                    std::string out = "ERROR: Tram mist een attribuut.\n";
+                    std::string out = "ERROR: Passagier mist een attribuut.\n";
                     exp->write(out, os);
                     endResult = PartialImport;
                     continue;
