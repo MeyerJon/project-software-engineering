@@ -112,8 +112,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     endResult = PartialImport;
                     continue;
                 }
-                Station* station = new Station(name,type, vorigeStations, volgendeStations);
-                metronet.addStation(station);
+                metronet.addStation(name, type, vorigeStations, volgendeStations);
                 metronet.addSpoor(spoor);
             }
             catch(std::invalid_argument& ex) {
@@ -165,8 +164,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     endResult = PartialImport;
                     continue;
                 }
-                Tram* tram = new Tram(zitpl, snelh, spoor, voertuigNr, type, beginS);
-                metronet.addTram(tram);
+                metronet.addTram(zitpl, snelh, spoor, voertuigNr, type, beginS);
                 metronet.addSpoor(spoor);
             }
             catch(std::invalid_argument& ex) {
@@ -206,8 +204,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     endResult = PartialImport;
                     continue;
                 }
-                Passagier* passagier = new Passagier(naam, beginS, eindS, hoeveelheid);
-                metronet.addPassagier(passagier);
+                metronet.addPassagier(naam, beginS, eindS, hoeveelheid);
             }
             catch(std::invalid_argument& ex) {
                 std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Tram niet toegevoegd.\n";

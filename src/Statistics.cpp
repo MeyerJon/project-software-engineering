@@ -121,6 +121,14 @@ double StatisticsMetronet::getTotaleBezettingsgraad() const {
     return totaleBezettingsgraad;
 }
 
+int StatisticsMetronet::getAantalBezettePlaatsen() const {
+    return aantalBezettePlaatsen;
+}
+
+int StatisticsMetronet::getAantalZitplaatsen() const {
+    return aantalZitplaatsen;
+}
+
 int StatisticsMetronet::getPopLijn() const {
     REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij de aanroep van getPopLijn.");
     return popLijn;
@@ -148,6 +156,22 @@ void StatisticsMetronet::setTotaleBezettingsgraad(double totaleBezettingsgraad) 
     StatisticsMetronet::totaleBezettingsgraad = totaleBezettingsgraad;
     ENSURE((getTotaleBezettingsgraad() == totaleBezettingsgraad),
            "TotaleBezettingsgraad is niet aangepast door setTotaleBezettingsgraad.");
+}
+
+void StatisticsMetronet::setAantalBezettePlaatsen(int aantalBezettePlaatsen) {
+    REQUIRE(properlyInitialised(),
+            "StatisticsMetronet was niet geinitialiseerd bij de aanroep van setAantalBezettePlaatsen.");
+    StatisticsMetronet::aantalBezettePlaatsen = aantalBezettePlaatsen;
+    ENSURE((getAantalBezettePlaatsen() == aantalBezettePlaatsen),
+           "AantalBezettePlaatsen is niet aangepast door setAantalBezettePlaatsen.");
+}
+
+void StatisticsMetronet::setAantalZitplaatsen(int aantalZitplaatsen) {
+    REQUIRE(properlyInitialised(),
+            "StatisticsMetronet was niet geinitialiseerd bij de aanroep van setAantalZitplaatsen.");
+    StatisticsMetronet::aantalZitplaatsen = aantalZitplaatsen;
+    ENSURE((getAantalZitplaatsen() == aantalZitplaatsen),
+           "AantalZitplaatsen is niet aangepast door setAantalZitplaatnse.");
 }
 
 void StatisticsMetronet::setPopLijn(int popLijn) {

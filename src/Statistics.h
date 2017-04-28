@@ -96,6 +96,8 @@ class StatisticsMetronet {
 private:
     double totaleOmzet;
     double totaleBezettingsgraad;
+    int aantalBezettePlaatsen;
+    int aantalZitplaatsen;
     int popLijn;
     int nrAlba;
     int nrPCC;
@@ -109,6 +111,10 @@ public:
 
     double getTotaleBezettingsgraad() const;
 
+    int getAantalBezettePlaatsen() const;
+
+    int getAantalZitplaatsen() const;
+
     int getPopLijn() const;
 
     int getNrAlba() const;
@@ -118,6 +124,10 @@ public:
     void setTotaleOmzet(double totaleOmzet);
 
     void setTotaleBezettingsgraad(double totaleBezettingsgraad);
+
+    void setAantalBezettePlaatsen(int aantalBezettePlaatsen);
+
+    void setAantalZitplaatsen(int aantalZitplaatsen);
 
     void setPopLijn(int popLijn);
 
