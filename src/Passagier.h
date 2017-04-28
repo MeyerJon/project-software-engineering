@@ -68,6 +68,9 @@ public:
     */
     int getHoeveelheid() const;
 
+    // TODO: Docs here
+    void setHuidigeTram(int tram);
+
     /**
      * \brief Geeft aan op welke tram de passagier reist
      * \return De huidige tram waarop de passagier zich begeeft
