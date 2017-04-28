@@ -286,6 +286,8 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
         return 0;
     }
 
+    if (tram->isAlbatros() && st->isHalte()) return 0;
+
     for (Passagier* passagier: tram->getPassagiers()) {
         if (station == passagier->getEindStation()) {
             if (tram->afstappen(passagier)) {
@@ -300,8 +302,10 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
     }
 
     for (auto& passagier: getPassagiers()) {
+        if (tram->isAlbatros() && stations[passagier.second->getEindStation()]->isHalte()) continue;
         if ((station == passagier.second->getBeginStation())
             && (!(passagier.second->isVertrokken()))) {
+            // Kijk of voldoende plaats is
             if (tram->opstappen(passagier.second)) {
                 std::string out = "In station " + station + " stapte " + passagier.second->getNaam() +
                                   " op tram " + std::to_string(tram->getVoertuignummer()) + ". (" +
