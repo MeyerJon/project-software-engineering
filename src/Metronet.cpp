@@ -283,6 +283,44 @@ void Metronet::printMetronet(std::ostream& os) {
     }
 }
 
+void Metronet::printMetronetGrafisch(std::ostream& os) {
+    std::map<std::string, bool> stationsBezocht;
+    for (auto& p : stations) {
+        Station* station = p.second;
+        std::string stationNaam = station->getNaam();
+        if (stationsBezocht.count(stationNaam) == 0) {
+            stationsBezocht[stationNaam] = false;
+        }
+        else if (stationsBezocht[stationNaam] == true) {
+            continue;
+        }
+        stationsBezocht[stationNaam] = true;
+        for (auto& spoor : station->getSporen()) {
+            std::string start = "Spoor " + std::to_string(spoor) + ": ";
+            std::string filler = "===";
+            std::string stations_out = start + stationNaam + filler;
+            std::string trams_out;
+            trams_out.append(start.length(), ' ');
+            if (station->spoorBezet(spoor)) trams_out += "T";
+            else trams_out += " ";
+            trams_out.append(stationNaam.length() - 1 + filler.length(), ' ');
+            std::string stationVolgende = station->getVolgende(spoor);
+            while (stationVolgende != stationNaam) {
+                stations_out += stationVolgende + filler;
+                stationsBezocht[stationVolgende] = true;
+                if (stations[stationVolgende]->spoorBezet(spoor)) trams_out += "T";
+                else trams_out += " ";
+                trams_out.append(stationVolgende.length() - 1 + filler.length(), ' ');
+                stationVolgende = stations[stationVolgende]->getVolgende(spoor);
+            }
+            stations_out += "\n";
+            trams_out += "\n";
+            exp->write(stations_out, os);
+            exp->write(trams_out, os);
+        }
+    }
+}
+
 int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");

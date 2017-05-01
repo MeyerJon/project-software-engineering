@@ -65,6 +65,7 @@ int main(int argc, const char* argv[]) {
             if (metronet.checkConsistent(std::cout)) {
                 metronet.printMetronet(std::cout);
                 metronet.rondrijden(std::cout);
+                metronet.printMetronetGrafisch(std::cout);
             }
         }
     }
