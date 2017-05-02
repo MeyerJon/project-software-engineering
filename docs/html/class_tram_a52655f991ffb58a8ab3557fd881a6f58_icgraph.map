@@ -1,8 +1,9 @@
 <map id="Tram::getSpoor" name="Tram::getSpoor">
-<area shape="rect" id="node2" href="$class_metronet.html#a0bcafdae671ac5fff7a4b54429f440ba" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="176,5,332,33"/>
-<area shape="rect" id="node3" href="$class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="403,56,549,84"/>
-<area shape="rect" id="node6" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="380,108,572,136"/>
-<area shape="rect" id="node7" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="215,160,293,188"/>
-<area shape="rect" id="node4" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="620,56,743,84"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="791,83,844,111"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="413,5,592,32"/>
+<area shape="rect" id="node4" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="424,56,581,83"/>
+<area shape="rect" id="node5" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="165,107,365,133"/>
+<area shape="rect" id="node7" href="$class_metronet.html#adad7cd43bc0e48a00fbd87a1288fd498" title="Kijkt of de gegeven tram verder mag rijden. " alt="" coords="168,157,363,184"/>
+<area shape="rect" id="node8" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="230,208,301,235"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="640,56,691,83"/>
+<area shape="rect" id="node6" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="434,107,571,133"/>
 </map>

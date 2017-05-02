@@ -1,0 +1,4 @@
+<map id="Station::spoorBezet" name="Station::spoorBezet">
+<area shape="rect" id="node2" href="$class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="376,5,548,32"/>
+<area shape="rect" id="node3" href="$class_station.html#a4851849f7f158fa51ab91a9cd56986f2" title="Checkt of het station een spoor bevat. " alt="" coords="191,31,328,57"/>
+</map>

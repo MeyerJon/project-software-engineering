@@ -6,6 +6,10 @@
 
 StatisticsTram::StatisticsTram() {
     initCheck = this;
+    omzet = 0.0;
+    aantalGroepen = 0;
+    aantalPersonen = 0;
+    aantalFails = 0;
     ENSURE(properlyInitialised(), "StatisticsTram is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 

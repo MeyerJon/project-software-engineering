@@ -33,7 +33,7 @@ enum SuccessEnum {
 };
 
 /**
- * \brief Metronet klasse die XML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhoudt
+ * \brief Metronet klasse het metronet representeert. Houdt alle trams, stations & passagiers bij
  */
 class Metronet {
 private:
@@ -212,6 +212,11 @@ public:
      * /pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij het aanroepen van tramMagVertrekken.");
      */
     bool tramMagVertrekken(Tram* tram);
+
+    /**
+     * \brief (Al dan niet tijdelijk) Print de verzamelde gegevens van het metronet
+     */
+    void printStatistics(std::ostream& os);
 
     /**
      * \brief Reset heel het systeem.

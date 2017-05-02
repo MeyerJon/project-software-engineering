@@ -1,0 +1,31 @@
+<map id="StatisticsTram::properlyInitialised" name="StatisticsTram::properlyInitialised">
+<area shape="rect" id="node2" href="$class_statistics_tram.html#a6c282003872f15fecc06c1f6f1d8e3a5" title="De lege constructor voor StatisticsTram. " alt="" coords="228,5,428,32"/>
+<area shape="rect" id="node3" href="$class_statistics_tram.html#a383003dca44e26d7119f80e14d679466" title="Geeft de totale omzet van de tram op dit moment. " alt="" coords="242,56,414,83"/>
+<area shape="rect" id="node4" href="$class_statistics_tram.html#a35db086f1605d9c27d357dd9221b63b2" title="StatisticsTram::setOmzet" alt="" coords="517,81,689,108"/>
+<area shape="rect" id="node5" href="$class_statistics_tram.html#a6c3374680be8a1afdd5cd5cca3cff88f" title="Geeft de totale bezettingsgraad van de tram op dit moment. " alt="" coords="215,157,441,184"/>
+<area shape="rect" id="node6" href="$class_statistics_tram.html#a43893c4d3fd3c302fce9973adadf783f" title="StatisticsTram::setBezettingsgraad" alt="" coords="489,183,716,209"/>
+<area shape="rect" id="node7" href="$class_statistics_tram.html#a07ed61ed842d741d5a37473b087ce342" title="Geeft het aantal groepen dat deze tram gebruikt hebben. " alt="" coords="243,259,413,301"/>
+<area shape="rect" id="node8" href="$class_statistics_tram.html#aecd7a0f0aa139d2a896395bd3647bdbd" title="StatisticsTram::setAantal\lGroepen" alt="" coords="517,309,688,350"/>
+<area shape="rect" id="node9" href="$class_statistics_tram.html#a9bd109c35a5475eb58ef83296f206674" title="Geeft het aantal personen dat deze tram gebruikt hebben. " alt="" coords="243,478,413,519"/>
+<area shape="rect" id="node10" href="$class_statistics_tram.html#ab06e6877ad97269962bc1e4551e50245" title="StatisticsTram::setAantal\lPersonen" alt="" coords="517,379,688,421"/>
+<area shape="rect" id="node11" href="$class_statistics_station.html#a515215f01a8a242419aff06ad1eb3ba0" title="StatisticsStation::\lsetAantalGroepen" alt="" coords="539,455,666,497"/>
+<area shape="rect" id="node12" href="$class_statistics_station.html#a8af29ae9099a431c72884f987bfb7795" title="StatisticsStation::\lsetAantalPersonen" alt="" coords="537,529,669,570"/>
+<area shape="rect" id="node13" href="$class_statistics_tram.html#af7cb54424f755c8a52174b3912c5a690" title="Geeft het aantal keren dat een groep niet kon opstappen. " alt="" coords="243,595,413,637"/>
+<area shape="rect" id="node14" href="$class_statistics_tram.html#addec60f7a4244e0a47c8c44a41b26dc2" title="StatisticsTram::setAantal\lFails" alt="" coords="517,619,688,661"/>
+<area shape="rect" id="node15" href="$class_statistics_station.html#a3f5ef023a83d9b03ee588ef7ab2410aa" title="StatisticsStation::\lStatisticsStation" alt="" coords="265,713,391,754"/>
+<area shape="rect" id="node16" href="$class_statistics_station.html#a50ae4ea62884cebf890d5f5e4896cd09" title="StatisticsStation::\lgetAantalGroepen" alt="" coords="265,778,391,819"/>
+<area shape="rect" id="node17" href="$class_statistics_station.html#aad7f5b3a501ea3a076df6299f1bbb379" title="StatisticsStation::\lgetAantalPersonen" alt="" coords="262,843,394,885"/>
+<area shape="rect" id="node18" href="$class_statistics_metronet.html#abeb5606c7be71604b5a3e7a8c9df4f56" title="StatisticsMetronet\l::StatisticsMetronet" alt="" coords="260,909,396,950"/>
+<area shape="rect" id="node19" href="$class_statistics_metronet.html#a9c8271d547233dfdda7f604582f26427" title="StatisticsMetronet\l::getTotaleOmzet" alt="" coords="264,974,392,1015"/>
+<area shape="rect" id="node20" href="$class_statistics_metronet.html#ac60ef8d46a8ab51f3c4da67a67c25a17" title="StatisticsMetronet\l::getTotaleBezettingsgraad" alt="" coords="239,1039,417,1081"/>
+<area shape="rect" id="node21" href="$class_statistics_metronet.html#a8f8b8e5011f5387a969cdb0d972096b7" title="StatisticsMetronet\l::getPopLijn" alt="" coords="264,1105,392,1146"/>
+<area shape="rect" id="node22" href="$class_statistics_metronet.html#a0f80bdf014fe078a0748eeec515e0831" title="StatisticsMetronet\l::getNrAlba" alt="" coords="264,1170,392,1211"/>
+<area shape="rect" id="node23" href="$class_statistics_metronet.html#ae9d5c297c369e8480447e3e6ffa6c0a5" title="StatisticsMetronet\l::getNrPCC" alt="" coords="264,1235,392,1277"/>
+<area shape="rect" id="node24" href="$class_statistics_metronet.html#a84d1ec559861a5248975ce06bca06d0c" title="StatisticsMetronet\l::setTotaleOmzet" alt="" coords="264,1301,392,1342"/>
+<area shape="rect" id="node25" href="$class_statistics_metronet.html#a15b6e570cd719ac575b513f499154dbc" title="StatisticsMetronet\l::setTotaleBezettingsgraad" alt="" coords="239,1366,417,1407"/>
+<area shape="rect" id="node26" href="$class_statistics_metronet.html#a595b51e0e2ab976cd162e429f1c897dd" title="StatisticsMetronet\l::setAantalBezettePlaatsen" alt="" coords="237,1431,419,1473"/>
+<area shape="rect" id="node27" href="$class_statistics_metronet.html#a298914916f30ea287c9460d26f58afd7" title="StatisticsMetronet\l::setAantalZitplaatsen" alt="" coords="253,1497,403,1538"/>
+<area shape="rect" id="node28" href="$class_statistics_metronet.html#a95130085c84b11cd0b31e031fcc2acd6" title="StatisticsMetronet\l::setPopLijn" alt="" coords="264,1562,392,1603"/>
+<area shape="rect" id="node29" href="$class_statistics_metronet.html#a752149c71e05458ac289b386926b9051" title="StatisticsMetronet\l::setNrAlba" alt="" coords="264,1627,392,1669"/>
+<area shape="rect" id="node30" href="$class_statistics_metronet.html#a5fdc80d4261e532049ec476899105f84" title="StatisticsMetronet\l::setNrPCC" alt="" coords="264,1693,392,1734"/>
+</map>

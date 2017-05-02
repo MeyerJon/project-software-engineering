@@ -2,18 +2,30 @@
 \label{class_parser}\index{Parser@{Parser}}
 
 
+\hyperlink{class_parser}{Parser} klasse die het inlezen van X\+M\+L-\/bestanden behandelt.  
+
+
+
+
 {\ttfamily \#include $<$Parser.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_parser_a12234f6cd36b61af4b50c94a179422c1}{Parser} ()
-\item 
+\begin{DoxyCompactList}\small\item\em De lege constructor van de klasse \hyperlink{class_parser}{Parser}. \end{DoxyCompactList}\item 
 \hyperlink{class_parser_a33d9b1246a34fd02cce180d960943d34}{Parser} (\hyperlink{class_exporter}{Exporter} $\ast$exp)
-\item 
-bool \hyperlink{class_parser_a568d2353b3e6f89b0cf112f309229ffe}{setup} (\hyperlink{class_metronet}{Metronet} \&metro, std\+::string filename, std\+::ostream \&os)
-\begin{DoxyCompactList}\small\item\em Verwerkt het X\+M\+L-\/bestand en zet het metronet op. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em De default constructor van de klasse \hyperlink{class_parser}{Parser}. \end{DoxyCompactList}\item 
+\hyperlink{class_parser}{Parser} \& \hyperlink{class_parser_a622f2de84c005ebab29518949e6f6e62}{operator=} (const \hyperlink{class_parser}{Parser} \&rhs)
+\begin{DoxyCompactList}\small\item\em De overload van de = operator van de klasse \hyperlink{class_parser}{Parser}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_parser_a888642fb1a08450ab26cd0f8c5ba02ad}{properly\+Initialised} () const 
+\begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
+\hyperlink{_metronet_8h_ae69e1bf070c1c339170236b3fef70a4d}{Success\+Enum} \hyperlink{class_parser_a96b781357c53e72b5d4a12b5deb7a381}{setup} (\hyperlink{class_metronet}{Metronet} \&metronet, std\+::string filename, std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Verwerkt het X\+M\+L-\/bestand. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\hyperlink{class_parser}{Parser} klasse die het inlezen van X\+M\+L-\/bestanden behandelt. 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Parser@{Parser}!Parser@{Parser}}
@@ -23,6 +35,25 @@ bool \hyperlink{class_parser_a568d2353b3e6f89b0cf112f309229ffe}{setup} (\hyperli
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_parser_a12234f6cd36b61af4b50c94a179422c1}{}\label{class_parser_a12234f6cd36b61af4b50c94a179422c1}
+
+
+De lege constructor van de klasse \hyperlink{class_parser}{Parser}. 
+
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_parser_a888642fb1a08450ab26cd0f8c5ba02ad}{properly\+Initialised()}, \char`\"{}\+Parser is niet in de juiste staat geëindigd na aanroep van de constructor.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_parser_a12234f6cd36b61af4b50c94a179422c1_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{Parser@{Parser}!Parser@{Parser}}
 \index{Parser@{Parser}!Parser@{Parser}}
 \subsubsection[{\texorpdfstring{Parser(\+Exporter $\ast$exp)}{Parser(Exporter *exp)}}]{\setlength{\rightskip}{0pt plus 5cm}Parser\+::\+Parser (
@@ -32,31 +63,16 @@ bool \hyperlink{class_parser_a568d2353b3e6f89b0cf112f309229ffe}{setup} (\hyperli
 )}\hypertarget{class_parser_a33d9b1246a34fd02cce180d960943d34}{}\label{class_parser_a33d9b1246a34fd02cce180d960943d34}
 
 
-\subsection{Member Function Documentation}
-\index{Parser@{Parser}!setup@{setup}}
-\index{setup@{setup}!Parser@{Parser}}
-\subsubsection[{\texorpdfstring{setup(\+Metronet \&metro, std\+::string filename, std\+::ostream \&os)}{setup(Metronet &metro, std::string filename, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Parser\+::setup (
-\begin{DoxyParamCaption}
-\item[{{\bf Metronet} \&}]{metro, }
-\item[{std\+::string}]{filename, }
-\item[{std\+::ostream \&}]{os}
-\end{DoxyParamCaption}
-)}\hypertarget{class_parser_a568d2353b3e6f89b0cf112f309229ffe}{}\label{class_parser_a568d2353b3e6f89b0cf112f309229ffe}
-
-
-Verwerkt het X\+M\+L-\/bestand en zet het metronet op. 
+De default constructor van de klasse \hyperlink{class_parser}{Parser}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em metro} & Het metronet (referentie) dat aangepast moet worden. \\
-\hline
-{\em filename} & De naam van het X\+M\+L-\/bestand. \\
-\hline
-{\em os} & De stream waarnaar de output geschreven wordt (nodig voor de exporter).\\
+{\em exp} & De exporter die het genereren van de output zal behandelen \\
 \hline
 \end{DoxyParams}
-R\+E\+Q\+U\+I\+RE(this-\/$>$properly\+Initialised, \char`\"{}\+De parser was niet geinitialiseerd bij het aanroepen van setup\+Stations.\char`\"{});~\newline
-R\+E\+Q\+U\+I\+RE(metro.\+properly\+Initialised, \char`\"{}\+Het metronet was niet geinitialiseerd bij het aanroepen van setup\+Stations.\char`\"{});~\newline
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_parser_a888642fb1a08450ab26cd0f8c5ba02ad}{properly\+Initialised()}, \char`\"{}\+Parser is niet in de juiste staat geëindigd na aanroep van de constructor.\char`\"{}); 
+\end{DoxyPostcond}
 
 
 Here is the call graph for this function\+:
@@ -64,7 +80,105 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_parser_a568d2353b3e6f89b0cf112f309229ffe_cgraph}
+\includegraphics[width=323pt]{class_parser_a33d9b1246a34fd02cce180d960943d34_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Parser@{Parser}!operator=@{operator=}}
+\index{operator=@{operator=}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{operator=(const Parser \&rhs)}{operator=(const Parser &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser} \& Parser\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parser} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{class_parser_a622f2de84c005ebab29518949e6f6e62}{}\label{class_parser_a622f2de84c005ebab29518949e6f6e62}
+
+
+De overload van de = operator van de klasse \hyperlink{class_parser}{Parser}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & De parser waaran this gelijk gezet zal worden \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+De huidige parser dat gelijk wordt gezet aan rhs 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_parser_a888642fb1a08450ab26cd0f8c5ba02ad}{properly\+Initialised()}, \char`\"{}\+Parser is niet in de juiste staat geëindigd na aanroep van de copy assignment.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{class_parser_a622f2de84c005ebab29518949e6f6e62_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Parser@{Parser}!properly\+Initialised@{properly\+Initialised}}
+\index{properly\+Initialised@{properly\+Initialised}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{properly\+Initialised() const }{properlyInitialised() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Parser\+::properly\+Initialised (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_parser_a888642fb1a08450ab26cd0f8c5ba02ad}{}\label{class_parser_a888642fb1a08450ab26cd0f8c5ba02ad}
+
+
+Kijk na of de constructor in de juiste staat geeindigd is. 
+
+\begin{DoxyReturn}{Returns}
+Boolean die aangeeft of het object juist geinitialiseerd is. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{class_parser_a888642fb1a08450ab26cd0f8c5ba02ad_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Parser@{Parser}!setup@{setup}}
+\index{setup@{setup}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{setup(\+Metronet \&metronet, std\+::string filename, std\+::ostream \&os)}{setup(Metronet &metronet, std::string filename, std::ostream &os)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Success\+Enum} Parser\+::setup (
+\begin{DoxyParamCaption}
+\item[{{\bf Metronet} \&}]{metronet, }
+\item[{std\+::string}]{filename, }
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{class_parser_a96b781357c53e72b5d4a12b5deb7a381}{}\label{class_parser_a96b781357c53e72b5d4a12b5deb7a381}
+
+
+Verwerkt het X\+M\+L-\/bestand. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & De naam van het X\+M\+L-\/bestand. \\
+\hline
+{\em os} & De stream waarnaar de output geschreven wordt (nodig voor de exporter). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$properly\+Initialised, \char`\"{}\+Het metronet was niet geinitialiseerd bij het aanroepen van setup\+Stations.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_parser_a96b781357c53e72b5d4a12b5deb7a381_cgraph}
 \end{center}
 \end{figure}
 
@@ -76,7 +190,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=229pt]{class_parser_a568d2353b3e6f89b0cf112f309229ffe_icgraph}
+\includegraphics[width=229pt]{class_parser_a96b781357c53e72b5d4a12b5deb7a381_icgraph}
 \end{center}
 \end{figure}
 

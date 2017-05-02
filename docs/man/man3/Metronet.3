@@ -1,4 +1,4 @@
-.TH "Metronet" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "Metronet" 3 "Fri Apr 28 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,10 +33,6 @@ Metronet \- \fBMetronet\fP klasse die XML bestanden inleest, de consistentie hie
 .br
 .RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
 .ti -1c
-.RI "\fBSuccessEnum\fP \fBsetup\fP (std::string filename, std::ostream &os)"
-.br
-.RI "\fIVerwerkt het XML-bestand\&. \fP"
-.ti -1c
 .RI "std::map< std::string, \fBStation\fP * > \fBgetStations\fP ()"
 .br
 .RI "\fIGeeft alle stations in het metronet terug\&. \fP"
@@ -44,6 +40,10 @@ Metronet \- \fBMetronet\fP klasse die XML bestanden inleest, de consistentie hie
 .RI "std::map< int, \fBTram\fP * > & \fBgetTrams\fP ()"
 .br
 .RI "\fIGeeft alle trams in het metronet terug\&. \fP"
+.ti -1c
+.RI "std::map< std::string, \fBPassagier\fP * > & \fBgetPassagiers\fP ()"
+.br
+.RI "\fIGeeft alle passagiers in het metronet terug\&. \fP"
 .ti -1c
 .RI "bool \fBbevatTram\fP (\fBTram\fP *tram)"
 .br
@@ -57,17 +57,25 @@ Metronet \- \fBMetronet\fP klasse die XML bestanden inleest, de consistentie hie
 .br
 .RI "\fIKijkt na of het metronet de opgegeven tram bevat\&. \fP"
 .ti -1c
-.RI "void \fBaddStation\fP (\fBStation\fP *station)"
+.RI "bool \fBbevatPassagier\fP (\fBPassagier\fP *pas)"
+.br
+.RI "\fIKijkt na of het metronet de opgegeven passagier bevat\&. \fP"
+.ti -1c
+.RI "void \fBaddStation\fP (std::string naam, std::string type, std::map< int, std::string > vorigeStations, std::map< int, std::string > volgendeStations)"
 .br
 .RI "\fIVoegt station toe aan metronet\&. \fP"
 .ti -1c
-.RI "void \fBaddTram\fP (\fBTram\fP *tram)"
+.RI "void \fBaddTram\fP (int zitplaatsen, int snelheid, int spoor, int voertuigNr, std::string type, std::string beginStation)"
 .br
 .RI "\fIVoegt tram toe aan metronet\&. \fP"
 .ti -1c
 .RI "void \fBaddSpoor\fP (int spoor)"
 .br
 .RI "\fIVoegt spoor toe aan metronet\&. \fP"
+.ti -1c
+.RI "void \fBaddPassagier\fP (std::string naam, std::string beginStation, std::string eindStation, int hoeveelheid)"
+.br
+.RI "\fIVoegt een passagier toe aan het metronet\&. \fP"
 .ti -1c
 .RI "bool \fBcheckConsistent\fP (std::ostream &os)"
 .br
@@ -77,13 +85,17 @@ Metronet \- \fBMetronet\fP klasse die XML bestanden inleest, de consistentie hie
 .br
 .RI "\fIPrint het hele metronet\&. \fP"
 .ti -1c
-.RI "bool \fBopstappenAfstappen\fP (std::string station, std::ostream &os)"
+.RI "int \fBopstappenAfstappen\fP (\fBTram\fP *tram, std::ostream &os)"
 .br
 .RI "\fIBehandelt het opstappen en afstappen van passagiers\&. \fP"
 .ti -1c
 .RI "void \fBrondrijden\fP (std::ostream &os)"
 .br
 .RI "\fIEmuleert het rondrijden van trams\&. \fP"
+.ti -1c
+.RI "bool \fBtramMagVertrekken\fP (\fBTram\fP *tram)"
+.br
+.RI "\fIKijkt of de gegeven tram verder mag rijden\&. \fP"
 .ti -1c
 .RI "void \fBreset\fP ()"
 .br
@@ -127,6 +139,29 @@ ENSURE(this->\fBproperlyInitialised()\fP, 'Metronet is niet in de juiste staat g
 De destructor van de klasse \fBMetronet\fP\&. 
 .SH "Member Function Documentation"
 .PP 
+.SS "void Metronet::addPassagier (std::string naam, std::string beginStation, std::string eindStation, int hoeveelheid)"
+
+.PP
+Voegt een passagier toe aan het metronet\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpas\fP De passagier die toegevoegd zal worden 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van addPassagier\&.'); 
+.PP
+REQUIRE(pas->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van addPassagier\&.'); 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(bevatPassagier(pas), 'Passagier was niet toegevoegd bij aanroep van addPassagier\&.'); 
+.RE
+.PP
+
 .SS "void Metronet::addSpoor (int spoor)"
 
 .PP
@@ -148,7 +183,7 @@ ENSURE(bevatSpoor(spoor), 'Spoor was niet toegevoegd bij de aanroep van addSpoor
 .RE
 .PP
 
-.SS "void Metronet::addStation (\fBStation\fP * station)"
+.SS "void Metronet::addStation (std::string naam, std::string type, std::map< int, std::string > vorigeStations, std::map< int, std::string > volgendeStations)"
 
 .PP
 Voegt station toe aan metronet\&. 
@@ -171,7 +206,7 @@ ENSURE(bevatStation(station), 'Station was niet toegevoegd bij de aanroep van ad
 .RE
 .PP
 
-.SS "void Metronet::addTram (\fBTram\fP * tram)"
+.SS "void Metronet::addTram (int zitplaatsen, int snelheid, int spoor, int voertuigNr, std::string type, std::string beginStation)"
 
 .PP
 Voegt tram toe aan metronet\&. 
@@ -194,6 +229,29 @@ ENSURE(bevatTram(tram), 'Tram was niet toegevoegd bij de aanroep van addTram\&.'
 .RE
 .PP
 
+.SS "bool Metronet::bevatPassagier (\fBPassagier\fP * pas)"
+
+.PP
+Kijkt na of het metronet de opgegeven passagier bevat\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpas\fP De passagier die gezocht moet worden\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het metronet de passagier bevat\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier\&.'); 
+.PP
+REQUIRE(pas->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier\&.'); 
+.RE
+.PP
+
 .SS "bool Metronet::bevatSpoor (int spoor)"
 
 .PP
@@ -201,7 +259,7 @@ Kijkt na of het metronet de opgegeven tram bevat\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fItram\fP De tram die moet gezocht worden\&. 
+\fItram\fP Het spoor dat moet gezocht worden\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -235,6 +293,8 @@ Boolean die aangeeft of het metronet de tram bevat\&.
 REQUIRE(station->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij aanroep van bevatStation\&.'); 
 .PP
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van bevatStation\&.'); 
+.PP
+REQUIRE(station->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij de aanroep van bevatStation\&.'); 
 .RE
 .PP
 
@@ -268,8 +328,6 @@ Kijkt na of het metronet consistent is\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIexp\fP De exporter die de output zal behandelen\&. 
-.br
 \fIos\fP De stream waar de output naar gestuurd zal worden\&. 
 .RE
 .PP
@@ -281,6 +339,22 @@ Boolean die aangeeft of het \fBMetronet\fP consistent is\&.
 \fBPrecondition:\fP
 .RS 4
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van checkConsistent\&.'); 
+.RE
+.PP
+
+.SS "std::map< std::string, \fBPassagier\fP * > & Metronet::getPassagiers ()"
+
+.PP
+Geeft alle passagiers in het metronet terug\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Map met alle passagiers in het metronet\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij de aanroep van getPassagiers\&.'); 
 .RE
 .PP
 
@@ -332,23 +406,25 @@ Het huidig metronet dat gelijk wordt gezet aan rhs
 .RE
 .PP
 
-.SS "bool Metronet::opstappenAfstappen (std::string station, std::ostream & os)"
+.SS "int Metronet::opstappenAfstappen (\fBTram\fP * tram, std::ostream & os)"
 
 .PP
 Behandelt het opstappen en afstappen van passagiers\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIstation\fP Het station waar mensen opstappen en afstappen\&. 
+\fItram\fP De tram waar mensen opstappen en afstappen\&. 
+.br
+\fIos\fP De stream waar de output naar gestuurd zal worden\&. 
 .RE
 .PP
 \fBPrecondition:\fP
 .RS 4
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen\&.'); 
 .PP
-REQUIRE((stations\&.find(station) != stations\&.end()), 'Station bestaat niet in het metronet\&.'); 
+REQUIRE(tram->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij aanroep van opstappenAfstappen\&.'); 
 .PP
-REQUIRE(stations[station]->\fBproperlyInitialised()\fP, 'Station was niet geinitialiseerd bij aanroep van opstappenAfstappen\&.'); 
+REQUIRE(trams\&.find(tram->getVoertuignummer()) != trams\&.end(), 'Tram bestaat niet in het metronet\&.'); 
 .RE
 .PP
 
@@ -359,8 +435,6 @@ Print het hele metronet\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIexp\fP De exporter die gebruikt moet worden 
-.br
 \fIos\fP De stream waar de output naar gestuurd moet worden 
 .RE
 .PP
@@ -385,6 +459,11 @@ Boolean die aangeeft of het object juist geinitialiseerd is\&.
 
 .PP
 Reset heel het systeem\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItram\fP De tram waarvoor gekeken wordt of vertrokken mag worden\&. 
+.RE
 .PP
 \fBPrecondition:\fP
 .RS 4
@@ -413,21 +492,14 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bi
 .RE
 .PP
 
-.SS "\fBSuccessEnum\fP Metronet::setup (std::string filename, std::ostream & os)"
+.SS "bool Metronet::tramMagVertrekken (\fBTram\fP * tram)"
 
 .PP
-Verwerkt het XML-bestand\&. 
+Kijkt of de gegeven tram verder mag rijden\&. 
 .PP
-\fBParameters:\fP
+\fBReturns:\fP
 .RS 4
-\fIfilename\fP De naam van het XML-bestand\&. 
-.br
-\fIos\fP De stream waarnaar de output geschreven wordt (nodig voor de exporter)\&. 
-.RE
-.PP
-\fBPrecondition:\fP
-.RS 4
-REQUIRE(this->properlyInitialised, 'Het metronet was niet geinitialiseerd bij het aanroepen van setupStations\&.'); 
+Boolean die aangeeft of een tram mag vertrekken /pre REQUIRE(this->\fBproperlyInitialised()\fP, 'Metronet was niet geinitialiseerd bij aanroep van tramMagVertrekken\&.'); /pre REQUIRE(tram->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij het aanroepen van tramMagVertrekken\&.'); 
 .RE
 .PP
 

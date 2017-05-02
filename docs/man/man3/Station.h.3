@@ -1,4 +1,4 @@
-.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Station.h" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Station.h" 3 "Fri Apr 28 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,6 +8,10 @@
 .PP
 \fC#include <iostream>\fP
 .br
+\fC#include <map>\fP
+.br
+\fC#include <vector>\fP
+.br
 \fC#include 'DesignByContract\&.h'\fP
 .br
 
@@ -15,10 +19,31 @@
 
 .in +1c
 .ti -1c
+.RI "struct \fBstationVerbinding\fP"
+.br
+.ti -1c
 .RI "class \fBStation\fP"
 .br
 .RI "\fI\fBStation\fP klasse die een STATION element uit een XML-bestand representeert\&. \fP"
 .in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStationType\fP { \fBMetrostation\fP, \fBHalte\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBStationType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMetrostation \fP\fP
+.TP
+\fB\fIHalte \fP\fP
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Metronet from the source code\&.

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['successenum',['SuccessEnum',['../_metronet_8h.html#ae69e1bf070c1c339170236b3fef70a4d',1,'Metronet.h']]]
+  ['tramtype',['TramType',['../_tram_8h.html#a99a569ed4574fb6ca7eb4edab2a4d5e1',1,'Tram.h']]]
 ];

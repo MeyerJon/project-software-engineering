@@ -91,19 +91,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_station.html">Station</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_station.html#aed0008123f97257f9b4365918dd90512">getAfstappen</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_station.html#a6d4234bcd1027dc83c7984e207e8bd74">getNaam</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a531809394b3affd749ccbd5e992a61b9">getOpstappen</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_station.html#a0fc1a72d194b9f67151eea0e957aad3c">getSpoor</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a6db00c0be0f1c6aea3848038a2a9a350">getVolgende</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_station.html#af7516368cf83e9cbadf10309bc8c4aa2">getVorige</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20">properlyInitialised</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a4851849f7f158fa51ab91a9cd56986f2">bevatSpoor</a>(int spoor) const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3">bezetSpoor</a>(int spoor, bool isTramHier)</td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a6d4234bcd1027dc83c7984e207e8bd74">getNaam</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_station.html#abec3576133446a9f1699b7778f07ada9">getSporen</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a3868695486e4f95ec5c3d426bd270773">getType</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_station.html#a950a03b6e82abe53c0bbc10542e4cdee">getVolgende</a>(int spoor) const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a054c18147669814c9c3206419ec6d8cc">getVorige</a>(int spoor) const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_station.html#a8a258a9759b3637fb17fb8b008b5db81">isHalte</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a79ecb699d3cfbd1e450f6a4b72b6034e">isMetrostation</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20">properlyInitialised</a>() const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_station.html#ab8a40b1e5d3b6228a3a173dd0140a5fb">spoorBezet</a>(int spoor) const </td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_station.html#a73d335726aad1d844d81cda6d9fd74e6">Station</a>()</td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a41fd39388109ad33ea86eb9831ab2f45">Station</a>(std::string n, std::string vor, std::string volg, int sp, int op, int af)</td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_station.html#a1e4adf32db055845769b79fe25b0e946">Station</a>(std::string n, std::string typeNaam, std::map&lt; int, std::string &gt; vorigeStations, std::map&lt; int, std::string &gt; volgendeStations)</td><td class="entry"><a class="el" href="class_station.html">Station</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 23 2017 20:47:10 for Metronet by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

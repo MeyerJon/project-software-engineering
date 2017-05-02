@@ -1,15 +1,19 @@
 <map id="Metronet::properlyInitialised" name="Metronet::properlyInitialised">
-<area shape="rect" id="node2" href="$class_metronet.html#abdd205c39857ed1aabd104a6886cad45" title="De lege constructor van de klasse Metronet. " alt="" coords="289,5,433,33"/>
-<area shape="rect" id="node4" href="$class_metronet.html#a0bcafdae671ac5fff7a4b54429f440ba" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="283,57,439,85"/>
-<area shape="rect" id="node5" href="$class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="524,109,669,137"/>
-<area shape="rect" id="node8" href="$class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="278,161,445,189"/>
-<area shape="rect" id="node9" href="$class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="519,211,675,239"/>
-<area shape="rect" id="node10" href="$class_metronet.html#a0422381a8d7f32a915e0ad966af43627" title="Voegt spoor toe aan metronet. " alt="" coords="521,263,672,291"/>
-<area shape="rect" id="node11" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="723,315,915,343"/>
-<area shape="rect" id="node12" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="252,367,471,395"/>
-<area shape="rect" id="node13" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="521,367,672,395"/>
-<area shape="rect" id="node14" href="$class_metronet.html#aae72fb7ad05324adb1ccc6a1519c5c0b" title="Reset heel het systeem. " alt="" coords="302,471,421,499"/>
-<area shape="rect" id="node3" href="$_metronet_output_test_8cpp.html#a85312b5009a76633bb9e683a60739a22" title="TEST_F" alt="" coords="558,5,635,33"/>
-<area shape="rect" id="node6" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="757,237,880,265"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="963,315,1016,343"/>
+<area shape="rect" id="node2" href="$class_metronet.html#abdd205c39857ed1aabd104a6886cad45" title="De lege constructor van de klasse Metronet. " alt="" coords="255,5,387,32"/>
+<area shape="rect" id="node4" href="$class_metronet.html#a76ffa64edd87b4b6d47c0486b4ef27ab" title="Geeft alle passagiers in het metronet terug. " alt="" coords="239,56,403,83"/>
+<area shape="rect" id="node5" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="455,107,655,133"/>
+<area shape="rect" id="node6" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="723,183,861,209"/>
+<area shape="rect" id="node8" href="$class_metronet.html#a0bcafdae671ac5fff7a4b54429f440ba" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="250,309,393,336"/>
+<area shape="rect" id="node9" href="$class_metronet.html#a2d87bbeb977db9176f94116a02b9b17e" title="Voegt tram toe aan metronet. " alt="" coords="489,309,621,336"/>
+<area shape="rect" id="node11" href="$class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="244,411,399,437"/>
+<area shape="rect" id="node12" href="$class_metronet.html#ab2cbe114faa2ee312f6ea4e551962193" title="Voegt station toe aan metronet. " alt="" coords="483,411,626,437"/>
+<area shape="rect" id="node13" href="$class_metronet.html#a61ae688a6fc54bc4550bcb71f36715cf" title="Kijkt na of het metronet de opgegeven passagier bevat. " alt="" coords="236,512,407,539"/>
+<area shape="rect" id="node14" href="$class_metronet.html#a94aabe02de1f82f95a8f19aac2c0bd12" title="Voegt een passagier toe aan het metronet. " alt="" coords="475,461,635,488"/>
+<area shape="rect" id="node15" href="$class_metronet.html#a0422381a8d7f32a915e0ad966af43627" title="Voegt spoor toe aan metronet. " alt="" coords="487,537,623,564"/>
+<area shape="rect" id="node16" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="703,537,881,564"/>
+<area shape="rect" id="node17" href="$class_metronet.html#adad7cd43bc0e48a00fbd87a1288fd498" title="Kijkt of de gegeven tram verder mag rijden. " alt="" coords="457,208,652,235"/>
+<area shape="rect" id="node18" href="$class_metronet.html#aae72fb7ad05324adb1ccc6a1519c5c0b" title="Reset heel het systeem. " alt="" coords="266,664,377,691"/>
+<area shape="rect" id="node3" href="$_metronet_output_test_8cpp.html#a85312b5009a76633bb9e683a60739a22" title="TEST_F" alt="" coords="519,5,590,32"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="929,436,980,463"/>
+<area shape="rect" id="node10" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="742,436,842,463"/>
 </map>

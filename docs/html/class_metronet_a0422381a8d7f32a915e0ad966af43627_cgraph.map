@@ -1,4 +1,4 @@
 <map id="Metronet::addSpoor" name="Metronet::addSpoor">
-<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="204,5,403,33"/>
-<area shape="rect" id="node3" href="$class_metronet.html#a0404525187984ca1fc437eef7a09e54a" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="223,57,384,85"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="189,5,372,32"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a0404525187984ca1fc437eef7a09e54a" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="207,56,354,83"/>
 </map>

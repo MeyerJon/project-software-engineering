@@ -1,0 +1,6 @@
+<map id="Passagier::huidigeTram" name="Passagier::huidigeTram">
+<area shape="rect" id="node2" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="223,5,381,32"/>
+<area shape="rect" id="node4" href="$class_passagier.html#a378500b83548e71ada81b248747a585f" title="Passagier::setHuidigeTram" alt="" coords="212,56,392,83"/>
+<area shape="rect" id="node5" href="$class_passagier.html#a1a2bc82f5780448cd2a9a47d08cc824f" title="Lege constructor. " alt="" coords="440,81,587,108"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="488,5,539,32"/>
+</map>

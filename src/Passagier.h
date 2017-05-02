@@ -8,6 +8,9 @@
 #include <string>
 #include "DesignByContract.h"
 
+/**
+ * \brief Passagier klasse die een groep passagiers zal voorstellen.
+ */
 class Passagier {
     std::string naam;
     std::string beginStation;

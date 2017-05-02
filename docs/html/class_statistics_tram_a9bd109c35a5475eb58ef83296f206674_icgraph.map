@@ -1,0 +1,5 @@
+<map id="StatisticsTram::getAantalPersonen" name="StatisticsTram::getAantalPersonen">
+<area shape="rect" id="node2" href="$class_statistics_tram.html#ab06e6877ad97269962bc1e4551e50245" title="StatisticsTram::setAantal\lPersonen" alt="" coords="224,5,395,47"/>
+<area shape="rect" id="node3" href="$class_statistics_station.html#a515215f01a8a242419aff06ad1eb3ba0" title="StatisticsStation::\lsetAantalGroepen" alt="" coords="246,71,373,112"/>
+<area shape="rect" id="node4" href="$class_statistics_station.html#a8af29ae9099a431c72884f987bfb7795" title="StatisticsStation::\lsetAantalPersonen" alt="" coords="243,136,375,177"/>
+</map>

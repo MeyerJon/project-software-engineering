@@ -1,3 +1,5 @@
 <map id="Tram::getSnelheid" name="Tram::getSnelheid">
-<area shape="rect" id="node2" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="193,5,271,33"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="181,5,339,32"/>
+<area shape="rect" id="node4" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="225,56,295,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="387,5,437,32"/>
 </map>

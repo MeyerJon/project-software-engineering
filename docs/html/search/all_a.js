@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['partialimport',['PartialImport',['../_metronet_8h.html#ae69e1bf070c1c339170236b3fef70a4da21205c22fde3e4f49e0e131a4377491a',1,'Metronet.h']]],
-  ['printmetronet',['printMetronet',['../class_metronet.html#a3d8b85c241fff3a9353c06320226e84e',1,'Metronet']]],
-  ['properlyinitialised',['properlyInitialised',['../class_exporter.html#af01d2a6c2f54329b1867a19537e11a34',1,'Exporter::properlyInitialised()'],['../class_metronet.html#a3d2adce29a947f162924279b766de645',1,'Metronet::properlyInitialised()'],['../class_station.html#a5749af84d13b71d34aa1fb5b0a935a20',1,'Station::properlyInitialised()'],['../class_tram.html#a98992eff0453f54fbe64e1f1064169c7',1,'Tram::properlyInitialised()']]]
+  ['operator_3d',['operator=',['../class_metronet.html#a116ec9674637a45ff59cbb2cebb8dd21',1,'Metronet::operator=()'],['../class_parser.html#a622f2de84c005ebab29518949e6f6e62',1,'Parser::operator=()']]],
+  ['opstappen',['opstappen',['../class_tram.html#af42c023f82a85f68ec60cfa7b52d4d85',1,'Tram']]],
+  ['opstappenafstappen',['opstappenAfstappen',['../class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70',1,'Metronet']]]
 ];

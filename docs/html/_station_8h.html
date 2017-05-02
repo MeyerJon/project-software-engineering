@@ -87,19 +87,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Station.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="_design_by_contract_8h_source.html">DesignByContract.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Station.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_station_8h__incl.png" border="0" usemap="#_2home_2jonathan_2_desktop_2_project_01_software_01_engineering_2_metronet_2_p_s_e_2src_2_station_8h" alt=""/></div>
 <map name="_2home_2jonathan_2_desktop_2_project_01_software_01_engineering_2_metronet_2_p_s_e_2src_2_station_8h" id="_2home_2jonathan_2_desktop_2_project_01_software_01_engineering_2_metronet_2_p_s_e_2src_2_station_8h">
-<area shape="rect" id="node3" href="_design_by_contract_8h.html" title="DesignByContract.h" alt="" coords="107,113,258,141"/>
+<area shape="rect" id="node5" href="_design_by_contract_8h.html" title="DesignByContract.h" alt="" coords="257,109,397,136"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -107,16 +110,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_station_8h__dep__incl.png" border="0" usemap="#_2home_2jonathan_2_desktop_2_project_01_software_01_engineering_2_metronet_2_p_s_e_2src_2_station_8hdep" alt=""/></div>
 <map name="_2home_2jonathan_2_desktop_2_project_01_software_01_engineering_2_metronet_2_p_s_e_2src_2_station_8hdep" id="_2home_2jonathan_2_desktop_2_project_01_software_01_engineering_2_metronet_2_p_s_e_2src_2_station_8hdep">
-<area shape="rect" id="node2" href="_metronet_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Metronet.h" alt="" coords="535,113,749,173"/>
-<area shape="rect" id="node11" href="_station_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Station.cpp" alt="" coords="774,113,990,173"/>
-<area shape="rect" id="node3" href="main_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/main.cpp" alt="" coords="5,221,220,281"/>
-<area shape="rect" id="node4" href="_metronet_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Metronet.cpp" alt="" coords="244,221,472,281"/>
-<area shape="rect" id="node5" href="_metronet_domain_test_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetDomainTest.h" alt="" coords="497,221,787,281"/>
-<area shape="rect" id="node7" href="_metronet_input_test_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetInputTest.h" alt="" coords="812,221,1085,281"/>
-<area shape="rect" id="node9" href="_metronet_output_test_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetOutputTest.h" alt="" coords="1117,221,1401,281"/>
-<area shape="rect" id="node6" href="_metronet_domain_test_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetDomainTest.cpp" alt="" coords="474,329,781,389"/>
-<area shape="rect" id="node8" href="_metronet_input_test_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetInputTest.cpp" alt="" coords="805,329,1093,389"/>
-<area shape="rect" id="node10" href="_metronet_output_test_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetOutputTest.cpp" alt="" coords="1117,329,1415,389"/>
+<area shape="rect" id="node2" href="_metronet_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Metronet.h" alt="" coords="395,109,591,165"/>
+<area shape="rect" id="node7" href="_metronet_input_test_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetInputTest.h" alt="" coords="13,317,263,373"/>
+<area shape="rect" id="node13" href="_station_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Station.cpp" alt="" coords="615,109,815,165"/>
+<area shape="rect" id="node3" href="_parser_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Parser.h" alt="" coords="509,213,703,269"/>
+<area shape="rect" id="node5" href="_metronet_domain_test_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetDomainTest.h" alt="" coords="1013,317,1279,373"/>
+<area shape="rect" id="node9" href="_metronet_output_test_8h.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetOutputTest.h" alt="" coords="727,317,989,373"/>
+<area shape="rect" id="node12" href="_metronet_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Metronet.cpp" alt="" coords="274,213,485,269"/>
+<area shape="rect" id="node4" href="main_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/main.cpp" alt="" coords="509,317,703,373"/>
+<area shape="rect" id="node11" href="_parser_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/Parser.cpp" alt="" coords="287,317,485,373"/>
+<area shape="rect" id="node6" href="_metronet_domain_test_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetDomainTest.cpp" alt="" coords="1012,421,1293,477"/>
+<area shape="rect" id="node8" href="_metronet_input_test_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetInputTest.cpp" alt="" coords="5,421,271,477"/>
+<area shape="rect" id="node10" href="_metronet_output_test_8cpp.html" title="/home/jonathan/Desktop\l/Project Software Engineering\l/Metronet/PSE/src/MetronetOutputTest.cpp" alt="" coords="713,421,987,477"/>
 </map>
 </div>
 </div>
@@ -124,14 +129,42 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstation_verbinding.html">stationVerbinding</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html">Station</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_station.html" title="Station klasse die een STATION element uit een XML-bestand representeert. ">Station</a> klasse die een STATION element uit een XML-bestand representeert.  <a href="class_station.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac8b7d9d794931ebfe6e3dbcec5336968"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_station_8h.html#ac8b7d9d794931ebfe6e3dbcec5336968">StationType</a> { <a class="el" href="_station_8h.html#ac8b7d9d794931ebfe6e3dbcec5336968a31d0c58f8ccb0c3c39a406f3b4b0b95e">Metrostation</a>, 
+<a class="el" href="_station_8h.html#ac8b7d9d794931ebfe6e3dbcec5336968a17e6c163ad77a1908f2447da8259b518">Halte</a>
+ }</td></tr>
+<tr class="separator:ac8b7d9d794931ebfe6e3dbcec5336968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ac8b7d9d794931ebfe6e3dbcec5336968"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_station_8h.html#ac8b7d9d794931ebfe6e3dbcec5336968">StationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac8b7d9d794931ebfe6e3dbcec5336968a31d0c58f8ccb0c3c39a406f3b4b0b95e"></a>Metrostation&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac8b7d9d794931ebfe6e3dbcec5336968a17e6c163ad77a1908f2447da8259b518"></a>Halte&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 23 2017 20:47:10 for Metronet by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

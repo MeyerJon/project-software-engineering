@@ -1,5 +1,5 @@
 <map id="Metronet::bevatTram" name="Metronet::bevatTram">
-<area shape="rect" id="node2" href="$class_metronet.html#a3a01132772f4a367d83af40a3c02e224" title="Voegt tram toe aan metronet. " alt="" coords="209,5,355,33"/>
-<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="403,5,525,33"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="573,5,627,33"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a2d87bbeb977db9176f94116a02b9b17e" title="Voegt tram toe aan metronet. " alt="" coords="196,5,328,32"/>
+<area shape="rect" id="node3" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="376,5,476,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="524,5,575,32"/>
 </map>

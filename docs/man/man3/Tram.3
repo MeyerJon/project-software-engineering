@@ -1,4 +1,4 @@
-.TH "Tram" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "Tram" 3 "Fri Apr 28 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ Tram \- \fBTram\fP klasse die een TRAM element uit een XML-bestand representeert
 .br
 .RI "\fIDe lege constructor van de klasse \fBTram\fP\&. \fP"
 .ti -1c
-.RI "\fBTram\fP (int zit, int snel, int sp, std::string beginS)"
+.RI "\fBTram\fP (int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS)"
 .br
 .RI "\fIDe default constructor van de klasse \fBTram\fP\&. \fP"
 .ti -1c
@@ -27,9 +27,13 @@ Tram \- \fBTram\fP klasse die een TRAM element uit een XML-bestand representeert
 .ti -1c
 .RI "int \fBgetZitplaatsen\fP () const "
 .br
-.RI "\fIGeef de zitplaatsen terug van de tram\&. \fP"
+.RI "\fIGeef de zitplaatsen van de tram\&. \fP"
 .ti -1c
-.RI "int \fBgetPassagiers\fP () const "
+.RI "int \fBgetBezettePlaatsen\fP () const "
+.br
+.RI "\fIGeef de bezette zitplaatsen van de tram\&. \fP"
+.ti -1c
+.RI "std::vector< \fBPassagier\fP * > \fBgetPassagiers\fP () const "
 .br
 .RI "\fIGeef de passagiers terug van de tram\&. \fP"
 .ti -1c
@@ -49,25 +53,65 @@ Tram \- \fBTram\fP klasse die een TRAM element uit een XML-bestand representeert
 .br
 .RI "\fIGeef het huidig station\&. \fP"
 .ti -1c
+.RI "std::string \fBgetType\fP () const "
+.br
+.RI "\fIGeef het type van de tram\&. \fP"
+.ti -1c
+.RI "int \fBgetVoertuignummer\fP () const "
+.br
+.RI "\fIGeef het voertuignummer van de tram\&. \fP"
+.ti -1c
+.RI "double \fBgetOmzet\fP () const "
+.br
+.RI "\fIGeeft de huidige omzet van de tram\&. \fP"
+.ti -1c
+.RI "bool \fBbevatPassagier\fP (\fBPassagier\fP *pas) const "
+.br
+.RI "\fICheckt of de gegeven \fBPassagier\fP op de tram zit\&. \fP"
+.ti -1c
 .RI "void \fBsetHuidigStation\fP (std::string station)"
 .br
 .RI "\fIPast het huidige station aan\&. \fP"
 .ti -1c
-.RI "void \fBsetPassagiers\fP (int pas)"
+.RI "void \fBsetBezettePlaatsen\fP (int aantalBezettePlaatsen)"
 .br
-.RI "\fIPast het aantal passagiers aan\&. \fP"
+.RI "\fIPast het aantal bezette plaatsen aan\&. \fP"
+.ti -1c
+.RI "void \fBsetOmzet\fP (double o)"
+.br
+.RI "\fIPast de huide omzet van de tram aan\&. \fP"
+.ti -1c
+.RI "void \fBaddPassagier\fP (\fBPassagier\fP *pas)"
+.br
+.RI "\fIVoegt een passagier toe en update de status van de passagier\&. \fP"
+.ti -1c
+.RI "void \fBremovePassagier\fP (\fBPassagier\fP *pas)"
+.br
+.RI "\fIVerwijdert een passagier en update de status van de passagier\&. \fP"
+.ti -1c
+.RI "bool \fBisAlbatros\fP () const "
+.br
+.RI "\fIGeeft aan of de tram een Albatros is\&. \fP"
+.ti -1c
+.RI "bool \fBisPCC\fP () const "
+.br
+.RI "\fIGeeft aan of de tram een PCC is\&. \fP"
+.ti -1c
+.RI "void \fBsetVoertuignummer\fP (int n)"
+.br
+.RI "\fIPast het voertuignummer aan\&. \fP"
 .ti -1c
 .RI "void \fBverplaatsTram\fP (std::string station, \fBExporter\fP *exp, std::ostream &os)"
 .br
 .RI "\fIVerplaatst een tram naar het opgegeven station\&. \fP"
 .ti -1c
-.RI "bool \fBafstappen\fP (int afstappen)"
+.RI "bool \fBafstappen\fP (\fBPassagier\fP *pas)"
 .br
-.RI "\fIEmuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) \fP"
+.RI "\fIEmuleert afstappen van passagiers\&. \fP"
 .ti -1c
-.RI "bool \fBopstappen\fP (int opstappen)"
+.RI "bool \fBopstappen\fP (\fBPassagier\fP *pas)"
 .br
-.RI "\fIEmuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) \fP"
+.RI "\fIEmuleert opstappen van passagiers\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -85,7 +129,7 @@ ENSURE(this->\fBproperlyInitialised()\fP, 'Tram is niet in de juiste staat geëi
 .RE
 .PP
 
-.SS "Tram::Tram (int zit, int snel, int sp, std::string beginS)"
+.SS "Tram::Tram (int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS)"
 
 .PP
 De default constructor van de klasse \fBTram\fP\&. 
@@ -109,14 +153,37 @@ ENSURE(this->\fBproperlyInitialised()\fP, 'Tram is niet in de juiste staat geëi
 
 .SH "Member Function Documentation"
 .PP 
-.SS "bool Tram::afstappen (int afstappen)"
+.SS "void Tram::addPassagier (\fBPassagier\fP * pas)"
 
 .PP
-Emuleert afstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal - afstappende passagiers) 
+Voegt een passagier toe en update de status van de passagier\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIafstappen\fP Aantal passagiers dat afstapt\&. 
+\fIpas\fP Nieuwe groep passagiers 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van addPassagier\&.'); 
+.PP
+REQUIRE(pas->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van addPassagier\&.'); 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(bevatPassagier(pas), 'Passagiers niet aangepast bij aanroep van addPassagiers\&.'); 
+.RE
+.PP
+
+.SS "bool Tram::afstappen (\fBPassagier\fP * pas)"
+
+.PP
+Emuleert afstappen van passagiers\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpas\fP \fBPassagier\fP die afstapt\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -128,7 +195,30 @@ boolean Of er meer passagiers afstapten dan mogelijk\&.
 .RS 4
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van afstappen\&.'); 
 .PP
-REQUIRE(afstappen >= 0, 'Afstappen kan geen negatieve waarde hebben bij aanroep van afstappen\&.'); 
+REQUIRE(pas->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van afstappen\&.'); 
+.RE
+.PP
+
+.SS "bool Tram::bevatPassagier (\fBPassagier\fP * pas) const"
+
+.PP
+Checkt of de gegeven \fBPassagier\fP op de tram zit\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpas\fP De passagier die al dan niet op de tram zit\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Bool die aangeeft of de \fBPassagier\fP op de tram zit\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van bevatPassagier\&.'); 
+.PP
+REQUIRE(pas->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier\&.'); 
 .RE
 .PP
 
@@ -148,6 +238,22 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de
 .RE
 .PP
 
+.SS "int Tram::getBezettePlaatsen () const"
+
+.PP
+Geef de bezette zitplaatsen van de tram\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De bezette zitplaatsen\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getBezettePlaatsen\&.'); 
+.RE
+.PP
+
 .SS "std::string Tram::getHuidigStation () const"
 
 .PP
@@ -164,7 +270,23 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de
 .RE
 .PP
 
-.SS "int Tram::getPassagiers () const"
+.SS "double Tram::getOmzet () const"
+
+.PP
+Geeft de huidige omzet van de tram\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De huidige omzet van de tram 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getOmzet\&.'); 
+.RE
+.PP
+
+.SS "std::vector< \fBPassagier\fP * > Tram::getPassagiers () const"
 
 .PP
 Geef de passagiers terug van de tram\&. 
@@ -212,10 +334,42 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de
 .RE
 .PP
 
+.SS "std::string Tram::getType () const"
+
+.PP
+Geef het type van de tram\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het type van de tram als string\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getType\&.'); 
+.RE
+.PP
+
+.SS "int Tram::getVoertuignummer () const"
+
+.PP
+Geef het voertuignummer van de tram\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Het voertuignummer van de tram\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van getVoertuignummer\&.'); 
+.RE
+.PP
+
 .SS "int Tram::getZitplaatsen () const"
 
 .PP
-Geef de zitplaatsen terug van de tram\&. 
+Geef de zitplaatsen van de tram\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -228,26 +382,58 @@ REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de
 .RE
 .PP
 
-.SS "bool Tram::opstappen (int opstappen)"
+.SS "bool Tram::isAlbatros () const"
 
 .PP
-Emuleert opstappen van passagiers\&. (Nieuw huidig aantal = huidig aantal + opstappende passagiers) 
+Geeft aan of de tram een Albatros is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of de tram een Albatros is 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van isAlbatros\&.'); 
+.RE
+.PP
+
+.SS "bool Tram::isPCC () const"
+
+.PP
+Geeft aan of de tram een PCC is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of de tram een PCC is 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van isPCC\&.'); 
+.RE
+.PP
+
+.SS "bool Tram::opstappen (\fBPassagier\fP * pas)"
+
+.PP
+Emuleert opstappen van passagiers\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIopstappen\fP Aantal passagiers dat opstapt\&. 
+\fIpas\fP \fBPassagier\fP die opstapt\&. 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-boolean Of er meer passigiers opstapten dan mogelijk\&. 
+boolean Of er meer passagiers opstapten dan mogelijk\&. 
 .RE
 .PP
 \fBPrecondition:\fP
 .RS 4
 REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van opstappen\&.'); 
 .PP
-REQUIRE(opstappen >= 0, 'Opstappen kan geen negatieve waarde hebben bij aanroep van opstappen\&.'); 
+REQUIRE(pas->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van opstappen\&.'); 
 .RE
 .PP
 
@@ -259,6 +445,52 @@ Kijk na of de constructor in de juiste staat geeindigd is\&.
 \fBReturns:\fP
 .RS 4
 Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+.SS "void Tram::removePassagier (\fBPassagier\fP * pas)"
+
+.PP
+Verwijdert een passagier en update de status van de passagier\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpas\fP Te verwijderen \fBPassagier\fP 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van addPassagier\&.'); 
+.PP
+REQUIRE(pas->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van addPassagier\&.'); 
+.PP
+REQUIRE(bevatPassagier(pas), 'Passagier zat niet in tram bij de aanroep van removePassagier') 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(!bevatPassagier(pas), 'Passagiers niet aangepast bij aanroep van addPassagiers\&.'); 
+.RE
+.PP
+
+.SS "void Tram::setBezettePlaatsen (int aantalBezettePlaatsen)"
+
+.PP
+Past het aantal bezette plaatsen aan\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaantalBezettePlaatsen\fP Het nieuwe aantal bezette plaatsen 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanrooep van setBezettePlaatsen\&.'); 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE((this->getBezettePlaatsen == aantalBezettePlaatsen), 'bezettePlaatsen is niet aangepast door setBezettePlaatsen\&.'); 
 .RE
 .PP
 
@@ -283,26 +515,40 @@ ENSURE((\fBgetHuidigStation()\fP == station), 'huidigStation is niet aangepast d
 .RE
 .PP
 
-.SS "void Tram::setPassagiers (int pas)"
+.SS "void Tram::setOmzet (double o)"
 
 .PP
-Past het aantal passagiers aan\&. 
+Past de huide omzet van de tram aan\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIpas\fP Positief nieuw aantal passagiers 
+\fIo\fP De nieuwe huidige omzet 
 .RE
 .PP
 \fBPrecondition:\fP
 .RS 4
-REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van setPassagiers\&.'); 
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van setOmzet\&.'); 
+.RE
 .PP
-REQUIRE(passagiers >= 0, 'Aantal passagiers moet positief zijn\&.'); 
+
+.SS "void Tram::setVoertuignummer (int n)"
+
+.PP
+Past het voertuignummer aan\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP Nieuw voertuignummer 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Tram was niet geinitialiseerd bij de aanroep van setVoertuignummer\&.'); 
 .RE
 .PP
 \fBPostcondition:\fP
 .RS 4
-ENSURE((\fBgetPassagiers()\fP == pas), 'Aantal passagiers niet aangepast bij aanroep van setPassagiers\&.'); 
+ENSURE((\fBgetVoertuignummer()\fP == n), 'Voertuignummer niet aangepast bij aanroep van setVoertuignummer\&.'); 
 .RE
 .PP
 

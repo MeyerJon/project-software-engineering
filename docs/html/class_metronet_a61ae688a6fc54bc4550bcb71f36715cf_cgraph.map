@@ -1,0 +1,5 @@
+<map id="Metronet::bevatPassagier" name="Metronet::bevatPassagier">
+<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="224,5,407,32"/>
+<area shape="rect" id="node3" href="$class_passagier.html#ac571f017d61f182d77d1438818588539" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="455,81,644,108"/>
+<area shape="rect" id="node4" href="$class_passagier.html#a1cc2825c750405d3782c738ac8e3e080" title="Geef de naam van de groep passagiers. " alt="" coords="245,107,386,133"/>
+</map>

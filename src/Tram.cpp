@@ -16,8 +16,8 @@ Tram::Tram() {
     ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
 }
 
-Tram::Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS) {
-    omzet = 0;
+Tram::Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS, StatisticsTram* statistics) {
+    stats = statistics;
     bezettePlaatsen = 0;
     zitplaatsen = zit;
     voertuignummer = nr;
@@ -94,7 +94,7 @@ int Tram::getVoertuignummer() const {
 
 double Tram::getOmzet() const {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getOmzet.");
-    return omzet;
+    return stats->getOmzet();
 }
 
 bool Tram::bevatPassagier(Passagier *pas) const {
@@ -115,7 +115,7 @@ void Tram::setBezettePlaatsen(int aantalBezettePlaatsen) {
 
 void Tram::setOmzet(double o) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setOmzet.");
-    omzet = o;
+    stats->setOmzet(o);
 }
 
 void Tram::addPassagier(Passagier* pas){
@@ -184,4 +184,9 @@ bool Tram::opstappen(Passagier* pas) {
         setOmzet(getOmzet() + (pas->getHoeveelheid() * ticketPrijs));
         return true;
     }
+}
+
+StatisticsTram* Tram::getStatistics() {
+    REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
+    return stats;
 }

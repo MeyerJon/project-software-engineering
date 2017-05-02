@@ -117,7 +117,8 @@ void Metronet::addTram(
         std::string beginStation) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
-    Tram* tram = new Tram(zitplaatsen, snelheid, spoor, voertuigNr, type, beginStation);
+    StatisticsTram* stats = new StatisticsTram();
+    Tram* tram = new Tram(zitplaatsen, snelheid, spoor, voertuigNr, type, beginStation, stats);
     trams[tram->getVoertuignummer()] = tram;
     stations[beginStation]->bezetSpoor(spoor, true);
 
@@ -325,6 +326,9 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
         if (tram->isAlbatros() && stations[passagier.second->getEindStation()]->isHalte()) continue;
         if ((station == passagier.second->getBeginStation())
             && (!(passagier.second->isVertrokken()))) {
+            // Statistics-objecten voor gegevensverzameling
+            StatisticsTram* tramStats = tram->getStatistics();
+
             // Kijk of voldoende plaats is
             if (stations[passagier.second->getEindStation()]->bevatSpoor(spoor)) {
                 if (tram->opstappen(passagier.second)) {
@@ -333,11 +337,20 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
                                       std::to_string(passagier.second->getHoeveelheid()) + " personen)\n";
                     exp->write(out, os);
                     passagier.second->setHuidigeTram(tram->getVoertuignummer());
+
+                    // Gegevens updaten/verzamelen
+                    // Tramgegevens
+                    tramStats->setAantalGroepen(tramStats->getAantalGroepen() + 1);
+                    tramStats->setAantalPersonen(tramStats->getAantalPersonen() + passagier.second->getHoeveelheid());
+                    // TODO: Stationgegevens
+
                 } else {
                     std::string out = "Waarschuwing: Er was niet voldoende plaats op tram " +
                                       std::to_string(tram->getVoertuignummer())
                                       + ", Groep " + passagier.second->getNaam() + " is niet opgestapt.\n";
                     exp->write(out, os);
+                    // Gegevens updaten/verzamelen
+                    tramStats->setAantalFails(tramStats->getAantalFails() + 1);
                 }
             }
         }
@@ -374,6 +387,25 @@ bool Metronet::tramMagVertrekken(Tram* tram) {
 
     // Als er tram is op volgend station, zelfde spoor return false
     return !stations[volgendStation]->spoorBezet(tram->getSpoor());
+}
+
+void Metronet::printStatistics(std::ostream& os) {
+    std::string head = "-- METRONET GEGEVENS --\n";
+    exp->write(head, os);
+
+    // Tramgegevens
+    std::string tramHead = "-Tramgegevens: \n";
+    exp->write(tramHead, os);
+    for(auto& p : trams){
+        Tram* tram = p.second;
+        StatisticsTram* stats = tram->getStatistics();
+        std::string out = "Tram " + std::to_string(tram->getVoertuignummer()) +": \n";
+        out += "Totale omzet: €" + std::to_string(stats->getOmzet()) + ".\n";
+        out += "Totaal aantal groepen: " + std::to_string(stats->getAantalGroepen()) + ".\n";
+        out += "Totaal aantal personen: " + std::to_string(stats->getAantalPersonen()) + ".\n";
+        out += "Aantal mislukte opstappen: " + std::to_string(stats->getAantalFails()) + ".\n";
+        exp->write(out, os);
+    }
 }
 
 void Metronet::reset() {
