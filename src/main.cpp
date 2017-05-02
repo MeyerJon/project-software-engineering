@@ -66,6 +66,7 @@ int main(int argc, const char* argv[]) {
                 metronet.printMetronet(std::cout);
                 metronet.rondrijden(std::cout);
                 metronet.printStatistics(std::cout);
+                metronet.printMetronetGrafisch(std::cout);
             }
         }
     }
