@@ -25,6 +25,9 @@ Metronet::~Metronet() {
     for (auto t : trams) {
         delete t.second;
     }
+    for (auto p : passagiers) {
+        delete p.second;
+    }
 }
 
 Metronet& Metronet::operator=(const Metronet& rhs) {
