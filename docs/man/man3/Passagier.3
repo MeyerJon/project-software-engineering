@@ -1,0 +1,218 @@
+.TH "Passagier" 3 "Fri Apr 28 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Passagier \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Passagier\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPassagier\fP ()"
+.br
+.RI "\fILege constructor\&. \fP"
+.ti -1c
+.RI "\fBPassagier\fP (std::string n, std::string begin, std::string eind, int h)"
+.br
+.RI "\fIDefault constructor van \fBPassagier\fP\&. \fP"
+.ti -1c
+.RI "bool \fBproperlyInitialised\fP () const "
+.br
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.ti -1c
+.RI "std::string \fBgetNaam\fP () const "
+.br
+.RI "\fIGeef de naam van de groep passagiers\&. \fP"
+.ti -1c
+.RI "std::string \fBgetBeginStation\fP () const "
+.br
+.RI "\fIGeef het beginstation van de groep passagiers\&. \fP"
+.ti -1c
+.RI "std::string \fBgetEindStation\fP () const "
+.br
+.RI "\fIGeef het eindstation van de groep passagiers\&. \fP"
+.ti -1c
+.RI "int \fBgetHoeveelheid\fP () const "
+.br
+.RI "\fIGeef het aantal personen in de groep passagiers\&. \fP"
+.ti -1c
+.RI "void \fBsetHuidigeTram\fP (int tram)"
+.br
+.ti -1c
+.RI "int \fBhuidigeTram\fP () const "
+.br
+.RI "\fIGeeft aan op welke tram de passagier reist\&. \fP"
+.ti -1c
+.RI "bool \fBisVertrokken\fP () const "
+.br
+.RI "\fIGeeft aan of de passagier vertrokken is\&. \fP"
+.ti -1c
+.RI "void \fBupdateVertrokken\fP ()"
+.br
+.RI "\fIUpdate de status van de passagiers\&. \fP"
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Passagier::Passagier ()\fC [inline]\fP"
+
+.PP
+Lege constructor\&. 
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Lege constructor van Passagier is niet in de juiste staat geeindigd\&.'); 
+.RE
+.PP
+
+.SS "Passagier::Passagier (std::string n, std::string begin, std::string eind, int h)"
+
+.PP
+Default constructor van \fBPassagier\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP De naam van de groep passagiers\&. 
+.br
+\fIbegin\fP Het beginstation van de groep\&. 
+.br
+\fIeind\fP Het eindstation van de groep\&. 
+.br
+\fIh\fP De hoeveelheid personen in de groep\&. 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Default constructor van Passagier is niet in de juiste staat geeindigd\&.'); 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string Passagier::getBeginStation () const"
+
+.PP
+Geef het beginstation van de groep passagiers\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Beginstation van de groep\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Passagiers was niet geinitialiseerd bij de aanroep van getBeginStation\&.'); 
+.RE
+.PP
+
+.SS "std::string Passagier::getEindStation () const"
+
+.PP
+Geef het eindstation van de groep passagiers\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Eindstation van de groep\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Passagiers was niet geinitialiseerd bij de aanroep van getEindStation\&.'); 
+.RE
+.PP
+
+.SS "int Passagier::getHoeveelheid () const"
+
+.PP
+Geef het aantal personen in de groep passagiers\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Aantal personen in de groep\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Passagiers was niet geinitialiseerd bij de aanroep van getHoeveelheid\&.'); 
+.RE
+.PP
+
+.SS "std::string Passagier::getNaam () const"
+
+.PP
+Geef de naam van de groep passagiers\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Naam van de groep\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Passagiers was niet geinitialiseerd bij de aanroep van getNaam\&.'); 
+.RE
+.PP
+
+.SS "int Passagier::huidigeTram () const"
+
+.PP
+Geeft aan op welke tram de passagier reist\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+De huidige tram waarop de passagier zich begeeft 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->properlyInitialised, 'Passagier was niet geinitialiseerd bij de aanroep van huidigeTram\&.'); 
+.RE
+.PP
+
+.SS "bool Passagier::isVertrokken () const"
+
+.PP
+Geeft aan of de passagier vertrokken is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Een boolean die aangeeft of de passagier vertrokken is 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van isVertrokken\&.'); 
+.RE
+.PP
+
+.SS "bool Passagier::properlyInitialised () const"
+
+.PP
+Kijk na of de constructor in de juiste staat geeindigd is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+.SS "void Passagier::setHuidigeTram (int tram)"
+
+.SS "void Passagier::updateVertrokken ()"
+
+.PP
+Update de status van de passagiers\&. 
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'Passagier was niet geinitialiseerd bij de aanroep van updateVertrokken\&.'); 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Metronet from the source code\&.

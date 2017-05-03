@@ -102,30 +102,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73d335726aad1d844d81cda6d9fd74e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a73d335726aad1d844d81cda6d9fd74e6">Station</a> ()</td></tr>
 <tr class="memdesc:a73d335726aad1d844d81cda6d9fd74e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">De lege constructor van de klasse <a class="el" href="class_station.html" title="Station klasse die een STATION element uit een XML-bestand representeert. ">Station</a>.  <a href="#a73d335726aad1d844d81cda6d9fd74e6">More...</a><br /></td></tr>
 <tr class="separator:a73d335726aad1d844d81cda6d9fd74e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41fd39388109ad33ea86eb9831ab2f45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a41fd39388109ad33ea86eb9831ab2f45">Station</a> (std::string n, std::string vor, std::string volg, int sp, int op, int af)</td></tr>
-<tr class="memdesc:a41fd39388109ad33ea86eb9831ab2f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">De default constructor van de klasse <a class="el" href="class_station.html" title="Station klasse die een STATION element uit een XML-bestand representeert. ">Station</a>.  <a href="#a41fd39388109ad33ea86eb9831ab2f45">More...</a><br /></td></tr>
-<tr class="separator:a41fd39388109ad33ea86eb9831ab2f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4adf32db055845769b79fe25b0e946"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a1e4adf32db055845769b79fe25b0e946">Station</a> (std::string n, std::string typeNaam, std::map&lt; int, std::string &gt; vorigeStations, std::map&lt; int, std::string &gt; volgendeStations)</td></tr>
+<tr class="memdesc:a1e4adf32db055845769b79fe25b0e946"><td class="mdescLeft">&#160;</td><td class="mdescRight">De default constructor van de klasse <a class="el" href="class_station.html" title="Station klasse die een STATION element uit een XML-bestand representeert. ">Station</a>.  <a href="#a1e4adf32db055845769b79fe25b0e946">More...</a><br /></td></tr>
+<tr class="separator:a1e4adf32db055845769b79fe25b0e946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5749af84d13b71d34aa1fb5b0a935a20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20">properlyInitialised</a> () const </td></tr>
 <tr class="memdesc:a5749af84d13b71d34aa1fb5b0a935a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kijk na of de constructor in de juiste staat geeindigd is.  <a href="#a5749af84d13b71d34aa1fb5b0a935a20">More...</a><br /></td></tr>
 <tr class="separator:a5749af84d13b71d34aa1fb5b0a935a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4851849f7f158fa51ab91a9cd56986f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a4851849f7f158fa51ab91a9cd56986f2">bevatSpoor</a> (int spoor) const </td></tr>
+<tr class="memdesc:a4851849f7f158fa51ab91a9cd56986f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checkt of het station een spoor bevat.  <a href="#a4851849f7f158fa51ab91a9cd56986f2">More...</a><br /></td></tr>
+<tr class="separator:a4851849f7f158fa51ab91a9cd56986f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d4234bcd1027dc83c7984e207e8bd74"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a6d4234bcd1027dc83c7984e207e8bd74">getNaam</a> () const </td></tr>
 <tr class="memdesc:a6d4234bcd1027dc83c7984e207e8bd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef de naam terug van het station.  <a href="#a6d4234bcd1027dc83c7984e207e8bd74">More...</a><br /></td></tr>
 <tr class="separator:a6d4234bcd1027dc83c7984e207e8bd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7516368cf83e9cbadf10309bc8c4aa2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#af7516368cf83e9cbadf10309bc8c4aa2">getVorige</a> () const </td></tr>
-<tr class="memdesc:af7516368cf83e9cbadf10309bc8c4aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het vorig station terug.  <a href="#af7516368cf83e9cbadf10309bc8c4aa2">More...</a><br /></td></tr>
-<tr class="separator:af7516368cf83e9cbadf10309bc8c4aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6db00c0be0f1c6aea3848038a2a9a350"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a6db00c0be0f1c6aea3848038a2a9a350">getVolgende</a> () const </td></tr>
-<tr class="memdesc:a6db00c0be0f1c6aea3848038a2a9a350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het volgende station.  <a href="#a6db00c0be0f1c6aea3848038a2a9a350">More...</a><br /></td></tr>
-<tr class="separator:a6db00c0be0f1c6aea3848038a2a9a350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fc1a72d194b9f67151eea0e957aad3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a0fc1a72d194b9f67151eea0e957aad3c">getSpoor</a> () const </td></tr>
-<tr class="memdesc:a0fc1a72d194b9f67151eea0e957aad3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het spoor terug.  <a href="#a0fc1a72d194b9f67151eea0e957aad3c">More...</a><br /></td></tr>
-<tr class="separator:a0fc1a72d194b9f67151eea0e957aad3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a531809394b3affd749ccbd5e992a61b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a531809394b3affd749ccbd5e992a61b9">getOpstappen</a> () const </td></tr>
-<tr class="memdesc:a531809394b3affd749ccbd5e992a61b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het aantal opstappende mensen terug.  <a href="#a531809394b3affd749ccbd5e992a61b9">More...</a><br /></td></tr>
-<tr class="separator:a531809394b3affd749ccbd5e992a61b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0008123f97257f9b4365918dd90512"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#aed0008123f97257f9b4365918dd90512">getAfstappen</a> () const </td></tr>
-<tr class="memdesc:aed0008123f97257f9b4365918dd90512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het afstappende mensen terug.  <a href="#aed0008123f97257f9b4365918dd90512">More...</a><br /></td></tr>
-<tr class="separator:aed0008123f97257f9b4365918dd90512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3868695486e4f95ec5c3d426bd270773"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a3868695486e4f95ec5c3d426bd270773">getType</a> () const </td></tr>
+<tr class="memdesc:a3868695486e4f95ec5c3d426bd270773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft het station type terug.  <a href="#a3868695486e4f95ec5c3d426bd270773">More...</a><br /></td></tr>
+<tr class="separator:a3868695486e4f95ec5c3d426bd270773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054c18147669814c9c3206419ec6d8cc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a054c18147669814c9c3206419ec6d8cc">getVorige</a> (int spoor) const </td></tr>
+<tr class="memdesc:a054c18147669814c9c3206419ec6d8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het vorig station op een spoor.  <a href="#a054c18147669814c9c3206419ec6d8cc">More...</a><br /></td></tr>
+<tr class="separator:a054c18147669814c9c3206419ec6d8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950a03b6e82abe53c0bbc10542e4cdee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a950a03b6e82abe53c0bbc10542e4cdee">getVolgende</a> (int spoor) const </td></tr>
+<tr class="memdesc:a950a03b6e82abe53c0bbc10542e4cdee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het volgende station op een spoor.  <a href="#a950a03b6e82abe53c0bbc10542e4cdee">More...</a><br /></td></tr>
+<tr class="separator:a950a03b6e82abe53c0bbc10542e4cdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec3576133446a9f1699b7778f07ada9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#abec3576133446a9f1699b7778f07ada9">getSporen</a> () const </td></tr>
+<tr class="memdesc:abec3576133446a9f1699b7778f07ada9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef de sporen.  <a href="#abec3576133446a9f1699b7778f07ada9">More...</a><br /></td></tr>
+<tr class="separator:abec3576133446a9f1699b7778f07ada9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a258a9759b3637fb17fb8b008b5db81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a8a258a9759b3637fb17fb8b008b5db81">isHalte</a> () const </td></tr>
+<tr class="memdesc:a8a258a9759b3637fb17fb8b008b5db81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of het station een halte is.  <a href="#a8a258a9759b3637fb17fb8b008b5db81">More...</a><br /></td></tr>
+<tr class="separator:a8a258a9759b3637fb17fb8b008b5db81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ecb699d3cfbd1e450f6a4b72b6034e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#a79ecb699d3cfbd1e450f6a4b72b6034e">isMetrostation</a> () const </td></tr>
+<tr class="memdesc:a79ecb699d3cfbd1e450f6a4b72b6034e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of het station een metrostation is.  <a href="#a79ecb699d3cfbd1e450f6a4b72b6034e">More...</a><br /></td></tr>
+<tr class="separator:a79ecb699d3cfbd1e450f6a4b72b6034e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a40b1e5d3b6228a3a173dd0140a5fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#ab8a40b1e5d3b6228a3a173dd0140a5fb">spoorBezet</a> (int spoor) const </td></tr>
+<tr class="memdesc:ab8a40b1e5d3b6228a3a173dd0140a5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of er zich op het gegeven spoor een tram bevindt.  <a href="#ab8a40b1e5d3b6228a3a173dd0140a5fb">More...</a><br /></td></tr>
+<tr class="separator:ab8a40b1e5d3b6228a3a173dd0140a5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13697fedd84f3d1c29d6c61b5ae97b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3">bezetSpoor</a> (int spoor, bool isTramHier)</td></tr>
+<tr class="memdesc:ac13697fedd84f3d1c29d6c61b5ae97b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bezet het spoor met de gegeven tram.  <a href="#ac13697fedd84f3d1c29d6c61b5ae97b3">More...</a><br /></td></tr>
+<tr class="separator:ac13697fedd84f3d1c29d6c61b5ae97b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_station.html" title="Station klasse die een STATION element uit een XML-bestand representeert. ">Station</a> klasse die een STATION element uit een XML-bestand representeert. </p>
@@ -151,14 +163,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_station_a73d335726aad1d844d81cda6d9fd74e6_cgraph.png" border="0" usemap="#class_station_a73d335726aad1d844d81cda6d9fd74e6_cgraph" alt=""/></div>
 <map name="class_station_a73d335726aad1d844d81cda6d9fd74e6_cgraph" id="class_station_a73d335726aad1d844d81cda6d9fd74e6_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="173,5,360,33"/>
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="165,5,337,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a41fd39388109ad33ea86eb9831ab2f45"></a>
+<a class="anchor" id="a1e4adf32db055845769b79fe25b0e946"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -172,31 +184,19 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>vor</em>, </td>
+          <td class="paramname"><em>typeNaam</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>volg</em>, </td>
+          <td class="paramtype">std::map&lt; int, std::string &gt;&#160;</td>
+          <td class="paramname"><em>vorigeStations</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>op</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>af</em>&#160;</td>
+          <td class="paramtype">std::map&lt; int, std::string &gt;&#160;</td>
+          <td class="paramname"><em>volgendeStations</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -210,11 +210,9 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>De naam van het station </td></tr>
-    <tr><td class="paramname">vor</td><td>Het vorig station </td></tr>
-    <tr><td class="paramname">volg</td><td>Het volgend station </td></tr>
-    <tr><td class="paramname">sp</td><td>Het spoornummer van het station </td></tr>
-    <tr><td class="paramname">op</td><td>Het aantal opstappende passagiers </td></tr>
-    <tr><td class="paramname">af</td><td>Het aantal afstappende passgiers </td></tr>
+    <tr><td class="paramname">typeNaam</td><td>Het station type in string vorm, wordt omgezet naar StationType </td></tr>
+    <tr><td class="paramname">vorigeStations</td><td>Map met als key het spoor en als value de vorige station </td></tr>
+    <tr><td class="paramname">volgendeStations</td><td>Map met als key het spoor en als value de volgende station </td></tr>
   </table>
   </dd>
 </dl>
@@ -223,9 +221,9 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_a41fd39388109ad33ea86eb9831ab2f45_cgraph.png" border="0" usemap="#class_station_a41fd39388109ad33ea86eb9831ab2f45_cgraph" alt=""/></div>
-<map name="class_station_a41fd39388109ad33ea86eb9831ab2f45_cgraph" id="class_station_a41fd39388109ad33ea86eb9831ab2f45_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="173,5,360,33"/>
+<div class="center"><img src="class_station_a1e4adf32db055845769b79fe25b0e946_cgraph.png" border="0" usemap="#class_station_a1e4adf32db055845769b79fe25b0e946_cgraph" alt=""/></div>
+<map name="class_station_a1e4adf32db055845769b79fe25b0e946_cgraph" id="class_station_a1e4adf32db055845769b79fe25b0e946_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="165,5,337,32"/>
 </map>
 </div>
 </p>
@@ -233,29 +231,36 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aed0008123f97257f9b4365918dd90512"></a>
+<a class="anchor" id="a4851849f7f158fa51ab91a9cd56986f2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Station::getAfstappen </td>
+          <td class="memname">bool Station::bevatSpoor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spoor</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Geef het afstappende mensen terug. </p>
-<dl class="section return"><dt>Returns</dt><dd>Een aantal afstappende mensen. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getAfstappen."); </dd></dl>
+<p>Checkt of het station een spoor bevat. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spoor</td><td>Het spoor dat beschouwd moet worden. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Een bool die weergeeft of het station het spoor bevat. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij aanroep van bevatSpoor."); </dd></dl>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_aed0008123f97257f9b4365918dd90512_cgraph.png" border="0" usemap="#class_station_aed0008123f97257f9b4365918dd90512_cgraph" alt=""/></div>
-<map name="class_station_aed0008123f97257f9b4365918dd90512_cgraph" id="class_station_aed0008123f97257f9b4365918dd90512_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="213,5,400,33"/>
+<div class="center"><img src="class_station_a4851849f7f158fa51ab91a9cd56986f2_cgraph.png" border="0" usemap="#class_station_a4851849f7f158fa51ab91a9cd56986f2_cgraph" alt=""/></div>
+<map name="class_station_a4851849f7f158fa51ab91a9cd56986f2_cgraph" id="class_station_a4851849f7f158fa51ab91a9cd56986f2_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="191,5,363,32"/>
 </map>
 </div>
 </p>
@@ -263,12 +268,66 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_aed0008123f97257f9b4365918dd90512_icgraph.png" border="0" usemap="#class_station_aed0008123f97257f9b4365918dd90512_icgraph" alt=""/></div>
-<map name="class_station_aed0008123f97257f9b4365918dd90512_icgraph" id="class_station_aed0008123f97257f9b4365918dd90512_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="213,5,432,33"/>
-<area shape="rect" id="node5" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="284,57,361,85"/>
-<area shape="rect" id="node3" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="480,5,631,33"/>
-<area shape="rect" id="node4" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="679,5,732,33"/>
+<div class="center"><img src="class_station_a4851849f7f158fa51ab91a9cd56986f2_icgraph.png" border="0" usemap="#class_station_a4851849f7f158fa51ab91a9cd56986f2_icgraph" alt=""/></div>
+<map name="class_station_a4851849f7f158fa51ab91a9cd56986f2_icgraph" id="class_station_a4851849f7f158fa51ab91a9cd56986f2_icgraph">
+<area shape="rect" id="node2" href="class_station.html#a950a03b6e82abe53c0bbc10542e4cdee" title="Geef het volgende station op een spoor. " alt="" coords="191,5,333,32"/>
+<area shape="rect" id="node6" href="class_station.html#a054c18147669814c9c3206419ec6d8cc" title="Geef het vorig station op een spoor. " alt="" coords="199,56,325,83"/>
+<area shape="rect" id="node7" href="class_station.html#ab8a40b1e5d3b6228a3a173dd0140a5fb" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="193,157,331,184"/>
+<area shape="rect" id="node8" href="class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3" title="Bezet het spoor met de gegeven tram. " alt="" coords="402,132,539,159"/>
+<area shape="rect" id="node3" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="381,56,560,83"/>
+<area shape="rect" id="node5" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="435,5,506,32"/>
+<area shape="rect" id="node4" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="608,56,659,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac13697fedd84f3d1c29d6c61b5ae97b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Station::bezetSpoor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spoor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isTramHier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bezet het spoor met de gegeven tram. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spoor</td><td>Het spoor waarop de tram gezet moet worden </td></tr>
+    <tr><td class="paramname">isTramHier</td><td>De boolean die zegt of de tram aanwezig is op het spoor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van bezetSpoor."); </dd>
+<dd>
+REQUIRE(bevatSpoor(spoor), "Station bevat het gegeven spoor niet bij aanroep van bezetSpoor."); </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>ENSURE(spoorBezet(spoor) == isTramHier, "Spoor was niet correct bezet na aanroep van bezetSpoor"); </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_station_ac13697fedd84f3d1c29d6c61b5ae97b3_cgraph.png" border="0" usemap="#class_station_ac13697fedd84f3d1c29d6c61b5ae97b3_cgraph" alt=""/></div>
+<map name="class_station_ac13697fedd84f3d1c29d6c61b5ae97b3_cgraph" id="class_station_ac13697fedd84f3d1c29d6c61b5ae97b3_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="561,25,733,52"/>
+<area shape="rect" id="node3" href="class_station.html#a4851849f7f158fa51ab91a9cd56986f2" title="Checkt of het station een spoor bevat. " alt="" coords="376,25,513,52"/>
+<area shape="rect" id="node4" href="class_station.html#ab8a40b1e5d3b6228a3a173dd0140a5fb" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="191,76,328,102"/>
 </map>
 </div>
 </p>
@@ -297,7 +356,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_station_a6d4234bcd1027dc83c7984e207e8bd74_cgraph.png" border="0" usemap="#class_station_a6d4234bcd1027dc83c7984e207e8bd74_cgraph" alt=""/></div>
 <map name="class_station_a6d4234bcd1027dc83c7984e207e8bd74_cgraph" id="class_station_a6d4234bcd1027dc83c7984e207e8bd74_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="188,5,375,33"/>
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="177,5,349,32"/>
 </map>
 </div>
 </p>
@@ -307,25 +366,25 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_station_a6d4234bcd1027dc83c7984e207e8bd74_icgraph.png" border="0" usemap="#class_station_a6d4234bcd1027dc83c7984e207e8bd74_icgraph" alt=""/></div>
 <map name="class_station_a6d4234bcd1027dc83c7984e207e8bd74_icgraph" id="class_station_a6d4234bcd1027dc83c7984e207e8bd74_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="188,5,355,33"/>
-<area shape="rect" id="node3" href="class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="421,55,577,83"/>
-<area shape="rect" id="node6" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="403,107,595,135"/>
-<area shape="rect" id="node7" href="class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="643,159,815,187"/>
-<area shape="rect" id="node8" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="233,211,310,239"/>
-<area shape="rect" id="node4" href="class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="667,55,790,83"/>
-<area shape="rect" id="node5" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="863,107,916,135"/>
+<area shape="rect" id="node2" href="class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="177,5,332,32"/>
+<area shape="rect" id="node3" href="class_metronet.html#ab2cbe114faa2ee312f6ea4e551962193" title="Voegt station toe aan metronet. " alt="" coords="398,56,541,83"/>
+<area shape="rect" id="node6" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="380,107,559,133"/>
+<area shape="rect" id="node7" href="class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="607,157,764,184"/>
+<area shape="rect" id="node8" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="219,208,290,235"/>
+<area shape="rect" id="node4" href="class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="635,56,735,83"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="812,107,863,133"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a531809394b3affd749ccbd5e992a61b9"></a>
+<a class="anchor" id="abec3576133446a9f1699b7778f07ada9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Station::getOpstappen </td>
+          <td class="memname">std::vector&lt; int &gt; Station::getSporen </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -333,16 +392,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Geef het aantal opstappende mensen terug. </p>
-<dl class="section return"><dt>Returns</dt><dd>Een aantal opstappende mensen. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getOpstappen."); </dd></dl>
+<p>Geef de sporen. </p>
+<dl class="section return"><dt>Returns</dt><dd>De sporen. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getSporen."); </dd></dl>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_a531809394b3affd749ccbd5e992a61b9_cgraph.png" border="0" usemap="#class_station_a531809394b3affd749ccbd5e992a61b9_cgraph" alt=""/></div>
-<map name="class_station_a531809394b3affd749ccbd5e992a61b9_cgraph" id="class_station_a531809394b3affd749ccbd5e992a61b9_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="219,5,405,33"/>
+<div class="center"><img src="class_station_abec3576133446a9f1699b7778f07ada9_cgraph.png" border="0" usemap="#class_station_abec3576133446a9f1699b7778f07ada9_cgraph" alt=""/></div>
+<map name="class_station_abec3576133446a9f1699b7778f07ada9_cgraph" id="class_station_abec3576133446a9f1699b7778f07ada9_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="184,5,356,32"/>
 </map>
 </div>
 </p>
@@ -350,24 +409,23 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_a531809394b3affd749ccbd5e992a61b9_icgraph.png" border="0" usemap="#class_station_a531809394b3affd749ccbd5e992a61b9_icgraph" alt=""/></div>
-<map name="class_station_a531809394b3affd749ccbd5e992a61b9_icgraph" id="class_station_a531809394b3affd749ccbd5e992a61b9_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="219,5,437,33"/>
-<area shape="rect" id="node5" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="289,57,367,85"/>
-<area shape="rect" id="node3" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="485,5,636,33"/>
-<area shape="rect" id="node4" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="684,5,737,33"/>
+<div class="center"><img src="class_station_abec3576133446a9f1699b7778f07ada9_icgraph.png" border="0" usemap="#class_station_abec3576133446a9f1699b7778f07ada9_icgraph" alt=""/></div>
+<map name="class_station_abec3576133446a9f1699b7778f07ada9_icgraph" id="class_station_abec3576133446a9f1699b7778f07ada9_icgraph">
+<area shape="rect" id="node2" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="184,5,363,32"/>
+<area shape="rect" id="node4" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="238,56,309,83"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="411,5,461,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a0fc1a72d194b9f67151eea0e957aad3c"></a>
+<a class="anchor" id="a3868695486e4f95ec5c3d426bd270773"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Station::getSpoor </td>
+          <td class="memname">std::string Station::getType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -375,16 +433,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Geef het spoor terug. </p>
-<dl class="section return"><dt>Returns</dt><dd>Het spoor. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getSpoor."); </dd></dl>
+<p>Geeft het station type terug. </p>
+<dl class="section return"><dt>Returns</dt><dd>String "Albatros" of "PCC" </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getType."); </dd></dl>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_a0fc1a72d194b9f67151eea0e957aad3c_cgraph.png" border="0" usemap="#class_station_a0fc1a72d194b9f67151eea0e957aad3c_cgraph" alt=""/></div>
-<map name="class_station_a0fc1a72d194b9f67151eea0e957aad3c_cgraph" id="class_station_a0fc1a72d194b9f67151eea0e957aad3c_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="188,5,375,33"/>
+<div class="center"><img src="class_station_a3868695486e4f95ec5c3d426bd270773_cgraph.png" border="0" usemap="#class_station_a3868695486e4f95ec5c3d426bd270773_cgraph" alt=""/></div>
+<map name="class_station_a3868695486e4f95ec5c3d426bd270773_cgraph" id="class_station_a3868695486e4f95ec5c3d426bd270773_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="172,5,344,32"/>
 </map>
 </div>
 </p>
@@ -392,43 +450,42 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_a0fc1a72d194b9f67151eea0e957aad3c_icgraph.png" border="0" usemap="#class_station_a0fc1a72d194b9f67151eea0e957aad3c_icgraph" alt=""/></div>
-<map name="class_station_a0fc1a72d194b9f67151eea0e957aad3c_icgraph" id="class_station_a0fc1a72d194b9f67151eea0e957aad3c_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="455,5,647,33"/>
-<area shape="rect" id="node4" href="class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="465,57,637,85"/>
-<area shape="rect" id="node5" href="class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="188,109,407,137"/>
-<area shape="rect" id="node7" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="259,161,336,189"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="695,57,748,85"/>
-<area shape="rect" id="node6" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="475,109,626,137"/>
+<div class="center"><img src="class_station_a3868695486e4f95ec5c3d426bd270773_icgraph.png" border="0" usemap="#class_station_a3868695486e4f95ec5c3d426bd270773_icgraph" alt=""/></div>
+<map name="class_station_a3868695486e4f95ec5c3d426bd270773_icgraph" id="class_station_a3868695486e4f95ec5c3d426bd270773_icgraph">
+<area shape="rect" id="node2" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="172,5,243,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a6db00c0be0f1c6aea3848038a2a9a350"></a>
+<a class="anchor" id="a950a03b6e82abe53c0bbc10542e4cdee"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">std::string Station::getVolgende </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spoor</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Geef het volgende station. </p>
+<p>Geef het volgende station op een spoor. </p>
 <dl class="section return"><dt>Returns</dt><dd>Het volgende station. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getVolgende."); </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getVolgende."); </dd>
+<dd>
+REQUIRE(bevatSpoor(spoor), "Station bevat spoor niet bij aanroep getVolgende."); </dd></dl>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_a6db00c0be0f1c6aea3848038a2a9a350_cgraph.png" border="0" usemap="#class_station_a6db00c0be0f1c6aea3848038a2a9a350_cgraph" alt=""/></div>
-<map name="class_station_a6db00c0be0f1c6aea3848038a2a9a350_cgraph" id="class_station_a6db00c0be0f1c6aea3848038a2a9a350_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="209,5,396,33"/>
+<div class="center"><img src="class_station_a950a03b6e82abe53c0bbc10542e4cdee_cgraph.png" border="0" usemap="#class_station_a950a03b6e82abe53c0bbc10542e4cdee_cgraph" alt=""/></div>
+<map name="class_station_a950a03b6e82abe53c0bbc10542e4cdee_cgraph" id="class_station_a950a03b6e82abe53c0bbc10542e4cdee_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="381,5,553,32"/>
+<area shape="rect" id="node3" href="class_station.html#a4851849f7f158fa51ab91a9cd56986f2" title="Checkt of het station een spoor bevat. " alt="" coords="196,31,333,57"/>
 </map>
 </div>
 </p>
@@ -436,24 +493,68 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_a6db00c0be0f1c6aea3848038a2a9a350_icgraph.png" border="0" usemap="#class_station_a6db00c0be0f1c6aea3848038a2a9a350_icgraph" alt=""/></div>
-<map name="class_station_a6db00c0be0f1c6aea3848038a2a9a350_icgraph" id="class_station_a6db00c0be0f1c6aea3848038a2a9a350_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="209,5,401,33"/>
-<area shape="rect" id="node4" href="class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="219,57,391,85"/>
-<area shape="rect" id="node5" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="267,109,344,137"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="449,32,503,60"/>
+<div class="center"><img src="class_station_a950a03b6e82abe53c0bbc10542e4cdee_icgraph.png" border="0" usemap="#class_station_a950a03b6e82abe53c0bbc10542e4cdee_icgraph" alt=""/></div>
+<map name="class_station_a950a03b6e82abe53c0bbc10542e4cdee_icgraph" id="class_station_a950a03b6e82abe53c0bbc10542e4cdee_icgraph">
+<area shape="rect" id="node2" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="196,5,375,32"/>
+<area shape="rect" id="node4" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="250,56,321,83"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="423,5,473,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="af7516368cf83e9cbadf10309bc8c4aa2"></a>
+<a class="anchor" id="a054c18147669814c9c3206419ec6d8cc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">std::string Station::getVorige </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spoor</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Geef het vorig station op een spoor. </p>
+<dl class="section return"><dt>Returns</dt><dd>Het vorig station. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getVorige."); </dd>
+<dd>
+REQUIRE(bevatSpoor(spoor), "Station bevat spoor niet bij aanroep van getVorige."); </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_station_a054c18147669814c9c3206419ec6d8cc_cgraph.png" border="0" usemap="#class_station_a054c18147669814c9c3206419ec6d8cc_cgraph" alt=""/></div>
+<map name="class_station_a054c18147669814c9c3206419ec6d8cc_cgraph" id="class_station_a054c18147669814c9c3206419ec6d8cc_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="365,5,537,32"/>
+<area shape="rect" id="node3" href="class_station.html#a4851849f7f158fa51ab91a9cd56986f2" title="Checkt of het station een spoor bevat. " alt="" coords="180,31,317,57"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_station_a054c18147669814c9c3206419ec6d8cc_icgraph.png" border="0" usemap="#class_station_a054c18147669814c9c3206419ec6d8cc_icgraph" alt=""/></div>
+<map name="class_station_a054c18147669814c9c3206419ec6d8cc_icgraph" id="class_station_a054c18147669814c9c3206419ec6d8cc_icgraph">
+<area shape="rect" id="node2" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="180,5,359,32"/>
+<area shape="rect" id="node4" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="234,56,305,83"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="407,5,457,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a258a9759b3637fb17fb8b008b5db81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Station::isHalte </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -461,29 +562,45 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Geef het vorig station terug. </p>
-<dl class="section return"><dt>Returns</dt><dd>Het vorig station. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van getVorige."); </dd></dl>
+<p>Geeft aan of het station een halte is. </p>
+<dl class="section return"><dt>Returns</dt><dd>Een bool die aangeeft of het station een halte is </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van isHalte."); </dd></dl>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_af7516368cf83e9cbadf10309bc8c4aa2_cgraph.png" border="0" usemap="#class_station_af7516368cf83e9cbadf10309bc8c4aa2_cgraph" alt=""/></div>
-<map name="class_station_af7516368cf83e9cbadf10309bc8c4aa2_cgraph" id="class_station_af7516368cf83e9cbadf10309bc8c4aa2_cgraph">
-<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="191,5,377,33"/>
+<div class="center"><img src="class_station_a8a258a9759b3637fb17fb8b008b5db81_cgraph.png" border="0" usemap="#class_station_a8a258a9759b3637fb17fb8b008b5db81_cgraph" alt=""/></div>
+<map name="class_station_a8a258a9759b3637fb17fb8b008b5db81_cgraph" id="class_station_a8a258a9759b3637fb17fb8b008b5db81_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="165,5,337,32"/>
 </map>
 </div>
 </p>
 
+</div>
+</div>
+<a class="anchor" id="a79ecb699d3cfbd1e450f6a4b72b6034e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Station::isMetrostation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Geeft aan of het station een metrostation is. </p>
+<dl class="section return"><dt>Returns</dt><dd>Een bool die aangeeft of het station een halte is </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van isMetrostation."); </dd></dl>
+
 <p><div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_station_af7516368cf83e9cbadf10309bc8c4aa2_icgraph.png" border="0" usemap="#class_station_af7516368cf83e9cbadf10309bc8c4aa2_icgraph" alt=""/></div>
-<map name="class_station_af7516368cf83e9cbadf10309bc8c4aa2_icgraph" id="class_station_af7516368cf83e9cbadf10309bc8c4aa2_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="191,5,383,33"/>
-<area shape="rect" id="node4" href="class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="201,57,373,85"/>
-<area shape="rect" id="node5" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="248,109,325,137"/>
-<area shape="rect" id="node3" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="431,32,484,60"/>
+<div class="center"><img src="class_station_a79ecb699d3cfbd1e450f6a4b72b6034e_cgraph.png" border="0" usemap="#class_station_a79ecb699d3cfbd1e450f6a4b72b6034e_cgraph" alt=""/></div>
+<map name="class_station_a79ecb699d3cfbd1e450f6a4b72b6034e_cgraph" id="class_station_a79ecb699d3cfbd1e450f6a4b72b6034e_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="207,5,379,32"/>
 </map>
 </div>
 </p>
@@ -511,23 +628,73 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_station_a5749af84d13b71d34aa1fb5b0a935a20_icgraph.png" border="0" usemap="#class_station_a5749af84d13b71d34aa1fb5b0a935a20_icgraph" alt=""/></div>
 <map name="class_station_a5749af84d13b71d34aa1fb5b0a935a20_icgraph" id="class_station_a5749af84d13b71d34aa1fb5b0a935a20_icgraph">
-<area shape="rect" id="node2" href="class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="479,60,646,88"/>
-<area shape="rect" id="node3" href="class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="720,87,876,115"/>
-<area shape="rect" id="node6" href="_metronet_domain_test_8cpp.html#a5be562b32ea24ef957bf5d18da8221b1" title="TEST_F" alt="" coords="284,424,361,452"/>
-<area shape="rect" id="node7" href="class_station.html#a73d335726aad1d844d81cda6d9fd74e6" title="De lege constructor van de klasse Station. " alt="" coords="263,476,383,504"/>
-<area shape="rect" id="node8" href="class_station.html#a6d4234bcd1027dc83c7984e207e8bd74" title="Geef de naam terug van het station. " alt="" coords="255,112,390,140"/>
-<area shape="rect" id="node12" href="class_station.html#af7516368cf83e9cbadf10309bc8c4aa2" title="Geef het vorig station terug. " alt="" coords="254,164,391,192"/>
-<area shape="rect" id="node13" href="class_station.html#a6db00c0be0f1c6aea3848038a2a9a350" title="Geef het volgende station. " alt="" coords="245,216,401,244"/>
-<area shape="rect" id="node14" href="class_station.html#a0fc1a72d194b9f67151eea0e957aad3c" title="Geef het spoor terug. " alt="" coords="255,268,390,296"/>
-<area shape="rect" id="node17" href="class_station.html#a531809394b3affd749ccbd5e992a61b9" title="Geef het aantal opstappende mensen terug. " alt="" coords="240,320,405,348"/>
-<area shape="rect" id="node18" href="class_station.html#aed0008123f97257f9b4365918dd90512" title="Geef het afstappende mensen terug. " alt="" coords="243,372,403,400"/>
-<area shape="rect" id="node4" href="class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="938,100,1061,128"/>
-<area shape="rect" id="node5" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1123,191,1176,219"/>
-<area shape="rect" id="node9" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="467,216,659,244"/>
-<area shape="rect" id="node10" href="class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="477,164,649,192"/>
-<area shape="rect" id="node11" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="524,268,601,296"/>
-<area shape="rect" id="node15" href="class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="453,320,672,348"/>
-<area shape="rect" id="node16" href="class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="924,282,1075,310"/>
+<area shape="rect" id="node2" href="class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="427,38,581,65"/>
+<area shape="rect" id="node3" href="class_metronet.html#ab2cbe114faa2ee312f6ea4e551962193" title="Voegt station toe aan metronet. " alt="" coords="647,64,790,90"/>
+<area shape="rect" id="node6" href="_metronet_domain_test_8cpp.html#a5be562b32ea24ef957bf5d18da8221b1" title="TEST_F" alt="" coords="267,646,337,673"/>
+<area shape="rect" id="node7" href="class_station.html#a73d335726aad1d844d81cda6d9fd74e6" title="De lege constructor van de klasse Station. " alt="" coords="246,697,358,724"/>
+<area shape="rect" id="node8" href="class_station.html#a4851849f7f158fa51ab91a9cd56986f2" title="Checkt of het station een spoor bevat. " alt="" coords="233,444,371,470"/>
+<area shape="rect" id="node9" href="class_station.html#a950a03b6e82abe53c0bbc10542e4cdee" title="Geef het volgende station op een spoor. " alt="" coords="433,342,575,369"/>
+<area shape="rect" id="node12" href="class_station.html#a054c18147669814c9c3206419ec6d8cc" title="Geef het vorig station op een spoor. " alt="" coords="441,393,567,420"/>
+<area shape="rect" id="node13" href="class_station.html#ab8a40b1e5d3b6228a3a173dd0140a5fb" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="435,545,573,572"/>
+<area shape="rect" id="node14" href="class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3" title="Bezet het spoor met de gegeven tram. " alt="" coords="650,545,787,572"/>
+<area shape="rect" id="node15" href="class_station.html#a6d4234bcd1027dc83c7984e207e8bd74" title="Geef de naam terug van het station. " alt="" coords="240,165,364,192"/>
+<area shape="rect" id="node17" href="class_station.html#a3868695486e4f95ec5c3d426bd270773" title="Geeft het station type terug. " alt="" coords="445,494,563,521"/>
+<area shape="rect" id="node18" href="class_station.html#abec3576133446a9f1699b7778f07ada9" title="Geef de sporen. " alt="" coords="439,241,569,268"/>
+<area shape="rect" id="node19" href="class_station.html#a8a258a9759b3637fb17fb8b008b5db81" title="Geeft aan of het station een halte is. " alt="" coords="246,748,358,774"/>
+<area shape="rect" id="node20" href="class_station.html#a79ecb699d3cfbd1e450f6a4b72b6034e" title="Geeft aan of het station een metrostation is. " alt="" coords="225,798,379,825"/>
+<area shape="rect" id="node4" href="class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="885,89,985,116"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1061,140,1112,166"/>
+<area shape="rect" id="node10" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="629,241,808,268"/>
+<area shape="rect" id="node11" href="_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="683,342,754,369"/>
+<area shape="rect" id="node16" href="class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="856,140,1013,166"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8a40b1e5d3b6228a3a173dd0140a5fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Station::spoorBezet </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spoor</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Geeft aan of er zich op het gegeven spoor een tram bevindt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spoor</td><td>Het gegeven spoor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(this-&gt;<a class="el" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Station was niet geinitialiseerd bij de aanroep van spoorBezet."); </dd>
+<dd>
+REQUIRE(bevatSpoor(spoor), "Station bevat het gegeven spoor niet bij aanroep van spoorBezet."); </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_cgraph.png" border="0" usemap="#class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_cgraph" alt=""/></div>
+<map name="class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_cgraph" id="class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_cgraph">
+<area shape="rect" id="node2" href="class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="376,5,548,32"/>
+<area shape="rect" id="node3" href="class_station.html#a4851849f7f158fa51ab91a9cd56986f2" title="Checkt of het station een spoor bevat. " alt="" coords="191,31,328,57"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_icgraph.png" border="0" usemap="#class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_icgraph" alt=""/></div>
+<map name="class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_icgraph" id="class_station_ab8a40b1e5d3b6228a3a173dd0140a5fb_icgraph">
+<area shape="rect" id="node2" href="class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3" title="Bezet het spoor met de gegeven tram. " alt="" coords="191,5,328,32"/>
 </map>
 </div>
 </p>
@@ -541,7 +708,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 23 2017 20:47:10 for Metronet by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

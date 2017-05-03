@@ -20,7 +20,7 @@
 #include "Tram.h"
 #include "Passagier.h"
 #include "Exporter.h"
-
+#include "Statistics.h"
 #include "DesignByContract.h"
 
 /**
@@ -33,11 +33,12 @@ enum SuccessEnum {
 };
 
 /**
- * \brief Metronet klasse die XML bestanden inleest, de consistentie hiervan nagaat en Trams en Stations bijhoudt
+ * \brief Metronet klasse het metronet representeert. Houdt alle trams, stations & passagiers bij
  */
 class Metronet {
 private:
     Exporter* exp;
+    StatisticsMetronet* stats;
     std::map<std::string, Station*> stations;
     std::map<int, Tram*> trams;
     std::vector<int> sporen;
@@ -139,7 +140,11 @@ public:
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van addStation.");
      * \post ENSURE(bevatStation(station), "Station was niet toegevoegd bij de aanroep van addStation.");
      */
-    void addStation(Station* station);
+    void addStation(
+            std::string naam,
+            std::string type,
+            std::map<int, std::string> vorigeStations,
+            std::map<int, std::string> volgendeStations);
 
     /**
      * \brief Voegt tram toe aan metronet.
@@ -148,7 +153,7 @@ public:
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");
      * \post ENSURE(bevatTram(tram), "Tram was niet toegevoegd bij de aanroep van addTram.");
      */
-    void addTram(Tram* tram);
+    void addTram(int zitplaatsen, int snelheid, int spoor, int voertuigNr, std::string type, std::string beginStation);
 
     /**
      * \brief Voegt spoor toe aan metronet.
@@ -165,13 +170,14 @@ public:
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
      * \post ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij aanroep van addPassagier.");
      */
-    void addPassagier(Passagier* pas);
+    void addPassagier(std::string naam, std::string beginStation, std::string eindStation, int hoeveelheid);
 
     /**
      * \brief Kijkt na of het metronet consistent is.
      * \param os De stream waar de output naar gestuurd zal worden.
      * \return Boolean die aangeeft of het Metronet consistent is.
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
+     * \pre REQUIRE(this->properlyInitialised(),
+     *              "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
      */
     bool checkConsistent(std::ostream& os);
 
@@ -183,10 +189,19 @@ public:
     void printMetronet(std::ostream& os);
 
     /**
+     * \brief Geeft een grafische impressie van het hele metronet.
+     * \param os De stream waar de output naar gestuurd moet worden
+     * \pre REQUIRE(this->properlyInitialised(),
+     *              "Metronet was niet geinitialiseerd bij aanroep van printMetronetGrafisch.");
+     */
+    void printMetronetGrafisch(std::ostream& os);
+
+    /**
      * \brief Behandelt het opstappen en afstappen van passagiers.
      * \param tram De tram waar mensen opstappen en afstappen.
      * \param os De stream waar de output naar gestuurd zal worden.
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
+     * \pre REQUIRE(this->properlyInitialised(),
+     *              "Metronet was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij aanroep van opstappenAfstappen.");
      * \pre REQUIRE(trams.find(tram->getVoertuignummer()) != trams.end(), "Tram bestaat niet in het metronet.");
      */
@@ -196,17 +211,25 @@ public:
      * \brief Emuleert het rondrijden van trams
      * \param os De stream waar de output naar gestuurd moet worden
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van rondrijden.");
-     * \post (voor elke tram) ENSURE(t->getHuidigStation() == t->getBeginStation(), "Tram niet geëindigd in beginstation na rondrijden.");
+     * \post (voor elke tram) ENSURE(t->getHuidigStation() == t->getBeginStation(),
+     *                               "Tram niet geëindigd in beginstation na rondrijden.");
      */
     void rondrijden(std::ostream& os);
 
     /**
      * \brief Kijkt of de gegeven tram verder mag rijden
      * \return Boolean die aangeeft of een tram mag vertrekken
-     * /pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van tramMagVertrekken.");
-     * /pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij het aanroepen van tramMagVertrekken.");
+     * \pre REQUIRE(this->properlyInitialised(),
+     *              "Metronet was niet geinitialiseerd bij aanroep van tramMagVertrekken.");
+     * \pre REQUIRE(tram->properlyInitialised(),
+     *              "Tram was niet geinitialiseerd bij het aanroepen van tramMagVertrekken.");
      */
     bool tramMagVertrekken(Tram* tram);
+
+    /**
+     * \brief (Al dan niet tijdelijk) Print de verzamelde gegevens van het metronet
+     */
+    void printStatistics(std::ostream& os);
 
     /**
      * \brief Reset heel het systeem.

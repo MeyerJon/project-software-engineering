@@ -1,0 +1,6 @@
+<map id="Metronet::addTram" name="Metronet::addTram">
+<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="376,35,559,61"/>
+<area shape="rect" id="node3" href="$class_tram.html#a1ba836064d24b2521fe1ad37b5f78422" title="Geef het voertuignummer van de tram. " alt="" coords="381,136,554,163"/>
+<area shape="rect" id="node4" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="607,85,768,112"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a0bcafdae671ac5fff7a4b54429f440ba" title="Kijkt na of het metronet de opgegeven tram bevat. " alt="" coords="185,85,328,112"/>
+</map>

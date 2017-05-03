@@ -1,0 +1,11 @@
+<map id="Passagier::Passagier" name="Passagier::Passagier">
+<area shape="rect" id="node2" href="$class_passagier.html#ac571f017d61f182d77d1438818588539" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="667,215,856,242"/>
+<area shape="rect" id="node3" href="$class_passagier.html#a1cc2825c750405d3782c738ac8e3e080" title="Geef de naam van de groep passagiers. " alt="" coords="458,63,599,90"/>
+<area shape="rect" id="node4" href="$class_passagier.html#a46c6cfe851f62b21190bfb471d4d7b5c" title="Geef het beginstation van de groep passagiers. " alt="" coords="439,114,619,140"/>
+<area shape="rect" id="node5" href="$class_passagier.html#a6d629e150c4840aa23cbeab913d369a9" title="Geef het eindstation van de groep passagiers. " alt="" coords="442,164,615,191"/>
+<area shape="rect" id="node6" href="$class_passagier.html#a8bf2e7bcd86229a7395d3fc8f7143fa6" title="Geef het aantal personen in de groep passagiers. " alt="" coords="206,215,385,242"/>
+<area shape="rect" id="node7" href="$class_passagier.html#a378500b83548e71ada81b248747a585f" title="Passagier::setHuidigeTram" alt="" coords="205,266,385,292"/>
+<area shape="rect" id="node8" href="$class_passagier.html#a0358e5e8f0b18afbbebae472c5c6f6e1" title="Geeft aan op welke tram de passagier reist. " alt="" coords="449,316,608,343"/>
+<area shape="rect" id="node9" href="$class_passagier.html#a6dbfe4c4e75c655ebd83b12eb7388c50" title="Geeft aan of de passagier vertrokken is. " alt="" coords="215,367,376,394"/>
+<area shape="rect" id="node10" href="$class_passagier.html#aefbe5c6dfedf0bc10da44497d4a2e699" title="Update de status van de passagiers. " alt="" coords="200,418,391,444"/>
+</map>

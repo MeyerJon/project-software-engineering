@@ -8,6 +8,9 @@
 #include <string>
 #include "DesignByContract.h"
 
+/**
+ * \brief Passagier klasse die een groep passagiers zal voorstellen.
+ */
 class Passagier {
     std::string naam;
     std::string beginStation;
@@ -67,6 +70,9 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getHoeveelheid.");
     */
     int getHoeveelheid() const;
+
+    // TODO: Docs here
+    void setHuidigeTram(int tram);
 
     /**
      * \brief Geeft aan op welke tram de passagier reist

@@ -1,8 +1,9 @@
-.TH "Parser" 3 "Thu Mar 16 2017" "Metronet" \" -*- nroff -*-
+.TH "Parser" 3 "Fri Apr 28 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Parser \- 
+Parser \- \fBParser\fP klasse die het inlezen van XML-bestanden behandelt\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -14,40 +15,107 @@ Parser \-
 .ti -1c
 .RI "\fBParser\fP ()"
 .br
+.RI "\fIDe lege constructor van de klasse \fBParser\fP\&. \fP"
 .ti -1c
 .RI "\fBParser\fP (\fBExporter\fP *exp)"
 .br
+.RI "\fIDe default constructor van de klasse \fBParser\fP\&. \fP"
 .ti -1c
-.RI "bool \fBsetup\fP (\fBMetronet\fP &metro, std::string filename, std::ostream &os)"
+.RI "\fBParser\fP & \fBoperator=\fP (const \fBParser\fP &rhs)"
 .br
-.RI "\fIVerwerkt het XML-bestand en zet het metronet op\&. \fP"
+.RI "\fIDe overload van de = operator van de klasse \fBParser\fP\&. \fP"
+.ti -1c
+.RI "bool \fBproperlyInitialised\fP () const "
+.br
+.RI "\fIKijk na of de constructor in de juiste staat geeindigd is\&. \fP"
+.ti -1c
+.RI "\fBSuccessEnum\fP \fBsetup\fP (\fBMetronet\fP &metronet, std::string filename, std::ostream &os)"
+.br
+.RI "\fIVerwerkt het XML-bestand\&. \fP"
 .in -1c
+.SH "Detailed Description"
+.PP 
+\fBParser\fP klasse die het inlezen van XML-bestanden behandelt\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Parser::Parser ()"
 
+.PP
+De lege constructor van de klasse \fBParser\fP\&. 
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Parser is niet in de juiste staat geëindigd na aanroep van de constructor\&.'); 
+.RE
+.PP
+
 .SS "Parser::Parser (\fBExporter\fP * exp)"
 
-.SH "Member Function Documentation"
-.PP 
-.SS "bool Parser::setup (\fBMetronet\fP & metro, std::string filename, std::ostream & os)"
-
 .PP
-Verwerkt het XML-bestand en zet het metronet op\&. 
+De default constructor van de klasse \fBParser\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fImetro\fP Het metronet (referentie) dat aangepast moet worden\&. 
-.br
-\fIfilename\fP De naam van het XML-bestand\&. 
-.br
-\fIos\fP De stream waarnaar de output geschreven wordt (nodig voor de exporter)\&.
+\fIexp\fP De exporter die het genereren van de output zal behandelen 
 .RE
 .PP
-REQUIRE(this->properlyInitialised, 'De parser was niet geinitialiseerd bij het aanroepen van setupStations\&.');
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Parser is niet in de juiste staat geëindigd na aanroep van de constructor\&.'); 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBParser\fP & Parser::operator= (const \fBParser\fP & rhs)"
+
+.PP
+De overload van de = operator van de klasse \fBParser\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrhs\fP De parser waaran this gelijk gezet zal worden 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+De huidige parser dat gelijk wordt gezet aan rhs 
+.RE
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'Parser is niet in de juiste staat geëindigd na aanroep van de copy assignment\&.'); 
+.RE
+.PP
+
+.SS "bool Parser::properlyInitialised () const"
+
+.PP
+Kijk na of de constructor in de juiste staat geeindigd is\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean die aangeeft of het object juist geinitialiseerd is\&. 
+.RE
+.PP
+
+.SS "\fBSuccessEnum\fP Parser::setup (\fBMetronet\fP & metronet, std::string filename, std::ostream & os)"
+
+.PP
+Verwerkt het XML-bestand\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilename\fP De naam van het XML-bestand\&. 
 .br
-REQUIRE(metro\&.properlyInitialised, 'Het metronet was niet geinitialiseerd bij het aanroepen van setupStations\&.');
-.br
+\fIos\fP De stream waarnaar de output geschreven wordt (nodig voor de exporter)\&. 
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->properlyInitialised, 'Het metronet was niet geinitialiseerd bij het aanroepen van setupStations\&.'); 
+.RE
+.PP
 
 
 .SH "Author"

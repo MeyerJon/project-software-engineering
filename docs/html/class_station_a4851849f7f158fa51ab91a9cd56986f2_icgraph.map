@@ -1,0 +1,9 @@
+<map id="Station::bevatSpoor" name="Station::bevatSpoor">
+<area shape="rect" id="node2" href="$class_station.html#a950a03b6e82abe53c0bbc10542e4cdee" title="Geef het volgende station op een spoor. " alt="" coords="191,5,333,32"/>
+<area shape="rect" id="node6" href="$class_station.html#a054c18147669814c9c3206419ec6d8cc" title="Geef het vorig station op een spoor. " alt="" coords="199,56,325,83"/>
+<area shape="rect" id="node7" href="$class_station.html#ab8a40b1e5d3b6228a3a173dd0140a5fb" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="193,157,331,184"/>
+<area shape="rect" id="node8" href="$class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3" title="Bezet het spoor met de gegeven tram. " alt="" coords="402,132,539,159"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="381,56,560,83"/>
+<area shape="rect" id="node5" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="435,5,506,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="608,56,659,83"/>
+</map>

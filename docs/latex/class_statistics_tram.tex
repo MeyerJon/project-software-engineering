@@ -1,0 +1,375 @@
+\hypertarget{class_statistics_tram}{}\section{Statistics\+Tram Class Reference}
+\label{class_statistics_tram}\index{Statistics\+Tram@{Statistics\+Tram}}
+
+
+{\ttfamily \#include $<$Statistics.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_statistics_tram_a6c282003872f15fecc06c1f6f1d8e3a5}{Statistics\+Tram} ()
+\begin{DoxyCompactList}\small\item\em De lege constructor voor \hyperlink{class_statistics_tram}{Statistics\+Tram}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{properly\+Initialised} () const 
+\item 
+double \hyperlink{class_statistics_tram_a6c3374680be8a1afdd5cd5cca3cff88f}{get\+Bezettingsgraad} () const 
+\begin{DoxyCompactList}\small\item\em Geeft de totale bezettingsgraad van de tram op dit moment. \end{DoxyCompactList}\item 
+int \hyperlink{class_statistics_tram_a07ed61ed842d741d5a37473b087ce342}{get\+Aantal\+Groepen} () const 
+\begin{DoxyCompactList}\small\item\em Geeft het aantal groepen dat deze tram gebruikt hebben. \end{DoxyCompactList}\item 
+int \hyperlink{class_statistics_tram_a9bd109c35a5475eb58ef83296f206674}{get\+Aantal\+Personen} () const 
+\begin{DoxyCompactList}\small\item\em Geeft het aantal personen dat deze tram gebruikt hebben. \end{DoxyCompactList}\item 
+int \hyperlink{class_statistics_tram_af7cb54424f755c8a52174b3912c5a690}{get\+Aantal\+Fails} () const 
+\begin{DoxyCompactList}\small\item\em Geeft het aantal keren dat een groep niet kon opstappen. \end{DoxyCompactList}\item 
+double \hyperlink{class_statistics_tram_a383003dca44e26d7119f80e14d679466}{get\+Omzet} () const 
+\begin{DoxyCompactList}\small\item\em Geeft de totale omzet van de tram op dit moment. \end{DoxyCompactList}\item 
+void \hyperlink{class_statistics_tram_a35db086f1605d9c27d357dd9221b63b2}{set\+Omzet} (double omzet)
+\item 
+void \hyperlink{class_statistics_tram_a43893c4d3fd3c302fce9973adadf783f}{set\+Bezettingsgraad} (double bezettingsgraad)
+\item 
+void \hyperlink{class_statistics_tram_aecd7a0f0aa139d2a896395bd3647bdbd}{set\+Aantal\+Groepen} (int aantal\+Groepen)
+\item 
+void \hyperlink{class_statistics_tram_ab06e6877ad97269962bc1e4551e50245}{set\+Aantal\+Personen} (int aantal\+Personen)
+\item 
+void \hyperlink{class_statistics_tram_addec60f7a4244e0a47c8c44a41b26dc2}{set\+Aantal\+Fails} (int aantal\+Fails)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Statistics\+Tram@{Statistics\+Tram}!Statistics\+Tram@{Statistics\+Tram}}
+\index{Statistics\+Tram@{Statistics\+Tram}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{Statistics\+Tram()}{StatisticsTram()}}]{\setlength{\rightskip}{0pt plus 5cm}Statistics\+Tram\+::\+Statistics\+Tram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_statistics_tram_a6c282003872f15fecc06c1f6f1d8e3a5}{}\label{class_statistics_tram_a6c282003872f15fecc06c1f6f1d8e3a5}
+
+
+De lege constructor voor \hyperlink{class_statistics_tram}{Statistics\+Tram}. 
+
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{properly\+Initialised()}, \char`\"{}\+Statistics\+Tram is niet in de juiste staat geëindigd na aanroep van de constructor.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a6c282003872f15fecc06c1f6f1d8e3a5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Statistics\+Tram@{Statistics\+Tram}!get\+Aantal\+Fails@{get\+Aantal\+Fails}}
+\index{get\+Aantal\+Fails@{get\+Aantal\+Fails}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{get\+Aantal\+Fails() const }{getAantalFails() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Statistics\+Tram\+::get\+Aantal\+Fails (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_statistics_tram_af7cb54424f755c8a52174b3912c5a690}{}\label{class_statistics_tram_af7cb54424f755c8a52174b3912c5a690}
+
+
+Geeft het aantal keren dat een groep niet kon opstappen. 
+
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{properly\+Initialised()}, \char`\"{}\+Statistics\+Tram was niet geinitialiseerd bij aanroep van get\+Aantal\+Fails.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_af7cb54424f755c8a52174b3912c5a690_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_af7cb54424f755c8a52174b3912c5a690_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!get\+Aantal\+Groepen@{get\+Aantal\+Groepen}}
+\index{get\+Aantal\+Groepen@{get\+Aantal\+Groepen}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{get\+Aantal\+Groepen() const }{getAantalGroepen() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Statistics\+Tram\+::get\+Aantal\+Groepen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_statistics_tram_a07ed61ed842d741d5a37473b087ce342}{}\label{class_statistics_tram_a07ed61ed842d741d5a37473b087ce342}
+
+
+Geeft het aantal groepen dat deze tram gebruikt hebben. 
+
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{properly\+Initialised()}, \char`\"{}\+Statistics\+Tram was niet geinitialiseerd bij aanroep van get\+Aantal\+Groepen.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a07ed61ed842d741d5a37473b087ce342_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a07ed61ed842d741d5a37473b087ce342_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!get\+Aantal\+Personen@{get\+Aantal\+Personen}}
+\index{get\+Aantal\+Personen@{get\+Aantal\+Personen}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{get\+Aantal\+Personen() const }{getAantalPersonen() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Statistics\+Tram\+::get\+Aantal\+Personen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_statistics_tram_a9bd109c35a5475eb58ef83296f206674}{}\label{class_statistics_tram_a9bd109c35a5475eb58ef83296f206674}
+
+
+Geeft het aantal personen dat deze tram gebruikt hebben. 
+
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{properly\+Initialised()}, \char`\"{}\+Statistics\+Tram was niet geinitialiseerd bij aanroep van get\+Aantal\+Personen.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a9bd109c35a5475eb58ef83296f206674_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a9bd109c35a5475eb58ef83296f206674_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!get\+Bezettingsgraad@{get\+Bezettingsgraad}}
+\index{get\+Bezettingsgraad@{get\+Bezettingsgraad}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{get\+Bezettingsgraad() const }{getBezettingsgraad() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Statistics\+Tram\+::get\+Bezettingsgraad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_statistics_tram_a6c3374680be8a1afdd5cd5cca3cff88f}{}\label{class_statistics_tram_a6c3374680be8a1afdd5cd5cca3cff88f}
+
+
+Geeft de totale bezettingsgraad van de tram op dit moment. 
+
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{properly\+Initialised()}, \char`\"{}\+Statistics\+Tram was niet geinitialiseerd bij aanroep van get\+Bezettingsgraad.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a6c3374680be8a1afdd5cd5cca3cff88f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a6c3374680be8a1afdd5cd5cca3cff88f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!get\+Omzet@{get\+Omzet}}
+\index{get\+Omzet@{get\+Omzet}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{get\+Omzet() const }{getOmzet() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Statistics\+Tram\+::get\+Omzet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_statistics_tram_a383003dca44e26d7119f80e14d679466}{}\label{class_statistics_tram_a383003dca44e26d7119f80e14d679466}
+
+
+Geeft de totale omzet van de tram op dit moment. 
+
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{properly\+Initialised()}, \char`\"{}\+Statistics\+Tram was niet geinitialiseerd bij aanroep van get\+Omzet.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a383003dca44e26d7119f80e14d679466_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a383003dca44e26d7119f80e14d679466_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!properly\+Initialised@{properly\+Initialised}}
+\index{properly\+Initialised@{properly\+Initialised}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{properly\+Initialised() const }{properlyInitialised() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Statistics\+Tram\+::properly\+Initialised (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}{}\label{class_statistics_tram_a5625bdbfc18789e245abeea13812536b}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_statistics_tram_a5625bdbfc18789e245abeea13812536b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!set\+Aantal\+Fails@{set\+Aantal\+Fails}}
+\index{set\+Aantal\+Fails@{set\+Aantal\+Fails}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{set\+Aantal\+Fails(int aantal\+Fails)}{setAantalFails(int aantalFails)}}]{\setlength{\rightskip}{0pt plus 5cm}void Statistics\+Tram\+::set\+Aantal\+Fails (
+\begin{DoxyParamCaption}
+\item[{int}]{aantal\+Fails}
+\end{DoxyParamCaption}
+)}\hypertarget{class_statistics_tram_addec60f7a4244e0a47c8c44a41b26dc2}{}\label{class_statistics_tram_addec60f7a4244e0a47c8c44a41b26dc2}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_addec60f7a4244e0a47c8c44a41b26dc2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!set\+Aantal\+Groepen@{set\+Aantal\+Groepen}}
+\index{set\+Aantal\+Groepen@{set\+Aantal\+Groepen}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{set\+Aantal\+Groepen(int aantal\+Groepen)}{setAantalGroepen(int aantalGroepen)}}]{\setlength{\rightskip}{0pt plus 5cm}void Statistics\+Tram\+::set\+Aantal\+Groepen (
+\begin{DoxyParamCaption}
+\item[{int}]{aantal\+Groepen}
+\end{DoxyParamCaption}
+)}\hypertarget{class_statistics_tram_aecd7a0f0aa139d2a896395bd3647bdbd}{}\label{class_statistics_tram_aecd7a0f0aa139d2a896395bd3647bdbd}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_aecd7a0f0aa139d2a896395bd3647bdbd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!set\+Aantal\+Personen@{set\+Aantal\+Personen}}
+\index{set\+Aantal\+Personen@{set\+Aantal\+Personen}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{set\+Aantal\+Personen(int aantal\+Personen)}{setAantalPersonen(int aantalPersonen)}}]{\setlength{\rightskip}{0pt plus 5cm}void Statistics\+Tram\+::set\+Aantal\+Personen (
+\begin{DoxyParamCaption}
+\item[{int}]{aantal\+Personen}
+\end{DoxyParamCaption}
+)}\hypertarget{class_statistics_tram_ab06e6877ad97269962bc1e4551e50245}{}\label{class_statistics_tram_ab06e6877ad97269962bc1e4551e50245}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_ab06e6877ad97269962bc1e4551e50245_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!set\+Bezettingsgraad@{set\+Bezettingsgraad}}
+\index{set\+Bezettingsgraad@{set\+Bezettingsgraad}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{set\+Bezettingsgraad(double bezettingsgraad)}{setBezettingsgraad(double bezettingsgraad)}}]{\setlength{\rightskip}{0pt plus 5cm}void Statistics\+Tram\+::set\+Bezettingsgraad (
+\begin{DoxyParamCaption}
+\item[{double}]{bezettingsgraad}
+\end{DoxyParamCaption}
+)}\hypertarget{class_statistics_tram_a43893c4d3fd3c302fce9973adadf783f}{}\label{class_statistics_tram_a43893c4d3fd3c302fce9973adadf783f}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a43893c4d3fd3c302fce9973adadf783f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Statistics\+Tram@{Statistics\+Tram}!set\+Omzet@{set\+Omzet}}
+\index{set\+Omzet@{set\+Omzet}!Statistics\+Tram@{Statistics\+Tram}}
+\subsubsection[{\texorpdfstring{set\+Omzet(double omzet)}{setOmzet(double omzet)}}]{\setlength{\rightskip}{0pt plus 5cm}void Statistics\+Tram\+::set\+Omzet (
+\begin{DoxyParamCaption}
+\item[{double}]{omzet}
+\end{DoxyParamCaption}
+)}\hypertarget{class_statistics_tram_a35db086f1605d9c27d357dd9221b63b2}{}\label{class_statistics_tram_a35db086f1605d9c27d357dd9221b63b2}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_statistics_tram_a35db086f1605d9c27d357dd9221b63b2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_statistics_8h}{Statistics.\+h}\item 
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_statistics_8cpp}{Statistics.\+cpp}\end{DoxyCompactItemize}

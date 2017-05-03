@@ -1,4 +1,4 @@
-.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Tram.h" 3 "Thu Mar 23 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.TH "/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Tram.h" 3 "Fri Apr 28 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,9 +8,15 @@
 .PP
 \fC#include <iostream>\fP
 .br
+\fC#include <vector>\fP
+.br
+\fC#include <algorithm>\fP
+.br
 \fC#include 'DesignByContract\&.h'\fP
 .br
 \fC#include 'Exporter\&.h'\fP
+.br
+\fC#include 'Passagier\&.h'\fP
 .br
 
 .SS "Classes"
@@ -21,6 +27,24 @@
 .br
 .RI "\fI\fBTram\fP klasse die een TRAM element uit een XML-bestand representeert\&. \fP"
 .in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTramType\fP { \fBAlbatros\fP, \fBPCC\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBTramType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIAlbatros \fP\fP
+.TP
+\fB\fIPCC \fP\fP
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Metronet from the source code\&.

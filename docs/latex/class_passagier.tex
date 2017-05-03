@@ -1,0 +1,450 @@
+\hypertarget{class_passagier}{}\section{Passagier Class Reference}
+\label{class_passagier}\index{Passagier@{Passagier}}
+
+
+{\ttfamily \#include $<$Passagier.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_passagier_a1a2bc82f5780448cd2a9a47d08cc824f}{Passagier} ()
+\begin{DoxyCompactList}\small\item\em Lege constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_passagier_a2f37be1d8d5fd9e6fb1dd764e348ef1a}{Passagier} (std\+::string n, std\+::string begin, std\+::string eind, int h)
+\begin{DoxyCompactList}\small\item\em Default constructor van \hyperlink{class_passagier}{Passagier}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised} () const 
+\begin{DoxyCompactList}\small\item\em Kijk na of de constructor in de juiste staat geeindigd is. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_passagier_a1cc2825c750405d3782c738ac8e3e080}{get\+Naam} () const 
+\begin{DoxyCompactList}\small\item\em Geef de naam van de groep passagiers. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_passagier_a46c6cfe851f62b21190bfb471d4d7b5c}{get\+Begin\+Station} () const 
+\begin{DoxyCompactList}\small\item\em Geef het beginstation van de groep passagiers. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_passagier_a6d629e150c4840aa23cbeab913d369a9}{get\+Eind\+Station} () const 
+\begin{DoxyCompactList}\small\item\em Geef het eindstation van de groep passagiers. \end{DoxyCompactList}\item 
+int \hyperlink{class_passagier_a8bf2e7bcd86229a7395d3fc8f7143fa6}{get\+Hoeveelheid} () const 
+\begin{DoxyCompactList}\small\item\em Geef het aantal personen in de groep passagiers. \end{DoxyCompactList}\item 
+void \hyperlink{class_passagier_a378500b83548e71ada81b248747a585f}{set\+Huidige\+Tram} (int tram)
+\item 
+int \hyperlink{class_passagier_a0358e5e8f0b18afbbebae472c5c6f6e1}{huidige\+Tram} () const 
+\begin{DoxyCompactList}\small\item\em Geeft aan op welke tram de passagier reist. \end{DoxyCompactList}\item 
+bool \hyperlink{class_passagier_a6dbfe4c4e75c655ebd83b12eb7388c50}{is\+Vertrokken} () const 
+\begin{DoxyCompactList}\small\item\em Geeft aan of de passagier vertrokken is. \end{DoxyCompactList}\item 
+void \hyperlink{class_passagier_aefbe5c6dfedf0bc10da44497d4a2e699}{update\+Vertrokken} ()
+\begin{DoxyCompactList}\small\item\em Update de status van de passagiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Passagier@{Passagier}!Passagier@{Passagier}}
+\index{Passagier@{Passagier}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{Passagier()}{Passagier()}}]{\setlength{\rightskip}{0pt plus 5cm}Passagier\+::\+Passagier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_passagier_a1a2bc82f5780448cd2a9a47d08cc824f}{}\label{class_passagier_a1a2bc82f5780448cd2a9a47d08cc824f}
+
+
+Lege constructor. 
+
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Lege constructor van Passagier is niet in de juiste staat geeindigd.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a1a2bc82f5780448cd2a9a47d08cc824f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!Passagier@{Passagier}}
+\index{Passagier@{Passagier}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{Passagier(std\+::string n, std\+::string begin, std\+::string eind, int h)}{Passagier(std::string n, std::string begin, std::string eind, int h)}}]{\setlength{\rightskip}{0pt plus 5cm}Passagier\+::\+Passagier (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{n, }
+\item[{std\+::string}]{begin, }
+\item[{std\+::string}]{eind, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{class_passagier_a2f37be1d8d5fd9e6fb1dd764e348ef1a}{}\label{class_passagier_a2f37be1d8d5fd9e6fb1dd764e348ef1a}
+
+
+Default constructor van \hyperlink{class_passagier}{Passagier}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & De naam van de groep passagiers. \\
+\hline
+{\em begin} & Het beginstation van de groep. \\
+\hline
+{\em eind} & Het eindstation van de groep. \\
+\hline
+{\em h} & De hoeveelheid personen in de groep. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+E\+N\+S\+U\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Default constructor van Passagier is niet in de juiste staat geeindigd.\char`\"{}); 
+\end{DoxyPostcond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a2f37be1d8d5fd9e6fb1dd764e348ef1a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Passagier@{Passagier}!get\+Begin\+Station@{get\+Begin\+Station}}
+\index{get\+Begin\+Station@{get\+Begin\+Station}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{get\+Begin\+Station() const }{getBeginStation() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Passagier\+::get\+Begin\+Station (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_passagier_a46c6cfe851f62b21190bfb471d4d7b5c}{}\label{class_passagier_a46c6cfe851f62b21190bfb471d4d7b5c}
+
+
+Geef het beginstation van de groep passagiers. 
+
+\begin{DoxyReturn}{Returns}
+Beginstation van de groep. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Passagiers was niet geinitialiseerd bij de aanroep van get\+Begin\+Station.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a46c6cfe851f62b21190bfb471d4d7b5c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a46c6cfe851f62b21190bfb471d4d7b5c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!get\+Eind\+Station@{get\+Eind\+Station}}
+\index{get\+Eind\+Station@{get\+Eind\+Station}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{get\+Eind\+Station() const }{getEindStation() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Passagier\+::get\+Eind\+Station (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_passagier_a6d629e150c4840aa23cbeab913d369a9}{}\label{class_passagier_a6d629e150c4840aa23cbeab913d369a9}
+
+
+Geef het eindstation van de groep passagiers. 
+
+\begin{DoxyReturn}{Returns}
+Eindstation van de groep. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Passagiers was niet geinitialiseerd bij de aanroep van get\+Eind\+Station.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a6d629e150c4840aa23cbeab913d369a9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a6d629e150c4840aa23cbeab913d369a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!get\+Hoeveelheid@{get\+Hoeveelheid}}
+\index{get\+Hoeveelheid@{get\+Hoeveelheid}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{get\+Hoeveelheid() const }{getHoeveelheid() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Passagier\+::get\+Hoeveelheid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_passagier_a8bf2e7bcd86229a7395d3fc8f7143fa6}{}\label{class_passagier_a8bf2e7bcd86229a7395d3fc8f7143fa6}
+
+
+Geef het aantal personen in de groep passagiers. 
+
+\begin{DoxyReturn}{Returns}
+Aantal personen in de groep. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Passagiers was niet geinitialiseerd bij de aanroep van get\+Hoeveelheid.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a8bf2e7bcd86229a7395d3fc8f7143fa6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a8bf2e7bcd86229a7395d3fc8f7143fa6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!get\+Naam@{get\+Naam}}
+\index{get\+Naam@{get\+Naam}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{get\+Naam() const }{getNaam() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Passagier\+::get\+Naam (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_passagier_a1cc2825c750405d3782c738ac8e3e080}{}\label{class_passagier_a1cc2825c750405d3782c738ac8e3e080}
+
+
+Geef de naam van de groep passagiers. 
+
+\begin{DoxyReturn}{Returns}
+Naam van de groep. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Passagiers was niet geinitialiseerd bij de aanroep van get\+Naam.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a1cc2825c750405d3782c738ac8e3e080_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a1cc2825c750405d3782c738ac8e3e080_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!huidige\+Tram@{huidige\+Tram}}
+\index{huidige\+Tram@{huidige\+Tram}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{huidige\+Tram() const }{huidigeTram() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Passagier\+::huidige\+Tram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_passagier_a0358e5e8f0b18afbbebae472c5c6f6e1}{}\label{class_passagier_a0358e5e8f0b18afbbebae472c5c6f6e1}
+
+
+Geeft aan op welke tram de passagier reist. 
+
+\begin{DoxyReturn}{Returns}
+De huidige tram waarop de passagier zich begeeft 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$properly\+Initialised, \char`\"{}\+Passagier was niet geinitialiseerd bij de aanroep van huidige\+Tram.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a0358e5e8f0b18afbbebae472c5c6f6e1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a0358e5e8f0b18afbbebae472c5c6f6e1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!is\+Vertrokken@{is\+Vertrokken}}
+\index{is\+Vertrokken@{is\+Vertrokken}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{is\+Vertrokken() const }{isVertrokken() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Passagier\+::is\+Vertrokken (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_passagier_a6dbfe4c4e75c655ebd83b12eb7388c50}{}\label{class_passagier_a6dbfe4c4e75c655ebd83b12eb7388c50}
+
+
+Geeft aan of de passagier vertrokken is. 
+
+\begin{DoxyReturn}{Returns}
+Een boolean die aangeeft of de passagier vertrokken is 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Passagier was niet geinitialiseerd bij de aanroep van is\+Vertrokken.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a6dbfe4c4e75c655ebd83b12eb7388c50_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_passagier_a6dbfe4c4e75c655ebd83b12eb7388c50_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!properly\+Initialised@{properly\+Initialised}}
+\index{properly\+Initialised@{properly\+Initialised}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{properly\+Initialised() const }{properlyInitialised() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Passagier\+::properly\+Initialised (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_passagier_ac571f017d61f182d77d1438818588539}{}\label{class_passagier_ac571f017d61f182d77d1438818588539}
+
+
+Kijk na of de constructor in de juiste staat geeindigd is. 
+
+\begin{DoxyReturn}{Returns}
+Boolean die aangeeft of het object juist geinitialiseerd is. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_ac571f017d61f182d77d1438818588539_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!set\+Huidige\+Tram@{set\+Huidige\+Tram}}
+\index{set\+Huidige\+Tram@{set\+Huidige\+Tram}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{set\+Huidige\+Tram(int tram)}{setHuidigeTram(int tram)}}]{\setlength{\rightskip}{0pt plus 5cm}void Passagier\+::set\+Huidige\+Tram (
+\begin{DoxyParamCaption}
+\item[{int}]{tram}
+\end{DoxyParamCaption}
+)}\hypertarget{class_passagier_a378500b83548e71ada81b248747a585f}{}\label{class_passagier_a378500b83548e71ada81b248747a585f}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a378500b83548e71ada81b248747a585f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_a378500b83548e71ada81b248747a585f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Passagier@{Passagier}!update\+Vertrokken@{update\+Vertrokken}}
+\index{update\+Vertrokken@{update\+Vertrokken}!Passagier@{Passagier}}
+\subsubsection[{\texorpdfstring{update\+Vertrokken()}{updateVertrokken()}}]{\setlength{\rightskip}{0pt plus 5cm}void Passagier\+::update\+Vertrokken (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_passagier_aefbe5c6dfedf0bc10da44497d4a2e699}{}\label{class_passagier_aefbe5c6dfedf0bc10da44497d4a2e699}
+
+
+Update de status van de passagiers. 
+
+\begin{DoxyPrecond}{Precondition}
+R\+E\+Q\+U\+I\+RE(this-\/$>$\hyperlink{class_passagier_ac571f017d61f182d77d1438818588539}{properly\+Initialised()}, \char`\"{}\+Passagier was niet geinitialiseerd bij de aanroep van update\+Vertrokken.\char`\"{}); 
+\end{DoxyPrecond}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_aefbe5c6dfedf0bc10da44497d4a2e699_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_passagier_aefbe5c6dfedf0bc10da44497d4a2e699_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_passagier_8h}{Passagier.\+h}\item 
+/home/jonathan/\+Desktop/\+Project Software Engineering/\+Metronet/\+P\+S\+E/src/\hyperlink{_passagier_8cpp}{Passagier.\+cpp}\end{DoxyCompactItemize}

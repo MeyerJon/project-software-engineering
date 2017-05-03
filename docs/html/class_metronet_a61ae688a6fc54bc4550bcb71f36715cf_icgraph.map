@@ -1,0 +1,5 @@
+<map id="Metronet::bevatPassagier" name="Metronet::bevatPassagier">
+<area shape="rect" id="node2" href="$class_metronet.html#a94aabe02de1f82f95a8f19aac2c0bd12" title="Voegt een passagier toe aan het metronet. " alt="" coords="224,5,384,32"/>
+<area shape="rect" id="node3" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="432,5,532,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="580,5,631,32"/>
+</map>

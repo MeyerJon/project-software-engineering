@@ -1,0 +1,5 @@
+<map id="Tram::isAlbatros" name="Tram::isAlbatros">
+<area shape="rect" id="node2" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="172,5,372,32"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="420,5,557,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="605,5,656,32"/>
+</map>

@@ -1,0 +1,142 @@
+.TH "StatisticsTram" 3 "Fri Apr 28 2017" "Version 1.0" "Metronet" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StatisticsTram \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Statistics\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStatisticsTram\fP ()"
+.br
+.RI "\fIDe lege constructor voor \fBStatisticsTram\fP\&. \fP"
+.ti -1c
+.RI "bool \fBproperlyInitialised\fP () const "
+.br
+.ti -1c
+.RI "double \fBgetBezettingsgraad\fP () const "
+.br
+.RI "\fIGeeft de totale bezettingsgraad van de tram op dit moment\&. \fP"
+.ti -1c
+.RI "int \fBgetAantalGroepen\fP () const "
+.br
+.RI "\fIGeeft het aantal groepen dat deze tram gebruikt hebben\&. \fP"
+.ti -1c
+.RI "int \fBgetAantalPersonen\fP () const "
+.br
+.RI "\fIGeeft het aantal personen dat deze tram gebruikt hebben\&. \fP"
+.ti -1c
+.RI "int \fBgetAantalFails\fP () const "
+.br
+.RI "\fIGeeft het aantal keren dat een groep niet kon opstappen\&. \fP"
+.ti -1c
+.RI "double \fBgetOmzet\fP () const "
+.br
+.RI "\fIGeeft de totale omzet van de tram op dit moment\&. \fP"
+.ti -1c
+.RI "void \fBsetOmzet\fP (double omzet)"
+.br
+.ti -1c
+.RI "void \fBsetBezettingsgraad\fP (double bezettingsgraad)"
+.br
+.ti -1c
+.RI "void \fBsetAantalGroepen\fP (int aantalGroepen)"
+.br
+.ti -1c
+.RI "void \fBsetAantalPersonen\fP (int aantalPersonen)"
+.br
+.ti -1c
+.RI "void \fBsetAantalFails\fP (int aantalFails)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "StatisticsTram::StatisticsTram ()"
+
+.PP
+De lege constructor voor \fBStatisticsTram\fP\&. 
+.PP
+\fBPostcondition:\fP
+.RS 4
+ENSURE(this->\fBproperlyInitialised()\fP, 'StatisticsTram is niet in de juiste staat geëindigd na aanroep van de constructor\&.'); 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int StatisticsTram::getAantalFails () const"
+
+.PP
+Geeft het aantal keren dat een groep niet kon opstappen\&. 
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'StatisticsTram was niet geinitialiseerd bij aanroep van getAantalFails\&.'); 
+.RE
+.PP
+
+.SS "int StatisticsTram::getAantalGroepen () const"
+
+.PP
+Geeft het aantal groepen dat deze tram gebruikt hebben\&. 
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'StatisticsTram was niet geinitialiseerd bij aanroep van getAantalGroepen\&.'); 
+.RE
+.PP
+
+.SS "int StatisticsTram::getAantalPersonen () const"
+
+.PP
+Geeft het aantal personen dat deze tram gebruikt hebben\&. 
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'StatisticsTram was niet geinitialiseerd bij aanroep van getAantalPersonen\&.'); 
+.RE
+.PP
+
+.SS "double StatisticsTram::getBezettingsgraad () const"
+
+.PP
+Geeft de totale bezettingsgraad van de tram op dit moment\&. 
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'StatisticsTram was niet geinitialiseerd bij aanroep van getBezettingsgraad\&.'); 
+.RE
+.PP
+
+.SS "double StatisticsTram::getOmzet () const"
+
+.PP
+Geeft de totale omzet van de tram op dit moment\&. 
+.PP
+\fBPrecondition:\fP
+.RS 4
+REQUIRE(this->\fBproperlyInitialised()\fP, 'StatisticsTram was niet geinitialiseerd bij aanroep van getOmzet\&.'); 
+.RE
+.PP
+
+.SS "bool StatisticsTram::properlyInitialised () const"
+
+.SS "void StatisticsTram::setAantalFails (int aantalFails)"
+
+.SS "void StatisticsTram::setAantalGroepen (int aantalGroepen)"
+
+.SS "void StatisticsTram::setAantalPersonen (int aantalPersonen)"
+
+.SS "void StatisticsTram::setBezettingsgraad (double bezettingsgraad)"
+
+.SS "void StatisticsTram::setOmzet (double omzet)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Metronet from the source code\&.

@@ -1,4 +1,4 @@
 <map id="Tram::setHuidigStation" name="Tram::setHuidigStation">
-<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="441,5,616,33"/>
-<area shape="rect" id="node3" href="$class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="223,31,393,59"/>
+<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="413,5,575,32"/>
+<area shape="rect" id="node3" href="$class_tram.html#ae7bc337a42b2d839b4da5f648b781e79" title="Geef het huidig station. " alt="" coords="209,31,365,57"/>
 </map>

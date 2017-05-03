@@ -1,6 +1,8 @@
 <map id="/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Metronet.h" name="/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Metronet.h">
-<area shape="rect" id="node9" href="$_station_8h.html" title="Station.h" alt="" coords="21,189,100,217"/>
-<area shape="rect" id="node10" href="$_design_by_contract_8h.html" title="DesignByContract.h" alt="" coords="144,265,295,293"/>
-<area shape="rect" id="node12" href="$_tram_8h.html" title="Tram.h" alt="" coords="216,113,284,141"/>
-<area shape="rect" id="node13" href="$_exporter_8h.html" title="Exporter.h" alt="" coords="277,189,367,217"/>
+<area shape="rect" id="node9" href="$_station_8h.html" title="Station.h" alt="" coords="92,109,166,136"/>
+<area shape="rect" id="node10" href="$_design_by_contract_8h.html" title="DesignByContract.h" alt="" coords="456,259,596,285"/>
+<area shape="rect" id="node12" href="$_tram_8h.html" title="Tram.h" alt="" coords="434,109,496,136"/>
+<area shape="rect" id="node13" href="$_exporter_8h.html" title="Exporter.h" alt="" coords="265,184,348,211"/>
+<area shape="rect" id="node14" href="$_passagier_8h.html" title="Passagier.h" alt="" coords="606,184,697,211"/>
+<area shape="rect" id="node15" href="$_statistics_8h.html" title="Statistics.h" alt="" coords="572,109,660,136"/>
 </map>

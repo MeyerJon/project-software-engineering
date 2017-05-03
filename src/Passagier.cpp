@@ -40,6 +40,12 @@ int Passagier::getHoeveelheid() const {
     return hoeveelheid;
 }
 
+void Passagier::setHuidigeTram(int tram) {
+    REQUIRE(properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van setHuidigeTram.");
+    Passagier::tram = tram;
+    ENSURE((huidigeTram() == tram), "Tram is niet aangepast door setHuidigeTram.");
+}
+
 int Passagier::huidigeTram() const {
     REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van huidigeTram.");
     return tram;

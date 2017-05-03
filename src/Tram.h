@@ -14,6 +14,7 @@
 #include "DesignByContract.h"
 #include "Exporter.h"
 #include "Passagier.h"
+#include "Statistics.h"
 
 class Spoor;
 class Station;
@@ -29,7 +30,6 @@ enum TramType {
  */
 class Tram {
 private:
-    double omzet;
     int zitplaatsen;
     int bezettePlaatsen;
     int snelheid;
@@ -40,6 +40,8 @@ private:
     TramType type;
     std::vector<Passagier*> passagiers;
     Tram* initCheck;
+    StatisticsTram* stats;
+
 public:
     /**
      * \brief De lege constructor van de klasse Tram
@@ -55,7 +57,7 @@ public:
      * \param beginS Het begin station
      * \post ENSURE(this->properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
      */
-    Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS);
+    Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS, StatisticsTram* statistics);
 
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.
@@ -230,6 +232,12 @@ public:
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van opstappen.");
      */
     bool opstappen(Passagier* pas);
+
+    /**
+     *  \brief Geeft de extra gegevens van de tram.
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
+     */
+    StatisticsTram* getStatistics();
 };
 
 #endif /* SRC_TRAM_H_ */

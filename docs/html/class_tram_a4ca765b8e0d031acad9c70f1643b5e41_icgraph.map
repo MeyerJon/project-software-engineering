@@ -1,0 +1,9 @@
+<map id="Tram::getBezettePlaatsen" name="Tram::getBezettePlaatsen">
+<area shape="rect" id="node2" href="$class_tram.html#a6582d8608c8091069ad9c017294b9a32" title="Past het aantal bezette plaatsen aan. " alt="" coords="228,31,403,57"/>
+<area shape="rect" id="node3" href="$class_tram.html#aba1c306a2a1aa5bdf40fe6e394baef99" title="Emuleert afstappen van passagiers. " alt="" coords="452,5,569,32"/>
+<area shape="rect" id="node8" href="$class_tram.html#af42c023f82a85f68ec60cfa7b52d4d85" title="Emuleert opstappen van passagiers. " alt="" coords="451,56,571,83"/>
+<area shape="rect" id="node4" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="619,5,819,32"/>
+<area shape="rect" id="node7" href="$_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="683,56,754,83"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="867,5,1004,32"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1052,5,1103,32"/>
+</map>

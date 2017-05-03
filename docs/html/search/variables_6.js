@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['metronet',['metronet',['../class_metronet_domain_test.html#aa185f99af6607124a6fea8c4f63fddb7',1,'MetronetDomainTest::metronet()'],['../class_metronet_input_test.html#ab922ed7c2e4f1dfee1ed7df1eb3a13b4',1,'MetronetInputTest::metronet()'],['../class_metronet_output_test.html#aaa6f34ee762d128cd8aea8c895bb46e4',1,'MetronetOutputTest::metronet()']]]
+  ['volgende',['volgende',['../structstation_verbinding.html#a628e06180645500c27364c1c4c7e92ef',1,'stationVerbinding']]],
+  ['vorige',['vorige',['../structstation_verbinding.html#af8d9993c5e316f93a90acd12dd12604a',1,'stationVerbinding']]]
 ];

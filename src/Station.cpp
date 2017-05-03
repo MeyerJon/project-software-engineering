@@ -59,7 +59,7 @@ std::string Station::getType() const {
 
 std::string Station::getVolgende(int spoor) const {
     REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getVolgende.");
-    REQUIRE(bevatSpoor(spoor), "Station bevat spoor niet bij aanroep van getVolgende.");
+    REQUIRE(bevatSpoor(spoor), ("Station bevat spoor niet bij aanroep van getVolgende."));
     return verbindingen.at(spoor).volgende;
 }
 
