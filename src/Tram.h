@@ -41,6 +41,8 @@ private:
     std::vector<Passagier*> passagiers;
     Tram* initCheck;
     StatisticsTram* stats;
+    static double ticketPrijs;
+    double totaleBezetting;
 
 public:
     /**
@@ -134,6 +136,12 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getOmzet.");
      */
     double getOmzet() const;
+
+    /**
+     * \brief Geeft de prijs per ticket voor een tramrit
+     * \pre ENSURE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getTicketPrijs.");
+     */
+     double getTicketPrijs() const;
 
     /**
      * \brief Checkt of de gegeven Passagier op de tram zit.
@@ -238,6 +246,9 @@ public:
      *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
      */
     StatisticsTram* getStatistics();
+
+
+    ~Tram();
 };
 
 #endif /* SRC_TRAM_H_ */

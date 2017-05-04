@@ -12,6 +12,7 @@
 #include <map>
 #include <vector>
 #include "DesignByContract.h"
+#include "Statistics.h"
 
 class Tram;
 
@@ -32,6 +33,7 @@ class Station {
 private:
     std::string naam;
     StationType type;
+    StatisticsStation* stats;
     std::map<int, stationVerbinding> verbindingen;
     std::map<int, bool> trams;
     Station* initCheck;
@@ -51,7 +53,7 @@ public:
      * \param volgendeStations Map met als key het spoor en als value de volgende station
      * \post ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
-    Station(std::string n, std::string typeNaam, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations);
+    Station(std::string n, std::string typeNaam, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations, StatisticsStation* statistics);
 
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.
@@ -104,6 +106,13 @@ public:
     std::vector<int> getSporen() const;
 
     /**
+     * \brief Geeft de extra gegevens van het station
+     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getStatistics.");
+     */
+     StatisticsStation* getStatistics();
+
+
+    /**
      * \brief Geeft aan of het station een halte is
      * \return Een bool die aangeeft of het station een halte is
      * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte.");
@@ -134,6 +143,8 @@ public:
      * \post ENSURE(spoorBezet(spoor) == isTramHier, "Spoor was niet correct bezet na aanroep van bezetSpoor");
      */
     void bezetSpoor(int spoor, bool isTramHier);
+
+    ~Station();
 };
 
 
