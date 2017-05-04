@@ -1,1 +1,0 @@
-ERROR: Tram 1 heeft een ongeldig beginstation.

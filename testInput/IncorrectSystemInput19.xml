@@ -44,7 +44,8 @@
     </STATION>
     <TRAM>
         <lijnNr>1</lijnNr>
-	<voertuigNr>1</voertuigNr>
+	<!--voertuigNr bevat een foute waarde-->
+	<voertuigNr>Een</voertuigNr>
 	<type>PCC</type>
         <zitplaatsen>16</zitplaatsen>
         <snelheid>40</snelheid>
@@ -70,7 +71,6 @@
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
 </ROOT>

@@ -43,7 +43,8 @@
 	</SPOOR>
     </STATION>
     <TRAM>
-        <lijnNr>1</lijnNr>
+	<!--lijnNr bevat een foute waarde-->
+        <lijnNr>Een</lijnNr>
 	<voertuigNr>1</voertuigNr>
 	<type>PCC</type>
         <zitplaatsen>16</zitplaatsen>
@@ -70,7 +71,6 @@
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
 </ROOT>

@@ -1,2 +1,0 @@
-ERROR: Station mist een attribuut.
-ERROR: Station B heeft geen vorig station.

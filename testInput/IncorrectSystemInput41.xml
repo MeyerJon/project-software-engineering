@@ -49,6 +49,8 @@
         <zitplaatsen>16</zitplaatsen>
         <snelheid>40</snelheid>
         <beginStation>A</beginStation>
+	<!--aantalWielen is een fout attribuut-->
+	<aantalWielen>13</aantalWielen>
     </TRAM>
     <TRAM>
         <lijnNr>1</lijnNr>
@@ -70,7 +72,6 @@
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
 </ROOT>

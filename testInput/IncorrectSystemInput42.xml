@@ -70,7 +70,7 @@
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>2</hoeveelheid>
+	<gemiddeldeLeeftijd>20</gemiddeldeLeeftijd>
     </PASSAGIER>
 </ROOT>

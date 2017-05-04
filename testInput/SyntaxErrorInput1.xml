@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <ROOT>
     <STATION>
-        <naam>A</naam>
+        <>A</naam>
 	<type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
@@ -70,7 +70,6 @@
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
 </ROOT>
