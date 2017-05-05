@@ -444,7 +444,7 @@ void Metronet::rondrijden(std::ostream& os) {
             tram.second->getStatistics()->updateGemiddeldeBezettingsgraad(tram.second->getBezettePlaatsen());
         }
     }
-    std::string out = "Alle passagiers zijn op hun bestemming aangekomen.\n";
+    std::string out = "Alle passagiers zijn op hun bestemming aangekomen.\n\n";
     exp->write(out, os);
 }
 
@@ -471,15 +471,20 @@ void Metronet::printStatistics(std::ostream& os) {
     out += "Totaal aantal groepen: " + std::to_string(this->stats->getTotaalAantalGroepen()) + ".\n";
     out += "Totaal aantal zitplaatsen: " + std::to_string(this->stats->getAantalZitplaatsen()) + ".\n";
     double bezettingsgraad = 0.0;
+    Tram* popTram = trams.begin()->second;
     for(auto& p : trams){
         bezettingsgraad += p.second->getStatistics()->getBezettingsgraad();
+        if(p.second->getStatistics()->getAantalPersonen() > popTram->getStatistics()->getAantalPersonen()){
+            popTram = p.second;
+        }
     }
-    bezettingsgraad /= trams.size();
+    bezettingsgraad /= (double) trams.size();
     out += "Gemiddelde bezettingsgraad: " + std::to_string(bezettingsgraad) + ".\n";
+    out += "Populairste tram: " + std::to_string(popTram->getVoertuignummer()) + " (" + std::to_string(popTram->getStatistics()->getAantalPersonen()) + " personen)\n";
     exp->write(out, os);
 
     // Tramgegevens
-    std::string tramHead = "-Tramgegevens: \n";
+    std::string tramHead = "\n-Tramgegevens: \n";
     exp->write(tramHead, os);
     for(auto& p : trams){
         Tram* tram = p.second;
@@ -506,6 +511,9 @@ void Metronet::printStatistics(std::ostream& os) {
         out += "\n";
         exp->write(out, os);
     }
+
+    std::string end = "-------------------------------------------\n\n";
+    exp->write(end, os);
 }
 
 void Metronet::reset() {
