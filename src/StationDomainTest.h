@@ -23,8 +23,11 @@ protected:
 
     virtual void TearDown() {
     }
-    Station halte;
-    Station metrostation;
+    std::map<int, std::string> dummyMap = {{10, "dummy"}};
+    StatisticsStation* statsA = new StatisticsStation();
+    StatisticsStation* statsB = new StatisticsStation();
+    Station halte = Station("A", "Halte", dummyMap, dummyMap, statsA);
+    Station metrostation = Station("B", "Metrostation", dummyMap, dummyMap, statsB);
     const int spoor = 10;
 };
 

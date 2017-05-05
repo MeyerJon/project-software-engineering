@@ -106,7 +106,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                         }
                     }
                 }
-                if(name == "" or vorigeStations.size() != volgendeStations.size() or spoor == -1){
+                if(name == "" or type == "" or vorigeStations.size() != volgendeStations.size() or spoor == -1){
                     std::string out = "ERROR: Station mist een attribuut.\n";
                     exp->write(out, os);
                     endResult = PartialImport;
@@ -164,6 +164,10 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     endResult = PartialImport;
                     continue;
                 }
+                if (metronet.getStations().count(beginS) == 0) {
+                    endResult = PartialImport;
+                    continue;
+                }
                 metronet.addTram(zitpl, snelh, spoor, voertuigNr, type, beginS);
                 metronet.addSpoor(spoor);
             }
@@ -191,7 +195,10 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     if(attrName == "naam") naam = t;
                     else if(attrName == "beginStation") beginS = t;
                     else if(attrName == "eindStation") eindS = t;
-                    else if(attrName == "hoeveelheid") hoeveelheid = stoi(t);
+                    else if(attrName == "hoeveelheid"){
+                        hoeveelheid = stoi(t);
+                        if(hoeveelheid < 0) throw std::invalid_argument("Negatief aantal passagiers.");
+                    }
                     else{
                         std::string out = "ERROR: Onherkenbaar attribuut '" + attrName + "' wordt overgeslaan.\n";
                         endResult = PartialImport;
@@ -207,7 +214,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                 metronet.addPassagier(naam, beginS, eindS, hoeveelheid);
             }
             catch(std::invalid_argument& ex) {
-                std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Tram niet toegevoegd.\n";
+                std::string out = "ERROR: Attribuut '" + attrName + "' heeft een foute waarde. Passagier niet toegevoegd.\n";
                 exp->write(out, os);
                 endResult = PartialImport;
                 continue;

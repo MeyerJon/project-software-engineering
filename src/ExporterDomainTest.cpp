@@ -10,6 +10,7 @@ TEST_F(ExporterDomainTest, ProperlyInitialised) {
 
 
 TEST_F(ExporterDomainTest, Write) {
+    std::ostream dummy(0);
     ASSERT_FALSE(exp->isDocumentStarted());
 
     exp->write(dummy_str, dummy);
@@ -18,6 +19,7 @@ TEST_F(ExporterDomainTest, Write) {
 }
 
 TEST_F(ExporterDomainTest, Finish) {
+    std::ostream dummy(0);
     ASSERT_FALSE(exp->isDocumentStarted());
     ASSERT_DEATH(exp->finish(dummy), "Document was niet aangemaakt voor de aanroep van finish.");
 

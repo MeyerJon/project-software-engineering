@@ -22,9 +22,8 @@ TEST_F(StationDomainTest, IsMetrostation) {
 
 
 TEST_F(StationDomainTest, SpoorBezet) {
-    ASSERT_DEATH(halte.spoorBezet(spoor), "Station bevat het gegeven spoor niet bij aanroep van spoorBezet.");
-    ASSERT_DEATH(metrostation.spoorBezet(spoor),
-                 "Station bevat het gegeven spoor niet bij aanroep van spoorBezet.");
+    ASSERT_FALSE(halte.spoorBezet(spoor));
+    ASSERT_FALSE(metrostation.spoorBezet(spoor));
 }
 
 TEST_F(StationDomainTest, bezetSpoor) {

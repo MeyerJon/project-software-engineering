@@ -108,5 +108,5 @@ void Station::bezetSpoor(int spoor, bool isTramHier) {
 }
 
 Station::~Station() {
-    delete stats;
+    delete (*this).stats;
 }

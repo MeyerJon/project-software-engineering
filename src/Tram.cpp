@@ -196,6 +196,11 @@ StatisticsTram* Tram::getStatistics() {
     return stats;
 }
 
+bool Tram::isLeeg() {
+    REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isLeeg.");
+    return passagiers.size() == 0;
+}
+
 Tram::~Tram() {
     delete stats;
 }

@@ -86,41 +86,22 @@ TEST_F(TramDomainTest, OpstappenAfstappenNormaal){
     ASSERT_TRUE(albatros.opstappen(&pas3));
     ASSERT_EQ(albatros.getBezettePlaatsen(), 0);
 
-    bigTram.opstappen(0);
-    ASSERT_EQ(bigTram.getPassagiers(), 0);
-    bigTram.opstappen(99);
-    ASSERT_EQ(bigTram.getPassagiers(), 99);
-    bigTram.afstappen(21);
-    ASSERT_EQ(bigTram.getPassagiers(), 78);
-    bigTram.opstappen(2);
-    ASSERT_EQ(bigTram.getPassagiers(), 80);
-    bigTram.afstappen(60);
-    ASSERT_EQ(bigTram.getPassagiers(), 20);
-    bigTram.afstappen(20);
-    ASSERT_EQ(bigTram.getPassagiers(), 0);
 }
 
 TEST_F(TramDomainTest, OpstappenAfstappenOverflow){
-    Tram tram(20, 50, 1, "A");
     int max = std::numeric_limits<int>::max();
-    // Meer op- en afstppen dan max
-    tram.opstappen(30);
-    ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
-    tram.afstappen(30);
-    ASSERT_EQ(tram.getPassagiers(), 0);
-    // Max int op- en afstappen
-    tram.opstappen(max);
-    ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
-    tram.afstappen(max);
-    ASSERT_EQ(tram.getPassagiers(), 0);
-    // Max int + 1 op- en afstappen
-    EXPECT_DEATH(tram.opstappen(max + 1), "");
-    EXPECT_DEATH(tram.afstappen(max + 1), "");
-}
+    Passagier pas1("a", "dummy", "dummy", 101);
+    Passagier pas2("b", "dummy", "dummy", 50);
+    Passagier pas3("c", "dummy", "dummy", 51);
+    Passagier pas4("a", "dummy", "dummy", max);
 
-TEST_F(TramDomainTest, OpstappenAfstappenNegative){
-    Tram tram(20, 50, 1, "A");
-
-    EXPECT_DEATH(tram.opstappen(-1), "");
-    EXPECT_DEATH(tram.afstappen(-1), "");
+    // Meer op- en afstappen dan max
+    albatros.opstappen(&pas1);
+    ASSERT_FALSE(albatros.bevatPassagier(&pas1));
+    albatros.opstappen(&pas2);
+    ASSERT_TRUE(albatros.bevatPassagier(&pas2));
+    albatros.opstappen(&pas3);
+    ASSERT_FALSE(albatros.bevatPassagier(&pas3));
+    albatros.opstappen(&pas4);
+    ASSERT_FALSE(albatros.bevatPassagier(&pas4));
 }

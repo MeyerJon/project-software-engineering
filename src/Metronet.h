@@ -107,7 +107,7 @@ public:
     bool bevatTram(Tram* tram);
 
     /**
-     * \brief Kijkt na of het metronet de opgegeven tram bevat.
+     * \brief Kijkt na of het metronet de opgegeven station bevat.
      * \param tram De tram die moet gezocht worden.
      * \return Boolean die aangeeft of het metronet de tram bevat.
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van bevatStation.");
@@ -117,7 +117,7 @@ public:
     bool bevatStation(Station* station);
 
     /**
-     * \brief Kijkt na of het metronet de opgegeven tram bevat.
+     * \brief Kijkt na of het metronet de opgegeven spoor bevat.
      * \param tram Het spoor dat moet gezocht worden.
      * \return Boolean die aangeeft of het metronet de tram bevat.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatSpoor.");

@@ -141,7 +141,7 @@ TEST_F(MetronetInputTest, InputSyntaxErrorSystems) {
 
     std::string filename;
     for (int i = 1; i <= TESTS_SYNTAX; i++) {
-        filename = "testInput/SyntaxErrorSystemInput" + std::to_string(i) + ".xml";
+        filename = "testInput/SyntaxErrorInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 

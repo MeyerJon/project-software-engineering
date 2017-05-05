@@ -25,7 +25,6 @@ protected:
         delete exp;
     }
     Exporter* exp;
-    std::ostream dummy = std::ostream(0);
     std::string dummy_str = "dummy";
 };
 

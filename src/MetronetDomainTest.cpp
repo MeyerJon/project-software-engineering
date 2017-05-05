@@ -55,18 +55,17 @@ TEST_F(MetronetDomainTest, CheckConsistent){
 TEST_F(MetronetDomainTest, addTram){
     std::ostream dummy(0);
 
-    Tram* tram = new Tram(10, 60, 1, "A");
-    metronet.addTram(tram);
-    ASSERT_EQ(metronet.getTrams().at(1), tram);
+    metronet.addTram(70, 101, 10, 11, "PCC", "A");
+    ASSERT_TRUE(metronet.bevatTram(metronet.getTrams().at(1)));
     metronet.reset();
 }
 
 TEST_F(MetronetDomainTest, addStation){
     std::ostream dummy(0);
 
-    Station* station = new Station("A", "B", "C", 1, 0, 0);
-    metronet.addStation(station);
-    ASSERT_EQ(metronet.getStations().at("A"), station);
+    std::map<int ,std::string> dummyMap;
+    metronet.addStation("A", "Halte", dummyMap, dummyMap);
+    ASSERT_TRUE(metronet.bevatStation(metronet.getStations().at("A")));
     metronet.reset();
 }
 
@@ -77,10 +76,10 @@ TEST_F(MetronetDomainTest, rondrijden){
     metronet.rondrijden(dummy);
 
     std::map<int, Tram*>& trams = metronet.getTrams();
-    for(auto p : trams){
+    for(auto& p : trams){
         Tram* tram = p.second;
-        ASSERT_EQ(tram->getHuidigStation(), tram->getBeginStation());
-        ASSERT_EQ(tram->getPassagiers(), 5); // Scenario zo geschreven
+        ASSERT_TRUE(tram->isLeeg());
     }
+
     metronet.reset();
 }
