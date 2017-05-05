@@ -136,13 +136,10 @@ public:
     double getOmzet() const;
 
     /**
-     * \brief Checkt of de gegeven Passagier op de tram zit.
-     * \param pas De passagier die al dan niet op de tram zit.
-     * \return Bool die aangeeft of de Passagier op de tram zit.
-     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van bevatPassagier.");
-     * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+     *  \brief Geeft de extra gegevens van de tram.
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
      */
-    bool bevatPassagier(Passagier* pas) const;
+    StatisticsTram* getStatistics();
 
     /**
      * \brief Past het huidige station aan
@@ -168,6 +165,37 @@ public:
     void setOmzet(double o);
 
     /**
+     * \brief Past het voertuignummer aan.
+     * \param n Nieuw voertuignummer
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setVoertuignummer.");
+     * \post ENSURE((getVoertuignummer() == n), "Voertuignummer niet aangepast bij aanroep van setVoertuignummer.");
+     */
+    void setVoertuignummer(int n);
+
+    /**
+     * \brief Geeft aan of de tram een Albatros is
+     * \return Boolean die aangeeft of de tram een Albatros is
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+     */
+    bool isAlbatros() const;
+
+    /**
+     * \brief Geeft aan of de tram een PCC is
+     * \return Boolean die aangeeft of de tram een PCC is
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+     */
+    bool isPCC() const;
+
+    /**
+     * \brief Checkt of de gegeven Passagier op de tram zit.
+     * \param pas De passagier die al dan niet op de tram zit.
+     * \return Bool die aangeeft of de Passagier op de tram zit.
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+     * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+     */
+    bool bevatPassagier(Passagier* pas) const;
+
+    /**
      * \brief Voegt een passagier toe en update de status van de passagier
      * \param pas Nieuwe groep passagiers
      * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addPassagier.");
@@ -185,28 +213,6 @@ public:
      * \post ENSURE(!bevatPassagier(pas), "Passagiers niet aangepast bij aanroep van addPassagiers.");
     */
     void removePassagier(Passagier* pas);
-
-    /**
-     * \brief Geeft aan of de tram een Albatros is
-     * \return Boolean die aangeeft of de tram een Albatros is
-     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
-     */
-    bool isAlbatros() const;
-
-    /**
-     * \brief Geeft aan of de tram een PCC is
-     * \return Boolean die aangeeft of de tram een PCC is
-     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
-     */
-    bool isPCC() const;
-
-    /**
-     * \brief Past het voertuignummer aan.
-     * \param n Nieuw voertuignummer
-     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van setVoertuignummer.");
-     * \post ENSURE((getVoertuignummer() == n), "Voertuignummer niet aangepast bij aanroep van setVoertuignummer.");
-     */
-    void setVoertuignummer(int n);
 
     /**
      * \brief Verplaatst een tram naar het opgegeven station.
@@ -232,12 +238,6 @@ public:
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van opstappen.");
      */
     bool opstappen(Passagier* pas);
-
-    /**
-     *  \brief Geeft de extra gegevens van de tram.
-     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
-     */
-    StatisticsTram* getStatistics();
 };
 
 #endif /* SRC_TRAM_H_ */

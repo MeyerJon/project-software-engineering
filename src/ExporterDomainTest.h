@@ -5,9 +5,28 @@
 #ifndef SOFTENG_EXPORTERDOMAINTEST_H
 #define SOFTENG_EXPORTERDOMAINTEST_H
 
+#include <iostream>
+#include <fstream>
+#include <gtest/gtest.h>
+#include <sys/stat.h>
 
-class ExporterDomainTest {
+#include "MetronetUtils.h"
+#include "Exporter.h"
 
+class ExporterDomainTest : public ::testing::Test {
+protected:
+    friend class Exporter;
+
+    virtual void SetUp() {
+        exp = new Exporter();
+    }
+
+    virtual void TearDown() {
+        delete exp;
+    }
+    Exporter* exp;
+    std::ostream dummy = std::ostream(0);
+    std::string dummy_str = "dummy";
 };
 
 

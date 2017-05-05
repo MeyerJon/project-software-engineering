@@ -22,54 +22,6 @@ TEST_F(MetronetDomainTest, ProperlyInitialised){
     metronet.reset();
 }
 
-TEST_F(MetronetDomainTest, ExporterTest) {
-    std::ostream dummy(0);
-    std::string dummyString = "dummy";
-    Exporter testExp;
-    ASSERT_TRUE(testExp.properlyInitialised());
-    ASSERT_FALSE(testExp.isDocumentStarted());
-    testExp.write(dummyString, dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-    testExp.finish(dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-}
-
-TEST_F(MetronetDomainTest, ExporterCLITest) {
-    std::ostream dummy(0);
-    std::string dummyString = "dummy";
-    ExporterCLI testExp;
-    ASSERT_TRUE(testExp.properlyInitialised());
-    ASSERT_FALSE(testExp.isDocumentStarted());
-    testExp.write(dummyString, dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-    testExp.finish(dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-}
-
-TEST_F(MetronetDomainTest, ExporterTXTTest) {
-    std::ostream dummy(0);
-    std::string dummyString = "dummy";
-    ExporterTXT testExp;
-    ASSERT_TRUE(testExp.properlyInitialised());
-    ASSERT_FALSE(testExp.isDocumentStarted());
-    testExp.write(dummyString, dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-    testExp.finish(dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-}
-
-TEST_F(MetronetDomainTest, ExporterHTMLTest) {
-    std::ostream dummy(0);
-    std::string dummyString = "dummy";
-    ExporterHTML testExp;
-    ASSERT_TRUE(testExp.properlyInitialised());
-    ASSERT_FALSE(testExp.isDocumentStarted());
-    testExp.write(dummyString, dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-    testExp.finish(dummy);
-    ASSERT_TRUE(testExp.isDocumentStarted());
-}
-
 TEST_F(MetronetDomainTest, CheckConsistent){
     std::string filename;
     SuccessEnum importResult;
@@ -98,75 +50,6 @@ TEST_F(MetronetDomainTest, CheckConsistent){
         ASSERT_FALSE(metronet.checkConsistent(dummy));
         metronet.reset();
     }
-}
-
-TEST_F(MetronetDomainTest, VerplaatsTram){
-    Tram tram(10, 60, 2, "goodBegin");
-
-    ASSERT_EQ(tram.getHuidigStation(), tram.getBeginStation());
-
-    std::ostream dummy(0);
-    tram.verplaatsTram("TestStation1", exp, dummy);
-    ASSERT_EQ(tram.getHuidigStation(), "TestStation1");
-    tram.verplaatsTram("TestStation2", exp, dummy);
-    ASSERT_EQ(tram.getHuidigStation(), "TestStation2");
-    tram.verplaatsTram("goodBegin", exp, dummy);
-    ASSERT_EQ(tram.getHuidigStation(), "goodBegin");
-    ASSERT_EQ(tram.getHuidigStation(), tram.getBeginStation());
-}
-
-TEST_F(MetronetDomainTest, OpstappenAfstappenNormaal){
-    Tram smallTram(10, 50, 1, "A");
-    Tram bigTram(100, 30, 2, "B");
-
-    smallTram.opstappen(3);
-    ASSERT_EQ(smallTram.getPassagiers(), 3);
-    smallTram.opstappen(6);
-    ASSERT_EQ(smallTram.getPassagiers(), 9);
-    smallTram.afstappen(9);
-    ASSERT_EQ(smallTram.getPassagiers(), 0);
-    smallTram.opstappen(0);
-    ASSERT_EQ(smallTram.getPassagiers(), 0);
-    smallTram.afstappen(0);
-    ASSERT_EQ(smallTram.getPassagiers(), 0);
-
-    bigTram.opstappen(0);
-    ASSERT_EQ(bigTram.getPassagiers(), 0);
-    bigTram.opstappen(99);
-    ASSERT_EQ(bigTram.getPassagiers(), 99);
-    bigTram.afstappen(21);
-    ASSERT_EQ(bigTram.getPassagiers(), 78);
-    bigTram.opstappen(2);
-    ASSERT_EQ(bigTram.getPassagiers(), 80);
-    bigTram.afstappen(60);
-    ASSERT_EQ(bigTram.getPassagiers(), 20);
-    bigTram.afstappen(20);
-    ASSERT_EQ(bigTram.getPassagiers(), 0);
-}
-
-TEST_F(MetronetDomainTest, OpstappenAfstappenOverflow){
-    Tram tram(20, 50, 1, "A");
-    int max = std::numeric_limits<int>::max();
-    // Meer op- en afstppen dan max
-    tram.opstappen(30);
-    ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
-    tram.afstappen(30);
-    ASSERT_EQ(tram.getPassagiers(), 0);
-    // Max int op- en afstappen
-    tram.opstappen(max);
-    ASSERT_EQ(tram.getPassagiers(), tram.getZitplaatsen());
-    tram.afstappen(max);
-    ASSERT_EQ(tram.getPassagiers(), 0);
-    // Max int + 1 op- en afstappen
-    EXPECT_DEATH(tram.opstappen(max + 1), "");
-    EXPECT_DEATH(tram.afstappen(max + 1), "");
-}
-
-TEST_F(MetronetDomainTest, OpstappenAfstappenNegative){
-    Tram tram(20, 50, 1, "A");
-
-    EXPECT_DEATH(tram.opstappen(-1), "");
-    EXPECT_DEATH(tram.afstappen(-1), "");
 }
 
 TEST_F(MetronetDomainTest, addTram){

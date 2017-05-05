@@ -10,14 +10,13 @@
 #include "Parser.h"
 
 int main(int argc, const char* argv[]) {
-    Exporter* exp;
+    Exporter* exp = new Exporter();
     if (argc != 1) {
         std::string expType = argv[1];
         std::string input = argv[2];
         std::string output;
         if (argc == 4) output = argv[3];
         if (expType == "cli") {
-            exp = new ExporterCLI;
             Parser parser(exp);
             Metronet metronet(exp);
             SuccessEnum importResult = parser.setup(metronet, input, std::cout);
@@ -28,22 +27,7 @@ int main(int argc, const char* argv[]) {
                 }
             }
         }
-        else if (expType == "html") {
-            exp = new ExporterHTML;
-            Parser parser(exp);
-            Metronet metronet(exp);
-            std::ofstream of;
-            of.open(output + ".html", std::ofstream::trunc);
-            SuccessEnum importResult = parser.setup(metronet, input, of);
-            if (importResult != BadImport) {
-                if (metronet.checkConsistent(of)) {
-                    metronet.printMetronet(of);
-                    metronet.rondrijden(of);
-                }
-            }
-        }
         else if (expType == "txt") {
-            exp = new ExporterTXT;
             Parser parser(exp);
             Metronet metronet(exp);
             std::ofstream of;
@@ -57,7 +41,6 @@ int main(int argc, const char* argv[]) {
             }
         }
     } else {
-        exp = new ExporterCLI;
         Parser parser(exp);
         Metronet metronet(exp);
         SuccessEnum importResult = parser.setup(metronet, "testInput/fatMetronet.xml", std::cout);

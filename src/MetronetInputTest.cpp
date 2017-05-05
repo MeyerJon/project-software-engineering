@@ -72,7 +72,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (t3->getSnelheid() != 70) endResult = BadImport;
     if (t3->getBeginStation() != "A") endResult = BadImport;
 
-    Passagier* p1 = metronet.getPassagier()["Groep1"];
+    Passagier* p1 = metronet.getPassagiers()["Groep1"];
     if (p1->getNaam() != "Groep1") endResult = BadImport;
     if (p1->getBeginStation() != "A") endResult = BadImport;
     if (p1->getEindStation() != "C") endResult = BadImport;
