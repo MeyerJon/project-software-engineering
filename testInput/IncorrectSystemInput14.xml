@@ -69,8 +69,8 @@
     <PASSAGIER>
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
-	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<!--eindstation bevat geen waarde-->
+	<eindStation></eindStation>
+	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
 </ROOT>

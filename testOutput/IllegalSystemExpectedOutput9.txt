@@ -1,3 +1,0 @@
-ERROR: Station Bip is niet gelinkt met het volgende station Bap.
-ERROR: Station Bop is niet gelinkt met het vorig station Bap.
-ERROR: Spoor 3 heeft geen tram.

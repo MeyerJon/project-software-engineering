@@ -12,18 +12,20 @@
 
 class StatisticsTram {
 private:
+    int aantalZetels;
     double omzet;
-    double bezettingsgraad;
     int aantalGroepen;
     int aantalPersonen;
     int aantalFails;
+    std::vector<double> bezettingsgraden;
+    double bezettingsgraad;
     StatisticsTram* initCheck;
 public:
     /**
      * \brief De lege constructor voor StatisticsTram
      * \post ENSURE(this->properlyInitialised(), "StatisticsTram is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
-     StatisticsTram();
+     StatisticsTram(int zetels);
 
     bool properlyInitialised() const;
 
@@ -69,6 +71,12 @@ public:
 
     void setAantalFails(int aantalFails);
 
+    /**
+     * \brief Herberekent de gemiddelde bezettingsgraad van de tram
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van updateGemiddeldeBezettingsgraad.");
+     */
+    void updateGemiddeldeBezettingsgraad(int huidigePassagiers);
+
 };
 
 
@@ -96,6 +104,8 @@ class StatisticsMetronet {
 private:
     double totaleOmzet;
     double totaleBezettingsgraad;
+    int totaalAantalPersonen;
+    int totaalAantalGroepen;
     int aantalBezettePlaatsen;
     int aantalZitplaatsen;
     int popLijn;
@@ -121,6 +131,10 @@ public:
 
     int getNrPCC() const;
 
+    int getTotaalAantalPersonen() const;
+
+    int getTotaalAantalGroepen() const;
+
     void setTotaleOmzet(double totaleOmzet);
 
     void setTotaleBezettingsgraad(double totaleBezettingsgraad);
@@ -134,6 +148,10 @@ public:
     void setNrAlba(int nrAlba);
 
     void setNrPCC(int nrPCC);
+
+    void setTotaalAantalPersonen(int aantal);
+
+    void setTotaalAantalGroepen(int aantal);
 
 };
 

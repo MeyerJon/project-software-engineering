@@ -8,7 +8,7 @@
 #include "Tram.h"
 
 // Global consts
-double ticketPrijs = 2.0;
+double Tram::ticketPrijs = 2.0;
 
 
 Tram::Tram() {
@@ -95,6 +95,11 @@ int Tram::getVoertuignummer() const {
 double Tram::getOmzet() const {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getOmzet.");
     return stats->getOmzet();
+}
+
+double Tram::getTicketPrijs() const {
+    ENSURE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getTicketPrijs.");
+    return ticketPrijs;
 }
 
 bool Tram::bevatPassagier(Passagier *pas) const {
@@ -189,4 +194,8 @@ bool Tram::opstappen(Passagier* pas) {
 StatisticsTram* Tram::getStatistics() {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
     return stats;
+}
+
+Tram::~Tram() {
+    delete stats;
 }

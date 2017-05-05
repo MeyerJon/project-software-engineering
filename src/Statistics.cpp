@@ -4,12 +4,14 @@
 
 #include "Statistics.h"
 
-StatisticsTram::StatisticsTram() {
+StatisticsTram::StatisticsTram(int zetels) {
     initCheck = this;
+    aantalZetels = zetels;
     omzet = 0.0;
     aantalGroepen = 0;
     aantalPersonen = 0;
     aantalFails = 0;
+    bezettingsgraad = 0;
     ENSURE(properlyInitialised(), "StatisticsTram is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
@@ -73,13 +75,15 @@ void StatisticsTram::setAantalFails(int aantalFails) {
 }
 
 StatisticsStation::StatisticsStation() {
+    aantalPersonen = 0;
+    aantalGroepen = 0;
     initCheck = this;
     ENSURE(properlyInitialised(),
            "StatisticsStation is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
 bool StatisticsStation::properlyInitialised() const {
-    return this == initCheck;
+    return initCheck == this;
 }
 
 int StatisticsStation::getAantalGroepen() const {
@@ -95,7 +99,7 @@ int StatisticsStation::getAantalPersonen() const {
 void StatisticsStation::setAantalGroepen(int aantalGroepen) {
     REQUIRE(properlyInitialised(), "StatisticsStation was niet geinitialiseerd bij de aanroep van setAantalGroepen.");
     StatisticsStation::aantalGroepen = aantalGroepen;
-    ENSURE((getAantalPersonen() == aantalGroepen), "AantalPersonen is niet aangepast door setAantalGroepen.");
+    ENSURE((getAantalGroepen() == aantalGroepen), "AantalGroepen is niet aangepast door setAantalGroepen.");
 }
 
 void StatisticsStation::setAantalPersonen(int aantalPersonen) {
@@ -105,6 +109,13 @@ void StatisticsStation::setAantalPersonen(int aantalPersonen) {
 }
 
 StatisticsMetronet::StatisticsMetronet() {
+    totaleOmzet = 0.0;
+    totaleBezettingsgraad = 0.0;
+    aantalBezettePlaatsen = 0;
+    aantalZitplaatsen = 0;
+    popLijn = 0;
+    nrAlba = 0;
+    nrPCC = 0;
     initCheck = this;
     ENSURE(properlyInitialised(),
            "StatisticsMetronet is niet in de juiste staat geëindigd na aanroep van de constructor.");
@@ -146,6 +157,16 @@ int StatisticsMetronet::getNrAlba() const {
 int StatisticsMetronet::getNrPCC() const {
     REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij de aanroep van getNrPCC.");
     return nrPCC;
+}
+
+int StatisticsMetronet::getTotaalAantalGroepen() const {
+    REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij de aanroep van getTotaalAantalGroepen.");
+    return totaalAantalGroepen;
+}
+
+int StatisticsMetronet::getTotaalAantalPersonen() const {
+    REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij de aanroep van getTotaalAantalPersonen.");
+    return totaalAantalPersonen;
 }
 
 void StatisticsMetronet::setTotaleOmzet(double totaleOmzet) {
@@ -194,4 +215,27 @@ void StatisticsMetronet::setNrPCC(int nrPCC) {
     REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij de aanroep van setNrPCC.");
     StatisticsMetronet::nrPCC = nrPCC;
     ENSURE((getNrPCC() == nrPCC), "NrPCC is niet aangepast door setNrPCC.");
+}
+
+void StatisticsMetronet::setTotaalAantalGroepen(int aantal) {
+    REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij de aanroep van setTotaalAantalGroepen.");
+    totaalAantalGroepen = aantal;
+    ENSURE(getTotaalAantalGroepen() == aantal, "TotaalAantalGroepen is niet correct aangepast na aanroep van setTotaalAantalGroepen.");
+}
+
+void StatisticsMetronet::setTotaalAantalPersonen(int aantal) {
+    REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij de aanroep van setTotaalAantalPersonen.");
+    totaalAantalPersonen = aantal;
+    ENSURE(getTotaalAantalPersonen() == aantal, "TotaalAantalPersonen is niet correct aangepast na aanroep van setTotaalAantalPersonen.");
+}
+
+void StatisticsTram::updateGemiddeldeBezettingsgraad(int huidigePassagiers) {
+    REQUIRE(properlyInitialised(),
+            "StatisticsTram was niet geinitialiseerd bij de aanroep van updateGemiddeldeBezettingsgraad.");
+    bezettingsgraden.push_back((double) huidigePassagiers/(double) aantalZetels);
+
+    double totaal = 0;
+    for (double graad: bezettingsgraden)
+        totaal += graad;
+    bezettingsgraad = totaal/(double) bezettingsgraden.size();
 }

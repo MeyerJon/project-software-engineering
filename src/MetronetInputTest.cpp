@@ -77,7 +77,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (p1->getBeginStation() != "A") endResult = BadImport;
     if (p1->getEindStation() != "C") endResult = BadImport;
     if (p1->getHoeveelheid() != 2) endResult = BadImport;
-    //if (p1->isVertokken/isWachtend != false/true) endResult = BadImport;
+    if (p1->isVertrokken()) endResult = BadImport;
 
     ASSERT_EQ(endResult, Success);
 }

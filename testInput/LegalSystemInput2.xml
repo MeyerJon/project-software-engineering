@@ -2,62 +2,74 @@
 <ROOT>
     <STATION>
         <naam>A</naam>
-        <volgende>B</volgende>
-        <vorige>D</vorige>
-        <spoor>12</spoor>
+	    <type>Metrostation</type>
+        <SPOOR>
+            <spoor>1</spoor>
+            <volgende>B</volgende>
+            <vorige>C</vorige>
+	    </SPOOR>
+	    <SPOOR>
+            <spoor>2</spoor>
+            <volgende>C</volgende>
+            <vorige>B</vorige>
+	    </SPOOR>
     </STATION>
     <STATION>
         <naam>B</naam>
-        <volgende>C</volgende>
-        <vorige>A</vorige>
-        <spoor>12</spoor>
+	    <type>Halte</type>
+        <SPOOR>
+            <spoor>1</spoor>
+            <volgende>C</volgende>
+            <vorige>A</vorige>
+        </SPOOR>
+        <SPOOR>
+            <spoor>2</spoor>
+            <volgende>A</volgende>
+            <vorige>C</vorige>
+        </SPOOR>
     </STATION>
     <STATION>
         <naam>C</naam>
-        <volgende>D</volgende>
-        <vorige>B</vorige>
-        <spoor>12</spoor>
-    </STATION>
-    <STATION>
-        <naam>D</naam>
-        <volgende>A</volgende>
-        <vorige>C</vorige>
-        <spoor>12</spoor>
-    </STATION>
-    <STATION>
-        <naam>W</naam>
-        <volgende>X</volgende>
-        <vorige>Z</vorige>
-        <spoor>13</spoor>
-    </STATION>
-    <STATION>
-        <naam>X</naam>
-        <volgende>Y</volgende>
-        <vorige>W</vorige>
-        <spoor>13</spoor>
-    </STATION>
-    <STATION>
-        <naam>Y</naam>
-        <volgende>Z</volgende>
-        <vorige>X</vorige>
-        <spoor>13</spoor>
-    </STATION>
-    <STATION>
-        <naam>Z</naam>
-        <volgende>W</volgende>
-        <vorige>Y</vorige>
-        <spoor>13</spoor>
+	    <type>Metrostation</type>
+        <SPOOR>
+            <spoor>1</spoor>
+            <volgende>A</volgende>
+            <vorige>B</vorige>
+	    </SPOOR>
+    	<SPOOR>
+            <spoor>2</spoor>
+            <volgende>B</volgende>
+            <vorige>A</vorige>
+	</SPOOR>
     </STATION>
     <TRAM>
-        <lijnNr>12</lijnNr>
-        <zitplaatsen>32</zitplaatsen>
-        <snelheid>60</snelheid>
+        <lijnNr>1</lijnNr>
+	<voertuigNr>1</voertuigNr>
+	<type>PCC</type>
+        <zitplaatsen>16</zitplaatsen>
+        <snelheid>40</snelheid>
         <beginStation>A</beginStation>
     </TRAM>
     <TRAM>
-        <lijnNr>13</lijnNr>
-        <zitplaatsen>32</zitplaatsen>
-        <snelheid>60</snelheid>
-        <beginStation>W</beginStation>
+        <lijnNr>1</lijnNr>
+	<voertuigNr>2</voertuigNr>
+	<type>Albatros</type>
+        <zitplaatsen>72</zitplaatsen>
+        <snelheid>70</snelheid>
+        <beginStation>C</beginStation>
     </TRAM>
+    <TRAM>
+        <lijnNr>2</lijnNr>
+	<voertuigNr>3</voertuigNr>
+	<type>Albatros</type>
+        <zitplaatsen>72</zitplaatsen>
+        <snelheid>70</snelheid>
+        <beginStation>A</beginStation>
+    </TRAM>
+    <PASSAGIER>
+	<naam>Groep1</naam>
+	<beginStation>A</beginStation>
+	<eindStation>C</eindStation>
+	<hoeveelheid>2</hoeveelheid>
+    </PASSAGIER>
 </ROOT>

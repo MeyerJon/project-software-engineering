@@ -68,9 +68,9 @@
     </TRAM>
     <PASSAGIER>
 	<naam>Groep1</naam>
-	<beginStation>A</beginStation>
+	<!--beginStation bevat geen waarde-->
+	<beginStation></beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
 </ROOT>

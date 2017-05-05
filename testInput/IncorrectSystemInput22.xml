@@ -47,7 +47,8 @@
 	<voertuigNr>1</voertuigNr>
 	<type>PCC</type>
         <zitplaatsen>16</zitplaatsen>
-        <snelheid>40</snelheid>
+	<!--snelheid bevat een foute waarde-->
+        <snelheid>veertig</snelheid>
         <beginStation>A</beginStation>
     </TRAM>
     <TRAM>
@@ -70,7 +71,6 @@
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
 </ROOT>

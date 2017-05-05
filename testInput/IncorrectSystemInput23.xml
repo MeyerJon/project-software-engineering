@@ -70,7 +70,7 @@
 	<naam>Groep1</naam>
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<!--hoeveelheid bevat een foute waarde-->
+	<hoeveelheid>twee</hoeveelheid>
     </PASSAGIER>
 </ROOT>

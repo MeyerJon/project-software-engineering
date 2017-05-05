@@ -102,7 +102,8 @@ void Metronet::addStation(
         std::map<int, std::string> vorigeStations,
         std::map<int, std::string> volgendeStations) {
     REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
-    Station* station = new Station(naam, type, vorigeStations, volgendeStations);
+    StatisticsStation* stats = new StatisticsStation();
+    Station* station = new Station(naam, type, vorigeStations, volgendeStations, stats);
     stations[station->getNaam()] = station;
     ENSURE(station->properlyInitialised(),
             "Station was niet geinitialiseerd bij de aanroep van addStation.");
@@ -118,10 +119,19 @@ void Metronet::addTram(
         std::string beginStation) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
-    StatisticsTram* stats = new StatisticsTram();
+    StatisticsTram* stats = new StatisticsTram(zitplaatsen);
     Tram* tram = new Tram(zitplaatsen, snelheid, spoor, voertuigNr, type, beginStation, stats);
     trams[tram->getVoertuignummer()] = tram;
     stations[beginStation]->bezetSpoor(spoor, true);
+
+    // Gegevens verzamelen
+    if(type == "Albatros"){
+        this->stats->setNrAlba(this->stats->getNrAlba() + 1);
+    }
+    else if(type == "PCC"){
+        this->stats->setNrPCC(this->stats->getNrPCC() + 1);
+    }
+    this->stats->setAantalZitplaatsen(this->stats->getAantalZitplaatsen() + zitplaatsen);
 
     ENSURE(tram->properlyInitialised(),
             "Tram was niet geinitialiseerd bij de aanroep van addTram.");
@@ -142,6 +152,11 @@ void Metronet::addPassagier(
     REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
     Passagier* pas = new Passagier(naam, beginStation, eindStation, hoeveelheid);
     passagiers[pas->getNaam()] = pas;
+
+    // Gegevens verzamelen
+    this->stats->setTotaalAantalGroepen(this->stats->getTotaalAantalGroepen() + 1);
+    this->stats->setTotaalAantalPersonen(this->stats->getTotaalAantalPersonen() + hoeveelheid);
+
     ENSURE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
     ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij aanroep van addPassagier.");
 }
@@ -339,6 +354,7 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
             "Tram bestaat niet in het metronet.");
 
     Station* st = stations[tram->getHuidigStation()];
+    StatisticsStation* stationStats = st->getStatistics();
     int spoor = tram->getSpoor();
     std::string station = tram->getHuidigStation();
 
@@ -385,10 +401,15 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
                     passagier.second->setHuidigeTram(tram->getVoertuignummer());
 
                     // Gegevens updaten/verzamelen
+                    // Metronetgegevens
+                    this->stats->setTotaleOmzet(this->stats->getTotaleOmzet() + (passagier.second->getHoeveelheid() * tram->getTicketPrijs()));
                     // Tramgegevens
                     tramStats->setAantalGroepen(tramStats->getAantalGroepen() + 1);
                     tramStats->setAantalPersonen(tramStats->getAantalPersonen() + passagier.second->getHoeveelheid());
-                    // TODO: Stationgegevens
+                    // Stationgegevens
+                    stationStats->setAantalGroepen(stationStats->getAantalGroepen() + 1);
+                    stationStats->setAantalPersonen(stationStats->getAantalPersonen() + passagier.second->getHoeveelheid());
+
 
                 } else {
                     std::string out = "Waarschuwing: Er was niet voldoende plaats op tram " +
@@ -420,9 +441,10 @@ void Metronet::rondrijden(std::ostream& os) {
                 stations[volgendStation]->bezetSpoor(tram.second->getSpoor(), true);
                 tram.second->setHuidigStation(volgendStation);
             }
+            tram.second->getStatistics()->updateGemiddeldeBezettingsgraad(tram.second->getBezettePlaatsen());
         }
     }
-    std::string out = "Alle passagiers zijn op hun bestemming aangekomen.\n";
+    std::string out = "Alle passagiers zijn op hun bestemming aangekomen.\n\n";
     exp->write(out, os);
 }
 
@@ -441,8 +463,28 @@ void Metronet::printStatistics(std::ostream& os) {
     std::string head = "-- METRONET GEGEVENS --\n";
     exp->write(head, os);
 
+    // Metronetgegevens
+    std::string metronetHead = "-Metronetgegevens: \n";
+    exp->write(metronetHead, os);
+    std::string out = "Totale omzet: €" + std::to_string(this->stats->getTotaleOmzet()) + ".\n";
+    out += "Totaal aantal passagiers: " + std::to_string(this->stats->getTotaalAantalPersonen()) + ".\n";
+    out += "Totaal aantal groepen: " + std::to_string(this->stats->getTotaalAantalGroepen()) + ".\n";
+    out += "Totaal aantal zitplaatsen: " + std::to_string(this->stats->getAantalZitplaatsen()) + ".\n";
+    double bezettingsgraad = 0.0;
+    Tram* popTram = trams.begin()->second;
+    for(auto& p : trams){
+        bezettingsgraad += p.second->getStatistics()->getBezettingsgraad();
+        if(p.second->getStatistics()->getAantalPersonen() > popTram->getStatistics()->getAantalPersonen()){
+            popTram = p.second;
+        }
+    }
+    bezettingsgraad /= (double) trams.size();
+    out += "Gemiddelde bezettingsgraad: " + std::to_string(bezettingsgraad) + ".\n";
+    out += "Populairste tram: " + std::to_string(popTram->getVoertuignummer()) + " (" + std::to_string(popTram->getStatistics()->getAantalPersonen()) + " personen)\n";
+    exp->write(out, os);
+
     // Tramgegevens
-    std::string tramHead = "-Tramgegevens: \n";
+    std::string tramHead = "\n-Tramgegevens: \n";
     exp->write(tramHead, os);
     for(auto& p : trams){
         Tram* tram = p.second;
@@ -452,8 +494,26 @@ void Metronet::printStatistics(std::ostream& os) {
         out += "Totaal aantal groepen: " + std::to_string(stats->getAantalGroepen()) + ".\n";
         out += "Totaal aantal personen: " + std::to_string(stats->getAantalPersonen()) + ".\n";
         out += "Aantal mislukte opstappen: " + std::to_string(stats->getAantalFails()) + ".\n";
+        out += "Gemiddelde bezettingsgraad: " + std::to_string(stats->getBezettingsgraad()) + ".\n";
+        out += "\n";
         exp->write(out, os);
     }
+
+    // Stationgegevens
+    std::string stationHead = "-Stationgegevens: \n";
+    exp->write(stationHead, os);
+    for(auto& p : stations){
+        Station* station = p.second;
+        StatisticsStation* stats = station->getStatistics();
+        std::string out = "Station " + station->getNaam() + ": \n";
+        out += "Totaal aantal groepen: " + std::to_string(stats->getAantalGroepen()) + ".\n";
+        out += "Totaal aantal personen: " + std::to_string(stats->getAantalPersonen()) + ".\n";
+        out += "\n";
+        exp->write(out, os);
+    }
+
+    std::string end = "-------------------------------------------\n\n";
+    exp->write(end, os);
 }
 
 void Metronet::reset() {

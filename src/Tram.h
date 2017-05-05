@@ -41,6 +41,8 @@ private:
     std::vector<Passagier*> passagiers;
     Tram* initCheck;
     StatisticsTram* stats;
+    static double ticketPrijs;
+    double totaleBezetting;
 
 public:
     /**
@@ -136,8 +138,19 @@ public:
     double getOmzet() const;
 
     /**
-     *  \brief Geeft de extra gegevens van de tram.
-     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
+     * \brief Geeft de extra gegevens van de tram.
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
+     * \brief Geeft de prijs per ticket voor een tramrit
+     * \pre ENSURE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getTicketPrijs.");
+     */
+     double getTicketPrijs() const;
+
+    /**
+     * \brief Checkt of de gegeven Passagier op de tram zit.
+     * \param pas De passagier die al dan niet op de tram zit.
+     * \return Bool die aangeeft of de Passagier op de tram zit.
+     * \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+     * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
      */
     StatisticsTram* getStatistics();
 
@@ -238,6 +251,18 @@ public:
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van opstappen.");
      */
     bool opstappen(Passagier* pas);
+<<<<<<< HEAD
+=======
+
+    /**
+     *  \brief Geeft de extra gegevens van de tram.
+     *  \pre REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
+     */
+    StatisticsTram* getStatistics();
+
+
+    ~Tram();
+>>>>>>> bb69c825673de64314494444dddcc24b3b5558d7
 };
 
 #endif /* SRC_TRAM_H_ */
