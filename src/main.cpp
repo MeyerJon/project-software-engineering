@@ -12,27 +12,17 @@
 int main(int argc, const char* argv[]) {
     Exporter* exp = new Exporter();
     if (argc != 1) {
-        std::string expType = argv[1];
-        std::string input = argv[2];
-        std::string output;
-        if (argc == 4) output = argv[3];
-        if (expType == "cli") {
-            Parser parser(exp);
-            Metronet metronet(exp);
-            SuccessEnum importResult = parser.setup(metronet, input, std::cout);
-            if (importResult != BadImport) {
-                if (metronet.checkConsistent(std::cout)) {
-                    metronet.printMetronet(std::cout);
-                    metronet.rondrijden(std::cout);
-                }
-            }
-        }
-        else if (expType == "txt") {
+        for (int i = 1; i < argc; i++) {
+            std::ifstream fin(argv[i]);
+            std::string filename = argv[i];
+            std::string::size_type posSlash = filename.rfind('/');
+            std::string::size_type posPoint = filename.rfind('.');
+            std::string output = "testOutput" + filename.substr(posSlash, posPoint - posSlash) + ".txt";
             Parser parser(exp);
             Metronet metronet(exp);
             std::ofstream of;
-            of.open(output + ".txt", std::ofstream::trunc);
-            SuccessEnum importResult = parser.setup(metronet, input, of);
+            of.open(output, std::ofstream::trunc);
+            SuccessEnum importResult = parser.setup(metronet, filename, of);
             if (importResult != BadImport) {
                 if (metronet.checkConsistent(of)) {
                     metronet.printMetronet(of);

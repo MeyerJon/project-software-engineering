@@ -135,6 +135,7 @@ void Metronet::addTram(
         std::string beginStation) {
     REQUIRE(this->properlyInitialised(),
             "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
+    REQUIRE(bevatStation(beginStation), "Metronet bevat beginstation niet bij de aanroep van addTram");
     StatisticsTram* stats = new StatisticsTram(zitplaatsen);
     Tram* tram = new Tram(zitplaatsen, snelheid, spoor, voertuigNr, type, beginStation, stats);
     trams[tram->getVoertuignummer()] = tram;

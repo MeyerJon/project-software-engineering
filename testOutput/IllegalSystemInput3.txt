@@ -1,0 +1,3 @@
+Station A is niet verbonden met het vorig of volgend station.
+Station B is niet verbonden met het vorig of volgend station.
+Station C is niet verbonden met het vorig of volgend station.

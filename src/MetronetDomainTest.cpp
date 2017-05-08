@@ -55,8 +55,8 @@ TEST_F(MetronetDomainTest, CheckConsistent){
 TEST_F(MetronetDomainTest, addTram){
     std::ostream dummy(0);
 
-    metronet.addTram(70, 101, 10, 11, "PCC", "A");
-    EXPECT_DEATH(metronet.bevatTram(metronet.getTram(11))); // TODO: fix
+    EXPECT_DEATH(metronet.addTram(70, 101, 10, 11, "PCC", "A"),
+                 "Metronet bevat beginstation niet bij de aanroep van addTram");
     metronet.reset();
 }
 
@@ -67,6 +67,17 @@ TEST_F(MetronetDomainTest, addStation){
     metronet.addStation("A", "Halte", dummyMap, dummyMap);
     ASSERT_TRUE(metronet.bevatStation(metronet.getStations().at("A")));
     metronet.reset();
+}
+
+TEST_F(MetronetDomainTest, addTram_addStation_Synergy) {
+    std::ostream dummy(0);
+
+    std::map<int, std::string> dummyVoor = {{10, "B"}};
+    std::map<int, std::string> dummyNa = {{10, "C"}};
+
+    metronet.addStation("A", "Halte", dummyVoor, dummyNa);
+    metronet.addTram(70, 101, 10, 11, "PCC", "A");
+    ASSERT_TRUE(metronet.bevatStation("A"));
 }
 
 TEST_F(MetronetDomainTest, rondrijden){

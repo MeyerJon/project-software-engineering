@@ -164,6 +164,7 @@ public:
      * \param tram De tram die toegevoegd zal worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");
+     * \pre REQUIRE(bevatStation(beginStation), "Metronet bevat beginstation niet bij de aanroep van addTram");
      * \post ENSURE(bevatTram(tram), "Tram was niet toegevoegd bij de aanroep van addTram.");
      */
     void addTram(int zitplaatsen, int snelheid, int spoor, int voertuigNr, std::string type, std::string beginStation);

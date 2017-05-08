@@ -1,0 +1,2 @@
+Station D is niet verbonden met het vorig of volgend station.
+Spoor 3 heeft geen tram.
