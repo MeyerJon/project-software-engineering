@@ -8,7 +8,6 @@ TEST_F(ExporterDomainTest, ProperlyInitialised) {
     ASSERT_TRUE(exp->properlyInitialised());
 }
 
-
 TEST_F(ExporterDomainTest, Write) {
     std::ostream dummy(0);
     ASSERT_FALSE(exp->isDocumentStarted());

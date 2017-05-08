@@ -51,8 +51,19 @@ std::map<std::string, Station*> Metronet::getStations() {
     return stations;
 }
 
+Station* Metronet::getStation(std::string name){
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStation.");
+    REQUIRE(bevatStation(name), "Metronet bevat opgevraagd station niet bij aanroep van getStation.");
+    return stations.at(name);
+}
+
 std::map<int, Tram*>& Metronet::getTrams() {
     return trams;
+}
+
+Tram* Metronet::getTram(int nummer) {
+    REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTram.");
+    return trams.at(nummer);
 }
 
 std::map<std::string, Passagier*>& Metronet::getPassagiers() {
@@ -78,6 +89,11 @@ bool Metronet::bevatStation(Station *station) {
         out = false;
     }
     return out;
+}
+
+bool Metronet::bevatStation(std::string name) {
+    REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatStation.");
+    return stations.count(name) != 0;
 }
 
 bool Metronet::bevatSpoor(int spoor) {

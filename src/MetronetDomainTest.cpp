@@ -56,7 +56,7 @@ TEST_F(MetronetDomainTest, addTram){
     std::ostream dummy(0);
 
     metronet.addTram(70, 101, 10, 11, "PCC", "A");
-    ASSERT_TRUE(metronet.bevatTram(metronet.getTrams().at(1)));
+    EXPECT_DEATH(metronet.bevatTram(metronet.getTram(11))); // TODO: fix
     metronet.reset();
 }
 

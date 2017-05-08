@@ -81,7 +81,7 @@ std::string Tram::getType() const {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
     switch (type) {
         case Albatros :
-            return "Albatrso";
+            return "Albatros";
         case PCC :
             return "PCC";
     }
@@ -178,7 +178,8 @@ bool Tram::afstappen(Passagier* pas){
 bool Tram::opstappen(Passagier* pas) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
-    if(getBezettePlaatsen() + pas->getHoeveelheid() > getZitplaatsen()){
+    if(getBezettePlaatsen() + pas->getHoeveelheid() > getZitplaatsen()
+        or getBezettePlaatsen() + pas->getHoeveelheid() < 0){
         return false;
     }
     else{

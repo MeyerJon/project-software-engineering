@@ -84,11 +84,23 @@ public:
      std::map<std::string, Station*> getStations();
 
     /**
+     * \brief Geeft het station met de opgegeven naam.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStation.");
+     */
+     Station* getStation(std::string name);
+
+    /**
      * \brief Geeft alle trams in het metronet terug.
      * \return Map met trams in het metronet.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");
      */
     std::map<int, Tram*>& getTrams();
+
+    /**
+     * \brief Geeft de tram met het opgegeven nummer
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTram.");
+     */
+    Tram* getTram(int nummer);
 
     /**
      * \brief Geeft alle passagiers in het metronet terug.
@@ -115,6 +127,7 @@ public:
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van bevatStation.");
      */
     bool bevatStation(Station* station);
+    bool bevatStation(std::string name);
 
     /**
      * \brief Kijkt na of het metronet de opgegeven spoor bevat.

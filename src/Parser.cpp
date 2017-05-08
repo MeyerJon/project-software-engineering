@@ -164,7 +164,11 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     endResult = PartialImport;
                     continue;
                 }
-                if (metronet.getStations().count(beginS) == 0) {
+                if (!metronet.bevatStation(beginS)){
+                    endResult = PartialImport;
+                    continue;
+                }
+                if(!metronet.getStation(beginS)->bevatSpoor(spoor)){
                     endResult = PartialImport;
                     continue;
                 }
