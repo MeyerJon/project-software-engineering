@@ -17,7 +17,7 @@ int main(int argc, const char* argv[]) {
             std::string filename = argv[i];
             std::string::size_type posSlash = filename.rfind('/');
             std::string::size_type posPoint = filename.rfind('.');
-            std::string output = "testOutput" + filename.substr(posSlash, posPoint - posSlash) + ".txt";
+            std::string output = "testOutput" + filename.substr(posSlash, posPoint - posSlash) + "ExpectedOutput.txt";
             Parser parser(exp);
             Metronet metronet(exp);
             std::ofstream of;
