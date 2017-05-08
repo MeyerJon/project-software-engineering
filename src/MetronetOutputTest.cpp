@@ -15,8 +15,8 @@ TEST_F(MetronetOutputTest, OutputLegalSystemsTxt) {
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
-        std::string outputName = "testOutput/LegalSystemOutput" + std::to_string(i) + ".txt";
-        std::string expectedOutput = "testOutput/LegalSystemExpectedOutput" + std::to_string(i) + ".txt";
+        std::string outputName = "testOutput/LegalSystemInput" + std::to_string(i) + "Output.txt";
+        std::string expectedOutput = "testOutput/LegalSystemInput" + std::to_string(i) + "ExpectedOutput.txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
         parser.setup(metronet, filename, output);
@@ -42,8 +42,8 @@ TEST_F(MetronetOutputTest, OutputIllegalSystemsTxt) {
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
-        std::string outputName = "testOutput/IllegalSystemOutput" + std::to_string(i) + ".txt";
-        std::string expectedOutput = "testOutput/IllegalSystemExpectedOutput" + std::to_string(i) + ".txt";
+        std::string outputName = "testOutput/IllegalSystemInput" + std::to_string(i) + "Output.txt";
+        std::string expectedOutput = "testOutput/IllegalSystemInput" + std::to_string(i) + "ExpectedOutput.txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
         parser.setup(metronet, filename, output);
@@ -69,8 +69,8 @@ TEST_F(MetronetOutputTest, OutputIncorrectSystemsTxt) {
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
-        std::string outputName = "testOutput/IncorrectSystemOutput" + std::to_string(i) + ".txt";
-        std::string expectedOutput = "testOutput/IncorrectSystemExpectedOutput" + std::to_string(i) + ".txt";
+        std::string outputName = "testOutput/IncorrectSystemInput" + std::to_string(i) + "Output.txt";
+        std::string expectedOutput = "testOutput/IncorrectSystemInput" + std::to_string(i) + "ExpectedOutput.txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
         parser.setup(metronet, filename, output);
@@ -92,12 +92,12 @@ TEST_F(MetronetOutputTest, OutputSyntaxErrorSystemsTxt) {
         exp = new Exporter();
         parser = Parser(exp);
         metronet = Metronet(exp);
-        filename = "testInput/SyntaxErrorSystemInput" + std::to_string(i) + ".xml";
+        filename = "testInput/SyntaxErrorInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 
-        std::string outputName = "testOutput/SyntaxErrorSystemOutput" + std::to_string(i) + ".txt";
-        std::string expectedOutput = "testOutput/SyntaxErrorSystemExpectedOutput" + std::to_string(i) + ".txt";
+        std::string outputName = "testOutput/SyntaxErrorInput" + std::to_string(i) + "Output.txt";
+        std::string expectedOutput = "testOutput/SyntaxErrorInput" + std::to_string(i) + "ExpectedOutput.txt";
         std::ofstream output;
         output.open(outputName, std::ofstream::trunc);
         if (parser.setup(metronet, filename, output) != BadImport) {
