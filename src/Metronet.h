@@ -247,7 +247,6 @@ public:
 
     /**
      * \brief Reset heel het systeem.
-     * \param tram De tram waarvoor gekeken wordt of vertrokken mag worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");
      */
      void reset();
