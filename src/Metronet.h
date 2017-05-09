@@ -145,6 +145,7 @@ public:
      * \pre REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van bevatPassagier.");
      */
     bool bevatPassagier(Passagier* pas);
+    bool bevatPassagier(std::string name);
 
     /**
      * \brief Voegt station toe aan metronet.

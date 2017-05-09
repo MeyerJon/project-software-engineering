@@ -64,3 +64,8 @@ void Passagier::updateVertrokken(){
     REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van updateVertrokken.");
     vertrokken = true;
 }
+
+bool Passagier::isAangekomen() {
+    REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van isAangekomen.");
+    return huidigeTram() == -2;
+}

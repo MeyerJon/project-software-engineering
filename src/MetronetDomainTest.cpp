@@ -69,6 +69,22 @@ TEST_F(MetronetDomainTest, addStation){
     metronet.reset();
 }
 
+TEST_F(MetronetDomainTest, addPassagier){
+    std::ostream dummy(0);
+
+    metronet.addPassagier("Dummy", "A", "B", 50);
+    ASSERT_TRUE(metronet.bevatPassagier("Dummy"));
+    metronet.reset();
+}
+
+TEST_F(MetronetDomainTest, addSpoor){
+    std::ostream dummy(0);
+
+    metronet.addSpoor(3);
+    ASSERT_TRUE(metronet.bevatSpoor(3));
+    metronet.reset();
+}
+
 TEST_F(MetronetDomainTest, addTram_addStation_Synergy) {
     std::ostream dummy(0);
 
@@ -90,6 +106,10 @@ TEST_F(MetronetDomainTest, rondrijden){
     for(auto& p : trams){
         Tram* tram = p.second;
         ASSERT_TRUE(tram->isLeeg());
+    }
+    for(auto& p : metronet.getPassagiers()){
+        Passagier* pas = p.second;
+        ASSERT_TRUE(pas->isAangekomen());
     }
 
     metronet.reset();

@@ -112,6 +112,11 @@ bool Metronet::bevatPassagier(Passagier *pas) {
 
 }
 
+bool Metronet::bevatPassagier(std::string name){
+    REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatPassagier.");
+    return passagiers.count(name) != 0;
+}
+
 void Metronet::addStation(
         std::string naam,
         std::string type,

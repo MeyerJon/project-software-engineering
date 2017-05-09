@@ -71,7 +71,12 @@ public:
     */
     int getHoeveelheid() const;
 
-    // TODO: Docs here
+    /**
+     * \brief Verander de huide het huidige tram van het de passagier.
+     * \param tram Nieuwe tram
+     * \pre REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van setHuidigePassagier.");
+     * \post ENSURE(huidigeTram() == tram, "Tram was niet correct aangepast na aanroep van setHuidigeTram.");
+     */
     void setHuidigeTram(int tram);
 
     /**
@@ -93,6 +98,12 @@ public:
      * \pre REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van updateVertrokken.");
      */
     void updateVertrokken();
+
+    /**
+     * \brief Geeft aan of de passagier is aangekomen
+     * \pre REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van isAangekomen.");
+     */
+     bool isAangekomen();
 
 };
 
