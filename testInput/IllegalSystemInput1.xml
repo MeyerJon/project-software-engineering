@@ -5,7 +5,7 @@
 	<type>Metrostation</type>
         <SPOOR>
 	    <!--Bevat spoor dat niet voorkomt in andere stations-->
-            <spoor>1</spoor>
+            <spoor>3</spoor>
             <volgende>B</volgende>
             <vorige>C</vorige>
 	</SPOOR>

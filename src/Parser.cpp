@@ -180,11 +180,9 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     continue;
                 }
                 if (!metronet.bevatStation(beginS)){
-                    endResult = PartialImport;
                     continue;
                 }
                 if(!metronet.getStation(beginS)->bevatSpoor(spoor)){
-                    endResult = PartialImport;
                     continue;
                 }
                 metronet.addTram(zitpl, snelh, spoor, voertuigNr, type, beginS);

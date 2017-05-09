@@ -71,6 +71,6 @@
 	<beginStation>A</beginStation>
 	<eindStation>C</eindStation>
 	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>0</hoeveelheid>
+	<hoeveelheid>-10</hoeveelheid>
     </PASSAGIER>
 </ROOT>
