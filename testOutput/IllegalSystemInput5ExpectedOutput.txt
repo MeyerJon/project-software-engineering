@@ -1,9 +1,3 @@
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
 Spoor 2 heeft geen tram.
 Spoor 2 heeft geen tram.
 Spoor 2 heeft geen tram.

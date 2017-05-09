@@ -1,1 +1,4 @@
-Passagier Groep1 heeft geen verbinding tot zijn bestemming.
+Station A mist spoor 3.
+Station B mist spoor 1.
+Station C mist spoor 1.
+Spoor 3 heeft geen tram.

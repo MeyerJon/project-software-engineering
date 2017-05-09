@@ -139,7 +139,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
         }
         else if(elemName == "TRAM"){
             std::string attrName;
-            std::string type;
+            std::string type= "";
             int voertuigNr = -1;
             int zitpl = -1;
             int snelh = -1;
@@ -173,18 +173,16 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                         exp->write(out, os);
                     }
                 }
-                if(zitpl == -1 or snelh == -1 or spoor == -1 or beginS == ""){
+                if(zitpl == -1 or snelh == -1 or spoor == -1 or beginS == "" or type == "" or voertuigNr == -1){
                     std::string out = "ERROR: Tram mist een attribuut.\n";
                     exp->write(out, os);
                     endResult = PartialImport;
                     continue;
                 }
                 if (!metronet.bevatStation(beginS)){
-                    endResult = PartialImport;
                     continue;
                 }
                 if(!metronet.getStation(beginS)->bevatSpoor(spoor)){
-                    endResult = PartialImport;
                     continue;
                 }
                 metronet.addTram(zitpl, snelh, spoor, voertuigNr, type, beginS);
