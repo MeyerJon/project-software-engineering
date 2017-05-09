@@ -33,7 +33,7 @@ int main(int argc, const char* argv[]) {
     } else {
         Parser parser(exp);
         Metronet metronet(exp);
-        SuccessEnum importResult = parser.setup(metronet, "testInput/fatMetronet.xml", std::cout);
+        SuccessEnum importResult = parser.setup(metronet, "testInput/IncorrectSystemInput7.xml", std::cout);
         if (importResult != BadImport) {
             if (metronet.checkConsistent(std::cout)) {
                 metronet.printMetronet(std::cout);
