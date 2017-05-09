@@ -89,7 +89,8 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                 // Spoor elementen
                 for (TiXmlElement* spoorElem = elem->FirstChildElement();
                      spoorElem != NULL; spoorElem = spoorElem->NextSiblingElement()) {
-                    if (spoorElem->Value() != "SPOOR") continue;
+                    std::string spoorElemName = spoorElem->Value();
+                    if (spoorElemName != "SPOOR") continue;
                     int spoor = -1;
                     std::string vorige = "";
                     std::string volgende = "";
