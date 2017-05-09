@@ -1,3 +1,9 @@
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
 ERROR: Attribuut 'zitplaatsen' heeft een foute waarde. Tram niet toegevoegd.
 --== STATIONS ==--
 -> Station A

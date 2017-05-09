@@ -194,7 +194,7 @@ bool Metronet::checkConsistent(std::ostream &os) {
             std::string vor = station->getVorige(sp);
             std::string vol = station->getVolgende(sp);
             Station* vorig; Station* volgend;
-            try{
+            try {
                 vorig = stations.at(vor);
                 volgend = stations.at(vol);
             }
@@ -202,6 +202,13 @@ bool Metronet::checkConsistent(std::ostream &os) {
                 std::string out = "Station " + station->getNaam() + " heeft geen vorig of volgend station.\n";
                 exp->write(out, os);
                 consistent = false;
+                continue;
+            }
+            if (!(volgend->bevatSpoor(sp) and vorig->bevatSpoor(sp))){
+                std::string out = "Station " + station->getNaam() + " mist spoor " + std::to_string(sp) + ".\n";
+                exp->write(out, os);
+                consistent = false;
+                continue;
             }
             if(volgend->getVorige(sp) != station->getNaam() or vorig->getVolgende(sp) != station->getNaam()){
                 std::string out =
@@ -257,6 +264,7 @@ bool Metronet::checkConsistent(std::ostream &os) {
             std::string out = "Passagier " + pas->getNaam() + " heeft een ongeldig begin- of eindstation.\n";
             exp->write(out, os);
             consistent = false;
+            continue;
         }
         if(pas->getBeginStation() == pas->getEindStation()){
             std::string out = "Passagier " + pas->getNaam() + " heeft hetzelfde begin- en eindpunt.\n";
@@ -541,7 +549,10 @@ void Metronet::reset() {
         delete s.second;
     for (auto t : trams)
         delete t.second;
+    for (auto p : passagiers)
+        delete p.second;
     stations.clear();
     trams.clear();
+    passagiers.clear();
     sporen.clear();
 }

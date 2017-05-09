@@ -1,0 +1,9 @@
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+Station B mist spoor 1.
+Station C mist spoor 1.

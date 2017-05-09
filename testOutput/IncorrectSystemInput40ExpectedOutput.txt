@@ -1,4 +1,10 @@
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
 ERROR: Onherkenbaar attribuut 'kapot-nietKapot' wordt overgeslaan.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
 --== STATIONS ==--
 -> Station A
 wachtende passagiers:

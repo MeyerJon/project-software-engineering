@@ -1,3 +1,9 @@
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
 ERROR: Attribuut 'hoeveelheid' heeft een foute waarde. Passagier niet toegevoegd.
 --== STATIONS ==--
 -> Station A
