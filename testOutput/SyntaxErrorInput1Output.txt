@@ -1,0 +1,1 @@
+ERROR: Kan bestand testInput/SyntaxErrorInput1.xml niet openen.

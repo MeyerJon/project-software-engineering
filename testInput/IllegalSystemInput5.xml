@@ -58,19 +58,11 @@
         <snelheid>70</snelheid>
         <beginStation>C</beginStation>
     </TRAM>
-    <TRAM>
-        <lijnNr>2</lijnNr>
-	<voertuigNr>3</voertuigNr>
-	<type>Albatros</type>
-        <zitplaatsen>72</zitplaatsen>
-        <snelheid>70</snelheid>
-        <beginStation>A</beginStation>
-    </TRAM>
+
     <PASSAGIER>
-	<naam>Groep1</naam>
-	<beginStation>A</beginStation>
-	<eindStation>C</eindStation>
-	<!--Hoeveelheid passagiers is <= 0-->
-	<hoeveelheid>-2</hoeveelheid>
+        <naam>Groep1</naam>
+        <beginStation>A</beginStation>
+        <eindStation>C</eindStation>
+        <hoeveelheid>3</hoeveelheid>
     </PASSAGIER>
 </ROOT>

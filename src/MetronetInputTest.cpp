@@ -20,7 +20,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 
     Station* A = metronet.getStations()["A"];
     if (A->getNaam() != "A") endResult = BadImport;
-    if (A->getType() != "metroStation") endResult = BadImport;
+    if (A->getType() != "Metrostation") endResult = BadImport;
     if (A->getSporen()[0] != 1) endResult = BadImport;
     if (A->getVolgende(1) != "B") endResult = BadImport;
     if (A->getVorige(1) != "C") endResult = BadImport;
@@ -29,24 +29,24 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (A->getVorige(2) != "B") endResult = BadImport;
 
     Station* B = metronet.getStations()["B"];
-    if (A->getNaam() != "B") endResult = BadImport;
-    if (A->getType() != "halte") endResult = BadImport;
-    if (A->getSporen()[0] != 1) endResult = BadImport;
-    if (A->getVolgende(1) != "C") endResult = BadImport;
-    if (A->getVorige(1) != "A") endResult = BadImport;
-    if (A->getSporen()[1] != 2) endResult = BadImport;
-    if (A->getVolgende(2) != "A") endResult = BadImport;
-    if (A->getVorige(2) != "C") endResult = BadImport;
+    if (B->getNaam() != "B") endResult = BadImport;
+    if (B->getType() != "Halte") endResult = BadImport;
+    if (B->getSporen()[0] != 1) endResult = BadImport;
+    if (B->getVolgende(1) != "C") endResult = BadImport;
+    if (B->getVorige(1) != "A") endResult = BadImport;
+    if (B->getSporen()[1] != 2) endResult = BadImport;
+    if (B->getVolgende(2) != "A") endResult = BadImport;
+    if (B->getVorige(2) != "C") endResult = BadImport;
 
     Station* C = metronet.getStations()["C"];
-    if (A->getNaam() != "C") endResult = BadImport;
-    if (A->getType() != "metroStation") endResult = BadImport;
-    if (A->getSporen()[0] != 1) endResult = BadImport;
-    if (A->getVolgende(1) != "A") endResult = BadImport;
-    if (A->getVorige(1) != "B") endResult = BadImport;
-    if (A->getSporen()[1] != 2) endResult = BadImport;
-    if (A->getVolgende(2) != "B") endResult = BadImport;
-    if (A->getVorige(2) != "A") endResult = BadImport;
+    if (C->getNaam() != "C") endResult = BadImport;
+    if (C->getType() != "Metrostation") endResult = BadImport;
+    if (C->getSporen()[0] != 1) endResult = BadImport;
+    if (C->getVolgende(1) != "A") endResult = BadImport;
+    if (C->getVorige(1) != "B") endResult = BadImport;
+    if (C->getSporen()[1] != 2) endResult = BadImport;
+    if (C->getVolgende(2) != "B") endResult = BadImport;
+    if (C->getVorige(2) != "A") endResult = BadImport;
 
     Tram* t1 = metronet.getTrams()[1];
     if (t1->getSpoor() != 1) endResult = BadImport;
@@ -141,7 +141,7 @@ TEST_F(MetronetInputTest, InputSyntaxErrorSystems) {
 
     std::string filename;
     for (int i = 1; i <= TESTS_SYNTAX; i++) {
-        filename = "testInput/SyntaxErrorSystemInput" + std::to_string(i) + ".xml";
+        filename = "testInput/SyntaxErrorInput" + std::to_string(i) + ".xml";
         ASSERT_TRUE(FileExists(filename));
         ASSERT_TRUE(metronet.properlyInitialised());
 

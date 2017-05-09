@@ -25,7 +25,7 @@ public:
      * \brief Lege constructor.
      * \post ENSURE(this->properlyInitialised(), "Lege constructor van Passagier is niet in de juiste staat geeindigd.");
      */
-    Passagier() {};
+    Passagier();
 
     /**
      * \brief Default constructor van Passagier.

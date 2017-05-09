@@ -14,8 +14,9 @@ Station::Station() {
 }
 
 Station::Station(std::string n, std::string typeNaam, std::map<int, std::string> vorigeStations,
-                 std::map<int, std::string> volgendeStations) {
+                 std::map<int, std::string> volgendeStations, StatisticsStation* statistics) {
     naam = n;
+    stats = statistics;
     if (typeNaam == "Metrostation") type = Metrostation;
     else if (typeNaam == "Halte") type = Halte;
     for(auto& p : vorigeStations){
@@ -78,6 +79,11 @@ std::vector<int> Station::getSporen() const {
     return sporen;
 }
 
+StatisticsStation* Station::getStatistics() {
+    REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getStatistics.");
+    return stats;
+}
+
 bool Station::isHalte() const {
     REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte");
     return type == Halte;
@@ -99,4 +105,8 @@ void Station::bezetSpoor(int spoor, bool isTramHier) {
     REQUIRE(bevatSpoor(spoor), "Station bevat het gegeven spoor niet bij aanroep van bezetSpoor.");
     trams.at(spoor) = isTramHier;
     ENSURE(spoorBezet(spoor) == isTramHier, "Spoor was niet correct bezet na aanroep van bezetSpoor");
+}
+
+Station::~Station() {
+    delete (*this).stats;
 }

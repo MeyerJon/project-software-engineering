@@ -84,11 +84,23 @@ public:
      std::map<std::string, Station*> getStations();
 
     /**
+     * \brief Geeft het station met de opgegeven naam.
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getStation.");
+     */
+     Station* getStation(std::string name);
+
+    /**
      * \brief Geeft alle trams in het metronet terug.
      * \return Map met trams in het metronet.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTrams.");
      */
     std::map<int, Tram*>& getTrams();
+
+    /**
+     * \brief Geeft de tram met het opgegeven nummer
+     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van getTram.");
+     */
+    Tram* getTram(int nummer);
 
     /**
      * \brief Geeft alle passagiers in het metronet terug.
@@ -107,7 +119,7 @@ public:
     bool bevatTram(Tram* tram);
 
     /**
-     * \brief Kijkt na of het metronet de opgegeven tram bevat.
+     * \brief Kijkt na of het metronet de opgegeven station bevat.
      * \param tram De tram die moet gezocht worden.
      * \return Boolean die aangeeft of het metronet de tram bevat.
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij aanroep van bevatStation.");
@@ -115,9 +127,10 @@ public:
      * \pre REQUIRE(station->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van bevatStation.");
      */
     bool bevatStation(Station* station);
+    bool bevatStation(std::string name);
 
     /**
-     * \brief Kijkt na of het metronet de opgegeven tram bevat.
+     * \brief Kijkt na of het metronet de opgegeven spoor bevat.
      * \param tram Het spoor dat moet gezocht worden.
      * \return Boolean die aangeeft of het metronet de tram bevat.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van bevatSpoor.");
@@ -151,6 +164,7 @@ public:
      * \param tram De tram die toegevoegd zal worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
      * \pre REQUIRE(tram->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van addTram.");
+     * \pre REQUIRE(bevatStation(beginStation), "Metronet bevat beginstation niet bij de aanroep van addTram");
      * \post ENSURE(bevatTram(tram), "Tram was niet toegevoegd bij de aanroep van addTram.");
      */
     void addTram(int zitplaatsen, int snelheid, int spoor, int voertuigNr, std::string type, std::string beginStation);
@@ -233,7 +247,6 @@ public:
 
     /**
      * \brief Reset heel het systeem.
-     * \param tram De tram waarvoor gekeken wordt of vertrokken mag worden.
      * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij aanroep van reset.");
      */
      void reset();

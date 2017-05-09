@@ -1,0 +1,8 @@
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+ERROR: Spoor mist een attribuut.
+Station A is niet verbonden met het vorig of volgend station.
+Station B is niet verbonden met het vorig of volgend station.

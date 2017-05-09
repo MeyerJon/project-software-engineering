@@ -5,6 +5,10 @@
 #include "Passagier.h"
 
 
+Passagier::Passagier() {
+    initCheck = this;
+}
+
 Passagier::Passagier(std::string n, std::string begin, std::string eind, int h) {
     naam = n;
     beginStation = begin;

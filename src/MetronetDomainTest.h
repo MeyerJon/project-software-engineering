@@ -5,7 +5,6 @@
 #ifndef PSE_METRONETDOMAINTESTS_H
 #define PSE_METRONETDOMAINTESTS_H
 
-
 #include <iostream>
 #include <fstream>
 #include <gtest/gtest.h>
@@ -23,7 +22,7 @@ protected:
     friend class Metronet;
 
     virtual void SetUp() {
-        exp = new ExporterCLI();
+        exp = new Exporter();
         parser = Parser(exp);
         metronet = Metronet(exp);
     }

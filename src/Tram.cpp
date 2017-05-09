@@ -8,7 +8,7 @@
 #include "Tram.h"
 
 // Global consts
-double ticketPrijs = 2.0;
+double Tram::ticketPrijs = 2.0;
 
 
 Tram::Tram() {
@@ -81,7 +81,7 @@ std::string Tram::getType() const {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
     switch (type) {
         case Albatros :
-            return "Albatrso";
+            return "Albatros";
         case PCC :
             return "PCC";
     }
@@ -95,6 +95,11 @@ int Tram::getVoertuignummer() const {
 double Tram::getOmzet() const {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getOmzet.");
     return stats->getOmzet();
+}
+
+double Tram::getTicketPrijs() const {
+    ENSURE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getTicketPrijs.");
+    return ticketPrijs;
 }
 
 bool Tram::bevatPassagier(Passagier *pas) const {
@@ -173,7 +178,8 @@ bool Tram::afstappen(Passagier* pas){
 bool Tram::opstappen(Passagier* pas) {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van afstappen.");
     REQUIRE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van afstappen.");
-    if(getBezettePlaatsen() + pas->getHoeveelheid() > getZitplaatsen()){
+    if(getBezettePlaatsen() + pas->getHoeveelheid() > getZitplaatsen()
+        or getBezettePlaatsen() + pas->getHoeveelheid() < 0){
         return false;
     }
     else{
@@ -189,4 +195,13 @@ bool Tram::opstappen(Passagier* pas) {
 StatisticsTram* Tram::getStatistics() {
     REQUIRE(this->properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getStatistics.");
     return stats;
+}
+
+bool Tram::isLeeg() {
+    REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isLeeg.");
+    return passagiers.size() == 0;
+}
+
+Tram::~Tram() {
+    delete stats;
 }

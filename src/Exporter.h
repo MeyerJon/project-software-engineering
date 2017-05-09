@@ -56,37 +56,4 @@ public:
      virtual void finish(std::ostream& os);
 };
 
-/**
- * \brief ExporterCLI child klasse die de output van gegevens naar de command line behandelt
- */
-class ExporterCLI : public Exporter {
-
-};
-
-/**
- * \brief ExporterTXT child klasse die de output van gegevens naar een txt-bestand behandelt
- */
-class ExporterTXT : public Exporter {
-
-};
-
-/**
- * \brief ExporterHTML child klasse die de output van gegevens naar een html-bestand behandelt
- */
-class ExporterHTML : public Exporter {
-public:
-    virtual void write(std::string& output, std::ostream& os);
-
-    virtual void finish(std::ostream& os);
-
-private:
-    /**
-     * \brief Valideer de HTML header.
-     * \param os De stream waar de output naar gestuurd zal worden.
-     * \pre REQUIRE(this->properlyInitialised(), "ExporterHTML was niet geinitialiseerd bij de aanroep van createHTMLHead.");
-     * \pre REQUIRE(!documentStarted, "Document was aangemaakt voor de aanroep van createHTMLHead.");
-     */
-    void createHTMLHead(std::ostream& os);
-};
-
 #endif /* SRC_EXPORTER_H_ */
