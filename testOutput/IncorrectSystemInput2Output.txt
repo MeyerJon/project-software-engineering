@@ -1,10 +1,4 @@
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
 ERROR: Station mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
 Station B heeft geen vorig of volgend station.
 Station B heeft geen vorig of volgend station.
 Station C heeft geen vorig of volgend station.

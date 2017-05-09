@@ -1,9 +1,3 @@
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
-ERROR: Spoor mist een attribuut.
 ERROR: Tram mist een attribuut.
 --== STATIONS ==--
 -> Station A
