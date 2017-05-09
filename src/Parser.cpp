@@ -63,6 +63,7 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
             std::map<int, std::string> vorigeStations;
             std::map<int, std::string> volgendeStations;
             try {
+                // Station attributen
                 for(TiXmlNode* node = elem->FirstChild(); node != NULL; node = node->NextSibling()){
                     attrName = node->Value();
                     TiXmlText* text;
@@ -85,11 +86,15 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                         endResult = PartialImport;
                     }
                 }
+                // Spoor elementen
                 for (TiXmlElement* spoorElem = elem->FirstChildElement();
                      spoorElem != NULL; spoorElem = spoorElem->NextSiblingElement()) {
+                    std::string spoorElemName = spoorElem->Value();
+                    if (spoorElemName != "SPOOR") continue;
                     int spoor = -1;
                     std::string vorige = "";
                     std::string volgende = "";
+                    // Spoor attributen
                     for(TiXmlNode* node = spoorElem->FirstChild(); node != NULL; node = node->NextSibling()){
                         attrName = node->Value();
                         TiXmlText* text;
