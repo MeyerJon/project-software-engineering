@@ -194,7 +194,7 @@ public:
     /**
      * \brief Voegt spoor toe aan metronet.
      * \param spoor Het spoor dat toegevoegd zal worden.
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");
+     * \pre REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addSpoor.");
      * \post ENSURE(bevatSpoor(spoor), "Spoor was niet toegevoegd bij de aanroep van addSpoor.");
      */
     void addSpoor(int spoor);
@@ -202,7 +202,7 @@ public:
     /**
      * \brief Voegt een passagier toe aan het metronet
      * \param pas De passagier die toegevoegd zal worden
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
+     * \pre REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addPassagier.");
      * \post ENSURE(pas->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van addPassagier.");
      * \post ENSURE(bevatPassagier(pas), "Passagier was niet toegevoegd bij de aanroep van addPassagier.");
      */
@@ -219,7 +219,7 @@ public:
      *  • elke passagier zijn bestemming kan bereiken
      * \param os De stream waar de output naar gestuurd zal worden.
      * \return Boolean die aangeeft of het Metronet consistent is.
-     * \pre REQUIRE(this->properlyInitialised(),
+     * \pre REQUIRE(properlyInitialised(),
      *              "Metronet was niet geinitialiseerd bij de aanroep van checkConsistent.");
      */
     bool checkConsistent(std::ostream& os);
@@ -289,7 +289,7 @@ public:
 
     /**
      * \brief Reset heel het systeem.
-     * \pre REQUIRE(this->properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van reset.");
+     * \pre REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van reset.");
      */
      void reset();
 };

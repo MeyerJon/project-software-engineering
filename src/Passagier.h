@@ -42,7 +42,7 @@ public:
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.
      * \return Boolean die aangeeft of het object juist geinitialiseerd is.
-    */
+     */
     bool properlyInitialised() const;
 
     /**

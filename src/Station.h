@@ -41,7 +41,7 @@ private:
 public:
     /**
      * \brief De lege constructor van de klasse Station
-     * \post ENSURE(this->properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
+     * \post ENSURE(properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
     Station();
 
@@ -109,7 +109,7 @@ public:
     /**
      * \brief Geef de sporen.
      * \return De sporen.
-     * \pre REQUIRE(this->properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSporen.");
+     * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getSporen.");
      */
     std::vector<int> getSporen() const;
 
