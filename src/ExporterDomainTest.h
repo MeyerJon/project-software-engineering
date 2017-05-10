@@ -13,6 +13,9 @@
 #include "MetronetUtils.h"
 #include "Exporter.h"
 
+/**
+ * \brief ExporterDomainTest klasse die domein tests behandelt.
+ */
 class ExporterDomainTest : public ::testing::Test {
 protected:
     friend class Exporter;

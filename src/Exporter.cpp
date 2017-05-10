@@ -17,8 +17,7 @@ bool Exporter::properlyInitialised() const {
 }
 
 void Exporter::write(std::string& output, std::ostream& os) {
-    REQUIRE(this->properlyInitialised(),
-            "Exporter was niet geinitialiseerd bij de aanroep van write.");
+    REQUIRE(properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van write.");
     os << output;
     documentStarted = true;
 
@@ -27,14 +26,12 @@ void Exporter::write(std::string& output, std::ostream& os) {
 }
 
 void Exporter::finish(std::ostream &os) {
-    REQUIRE(this->properlyInitialised(),
-            "Exporter was niet geinitialiseerd bij de aanroep van finish.");
+    REQUIRE(properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van finish.");
     REQUIRE(documentStarted,
             "Document was niet aangemaakt voor de aanroep van finish.");
 }
 
 bool Exporter::isDocumentStarted() const {
-    REQUIRE(this->properlyInitialised(),
-            "Exporter was niet geinitialiseerd bij de aanroep van isDocumentStarted.");
+    REQUIRE(properlyInitialised(), "Exporter was niet geinitialiseerd bij de aanroep van isDocumentStarted.");
     return documentStarted;
 }
