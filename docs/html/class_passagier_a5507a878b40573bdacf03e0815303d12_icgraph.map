@@ -1,0 +1,27 @@
+<map id="Passagier::properlyInitialised" name="Passagier::properlyInitialised">
+<area shape="rect" id="node2" href="$class_metronet.html#a61ae688a6fc54bc4550bcb71f36715cf" title="Kijkt na of het metronet de opgegeven passagier bevat. " alt="" coords="486,64,657,90"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a94aabe02de1f82f95a8f19aac2c0bd12" title="Voegt een passagier toe aan het metronet. " alt="" coords="729,89,889,116"/>
+<area shape="rect" id="node6" href="$class_passagier.html#a2f37be1d8d5fd9e6fb1dd764e348ef1a" title="Default constructor van Passagier. " alt="" coords="265,773,411,800"/>
+<area shape="rect" id="node7" href="$class_passagier.html#ac5ac22827e98cf8bf70c8a66c473ebbd" title="Geef de naam van de groep passagiers. " alt="" coords="267,114,409,141"/>
+<area shape="rect" id="node11" href="$class_passagier.html#a1e074e8ac56856c8f8c858d91abb5d0d" title="Geef het beginstation van de groep passagiers. " alt="" coords="248,165,428,192"/>
+<area shape="rect" id="node12" href="$class_passagier.html#a8792a22db51141ebea6712ff88ceb2a3" title="Geef het eindstation van de groep passagiers. " alt="" coords="251,216,425,242"/>
+<area shape="rect" id="node13" href="$class_passagier.html#aee09f1854b6f4f2f95516b29d124df99" title="Geef het aantal personen in de groep passagiers. " alt="" coords="249,317,427,344"/>
+<area shape="rect" id="node14" href="$class_tram.html#aba1c306a2a1aa5bdf40fe6e394baef99" title="Emuleert afstappen van passagiers. " alt="" coords="513,418,630,445"/>
+<area shape="rect" id="node17" href="$class_tram.html#af42c023f82a85f68ec60cfa7b52d4d85" title="Emuleert opstappen van passagiers. " alt="" coords="511,469,631,496"/>
+<area shape="rect" id="node18" href="$class_passagier.html#a378500b83548e71ada81b248747a585f" title="Verander de huide het huidige tram van het de passagier. " alt="" coords="481,697,661,724"/>
+<area shape="rect" id="node19" href="$class_passagier.html#a713e36cd23a3c79e3514f9cdbd35511c" title="Geeft aan op welke tram de passagier reist. " alt="" coords="259,621,417,648"/>
+<area shape="rect" id="node20" href="$class_passagier.html#a4955965c27d7c86eaf59e97631206e86" title="Geeft aan of de passagier is aangekomen. " alt="" coords="484,621,659,648"/>
+<area shape="rect" id="node23" href="$class_passagier.html#a3ba801261daeb2af738cfb461d511fd0" title="Geeft aan of de passagier vertrokken is. " alt="" coords="257,266,419,293"/>
+<area shape="rect" id="node24" href="$class_passagier.html#aefbe5c6dfedf0bc10da44497d4a2e699" title="Update de status van de passagiers. (wachtend &#45;&gt; vertrokken) " alt="" coords="243,469,433,496"/>
+<area shape="rect" id="node25" href="$class_tram.html#a4d173613afa04c4135a558cb6eed5d81" title="Voegt een passagier toe en update de status van de passagier. " alt="" coords="269,570,407,597"/>
+<area shape="rect" id="node26" href="$class_tram.html#a1bdb1543c1abbb722c6daa7b83021001" title="Verwijdert een passagier en update de status van de passagier. " alt="" coords="257,418,419,445"/>
+<area shape="rect" id="node4" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. Leest eerst stations met hun sporen in, daarna trams en tenslotte passagier..." alt="" coords="976,109,1076,136"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1143,210,1193,237"/>
+<area shape="rect" id="node8" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. Een metronet is consistent als: • elk station is verbonden m..." alt="" coords="482,165,661,192"/>
+<area shape="rect" id="node9" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="493,266,650,293"/>
+<area shape="rect" id="node10" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="536,216,607,242"/>
+<area shape="rect" id="node15" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. Gaat eerst na of passagiers op de gegeven tram m..." alt="" coords="709,440,909,466"/>
+<area shape="rect" id="node16" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Simuleert het rondrijden van trams. Overloopt alle trams een per een en laat ze naar het volgende sta..." alt="" coords="957,440,1095,466"/>
+<area shape="rect" id="node21" href="$class_metronet.html#ae1f8176a260124a363ca80d44a84b745" title="Gaat na of alle passagiers op hun bestemming zijn aangekomen. " alt="" coords="726,534,893,575"/>
+<area shape="rect" id="node22" href="$_metronet_domain_test_8cpp.html#adb87508105fff221dd7e416b85de6cdb" title="TEST_F" alt="" coords="774,621,845,648"/>
+</map>

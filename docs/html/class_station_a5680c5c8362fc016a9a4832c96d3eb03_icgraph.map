@@ -1,0 +1,5 @@
+<map id="Station::spoorBezet" name="Station::spoorBezet">
+<area shape="rect" id="node2" href="$class_metronet.html#a81425d28208853a7e175b5ab61329edb" title="Geeft een grafische impressie van het hele metronet. " alt="" coords="191,5,397,32"/>
+<area shape="rect" id="node4" href="$class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3" title="Bezet het spoor met de gegeven tram. " alt="" coords="225,56,363,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="445,5,496,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Tram::getOmzet" name="Tram::getOmzet">
+<area shape="rect" id="node2" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="176,5,337,32"/>
+<area shape="rect" id="node3" href="$class_statistics_tram.html#a7367390a2693aa71d54775ef8cc9728a" title="Geeft de totale omzet van de tram op dit moment. " alt="" coords="171,56,343,83"/>
+<area shape="rect" id="node4" href="$class_statistics_tram.html#a2de5fcfe52dcc0815e5613daba745daa" title="StatisticsTram::properly\lInitialised" alt="" coords="391,49,552,90"/>
+</map>

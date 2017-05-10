@@ -1,7 +1,6 @@
 <map id="Tram::setOmzet" name="Tram::setOmzet">
-<area shape="rect" id="node2" href="$class_tram.html#af42c023f82a85f68ec60cfa7b52d4d85" title="Emuleert opstappen van passagiers. " alt="" coords="171,31,291,57"/>
-<area shape="rect" id="node3" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="339,5,539,32"/>
-<area shape="rect" id="node6" href="$_metronet_domain_test_8cpp.html#a6006abf11cb75c79b3f29483b30f0990" title="TEST_F" alt="" coords="403,56,474,83"/>
-<area shape="rect" id="node4" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="587,5,724,32"/>
+<area shape="rect" id="node2" href="$class_tram.html#af42c023f82a85f68ec60cfa7b52d4d85" title="Emuleert opstappen van passagiers. " alt="" coords="171,5,291,32"/>
+<area shape="rect" id="node3" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. Gaat eerst na of passagiers op de gegeven tram m..." alt="" coords="339,5,539,32"/>
+<area shape="rect" id="node4" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Simuleert het rondrijden van trams. Overloopt alle trams een per een en laat ze naar het volgende sta..." alt="" coords="587,5,724,32"/>
 <area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="772,5,823,32"/>
 </map>

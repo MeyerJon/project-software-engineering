@@ -1,6 +1,9 @@
 <map id="Tram::getHuidigStation" name="Tram::getHuidigStation">
-<area shape="rect" id="node2" href="$class_metronet.html#a78c0cd9912306a5f7438ea43f5088e0a" title="Behandelt het opstappen en afstappen van passagiers. " alt="" coords="209,5,409,32"/>
-<area shape="rect" id="node3" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Emuleert het rondrijden van trams. " alt="" coords="457,31,595,57"/>
-<area shape="rect" id="node5" href="$_metronet_domain_test_8cpp.html#a739a7fda4e9dacf43843e7f31e188df7" title="TEST_F" alt="" coords="274,107,345,133"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="643,31,693,57"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="457,5,615,32"/>
+<area shape="rect" id="node4" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. Gaat eerst na of passagiers op de gegeven tram m..." alt="" coords="209,56,409,83"/>
+<area shape="rect" id="node6" href="$class_metronet.html#adad7cd43bc0e48a00fbd87a1288fd498" title="Kijkt of de gegeven tram verder mag rijden. " alt="" coords="212,107,407,133"/>
+<area shape="rect" id="node7" href="$class_tram.html#ad8627700455e2d24563e08a72d887197" title="Past het huidige station aan. " alt="" coords="231,157,387,184"/>
+<area shape="rect" id="node8" href="$class_tram.html#a8d55296c7ede4aa92c9b3a4b2a9495a8" title="Verplaatst een tram naar het opgegeven station. " alt="" coords="465,183,607,209"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="663,31,713,57"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Simuleert het rondrijden van trams. Overloopt alle trams een per een en laat ze naar het volgende sta..." alt="" coords="467,56,605,83"/>
 </map>

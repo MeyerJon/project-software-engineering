@@ -1,6 +1,11 @@
 <map id="Metronet::addPassagier" name="Metronet::addPassagier">
-<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="432,34,615,61"/>
-<area shape="rect" id="node3" href="$class_passagier.html#a1cc2825c750405d3782c738ac8e3e080" title="Geef de naam van de groep passagiers. " alt="" coords="453,136,594,162"/>
-<area shape="rect" id="node4" href="$class_passagier.html#ac571f017d61f182d77d1438818588539" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="663,85,852,112"/>
-<area shape="rect" id="node5" href="$class_metronet.html#a61ae688a6fc54bc4550bcb71f36715cf" title="Kijkt na of het metronet de opgegeven passagier bevat. " alt="" coords="213,85,384,112"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="437,5,620,32"/>
+<area shape="rect" id="node3" href="$class_passagier.html#ac5ac22827e98cf8bf70c8a66c473ebbd" title="Geef de naam van de groep passagiers. " alt="" coords="458,107,599,133"/>
+<area shape="rect" id="node4" href="$class_passagier.html#a5507a878b40573bdacf03e0815303d12" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="668,107,857,133"/>
+<area shape="rect" id="node5" href="$class_statistics_metronet.html#a4f762bc392b64ceec839f7944bd1b657" title="Past het totaal aantal groepen aan. " alt="" coords="216,209,387,250"/>
+<area shape="rect" id="node7" href="$class_statistics_metronet.html#a3ffc31a0bfec4aa44ad160d2924100e2" title="Geeft het totaal aantal groepen in het metronet. " alt="" coords="216,274,387,315"/>
+<area shape="rect" id="node8" href="$class_statistics_metronet.html#a5f0007843e520d30caec51c88b7bb87f" title="Past het totaal aantal personen aan. " alt="" coords="213,339,389,381"/>
+<area shape="rect" id="node9" href="$class_statistics_metronet.html#aa6e4b270214626e83e74722d6a8d0f06" title="Geeft het totaal aantal personen in het metronet. " alt="" coords="213,405,389,446"/>
+<area shape="rect" id="node10" href="$class_metronet.html#a61ae688a6fc54bc4550bcb71f36715cf" title="Kijkt na of het metronet de opgegeven passagier bevat. " alt="" coords="216,56,387,83"/>
+<area shape="rect" id="node6" href="$class_statistics_tram.html#a2de5fcfe52dcc0815e5613daba745daa" title="StatisticsTram::properly\lInitialised" alt="" coords="448,307,609,349"/>
 </map>

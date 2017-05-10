@@ -1,13 +1,16 @@
 <map id="Tram::opstappen" name="Tram::opstappen">
-<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="649,163,811,190"/>
-<area shape="rect" id="node3" href="$class_passagier.html#ac571f017d61f182d77d1438818588539" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="412,417,601,443"/>
-<area shape="rect" id="node4" href="$class_tram.html#a4ca765b8e0d031acad9c70f1643b5e41" title="Geef de bezette zitplaatsen van de tram. " alt="" coords="419,163,594,190"/>
-<area shape="rect" id="node5" href="$class_passagier.html#a8bf2e7bcd86229a7395d3fc8f7143fa6" title="Geef het aantal personen in de groep passagiers. " alt="" coords="179,366,358,393"/>
-<area shape="rect" id="node6" href="$class_tram.html#aa366e37291186d6cfd402aa7b6cfec2d" title="Geef de zitplaatsen van de tram. " alt="" coords="435,366,578,393"/>
-<area shape="rect" id="node7" href="$class_tram.html#a4d173613afa04c4135a558cb6eed5d81" title="Voegt een passagier toe en update de status van de passagier. " alt="" coords="199,265,338,291"/>
-<area shape="rect" id="node9" href="$class_passagier.html#aefbe5c6dfedf0bc10da44497d4a2e699" title="Update de status van de passagiers. " alt="" coords="173,417,364,443"/>
-<area shape="rect" id="node10" href="$class_tram.html#a6582d8608c8091069ad9c017294b9a32" title="Past het aantal bezette plaatsen aan. " alt="" coords="181,214,356,241"/>
-<area shape="rect" id="node11" href="$class_tram.html#ac6b56586355e176b797e0beefeb9c5dd" title="Past de huide omzet van de tram aan. " alt="" coords="448,11,565,38"/>
-<area shape="rect" id="node12" href="$class_tram.html#a4c621616fff1b04ef360365239198b1a" title="Geeft de huidige omzet van de tram. " alt="" coords="210,62,327,89"/>
-<area shape="rect" id="node8" href="$class_tram.html#a08a7580a396d9c50d5fe0ec170b41f7f" title="Checkt of de gegeven Passagier op de tram zit. " alt="" coords="431,315,582,342"/>
+<area shape="rect" id="node2" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="655,292,816,318"/>
+<area shape="rect" id="node3" href="$class_passagier.html#a5507a878b40573bdacf03e0815303d12" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="412,190,601,217"/>
+<area shape="rect" id="node4" href="$class_tram.html#a61cf322946fd28700e7f7394302ad7fa" title="Geef de bezette zitplaatsen van de tram. " alt="" coords="419,89,594,116"/>
+<area shape="rect" id="node5" href="$class_passagier.html#aee09f1854b6f4f2f95516b29d124df99" title="Geef het aantal personen in de groep passagiers. " alt="" coords="179,190,358,217"/>
+<area shape="rect" id="node6" href="$class_tram.html#abcb1ce0d10e394fce8a99b460e5104de" title="Geef de zitplaatsen van de tram. " alt="" coords="435,13,578,40"/>
+<area shape="rect" id="node7" href="$class_tram.html#a4d173613afa04c4135a558cb6eed5d81" title="Voegt een passagier toe en update de status van de passagier. " alt="" coords="199,292,338,318"/>
+<area shape="rect" id="node9" href="$class_passagier.html#aefbe5c6dfedf0bc10da44497d4a2e699" title="Update de status van de passagiers. (wachtend &#45;&gt; vertrokken) " alt="" coords="173,241,364,268"/>
+<area shape="rect" id="node10" href="$class_tram.html#a6582d8608c8091069ad9c017294b9a32" title="Past het aantal bezette plaatsen aan. " alt="" coords="181,89,356,116"/>
+<area shape="rect" id="node11" href="$class_tram.html#ac6b56586355e176b797e0beefeb9c5dd" title="Past de huide omzet van de tram aan. " alt="" coords="210,393,327,420"/>
+<area shape="rect" id="node15" href="$class_tram.html#a28ae0ec018243417e4a17b5a5c5eff51" title="Geeft de huidige omzet van de tram. " alt="" coords="448,444,565,470"/>
+<area shape="rect" id="node8" href="$class_tram.html#a18bdfb852e37725ff4361fbaf4d95a05" title="Checkt of de gegeven Passagier op de tram zit. " alt="" coords="431,241,582,268"/>
+<area shape="rect" id="node12" href="$class_statistics_tram.html#a35db086f1605d9c27d357dd9221b63b2" title="Past de huidige omzet van de tram aan. " alt="" coords="421,494,593,521"/>
+<area shape="rect" id="node13" href="$class_statistics_tram.html#a2de5fcfe52dcc0815e5613daba745daa" title="StatisticsTram::properly\lInitialised" alt="" coords="869,462,1031,503"/>
+<area shape="rect" id="node14" href="$class_statistics_tram.html#a7367390a2693aa71d54775ef8cc9728a" title="Geeft de totale omzet van de tram op dit moment. " alt="" coords="649,444,821,470"/>
 </map>

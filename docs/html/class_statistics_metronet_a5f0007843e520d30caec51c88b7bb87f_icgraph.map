@@ -1,0 +1,5 @@
+<map id="StatisticsMetronet::setTotaalAantalPersonen" name="StatisticsMetronet::setTotaalAantalPersonen">
+<area shape="rect" id="node2" href="$class_metronet.html#a94aabe02de1f82f95a8f19aac2c0bd12" title="Voegt een passagier toe aan het metronet. " alt="" coords="229,13,389,39"/>
+<area shape="rect" id="node3" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. Leest eerst stations met hun sporen in, daarna trams en tenslotte passagier..." alt="" coords="437,13,537,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="585,13,636,39"/>
+</map>

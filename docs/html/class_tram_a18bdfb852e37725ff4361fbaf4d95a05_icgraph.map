@@ -1,0 +1,9 @@
+<map id="Tram::bevatPassagier" name="Tram::bevatPassagier">
+<area shape="rect" id="node2" href="$class_tram.html#a4d173613afa04c4135a558cb6eed5d81" title="Voegt een passagier toe en update de status van de passagier. " alt="" coords="215,5,354,32"/>
+<area shape="rect" id="node7" href="$class_tram.html#a1bdb1543c1abbb722c6daa7b83021001" title="Verwijdert een passagier en update de status van de passagier. " alt="" coords="204,56,365,83"/>
+<area shape="rect" id="node3" href="$class_tram.html#af42c023f82a85f68ec60cfa7b52d4d85" title="Emuleert opstappen van passagiers. " alt="" coords="413,5,533,32"/>
+<area shape="rect" id="node4" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. Gaat eerst na of passagiers op de gegeven tram m..." alt="" coords="581,31,781,57"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Simuleert het rondrijden van trams. Overloopt alle trams een per een en laat ze naar het volgende sta..." alt="" coords="829,31,967,57"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1015,31,1065,57"/>
+<area shape="rect" id="node8" href="$class_tram.html#aba1c306a2a1aa5bdf40fe6e394baef99" title="Emuleert afstappen van passagiers. " alt="" coords="415,56,532,83"/>
+</map>

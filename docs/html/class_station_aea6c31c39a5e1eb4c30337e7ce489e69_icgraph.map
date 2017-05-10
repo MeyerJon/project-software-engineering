@@ -1,8 +1,13 @@
 <map id="Station::getNaam" name="Station::getNaam">
-<area shape="rect" id="node2" href="$class_metronet.html#ac7f4069e577cd4dddb1e166923df3ecb" title="Voegt station toe aan metronet. " alt="" coords="177,5,320,32"/>
-<area shape="rect" id="node5" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. " alt="" coords="368,56,547,83"/>
-<area shape="rect" id="node6" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="379,107,536,133"/>
-<area shape="rect" id="node7" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="213,157,284,184"/>
-<area shape="rect" id="node3" href="$class_metronet.html#ad12d6e52c7f5c23d23e87992b4abc1fa" title="Verwerkt het XML&#45;bestand. " alt="" coords="401,5,514,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="595,56,645,83"/>
+<area shape="rect" id="node2" href="$class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven station bevat. " alt="" coords="181,107,335,133"/>
+<area shape="rect" id="node6" href="$class_metronet.html#ab2cbe114faa2ee312f6ea4e551962193" title="Voegt station toe aan het metronet. " alt="" coords="419,157,561,184"/>
+<area shape="rect" id="node8" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. Een metronet is consistent als: • elk station is verbonden m..." alt="" coords="641,208,820,235"/>
+<area shape="rect" id="node9" href="$class_metronet.html#a3d8b85c241fff3a9353c06320226e84e" title="Print het hele metronet. " alt="" coords="652,259,809,285"/>
+<area shape="rect" id="node10" href="$class_metronet.html#a81425d28208853a7e175b5ab61329edb" title="Geeft een grafische impressie van het hele metronet. " alt="" coords="387,309,593,336"/>
+<area shape="rect" id="node11" href="$class_metronet.html#a3367a206383b6adae828d492167abe96" title="Print de verzamelde gegevens van het metronet. " alt="" coords="177,360,339,387"/>
+<area shape="rect" id="node12" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="223,411,293,437"/>
+<area shape="rect" id="node3" href="$class_metronet.html#ad962fd0ca631ebbbe1171e39db228e3f" title="Geeft het station met de opgegeven naam. " alt="" coords="420,5,560,32"/>
+<area shape="rect" id="node4" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. Leest eerst stations met hun sporen in, daarna trams en tenslotte passagier..." alt="" coords="681,107,781,133"/>
+<area shape="rect" id="node7" href="$class_metronet.html#a2d87bbeb977db9176f94116a02b9b17e" title="Voegt tram toe aan het metronet. " alt="" coords="424,107,556,133"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="868,259,919,285"/>
 </map>

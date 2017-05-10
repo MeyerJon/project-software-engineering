@@ -1,4 +1,4 @@
 <map id="Passagier::setHuidigeTram" name="Passagier::setHuidigeTram">
-<area shape="rect" id="node2" href="$class_passagier.html#ac571f017d61f182d77d1438818588539" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="440,5,629,32"/>
-<area shape="rect" id="node3" href="$class_passagier.html#a0358e5e8f0b18afbbebae472c5c6f6e1" title="Geeft aan op welke tram de passagier reist. " alt="" coords="233,31,392,57"/>
+<area shape="rect" id="node2" href="$class_passagier.html#a5507a878b40573bdacf03e0815303d12" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="440,5,629,32"/>
+<area shape="rect" id="node3" href="$class_passagier.html#a713e36cd23a3c79e3514f9cdbd35511c" title="Geeft aan op welke tram de passagier reist. " alt="" coords="233,31,392,57"/>
 </map>

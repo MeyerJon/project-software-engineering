@@ -1,5 +1,7 @@
 <map id="Metronet::bevatStation" name="Metronet::bevatStation">
-<area shape="rect" id="node2" href="$class_metronet.html#ab2cbe114faa2ee312f6ea4e551962193" title="Voegt station toe aan metronet. " alt="" coords="208,5,351,32"/>
-<area shape="rect" id="node3" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="399,5,499,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="547,5,597,32"/>
+<area shape="rect" id="node2" href="$class_metronet.html#ad962fd0ca631ebbbe1171e39db228e3f" title="Geeft het station met de opgegeven naam. " alt="" coords="209,5,349,32"/>
+<area shape="rect" id="node3" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. Leest eerst stations met hun sporen in, daarna trams en tenslotte passagier..." alt="" coords="399,81,499,108"/>
+<area shape="rect" id="node5" href="$class_metronet.html#ab2cbe114faa2ee312f6ea4e551962193" title="Voegt station toe aan het metronet. " alt="" coords="208,107,351,133"/>
+<area shape="rect" id="node6" href="$class_metronet.html#a2d87bbeb977db9176f94116a02b9b17e" title="Voegt tram toe aan het metronet. " alt="" coords="213,157,345,184"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="547,81,597,108"/>
 </map>

@@ -1,0 +1,6 @@
+<map id="Metronet::allePassagiersAangekomen" name="Metronet::allePassagiersAangekomen">
+<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="220,5,403,32"/>
+<area shape="rect" id="node3" href="$class_passagier.html#a4955965c27d7c86eaf59e97631206e86" title="Geeft aan of de passagier is aangekomen. " alt="" coords="224,56,399,83"/>
+<area shape="rect" id="node4" href="$class_passagier.html#a5507a878b40573bdacf03e0815303d12" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="657,56,847,83"/>
+<area shape="rect" id="node5" href="$class_passagier.html#a713e36cd23a3c79e3514f9cdbd35511c" title="Geeft aan op welke tram de passagier reist. " alt="" coords="451,81,609,108"/>
+</map>

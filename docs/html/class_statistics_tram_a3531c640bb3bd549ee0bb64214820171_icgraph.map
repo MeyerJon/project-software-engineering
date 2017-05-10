@@ -1,0 +1,5 @@
+<map id="StatisticsTram::getBezettingsgraad" name="StatisticsTram::getBezettingsgraad">
+<area shape="rect" id="node2" href="$class_metronet.html#a3367a206383b6adae828d492167abe96" title="Print de verzamelde gegevens van het metronet. " alt="" coords="313,5,474,32"/>
+<area shape="rect" id="node4" href="$class_statistics_tram.html#a43893c4d3fd3c302fce9973adadf783f" title="Past de huidige bezettingsgraad van de tram aan. " alt="" coords="280,56,507,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="555,5,605,32"/>
+</map>

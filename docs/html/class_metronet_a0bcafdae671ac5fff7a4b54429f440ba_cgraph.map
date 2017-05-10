@@ -1,5 +1,5 @@
 <map id="Metronet::bevatTram" name="Metronet::bevatTram">
-<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="427,24,588,50"/>
+<area shape="rect" id="node2" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="427,24,588,50"/>
 <area shape="rect" id="node3" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="196,24,379,50"/>
-<area shape="rect" id="node4" href="$class_tram.html#a1ba836064d24b2521fe1ad37b5f78422" title="Geef het voertuignummer van de tram. " alt="" coords="201,74,374,101"/>
+<area shape="rect" id="node4" href="$class_tram.html#a84c856d1f8a2b417abcf6fcad8e64947" title="Geef het voertuignummer van de tram. " alt="" coords="201,74,374,101"/>
 </map>

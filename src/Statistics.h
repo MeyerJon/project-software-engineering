@@ -256,14 +256,39 @@ public:
      */
     void setAantalZitplaatsen(int aantalZitplaatsen);
 
+    /**
+     * \brief Past de populairste lijn aan.
+     * \pre REQUIRE(properlyInitialised(), "StatisticsMetronet niet geinitialiseerd bij aanroep van setPopLijn.");
+     * \post ENSURE(getPopLijn == popLijn, "Populairste lijn niet correct aangepast bij aanroep van setPopLijn.");
+     */
     void setPopLijn(int popLijn);
 
+    /**
+     * \brief Past het nummer van albatros trams aan.
+     * \pre REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij aanroep van setNrAlba.");
+     * \post ENSURE(getNrAlba == nrAlba, "Nummer van albatros trams niet correct aangepast bij aanroep van setNrAlba.");
+     */
     void setNrAlba(int nrAlba);
 
+    /**
+     * \brief Past het nummer van pcc trams aan.
+     * \pre REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij aanroep van setNrPCC.");
+     * \post ENSURE(getNrPCC == nrPCC, "Nummer van pcc trams niet correct aangepast bij aanroep van setNrPCC.");
+     */
     void setNrPCC(int nrPCC);
 
+    /**
+     * \brief Past het totaal aantal personen aan.
+     * \pre REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij aanroep van setTotaalAantalPersonen.");
+     * \post ENSURE(getTotaalAantalPersonen == aantal, "Totaal aantal personen niet correct aangepast bij aanroep van setTotaalAantalPersonen.");
+     */
     void setTotaalAantalPersonen(int aantal);
 
+    /**
+     * \brief Past het totaal aantal groepen aan.
+     * \pre REQUIRE(properlyInitialised(), "StatisticsMetronet was niet geinitialiseerd bij aanroep van setTotaalAantalGroepen.");
+     * \post ENSURE(getTotaalAantalGroepen == aantal, "Totaal aantal groepen niet correct aangepast bij aanroep van setTotaalAantalGroepen.");
+     */
     void setTotaalAantalGroepen(int aantal);
 
 };

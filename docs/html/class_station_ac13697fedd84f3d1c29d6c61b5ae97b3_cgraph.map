@@ -1,5 +1,5 @@
 <map id="Station::bezetSpoor" name="Station::bezetSpoor">
-<area shape="rect" id="node2" href="$class_station.html#a5749af84d13b71d34aa1fb5b0a935a20" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="561,25,733,52"/>
-<area shape="rect" id="node3" href="$class_station.html#a4851849f7f158fa51ab91a9cd56986f2" title="Checkt of het station een spoor bevat. " alt="" coords="376,25,513,52"/>
-<area shape="rect" id="node4" href="$class_station.html#ab8a40b1e5d3b6228a3a173dd0140a5fb" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="191,76,328,102"/>
+<area shape="rect" id="node2" href="$class_station.html#a9ce626dd0599e3ea8107404a59c21e16" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="561,25,733,52"/>
+<area shape="rect" id="node3" href="$class_station.html#accf2501bb0eef809665989b455259c68" title="Checkt of het station een spoor bevat. " alt="" coords="376,25,513,52"/>
+<area shape="rect" id="node4" href="$class_station.html#a5680c5c8362fc016a9a4832c96d3eb03" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="191,76,328,102"/>
 </map>

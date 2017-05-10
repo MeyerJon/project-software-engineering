@@ -1,5 +1,5 @@
 <map id="Metronet::bevatSpoor" name="Metronet::bevatSpoor">
 <area shape="rect" id="node2" href="$class_metronet.html#a0422381a8d7f32a915e0ad966af43627" title="Voegt spoor toe aan metronet. " alt="" coords="200,5,336,32"/>
-<area shape="rect" id="node3" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="384,5,484,32"/>
+<area shape="rect" id="node3" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. Leest eerst stations met hun sporen in, daarna trams en tenslotte passagier..." alt="" coords="384,5,484,32"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="532,5,583,32"/>
 </map>

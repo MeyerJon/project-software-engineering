@@ -1,0 +1,5 @@
+<map id="TramDomainTest" name="TramDomainTest">
+<area shape="rect" id="node3" href="$class_passagier.html" title="Passagier klasse die een groep passagiers zal voorstellen. " alt="" coords="77,5,157,32"/>
+<area shape="rect" id="node4" href="$class_tram.html" title="Tram klasse die een TRAM element uit een XML&#45;bestand representeert. " alt="" coords="183,5,235,32"/>
+<area shape="rect" id="node5" href="$class_statistics_tram.html" title="StatisticsTram" alt="" coords="260,5,367,32"/>
+</map>
