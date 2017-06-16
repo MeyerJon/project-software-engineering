@@ -3,21 +3,21 @@
     <!-- Metrostations -->
     <STATION>
         <naam>A</naam>
-	    <type>Metrostation</type>
+        <type>Metrostation</type>
         <SPOOR>
             <spoor>20</spoor>
             <volgende>B</volgende>
             <vorige>C</vorige>
-	    </SPOOR>
-	    <SPOOR>
+        </SPOOR>
+        <SPOOR>
             <spoor>11</spoor>
             <volgende>a1</volgende>
             <vorige>a3</vorige>
-	    </SPOOR>
+        </SPOOR>
     </STATION>
     <STATION>
         <naam>B</naam>
-	    <type>Metrostation</type>
+        <type>Metrostation</type>
         <SPOOR>
             <spoor>20</spoor>
             <volgende>C</volgende>
@@ -36,17 +36,17 @@
     </STATION>
     <STATION>
         <naam>C</naam>
-	    <type>Metrostation</type>
+        <type>Metrostation</type>
         <SPOOR>
             <spoor>20</spoor>
             <volgende>A</volgende>
             <vorige>B</vorige>
-	    </SPOOR>
-    	<SPOOR>
+        </SPOOR>
+        <SPOOR>
             <spoor>12</spoor>
             <volgende>b2</volgende>
             <vorige>b1</vorige>
-	   </SPOOR>
+       </SPOOR>
        <SPOOR>
             <spoor>13</spoor>
             <volgende>c1</volgende>
@@ -64,7 +64,7 @@
             <vorige>A</vorige>
         </SPOOR>
     </STATION>
-        <STATION>
+    <STATION>
         <naam>a2</naam>
         <type>Halte</type>
         <SPOOR>
@@ -73,7 +73,7 @@
             <vorige>a1</vorige>
         </SPOOR>
     </STATION>
-        <STATION>
+    <STATION>
         <naam>a3</naam>
         <type>Halte</type>
         <SPOOR>
@@ -91,7 +91,7 @@
             <vorige>B</vorige>
         </SPOOR>
     </STATION>
-        <STATION>
+    <STATION>
         <naam>b2</naam>
         <type>Halte</type>
         <SPOOR>
@@ -131,24 +131,24 @@
     <!-- Trams -->
     <TRAM>
         <lijnNr>20</lijnNr>
-	   <voertuigNr>11</voertuigNr>
-	<type>Albatros</type>
+       <voertuigNr>11</voertuigNr>
+    <type>Albatros</type>
         <zitplaatsen>72</zitplaatsen>
         <snelheid>70</snelheid>
         <beginStation>A</beginStation>
     </TRAM>
     <TRAM>
         <lijnNr>11</lijnNr>
-	   <voertuigNr>12</voertuigNr>
-	<type>PCC</type>
+       <voertuigNr>12</voertuigNr>
+    <type>PCC</type>
         <zitplaatsen>30</zitplaatsen>
         <snelheid>40</snelheid>
         <beginStation>A</beginStation>
     </TRAM>
     <TRAM>
         <lijnNr>11</lijnNr>
-	   <voertuigNr>13</voertuigNr>
-	<type>PCC</type>
+       <voertuigNr>13</voertuigNr>
+    <type>PCC</type>
         <zitplaatsen>30</zitplaatsen>
         <snelheid>40</snelheid>
         <beginStation>a2</beginStation>
@@ -173,71 +173,71 @@
     <!-- Passagiers -->
     <!-- Line 11 -->
     <PASSAGIER>
-	<naam>StationCruisers</naam>
-	<beginStation>A</beginStation>
-	<eindStation>C</eindStation>
-	<hoeveelheid>10</hoeveelheid>
+        <naam>StationCruisers</naam>
+        <beginStation>A</beginStation>
+        <eindStation>C</eindStation>
+        <hoeveelheid>10</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>LineACruisers1</naam>
-    <beginStation>A</beginStation>
-    <eindStation>a3</eindStation>
-    <hoeveelheid>5</hoeveelheid>
+        <naam>LineACruisers1</naam>
+        <beginStation>A</beginStation>
+        <eindStation>a3</eindStation>
+        <hoeveelheid>5</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>LineACruisers2</naam>
-    <beginStation>A</beginStation>
-    <eindStation>a2</eindStation>
-    <hoeveelheid>3</hoeveelheid>
+        <naam>LineACruisers2</naam>
+        <beginStation>A</beginStation>
+        <eindStation>a2</eindStation>
+        <hoeveelheid>3</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>LineACruisers3</naam>
-    <beginStation>a1</beginStation>
-    <eindStation>A</eindStation>
-    <hoeveelheid>2</hoeveelheid>
+        <naam>LineACruisers3</naam>
+        <beginStation>a1</beginStation>
+        <eindStation>A</eindStation>
+        <hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
     <!-- Line 12 -->
     <PASSAGIER>
-    <naam>LineBCruisers1</naam>
-    <beginStation>B</beginStation>
-    <eindStation>b2</eindStation>
-    <hoeveelheid>5</hoeveelheid>
+        <naam>LineBCruisers1</naam>
+        <beginStation>B</beginStation>
+        <eindStation>b2</eindStation>
+        <hoeveelheid>5</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>LineBCruisers2</naam>
-    <beginStation>B</beginStation>
-    <eindStation>C</eindStation>
-    <hoeveelheid>5</hoeveelheid>
+        <naam>LineBCruisers2</naam>
+        <beginStation>B</beginStation>
+        <eindStation>C</eindStation>
+        <hoeveelheid>5</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>LineBCruisers3</naam>
-    <beginStation>b2</beginStation>
-    <eindStation>C</eindStation>
-    <hoeveelheid>2</hoeveelheid>
+        <naam>LineBCruisers3</naam>
+        <beginStation>b2</beginStation>
+        <eindStation>C</eindStation>
+        <hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
     <!-- Line 13 -->
     <PASSAGIER>
-    <naam>LineCCruisers1</naam>
-    <beginStation>C</beginStation>
-    <eindStation>c2</eindStation>
-    <hoeveelheid>2</hoeveelheid>
+        <naam>LineCCruisers1</naam>
+        <beginStation>C</beginStation>
+        <eindStation>c2</eindStation>
+        <hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>LineCCruisers2</naam>
-    <beginStation>C</beginStation>
-    <eindStation>c3</eindStation>
-    <hoeveelheid>12</hoeveelheid>
+        <naam>LineCCruisers2</naam>
+        <beginStation>C</beginStation>
+        <eindStation>c3</eindStation>
+        <hoeveelheid>12</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>StationCruisers2</naam>
-    <beginStation>C</beginStation>
-    <eindStation>A</eindStation>
-    <hoeveelheid>20</hoeveelheid>
+        <naam>StationCruisers2</naam>
+        <beginStation>C</beginStation>
+        <eindStation>A</eindStation>
+        <hoeveelheid>20</hoeveelheid>
     </PASSAGIER>
     <PASSAGIER>
-    <naam>StationCruisers3</naam>
-    <beginStation>C</beginStation>
-    <eindStation>B</eindStation>
-    <hoeveelheid>50</hoeveelheid>
+        <naam>StationCruisers3</naam>
+        <beginStation>C</beginStation>
+        <eindStation>B</eindStation>
+        <hoeveelheid>50</hoeveelheid>
     </PASSAGIER>
 </ROOT>
