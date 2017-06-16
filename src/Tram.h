@@ -19,17 +19,11 @@
 class Spoor;
 class Station;
 
-enum TramType {
-    Albatros,
-    PCC
-};
-
-
 /**
  * \brief Tram klasse die een TRAM element uit een XML-bestand representeert
  */
 class Tram {
-private:
+protected:
     int zitplaatsen;
     int bezettePlaatsen;
     int snelheid;
@@ -37,7 +31,6 @@ private:
     int voertuignummer;
     std::string beginStation;
     std::string huidigStation;
-    TramType type;
     std::vector<Passagier*> passagiers;
     Tram* initCheck;
     StatisticsTram* stats;
@@ -59,7 +52,7 @@ public:
      * \param beginS Het begin station
      * \post ENSURE(properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
      */
-    Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS, StatisticsTram* statistics);
+    Tram(int zit, int snel, int sp, int nr, std::string beginS, StatisticsTram* statistics);
 
     /**
      * \brief Kijk na of de constructor in de juiste staat geeindigd is.
@@ -121,7 +114,7 @@ public:
      * \return Het type van de tram als string.
      * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
      */
-    std::string getType() const;
+    virtual std::string getType() const;
 
     /**
      * \brief Geef het voertuignummer van de tram.
@@ -181,14 +174,14 @@ public:
      * \return Boolean die aangeeft of de tram een Albatros is
      * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
      */
-    bool isAlbatros() const;
+    virtual bool isAlbatros() const;
 
     /**
      * \brief Geeft aan of de tram een PCC is
      * \return Boolean die aangeeft of de tram een PCC is
      * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
      */
-    bool isPCC() const;
+    virtual bool isPCC() const;
 
     /**
      * \brief Checkt of de gegeven Passagier op de tram zit.
@@ -258,6 +251,74 @@ public:
 
 
     ~Tram();
+};
+
+class PCC : public Tram {
+public:
+    /**
+     * \brief De default constructor van de klasse PCC
+     * \param zit Het totaal aantal zitplaatsen
+     * \param snel De snelheid
+     * \param sp Het spoornummer
+     * \param beginS Het begin station
+     * \post ENSURE(properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
+     */
+    PCC(int zit, int snel, int sp, int nr, std::string beginS, StatisticsTram* statistics);
+
+    /**
+     * \brief Geeft aan of de tram een Albatros is
+     * \return Boolean die aangeeft of de tram een Albatros is
+     * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+     */
+    virtual bool isAlbatros() const;
+
+    /**
+     * \brief Geeft aan of de tram een PCC is
+     * \return Boolean die aangeeft of de tram een PCC is
+     * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+     */
+    virtual bool isPCC() const;
+
+    /**
+     * \brief Geef het type van de tram.
+     * \return Het type van de tram als string.
+     * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
+     */
+    virtual std::string getType() const;
+};
+
+class Albatros : public Tram {
+public:
+    /**
+     * \brief De default constructor van de klasse Albatros
+     * \param zit Het totaal aantal zitplaatsen
+     * \param snel De snelheid
+     * \param sp Het spoornummer
+     * \param beginS Het begin station
+     * \post ENSURE(properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
+     */
+    Albatros(int zit, int snel, int sp, int nr, std::string beginS, StatisticsTram* statistics);
+
+    /**
+     * \brief Geeft aan of de tram een Albatros is
+     * \return Boolean die aangeeft of de tram een Albatros is
+     * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+     */
+    virtual bool isAlbatros() const;
+
+    /**
+     * \brief Geeft aan of de tram een PCC is
+     * \return Boolean die aangeeft of de tram een PCC is
+     * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+     */
+    virtual bool isPCC() const;
+
+    /**
+     * \brief Geef het type van de tram.
+     * \return Het type van de tram als string.
+     * \pre REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
+     */
+    virtual std::string getType() const;
 };
 
 #endif /* SRC_TRAM_H_ */

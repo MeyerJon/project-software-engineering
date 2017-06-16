@@ -28,8 +28,8 @@ protected:
 
     StatisticsTram* statsA = new StatisticsTram(100);
     StatisticsTram* statsB = new StatisticsTram(100);
-    Tram albatros = Tram(100, 60, 12, 1, "Albatros", "dummy", statsA);
-    Tram pcc = Tram(100, 60, 12, 1, "PCC", "dummy", statsB);
+    Albatros albatros = Albatros(100, 60, 12, 1, "dummy", statsA);
+    PCC pcc = PCC(100, 60, 12, 1, "dummy", statsB);
     Passagier passagier;
 };
 

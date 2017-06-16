@@ -13,12 +13,10 @@ Station::Station() {
     ENSURE(properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
-Station::Station(std::string n, std::string typeNaam, std::map<int, std::string> vorigeStations,
+Station::Station(std::string n, std::map<int, std::string> vorigeStations,
                  std::map<int, std::string> volgendeStations, StatisticsStation* statistics) {
     naam = n;
     stats = statistics;
-    if (typeNaam == "Metrostation") type = Metrostation;
-    else if (typeNaam == "Halte") type = Halte;
     for(auto& p : vorigeStations){
         int spoor = p.first;
         std::string vorige = p.second;
@@ -50,12 +48,7 @@ std::string Station::getNaam() const {
 
 std::string Station::getType() const {
     REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType");
-    switch (type) {
-        case Metrostation :
-            return "Metrostation";
-        case Halte :
-            return "Halte";
-    }
+    return "Station";
 }
 
 std::string Station::getVolgende(int spoor) const {
@@ -86,12 +79,12 @@ StatisticsStation* Station::getStatistics() {
 
 bool Station::isHalte() const {
     REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte");
-    return type == Halte;
+    return false;
 }
 
 bool Station::isMetrostation() const {
     REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
-    return type == Metrostation;
+    return false;
 }
 
 bool Station::spoorBezet(int spoor) const {
@@ -109,4 +102,68 @@ void Station::bezetSpoor(int spoor, bool isTramHier) {
 
 Station::~Station() {
     delete (*this).stats;
+}
+
+Metrostation::Metrostation(std::string n, std::map<int, std::string> vorigeStations,
+                 std::map<int, std::string> volgendeStations, StatisticsStation* statistics) {
+    naam = n;
+    stats = statistics;
+    for(auto& p : vorigeStations){
+        int spoor = p.first;
+        std::string vorige = p.second;
+        std::string volgende = volgendeStations[spoor];
+        stationVerbinding verb = {vorige, volgende};
+        verbindingen[spoor] = verb;
+        // Init trams
+        trams[spoor] = false;
+    }
+    initCheck = this;
+    ENSURE(properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
+}
+
+bool Metrostation::isHalte() const {
+    REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte");
+    return false;
+}
+
+bool Metrostation::isMetrostation() const {
+    REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
+    return true;
+}
+
+std::string Metrostation::getType() const {
+    REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType");
+    return "Metrostation";
+}
+
+Halte::Halte(std::string n, std::map<int, std::string> vorigeStations,
+                 std::map<int, std::string> volgendeStations, StatisticsStation* statistics) {
+    naam = n;
+    stats = statistics;
+    for(auto& p : vorigeStations){
+        int spoor = p.first;
+        std::string vorige = p.second;
+        std::string volgende = volgendeStations[spoor];
+        stationVerbinding verb = {vorige, volgende};
+        verbindingen[spoor] = verb;
+        // Init trams
+        trams[spoor] = false;
+    }
+    initCheck = this;
+    ENSURE(properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
+}
+
+bool Halte::isHalte() const {
+    REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte");
+    return true;
+}
+
+bool Halte::isMetrostation() const {
+    REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
+    return false;
+}
+
+std::string Halte::getType() const {
+    REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType");
+    return "Halte";
 }

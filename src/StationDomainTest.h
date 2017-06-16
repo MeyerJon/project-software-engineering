@@ -25,8 +25,8 @@ protected:
     std::map<int, std::string> dummyMap = {{10, "dummy"}};
     StatisticsStation* statsA = new StatisticsStation();
     StatisticsStation* statsB = new StatisticsStation();
-    Station halte = Station("A", "Halte", dummyMap, dummyMap, statsA);
-    Station metrostation = Station("B", "Metrostation", dummyMap, dummyMap, statsB);
+    Halte halte = Halte("A", dummyMap, dummyMap, statsA);
+    Metrostation metrostation = Metrostation("B", dummyMap, dummyMap, statsB);
     const int spoor = 10;
 };
 

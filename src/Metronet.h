@@ -261,7 +261,7 @@ public:
      * \post ENSURE(allePassagiersAangekomen(),
      *              "Niet alle passagiers zijn op hun bestemming aangekomen na rondrijden.");
      */
-    void rondrijden(std::ostream& os);
+    void rondrijden(std::ostream& os, bool step=false);
 
     /**
      * \brief Gaat na of alle passagiers op hun bestemming zijn aangekomen.

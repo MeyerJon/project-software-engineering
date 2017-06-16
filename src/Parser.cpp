@@ -122,6 +122,12 @@ SuccessEnum Parser::setup(Metronet& metronet, std::string filename, std::ostream
                     volgendeStations[spoor] = volgende;
                     metronet.addSpoor(spoor);
                 }
+                if (type == "Halte" and (vorigeStations.size() > 1 or volgendeStations.size() > 1)) {
+                    std::string out = "ERROR: Halte heeft te veel sporen.\n";
+                    exp->write(out, os);
+                    endResult = PartialImport;
+                    continue;
+                }
                 if(name == "" or type == "" or vorigeStations.size() != volgendeStations.size()){
                     std::string out = "ERROR: Station mist een attribuut.\n";
                     exp->write(out, os);

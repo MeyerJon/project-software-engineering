@@ -33,11 +33,11 @@ int main(int argc, const char* argv[]) {
     } else {
         Parser parser(exp);
         Metronet metronet(exp);
-        SuccessEnum importResult = parser.setup(metronet, "testInput/IncorrectSystemInput7.xml", std::cout);
+        SuccessEnum importResult = parser.setup(metronet, "testInput/HappyDayInput.xml", std::cout);
         if (importResult != BadImport) {
             if (metronet.checkConsistent(std::cout)) {
                 metronet.printMetronet(std::cout);
-                metronet.rondrijden(std::cout);
+                metronet.rondrijden(std::cout, true);
                 metronet.printStatistics(std::cout);
                 metronet.printMetronetGrafisch(std::cout);
             }

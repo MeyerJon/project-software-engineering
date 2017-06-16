@@ -122,7 +122,11 @@ void Metronet::addStation(
         std::map<int, std::string> volgendeStations) {
     REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van addStation.");
     StatisticsStation* stats = new StatisticsStation();
-    Station* station = new Station(naam, type, vorigeStations, volgendeStations, stats);
+    Station* station;
+    if (type == "Metrostation")
+        station = new Metrostation(naam, vorigeStations, volgendeStations, stats);
+    else if (type == "Halte")
+        station = new Halte(naam, vorigeStations, volgendeStations, stats);
     stations[station->getNaam()] = station;
     ENSURE(station->properlyInitialised(),
             "Station was niet geinitialiseerd bij de aanroep van addStation.");
@@ -140,7 +144,11 @@ void Metronet::addTram(
             "Metronet was niet geinitialiseerd bij de aanroep van addTram.");
     REQUIRE(bevatStation(beginStation), "Metronet bevat beginstation niet bij de aanroep van addTram");
     StatisticsTram* stats = new StatisticsTram(zitplaatsen);
-    Tram* tram = new Tram(zitplaatsen, snelheid, spoor, voertuigNr, type, beginStation, stats);
+    Tram* tram;
+    if (type == "Albatros")
+        tram = new Albatros(zitplaatsen, snelheid, spoor, voertuigNr, beginStation, stats);
+    else if (type == "PCC")
+        tram = new PCC(zitplaatsen, snelheid, spoor, voertuigNr, beginStation, stats);
     trams[tram->getVoertuignummer()] = tram;
     stations[beginStation]->bezetSpoor(spoor, true);
 
@@ -454,10 +462,13 @@ int Metronet::opstappenAfstappen(Tram* tram, std::ostream& os) {
     return afgestapteGroepen;
 }
 
-void Metronet::rondrijden(std::ostream& os) {
+void Metronet::rondrijden(std::ostream& os, bool step) {
     REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van rondrijden.");
 
     int aantalGroepen = passagiers.size();
+
+    if (step)
+        printMetronetGrafisch(os);
 
     while (aantalGroepen > 0) {
         for (auto& tram: trams) {
@@ -471,6 +482,8 @@ void Metronet::rondrijden(std::ostream& os) {
             }
             tram.second->getStatistics()->updateGemiddeldeBezettingsgraad(tram.second->getBezettePlaatsen());
         }
+        if (step)
+            printMetronetGrafisch(os);
     }
     std::string out = "Alle passagiers zijn op hun bestemming aangekomen.\n\n";
     exp->write(out, os);

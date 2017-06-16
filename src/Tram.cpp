@@ -16,15 +16,13 @@ Tram::Tram() {
     ENSURE(properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
 }
 
-Tram::Tram(int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS, StatisticsTram* statistics) {
+Tram::Tram(int zit, int snel, int sp, int nr, std::string beginS, StatisticsTram* statistics) {
     stats = statistics;
     bezettePlaatsen = 0;
     zitplaatsen = zit;
     voertuignummer = nr;
     snelheid = snel;
     spoor = sp;
-    if (typeNaam == "Albatros") type = Albatros;
-    else if (typeNaam == "PCC") type = PCC;
     beginStation = beginS;
     huidigStation = beginS;
     initCheck = this;
@@ -79,12 +77,7 @@ std::string Tram::getHuidigStation() const {
 
 std::string Tram::getType() const {
     REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
-    switch (type) {
-        case Albatros :
-            return "Albatros";
-        case PCC :
-            return "PCC";
-    }
+    return "Tram";
 }
 
 int Tram::getVoertuignummer() const {
@@ -140,12 +133,12 @@ void Tram::removePassagier(Passagier *pas) {
 
 bool Tram::isAlbatros() const {
     REQUIRE(this-properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
-    return type == Albatros;
+    return false;
 }
 
 bool Tram::isPCC() const {
     REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
-    return type == PCC;
+    return false;
 }
 
 void Tram::setVoertuignummer(int n) {
@@ -204,4 +197,60 @@ bool Tram::isLeeg() {
 
 Tram::~Tram() {
     delete stats;
+}
+
+PCC::PCC(int zit, int snel, int sp, int nr, std::string beginS, StatisticsTram* statistics) {
+    stats = statistics;
+    bezettePlaatsen = 0;
+    zitplaatsen = zit;
+    voertuignummer = nr;
+    snelheid = snel;
+    spoor = sp;
+    beginStation = beginS;
+    huidigStation = beginS;
+    initCheck = this;
+    ENSURE(properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
+}
+
+bool PCC::isAlbatros() const {
+    REQUIRE(this-properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+    return false;
+}
+
+bool PCC::isPCC() const {
+    REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+    return true;
+}
+
+std::string PCC::getType() const {
+    REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
+    return "PCC";
+}
+
+Albatros::Albatros(int zit, int snel, int sp, int nr, std::string beginS, StatisticsTram* statistics) {
+    stats = statistics;
+    bezettePlaatsen = 0;
+    zitplaatsen = zit;
+    voertuignummer = nr;
+    snelheid = snel;
+    spoor = sp;
+    beginStation = beginS;
+    huidigStation = beginS;
+    initCheck = this;
+    ENSURE(properlyInitialised(), "Tram is niet in de juiste staat geëindigd na aanroep van de constuctor.");
+}
+
+bool Albatros::isAlbatros() const {
+    REQUIRE(this-properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isAlbatros.");
+    return true;
+}
+
+bool Albatros::isPCC() const {
+    REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van isPCC.");
+    return false;
+}
+
+std::string Albatros::getType() const {
+    REQUIRE(properlyInitialised(), "Tram was niet geinitialiseerd bij de aanroep van getType.");
+    return "Albatros";
 }

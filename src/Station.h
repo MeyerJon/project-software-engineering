@@ -16,10 +16,6 @@
 
 class Tram;
 
-enum StationType {
-    Metrostation,
-    Halte
-};
 
 struct stationVerbinding{
     std::string vorige;
@@ -30,9 +26,8 @@ struct stationVerbinding{
  * \brief Station klasse die een STATION element uit een XML-bestand representeert
  */
 class Station {
-private:
+protected:
     std::string naam;
-    StationType type;
     StatisticsStation* stats;
     std::map<int, stationVerbinding> verbindingen;
     std::map<int, bool> trams;
@@ -53,7 +48,7 @@ public:
      * \param volgendeStations Map met als key het spoor en als value de volgende station
      * \post ENSURE(properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
      */
-    Station(std::string n, std::string typeNaam, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations, StatisticsStation* statistics);
+    Station(std::string n, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations, StatisticsStation* statistics);
 
     /**
      * \brief Dit is de destructor van Station.
@@ -86,7 +81,7 @@ public:
      * \return String "Albatros" of "PCC"
      * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType.");
      */
-    std::string getType() const;
+    virtual std::string getType() const;
 
     /**
      * \brief Geef het vorig station op een spoor.
@@ -119,20 +114,19 @@ public:
      */
      StatisticsStation* getStatistics();
 
-
     /**
      * \brief Geeft aan of het station een halte is
      * \return Een bool die aangeeft of het station een halte is
      * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte.");
      */
-    bool isHalte() const;
+    virtual bool isHalte() const;
 
     /**
      * \brief Geeft aan of het station een metrostation is
      * \return Een bool die aangeeft of het station een halte is
      * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
      */
-    bool isMetrostation() const;
+    virtual bool isMetrostation() const;
 
     /**
      * \brief Geeft aan of er zich op het gegeven spoor een tram bevindt.
@@ -154,5 +148,72 @@ public:
 
 };
 
+class Metrostation : public Station {
+public:
+    /**
+     * \brief De default constructor van de klasse Metrostation
+     * \param n De naam van het station
+     * \param typeNaam Het station type in string vorm, wordt omgezet naar StationType
+     * \param vorigeStations Map met als key het spoor en als value de vorige station
+     * \param volgendeStations Map met als key het spoor en als value de volgende station
+     * \post ENSURE(properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
+     */
+    Metrostation(std::string n, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations, StatisticsStation* statistics);
+
+    /**
+     * \brief Geeft aan of het station een halte is
+     * \return Een bool die aangeeft of het station een halte is
+     * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte.");
+     */
+    virtual bool isHalte() const;
+
+    /**
+     * \brief Geeft aan of het station een metrostation is
+     * \return Een bool die aangeeft of het station een halte is
+     * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
+     */
+    virtual bool isMetrostation() const;
+
+    /**
+     * \brief Geeft het station type terug
+     * \return String "Albatros" of "PCC"
+     * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType.");
+     */
+    virtual std::string getType() const;
+};
+
+class Halte : public Station {
+public:
+    /**
+     * \brief De default constructor van de klasse Halte
+     * \param n De naam van het station
+     * \param typeNaam Het station type in string vorm, wordt omgezet naar StationType
+     * \param vorigeStations Map met als key het spoor en als value de vorige station
+     * \param volgendeStations Map met als key het spoor en als value de volgende station
+     * \post ENSURE(properlyInitialised(), "Station is niet in de juiste staat geëindigd na aanroep van de constructor.");
+     */
+    Halte(std::string n, std::map<int, std::string> vorigeStations, std::map<int, std::string> volgendeStations, StatisticsStation* statistics);
+
+    /**
+     * \brief Geeft aan of het station een halte is
+     * \return Een bool die aangeeft of het station een halte is
+     * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isHalte.");
+     */
+    virtual bool isHalte() const;
+
+    /**
+     * \brief Geeft aan of het station een metrostation is
+     * \return Een bool die aangeeft of het station een halte is
+     * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van isMetrostation.");
+     */
+    virtual bool isMetrostation() const;
+
+    /**
+     * \brief Geeft het station type terug
+     * \return String "Albatros" of "PCC"
+     * \pre REQUIRE(properlyInitialised(), "Station was niet geinitialiseerd bij de aanroep van getType.");
+     */
+    virtual std::string getType() const;
+};
 
 #endif /* SRC_STATION_H_ */
