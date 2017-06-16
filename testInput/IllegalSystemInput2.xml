@@ -5,15 +5,15 @@
 	<type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
-	   <!--Volgende en vorige is zelfde station maar vorige.vorige != this-->
+	    <!--Volgende en vorige is zelfde station maar vorige.vorige != this-->
             <volgende>C</volgende>
             <vorige>C</vorige>
-	    </SPOOR>
+	</SPOOR>
 	    <SPOOR>
             <spoor>2</spoor>
             <volgende>C</volgende>
             <vorige>D</vorige>
-	    </SPOOR>
+	</SPOOR>
     </STATION>
     <STATION>
 	<naam>B</naam>
