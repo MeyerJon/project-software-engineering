@@ -466,11 +466,18 @@ void Metronet::rondrijden(std::ostream& os, bool step) {
     REQUIRE(properlyInitialised(), "Metronet was niet geinitialiseerd bij de aanroep van rondrijden.");
 
     int aantalGroepen = passagiers.size();
+    std::string line = "----------------------------\n";
 
-    if (step)
+    if (step) {
+        std::string initText = "Initiële staat van het metronet: \n";
+        exp->write(line, os);
+        exp->write(initText, os);
         printMetronetGrafisch(os);
+        exp->write(line, os);
+    }
 
     while (aantalGroepen > 0) {
+        exp->write(line, os);
         for (auto& tram: trams) {
             aantalGroepen -= opstappenAfstappen(tram.second, os);
             if (tramMagVertrekken(tram.second)) {
@@ -484,6 +491,7 @@ void Metronet::rondrijden(std::ostream& os, bool step) {
         }
         if (step)
             printMetronetGrafisch(os);
+        exp->write(line, os);
     }
     std::string out = "Alle passagiers zijn op hun bestemming aangekomen.\n\n";
     exp->write(out, os);

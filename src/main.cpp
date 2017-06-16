@@ -26,7 +26,7 @@ int main(int argc, const char* argv[]) {
             if (importResult != BadImport) {
                 if (metronet.checkConsistent(of)) {
                     metronet.printMetronet(of);
-                    metronet.rondrijden(of);
+                    metronet.rondrijden(of, true);
                 }
             }
         }
