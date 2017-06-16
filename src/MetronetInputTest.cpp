@@ -26,7 +26,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (A->getVorige(1) != "C") endResult = BadImport;
     if (A->getSporen()[1] != 2) endResult = BadImport;
     if (A->getVolgende(2) != "C") endResult = BadImport;
-    if (A->getVorige(2) != "B") endResult = BadImport;
+    if (A->getVorige(2) != "D") endResult = BadImport;
 
     Station* B = metronet.getStations()["B"];
     if (B->getNaam() != "B") endResult = BadImport;
@@ -34,9 +34,6 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (B->getSporen()[0] != 1) endResult = BadImport;
     if (B->getVolgende(1) != "C") endResult = BadImport;
     if (B->getVorige(1) != "A") endResult = BadImport;
-    if (B->getSporen()[1] != 2) endResult = BadImport;
-    if (B->getVolgende(2) != "A") endResult = BadImport;
-    if (B->getVorige(2) != "C") endResult = BadImport;
 
     Station* C = metronet.getStations()["C"];
     if (C->getNaam() != "C") endResult = BadImport;
@@ -45,8 +42,15 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     if (C->getVolgende(1) != "A") endResult = BadImport;
     if (C->getVorige(1) != "B") endResult = BadImport;
     if (C->getSporen()[1] != 2) endResult = BadImport;
-    if (C->getVolgende(2) != "B") endResult = BadImport;
+    if (C->getVolgende(2) != "D") endResult = BadImport;
     if (C->getVorige(2) != "A") endResult = BadImport;
+
+    Station* D = metronet.getStations()["D"];
+    if (D->getNaam() != "D") endResult = BadImport;
+    if (D->getType() != "Halte") endResult = BadImport;
+    if (D->getSporen()[0] != 2) endResult = BadImport;
+    if (D->getVolgende(2) != "A") endResult = BadImport;
+    if (D->getVorige(2) != "C") endResult = BadImport;
 
     Tram* t1 = metronet.getTrams()[1];
     if (t1->getSpoor() != 1) endResult = BadImport;
