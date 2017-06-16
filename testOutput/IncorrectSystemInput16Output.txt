@@ -1,9 +1,9 @@
 ERROR: Attribuut 'type' heeft een foute waarde. Station niet toegevoegd.
 ERROR: Station mist een attribuut.
 Station B heeft geen vorig of volgend station.
-Station B heeft geen vorig of volgend station.
 Station C heeft geen vorig of volgend station.
 Station C heeft geen vorig of volgend station.
+Station D heeft geen vorig of volgend station.
 Spoor 2 heeft geen tram.
 Spoor 2 heeft geen tram.
 Spoor 2 heeft geen tram.

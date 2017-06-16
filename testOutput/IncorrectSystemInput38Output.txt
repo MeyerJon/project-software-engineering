@@ -9,6 +9,9 @@ wachtende passagiers:
 -> Station C
 wachtende passagiers:
 
+-> Station D
+wachtende passagiers:
+
 --== TRAMS ==--
 Tram 1 nr 1
 zitplaatsen: 16

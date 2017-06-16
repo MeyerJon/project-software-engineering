@@ -43,6 +43,18 @@ wachtende passagiers:
 -> Station c3
 wachtende passagiers:
 
+-> Station x1
+wachtende passagiers:
+
+-> Station x2
+wachtende passagiers:
+
+-> Station x3
+wachtende passagiers:
+
+-> Station x4
+wachtende passagiers:
+
 --== TRAMS ==--
 Tram 20 nr 11
 zitplaatsen: 72
@@ -72,6 +84,18 @@ Tram 13 nr 31
 zitplaatsen: 30
 snelheid: 40
 huidig station: C
+reizende passagiers:
+
+Tram 90 nr 91
+zitplaatsen: 30
+snelheid: 40
+huidig station: x1
+reizende passagiers:
+
+Tram 90 nr 92
+zitplaatsen: 30
+snelheid: 40
+huidig station: x1
 reizende passagiers:
 
 ----------------------------
