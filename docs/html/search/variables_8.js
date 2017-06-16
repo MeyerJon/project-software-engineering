@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parent',['parent',['../class_ti_xml_node.html#a662c4de61244e4fa5bd4e2d8c63143a5',1,'TiXmlNode']]],
-  ['prev',['prev',['../class_ti_xml_node.html#a9c5370ea2cbfd9f0e0f7b30a57fd68f5',1,'TiXmlNode']]]
+  ['volgende',['volgende',['../structstation_verbinding.html#a628e06180645500c27364c1c4c7e92ef',1,'stationVerbinding']]],
+  ['vorige',['vorige',['../structstation_verbinding.html#af8d9993c5e316f93a90acd12dd12604a',1,'stationVerbinding']]]
 ];

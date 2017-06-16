@@ -1,10 +1,10 @@
 <map id="Tram::afstappen" name="Tram::afstappen">
-<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="647,160,808,186"/>
-<area shape="rect" id="node3" href="$class_passagier.html#ac571f017d61f182d77d1438818588539" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="409,58,599,85"/>
+<area shape="rect" id="node2" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="647,160,808,186"/>
+<area shape="rect" id="node3" href="$class_passagier.html#a5507a878b40573bdacf03e0815303d12" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="409,58,599,85"/>
 <area shape="rect" id="node4" href="$class_tram.html#a1bdb1543c1abbb722c6daa7b83021001" title="Verwijdert een passagier en update de status van de passagier. " alt="" coords="185,160,347,186"/>
-<area shape="rect" id="node6" href="$class_passagier.html#aefbe5c6dfedf0bc10da44497d4a2e699" title="Update de status van de passagiers. " alt="" coords="171,58,361,85"/>
+<area shape="rect" id="node6" href="$class_passagier.html#aefbe5c6dfedf0bc10da44497d4a2e699" title="Update de status van de passagiers. (wachtend &#45;&gt; vertrokken) " alt="" coords="171,58,361,85"/>
 <area shape="rect" id="node7" href="$class_tram.html#a6582d8608c8091069ad9c017294b9a32" title="Past het aantal bezette plaatsen aan. " alt="" coords="179,210,353,237"/>
-<area shape="rect" id="node8" href="$class_tram.html#a4ca765b8e0d031acad9c70f1643b5e41" title="Geef de bezette zitplaatsen van de tram. " alt="" coords="417,261,591,288"/>
-<area shape="rect" id="node9" href="$class_passagier.html#a8bf2e7bcd86229a7395d3fc8f7143fa6" title="Geef het aantal personen in de groep passagiers. " alt="" coords="177,109,355,136"/>
-<area shape="rect" id="node5" href="$class_tram.html#a08a7580a396d9c50d5fe0ec170b41f7f" title="Checkt of de gegeven Passagier op de tram zit. " alt="" coords="429,160,579,186"/>
+<area shape="rect" id="node8" href="$class_tram.html#a61cf322946fd28700e7f7394302ad7fa" title="Geef de bezette zitplaatsen van de tram. " alt="" coords="417,261,591,288"/>
+<area shape="rect" id="node9" href="$class_passagier.html#aee09f1854b6f4f2f95516b29d124df99" title="Geef het aantal personen in de groep passagiers. " alt="" coords="177,109,355,136"/>
+<area shape="rect" id="node5" href="$class_tram.html#a18bdfb852e37725ff4361fbaf4d95a05" title="Checkt of de gegeven Passagier op de tram zit. " alt="" coords="429,160,579,186"/>
 </map>

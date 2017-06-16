@@ -1,5 +1,6 @@
-<map id="/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Tram.h" name="/home/jonathan/Desktop/Project Software Engineering/Metronet/PSE/src/Tram.h">
-<area shape="rect" id="node5" href="$_design_by_contract_8h.html" title="DesignByContract.h" alt="" coords="279,184,419,211"/>
-<area shape="rect" id="node7" href="$_exporter_8h.html" title="Exporter.h" alt="" coords="129,109,212,136"/>
-<area shape="rect" id="node9" href="$_passagier_8h.html" title="Passagier.h" alt="" coords="236,109,327,136"/>
+<map id="/home/sergio/Projects/C++/SoftEng/src/Tram.h" name="/home/sergio/Projects/C++/SoftEng/src/Tram.h">
+<area shape="rect" id="node5" href="$_design_by_contract_8h.html" title="DesignByContract.h" alt="" coords="201,169,341,196"/>
+<area shape="rect" id="node7" href="$_exporter_8h.html" title="Exporter.h" alt="" coords="129,95,212,121"/>
+<area shape="rect" id="node9" href="$_passagier_8h.html" title="Passagier.h" alt="" coords="287,95,377,121"/>
+<area shape="rect" id="node10" href="$_statistics_8h.html" title="Statistics.h" alt="" coords="401,95,489,121"/>
 </map>

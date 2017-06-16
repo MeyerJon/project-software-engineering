@@ -17,7 +17,7 @@ Passagier::Passagier(std::string n, std::string begin, std::string eind, int h) 
     vertrokken = false;
     tram = -1;
     initCheck = this;
-    ENSURE(this->properlyInitialised(), "Default constructor van Passagier is niet in de juiste staat geeindigd.");
+    ENSURE(properlyInitialised(), "Default constructor van Passagier is niet in de juiste staat geeindigd.");
 }
 
 bool Passagier::properlyInitialised() const {
@@ -25,22 +25,22 @@ bool Passagier::properlyInitialised() const {
 }
 
 std::string Passagier::getNaam() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getNaam.");
+    REQUIRE(properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getNaam.");
     return naam;
 }
 
 std::string Passagier::getBeginStation() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getBeginStation.");
+    REQUIRE(properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getBeginStation.");
     return beginStation;
 }
 
 std::string Passagier::getEindStation() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getEindStation.");
+    REQUIRE(properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getEindStation.");
     return eindStation;
 }
 
 int Passagier::getHoeveelheid() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getHoeveelheid.");
+    REQUIRE(properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van getHoeveelheid.");
     return hoeveelheid;
 }
 
@@ -51,16 +51,21 @@ void Passagier::setHuidigeTram(int tram) {
 }
 
 int Passagier::huidigeTram() const {
-    REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van huidigeTram.");
+    REQUIRE(properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van huidigeTram.");
     return tram;
 }
 
 bool Passagier::isVertrokken() const {
-    REQUIRE(this->properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van isVertrokken.");
+    REQUIRE(properlyInitialised(), "Passagiers was niet geinitialiseerd bij de aanroep van isVertrokken.");
     return vertrokken;
 }
 
 void Passagier::updateVertrokken(){
-    REQUIRE(this->properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van updateVertrokken.");
+    REQUIRE(properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van updateVertrokken.");
     vertrokken = true;
+}
+
+bool Passagier::isAangekomen() {
+    REQUIRE(properlyInitialised(), "Passagier was niet geinitialiseerd bij de aanroep van isAangekomen.");
+    return huidigeTram() == -2;
 }

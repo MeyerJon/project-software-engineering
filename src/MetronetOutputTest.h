@@ -21,11 +21,10 @@ class MetronetOutputTest: public ::testing::Test {
 protected:
     friend class Metronet;
 
-    virtual void SetUp() {
-    }
+    virtual void SetUp() {}
 
-    virtual void TearDown() {
-    }
+    virtual void TearDown() {}
+
     Parser parser;
     Metronet metronet;
     Exporter* exp;

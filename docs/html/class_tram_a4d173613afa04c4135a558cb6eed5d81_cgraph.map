@@ -1,5 +1,5 @@
 <map id="Tram::addPassagier" name="Tram::addPassagier">
-<area shape="rect" id="node2" href="$class_tram.html#a98992eff0453f54fbe64e1f1064169c7" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="206,5,367,32"/>
-<area shape="rect" id="node3" href="$class_passagier.html#ac571f017d61f182d77d1438818588539" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="192,56,381,83"/>
-<area shape="rect" id="node4" href="$class_tram.html#a08a7580a396d9c50d5fe0ec170b41f7f" title="Checkt of de gegeven Passagier op de tram zit. " alt="" coords="211,107,362,133"/>
+<area shape="rect" id="node2" href="$class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="206,5,367,32"/>
+<area shape="rect" id="node3" href="$class_passagier.html#a5507a878b40573bdacf03e0815303d12" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="192,56,381,83"/>
+<area shape="rect" id="node4" href="$class_tram.html#a18bdfb852e37725ff4361fbaf4d95a05" title="Checkt of de gegeven Passagier op de tram zit. " alt="" coords="211,107,362,133"/>
 </map>

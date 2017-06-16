@@ -1,4 +1,4 @@
 <map id="Metronet::addSpoor" name="Metronet::addSpoor">
-<area shape="rect" id="node2" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. " alt="" coords="189,5,289,32"/>
+<area shape="rect" id="node2" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. Leest eerst stations met hun sporen in, daarna trams en tenslotte passagier..." alt="" coords="189,5,289,32"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="337,5,388,32"/>
 </map>

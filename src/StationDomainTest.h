@@ -18,11 +18,10 @@ class StationDomainTest : public ::testing::Test {
 protected:
     friend class Station;
 
-    virtual void SetUp() {
-    }
+    virtual void SetUp() {}
 
-    virtual void TearDown() {
-    }
+    virtual void TearDown() {}
+
     std::map<int, std::string> dummyMap = {{10, "dummy"}};
     StatisticsStation* statsA = new StatisticsStation();
     StatisticsStation* statsB = new StatisticsStation();

@@ -1,0 +1,6 @@
+<map id="Metronet::getStation" name="Metronet::getStation">
+<area shape="rect" id="node2" href="$class_metronet.html#a3d2adce29a947f162924279b766de645" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="396,5,579,32"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a8f2d201eee99681d122fd9031cf4d6c6" title="Kijkt na of het metronet de opgegeven station bevat. " alt="" coords="193,56,348,83"/>
+<area shape="rect" id="node4" href="$class_station.html#a9ce626dd0599e3ea8107404a59c21e16" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="627,81,799,108"/>
+<area shape="rect" id="node5" href="$class_station.html#aea6c31c39a5e1eb4c30337e7ce489e69" title="Geef de naam terug van het station. " alt="" coords="425,107,549,133"/>
+</map>

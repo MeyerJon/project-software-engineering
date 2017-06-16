@@ -4,10 +4,10 @@ var indexSectionsWithContent =
   1: "empst",
   2: "dempst",
   3: "abcdefghimoprstuvw~",
-  4: "deimptv",
+  4: "adehmpstv",
   5: "st",
   6: "abhmps",
-  7: "m",
+  7: "emst",
   8: "er"
 };
 

@@ -1,0 +1,13 @@
+<map id="Station::bevatSpoor" name="Station::bevatSpoor">
+<area shape="rect" id="node2" href="$class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. Een metronet is consistent als: • elk station is verbonden m..." alt="" coords="453,107,631,133"/>
+<area shape="rect" id="node4" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. Gaat eerst na of passagiers op de gegeven tram m..." alt="" coords="191,5,391,32"/>
+<area shape="rect" id="node6" href="$class_parser.html#a96b781357c53e72b5d4a12b5deb7a381" title="Verwerkt het XML&#45;bestand. Leest eerst stations met hun sporen in, daarna trams en tenslotte passagier..." alt="" coords="241,56,341,83"/>
+<area shape="rect" id="node7" href="$class_station.html#a1b64354359528963ae978b790cfcfd11" title="Geef het volgende station op een spoor. " alt="" coords="219,208,362,235"/>
+<area shape="rect" id="node10" href="$class_station.html#a45b4ba8429d932fc93bd0258ce2897c1" title="Geef het vorig station op een spoor. " alt="" coords="227,157,354,184"/>
+<area shape="rect" id="node11" href="$class_station.html#a5680c5c8362fc016a9a4832c96d3eb03" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="222,259,359,285"/>
+<area shape="rect" id="node12" href="$class_station.html#ac13697fedd84f3d1c29d6c61b5ae97b3" title="Bezet het spoor met de gegeven tram. " alt="" coords="473,284,611,311"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="693,81,744,108"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Simuleert het rondrijden van trams. Overloopt alle trams een per een en laat ze naar het volgende sta..." alt="" coords="473,5,611,32"/>
+<area shape="rect" id="node8" href="$class_metronet.html#a81425d28208853a7e175b5ab61329edb" title="Geeft een grafische impressie van het hele metronet. " alt="" coords="439,208,645,235"/>
+<area shape="rect" id="node9" href="$_metronet_input_test_8cpp.html#a7066f0448637f729d7d5f7e80a2544a9" title="TEST_F" alt="" coords="507,157,577,184"/>
+</map>

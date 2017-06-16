@@ -1,0 +1,10 @@
+<map id="StatisticsTram::getOmzet" name="StatisticsTram::getOmzet">
+<area shape="rect" id="node2" href="$class_metronet.html#a3367a206383b6adae828d492167abe96" title="Print de verzamelde gegevens van het metronet. " alt="" coords="445,5,607,32"/>
+<area shape="rect" id="node4" href="$class_statistics_tram.html#a35db086f1605d9c27d357dd9221b63b2" title="Past de huidige omzet van de tram aan. " alt="" coords="225,56,397,83"/>
+<area shape="rect" id="node9" href="$class_tram.html#a28ae0ec018243417e4a17b5a5c5eff51" title="Geeft de huidige omzet van de tram. " alt="" coords="253,107,370,133"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="1256,31,1307,57"/>
+<area shape="rect" id="node5" href="$class_tram.html#ac6b56586355e176b797e0beefeb9c5dd" title="Past de huide omzet van de tram aan. " alt="" coords="467,56,585,83"/>
+<area shape="rect" id="node6" href="$class_tram.html#af42c023f82a85f68ec60cfa7b52d4d85" title="Emuleert opstappen van passagiers. " alt="" coords="655,56,775,83"/>
+<area shape="rect" id="node7" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. Gaat eerst na of passagiers op de gegeven tram m..." alt="" coords="823,56,1023,83"/>
+<area shape="rect" id="node8" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Simuleert het rondrijden van trams. Overloopt alle trams een per een en laat ze naar het volgende sta..." alt="" coords="1071,56,1208,83"/>
+</map>

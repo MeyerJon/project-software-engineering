@@ -1,0 +1,6 @@
+<map id="StatisticsStation::getAantalPersonen" name="StatisticsStation::getAantalPersonen">
+<area shape="rect" id="node2" href="$class_metronet.html#abf1a19c04e6a0f15fc6b82b22d4cbc70" title="Behandelt het opstappen en afstappen van passagiers. Gaat eerst na of passagiers op de gegeven tram m..." alt="" coords="185,5,385,32"/>
+<area shape="rect" id="node5" href="$class_metronet.html#a3367a206383b6adae828d492167abe96" title="Print de verzamelde gegevens van het metronet. " alt="" coords="433,56,595,83"/>
+<area shape="rect" id="node3" href="$class_metronet.html#a180b666c7d4cc52f873579ab7f95ea35" title="Simuleert het rondrijden van trams. Overloopt alle trams een per een en laat ze naar het volgende sta..." alt="" coords="445,5,583,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="643,31,693,57"/>
+</map>

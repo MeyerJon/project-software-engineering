@@ -1,0 +1,10 @@
+<map id="Metronet::printMetronetGrafisch" name="Metronet::printMetronetGrafisch">
+<area shape="rect" id="node2" href="$class_station.html#aea6c31c39a5e1eb4c30337e7ce489e69" title="Geef de naam terug van het station. " alt="" coords="479,5,603,32"/>
+<area shape="rect" id="node4" href="$class_station.html#ad62632c4e442d7e35d922b0d8c70fd08" title="Geef de sporen. " alt="" coords="475,56,606,83"/>
+<area shape="rect" id="node5" href="$class_station.html#a5680c5c8362fc016a9a4832c96d3eb03" title="Geeft aan of er zich op het gegeven spoor een tram bevindt. " alt="" coords="263,107,400,133"/>
+<area shape="rect" id="node7" href="$class_station.html#a1b64354359528963ae978b790cfcfd11" title="Geef het volgende station op een spoor. " alt="" coords="260,157,403,184"/>
+<area shape="rect" id="node8" href="$class_exporter.html#ab3736803133eb727cf87a7306f91eb11" title="Stuur de output string naar de output stream. " alt="" coords="278,233,385,260"/>
+<area shape="rect" id="node3" href="$class_station.html#a9ce626dd0599e3ea8107404a59c21e16" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="679,107,851,133"/>
+<area shape="rect" id="node6" href="$class_station.html#accf2501bb0eef809665989b455259c68" title="Checkt of het station een spoor bevat. " alt="" coords="472,157,609,184"/>
+<area shape="rect" id="node9" href="$class_exporter.html#aafd9df9210aeefd7bb7fd434fc317cf0" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="451,259,631,285"/>
+</map>

@@ -15,7 +15,7 @@
 #include "Parser.h"
 
 /**
- * \brief MetronetDomainTest klasse die domein tests behandelt
+ * \brief MetronetDomainTest klasse die domein tests behandelt.
  */
 class MetronetDomainTest: public ::testing::Test {
 protected:

@@ -6,14 +6,14 @@
 
 Parser::Parser() {
     initCheck = this;
-    ENSURE(this->properlyInitialised(),
+    ENSURE(properlyInitialised(),
            "Parser is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
 Parser::Parser(Exporter* exp) {
     Parser::exp = exp;
     initCheck = this;
-    ENSURE(this->properlyInitialised(),
+    ENSURE(properlyInitialised(),
            "Parser is niet in de juiste staat geëindigd na aanroep van de constructor.");
 }
 
@@ -22,7 +22,7 @@ Parser& Parser::operator=(const Parser& rhs) {
         this->exp = rhs.exp;
         this->initCheck = this;
     }
-    ENSURE(this->properlyInitialised(),
+    ENSURE(properlyInitialised(),
            "Parser is niet in de juiste staat geëindigd na aanroep van de copy assignment.");
     return *this;
 }
