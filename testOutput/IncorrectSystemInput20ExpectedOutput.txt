@@ -11,6 +11,9 @@ wachtende passagiers:
 -> Station C
 wachtende passagiers:
 
+-> Station D
+wachtende passagiers:
+
 --== TRAMS ==--
 Tram 1 nr 2
 zitplaatsen: 72
@@ -24,7 +27,11 @@ snelheid: 70
 huidig station: A
 reizende passagiers:
 
+----------------------------
 In station A stapte Groep1 op tram 3. (2 personen)
+----------------------------
+----------------------------
 In station C stapte Groep1 af tram 3. (2 personen)
+----------------------------
 Alle passagiers zijn op hun bestemming aangekomen.
 

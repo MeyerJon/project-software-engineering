@@ -74,14 +74,19 @@ snelheid: 40
 huidig station: C
 reizende passagiers:
 
+----------------------------
 In station A stapte StationCruisers op tram 11. (10 personen)
 In station A stapte LineACruisers1 op tram 12. (5 personen)
 In station A stapte LineACruisers2 op tram 12. (3 personen)
 In station C stapte LineCCruisers1 op tram 31. (2 personen)
 In station C stapte LineCCruisers2 op tram 31. (12 personen)
+----------------------------
+----------------------------
 In station B stapte LineBCruisers2 op tram 11. (5 personen)
 In station a1 stapte LineACruisers3 op tram 12. (2 personen)
 Waarschuwing: Er was niet voldoende plaats op tram 21, Groep StationCruisers3 is niet opgestapt.
+----------------------------
+----------------------------
 In station C stapte StationCruisers af tram 11. (10 personen)
 In station C stapte LineBCruisers2 af tram 11. (5 personen)
 In station C stapte StationCruisers2 op tram 11. (20 personen)
@@ -89,13 +94,22 @@ In station C stapte StationCruisers3 op tram 11. (50 personen)
 In station a2 stapte LineACruisers2 af tram 12. (3 personen)
 In station b2 stapte LineBCruisers3 op tram 21. (2 personen)
 In station c2 stapte LineCCruisers1 af tram 31. (2 personen)
+----------------------------
+----------------------------
 In station A stapte StationCruisers2 af tram 11. (20 personen)
 In station B stapte LineBCruisers1 op tram 21. (5 personen)
 In station c3 stapte LineCCruisers2 af tram 31. (12 personen)
+----------------------------
+----------------------------
 In station B stapte StationCruisers3 af tram 11. (50 personen)
 In station a3 stapte LineACruisers1 af tram 12. (5 personen)
+----------------------------
+----------------------------
 In station A stapte LineACruisers3 af tram 12. (2 personen)
 In station C stapte LineBCruisers3 af tram 21. (2 personen)
+----------------------------
+----------------------------
 In station b2 stapte LineBCruisers1 af tram 21. (5 personen)
+----------------------------
 Alle passagiers zijn op hun bestemming aangekomen.
 

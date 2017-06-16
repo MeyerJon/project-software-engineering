@@ -489,8 +489,11 @@ void Metronet::rondrijden(std::ostream& os, bool step) {
             }
             tram.second->getStatistics()->updateGemiddeldeBezettingsgraad(tram.second->getBezettePlaatsen());
         }
-        if (step)
+        if (step) {
+            std::string tit = "\nGrafisch overzicht:\n";
+            exp->write(tit, os);
             printMetronetGrafisch(os);
+        }
         exp->write(line, os);
     }
     std::string out = "Alle passagiers zijn op hun bestemming aangekomen.\n\n";

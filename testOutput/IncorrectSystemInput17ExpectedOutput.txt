@@ -1,8 +1,8 @@
 ERROR: Attribuut 'spoor' heeft een foute waarde. Station niet toegevoegd.
 Station B heeft geen vorig of volgend station.
-Station B heeft geen vorig of volgend station.
 Station C heeft geen vorig of volgend station.
 Station C heeft geen vorig of volgend station.
+Station D heeft geen vorig of volgend station.
 Spoor 2 heeft geen tram.
 Spoor 2 heeft geen tram.
 Passagier Groep1 heeft een ongeldig begin- of eindstation.
