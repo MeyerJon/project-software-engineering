@@ -480,12 +480,17 @@ void Metronet::rondrijden(std::ostream& os, bool step) {
         exp->write(line, os);
         for (auto& tram: trams) {
             aantalGroepen -= opstappenAfstappen(tram.second, os);
+            std::string volgendStation =
+                    stations[tram.second->getHuidigStation()]->getVolgende(tram.second->getSpoor());
             if (tramMagVertrekken(tram.second)) {
-                std::string volgendStation =
-                        stations[tram.second->getHuidigStation()]->getVolgende(tram.second->getSpoor());
                 stations[tram.second->getHuidigStation()]->bezetSpoor(tram.second->getSpoor(), false);
                 stations[volgendStation]->bezetSpoor(tram.second->getSpoor(), true);
                 tram.second->setHuidigStation(volgendStation);
+            } else {
+                if (step) {
+                    std::string bots = "Tram " + std::to_string(tram.second->getVoertuignummer()) + " kon niet doorrijden naar station " + volgendStation  + " om een botsing te vermijden.\n";
+                    exp->write(bots, os);
+                }
             }
             tram.second->getStatistics()->updateGemiddeldeBezettingsgraad(tram.second->getBezettePlaatsen());
         }
