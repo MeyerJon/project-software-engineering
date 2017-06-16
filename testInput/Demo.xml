@@ -224,7 +224,15 @@
     <type>PCC</type>
         <zitplaatsen>30</zitplaatsen>
         <snelheid>40</snelheid>
-        <beginStation>x1</beginStation>
+        <beginStation>x2</beginStation>
+    </TRAM>
+    <TRAM>
+        <lijnNr>90</lijnNr>
+        <voertuigNr>93</voertuigNr>
+    <type>PCC</type>
+        <zitplaatsen>30</zitplaatsen>
+        <snelheid>40</snelheid>
+        <beginStation>x4</beginStation>
     </TRAM>
 
     <!-- Passagiers -->
@@ -296,5 +304,24 @@
 	    <beginStation>C</beginStation>
 	    <eindStation>B</eindStation>
 	    <hoeveelheid>50</hoeveelheid>
+    </PASSAGIER>
+    <!-- 'Collision passagiers' -->
+    <PASSAGIER>
+        <naam>CollisionPassagiers1</naam>
+        <beginStation>x2</beginStation>
+        <eindStation>x1</eindStation>
+        <hoeveelheid>10</hoeveelheid>
+    </PASSAGIER>
+    <PASSAGIER>
+        <naam>CollisionPassagiers2</naam>
+        <beginStation>x3</beginStation>
+        <eindStation>x2</eindStation>
+        <hoeveelheid>10</hoeveelheid>
+    </PASSAGIER>
+    <PASSAGIER>
+        <naam>CollisionPassagiers3</naam>
+        <beginStation>x4</beginStation>
+        <eindStation>x3</eindStation>
+        <hoeveelheid>10</hoeveelheid>
     </PASSAGIER>
 </ROOT>

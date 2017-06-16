@@ -1,0 +1,249 @@
+--== STATIONS ==--
+-> Station A
+wachtende passagiers:
+* LineACruisers1, 5 mensen, reist naar station a3
+* LineACruisers2, 3 mensen, reist naar station a2
+* StationCruisers, 10 mensen, reist naar station C
+
+-> Station B
+wachtende passagiers:
+* LineBCruisers1, 5 mensen, reist naar station b2
+* LineBCruisers2, 5 mensen, reist naar station C
+
+-> Station C
+wachtende passagiers:
+* LineCCruisers1, 2 mensen, reist naar station c2
+* LineCCruisers2, 12 mensen, reist naar station c3
+* StationCruisers2, 20 mensen, reist naar station A
+* StationCruisers3, 50 mensen, reist naar station B
+
+-> Station a1
+wachtende passagiers:
+* LineACruisers3, 2 mensen, reist naar station A
+
+-> Station a2
+wachtende passagiers:
+
+-> Station a3
+wachtende passagiers:
+
+-> Station b1
+wachtende passagiers:
+
+-> Station b2
+wachtende passagiers:
+* LineBCruisers3, 2 mensen, reist naar station C
+
+-> Station c1
+wachtende passagiers:
+
+-> Station c2
+wachtende passagiers:
+
+-> Station c3
+wachtende passagiers:
+
+-> Station x1
+wachtende passagiers:
+
+-> Station x2
+wachtende passagiers:
+* CollisionPassagiers1, 10 mensen, reist naar station x1
+
+-> Station x3
+wachtende passagiers:
+* CollisionPassagiers2, 10 mensen, reist naar station x2
+
+-> Station x4
+wachtende passagiers:
+* CollisionPassagiers3, 10 mensen, reist naar station x3
+
+--== TRAMS ==--
+Tram 20 nr 11
+zitplaatsen: 72
+snelheid: 70
+huidig station: A
+reizende passagiers:
+
+Tram 11 nr 12
+zitplaatsen: 30
+snelheid: 40
+huidig station: A
+reizende passagiers:
+
+Tram 11 nr 13
+zitplaatsen: 30
+snelheid: 40
+huidig station: a2
+reizende passagiers:
+
+Tram 12 nr 21
+zitplaatsen: 30
+snelheid: 40
+huidig station: b1
+reizende passagiers:
+
+Tram 13 nr 31
+zitplaatsen: 30
+snelheid: 40
+huidig station: C
+reizende passagiers:
+
+Tram 90 nr 91
+zitplaatsen: 30
+snelheid: 40
+huidig station: x1
+reizende passagiers:
+
+Tram 90 nr 92
+zitplaatsen: 30
+snelheid: 40
+huidig station: x2
+reizende passagiers:
+
+Tram 90 nr 93
+zitplaatsen: 30
+snelheid: 40
+huidig station: x4
+reizende passagiers:
+
+----------------------------
+Initiële staat van het metronet: 
+Spoor 11: A===a1===a2===B===a3===
+          T        T             
+Spoor 20: A===B===C===
+          T           
+Spoor 12: b1===C===b2===B===
+          T                 
+Spoor 13: c1===c2===c3===C===
+                         T   
+Spoor 90: x1===x2===x3===x4===
+          T    T         T    
+----------------------------
+----------------------------
+In station A stapte StationCruisers op tram 11. (10 personen)
+In station A stapte LineACruisers1 op tram 12. (5 personen)
+In station A stapte LineACruisers2 op tram 12. (3 personen)
+In station C stapte LineCCruisers1 op tram 31. (2 personen)
+In station C stapte LineCCruisers2 op tram 31. (12 personen)
+In station x2 stapte CollisionPassagiers1 op tram 92. (10 personen)
+In station x4 stapte CollisionPassagiers3 op tram 93. (10 personen)
+Spoor 11: A===a1===a2===B===a3===
+              T         T        
+Spoor 20: A===B===C===
+              T       
+Spoor 12: b1===C===b2===B===
+               T            
+Spoor 13: c1===c2===c3===C===
+          T                  
+Spoor 90: x1===x2===x3===x4===
+          T         T    T    
+----------------------------
+----------------------------
+In station B stapte LineBCruisers2 op tram 11. (5 personen)
+In station a1 stapte LineACruisers3 op tram 12. (2 personen)
+Waarschuwing: Er was niet voldoende plaats op tram 21, Groep StationCruisers3 is niet opgestapt.
+In station x3 stapte CollisionPassagiers2 op tram 92. (10 personen)
+Spoor 11: A===a1===a2===B===a3===
+                   T        T    
+Spoor 20: A===B===C===
+                  T   
+Spoor 12: b1===C===b2===B===
+                   T        
+Spoor 13: c1===c2===c3===C===
+               T             
+Spoor 90: x1===x2===x3===x4===
+          T    T    T         
+----------------------------
+----------------------------
+In station C stapte StationCruisers af tram 11. (10 personen)
+In station C stapte LineBCruisers2 af tram 11. (5 personen)
+In station C stapte StationCruisers2 op tram 11. (20 personen)
+In station C stapte StationCruisers3 op tram 11. (50 personen)
+In station a2 stapte LineACruisers2 af tram 12. (3 personen)
+In station b2 stapte LineBCruisers3 op tram 21. (2 personen)
+In station c2 stapte LineCCruisers1 af tram 31. (2 personen)
+Spoor 11: A===a1===a2===B===a3===
+          T             T        
+Spoor 20: A===B===C===
+          T           
+Spoor 12: b1===C===b2===B===
+                        T   
+Spoor 13: c1===c2===c3===C===
+                    T        
+Spoor 90: x1===x2===x3===x4===
+          T    T         T    
+----------------------------
+----------------------------
+In station A stapte StationCruisers2 af tram 11. (20 personen)
+In station B stapte LineBCruisers1 op tram 21. (5 personen)
+In station c3 stapte LineCCruisers2 af tram 31. (12 personen)
+Spoor 11: A===a1===a2===B===a3===
+              T             T    
+Spoor 20: A===B===C===
+              T       
+Spoor 12: b1===C===b2===B===
+          T                 
+Spoor 13: c1===c2===c3===C===
+                         T   
+Spoor 90: x1===x2===x3===x4===
+               T    T    T    
+----------------------------
+----------------------------
+In station B stapte StationCruisers3 af tram 11. (50 personen)
+In station a3 stapte LineACruisers1 af tram 12. (5 personen)
+Spoor 11: A===a1===a2===B===a3===
+          T        T             
+Spoor 20: A===B===C===
+                  T   
+Spoor 12: b1===C===b2===B===
+               T            
+Spoor 13: c1===c2===c3===C===
+          T                  
+Spoor 90: x1===x2===x3===x4===
+          T    T    T         
+----------------------------
+----------------------------
+In station A stapte LineACruisers3 af tram 12. (2 personen)
+In station C stapte LineBCruisers3 af tram 21. (2 personen)
+In station x1 stapte CollisionPassagiers1 af tram 92. (10 personen)
+Spoor 11: A===a1===a2===B===a3===
+              T         T        
+Spoor 20: A===B===C===
+          T           
+Spoor 12: b1===C===b2===B===
+                   T        
+Spoor 13: c1===c2===c3===C===
+               T             
+Spoor 90: x1===x2===x3===x4===
+          T         T    T    
+----------------------------
+----------------------------
+In station b2 stapte LineBCruisers1 af tram 21. (5 personen)
+In station x3 stapte CollisionPassagiers3 af tram 93. (10 personen)
+Spoor 11: A===a1===a2===B===a3===
+                   T        T    
+Spoor 20: A===B===C===
+              T       
+Spoor 12: b1===C===b2===B===
+                        T   
+Spoor 13: c1===c2===c3===C===
+                    T        
+Spoor 90: x1===x2===x3===x4===
+               T    T    T    
+----------------------------
+----------------------------
+In station x2 stapte CollisionPassagiers2 af tram 92. (10 personen)
+Spoor 11: A===a1===a2===B===a3===
+          T             T        
+Spoor 20: A===B===C===
+                  T   
+Spoor 12: b1===C===b2===B===
+          T                 
+Spoor 13: c1===c2===c3===C===
+                         T   
+Spoor 90: x1===x2===x3===x4===
+          T    T         T    
+----------------------------
+Alle passagiers zijn op hun bestemming aangekomen.
+
