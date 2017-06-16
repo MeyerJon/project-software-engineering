@@ -11,17 +11,21 @@
 	<SPOOR>
             <spoor>2</spoor>
             <volgende>C</volgende>
-            <vorige>B</vorige>
+            <vorige>D</vorige>
 	</SPOOR>
     </STATION>
     <STATION>
-        <naam>B</naam>
+	<naam>B</naam>
 	<type>Halte</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>C</volgende>
             <vorige>A</vorige>
         </SPOOR>
+    </STATION>
+    <STATION>
+	<naam>D</naam>
+	<type>Halte</type>
         <SPOOR>
             <spoor>2</spoor>
             <volgende>A</volgende>
@@ -38,7 +42,7 @@
 	    </SPOOR>
     	<SPOOR>
             <spoor>2</spoor>
-            <volgende>B</volgende>
+            <volgende>D</volgende>
             <vorige>A</vorige>
 	</SPOOR>
     </STATION>
