@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<!--geen tram op lijn2-->
 <ROOT>
     <STATION>
         <naam>A</naam>
@@ -11,17 +12,21 @@
 	<SPOOR>
             <spoor>2</spoor>
             <volgende>C</volgende>
-            <vorige>B</vorige>
+            <vorige>D</vorige>
 	</SPOOR>
     </STATION>
     <STATION>
-        <naam>B</naam>
+	<naam>B</naam>
 	<type>Halte</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>C</volgende>
             <vorige>A</vorige>
         </SPOOR>
+    </STATION>
+    <STATION>
+	<naam>D</naam>
+	<type>Halte</type>
         <SPOOR>
             <spoor>2</spoor>
             <volgende>A</volgende>
@@ -38,7 +43,7 @@
 	    </SPOOR>
     	<SPOOR>
             <spoor>2</spoor>
-            <volgende>B</volgende>
+            <volgende>D</volgende>
             <vorige>A</vorige>
 	</SPOOR>
     </STATION>
@@ -58,7 +63,6 @@
         <snelheid>70</snelheid>
         <beginStation>C</beginStation>
     </TRAM>
-
     <PASSAGIER>
         <naam>Groep1</naam>
         <beginStation>A</beginStation>
