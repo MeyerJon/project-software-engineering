@@ -12,6 +12,9 @@ wachtende passagiers:
 -> Station D
 wachtende passagiers:
 
+-> Station E
+wachtende passagiers:
+
 --== TRAMS ==--
 Tram 1 nr 1
 zitplaatsen: 16
@@ -26,8 +29,8 @@ huidig station: C
 reizende passagiers:
 
 Tram 2 nr 3
-zitplaatsen: 72
-snelheid: 70
+zitplaatsen: 16
+snelheid: 40
 huidig station: A
 reizende passagiers:
 

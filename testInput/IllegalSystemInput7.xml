@@ -2,49 +2,45 @@
 <ROOT>
     <STATION>
         <naam>A</naam>
-        <type>Metrostation</type>
+	<type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>B</volgende>
-            <vorige>D</vorige>
-        </SPOOR>
-        <SPOOR>
+            <vorige>C</vorige>
+	</SPOOR>
+	<SPOOR>
             <spoor>2</spoor>
             <volgende>C</volgende>
-            <vorige>C</vorige>
-        </SPOOR>
+            <vorige>B</vorige>
+	</SPOOR>
     </STATION>
     <STATION>
-        <naam>B</naam>
-        <type>Halte</type>
+	<naam>B</naam>
+	<type>Halte</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>C</volgende>
             <vorige>A</vorige>
+        </SPOOR>
+        <SPOOR>
+            <spoor>2</spoor>
+            <volgende>A</volgende>
+            <vorige>C</vorige>
         </SPOOR>
     </STATION>
     <STATION>
         <naam>C</naam>
-        <type>Metrostation</type>
+	<type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
-            <volgende>D</volgende>
+            <volgende>A</volgende>
             <vorige>B</vorige>
-        </SPOOR>
-        <SPOOR>
+	</SPOOR>
+    	<SPOOR>
             <spoor>2</spoor>
-            <volgende>A</volgende>
+            <volgende>B</volgende>
             <vorige>A</vorige>
-        </SPOOR>
-    </STATION>
-    <STATION>
-        <naam>D</naam>
-        <type>Halte</type>
-        <SPOOR>
-            <spoor>1</spoor>
-            <volgende>A</volgende>
-            <vorige>C</vorige>
-        </SPOOR>
+	</SPOOR>
     </STATION>
     <TRAM>
         <lijnNr>1</lijnNr>

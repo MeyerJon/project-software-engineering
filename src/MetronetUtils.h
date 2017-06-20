@@ -10,7 +10,7 @@
 #include <iostream>
 
 const unsigned int TESTS_LEGAL = 5;
-const unsigned int TESTS_ILLEGAL = 5;
+const unsigned int TESTS_ILLEGAL = 7;
 const unsigned int TESTS_INCORRECT = 43;
 const unsigned int TESTS_SYNTAX = 3;
 

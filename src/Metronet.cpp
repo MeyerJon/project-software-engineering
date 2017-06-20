@@ -196,6 +196,8 @@ bool Metronet::checkConsistent(std::ostream &os) {
     std::vector<int> gevondenStationSporen;
     std::vector<int> gevondenTramSporen;
 
+    std::set<int> sporenMetHaltes;
+
     // Stationchecks
     for(auto& p : stations){
         Station* station = p.second;
@@ -228,6 +230,7 @@ bool Metronet::checkConsistent(std::ostream &os) {
                 exp->write(out, os);
                 consistent = false;
             }
+            if (station->isHalte()) sporenMetHaltes.insert(station->getSporen()[0]);
         }
     }
 
@@ -260,6 +263,21 @@ bool Metronet::checkConsistent(std::ostream &os) {
             std::string out = "Spoor " + std::to_string(spoor) + " heeft geen tram.\n";
             exp->write(out, os);
             consistent = false;
+        }
+    }
+
+    // Kijk of elk spoor met een Halte een PCC bevat
+    for (int spoor: sporenMetHaltes) {
+        bool tramOpHalteGevonden = false;
+        for (auto &p: trams) {
+            Tram *tram = p.second;
+            if (tram->getSpoor() == spoor and tram->isPCC()) tramOpHalteGevonden = true;
+        }
+        if (!tramOpHalteGevonden) {
+            std::string out = "Spoor " + std::to_string(spoor) + " bevat een halte maar heeft geen PCC.\n";
+            exp->write(out, os);
+            consistent = false;
+            break;
         }
     }
 

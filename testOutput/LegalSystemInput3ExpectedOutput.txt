@@ -11,6 +11,16 @@ wachtende passagiers:
 
 -> Station D
 wachtende passagiers:
+* Groep2, 2 mensen, reist naar station E
+
+-> Station E
+wachtende passagiers:
+
+-> Station F
+wachtende passagiers:
+
+-> Station G
+wachtende passagiers:
 
 --== TRAMS ==--
 Tram 1 nr 1
@@ -31,13 +41,21 @@ snelheid: 70
 huidig station: A
 reizende passagiers:
 
+Tram 3 nr 4
+zitplaatsen: 16
+snelheid: 40
+huidig station: F
+reizende passagiers:
+
 ----------------------------
 In station A stapte Groep1 op tram 1. (2 personen)
 ----------------------------
 ----------------------------
+In station D stapte Groep2 op tram 3. (2 personen)
 ----------------------------
 ----------------------------
 In station C stapte Groep1 af tram 1. (2 personen)
+In station E stapte Groep2 af tram 3. (2 personen)
 ----------------------------
 Alle passagiers zijn op hun bestemming aangekomen.
 

@@ -1,0 +1,5 @@
+ERROR: Halte heeft te veel sporen.
+Station A heeft geen vorig of volgend station.
+Station A heeft geen vorig of volgend station.
+Station C heeft geen vorig of volgend station.
+Station C heeft geen vorig of volgend station.

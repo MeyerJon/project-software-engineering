@@ -48,7 +48,7 @@
     </STATION>
     <STATION>
 	<naam>E</naam>
-	<type>Metrostation</type>
+	<type>Halte</type>
 	<SPOOR>
 	    <spoor>2</spoor>
 	    <volgende>A</volgende>
@@ -92,7 +92,7 @@
     <TRAM>
         <lijnNr>2</lijnNr>
 	<voertuigNr>3</voertuigNr>
-	<type>PCC</type>
+	<type>Albatros</type>
         <zitplaatsen>72</zitplaatsen>
         <snelheid>70</snelheid>
         <beginStation>A</beginStation>
@@ -113,9 +113,8 @@
     </PASSAGIER>
     <PASSAGIER>
 	<naam>Groep2</naam>
-	<beginStation>D</beginStation>
+	<beginStation>A</beginStation>
 	<eindStation>E</eindStation>
 	<hoeveelheid>2</hoeveelheid>
     </PASSAGIER>
-
 </ROOT>

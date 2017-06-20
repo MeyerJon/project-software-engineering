@@ -11,7 +11,7 @@
 	<SPOOR>
             <spoor>2</spoor>
             <volgende>C</volgende>
-            <vorige>D</vorige>
+            <vorige>E</vorige>
 	</SPOOR>
     </STATION>
     <STATION>
@@ -28,23 +28,32 @@
 	<type>Halte</type>
         <SPOOR>
             <spoor>2</spoor>
-            <volgende>A</volgende>
+            <volgende>E</volgende>
             <vorige>C</vorige>
         </SPOOR>
     </STATION>
     <STATION>
         <naam>C</naam>
-	    <type>Metrostation</type>
+	<type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>A</volgende>
             <vorige>B</vorige>
-	    </SPOOR>
+	</SPOOR>
     	<SPOOR>
             <spoor>2</spoor>
             <volgende>D</volgende>
             <vorige>A</vorige>
 	</SPOOR>
+    </STATION>
+    <STATION>
+   	<naam>E</naam>
+   	<type>Halte</type>
+   	<SPOOR>
+            <spoor>2</spoor>
+            <volgende>A</volgende>
+            <vorige>D</vorige>
+   	</SPOOR>
     </STATION>
     <TRAM>
         <lijnNr>1</lijnNr>
@@ -65,9 +74,9 @@
     <TRAM>
         <lijnNr>2</lijnNr>
 	<voertuigNr>3</voertuigNr>
-	<type>Albatros</type>
-        <zitplaatsen>72</zitplaatsen>
-        <snelheid>70</snelheid>
+	<type>PCC</type>
+        <zitplaatsen>16</zitplaatsen>
+        <snelheid>40</snelheid>
         <beginStation>A</beginStation>
     </TRAM>
     <PASSAGIER>
