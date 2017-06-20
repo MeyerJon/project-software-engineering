@@ -18,6 +18,8 @@ SoftEng
 SoftEng.cbp
 SoftEngTest
 src/gtest/lib
+Metronet
+MetronetTest
 
 # Zooi van Jona
 TestBuild

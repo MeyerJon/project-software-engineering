@@ -30,7 +30,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
 
     Station* B = metronet.getStations()["B"];
     if (B->getNaam() != "B") endResult = BadImport;
-    if (B->getType() != "Halte") endResult = BadImport;
+    if (B->getType() != "Metrostation") endResult = BadImport;
     if (B->getSporen()[0] != 1) endResult = BadImport;
     if (B->getVolgende(1) != "C") endResult = BadImport;
     if (B->getVorige(1) != "A") endResult = BadImport;
@@ -71,7 +71,7 @@ TEST_F(MetronetInputTest, InputHappyDay) {
     Tram* t3 = metronet.getTrams()[3];
     if (t3->getSpoor() != 2) endResult = BadImport;
     if (t3->getVoertuignummer() != 3) endResult = BadImport;
-    if (t3->getType() != "Albatros") endResult = BadImport;
+    if (t3->getType() != "PCC") endResult = BadImport;
     if (t3->getZitplaatsen() != 72) endResult = BadImport;
     if (t3->getSnelheid() != 70) endResult = BadImport;
     if (t3->getBeginStation() != "A") endResult = BadImport;

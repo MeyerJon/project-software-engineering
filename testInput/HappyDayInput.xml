@@ -16,7 +16,7 @@
     </STATION>
     <STATION>
 	<naam>B</naam>
-	<type>Halte</type>
+	<type>Metrostation</type>
         <SPOOR>
             <spoor>1</spoor>
             <volgende>C</volgende>
@@ -39,7 +39,7 @@
             <spoor>1</spoor>
             <volgende>A</volgende>
             <vorige>B</vorige>
-	    </SPOOR>
+	</SPOOR>
     	<SPOOR>
             <spoor>2</spoor>
             <volgende>D</volgende>
@@ -65,7 +65,7 @@
     <TRAM>
         <lijnNr>2</lijnNr>
 	<voertuigNr>3</voertuigNr>
-	<type>Albatros</type>
+	<type>PCC</type>
         <zitplaatsen>72</zitplaatsen>
         <snelheid>70</snelheid>
         <beginStation>A</beginStation>

@@ -10,8 +10,8 @@
 #include <iostream>
 
 const unsigned int TESTS_LEGAL = 5;
-const unsigned int TESTS_ILLEGAL = 7;
-const unsigned int TESTS_INCORRECT = 43;
+const unsigned int TESTS_ILLEGAL = 6;
+const unsigned int TESTS_INCORRECT = 44;
 const unsigned int TESTS_SYNTAX = 3;
 
 bool DirectoryExists(const std::string dirname);

@@ -2,3 +2,4 @@ Station A mist spoor 3.
 Station B mist spoor 1.
 Station C mist spoor 1.
 Spoor 3 heeft geen tram.
+Spoor 2 bevat een halte maar heeft geen PCC.

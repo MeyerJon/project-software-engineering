@@ -5,9 +5,9 @@ SyntaxErrorInput: setup BadImport (fouten tegen XML)
 
 
 LegalSystemInput1:
-    IllegalSystemInput: 1-7
+    IllegalSystemInput: 1-6
     IncorrectSystemInput: ontbrekende waarde 1-15, foute waarde 16-23,
-			  onbrekende attributen 24-38, foute attributen 39-43
+			  onbrekende attributen 24-38, foute attributen 39-44
     SyntaxErrorInput: 1-3
 
 LegalSystemInput2-5
