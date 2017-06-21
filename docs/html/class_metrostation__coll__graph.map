@@ -1,0 +1,4 @@
+<map id="Metrostation" name="Metrostation">
+<area shape="rect" id="node2" href="$class_station.html" title="Station klasse die een STATION element uit een XML&#45;bestand representeert. " alt="" coords="35,95,103,121"/>
+<area shape="rect" id="node3" href="$class_statistics_station.html" title="StatisticsStation" alt="" coords="5,5,133,32"/>
+</map>

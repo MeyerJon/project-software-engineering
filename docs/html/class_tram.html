@@ -62,6 +62,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="class_tram-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tram Class Reference</div>  </div>
@@ -72,15 +74,32 @@ $(function() {
  <a href="class_tram.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_tram_8h_source.html">Tram.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Tram:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tram__inherit__graph.png" border="0" usemap="#_tram_inherit__map" alt="Inheritance graph"/></div>
+<map name="_tram_inherit__map" id="_tram_inherit__map">
+<area shape="rect" id="node2" href="class_albatros.html" title="Albatros" alt="" coords="5,80,81,107"/>
+<area shape="rect" id="node3" href="class_p_c_c.html" title="PCC" alt="" coords="106,80,154,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Tram:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tram__coll__graph.png" border="0" usemap="#_tram_coll__map" alt="Collaboration graph"/></div>
+<map name="_tram_coll__map" id="_tram_coll__map">
+<area shape="rect" id="node2" href="class_statistics_tram.html" title="StatisticsTram" alt="" coords="5,5,120,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aad83b2e7e79d57528691bf317ab0e1ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#aad83b2e7e79d57528691bf317ab0e1ef">Tram</a> ()</td></tr>
 <tr class="memdesc:aad83b2e7e79d57528691bf317ab0e1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">De lege constructor van de klasse <a class="el" href="class_tram.html" title="Tram klasse die een TRAM element uit een XML-bestand representeert. ">Tram</a>.  <a href="#aad83b2e7e79d57528691bf317ab0e1ef">More...</a><br /></td></tr>
 <tr class="separator:aad83b2e7e79d57528691bf317ab0e1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1d69261c88c51ce5c5eb871a98b5c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a2e1d69261c88c51ce5c5eb871a98b5c8">Tram</a> (int zit, int snel, int sp, int nr, std::string typeNaam, std::string beginS, <a class="el" href="class_statistics_tram.html">StatisticsTram</a> *statistics)</td></tr>
-<tr class="memdesc:a2e1d69261c88c51ce5c5eb871a98b5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">De default constructor van de klasse <a class="el" href="class_tram.html" title="Tram klasse die een TRAM element uit een XML-bestand representeert. ">Tram</a>.  <a href="#a2e1d69261c88c51ce5c5eb871a98b5c8">More...</a><br /></td></tr>
-<tr class="separator:a2e1d69261c88c51ce5c5eb871a98b5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14aa323dc9d22ee20400402b3ed4fa8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a14aa323dc9d22ee20400402b3ed4fa8f">Tram</a> (int zit, int snel, int sp, int nr, std::string beginS, <a class="el" href="class_statistics_tram.html">StatisticsTram</a> *statistics)</td></tr>
+<tr class="memdesc:a14aa323dc9d22ee20400402b3ed4fa8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">De default constructor van de klasse <a class="el" href="class_tram.html" title="Tram klasse die een TRAM element uit een XML-bestand representeert. ">Tram</a>.  <a href="#a14aa323dc9d22ee20400402b3ed4fa8f">More...</a><br /></td></tr>
+<tr class="separator:a14aa323dc9d22ee20400402b3ed4fa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2688f590e4db232b4f535c9bf959efb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ac2688f590e4db232b4f535c9bf959efb">properlyInitialised</a> () const</td></tr>
 <tr class="memdesc:ac2688f590e4db232b4f535c9bf959efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kijk na of de constructor in de juiste staat geeindigd is.  <a href="#ac2688f590e4db232b4f535c9bf959efb">More...</a><br /></td></tr>
 <tr class="separator:ac2688f590e4db232b4f535c9bf959efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,7 +124,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1d03c1fb6e0f5f97c57d35fe10fa8dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ae1d03c1fb6e0f5f97c57d35fe10fa8dd">getHuidigStation</a> () const</td></tr>
 <tr class="memdesc:ae1d03c1fb6e0f5f97c57d35fe10fa8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het huidig station.  <a href="#ae1d03c1fb6e0f5f97c57d35fe10fa8dd">More...</a><br /></td></tr>
 <tr class="separator:ae1d03c1fb6e0f5f97c57d35fe10fa8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e75ee5e2cbc43da2862334e6ff148e1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a2e75ee5e2cbc43da2862334e6ff148e1">getType</a> () const</td></tr>
+<tr class="memitem:a2e75ee5e2cbc43da2862334e6ff148e1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a2e75ee5e2cbc43da2862334e6ff148e1">getType</a> () const</td></tr>
 <tr class="memdesc:a2e75ee5e2cbc43da2862334e6ff148e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geef het type van de tram.  <a href="#a2e75ee5e2cbc43da2862334e6ff148e1">More...</a><br /></td></tr>
 <tr class="separator:a2e75ee5e2cbc43da2862334e6ff148e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84c856d1f8a2b417abcf6fcad8e64947"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a84c856d1f8a2b417abcf6fcad8e64947">getVoertuignummer</a> () const</td></tr>
@@ -129,11 +148,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abfb0c136aea03da554ed2b8e0941d50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#abfb0c136aea03da554ed2b8e0941d50d">setVoertuignummer</a> (int n)</td></tr>
 <tr class="memdesc:abfb0c136aea03da554ed2b8e0941d50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Past het voertuignummer aan.  <a href="#abfb0c136aea03da554ed2b8e0941d50d">More...</a><br /></td></tr>
 <tr class="separator:abfb0c136aea03da554ed2b8e0941d50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2443bc78e44c67cef60706a2243915eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a2443bc78e44c67cef60706a2243915eb">isAlbatros</a> () const</td></tr>
-<tr class="memdesc:a2443bc78e44c67cef60706a2243915eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of de tram een Albatros is.  <a href="#a2443bc78e44c67cef60706a2243915eb">More...</a><br /></td></tr>
+<tr class="memitem:a2443bc78e44c67cef60706a2243915eb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a2443bc78e44c67cef60706a2243915eb">isAlbatros</a> () const</td></tr>
+<tr class="memdesc:a2443bc78e44c67cef60706a2243915eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of de tram een <a class="el" href="class_albatros.html">Albatros</a> is.  <a href="#a2443bc78e44c67cef60706a2243915eb">More...</a><br /></td></tr>
 <tr class="separator:a2443bc78e44c67cef60706a2243915eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab63068a32f8c6af5d0a4df731850bb4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ab63068a32f8c6af5d0a4df731850bb4b">isPCC</a> () const</td></tr>
-<tr class="memdesc:ab63068a32f8c6af5d0a4df731850bb4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of de tram een PCC is.  <a href="#ab63068a32f8c6af5d0a4df731850bb4b">More...</a><br /></td></tr>
+<tr class="memitem:ab63068a32f8c6af5d0a4df731850bb4b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ab63068a32f8c6af5d0a4df731850bb4b">isPCC</a> () const</td></tr>
+<tr class="memdesc:ab63068a32f8c6af5d0a4df731850bb4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geeft aan of de tram een <a class="el" href="class_p_c_c.html">PCC</a> is.  <a href="#ab63068a32f8c6af5d0a4df731850bb4b">More...</a><br /></td></tr>
 <tr class="separator:ab63068a32f8c6af5d0a4df731850bb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18bdfb852e37725ff4361fbaf4d95a05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a18bdfb852e37725ff4361fbaf4d95a05">bevatPassagier</a> (<a class="el" href="class_passagier.html">Passagier</a> *pas) const</td></tr>
 <tr class="memdesc:a18bdfb852e37725ff4361fbaf4d95a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checkt of de gegeven <a class="el" href="class_passagier.html" title="Passagier klasse die een groep passagiers zal voorstellen. ">Passagier</a> op de tram zit.  <a href="#a18bdfb852e37725ff4361fbaf4d95a05">More...</a><br /></td></tr>
@@ -161,6 +180,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa246f9d3f485d4f7b868817e581f49d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd6056d2289f2dccd371bc226cd2cb17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#acd6056d2289f2dccd371bc226cd2cb17">~Tram</a> ()</td></tr>
 <tr class="separator:acd6056d2289f2dccd371bc226cd2cb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a2c5a45f0cc9fa86b9615ac0bfec0cd63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a2c5a45f0cc9fa86b9615ac0bfec0cd63">zitplaatsen</a></td></tr>
+<tr class="separator:a2c5a45f0cc9fa86b9615ac0bfec0cd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b5dd62658b8874eecebdc80862b2e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ab4b5dd62658b8874eecebdc80862b2e3">bezettePlaatsen</a></td></tr>
+<tr class="separator:ab4b5dd62658b8874eecebdc80862b2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcdf7f3ab0e67b537067f06092c5019e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#abcdf7f3ab0e67b537067f06092c5019e">snelheid</a></td></tr>
+<tr class="separator:abcdf7f3ab0e67b537067f06092c5019e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1413156294267ab5ac20edf607aa8009"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a1413156294267ab5ac20edf607aa8009">spoor</a></td></tr>
+<tr class="separator:a1413156294267ab5ac20edf607aa8009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dfb65a3ec1e066c20dc9086eae49f77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a7dfb65a3ec1e066c20dc9086eae49f77">voertuignummer</a></td></tr>
+<tr class="separator:a7dfb65a3ec1e066c20dc9086eae49f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb70bf3b6c67a5fa41b4b454ddb9492"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a7fb70bf3b6c67a5fa41b4b454ddb9492">beginStation</a></td></tr>
+<tr class="separator:a7fb70bf3b6c67a5fa41b4b454ddb9492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78b63ab23d41a8f60df707e0dd6ee28"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ae78b63ab23d41a8f60df707e0dd6ee28">huidigStation</a></td></tr>
+<tr class="separator:ae78b63ab23d41a8f60df707e0dd6ee28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420def56869c80bd615d0e90472539bb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_passagier.html">Passagier</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a420def56869c80bd615d0e90472539bb">passagiers</a></td></tr>
+<tr class="separator:a420def56869c80bd615d0e90472539bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e8e11121c7c9c7fff2f58df3c0e69d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tram.html">Tram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#aa0e8e11121c7c9c7fff2f58df3c0e69d">initCheck</a></td></tr>
+<tr class="separator:aa0e8e11121c7c9c7fff2f58df3c0e69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0b5d9629cb4ea01dc5a168c1791948"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_statistics_tram.html">StatisticsTram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#ace0b5d9629cb4ea01dc5a168c1791948">stats</a></td></tr>
+<tr class="separator:ace0b5d9629cb4ea01dc5a168c1791948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bde2a8d46868de066685675ce7c0473"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a6bde2a8d46868de066685675ce7c0473">totaleBezetting</a></td></tr>
+<tr class="separator:a6bde2a8d46868de066685675ce7c0473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a2901b6162a4a7302d2ff50f86e146c0b"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tram.html#a2901b6162a4a7302d2ff50f86e146c0b">ticketPrijs</a> = 2.0</td></tr>
+<tr class="separator:a2901b6162a4a7302d2ff50f86e146c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_tram.html" title="Tram klasse die een TRAM element uit een XML-bestand representeert. ">Tram</a> klasse die een TRAM element uit een XML-bestand representeert. </p>
@@ -193,8 +242,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a2e1d69261c88c51ce5c5eb871a98b5c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e1d69261c88c51ce5c5eb871a98b5c8">&#9670;&nbsp;</a></span>Tram() <span class="overload">[2/2]</span></h2>
+<a id="a14aa323dc9d22ee20400402b3ed4fa8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14aa323dc9d22ee20400402b3ed4fa8f">&#9670;&nbsp;</a></span>Tram() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,12 +271,6 @@ Here is the call graph for this function:</div>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>nr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>typeNaam</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -263,9 +306,9 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_tram_a2e1d69261c88c51ce5c5eb871a98b5c8_cgraph.png" border="0" usemap="#class_tram_a2e1d69261c88c51ce5c5eb871a98b5c8_cgraph" alt=""/></div>
-<map name="class_tram_a2e1d69261c88c51ce5c5eb871a98b5c8_cgraph" id="class_tram_a2e1d69261c88c51ce5c5eb871a98b5c8_cgraph">
-<area shape="rect" id="node2" href="class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="144,5,305,32"/>
+<div class="center"><img src="class_tram_a14aa323dc9d22ee20400402b3ed4fa8f_cgraph.png" border="0" usemap="#class_tram_a14aa323dc9d22ee20400402b3ed4fa8f_cgraph" alt=""/></div>
+<map name="class_tram_a14aa323dc9d22ee20400402b3ed4fa8f_cgraph" id="class_tram_a14aa323dc9d22ee20400402b3ed4fa8f_cgraph">
+<area shape="rect" id="node2" href="class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="148,5,328,32"/>
 </map>
 </div>
 
@@ -810,6 +853,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::string Tram::getType </td>
@@ -818,11 +864,18 @@ Here is the caller graph for this function:</div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Geef het type van de tram. </p>
 <dl class="section return"><dt>Returns</dt><dd>Het type van de tram als string. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(<a class="el" href="class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Tram was niet geinitialiseerd bij de aanroep van getType."); </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_albatros.html#a86af6bba82221600b228500bdde69497">Albatros</a>, and <a class="el" href="class_p_c_c.html#a1e470524440c13aede67dbaaf1244e16">PCC</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -936,6 +989,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Tram::isAlbatros </td>
@@ -944,11 +1000,18 @@ Here is the caller graph for this function:</div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Geeft aan of de tram een Albatros is. </p>
-<dl class="section return"><dt>Returns</dt><dd>Boolean die aangeeft of de tram een Albatros is </dd></dl>
+<p>Geeft aan of de tram een <a class="el" href="class_albatros.html">Albatros</a> is. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean die aangeeft of de tram een <a class="el" href="class_albatros.html">Albatros</a> is </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(<a class="el" href="class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Tram was niet geinitialiseerd bij de aanroep van isAlbatros."); </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_albatros.html#a4ede93e4b33f00c3079e62f25b946135">Albatros</a>, and <a class="el" href="class_p_c_c.html#a311e360848655b5d95b46ba071de3121">PCC</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1012,6 +1075,9 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Tram::isPCC </td>
@@ -1020,17 +1086,33 @@ Here is the caller graph for this function:</div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Geeft aan of de tram een PCC is. </p>
-<dl class="section return"><dt>Returns</dt><dd>Boolean die aangeeft of de tram een PCC is </dd></dl>
+<p>Geeft aan of de tram een <a class="el" href="class_p_c_c.html">PCC</a> is. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean die aangeeft of de tram een <a class="el" href="class_p_c_c.html">PCC</a> is </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>REQUIRE(<a class="el" href="class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. ">properlyInitialised()</a>, "Tram was niet geinitialiseerd bij de aanroep van isPCC."); </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_albatros.html#aa3e81617f46ef5c02a2058675ccf277d">Albatros</a>, and <a class="el" href="class_p_c_c.html#a7a81f428ba093977236fef09350b4831">PCC</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_tram_ab63068a32f8c6af5d0a4df731850bb4b_cgraph.png" border="0" usemap="#class_tram_ab63068a32f8c6af5d0a4df731850bb4b_cgraph" alt=""/></div>
 <map name="class_tram_ab63068a32f8c6af5d0a4df731850bb4b_cgraph" id="class_tram_ab63068a32f8c6af5d0a4df731850bb4b_cgraph">
 <area shape="rect" id="node2" href="class_tram.html#ac2688f590e4db232b4f535c9bf959efb" title="Kijk na of de constructor in de juiste staat geeindigd is. " alt="" coords="152,5,313,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tram_ab63068a32f8c6af5d0a4df731850bb4b_icgraph.png" border="0" usemap="#class_tram_ab63068a32f8c6af5d0a4df731850bb4b_icgraph" alt=""/></div>
+<map name="class_tram_ab63068a32f8c6af5d0a4df731850bb4b_icgraph" id="class_tram_ab63068a32f8c6af5d0a4df731850bb4b_icgraph">
+<area shape="rect" id="node2" href="class_metronet.html#a3125e980b208f1cdd04a9c26ec92a7bf" title="Kijkt na of het metronet consistent is. Een metronet is consistent als: • elk station is verbonden m..." alt="" coords="152,5,347,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="395,5,449,32"/>
 </map>
 </div>
 
@@ -1440,6 +1522,271 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node4" href="class_tram.html#ae1d03c1fb6e0f5f97c57d35fe10fa8dd" title="Geef het huidig station. " alt="" coords="400,77,556,104"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7fb70bf3b6c67a5fa41b4b454ddb9492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb70bf3b6c67a5fa41b4b454ddb9492">&#9670;&nbsp;</a></span>beginStation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Tram::beginStation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4b5dd62658b8874eecebdc80862b2e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b5dd62658b8874eecebdc80862b2e3">&#9670;&nbsp;</a></span>bezettePlaatsen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tram::bezettePlaatsen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae78b63ab23d41a8f60df707e0dd6ee28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78b63ab23d41a8f60df707e0dd6ee28">&#9670;&nbsp;</a></span>huidigStation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Tram::huidigStation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0e8e11121c7c9c7fff2f58df3c0e69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e8e11121c7c9c7fff2f58df3c0e69d">&#9670;&nbsp;</a></span>initCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tram.html">Tram</a>* Tram::initCheck</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a420def56869c80bd615d0e90472539bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420def56869c80bd615d0e90472539bb">&#9670;&nbsp;</a></span>passagiers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_passagier.html">Passagier</a>*&gt; Tram::passagiers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcdf7f3ab0e67b537067f06092c5019e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcdf7f3ab0e67b537067f06092c5019e">&#9670;&nbsp;</a></span>snelheid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tram::snelheid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1413156294267ab5ac20edf607aa8009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1413156294267ab5ac20edf607aa8009">&#9670;&nbsp;</a></span>spoor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tram::spoor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace0b5d9629cb4ea01dc5a168c1791948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0b5d9629cb4ea01dc5a168c1791948">&#9670;&nbsp;</a></span>stats</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_statistics_tram.html">StatisticsTram</a>* Tram::stats</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2901b6162a4a7302d2ff50f86e146c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2901b6162a4a7302d2ff50f86e146c0b">&#9670;&nbsp;</a></span>ticketPrijs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Tram::ticketPrijs = 2.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bde2a8d46868de066685675ce7c0473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bde2a8d46868de066685675ce7c0473">&#9670;&nbsp;</a></span>totaleBezetting</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Tram::totaleBezetting</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dfb65a3ec1e066c20dc9086eae49f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dfb65a3ec1e066c20dc9086eae49f77">&#9670;&nbsp;</a></span>voertuignummer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tram::voertuignummer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c5a45f0cc9fa86b9615ac0bfec0cd63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c5a45f0cc9fa86b9615ac0bfec0cd63">&#9670;&nbsp;</a></span>zitplaatsen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tram::zitplaatsen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,0 +1,4 @@
+<map id="Tram" name="Tram">
+<area shape="rect" id="node2" href="$class_albatros.html" title="Albatros" alt="" coords="5,80,81,107"/>
+<area shape="rect" id="node3" href="$class_p_c_c.html" title="PCC" alt="" coords="106,80,154,107"/>
+</map>

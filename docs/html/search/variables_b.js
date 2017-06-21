@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['userdata',['userData',['../class_ti_xml_base.html#ab242c01590191f644569fa89a080d97c',1,'TiXmlBase']]],
-  ['utf8bytetable',['utf8ByteTable',['../class_ti_xml_base.html#a727583b4ed4342a3ad78cdc39b819af4',1,'TiXmlBase']]]
+  ['verbindingen',['verbindingen',['../class_station.html#a4611268482136c394ffe80b2af6bdd06',1,'Station']]],
+  ['voertuignummer',['voertuignummer',['../class_tram.html#a7dfb65a3ec1e066c20dc9086eae49f77',1,'Tram']]],
+  ['volgende',['volgende',['../structstation_verbinding.html#a628e06180645500c27364c1c4c7e92ef',1,'stationVerbinding']]],
+  ['vorige',['vorige',['../structstation_verbinding.html#af8d9993c5e316f93a90acd12dd12604a',1,'stationVerbinding']]]
 ];

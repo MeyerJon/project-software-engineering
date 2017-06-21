@@ -1,0 +1,4 @@
+<map id="Station" name="Station">
+<area shape="rect" id="node2" href="$class_halte.html" title="Halte" alt="" coords="5,80,63,107"/>
+<area shape="rect" id="node3" href="$class_metrostation.html" title="Metrostation" alt="" coords="87,80,191,107"/>
+</map>

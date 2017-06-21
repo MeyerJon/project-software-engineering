@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['metronet',['metronet',['../class_metronet_domain_test.html#aa185f99af6607124a6fea8c4f63fddb7',1,'MetronetDomainTest::metronet()'],['../class_metronet_input_test.html#ab922ed7c2e4f1dfee1ed7df1eb3a13b4',1,'MetronetInputTest::metronet()'],['../class_metronet_output_test.html#aaa6f34ee762d128cd8aea8c895bb46e4',1,'MetronetOutputTest::metronet()']]],
-  ['metrostation',['metrostation',['../class_station_domain_test.html#ae0482ef80539a19207e704722bd024c2',1,'StationDomainTest']]]
+  ['halte',['halte',['../class_station_domain_test.html#a318d8972d993e7131d0efcb6e997d765',1,'StationDomainTest']]],
+  ['huidigstation',['huidigStation',['../class_tram.html#ae78b63ab23d41a8f60df707e0dd6ee28',1,'Tram']]]
 ];

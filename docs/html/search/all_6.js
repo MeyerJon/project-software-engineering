@@ -30,7 +30,7 @@ var searchData=
   ['gettotaleomzet',['getTotaleOmzet',['../class_statistics_metronet.html#a059aa23c7ce26bd04843e513ff0d1561',1,'StatisticsMetronet']]],
   ['gettram',['getTram',['../class_metronet.html#a830bc363aefb11cdac5d4a5dce1e7c8f',1,'Metronet']]],
   ['gettrams',['getTrams',['../class_metronet.html#a9aab7bfe14dbd5f7e258a55007542c36',1,'Metronet']]],
-  ['gettype',['getType',['../class_station.html#a230fd67de82b464b0c9c41ce53954c0f',1,'Station::getType()'],['../class_tram.html#a2e75ee5e2cbc43da2862334e6ff148e1',1,'Tram::getType()']]],
+  ['gettype',['getType',['../class_station.html#a230fd67de82b464b0c9c41ce53954c0f',1,'Station::getType()'],['../class_metrostation.html#a94ff28947359b43c472bfc40f739e0a8',1,'Metrostation::getType()'],['../class_halte.html#aae5ca881a4dfdf344c87f063e09c26ad',1,'Halte::getType()'],['../class_tram.html#a2e75ee5e2cbc43da2862334e6ff148e1',1,'Tram::getType()'],['../class_p_c_c.html#a1e470524440c13aede67dbaaf1244e16',1,'PCC::getType()'],['../class_albatros.html#a86af6bba82221600b228500bdde69497',1,'Albatros::getType()']]],
   ['getvoertuignummer',['getVoertuignummer',['../class_tram.html#a84c856d1f8a2b417abcf6fcad8e64947',1,'Tram']]],
   ['getvolgende',['getVolgende',['../class_station.html#a1b64354359528963ae978b790cfcfd11',1,'Station']]],
   ['getvorige',['getVorige',['../class_station.html#a45b4ba8429d932fc93bd0258ce2897c1',1,'Station']]],

@@ -5,6 +5,6 @@ var searchData=
   ['addstation',['addStation',['../class_metronet.html#ab2cbe114faa2ee312f6ea4e551962193',1,'Metronet']]],
   ['addtram',['addTram',['../class_metronet.html#a2d87bbeb977db9176f94116a02b9b17e',1,'Metronet']]],
   ['afstappen',['afstappen',['../class_tram.html#aba1c306a2a1aa5bdf40fe6e394baef99',1,'Tram']]],
-  ['albatros',['albatros',['../class_tram_domain_test.html#af762cec3965f441295f127f9a8c8d7f6',1,'TramDomainTest::albatros()'],['../_tram_8h.html#a99a569ed4574fb6ca7eb4edab2a4d5e1a1c2a28f79a2d723a6f750709996f4e6a',1,'Albatros():&#160;Tram.h']]],
+  ['albatros',['Albatros',['../class_albatros.html',1,'Albatros'],['../class_albatros.html#aefbe5f6c53b0f281afd0106520cc1d37',1,'Albatros::Albatros()'],['../class_tram_domain_test.html#a31cbc74e6d8db979ed0e420988c5d6ac',1,'TramDomainTest::albatros()']]],
   ['allepassagiersaangekomen',['allePassagiersAangekomen',['../class_metronet.html#ae1f8176a260124a363ca80d44a84b745',1,'Metronet']]]
 ];
